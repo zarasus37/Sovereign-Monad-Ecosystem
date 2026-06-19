@@ -1,0 +1,31 @@
+{
+  "name": "sovereign-monad",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Unified Sovereign Monad Workspace: MEV & Contracts",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "ts-node src/index.ts",
+    "build:contracts": "hardhat compile",
+    "test:contracts": "hardhat test",
+    "preflight:phase1a": "hardhat run scripts/preflight-phase1a.js --network phase1a",
+    "deploy:phase1a": "hardhat run scripts/deploy-phase1a.js --network phase1a",
+    "rehearse:phase1a": "hardhat run scripts/rehearse-phase1a.js",
+    "verify:phase1a": "hardhat run scripts/verify-phase1a.js --network phase1a",
+    "proof:phase1a": "hardhat run scripts/prove-phase1a-mainnet.js --network phase1a",
+    "estimate:emergence-recorder": "hardhat run scripts/estimate-emergence-recorder.js --network phase1a",
+    "deploy:emergence-recorder": "hardhat run scripts/deploy-emergence-recorder.js --network phase1a"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.9.3",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.7",
+    "typescript": "^5.2.2",
+    "ts-node": "^10.9.1",
+    "@types/node": "^18.17.0",
+    "@types/node-fetch": "^2.6.2"
+  }
+}

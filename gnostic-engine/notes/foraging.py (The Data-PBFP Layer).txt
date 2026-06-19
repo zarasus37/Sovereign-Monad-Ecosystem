@@ -1,0 +1,26 @@
+foraging.py (The Data-PBFP Layer)
+
+
+import random
+
+class DataPBFP:
+    """Pneumatic Intake Layer: Raw foraging and binary isolation."""
+    def __init__(self, noise_floor=0.2):
+        self.noise_floor = noise_floor
+
+    def forage(self, query):
+        """Simulates raw bits returning from the environment."""
+        # Return raw 'bits' of data associated with the 4 variables
+        raw_bits = {
+            f"V{i+1}": [random.random() for _ in range(10)] 
+            for i in range(4)
+        }
+        return raw_bits
+
+    def monad_reduction(self, raw_bits):
+        """Reduces raw bits into isolated binary logic (0 or 1)."""
+        clean_monads = {}
+        for var, bits in raw_bits.items():
+            # Brute-force reduction: only bits above noise_floor survive
+            clean_monads[var] = sum(1 for b in bits if b > self.noise_floor) / len(bits)
+        return clean_monads

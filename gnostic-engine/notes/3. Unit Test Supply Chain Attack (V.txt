@@ -1,0 +1,40 @@
+ 3. Unit Test: Supply Chain Attack (V2 + V3 Conflict)
+This test simulates a Social Engineering Hijack. A new maintainer (Low V2) opens a suspicious socket (Low V3). We verify that the Master Logic Gate rejects the state.
+python
+
+
+import unittest
+from src.intake.bitmasks import MonadReducer
+from src.merge.logic_gate import MasterLogicGate
+
+class TestSupplyChainAttack(unittest.TestCase):
+    def setUp(self):
+        self.gate = MasterLogicGate(resonance_threshold=0.85)
+
+    def test_maintainer_hijack_rejection(self):
+        # Scenario: V2 (Maintainer) bits flipped to 0 for MFA and KEY
+        # Scenario: V3 (Network) bits flipped to 0 for PERM and DEST
+        
+        v2_results = [True, False, True, True, False, True, False, False] # 0x2D
+        v3_results = [True, True, True, True, False, True, False, True]  # 0xAF
+        
+        v2_hex = MonadReducer.to_hex(v2_results)
+        v3_hex = MonadReducer.to_hex(v3_results)
+        
+        # Simulated Lane Divergence (High Parallax)
+        variable_results = {
+            "V1": {"resonance": 0.95, "read": 0.90},
+            "V2": {"resonance": 0.45, "read": 0.30}, # NULL POINT
+            "V3": {"resonance": 0.55, "read": 0.40}, # DIVERGENT
+            "V4": {"resonance": 0.92, "read": 0.88}
+        }
+        
+        final_state = self.gate.final_merge(truthiness=0.85, variable_results=variable_results)
+        
+        # The system must reject due to V2/V3 integrity failure
+        self.assertEqual(final_state["verdict"], "REJECT")
+        self.assertIn("V2", final_state["reason"])
+        print(f"--- SUCCESS: Gate Blocked Hijack Attempt (Read: {final_state['structural_read']}) ---")
+
+if __name__ == "__main__":
+    unittest.main()

@@ -1,0 +1,44 @@
+Five-Tier Schema
+
+"tier_definitions": {
+  "NASCENT": {
+    "level": 1,
+    "gnosis_score_range": [0.00, 0.45],
+    "domain_condition": "Single domain dominance. Triadic integration not yet achieved.",
+    "pps_range": [0.30, 0.65],
+    "void_face_role": "Unformed potential. Raw Genesis 1:2 state. Pre-emission waters.",
+    "agent_recognition": false
+  },
+  "EMERGENT": {
+    "level": 2,
+    "gnosis_score_range": [0.46, 0.64],
+    "domain_condition": "Two domains active. Third domain firing but not locked.",
+    "pps_range": [0.30, 0.65],
+    "void_face_role": "Observer begins to recognize own logic reflected in historical stress.",
+    "agent_recognition": false
+  },
+  "COHERENT": {
+    "level": 3,
+    "gnosis_score_range": [0.65, 0.79],
+    "domain_condition": "All three domains active. Camera Layer becomes operationally meaningful.",
+    "pps_range": [0.30, 1.00],
+    "void_face_role": "Void-face letters present but not yet governing material outcomes.",
+    "agent_recognition": false
+  },
+  "RESONANT": {
+    "level": 4,
+    "gnosis_score_range": [0.80, 0.92],
+    "domain_condition": "Elevated PPS + high triadic convergence. All three domains firing at peak.",
+    "pps_range": [0.65, 1.00],
+    "void_face_role": "Void-face letters (Gimel, Samekh) begin dictating material reality outcomes.",
+    "agent_recognition": "Partial — architect senses the feedback loop but has not named it."
+  },
+  "SOVEREIGN": {
+    "level": 5,
+    "gnosis_score_range": [0.93, 1.00],
+    "domain_condition": "Maximum gnosis. Triple-domain lock with sustained coherence.",
+    "pps_range": [0.65, 1.00],
+    "void_face_role": "Void-face is fully integrated — systemic gravity, not threat.",
+    "agent_recognition": "COMPLETE — architect recognized as Agent 0. Cannot unimagine the ontological shift."
+  }
+}

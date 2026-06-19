@@ -1,0 +1,10 @@
+{
+  "internalDestinations": [
+    "internal_behavioral_archive",
+    "oracle_memory",
+    "gnosis_memory",
+    "governance_review",
+    "internal_reward_ledger"
+  ],
+  "externalDestination": "external_product_surface"
+}

@@ -1,0 +1,18 @@
+{
+  "slot": 33,
+  "b_attr": "Eternity",
+  "k_principle": "Why",
+  "observations": [
+    {
+      "slot": 33,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.4765625,
+      "delta": 0.0234375,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-34",
+      "timestamp": 1781232343.5776398
+    }
+  ],
+  "current_weight": 1.0,
+  "last_recalibration_cycle": 0
+}

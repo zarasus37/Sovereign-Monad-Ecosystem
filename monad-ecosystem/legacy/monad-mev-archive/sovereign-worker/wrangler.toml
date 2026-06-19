@@ -1,0 +1,16 @@
+name = "sovereign-rge-api"
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ── KV Namespace ─────────────────────────────────────────────────────────────
+# sovereign-api-keys — provisioned 2026-04-04
+[[kv_namespaces]]
+binding = "SOVEREIGN_API_KEYS"
+id      = "3db6365424c64247b41bf6d31cc3c590"
+
+# ── Environment variables ─────────────────────────────────────────────────────
+[vars]
+ENVIRONMENT = "production"
+ENGINE      = "RGE v2"
+MOF_VERSION = "2.3.0"

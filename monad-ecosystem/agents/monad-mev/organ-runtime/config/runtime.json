@@ -1,0 +1,760 @@
+{
+  "runtimeMode": "analysis",
+  "organs": {
+    "Cardia": {
+      "enabled": true,
+      "capitalRequired": true,
+      "buildReady": true,
+      "notes": [
+        "Cardia is implemented in analysis mode and remains capital-gated for live deployment."
+      ]
+    },
+    "Pneuma": {
+      "enabled": true,
+      "capitalRequired": false,
+      "buildReady": true,
+      "notes": [
+        "Pneuma can begin with lead, partnership, and distribution workflows."
+      ]
+    },
+    "Hepar": {
+      "enabled": true,
+      "capitalRequired": false,
+      "buildReady": true,
+      "notes": [
+        "Hepar can start in analysis mode using opportunity screening and rejection logic."
+      ]
+    },
+    "Cortex": {
+      "enabled": true,
+      "capitalRequired": false,
+      "buildReady": true,
+      "notes": [
+        "Cortex can start immediately through research, synthesis, and planning outputs."
+      ]
+    },
+    "Synapse": {
+      "enabled": true,
+      "capitalRequired": false,
+      "buildReady": true,
+      "notes": [
+        "Synapse is the first coordination organ and should run before the others."
+      ]
+    },
+    "Vox": {
+      "enabled": true,
+      "capitalRequired": false,
+      "buildReady": true,
+      "notes": [
+        "Vox can begin with documentation, explanations, and public-facing narrative packaging."
+      ]
+    }
+  },
+  "coordination": {
+    "primaryLoop": [
+      "Synapse",
+      "Hepar",
+      "Cortex",
+      "Cardia",
+      "Vox",
+      "Pneuma"
+    ],
+    "allowCapitalGatedOrgansInAnalysis": true
+  },
+  "synapse": {
+    "sampleSignals": [
+      {
+        "id": "sig-opportunity-001",
+        "category": "opportunity",
+        "severity": "high",
+        "latency": "urgent",
+        "summary": "Cross-venue opportunity requires filtering before capital consideration.",
+        "touchesCapital": true,
+        "tags": ["defi", "arbitrage"]
+      },
+      {
+        "id": "sig-research-001",
+        "category": "research",
+        "severity": "medium",
+        "latency": "normal",
+        "summary": "Protocol regime shift needs synthesis and outward packaging.",
+        "requiresExternalExpression": true,
+        "tags": ["research", "brief"]
+      },
+      {
+        "id": "sig-research-002",
+        "category": "research",
+        "severity": "medium",
+        "latency": "normal",
+        "summary": "Rights closure and threshold progress need synthesis before activation review.",
+        "tags": ["rights", "activation"]
+      },
+      {
+        "id": "sig-growth-001",
+        "category": "growth",
+        "severity": "medium",
+        "latency": "normal",
+        "summary": "Qualified inbound demand should route into exchange and conversion handling.",
+        "requiresExternalExpression": true,
+        "tags": ["lead", "distribution"]
+      }
+    ]
+  },
+  "synapseAdaptive": {
+    "sampleSignals": [
+      {
+        "id": "adp-sig-001",
+        "source": "Hepar",
+        "category": "opportunity",
+        "severity": "critical",
+        "confidence": 0.94,
+        "touchesCapital": true,
+        "summary": "Critical exploit path discovered in target protocol."
+      },
+      {
+        "id": "adp-sig-002",
+        "source": "Cardia",
+        "category": "opportunity",
+        "severity": "low",
+        "confidence": 0.59,
+        "touchesCapital": true,
+        "summary": "Allocation engine sees acceptable returns if risk is controlled."
+      },
+      {
+        "id": "adp-sig-003",
+        "source": "Cortex",
+        "category": "research",
+        "severity": "high",
+        "confidence": 0.81,
+        "summary": "Regime stress rising; defensive routing should be prioritized."
+      }
+    ],
+    "sampleSourceHealth": [
+      { "source": "Hepar", "precision": 0.91, "missRate": 0.05, "stalenessSec": 60 },
+      { "source": "Cortex", "precision": 0.79, "missRate": 0.15, "stalenessSec": 80 },
+      { "source": "Cardia", "precision": 0.73, "missRate": 0.19, "stalenessSec": 120 },
+      { "source": "Pneuma", "precision": 0.76, "missRate": 0.14, "stalenessSec": 75 },
+      { "source": "Vox", "precision": 0.69, "missRate": 0.21, "stalenessSec": 140 },
+      { "source": "DataRail", "precision": 0.84, "missRate": 0.09, "stalenessSec": 45 },
+      { "source": "Market", "precision": 0.7, "missRate": 0.22, "stalenessSec": 30 }
+    ],
+    "policy": {
+      "conflictSeverityGap": 3,
+      "lowConfidenceBlockThreshold": 0.45,
+      "capitalEscalationMinSeverity": 2
+    }
+  },
+  "hepar": {
+    "sampleOpportunities": [
+      {
+        "id": "hep-opp-001",
+        "venue": "aerodrome-base",
+        "edgeBps": 21,
+        "liquidityScore": 78,
+        "counterpartyRisk": "low",
+        "structuralRisk": "medium",
+        "opaque": false,
+        "exploitative": false,
+        "forensics": {
+          "bytecode": {
+            "uncheckedOwnerDrainFunctions": 0,
+            "hiddenPauseMechanisms": false,
+            "selfdestructReachable": false,
+            "uninitializedProxyImplementation": false,
+            "ownerAddressCount": 5,
+            "ownerConcentrationScore": 18
+          },
+          "proxyAdmin": {
+            "proxyAdminPresent": true,
+            "upgradeAuthorityAddressCount": 5,
+            "upgradeDelayHours": 72,
+            "proxyPattern": "transparent",
+            "beaconChainDepth": 0,
+            "timelockBypassVector": false
+          },
+          "lpUnlock": {
+            "lpTopHolderConcentrationPct": 32,
+            "daysToMajorUnlock": 365,
+            "majorUnlockPercent": 22,
+            "historicalUnlockViolations": 0,
+            "lpLockerVerified": true
+          },
+          "walletTaint": {
+            "taintedFundingLinks": 0,
+            "knownRugLaunchCount": 0,
+            "ponziAssociationCount": 0,
+            "suddenProtocolExposureCount": 2,
+            "coordinatedPatternScore": 8
+          },
+          "adversarial": {
+            "maxIntPathVulnerabilities": 0,
+            "flashloanInvariantBreaks": 0,
+            "unexpectedCallOrderBreaks": 0,
+            "soleLpWithdrawalExploit": false,
+            "economicInvariantViolations": 0,
+            "estimatedExploitableLossUsd": 0
+          },
+          "honeypotProbability": 0.04,
+          "criticalAuditFindings": 0,
+          "unresolvedIncidents30d": 0,
+          "top10HolderConcentrationPct": 31,
+          "liquidityLockDays": 180,
+          "liquidityLockPercent": 92,
+          "adminKeyModel": "multisig_timelocked",
+          "upgradeability": "timelocked",
+          "privilegedFunctionCount": 3,
+          "oracleDiversityScore": 84,
+          "washTradingScore": 18,
+          "dependencyRiskScore": 22,
+          "counterpartyReputationScore": 79,
+          "contractAgeDays": 420
+        },
+        "summary": "Liquid, bounded opportunity with acceptable edge and moderate structure complexity."
+      },
+      {
+        "id": "hep-opp-002",
+        "venue": "unknown-route",
+        "edgeBps": 9,
+        "liquidityScore": 34,
+        "counterpartyRisk": "high",
+        "structuralRisk": "high",
+        "opaque": true,
+        "exploitative": false,
+        "forensics": {
+          "bytecode": {
+            "uncheckedOwnerDrainFunctions": 3,
+            "hiddenPauseMechanisms": true,
+            "selfdestructReachable": true,
+            "uninitializedProxyImplementation": true,
+            "ownerAddressCount": 1,
+            "ownerConcentrationScore": 95
+          },
+          "proxyAdmin": {
+            "proxyAdminPresent": true,
+            "upgradeAuthorityAddressCount": 1,
+            "upgradeDelayHours": 0,
+            "proxyPattern": "beacon",
+            "beaconChainDepth": 4,
+            "timelockBypassVector": true
+          },
+          "lpUnlock": {
+            "lpTopHolderConcentrationPct": 85,
+            "daysToMajorUnlock": 21,
+            "majorUnlockPercent": 88,
+            "historicalUnlockViolations": 2,
+            "lpLockerVerified": false
+          },
+          "walletTaint": {
+            "taintedFundingLinks": 2,
+            "knownRugLaunchCount": 6,
+            "ponziAssociationCount": 3,
+            "suddenProtocolExposureCount": 46,
+            "coordinatedPatternScore": 91
+          },
+          "adversarial": {
+            "maxIntPathVulnerabilities": 2,
+            "flashloanInvariantBreaks": 1,
+            "unexpectedCallOrderBreaks": 2,
+            "soleLpWithdrawalExploit": true,
+            "economicInvariantViolations": 3,
+            "estimatedExploitableLossUsd": 2500000
+          },
+          "honeypotProbability": 0.76,
+          "criticalAuditFindings": 3,
+          "unresolvedIncidents30d": 2,
+          "top10HolderConcentrationPct": 78,
+          "liquidityLockDays": 2,
+          "liquidityLockPercent": 24,
+          "adminKeyModel": "single_key",
+          "upgradeability": "unbounded",
+          "privilegedFunctionCount": 12,
+          "oracleDiversityScore": 18,
+          "washTradingScore": 87,
+          "dependencyRiskScore": 81,
+          "counterpartyReputationScore": 21,
+          "contractAgeDays": 9
+        },
+        "summary": "Weak edge and poor transparency; should be rejected."
+      }
+    ]
+  },
+  "heparConsensus": {
+    "sampleCampaigns": [
+      {
+        "id": "hep-cons-001",
+        "protocolId": "proto-alpha",
+        "codeHash": "0xabc123ff0042",
+        "agentRuns": [
+          {
+            "agentId": "hepar-privilege",
+            "specialty": "privilege",
+            "pathSamples": 50000,
+            "coverage": 0.79,
+            "findings": [
+              {
+                "vectorId": "reentrancy-line-102",
+                "title": "Reentrancy in withdraw path",
+                "severity": "critical",
+                "estimatedLossUsd": 3100000,
+                "reproducible": true
+              },
+              {
+                "vectorId": "overflow-line-47",
+                "title": "Unchecked arithmetic overflow",
+                "severity": "high",
+                "estimatedLossUsd": 850000,
+                "reproducible": true
+              },
+              {
+                "vectorId": "msgsender-line-88",
+                "title": "Unchecked msg.sender validation",
+                "severity": "medium",
+                "estimatedLossUsd": 120000,
+                "reproducible": false
+              }
+            ]
+          },
+          {
+            "agentId": "hepar-arithmetic",
+            "specialty": "arithmetic",
+            "pathSamples": 50000,
+            "coverage": 0.76,
+            "findings": [
+              {
+                "vectorId": "reentrancy-line-102",
+                "title": "Reentrancy in withdraw path",
+                "severity": "critical",
+                "estimatedLossUsd": 3100000,
+                "reproducible": true
+              },
+              {
+                "vectorId": "underflow-line-156",
+                "title": "Arithmetic underflow in debt accounting",
+                "severity": "high",
+                "estimatedLossUsd": 730000,
+                "reproducible": true
+              }
+            ]
+          },
+          {
+            "agentId": "hepar-reentrancy",
+            "specialty": "reentrancy",
+            "pathSamples": 50000,
+            "coverage": 0.82,
+            "findings": [
+              {
+                "vectorId": "reentrancy-line-102",
+                "title": "Reentrancy in withdraw path",
+                "severity": "critical",
+                "estimatedLossUsd": 3100000,
+                "reproducible": true
+              },
+              {
+                "vectorId": "overflow-line-47",
+                "title": "Unchecked arithmetic overflow",
+                "severity": "high",
+                "estimatedLossUsd": 850000,
+                "reproducible": true
+              }
+            ]
+          },
+          {
+            "agentId": "hepar-economic",
+            "specialty": "economic",
+            "pathSamples": 50000,
+            "coverage": 0.74,
+            "findings": [
+              {
+                "vectorId": "reentrancy-line-102",
+                "title": "Reentrancy in withdraw path",
+                "severity": "critical",
+                "estimatedLossUsd": 3100000,
+                "reproducible": true
+              },
+              {
+                "vectorId": "divzero-line-201",
+                "title": "Division by zero in fee path",
+                "severity": "medium",
+                "estimatedLossUsd": 95000,
+                "reproducible": false
+              }
+            ]
+          },
+          {
+            "agentId": "hepar-state",
+            "specialty": "state",
+            "pathSamples": 50000,
+            "coverage": 0.81,
+            "findings": [
+              {
+                "vectorId": "reentrancy-line-102",
+                "title": "Reentrancy in withdraw path",
+                "severity": "critical",
+                "estimatedLossUsd": 3100000,
+                "reproducible": true
+              },
+              {
+                "vectorId": "overflow-line-47",
+                "title": "Unchecked arithmetic overflow",
+                "severity": "high",
+                "estimatedLossUsd": 850000,
+                "reproducible": false
+              }
+            ]
+          }
+        ],
+        "symbolicVerdicts": [
+          {
+            "vectorId": "reentrancy-line-102",
+            "status": "counterexample"
+          },
+          {
+            "vectorId": "overflow-line-47",
+            "status": "unknown"
+          },
+          {
+            "vectorId": "underflow-line-156",
+            "status": "unknown"
+          }
+        ]
+      },
+      {
+        "id": "hep-cons-002",
+        "protocolId": "proto-beta",
+        "codeHash": "0xdef6655aa019",
+        "agentRuns": [
+          {
+            "agentId": "hepar-privilege",
+            "specialty": "privilege",
+            "pathSamples": 30000,
+            "coverage": 0.86,
+            "findings": []
+          },
+          {
+            "agentId": "hepar-arithmetic",
+            "specialty": "arithmetic",
+            "pathSamples": 30000,
+            "coverage": 0.84,
+            "findings": []
+          },
+          {
+            "agentId": "hepar-reentrancy",
+            "specialty": "reentrancy",
+            "pathSamples": 30000,
+            "coverage": 0.87,
+            "findings": []
+          }
+        ],
+        "symbolicVerdicts": []
+      }
+    ]
+  },
+  "cortex": {
+    "sampleResearch": [
+      {
+        "id": "ctx-brief-001",
+        "title": "Base venue spread compression",
+        "summary": "Spread persistence is narrowing on the highest-liquidity pairs, which changes acceptable deployment thresholds.",
+        "confidence": "high",
+        "urgency": "normal",
+        "monetizable": true,
+        "audience": "buyers",
+        "recommendedOrgans": ["Vox", "Pneuma", "Hepar"]
+      },
+      {
+        "id": "ctx-brief-002",
+        "title": "Operator runbook refinement",
+        "summary": "Recent runtime changes require a tighter operator review sequence before funded activation resumes.",
+        "confidence": "medium",
+        "urgency": "urgent",
+        "monetizable": false,
+        "audience": "operators",
+        "recommendedOrgans": ["Synapse", "Vox"]
+      }
+    ]
+  },
+  "cortexStrategic": {
+    "sampleContexts": [
+      {
+        "id": "ctx-strat-001",
+        "headline": "Volatility expansion with rising protocol-risk density",
+        "heparCriticalCount": 7,
+        "marketVolatilityPct": 46,
+        "recentPnlUsd": -182000,
+        "agentBehaviorStress": 0.71,
+        "macroRegime": "risk-off tightening"
+      }
+    ]
+  },
+  "vox": {
+    "sampleRequests": [
+      {
+        "id": "vox-req-001",
+        "sourceBriefId": "ctx-brief-001",
+        "format": "newsletter",
+        "audience": "buyers",
+        "urgency": "normal"
+      },
+      {
+        "id": "vox-req-002",
+        "sourceBriefId": "ctx-brief-002",
+        "format": "memo",
+        "audience": "operators",
+        "urgency": "fast"
+      }
+    ]
+  },
+  "voxIntelligence": {
+    "sampleInputs": [
+      {
+        "id": "vox-intel-001",
+        "eventTitle": "Protocol exposure blocked after critical forensic consensus",
+        "facts": [
+          "Hepar consensus marked reentrancy vector as high-confidence",
+          "Synapse escalated capital-sensitive conflict for arbitration",
+          "Cardia blocked fresh allocation pending remediation"
+        ],
+        "proofRefs": [
+          "chain://attestation/hepar-hep-cons-001",
+          "rail://events/synapse/conflict-2026-04-30"
+        ],
+        "contradictionCount": 0,
+        "audiences": ["operators", "buyers", "public"]
+      }
+    ]
+  },
+  "pneuma": {
+    "sampleLeads": [
+      {
+        "id": "pneu-lead-001",
+        "source": "operator-referral",
+        "fitScore": 82,
+        "reciprocity": "low",
+        "readiness": "ready",
+        "needsNarrativePackage": false,
+        "summary": "Qualified buyer-side lead ready for direct exchange."
+      },
+      {
+        "id": "pneu-lead-002",
+        "source": "content-inbound",
+        "fitScore": 74,
+        "reciprocity": "medium",
+        "readiness": "warm",
+        "needsNarrativePackage": true,
+        "summary": "Interested lead that needs narrative packaging before conversion."
+      },
+      {
+        "id": "pneu-lead-003",
+        "source": "misaligned-outreach",
+        "fitScore": 41,
+        "reciprocity": "high",
+        "readiness": "cold",
+        "needsNarrativePackage": false,
+        "summary": "Low-fit counterpart that should remain outside direct exchange."
+      }
+    ]
+  },
+  "pneumaMarket": {
+    "sampleOrders": [
+      {
+        "id": "ord-001",
+        "asset": "ETH/USDC",
+        "side": "buy",
+        "notionalUsd": 150000,
+        "maxSlippageBps": 28,
+        "urgency": "urgent"
+      },
+      {
+        "id": "ord-002",
+        "asset": "BTC/USDC",
+        "side": "sell",
+        "notionalUsd": 90000,
+        "maxSlippageBps": 22,
+        "urgency": "normal"
+      }
+    ],
+    "sampleVenueQuotes": [
+      {
+        "orderId": "ord-001",
+        "venue": "aerodrome",
+        "availableUsd": 120000,
+        "slippageBps": 18,
+        "feeBps": 4,
+        "latencyMs": 450,
+        "counterparty": "mm-alpha"
+      },
+      {
+        "orderId": "ord-001",
+        "venue": "uniswap",
+        "availableUsd": 220000,
+        "slippageBps": 31,
+        "feeBps": 3,
+        "latencyMs": 390,
+        "counterparty": "mm-beta"
+      },
+      {
+        "orderId": "ord-002",
+        "venue": "camelot",
+        "availableUsd": 100000,
+        "slippageBps": 14,
+        "feeBps": 5,
+        "latencyMs": 510,
+        "counterparty": "mm-gamma"
+      }
+    ],
+    "sampleCounterparties": [
+      { "name": "mm-alpha", "solvencyRisk": "low", "settlementReliability": 0.93, "complianceBlocked": false },
+      { "name": "mm-beta", "solvencyRisk": "medium", "settlementReliability": 0.88, "complianceBlocked": false },
+      { "name": "mm-gamma", "solvencyRisk": "low", "settlementReliability": 0.72, "complianceBlocked": false }
+    ],
+    "policy": {
+      "urgentLatencyPenaltyDivisor": 90,
+      "normalLatencyPenaltyDivisor": 180,
+      "minSettlementReliability": 0.72
+    }
+  },
+  "cardia": {
+    "sampleCapitalState": {
+      "reserveRatioPercent": 26,
+      "minReserveRatioPercent": 20,
+      "deploymentReadiness": "ready",
+      "lanes": [
+        {
+          "name": "research-commercialization",
+          "allocatedPercent": 18,
+          "maxPercent": 25
+        },
+        {
+          "name": "defi-exploration",
+          "allocatedPercent": 12,
+          "maxPercent": 15
+        }
+      ]
+    }
+  },
+  "cardiaAdaptive": {
+    "sampleState": {
+      "reserveRatioPercent": 26,
+      "minReserveRatioPercent": 20,
+      "portfolioDrawdownPct": 8.4,
+      "volatilityRegime": "elevated",
+      "liquidityStress": false
+    },
+    "sampleCandidates": [
+      {
+        "id": "cad-001",
+        "protocolId": "proto-alpha",
+        "heparRiskScore": 22,
+        "expectedReturnPct": 11.8,
+        "confidence": 0.79,
+        "requiredCapitalUsd": 120000,
+        "currentAllocationUsd": 40000
+      },
+      {
+        "id": "cad-002",
+        "protocolId": "proto-risky",
+        "heparRiskScore": 78,
+        "expectedReturnPct": 16.4,
+        "confidence": 0.64,
+        "requiredCapitalUsd": 90000,
+        "currentAllocationUsd": 15000
+      }
+    ],
+    "coefficients": {
+      "returnWeight": 1.2,
+      "riskPenaltyWeight": 0.18,
+      "drawdownPenaltyWeight": 0.06,
+      "elevatedStressPenalty": 2.5,
+      "crashStressPenalty": 11,
+      "allocateThreshold": 2,
+      "reduceThreshold": -4,
+      "hardBlockRiskScore": 70
+    }
+  },
+  "revenue": {
+    "tier3Operational": {
+      "automatedReportTemplating": true,
+      "qualityChecklistSignoff": true,
+      "evidencePackagingAutomation": true,
+      "customerPortalEnabled": true,
+      "slaEnabled": true,
+      "targetTurnaroundHours": 24
+    }
+  },
+  "participation": {
+    "sampleActors": [
+      {
+        "id": "native-synapse",
+        "mode": "ecosystem_native",
+        "hasDelegateAgent": false,
+        "canTouchCapital": false,
+        "canOverrideBoundaries": false,
+        "summary": "Core ecosystem-native organ participant."
+      },
+      {
+        "id": "delegated-research-user",
+        "mode": "delegated_human",
+        "hasDelegateAgent": true,
+        "canTouchCapital": false,
+        "canOverrideBoundaries": false,
+        "summary": "Human participant acting through a delegate agent."
+      },
+      {
+        "id": "delegated-partner-user",
+        "mode": "delegated_human",
+        "hasDelegateAgent": true,
+        "canTouchCapital": false,
+        "canOverrideBoundaries": false,
+        "summary": "Human-linked exchange participant acting through a bounded delegate agent."
+      }
+    ]
+  },
+  "mandate": {
+    "enabled": true,
+    "title": "Bounded research-to-exchange internal loop"
+  },
+  "controls": {
+    "homeostasis": {
+      "sampleMetrics": [
+        {
+          "name": "drawdown_bps",
+          "current": 85,
+          "min": 0,
+          "max": 120,
+          "unit": "bps",
+          "correctiveAction": "Hold current exposure and continue bounded operations."
+        },
+        {
+          "name": "operator_queue_depth",
+          "current": 5,
+          "min": 0,
+          "max": 8,
+          "unit": "items",
+          "correctiveAction": "Slow new routing and clear backlog before opening new workflows."
+        }
+      ]
+    },
+    "immune": {
+      "sampleIncidents": [
+        {
+          "id": "imm-001",
+          "category": "integrity",
+          "severity": "medium",
+          "selfBoundaryViolated": false,
+          "contained": true,
+          "needsRepair": false,
+          "summary": "Prior boundary-sensitive routing issue was contained and converted into a bounded rule."
+        },
+        {
+          "id": "imm-002",
+          "category": "operations",
+          "severity": "medium",
+          "selfBoundaryViolated": false,
+          "contained": true,
+          "needsRepair": false,
+          "summary": "Operational drift was detected and locally contained."
+        }
+      ]
+    }
+  }
+}

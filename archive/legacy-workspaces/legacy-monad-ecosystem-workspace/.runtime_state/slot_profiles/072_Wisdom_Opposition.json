@@ -1,0 +1,45 @@
+{
+  "slot": 72,
+  "b_attr": "Wisdom",
+  "k_principle": "Opposition",
+  "observations": [
+    {
+      "slot": 72,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.4609375,
+      "delta": 0.0390625,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-1",
+      "timestamp": 1781147011.5257063
+    },
+    {
+      "slot": 72,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.4921875,
+      "delta": 0.0078125,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-1",
+      "timestamp": 1781218697.8427215
+    },
+    {
+      "slot": 72,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.4921875,
+      "delta": 0.0078125,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-1",
+      "timestamp": 1781218736.6532981
+    },
+    {
+      "slot": 72,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.4765625,
+      "delta": 0.0234375,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-73",
+      "timestamp": 1781232345.0919805
+    }
+  ],
+  "current_weight": 1.0,
+  "last_recalibration_cycle": 0
+}

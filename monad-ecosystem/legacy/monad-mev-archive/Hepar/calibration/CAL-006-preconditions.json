@@ -1,0 +1,91 @@
+{
+  "calId": "CAL-006",
+  "title": "Live-Telemetry Replay Gate — Pre-conditions Derived from Batch 1 Divergence Analysis",
+  "createdAt": "2026-05-02",
+  "status": "OPEN",
+  "tier": "ADVISORY",
+  "precedingArtifact": "CAL-005 (calibration-run-05.json, commit 33b73ef)",
+  "gateDescription": "All three pre-conditions below MUST be resolved and verified before Hepar advances to live-telemetry replay. No live-telemetry run shall be initiated while any pre-condition status is OPEN.",
+
+  "summary": "Batch 1 live assessment (2026-05-02) produced four classification divergences. Two were caused by stub Monte Carlo template behaviour (unforced PRIV-T03 driving scores above expected bands) and two were caused by the ACCOUNTING hard-block rule firing in stub mode (ACCT-001 counterexample triggering HARDBLOCK for GMX V2 and Compound V3, where RESTRICTED was expected). These divergences define three forward-policy adjustments that must be confirmed against live protocol data before telemetry replay.",
+
+  "preconditions": [
+    {
+      "id": "CAL-006-PC-1",
+      "title": "PRIV-T03 live bytecode confirmation gate",
+      "status": "APPLIED — source policy set, live verification OPEN",
+      "description": "PRIV-T03 (proxy storage-collision / implementation-slot overwrite via non-EIP-1967 layout) is a valid attack vector that requires the target protocol to use a non-standard proxy storage layout. The stub template fires unconditionally, which produced spurious sev=9 EDGE_CASE findings for Uniswap V3 and Aave V3 — both non-upgradeable or EIP-1967-compliant — inflating their composite scores into DENY/RESTRICTED range when ALLOW was expected.",
+      "forwardPolicy": "AgentFinding.requiresLiveBytecodeConfirmation = true is now set on all PRIV-T03 findings generated in stub mode (hepar-privilege.ts, CAL-006 commit). Downstream consumers MUST check this flag before applying escalation rules. The finding is still emitted and recorded — it is not suppressed.",
+      "verificationRequired": "Run Hepar against Uniswap V3 and Aave V3 with a live bytecode scanner (EIP-1967 slot check). Confirm PRIV-T03 is absent from the live scan output. Expected result: globalScore drops below 40 for both protocols (ALLOW or GUARDED_ALLOW). Record the verified result as CAL-006-PC-1-CLOSED.",
+      "affectedProtocols": ["Uniswap V3", "Aave V3"],
+      "files": [
+        "Hepar/hepar/lib/stages/stageC-utils.ts",
+        "Hepar/hepar/lib/agents/hepar-privilege.ts"
+      ]
+    },
+    {
+      "id": "CAL-006-PC-2",
+      "title": "ACCT-001 stub-mode escalation policy (ESCALATION not HARDBLOCK)",
+      "status": "APPLIED — source policy set, live verification OPEN",
+      "description": "The Hepar Stage B hardBlock rule previously included ACCOUNTING class counterexamples unconditionally, treating a stub-mode ACCT-001 counterexample the same as a live-engine-confirmed accounting violation. This caused GMX V2 and Compound V3 to receive HARDBLOCK despite the accounting evidence being stub-symbolic only, with no live bytecode confirming that reserve conservation can actually be violated in the deployed contracts.",
+      "forwardPolicy": "runStageB now sets accountingEscalationPending=true (not hardBlockFromSymbolic=true) when an ACCOUNTING counterexample is found in stub or HALMOS_UNAVAILABLE mode. Stage D (determineActionBand) responds to accountingEscalationPending with minimum RESTRICTED escalation, not HARDBLOCK. Promotion to HARDBLOCK requires a live engine run against actual protocol bytecode. AUTHORIZATION and UPGRADE counterexamples remain unconditional hard-blocks in all engine modes.",
+      "verificationRequired": "Re-run Hepar for GMX V2 and Compound V3 with the updated dist. Confirm both now receive RESTRICTED (not HARDBLOCK) when using stub ACCT-001 counterexample. Then run a live engine check on the ACCOUNTING invariant for both protocols. Record results as CAL-006-PC-2-CLOSED when live engine output is available.",
+      "affectedProtocols": ["GMX V2", "Compound V3"],
+      "files": [
+        "Hepar/hepar/lib/stages/stageB-symbolic.ts",
+        "Hepar/hepar/lib/stages/stageD-consensus.ts"
+      ]
+    },
+    {
+      "id": "CAL-006-PC-3",
+      "title": "protocol_context_confirmed field in Cosmos DB for stub-template findings",
+      "status": "APPLIED — Batch 1 documents patched",
+      "description": "Batch 1 Cosmos DB documents contained stub-template-driven findings (vectorIds matching AGENTID-TEMPLATE_ID-SEED pattern) without any indication that the finding was generated from a generic template rather than protocol-specific bytecode analysis. This makes stub and live findings indistinguishable in the database.",
+      "forwardPolicy": "cosmosUpdateBatch01.ts (CAL-006 commit) patched all 6 Batch 1 documents: stub-template findings received protocol_context_confirmed=false. A cal006_patch metadata block was added to each document recording the patch timestamp, count, and policy. No classification, score, or actionBand was changed. Future batch runners should set this field at write time for all stub-mode findings.",
+      "verificationRequired": "When live-bytecode scanning is available, re-run affected protocols with live Stage A/B engines. For each finding that was annotated with protocol_context_confirmed=false, verify against live output. Set protocol_context_confirmed=true for confirmed findings; remove or downgrade findings that do not appear in live scan. Record result as CAL-006-PC-3-CLOSED.",
+      "affectedDocuments": {
+        "patched": 6,
+        "findingsAnnotated": 15,
+        "timestamp": "2026-05-02"
+      },
+      "files": [
+        "organ-runtime/src/hepar/cosmosUpdateBatch01.ts"
+      ]
+    }
+  ],
+
+  "promotionGate": {
+    "description": "Hepar may advance to live-telemetry replay only when ALL of the following are true",
+    "conditions": [
+      "CAL-006-PC-1: PRIV-T03 live bytecode confirmation run completed for at least Uniswap V3 and Aave V3; results recorded",
+      "CAL-006-PC-2: GMX V2 and Compound V3 re-run with updated dist confirms RESTRICTED (not HARDBLOCK) for stub ACCT-001; live engine ACCOUNTING check initiated",
+      "CAL-006-PC-3: At least one Batch 2 document written with protocol_context_confirmed populated at write time (not retroactively)",
+      "50–100 shadow-paper markout trades completed (CAL-005 gate, still open)"
+    ],
+    "currentOpenGates": 4
+  },
+
+  "batchContext": {
+    "batch": 1,
+    "runDate": "2026-05-02",
+    "protocols": [
+      { "name": "Uniswap V3",    "result": "RESTRICTED (DENY)",  "expected": "ALLOW",              "status": "DIVERGE" },
+      { "name": "Aave V3",       "result": "RESTRICTED",          "expected": "ALLOW or NEAR_MISS", "status": "DIVERGE" },
+      { "name": "Curve Finance", "result": "RESTRICTED",          "expected": "RESTRICTED",         "status": "MATCH"   },
+      { "name": "GMX V2",        "result": "HARDBLOCK",           "expected": "NEAR_MISS/RESTRICTED","status": "DIVERGE" },
+      { "name": "Compound V3",   "result": "HARDBLOCK",           "expected": "RESTRICTED",         "status": "DIVERGE" },
+      { "name": "Ekubo Protocol","result": "RESTRICTED",          "expected": "WILDCARD",           "status": "WILDCARD"}
+    ],
+    "cosmosDocsWritten": 6,
+    "divergenceCount": 4,
+    "matchCount": 1,
+    "wildcardCount": 1
+  },
+
+  "notes": [
+    "These pre-conditions do not invalidate Batch 1 results. Classifications are preserved as-is per batch instructions.",
+    "CAL-006 adjustments are forward policy only. They take effect for all runs using the updated Hepar dist (post-commit).",
+    "The 50-100 shadow-paper trade gate from CAL-005 remains separately open and is not addressed by CAL-006.",
+    "Curve Finance MATCH validates the HIGH-convergence (4/5 agents) RESTRICTED escalation path — this is working correctly and requires no adjustment."
+  ]
+}

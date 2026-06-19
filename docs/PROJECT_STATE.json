@@ -1,0 +1,32 @@
+{
+  "project": "The Sovereign",
+  "canonical_root": "C:\\Users\\crisc\\OneDrive - Southern Careers Institute\\My Drive\\The_Sovereign",
+  "resume_order": [
+    "README.md",
+    "docs/OPEN_FIRST.md",
+    "docs/PROJECT_STATE.md",
+    "docs/REPO_STRUCTURE_MAP.md",
+    "docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md"
+  ],
+  "active_pillars": [
+    "theo-techno-cosmo",
+    "gnostic-engine",
+    "monad-ecosystem"
+  ],
+  "archive_root": "archive",
+  "current_status": {
+    "structure": "clean",
+    "build": "passing",
+    "test": "passing",
+    "lint": "passing",
+    "layout_check": "passing",
+    "frontend_typecheck": "passing",
+    "frontend_build": "passing"
+  },
+  "known_follow_ups": [
+    "Deep cleanup of legacy content under theo-techno-cosmo",
+    "Gnostic Engine runtime hardening after the current FastAPI/Starlette httpx warning",
+    "Deeper control-center integration with live telemetry and execution surfaces, now focused on producer and watcher integration"
+  ],
+  "last_validated": "2026-06-18"
+}

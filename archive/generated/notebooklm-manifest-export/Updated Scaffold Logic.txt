@@ -1,0 +1,12 @@
+Updated Scaffold Logic
+config.py (New Exploit Variables)
+
+EXPLOIT_VARIABLES = {
+    "V1": "Dependency Depth",
+    "V2": "Maintainer Entropy",
+    "V3": "Network Surface",
+    "V4": "Version Drift"
+}
+
+# Weights for the Structural Read (Merge Point)
+MERGE_WEIGHTS = {"exploration": 0.5, "verification": 0.5}

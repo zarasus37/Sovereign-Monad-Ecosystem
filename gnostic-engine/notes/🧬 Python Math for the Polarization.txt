@@ -1,0 +1,42 @@
+🧬 Python Math for the PolarizationFilter
+The PolarizationFilter uses the Stokes-Mueller formalism to analyze the "phase resonance" of incoming data. In this model, unpolarized "noise" (hallucinations) is filtered out, while coherent "signal" (truth) passes through the master gate.
+
+import numpy as np
+
+class PolarizationFilter:
+    """
+    Analyzes the vibrational alignment (coherence) between system tracks.
+    Uses Stokes Parameters (S0, S1, S2, S3) to measure signal integrity.
+    """
+    def __init__(self, coherence_threshold=0.85):
+        self.threshold = coherence_threshold
+
+    def calculate_stokes(self, lane_a_intensity, lane_b_intensity):
+        """
+        Derives Stokes parameters from parallel track intensities.
+        S0: Total Intensity
+        S1: Linear Horizontal/Vertical Difference
+        S2: Linear +45/-45 degree Difference
+        S3: Circular (Right/Left) Difference
+        """
+        # Simplification: Lane A and B intensities represent linear components
+        s0 = lane_a_intensity + lane_b_intensity # Total intensity
+        s1 = lane_a_intensity - lane_b_intensity # Linear polarization
+        s2 = 2 * np.sqrt(lane_a_intensity * lane_b_intensity) * np.cos(0) # Phase-locked
+        s3 = 0 # Initial circular state
+        return np.array([ssss])
+
+    def degree_of_polarization(self, stokes):
+        """
+        Calculates how much of the signal is 'True' vs 'Noise'.
+        DoP = sqrt(S1^2 + S2^2 + S3^2) / S0
+        """
+        s0, s1, s2, s3 = stokes
+        if s0 == 0: return 0.0
+        dop = np.sqrt(s1**2 + s2**2 + s3**2) / s0 #
+        return round(dop, 4)
+
+    def coherence_gate(self, stokes_vector):
+        """MASTER GATE: Blocks unpolarized noise (hallucinations)."""
+        dop = self.degree_of_polarization(stokes_vector)
+        return dop >= self.threshold

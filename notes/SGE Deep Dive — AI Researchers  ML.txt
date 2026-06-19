@@ -1,0 +1,168 @@
+**SGE Deep Dive — AI Researchers / ML Engineers**
+
+**1 — Opening Hook**  
+Data contamination, temporal desynchronization, and structurally ambiguous inputs are the primary vectors that drive model drift and alignment failure in modern ML pipelines — not the model architectures alone. The Succor Gnostic Engine (SGE) applies physics-grade, optics-inspired verification to certify structural truth at ingestion so downstream learners and evaluators operate on mathematically coherent inputs.
+
+**2 — The Core Claim (Scoped Precisely)**  
+**SGE eliminates hallucination at the DATA INGESTION AND VALIDATION LAYER** — i.e., structural and input-level “hallucination” caused by corrupted, ambiguous, adversarial, or temporally-misaligned data before any model consumes it. (Scope: this guarantees input structural integrity under SGE’s observability assumptions and configured thresholds; it does NOT claim to remove semantic hallucination arising during or after model inference or from learned model priors.)
+
+**3 — Architecture Overview** (LOGOC → SGE → HEPAR)  
+- **LOGOC (Logic of Gnosis Ontological Compression)** — LOGOC supplies the tripartite evaluation framework used during labeling, objective formulation, and dataset design: Theology (intent / alignment objectives), Technology (mechanism / algorithmic primitives), Cosmology (scale / emergence modeling). For researchers, LOGOC acts as the specification language that stitches epistemic constraints into training objectives and meta-evaluation metrics. Think of LOGOC as the specification algebra that tells SGE what to measure and why. See the protocol-level spec: LOGOC Dual Wheel Spec.
+- **SGE (Succor Gnostic Engine)** — The runtime verifier: a Stokes–Mueller–inspired volumetric scanner that computes Degree-of-Polarization (DoP), applies Pulfrich temporal phase analysis, runs dual-track stereopsis (Lane A discovery, Lane B verification), produces cryptographic attestation (`Gnostic Seal`), and hands verdicts to the system immune layer. For researchers this is the ingestion oracle that enforces invariants, supplies structured diagnostic signals for RL/SL pipelines, and can be used as a differentiable gating signal for training curricula.
+- **HEPAR (Host Efferent Protection And Reconciliation)** — The biological analog: liver/immune system for the stack. HEPAR enforces quarantine, rolling attenuation, and attestation storage; it implements the Blink Controller (eye-reflex retry/quarantine middleware), circuit breakers and long-term audit trails. For ML ops it provides reproducible quarantine records for dataset curation and retraining loops.
+
+**4 — The Math (Calibrated for ML researchers)**
+
+Dual-track stereopsis (what it does, why it matters)  
+- Lane A (MCTS discovery): SGE treats structural interpretation as a search problem. A Monte‑Carlo Tree Search (MCTS) explores candidate data-structure hypotheses and alignment transforms (temporal shifts, schema remaps, unit normalizations). Each node is scored by projection of measured Stokes vectors into expected model subspaces; exploration favors structural hypotheses that preserve invariants under LOGOC constraints. This yields a ranked hypothesis set of “what the data claims to be.”
+- Lane B (MCCM verification): The MCCM branch performs constrained, inverse-coherence checks — a probabilistic mapping that enforces Stokes–Mueller consistency, cross-sensor reciprocity, and expected causal signatures (e.g., cryptographic monotonicity, statistical stationarity). MCCM is intentionally conservative: it accepts only hypotheses that sustain transform-invariant coherence under exhaustive constraint-checks. Interaction: Lane A proposes, Lane B falsifies or certifies; stereopsis arises where proposals that survive both tracks are treated as coherent “3D” structure in the data manifold.
+
+Volumetric coherence / Degree of Polarization (DoP)  
+- SGE expresses structural confidence as a polarization measure computed from Stokes projections: $S_0,S_1,S_2,S_3$ gather orthogonal projections of the data signal in volumetric feature space (time, channel, semantic axes). The Degree of Polarization is:
+$$
+\mathrm{DoP} \;=\; \frac{\sqrt{S_1^2 + S_2^2 + S_3^2}}{S_0}, \qquad \mathrm{DoP}\in[0,1]
+$$
+Intuition: DoP close to 1 indicates a strongly polarized (coherent) structural signal; DoP near 0 indicates incoherent / ambiguous structure.
+
+Pulfrich phase shift / temporal parallax multiplier  
+- SGE measures inter-channel temporal phase differences (Pulfrich effect analogue) to compute a normalized temporal-parallax multiplier $P\in[0,1]$ that downweights structural confidence when sensors disagree in phase/latency. Conceptually,
+$$
+P = \mathrm{Pulfrich}(\Delta t, \phi) \quad\text{(normalized to [0,1])}
+$$
+where $\Delta t$ are measured latencies and $\phi$ phase offsets; $P$ collapses for large asynchronous phase shifts.
+
+Structural Read (decision function)  
+- SGE computes a compact Structural Read score:
+$$
+S \;=\; \mathrm{DoP}\times P \;-\; W
+$$
+where $W$ is the aggregate Magnitude Weights vector (0..1) encoding amplitude anomalies, out-of-band energy, and signature mismatches (normalized). The system then uses a lock threshold $T$ (default $0.85$) to decide acceptance:
+$$
+\text{LOCK if } S \ge T \quad\text{(configurable via environment variables)}
+$$
+Note (paper link): this section is summarized conceptually here; numeric derivations, statistical calibration, and training-grade validation are presented in the LOGOC Dual Wheel specification and accompanying whitepaper — see [LOGOC Dual Wheel Spec](docs/LOGOC_DUAL_WHEEL_GNOSIS_ENGINE_SPEC_v5_1.md) for formal proofs and calibration experiments.
+
+Configuration (recommended defaults)  
+- `SGE_STRUCT_READ_THRESHOLD=0.85` (default)  
+- `SGE_PULFRICH_CONFIG` — parameters for phase-to-multiplier mapping  
+- `SGE_MAGNITUDE_WEIGHT_SCHEME` — channels and band-weights used to compute $W$
+
+**5 — Terminology Bridge Table**
+
+| SGE / LOGOC Term             | Industry Equivalent                         |
+|------------------------------|---------------------------------------------|
+| Theology (LOGOC domain)      | Intent / Alignment layer                    |
+| Cosmology (LOGOC domain)     | Scalability / Emergence modeling            |
+| Pneumatic Bit-Filtered Proc. | Data normalization / Boolean preprocessing  |
+| Monad Bitmask (Vmask)        | 8-bit feature hash / integrity signature    |
+| Focal Point (DoP > 0.90)     | High-confidence validation pass             |
+| Null Point (DoP < 0.50)      | Validation failure / ambiguous state        |
+| Gnostic Seal                 | Cryptographic attestation record            |
+| Blink Controller             | Retry middleware with quarantine fallback   |
+| Lane C / WASEST              | Blast radius limiter / circuit breaker      |
+| 422 Phase Slip               | Temporal desync error / stale consensus     |
+| Structural Read (S)          | Ingestion integrity score (input gate)      |
+| Pulfrich Multiplier (P)     | Temporal-parallax confidence multiplier     |
+| DoP (Degree of Polarization) | Signal coherence / input consistency metric |
+| Volumetric Scanner           | Multi-channel integrity sensor              |
+| Pulfrich Watcher             | Temporal-parallax detector                  |
+| RHCP spin                    | Circular-bias systemic orientation metric   |
+| HEPAR                        | System immune layer / attestation engine    |
+| MCTS (Lane A)                | Hypothesis search / structural proposal     |
+| MCCM (Lane B)                | Constraint-based structural verifier        |
+| Ramon Lull wheel             | Deterministic address space (spec artifact) |
+| W-user                       | Active-user contagion weight                |
+| Registry drift               | Divergent public registry count             |
+
+**6 — Lane C — Magnitude Kill Switch (Full Segment)**
+
+Lane C is the systemic safety plane: it kills propagation when blast radius risk outweighs mathematical truth. Key rules:
+
+- WASEST (horizontal-scale kill): trigger if estimated infrastructure impact > 25% (i.e., operations would affect >25% of nodes/services). This is a horizontal containment threshold to prevent systemic cascading.
+- W-user (user-contagion kill): trigger if >50% of the active user base would be affected by acceptance; protects against mass-user harm.
+- Registry drift kill: triggers if >5 simultaneous public registries show divergent state (signature drift across registries implies external consensus split).
+- Volume kill: triggers at sustained >500 MB/min data throughput into a single intake stream (to prevent amplification attacks and denial-of-service validation overrun).
+- Master kill logic (immediate, no-confirmation): if RHCP spin > 0.75 AND contagion weight active → immediate magnitude reject and instant quarantine. (RHCP spin is the system’s circular-polarization bias metric indicating directional systemic orientation; when high it magnifies contagion risk.) This path requires no human confirmation.
+
+Paradigm shift: under SGE a transaction can be mathematically TRUE but still be killed because its predicted blast radius (systemic harm) exceeds risk thresholds. This deliberately decouples mathematical validity from operational safety: truth ≠ safe-to-propagate.
+
+Operational mechanics: Lane C lives inside HEPAR; it subscribes to attestation telemetry (DoP, Pulfrich, Structural Read, registry divergence) and computes an overall magnitude score. When thresholds cross, HEPAR triggers quarantine actions and writes immutable `Gnostic Seal` records.
+
+**7 — Developer Integration Walkthrough**
+
+Orchestration (Docker Compose snippet — API @ 8000, Worker, Redis)
+```yaml
+version: '3.8'
+services:
+  api:
+    image: sge-intake:latest
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      - SGE_STRUCT_READ_THRESHOLD=0.85
+    depends_on: ["redis"]
+  worker:
+    image: sge-worker:latest
+    build: ./worker
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+  redis:
+    image: redis:7
+    ports: ["6379:6379"]
+```
+
+Launch (recommended)
+```bash
+# from repo root
+uvicorn src.intake.api.app:app --host 0.0.0.0 --port 8000 --log-level info
+# (the minimal form accepted by the system is `uvicorn src.intake.api.app` but the explicit module:app form is recommended)
+```
+
+Primary endpoint
+- `POST /intake/forage` — minimal payload:
+```json
+{ "target": "<package>", "depth": "recursive" }
+```
+
+Async pattern (202 + polling)
+- On ingestion start: API returns `202 Accepted` with `Location: /intake/forage/{id}/status` and JSON `{ "id": "...", "status": "pending" }`.
+- Worker updates Redis and posts final `200` with `result` or `422` with `phase_slip` and diagnostic payload.
+
+422 Phase Slip handling and Blink recovery
+- Client receives `422` when Pulfrich/DoP invariants fail but recoverable. Recovery policy:
+  - Blink retry loop: up to `SGE_MAX_BLINK_RETRIES` (default 3) with exponential backoff and jitter.
+  - On each blink: worker triggers `Blink Controller` adaptive normalization (unit-correction, frame-resync, reconstructive imputation) and re-evaluates Structural Read.
+  - After 3 unsuccessful attempts → escalate to hard quarantine (HEPAR writes `Gnostic Seal` with `quarantine:true`) and notifies operators.
+
+Pseudo-recovery (sketch)
+```python
+max_retries = int(os.getenv("SGE_MAX_BLINK_RETRIES", 3))
+attempt = 0
+while attempt < max_retries:
+    attempt += 1
+    res = attempt_repair_and_recompute(structural_payload)
+    if res.status == "LOCK":
+        return res
+    sleep(exponential_backoff(attempt))
+# on failure:
+quarantine(payload_id)
+```
+
+Environment variables (examples)
+- `SGE_STRUCT_READ_THRESHOLD=0.85`  
+- `SGE_MAX_BLINK_RETRIES=3`  
+- `SGE_VOLUME_KILL_MB_PER_MIN=500`  
+- `SGE_WASEST_THRESHOLD=0.25`  
+- `SGE_W_USER_THRESHOLD=0.5`  
+- `SGE_REGISTRY_DRIFT_THRESHOLD=5`  
+- `SGE_RHCP_SPIN_KILL=0.75`
+
+**8 — Acknowledged Gaps (Credibility & Next Verification Steps)**  
+- Core implementation files require audit: `pbfp.py`, `logic_gate.py`, and `recoverer.py` should be code-reviewed to confirm the stated invariants and statistical normalizations used to compute $W$ and Pulfrich mappings. Architectural claims here derive from the in-repo manifests and whitepaper, not a line-by-line code audit.  
+- The Ramon Lull wheel system (address-space generator) produces 1,621,274 tripartite LOGOC addresses; mapping of live gnosis events to these addresses and its impact on curriculum/training pipelines require empirical validation documentation and trace-level mapping proofs.  
+- RLHF vs LOGOC: LOGOC’s tripartite epistemic forcing is theoretically distinct from RLHF; however published benchmark comparisons (robustness, alignment, utility) are not yet available. Researchers should treat LOGOC as an alternative alignment hypothesis that requires controlled head-to-head evaluations.
+
+**9 — Closing Position Statement (AI Researchers)**  
+SGE should be positioned as an alternative alignment mechanism and an upstream integrity primitive: it delivers a physics-inspired, mathematically-auditable gating function for datasets and live inputs. Bold claim: when SGE attests `LOCK` under its observability assumptions and configured thresholds, the ingestion stream is structurally coherent and suitable for model training or inference (WHAT: input-level hallucination eliminated; WHERE: ingestion/validation layer; CONDITIONS: sensor observability, thresholds tuned). For ML researchers, SGE offers a measurable, auditable signal that can be used as a curriculum gate, a reward shaping input, or an auxiliary loss — a complement (not replacement) to RLHF and other post-hoc alignment techniques.
+
+---

@@ -1,0 +1,767 @@
+{
+  "calibrationRunId": "CAL-004",
+  "runAt": "2026-05-02T18:33:21.497Z",
+  "heparTier": "ADVISORY",
+  "purpose": "§9 Metric 2 — False-positive rate precision baseline. Three clean, never-exploited protocols with extensive audit histories. Establishes FP=0 baseline before expanding to larger clean-protocol corpus.",
+  "successCriteria": {
+    "SC1": "Zero false positives (no DENY or HARDBLOCK) across all 3 protocols",
+    "SC2": "Zero near-misses (no RESTRICTED) across all 3 protocols",
+    "SC3": "No escalation rules fire (CERTAIN_CRITICAL, HIGH_HIGH, PROBABLE_CRITICAL)",
+    "SC4": "All globalScores < 40 (clean protocols stay within ALLOW/GUARDED_ALLOW range)"
+  },
+  "actualResults": {
+    "SC1": "False positives: 0/3 — PASS",
+    "SC2": "Near misses: 0/3 — PASS",
+    "SC3": "PASS — no escalation rules fired on any clean protocol",
+    "SC4": "PASS — all scores < 40: Uniswap v3 Core=4.94, Aave v3 Core=9.15, Compound v3 (Comet)=9.21"
+  },
+  "metrics": {
+    "falsePositiveCount": 0,
+    "nearMissCount": 0,
+    "falsePositiveRate": 0,
+    "precisionMetricFixture": 1,
+    "note": "3-protocol fixture. Not statistically sufficient. Expand corpus for §9 Metric 2 claims."
+  },
+  "protocols": [
+    {
+      "protocolId": "UNISWAP-V3-2021",
+      "heparRunId": "stageA-1777746801496-advisory+stageB-1777746801496-advisory+STAGE-C-1777746801496-872c+STAGE-D-1777746801496-b5fa",
+      "completedAt": "2026-05-02T18:33:21.496Z",
+      "groundTruth": {
+        "name": "Uniswap v3 Core",
+        "date": "2021-05-05",
+        "exploitDate": null,
+        "tvlPeakUSD": 5000000000,
+        "contractAddress": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+        "auditedBy": [
+          "Trail of Bits (2021)",
+          "ABDK (2021)"
+        ],
+        "category": "AMM",
+        "cleanTrackRecord": "Uniswap v3 has never been directly exploited despite sustained TVL > $1B since May 2021. All known attacks on Uniswap ecosystem exploited integrating protocols, not core v3 logic. Concentrated liquidity positions and tick arithmetic have been independently verified by ABDK.",
+        "knownAdvisoryFindings": [
+          "Tick boundary arithmetic has documented precision limits at MIN_TICK/MAX_TICK (ABDK finding, accepted risk)",
+          "MEV sandwich opportunities are by design (accepted AMM property, not a vulnerability)",
+          "Factory setOwner callable by current owner — standard governance pattern, no open escalation path"
+        ],
+        "expectedBand": "ALLOW",
+        "falsePositiveThreshold": "DENY"
+      },
+      "heparResult": {
+        "stageA": {
+          "runId": "stageA-1777746801496-advisory",
+          "hardBlockCandidates": [],
+          "dimensionScores": {
+            "byteCodePrivilege": 95,
+            "proxyAdmin": 100,
+            "lpUnlock": 95,
+            "walletTaint": 50,
+            "accountingInvariant": 100,
+            "inputValidation": 95
+          },
+          "walletTaintStatus": "PIPELINE_REQUIRED"
+        },
+        "stageB": {
+          "runId": "stageB-1777746801496-advisory",
+          "engineStatus": "STUB",
+          "hardBlockFromSymbolic": false,
+          "summary": {
+            "provedSafe": 0,
+            "counterexamplesFound": 0,
+            "unknownTimeout": 16,
+            "totalChecked": 16
+          },
+          "counterexamplesFound": []
+        },
+        "stageC": {
+          "runId": "STAGE-C-1777746801496-872c",
+          "executionStatus": "STUB",
+          "masterSeed": "HEPAR-CAL4-UNISWAP-V3-2021-05-05",
+          "totalFindings": 5,
+          "totalPathsExecuted": 256276,
+          "highSeverityFindings": [],
+          "corpusExchangeLog": [
+            "[CorpusExchange] Post-campaign exchange: no high-value findings (sev>=7) to share. Corpus exchange log populated with coverage summary only.",
+            "[CorpusExchange] Coverage summary: totalPaths=256276 avgCoverageRatio=0.466 agents=5"
+          ]
+        },
+        "stageD": {
+          "runId": "STAGE-D-1777746801496-b5fa",
+          "actionBand": "ALLOW",
+          "globalScore": 4.93739900094457,
+          "hardBlockReasons": [],
+          "cortexReviewFlagged": false,
+          "walletTaintProvisional": true,
+          "dimensionScores": {
+            "byteCodePrivilege": 95,
+            "proxyAdmin": 100,
+            "lpUnlock": 95,
+            "walletTaint": 50,
+            "accountingInvariant": 100,
+            "inputValidation": 95,
+            "adversarialExecution": 57.5,
+            "economicViability": 40,
+            "composite": 79.7
+          },
+          "findingVectors": [
+            {
+              "vectorId": "UNI-MEV-SANDWICH-ACCEPTED",
+              "severity": 6,
+              "consensus": 0.2,
+              "repro": 0.5,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Sandwich attack via mempool front-running is an accepted property of permissionless AMMs. slippage t"
+            },
+            {
+              "vectorId": "UNI-TICK-BOUNDARY-ARITH",
+              "severity": 5,
+              "consensus": 0.2,
+              "repro": 0.55,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Q64.96 fixed-point tick boundary arithmetic exhibits rounding of ±1 ULP at extreme sqrt prices. Know"
+            },
+            {
+              "vectorId": "UNI-TICK-CROSS-STATE-EDGE",
+              "severity": 4,
+              "consensus": 0.2,
+              "repro": 0.45,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Tick crossing state machine transitions between active/inactive are correct under sequential executi"
+            },
+            {
+              "vectorId": "UNI-FACTORY-SETTER-GOV",
+              "severity": 3,
+              "consensus": 0.2,
+              "repro": 0.4,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Factory owner can set new fee tiers and transfer ownership. Current owner is Uniswap Governance with"
+            },
+            {
+              "vectorId": "UNI-LOCK-GUARD-CONFIRMED",
+              "severity": 2,
+              "consensus": 0.2,
+              "repro": 0.4,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Uniswap v3 pool uses a lock flag (slot0.unlocked) that prevents reentrancy into pool functions. All "
+            }
+          ],
+          "scoredVectors": [
+            {
+              "vectorId": "UNI-MEV-SANDWICH-ACCEPTED",
+              "riskScore": 3.95
+            },
+            {
+              "vectorId": "UNI-TICK-BOUNDARY-ARITH",
+              "riskScore": 3.41
+            },
+            {
+              "vectorId": "UNI-TICK-CROSS-STATE-EDGE",
+              "riskScore": 2.84
+            },
+            {
+              "vectorId": "UNI-FACTORY-SETTER-GOV",
+              "riskScore": 2.28
+            },
+            {
+              "vectorId": "UNI-LOCK-GUARD-CONFIRMED",
+              "riskScore": 1.73
+            }
+          ],
+          "attestationPayload": {
+            "riskScore": 4.93739900094457,
+            "evidenceMerkleRoot": "6368cc43",
+            "coverageRatio": 0.46588610066100955,
+            "unknownRatio": 0.2620974670443684,
+            "topVectors": [
+              {
+                "vectorId": "UNI-MEV-SANDWICH-ACCEPTED",
+                "severity": 6,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "UNI-TICK-BOUNDARY-ARITH",
+                "severity": 5,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "UNI-TICK-CROSS-STATE-EDGE",
+                "severity": 4,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "UNI-FACTORY-SETTER-GOV",
+                "severity": 3,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "UNI-LOCK-GUARD-CONFIRMED",
+                "severity": 2,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              }
+            ]
+          }
+        },
+        "operator": {
+          "actionBand": "ALLOW",
+          "globalScore": 4.93739900094457,
+          "hardBlocked": false,
+          "hardBlockReasons": [],
+          "cortexEscalated": false,
+          "disclosureWindowsOpened": 0,
+          "topThreeFindings": [
+            {
+              "vectorId": "UNI-MEV-SANDWICH-ACCEPTED",
+              "severity": 6,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Sandwich attack via mempool front-running is an accepted property of permissionless AMMs. slippage tolerance parameter mitigates user-level impact. Core v3 does not and is not designed to prevent MEV."
+            },
+            {
+              "vectorId": "UNI-TICK-BOUNDARY-ARITH",
+              "severity": 5,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Q64.96 fixed-point tick boundary arithmetic exhibits rounding of ±1 ULP at extreme sqrt prices. Known precision limit in ABDK audit. Not exploitable in normal operating range."
+            },
+            {
+              "vectorId": "UNI-TICK-CROSS-STATE-EDGE",
+              "severity": 4,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Tick crossing state machine transitions between active/inactive are correct under sequential execution. Theoretical out-of-order cross scenario requires protocol-level reentrancy (prevented by lock). No exploitable state inconsistency found."
+            }
+          ],
+          "registryStatus": "GREEN",
+          "requiresOperatorConfirmation": true,
+          "advisoryTierDisclaimers": [
+            "All outputs are fixture-verified only, not live-telemetry-verified.",
+            "No automated capital action should be taken without operator confirmation.",
+            "This assessment is at Advisory tier. External pricing not permitted."
+          ]
+        },
+        "delta": {
+          "expectedActionBand": "ALLOW",
+          "actualActionBand": "ALLOW",
+          "falsePositive": false,
+          "nearMiss": false,
+          "falsePositiveGrade": "TRUE_NEGATIVE_ALLOW",
+          "escalationRulesFired": [],
+          "globalScore": 4.93739900094457,
+          "stageAHardBlockCount": 0,
+          "stageBHardBlockFromSymbolic": false,
+          "cortexEscalated": false
+        }
+      }
+    },
+    {
+      "protocolId": "AAVE-V3-2022",
+      "heparRunId": "stageA-1777746801496-advisory+stageB-1777746801497-advisory+STAGE-C-1777746801497-7bdb+STAGE-D-1777746801497-5461",
+      "completedAt": "2026-05-02T18:33:21.497Z",
+      "groundTruth": {
+        "name": "Aave v3 Core",
+        "date": "2022-03-16",
+        "exploitDate": null,
+        "tvlPeakUSD": 8000000000,
+        "contractAddress": "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
+        "auditedBy": [
+          "Trail of Bits",
+          "OpenZeppelin",
+          "Sigma Prime",
+          "ABDK",
+          "SigmaPrime"
+        ],
+        "category": "LENDING",
+        "cleanTrackRecord": "Aave v3 has never been directly exploited. The protocol has circuit breakers, supply/borrow caps, isolation mode, and eMode to contain risk. 6+ independent security audits before launch. Minor v2 incidents (not v3) were limited in scope by design constraints.",
+        "knownAdvisoryFindings": [
+          "Ray arithmetic (27-decimal) rounding in interest accrual — documented, bounded by 1 ray",
+          "Oracle price staleness window (30 min default) — mitigated by Chainlink circuit breaker",
+          "Proxy upgrade via PoolAddressesProvider — timelocked governance, not directly exploitable"
+        ],
+        "expectedBand": "ALLOW",
+        "falsePositiveThreshold": "DENY"
+      },
+      "heparResult": {
+        "stageA": {
+          "runId": "stageA-1777746801496-advisory",
+          "hardBlockCandidates": [],
+          "dimensionScores": {
+            "byteCodePrivilege": 100,
+            "proxyAdmin": 95,
+            "lpUnlock": 100,
+            "walletTaint": 50,
+            "accountingInvariant": 85,
+            "inputValidation": 95
+          },
+          "walletTaintStatus": "PIPELINE_REQUIRED"
+        },
+        "stageB": {
+          "runId": "stageB-1777746801497-advisory",
+          "engineStatus": "STUB",
+          "hardBlockFromSymbolic": false,
+          "summary": {
+            "provedSafe": 0,
+            "counterexamplesFound": 0,
+            "unknownTimeout": 16,
+            "totalChecked": 16
+          },
+          "counterexamplesFound": []
+        },
+        "stageC": {
+          "runId": "STAGE-C-1777746801497-7bdb",
+          "executionStatus": "STUB",
+          "masterSeed": "HEPAR-CAL4-AAVE-V3-2022-03-16",
+          "totalFindings": 6,
+          "totalPathsExecuted": 265617,
+          "highSeverityFindings": [],
+          "corpusExchangeLog": [
+            "[CorpusExchange] Post-campaign exchange: no high-value findings (sev>=7) to share. Corpus exchange log populated with coverage summary only.",
+            "[CorpusExchange] Coverage summary: totalPaths=265617 avgCoverageRatio=0.562 agents=5"
+          ]
+        },
+        "stageD": {
+          "runId": "STAGE-D-1777746801497-5461",
+          "actionBand": "ALLOW",
+          "globalScore": 9.154838037197479,
+          "hardBlockReasons": [],
+          "cortexReviewFlagged": false,
+          "walletTaintProvisional": true,
+          "dimensionScores": {
+            "byteCodePrivilege": 100,
+            "proxyAdmin": 95,
+            "lpUnlock": 100,
+            "walletTaint": 50,
+            "accountingInvariant": 85,
+            "inputValidation": 95,
+            "adversarialExecution": 56,
+            "economicViability": 40,
+            "composite": 78.77
+          },
+          "findingVectors": [
+            {
+              "vectorId": "AAVE-ORACLE-STALENESS-WINDOW",
+              "severity": 6,
+              "consensus": 0.2,
+              "repro": 0.45,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Chainlink price feeds used with 30-minute heartbeat; in high-volatility scenarios a stale price coul"
+            },
+            {
+              "vectorId": "AAVE-ATOKEN-SHARE-ROUNDING",
+              "severity": 5,
+              "consensus": 0.2,
+              "repro": 0.5,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "aToken shares minted on deposit use ray-scaled division; rounding favors protocol by 1 ray. Over lar"
+            },
+            {
+              "vectorId": "AAVE-EMODE-CATEGORY-STATE",
+              "severity": 5,
+              "consensus": 0.2,
+              "repro": 0.45,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "eMode category assignments are user-controlled; switching eMode during an active borrow position cou"
+            },
+            {
+              "vectorId": "AAVE-EMERGENCY-PAUSE-GOV",
+              "severity": 4,
+              "consensus": 0.2,
+              "repro": 0.4,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "EMERGENCY_ADMIN role can pause supply/borrow/repay across all reserves. Pause does not move funds; r"
+            },
+            {
+              "vectorId": "AAVE-RAY-COMPOUND-ROUNDING",
+              "severity": 4,
+              "consensus": 0.2,
+              "repro": 0.5,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Binomial approximation for compound interest in MathUtils yields ±1 ray rounding per period. Deviati"
+            },
+            {
+              "vectorId": "AAVE-REENTRANCY-GUARD-CONFIRMED",
+              "severity": 2,
+              "consensus": 0.2,
+              "repro": 0.4,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Aave v3 Pool uses ReentrancyGuard on all state-mutating external functions. No reentrancy vector fou"
+            }
+          ],
+          "scoredVectors": [
+            {
+              "vectorId": "AAVE-ORACLE-STALENESS-WINDOW",
+              "riskScore": 3.94
+            },
+            {
+              "vectorId": "AAVE-ATOKEN-SHARE-ROUNDING",
+              "riskScore": 3.4
+            },
+            {
+              "vectorId": "AAVE-EMODE-CATEGORY-STATE",
+              "riskScore": 3.39
+            },
+            {
+              "vectorId": "AAVE-RAY-COMPOUND-ROUNDING",
+              "riskScore": 2.85
+            },
+            {
+              "vectorId": "AAVE-EMERGENCY-PAUSE-GOV",
+              "riskScore": 2.83
+            },
+            {
+              "vectorId": "AAVE-REENTRANCY-GUARD-CONFIRMED",
+              "riskScore": 1.73
+            }
+          ],
+          "attestationPayload": {
+            "riskScore": 9.154838037197479,
+            "evidenceMerkleRoot": "89a18b35",
+            "coverageRatio": 0.5621772468090057,
+            "unknownRatio": 0.3071289620595053,
+            "topVectors": [
+              {
+                "vectorId": "AAVE-ORACLE-STALENESS-WINDOW",
+                "severity": 6,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "AAVE-ATOKEN-SHARE-ROUNDING",
+                "severity": 5,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "AAVE-EMODE-CATEGORY-STATE",
+                "severity": 5,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "AAVE-RAY-COMPOUND-ROUNDING",
+                "severity": 4,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "AAVE-EMERGENCY-PAUSE-GOV",
+                "severity": 4,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              }
+            ]
+          }
+        },
+        "operator": {
+          "actionBand": "ALLOW",
+          "globalScore": 9.154838037197479,
+          "hardBlocked": false,
+          "hardBlockReasons": [],
+          "cortexEscalated": false,
+          "disclosureWindowsOpened": 0,
+          "topThreeFindings": [
+            {
+              "vectorId": "AAVE-ORACLE-STALENESS-WINDOW",
+              "severity": 6,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Chainlink price feeds used with 30-minute heartbeat; in high-volatility scenarios a stale price could allow undercollateralized borrows before liquidation triggers. Mitigated by Chainlink circuit breakers and Aave supply/borrow cap constraints."
+            },
+            {
+              "vectorId": "AAVE-ATOKEN-SHARE-ROUNDING",
+              "severity": 5,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "aToken shares minted on deposit use ray-scaled division; rounding favors protocol by 1 ray. Over large deposits, cumulative protocol fee collection can be 1 ray above true pro-rata share. Acknowledged in OpenZeppelin audit."
+            },
+            {
+              "vectorId": "AAVE-EMODE-CATEGORY-STATE",
+              "severity": 5,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "eMode category assignments are user-controlled; switching eMode during an active borrow position could briefly create a state where collateral LTV exceeds limit if oracle prices shift during the switch transaction. Bounded by liquidation engine."
+            }
+          ],
+          "registryStatus": "GREEN",
+          "requiresOperatorConfirmation": true,
+          "advisoryTierDisclaimers": [
+            "All outputs are fixture-verified only, not live-telemetry-verified.",
+            "No automated capital action should be taken without operator confirmation.",
+            "This assessment is at Advisory tier. External pricing not permitted."
+          ]
+        },
+        "delta": {
+          "expectedActionBand": "ALLOW",
+          "actualActionBand": "ALLOW",
+          "falsePositive": false,
+          "nearMiss": false,
+          "falsePositiveGrade": "TRUE_NEGATIVE_ALLOW",
+          "escalationRulesFired": [],
+          "globalScore": 9.154838037197479,
+          "stageAHardBlockCount": 0,
+          "stageBHardBlockFromSymbolic": false,
+          "cortexEscalated": false
+        }
+      }
+    },
+    {
+      "protocolId": "COMPOUND-V3-2022",
+      "heparRunId": "stageA-1777746801497-advisory+stageB-1777746801497-advisory+STAGE-C-1777746801497-5465+STAGE-D-1777746801497-2e90",
+      "completedAt": "2026-05-02T18:33:21.497Z",
+      "groundTruth": {
+        "name": "Compound v3 (Comet)",
+        "date": "2022-08-26",
+        "exploitDate": null,
+        "tvlPeakUSD": 2500000000,
+        "contractAddress": "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+        "auditedBy": [
+          "ChainSecurity",
+          "OpenZeppelin"
+        ],
+        "category": "LENDING",
+        "cleanTrackRecord": "Compound v3 (Comet) has never been exploited. Simplified vs v2: non-upgradeable core, single borrowable asset per deployment, no algorithmic interest rate instability. pauseGuardian pattern explicitly limits blast radius of any governance action.",
+        "knownAdvisoryFindings": [
+          "uint104 supply tracking — theoretical overflow unreachable at current TVL scale",
+          "absorb() liquidation penalty calculation has rounding in edge cases — 1 wei bounded",
+          "Governor Bravo 2-day timelock — standard, no direct upgrade path bypassing timelock"
+        ],
+        "expectedBand": "ALLOW",
+        "falsePositiveThreshold": "DENY"
+      },
+      "heparResult": {
+        "stageA": {
+          "runId": "stageA-1777746801497-advisory",
+          "hardBlockCandidates": [],
+          "dimensionScores": {
+            "byteCodePrivilege": 95,
+            "proxyAdmin": 100,
+            "lpUnlock": 95,
+            "walletTaint": 50,
+            "accountingInvariant": 100,
+            "inputValidation": 95
+          },
+          "walletTaintStatus": "PIPELINE_REQUIRED"
+        },
+        "stageB": {
+          "runId": "stageB-1777746801497-advisory",
+          "engineStatus": "STUB",
+          "hardBlockFromSymbolic": false,
+          "summary": {
+            "provedSafe": 0,
+            "counterexamplesFound": 0,
+            "unknownTimeout": 16,
+            "totalChecked": 16
+          },
+          "counterexamplesFound": []
+        },
+        "stageC": {
+          "runId": "STAGE-C-1777746801497-5465",
+          "executionStatus": "STUB",
+          "masterSeed": "HEPAR-CAL4-COMPOUND-V3-2022-08-26",
+          "totalFindings": 6,
+          "totalPathsExecuted": 234310,
+          "highSeverityFindings": [],
+          "corpusExchangeLog": [
+            "[CorpusExchange] Post-campaign exchange: no high-value findings (sev>=7) to share. Corpus exchange log populated with coverage summary only.",
+            "[CorpusExchange] Coverage summary: totalPaths=234310 avgCoverageRatio=0.520 agents=5"
+          ]
+        },
+        "stageD": {
+          "runId": "STAGE-D-1777746801497-2e90",
+          "actionBand": "ALLOW",
+          "globalScore": 9.211768433251416,
+          "hardBlockReasons": [],
+          "cortexReviewFlagged": false,
+          "walletTaintProvisional": true,
+          "dimensionScores": {
+            "byteCodePrivilege": 95,
+            "proxyAdmin": 100,
+            "lpUnlock": 95,
+            "walletTaint": 50,
+            "accountingInvariant": 100,
+            "inputValidation": 95,
+            "adversarialExecution": 60,
+            "economicViability": 50,
+            "composite": 80.8
+          },
+          "findingVectors": [
+            {
+              "vectorId": "COMP-UINT104-BOUNDARY",
+              "severity": 5,
+              "consensus": 0.2,
+              "repro": 0.45,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "uint104 supply tracking theoretical ceiling at 20T base units. At current USDC scale (35B), ceiling "
+            },
+            {
+              "vectorId": "COMP-LIQUIDATION-ARBITRAGE",
+              "severity": 5,
+              "consensus": 0.2,
+              "repro": 0.5,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Liquidation incentive (8% discount to absorbers) is an intentional economic design. In low-volatilit"
+            },
+            {
+              "vectorId": "COMP-GOVERNOR-UPGRADE-PATH",
+              "severity": 4,
+              "consensus": 0.2,
+              "repro": 0.4,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Governor Bravo can update collateral factors, borrow/supply caps, and interest rate models. 2-day ti"
+            },
+            {
+              "vectorId": "COMP-ABSORB-PENALTY-ROUNDING",
+              "severity": 4,
+              "consensus": 0.2,
+              "repro": 0.5,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "absorb() liquidation penalty calculation involves integer division; rounding can produce 1 unit devi"
+            },
+            {
+              "vectorId": "COMP-TRACKING-CONCURRENT",
+              "severity": 4,
+              "consensus": 0.2,
+              "repro": 0.45,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "totalSupplyBase and totalBorrowBase updated atomically per transaction. Under concurrent liquidation"
+            },
+            {
+              "vectorId": "COMP-CEI-PATTERN-CONFIRMED",
+              "severity": 2,
+              "consensus": 0.2,
+              "repro": 0.4,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Compound v3 Comet implements checks-effects-interactions throughout. State updated before any extern"
+            }
+          ],
+          "scoredVectors": [
+            {
+              "vectorId": "COMP-LIQUIDATION-ARBITRAGE",
+              "riskScore": 3.4
+            },
+            {
+              "vectorId": "COMP-UINT104-BOUNDARY",
+              "riskScore": 3.39
+            },
+            {
+              "vectorId": "COMP-ABSORB-PENALTY-ROUNDING",
+              "riskScore": 2.85
+            },
+            {
+              "vectorId": "COMP-TRACKING-CONCURRENT",
+              "riskScore": 2.84
+            },
+            {
+              "vectorId": "COMP-GOVERNOR-UPGRADE-PATH",
+              "riskScore": 2.83
+            },
+            {
+              "vectorId": "COMP-CEI-PATTERN-CONFIRMED",
+              "riskScore": 1.73
+            }
+          ],
+          "attestationPayload": {
+            "riskScore": 9.211768433251416,
+            "evidenceMerkleRoot": "10d84009",
+            "coverageRatio": 0.5200503095239399,
+            "unknownRatio": 0.20191564413253218,
+            "topVectors": [
+              {
+                "vectorId": "COMP-LIQUIDATION-ARBITRAGE",
+                "severity": 5,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "COMP-UINT104-BOUNDARY",
+                "severity": 5,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "COMP-ABSORB-PENALTY-ROUNDING",
+                "severity": 4,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "COMP-TRACKING-CONCURRENT",
+                "severity": 4,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "COMP-GOVERNOR-UPGRADE-PATH",
+                "severity": 4,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              }
+            ]
+          }
+        },
+        "operator": {
+          "actionBand": "ALLOW",
+          "globalScore": 9.211768433251416,
+          "hardBlocked": false,
+          "hardBlockReasons": [],
+          "cortexEscalated": false,
+          "disclosureWindowsOpened": 0,
+          "topThreeFindings": [
+            {
+              "vectorId": "COMP-LIQUIDATION-ARBITRAGE",
+              "severity": 5,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Liquidation incentive (8% discount to absorbers) is an intentional economic design. In low-volatility periods, liquidation bots compete on gas to absorb positions; by design this creates MEV but no loss to the protocol."
+            },
+            {
+              "vectorId": "COMP-UINT104-BOUNDARY",
+              "severity": 5,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "uint104 supply tracking theoretical ceiling at 20T base units. At current USDC scale (35B), ceiling is 570x away. Safe cast protection makes overflow a hard revert, not a silent wrap."
+            },
+            {
+              "vectorId": "COMP-ABSORB-PENALTY-ROUNDING",
+              "severity": 4,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "absorb() liquidation penalty calculation involves integer division; rounding can produce 1 unit deviation from exact 8% penalty. Direction: always rounds to favor the protocol (penalty slightly above 8%). Not exploitable."
+            }
+          ],
+          "registryStatus": "GREEN",
+          "requiresOperatorConfirmation": true,
+          "advisoryTierDisclaimers": [
+            "All outputs are fixture-verified only, not live-telemetry-verified.",
+            "No automated capital action should be taken without operator confirmation.",
+            "This assessment is at Advisory tier. External pricing not permitted."
+          ]
+        },
+        "delta": {
+          "expectedActionBand": "ALLOW",
+          "actualActionBand": "ALLOW",
+          "falsePositive": false,
+          "nearMiss": false,
+          "falsePositiveGrade": "TRUE_NEGATIVE_ALLOW",
+          "escalationRulesFired": [],
+          "globalScore": 9.211768433251416,
+          "stageAHardBlockCount": 0,
+          "stageBHardBlockFromSymbolic": false,
+          "cortexEscalated": false
+        }
+      }
+    }
+  ]
+}

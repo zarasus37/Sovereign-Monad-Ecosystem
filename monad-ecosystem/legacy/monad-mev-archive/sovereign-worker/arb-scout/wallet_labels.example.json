@@ -1,0 +1,8 @@
+{
+  "0x0000000000000000000000000000000000000000": {
+    "label": "example-operator.eth",
+    "ens": "example-operator.eth",
+    "twitter": "example_handle",
+    "github": "example-org"
+  }
+}

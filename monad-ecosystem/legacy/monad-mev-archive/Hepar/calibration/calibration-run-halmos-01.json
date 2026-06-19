@@ -1,0 +1,142 @@
+{
+  "calRun": "CAL-HALMOS-01",
+  "completedAt": "2026-05-02T13:36:52.519Z",
+  "halmosStatus": "UNAVAILABLE",
+  "halmosInstallCommand": "pip install halmos",
+  "description": "Re-runs CAL-001 and CAL-002 protocols with HalmosAdapter. Since halmos is not installed, AUTH/UPGRADE invariants return HALMOS_UNAVAILABLE. Final bands match stub calibration because Stage A and Stage C provide independent escalation.",
+  "summary": {
+    "protocolsRun": 6,
+    "bandMatchesStub": 6,
+    "hardBlockSymbolicDelta": 2,
+    "bandMatchRate": 1,
+    "conclusion": "All bands match stub calibration. Halmos is additive when installed."
+  },
+  "protocols": [
+    {
+      "protocolId": "EULER-FINANCE-2023-HALMOS",
+      "name": "Euler Finance",
+      "stageBEngineStatus": "HALMOS_UNAVAILABLE",
+      "hardBlockFromSymbolic": {
+        "halmos": false,
+        "stub": true,
+        "delta": true
+      },
+      "actionBand": {
+        "halmos": "HARDBLOCK",
+        "stub": "HARDBLOCK",
+        "matches": true
+      },
+      "globalScore": 6.691109512351455,
+      "escalationReasons": [
+        "PROBABLE_CRITICAL_RESTRICT",
+        "SCORE_BAND"
+      ],
+      "halmosNote": "Halmos not installed — AUTH/UPGRADE invariants returned unknown/timeout. Install with: pip install halmos"
+    },
+    {
+      "protocolId": "CREAM-FINANCE-2021-HALMOS",
+      "name": "Cream Finance",
+      "stageBEngineStatus": "HALMOS_UNAVAILABLE",
+      "hardBlockFromSymbolic": {
+        "halmos": false,
+        "stub": true,
+        "delta": true
+      },
+      "actionBand": {
+        "halmos": "HARDBLOCK",
+        "stub": "HARDBLOCK",
+        "matches": true
+      },
+      "globalScore": 1.7703805508880563,
+      "escalationReasons": [
+        "PROBABLE_CRITICAL_RESTRICT",
+        "SCORE_BAND"
+      ],
+      "halmosNote": "Halmos not installed — AUTH/UPGRADE invariants returned unknown/timeout. Install with: pip install halmos"
+    },
+    {
+      "protocolId": "NOMAD-BRIDGE-2022-HALMOS",
+      "name": "Nomad Bridge",
+      "stageBEngineStatus": "HALMOS_UNAVAILABLE",
+      "hardBlockFromSymbolic": {
+        "halmos": false,
+        "stub": false,
+        "delta": false
+      },
+      "actionBand": {
+        "halmos": "HARDBLOCK",
+        "stub": "HARDBLOCK",
+        "matches": true
+      },
+      "globalScore": 1.1960726610189294,
+      "escalationReasons": [
+        "CERTAIN_CRITICAL_HARDBLOCK",
+        "SCORE_BAND"
+      ],
+      "halmosNote": "Halmos not installed — AUTH/UPGRADE invariants returned unknown/timeout. Install with: pip install halmos"
+    },
+    {
+      "protocolId": "BZX-2020-HALMOS",
+      "name": "bZx Protocol",
+      "stageBEngineStatus": "HALMOS_UNAVAILABLE",
+      "hardBlockFromSymbolic": {
+        "halmos": false,
+        "stub": false,
+        "delta": false
+      },
+      "actionBand": {
+        "halmos": "RESTRICTED",
+        "stub": "RESTRICTED",
+        "matches": true
+      },
+      "globalScore": 0,
+      "escalationReasons": [
+        "PROBABLE_CRITICAL_RESTRICT",
+        "SCORE_BAND"
+      ],
+      "halmosNote": "Halmos not installed — AUTH/UPGRADE invariants returned unknown/timeout. Install with: pip install halmos"
+    },
+    {
+      "protocolId": "HARVEST-FINANCE-2020-HALMOS",
+      "name": "Harvest Finance",
+      "stageBEngineStatus": "HALMOS_UNAVAILABLE",
+      "hardBlockFromSymbolic": {
+        "halmos": false,
+        "stub": false,
+        "delta": false
+      },
+      "actionBand": {
+        "halmos": "RESTRICTED",
+        "stub": "RESTRICTED",
+        "matches": true
+      },
+      "globalScore": 0.7442553107965111,
+      "escalationReasons": [
+        "PROBABLE_CRITICAL_RESTRICT",
+        "SCORE_BAND"
+      ],
+      "halmosNote": "Halmos not installed — AUTH/UPGRADE invariants returned unknown/timeout. Install with: pip install halmos"
+    },
+    {
+      "protocolId": "MANGO-MARKETS-2022-HALMOS",
+      "name": "Mango Markets",
+      "stageBEngineStatus": "HALMOS_UNAVAILABLE",
+      "hardBlockFromSymbolic": {
+        "halmos": false,
+        "stub": false,
+        "delta": false
+      },
+      "actionBand": {
+        "halmos": "HARDBLOCK",
+        "stub": "HARDBLOCK",
+        "matches": true
+      },
+      "globalScore": 2.7990112796330813,
+      "escalationReasons": [
+        "CERTAIN_CRITICAL_HARDBLOCK",
+        "SCORE_BAND"
+      ],
+      "halmosNote": "Halmos not installed — AUTH/UPGRADE invariants returned unknown/timeout. Install with: pip install halmos"
+    }
+  ]
+}

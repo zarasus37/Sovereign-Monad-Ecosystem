@@ -1,0 +1,11 @@
+ 1. Lane B "Bedrock" Rules (The Verification Checklist)
+While Lane A (Discovery) is opportunistic, Lane B is forensic. It uses the MCCM (Monte Carlo Consensus Model) to verify that every claim made by Lane A has a "physical" anchor in the data.
+Formal Verification Bits (V-Mask):
+B0: AUTH_CHAIN: Does the package have a valid GPG/Sigstore signature?
+B1: PROV_ORIGIN: Is the source repository matched to the binary hash?
+B2: HIST_STABLE: Has this maintainer account existed for > 365 days?
+B3: DIFF_LOG: Are the code changes documented in a verifiable commit history?
+B4: PEER_REVIEW: Are there at least two unique, non-automated approvals?
+B5: SPEC_ALIGN: Does the binary payload match the declared manifest?
+B6: GEO_CONSIST: Is the upload IP consistent with previous maintainer activity?
+B7: CUST_TRUST: Is the package used by > 100 vetted downstream "bedrock" entities?

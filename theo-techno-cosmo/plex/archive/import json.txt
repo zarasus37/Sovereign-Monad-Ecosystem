@@ -1,0 +1,18 @@
+import json
+
+# Print key outputs so we can confirm everything ran correctly
+with open('simulation_report.json') as f:
+    report = json.load(f)
+print("=== SIMULATION REPORT ===")
+print(json.dumps({k:v for k,v in report.items() if k not in ['scheduler']}, indent=2))
+print("\nScheduler stats:", json.dumps(report['scheduler'], indent=2))
+
+print("\n=== GNOSIS EVENTS PREVIEW ===")
+with open('gnosis_events.jsonl') as f:
+    for line in f:
+        ev = json.loads(line)
+        print(f"\nEvent: {ev['event_id'][:8]}...")
+        print(f"Active slots: {ev['active_slots']}")
+        print(f"Constitution score: {ev['constitution_score']}")
+        print(f"Prompt: {ev['messages'][1]['content'][:80]}...")
+        print(f"Response (first 120 chars): {ev['messages'][2]['content'][:120]}...")

@@ -1,0 +1,15 @@
+{
+  "runtimeMode": "analysis",
+  "organs": {
+    "Cardia": { "enabled": true, "capitalRequired": true, "buildReady": true },
+    "Pneuma": { "enabled": true, "capitalRequired": false, "buildReady": true },
+    "Hepar": { "enabled": true, "capitalRequired": false, "buildReady": true },
+    "Cortex": { "enabled": true, "capitalRequired": false, "buildReady": true },
+    "Synapse": { "enabled": true, "capitalRequired": false, "buildReady": true },
+    "Vox": { "enabled": true, "capitalRequired": false, "buildReady": true }
+  },
+  "coordination": {
+    "primaryLoop": ["Synapse", "Hepar", "Cortex", "Cardia", "Vox", "Pneuma"],
+    "allowCapitalGatedOrgansInAnalysis": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "walletFunded": false,
+  "multisigDefined": false,
+  "guardedLiveCapApproved": false,
+  "firstDisbursementExecuted": false,
+  "liveBankrollRouted": false,
+  "notes": [
+    "Phase 1a live proof is complete and execution truth is staged; Cardia is now allowed to advance into bounded funding readiness.",
+    "Funding alone is not sufficient without a guarded-live cap, operator control, and explicit disbursement discipline."
+  ]
+}

@@ -1,0 +1,22 @@
+# The_Sovereign - pnpm Workspace Configuration
+# Generated 2026-06-01 - Phase 1 Root Foundation
+# Updated 2026-06-09 - Phase 3 Gnostic Engine Integration
+
+packages:
+  # ── Foundation ────────────────────────────────────────────────────────────
+  # Canonical type contract — imported by all other packages.
+  # sovereign-bus — internal event bus, typed against sovereign-types.
+  # Both are included via the monad-ecosystem/packages/* glob below.
+
+  # ── Monad Ecosystem (economic / agentic pillar) ───────────────────────────
+  - 'monad-ecosystem/packages/*'
+
+  # ── Control Center (ICP app — frontend + Node.js bridge backend) ──────────
+  # Included in workspace so root pnpm build covers it.
+  - 'monad-ecosystem/control-center/src/frontend'
+
+  # ── Gnostic Engine (Python — uv managed; npm-aware for root scripts) ──────
+  - 'gnostic-engine'
+
+# Note: theo-techno-cosmo is documentation/philosophy only — not a package.
+# gnostic-engine uses uv/pyproject.toml for Python deps, but has package.json for npm awareness.

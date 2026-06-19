@@ -1,0 +1,604 @@
+Below is a thorough, in-depth specification and rationale for the language I sketched earlier — Llull–Trithemius–Peirce Machine Language (LTP-ML). I’ll present: concepts and primitives, type & modality system, formal semantics of combinators, IR and compilation pipeline, runtime/VM behavior, integration of your wheel images and the LOGOC constitution, security/provenance considerations, optimization & verification strategies, and practical examples that tie everything together. I’ll explain the design choices and the reasoning that justifies them at each stage.
+
+If you want runnable reference code next (loader, wheel ingestion, small interpreter, or bytecode generator), tell me which part and I’ll produce focused code.
+
+1) High-level goals and design rationale
+- Goals:
+  - Make combinatorial composition the core program-building mechanism (inspired by Llull).
+  - Make sign modality explicit and enforceable (Peirce: Icon / Index / Symbol), so the language reasons about resemblance, causal linkage, and convention.
+  - Add keyed rotation/encoding primitives (Trithemius) so symbol-to-sign mappings can be parameterized, reversible, or obfuscated.
+  - Ensure programs and transformations are traceable: provenance tokens flow with Index signs; symbolic tokens can be encoded/decoded with keys.
+- Why these choices:
+  - Combinator-first design reduces reliance on imperative control flow and enables powerful static transformations (fusion, partial-evaluation).
+  - Modality-aware semantics prevents incorrect rewrites: e.g., you shouldn’t treat a Symbolic label as an Iconic template without explicit conversion because you’d lose the “resemblance” guarantee.
+  - Trithemius-style keyed wheels let you: (a) systematically generate combinatorial families; (b) encode/decode meanings (for steganography, versioning, or keying behavior); (c) vary mappings deterministically for test generation.
+  - The LOGOC constitution naturally maps to a Symbolic policy artifact; integrating it as a first-class policy object makes alignment evaluation deterministic and auditable.
+
+2) Core concepts and primitives (vocabulary)
+- Sign: the minimal unit. A Sign is an object with:
+  - id: unique identifier (immutable)
+  - label: human-readable text
+  - type_signature: type (see section 3)
+  - modality: Icon | Index | Symbol | Hybrid
+  - payload: optional implementation pointer or description
+  - provenance: metadata (origin file/image, extraction confidence)
+  - svg_anchor: optional pointer to visual element (for visualizer)
+- Wheel: an ordered cyclic sequence of Sign slots. Each Wheel has:
+  - wheel_id, rings (optionally layered), slots_per_ring, default_offset
+  - encoding descriptor: Trithemius-style mapping (shift/substitution sequence, key phrase, or substitution table)
+  - pairing_table: optional restrictions or combinator weights
+- Combinator: a higher-order, typed operator that produces a new Sign from one or more Signs (examples: compose, map, fold, choose, combineWheels, rotateWheel, encodeSign).
+- Sign Graph (SG): the compiler IR that represents programs as nodes (Sign, Combinator) with typed, modality-labeled edges. This graph is the compilation target for optimizations.
+- Token / ProvenanceToken: small runtime artifact attached to Index signs (and optionally to combined signs) representing causal lineage (source wheel, slot index, key used).
+- Encoding Token: the result of encodeSign — an opaque token until decoded with the wheel and key.
+
+3) Types and modality
+
+3.1 Type system (overview)
+- Base types: Int, Float, Bool, String, Bytes, Image, List<T>, Option<T>, Tuple<T1,T2,...>, Function(A->B).
+- Nominal types for domain concepts: e.g., Concept[Theology], NatCount, SensorReading.
+- Modal types: type annotations carry modality as a qualifier:
+  - syntax example: Image[Icon], Int[Index], Label[Symbol]
+- Subtyping rules:
+  - T[Icon] <: T[Hybrid] and T[Index] <: T[Hybrid], T[Symbol] <: T[Hybrid]. Hybrid is the union-like supertype.
+  - No automatic implicit coercion between Icon/Index/Symbol; conversions require explicit combinators (castIconToSymbol, annotateIndex).
+
+3.2 Modalities and what they mean
+- Icon: resemblance-based signs. Transformations on Icon preserve structural resemblance. Examples: image filters, schematic templates, parsers that preserve syntactic structure.
+  - Guarantees: transformations that claim to preserve Icon must have proof or be in a known safe subset (e.g., image convolution preserves neighborhood structure).
+- Index: causal/positional linkage to an external object/source. Index signs carry provenance tokens. Example: a sensor reading, a database row reference, a count from a wheel slot.
+  - Guarantees: Index signs must preserve provenance by default when combined unless explicitly dropped.
+- Symbol: convention-based signs. Meaning is defined by lookup, convention, or key mapping. Example: the label “A” mapped to concept “gloria.”
+  - Guarantees: Symbolic operations must respect encoding/decoding rules if an encoding is applied (Trithemius mapping).
+- Hybrid: combines properties of the above; semantics determined by component modalities.
+
+Design rationale:
+- These modalities enforce safe rewrites and guide both compile-time optimization and runtime behavior. They let the compiler avoid unsound transformations (e.g., fusing two operators that rely on different modalities without insertion of an adapter).
+
+4) Combinators and their formal semantics
+
+4.1 Primitive combinators (signature + semantics)
+- compose(f: A→B, g: B→C) : (A→C)
+  - Modality rule: if f.modality == g.modality == M and M ∈ {Icon, Symbol}, then compose.modality = M. If modalities differ, result = Hybrid.
+  - Type-check: f.output must match g.input (considering modal qualifiers).
+- map(f: A→B): List<A>[M1] → List<B>[M2]
+  - Fusion rule: map(f) ∘ map(g) => map(f∘g) if modality fusion valid.
+- fold(f: (Acc, T)->Acc, init: Acc): List<T> -> Acc
+  - If f is Index-preserving and the input list items are Index, provenance tokens propagate to result (configuration dependent).
+- choose(pred: T→Bool, thenOp: T→U, elseOp: T→U): T→U
+  - Modality: If pred is Index, then the branch decision is Index-related and provenance should be preserved. If pred is Symbol, branch choice is convention-based.
+- iterate(f: T→T, n: Int): T→T
+  - Built-in optimization for compile-time unrolling if n small and f pure.
+- combineWheels(wA, wB, rule): produces set of new signs {combine(a_i,b_j) | rule(a_i,b_j) == true}
+  - Rule: user-defined predicate that can access modalities and types of a_i and b_j.
+  - Expansion control: may be performed statically up to a budget or deferred to runtime as a parametric combinator.
+- rotateWheel(w, offset) and keyRotate(w, key_seq):
+  - Behavior: compute wheel.offset = (default_offset + offset) mod N, or apply sequence for polyalphabetic shift.
+  - Semantics: rotates mapping between slot indices and labels; important for encode/decode determinism.
+- encodeSign(sign, wheel, key) → EncToken
+  - Semantics: apply wheel encoding descriptor with key; output is opaque until decodeSign(encToken, wheel, key) is applied.
+  - Modality: encoded Symbol signs become opaque Symbol tokens (cannot be inspected without key). Index encodings append provenance info as encrypted fields.
+- decodeSign(encToken, wheel, key) → sign
+  - Inverse of encodeSign when key correct; otherwise fails or returns a restricted handle.
+
+4.2 Modal rewrite rules (example)
+- map(f:Icon) ∘ map(g:Icon) → map(f∘g) :Icon (Fusion)
+- compose(identity, f) → f ; compose(f, identity) → f
+- encodeSign followed by decodeSign with same wheel/key reduces to identity
+- combineWheels(w1,w2,rule) with empty pairing_table → no expansion
+- If a combine creates a hybrid sign where one component is Index, the result must carry provenance; compiler enforces this by adding a provenance field to the composite sign node.
+
+Rationale:
+- Rewrites are conservative: they only apply when modality and type constraints make them sound. This avoids semantic loss.
+
+5) Sign Graph IR — structure and passes
+
+5.1 SG node kinds
+- SignNode: represents an atomic sign (id, type, modality, payload)
+- CombinatorNode: represents a combinator application (operator, typed inputs)
+- WheelNode: represents a wheel asset (slots, encoding descriptor, current_offset)
+- EncodeNode / DecodeNode: specialized nodes for Trithemius encodings
+- ProvenanceNode: attaches/manipulates provenance tokens
+
+5.2 Edges and labels
+- Edges are typed (carry the type of the value) and labelled with modality. When a combinator creates a new Sign, edges record which input slots contributed (for provenance).
+
+5.3 Compiler passes
+- Parsing → initial Sign Graph creation
+- Wheel-binding pass: loads wheel assets and resolves SignNode wheel references.
+- Type & Modality inference & checking pass: validates types and modality constraints (emits explicit conversion nodes if user requested).
+- Rewrite pass: applies modality-aware rewrites (fusion, compose simplification, constant folding).
+- Budgeted expansion pass: expands combineWheels up to compile-time budget; remaining combos kept as parametric combinator nodes.
+- Encoding-lowering pass: either lowers encodeSign to primitive bit ops or leaves it as a call-out (depending on whether key is static).
+- Provenance propagation pass: ensures Index provenance tokens are threaded according to rules; may optimize or coalesce provenance traces.
+- Bytecode/lowering pass: emits VM instructions (see section 6).
+
+Rationale:
+- The SG captures both semantic and provenance information, letting the compiler reason about safe rewrites and keep traceability.
+
+6) Runtime / VM design
+
+6.1 VM architecture
+- Hybrid stack+register machine
+- Global wheel registry: stores wheel_id -> wheel state (current offset, key if set)
+- Symbol table / sign table: maps sign_id to implementation (native primitive or compiled code)
+- Provenance store/log: optional in-memory token store for emitted provenance traces
+
+6.2 Core bytecode/opcodes (conceptual)
+- PUSH_CONST value
+- CALL_SIGN sign_id           // invoke primitive or compiled Sign routine
+- APPLY_COMBINATOR comb_id    // apply combinator (inlined or call)
+- ROTATE_WHEEL wheel_id, offset
+- KEY_ROTATE wheel_id, key_seq
+- ENCODE_SIGN sign_id, wheel_id, key_ref -> pushes EncToken
+- DECODE_SIGN encToken, wheel_id, key_ref -> pushes sign handle or fails
+- PUSH_PROVENANCE token
+- MERGE_PROVENANCE -> coalesce tokens
+- RETURN
+
+6.3 Execution model
+- When CALL_SIGN invoked:
+  - If sign is primitive: consume N args, produce results.
+  - If sign is encoded and VM lacks key: behavior depends on policy: either throw, return an opaque token, or return a Symbolic placeholder.
+- Provenance: Index-type values carry provenance attached; VM ensures provenance tokens are carried through operations and emitted at IO points (configurable).
+- Encoding/decoding: if keys are present (in memory or provided), VM can perform reversible transforms. Keys are stored in a protected key store.
+
+Rationale:
+- The VM must be encoding-aware and provenance-aware so that runtime behavior mirrors compile-time reasoning about modality.
+
+7) Integration of wheel images and LOGOC doc
+
+7.1 How images map into language assets
+- Each wedge slot in your wheel images becomes a Sign object.
+- Layers/rings map to wheel.rings and inform default modalities (outer rings often Symbol, inner rings more Icon/Index).
+- Pairing charts become pairing_table assets; used by combineWheels to restrict or weight expansions.
+- SVG anchors let the visualizer highlight slot mappings before and after rotate operations.
+
+7.2 How the LOGOC training doc maps into policy assets
+- The Theotechnocosmological Constitution becomes a canonical Symbol asset (policy document). It is the ground truth used by the constitutional scorer.
+- reward_rubric.yaml becomes machine-readable configuration used by the reward model training pipeline and by the constitutional scorer that executes during evaluation.
+- The document also seeds gnosis event prompts by being referenced inside system messages (e.g., “Use the Constitution v1 scoring rubric when evaluating this response”).
+
+Rationale:
+- Treat visual artifacts as structured inputs (not just images) so the language can reference them deterministically; treat Constitution as a canonical Symbol so reward evaluation remains auditable.
+
+8) Security, provenance, and governance
+
+8.1 Provenance policy
+- Index signs must carry provenance tokens by default.
+- Any conversion that drops provenance must be explicitly requested and audited.
+- Provenance tokens contain minimal fields: source_asset, slot_index, extraction_confidence, timestamp, curator_id (optional).
+
+8.2 Key management and encoding
+- Trithemius keys are secrets. They must not be stored in plaintext in the repo.
+- Recommended: Keys held in secure secret manager (Vault), passed to runtime as ephemeral handles.
+- When encoding Sign payloads for storage, use authenticated encryption and include a hash tied to the wheel_id to prevent replay.
+
+8.3 Policy and auditable scoring
+- The constitution asset is versioned: every change creates a new constitution::vN. Reward model training references a specific version.
+- Evaluation logs must store constitution version and wheel states used during generation so the decision is reproducible.
+
+Design rationale:
+- These controls ensure that dynamic encodings and provenance manipulations can’t be used to hide behavior changes or to leak sensitive keys inadvertently.
+
+9) Optimizations, verification and correctness
+
+9.1 Static optimizations
+- Fusion: fuse map/map and compose/compose when modalities permit.
+- Partial evaluation: if a wheel offset and keys are static at compile-time, encoder/decoder transforms can be resolved at compile-time and inlined.
+- Dead-combo elimination: pairing_table and types prune combinations that are invalid or semantically-irrelevant.
+- CSE: common composite signs detected in SG are shared.
+
+9.2 Dynamic optimizations
+- JIT inlining: frequently-called composite signs can be compiled to native sequences for speed.
+- Provenance coalescing: runtime merges repeated provenance tokens into a consolidated trace to save space.
+
+9.3 Formal verification
+- Two axes:
+  - Functional correctness: type-checking and theorem-prover-backed checks for critical equivalences (e.g., encode/decode equivalence).
+  - Semiotic invariants: verify that Index provenance is preserved under specified compositions and that Icon-preserving transforms meet structural invariants (could be approximate or rely on proof obligations).
+- Proof obligations can be produced during compilation: e.g., “prove f preserves Icon resemblance” becomes a contract the implementor must satisfy or mark as unproven and disallow certain rewrites.
+
+Rationale:
+- Because signs carry different semantic commitments, verification must consider both functional and semiotic constraints.
+
+10) Examples (end-to-end), with reasoning
+
+Example A — Wheel-anchored, Trithemius-keyed generation
+- Inputs:
+  - Wheel Teologia with slots: {A:glòria[Symbol], B:essència[Symbol], C:vida[Symbol], ...}
+  - Wheel Terra with slots: {X:terra[Icon], Y:aire[Index], Z:aigua[Index], ...}
+  - Pairing rule: pair Symbol slots from Teologia with Index slots from Terra only when combine rule “makes theological claim about element” returns true.
+- Operation:
+  - keyRotate(teologia, key="TERRAE") sets new mapping.
+  - combineWheels(Teologia,Terra,rule) expands allowed pairs. Because Terra slots are Index, result composite signs carry provenance pointing to Terra slot.
+- Reasoning:
+  - Resulting composites are Symbolic labels augmented with Index provenance (where theological term asserts about element X). The reward/evaluator can check whether the Tripartite perception is satisfied by forcing the final generated text to reference theological concept (Symbol), physical property (Icon), and causal linkage (Index lineage).
+
+Example B — Iconic pipeline with fusion
+- Signs:
+  - Resize: Image[Icon] -> Image[Icon]
+  - Sharpen: Image[Icon] -> Image[Icon]
+- Program: map(Resize) ∘ map(Sharpen)
+- Compile-time:
+  - Type/modality checker sees both Icon and allows fusion: map(Resize∘Sharpen)
+  - Lower to fused routine that performs both filters in a single pass (improves cache, reduces allocations).
+- Reasoning:
+  - Icon-preserving fusion is safe because both ops preserve image structure; compiler can verify or assume under conservative contract.
+
+Example C — Constitutional scoring usage
+- Situation:
+  - Given a gnosis prompt referencing tokens from wheel slots and LOGOC constitution.
+- Flow:
+  - The system prompts the model with constitution version X and expects an output with tripartite reasoning.
+  - Evaluation pipeline uses reward_rubric.yaml to score response on 5 criteria.
+  - If response misses Index provenance where rule requires it (e.g., references a sensor reading), the reward model penalizes.
+- Reasoning:
+  - Making Constitution a first-class artifact ensures that alignment is deterministic and auditable.
+
+11) Implementation and developer ergonomics
+
+11.1 Tooling to implement
+- wheel-loader: reads SVG/JSON wheel assets -> writes wheel.json + signs.jsonl
+- sg-builder: compiles source expressions + wheel references into SG
+- validator: type/modality checking and proof-obligation generator
+- rewrites engine: applies modal rewrites with pluggable rule set
+- vm: executes compiled bytecode, encoding-aware and provenance-aware
+- visualizer: web UI to load wheels, rotate by key, preview pairings and composite generation
+- ingestion scripts: OCR + vectorization pipeline (OpenCV + Tesseract + potrace) to turn images into structured assets
+
+11.2 Reproducibility and versioning
+- Store wheel assets, sign catalogs, and constitution docs in DVC or HF private repo; version each artifact.
+- Reward model and SFT checkpoints stored in MLflow or W&B.
+
+12) Trade-offs, limitations, and mitigation
+
+12.1 Combinatorial explosion
+- Problem: full cross-product expansion of wheels can explode.
+- Mitigations:
+  - pairing_table constraints
+  - compile-time budget (max expansions)
+  - lazy/dynamic expansion at runtime
+  - heuristics that select semantically-plausible pairs (type-based filtering, curator-supplied weights)
+
+12.2 Modality complexity
+- Problem: extra burden on authors to specify modality and justify proofs.
+- Mitigations:
+  - sensible defaults inferred from inputs (textual labels -> Symbol, images -> Icon, numeric counts -> Index)
+  - explicit cast combinators with logging/auditing so conversions are visible
+
+12.3 Performance overhead
+- Problem: provenance tracking and decoding add overhead.
+- Mitigations:
+  - compile-time lowering where keys and offsets are static
+  - provenance coalescing
+  - selective instrumentation: keep provenance only when requested by policy
+
+13) Roadmap & recommended next steps
+- Immediate (MVP):
+  - Implement wheel-loader + wheel JSON schema + signs.jsonl
+  - Implement SG builder with type & modality checker
+  - Provide small interpreter for compose/map/fuse + rotateWheel and encode/decode primitives
+  - Add simple visualizer that rotates the wheel by a key and shows sign mappings
+- Medium:
+  - Full rewrite engine + budgeted expanders
+  - Bytecode emitter + small VM with provenance store and key manager
+  - Integration test: produce 50 gnosis prompts from wheel combos and run through SFT pipeline (LOGOC doc as policy)
+- Advanced:
+  - Formal verification tool for Icon-preservation claims (could be domain-specific)
+  - Secure key management integration (Vault) and audited encoding workflows
+  - Full MLOps pipeline for training the constitutional reward model using gnosis events generated from wheel assets
+
+14) Summary — why this is coherent and useful
+- LTP-ML anchors program elements in semiotics: making Icon/Index/Symbol explicit both prevents unsound transformations and offers expressive, domain-aware composition patterns.
+- Llull-inspired wheels provide a systematic, mechanical combinator-generation mechanism that supports program synthesis, DSL composition, and expansive test-case generation.
+- Trithemius-style keyed encodings add deterministic parameterization, controlled obfuscation, and test variability — useful for seeding training datasets and for managing symbolic mappings.
+- Integrating the LOGOC constitution as a first-class policy makes alignment auditable, reproducible, and versioned.
+
+
+
+Below is a thorough, in-depth specification and rationale for the language I sketched earlier — Llull–Trithemius–Peirce Machine Language (LTP-ML). I’ll present: concepts and primitives, type & modality system, formal semantics of combinators, IR and compilation pipeline, runtime/VM behavior, integration of your wheel images and the LOGOC constitution, security/provenance considerations, optimization & verification strategies, and practical examples that tie everything together. I’ll explain the design choices and the reasoning that justifies them at each stage.
+
+If you want runnable reference code next (loader, wheel ingestion, small interpreter, or bytecode generator), tell me which part and I’ll produce focused code.
+
+1) High-level goals and design rationale
+- Goals:
+  - Make combinatorial composition the core program-building mechanism (inspired by Llull).
+  - Make sign modality explicit and enforceable (Peirce: Icon / Index / Symbol), so the language reasons about resemblance, causal linkage, and convention.
+  - Add keyed rotation/encoding primitives (Trithemius) so symbol-to-sign mappings can be parameterized, reversible, or obfuscated.
+  - Ensure programs and transformations are traceable: provenance tokens flow with Index signs; symbolic tokens can be encoded/decoded with keys.
+- Why these choices:
+  - Combinator-first design reduces reliance on imperative control flow and enables powerful static transformations (fusion, partial-evaluation).
+  - Modality-aware semantics prevents incorrect rewrites: e.g., you shouldn’t treat a Symbolic label as an Iconic template without explicit conversion because you’d lose the “resemblance” guarantee.
+  - Trithemius-style keyed wheels let you: (a) systematically generate combinatorial families; (b) encode/decode meanings (for steganography, versioning, or keying behavior); (c) vary mappings deterministically for test generation.
+  - The LOGOC constitution naturally maps to a Symbolic policy artifact; integrating it as a first-class policy object makes alignment evaluation deterministic and auditable.
+
+2) Core concepts and primitives (vocabulary)
+- Sign: the minimal unit. A Sign is an object with:
+  - id: unique identifier (immutable)
+  - label: human-readable text
+  - type_signature: type (see section 3)
+  - modality: Icon | Index | Symbol | Hybrid
+  - payload: optional implementation pointer or description
+  - provenance: metadata (origin file/image, extraction confidence)
+  - svg_anchor: optional pointer to visual element (for visualizer)
+- Wheel: an ordered cyclic sequence of Sign slots. Each Wheel has:
+  - wheel_id, rings (optionally layered), slots_per_ring, default_offset
+  - encoding descriptor: Trithemius-style mapping (shift/substitution sequence, key phrase, or substitution table)
+  - pairing_table: optional restrictions or combinator weights
+- Combinator: a higher-order, typed operator that produces a new Sign from one or more Signs (examples: compose, map, fold, choose, combineWheels, rotateWheel, encodeSign).
+- Sign Graph (SG): the compiler IR that represents programs as nodes (Sign, Combinator) with typed, modality-labeled edges. This graph is the compilation target for optimizations.
+- Token / ProvenanceToken: small runtime artifact attached to Index signs (and optionally to combined signs) representing causal lineage (source wheel, slot index, key used).
+- Encoding Token: the result of encodeSign — an opaque token until decoded with the wheel and key.
+
+3) Types and modality
+
+3.1 Type system (overview)
+- Base types: Int, Float, Bool, String, Bytes, Image, List<T>, Option<T>, Tuple<T1,T2,...>, Function(A->B).
+- Nominal types for domain concepts: e.g., Concept[Theology], NatCount, SensorReading.
+- Modal types: type annotations carry modality as a qualifier:
+  - syntax example: Image[Icon], Int[Index], Label[Symbol]
+- Subtyping rules:
+  - T[Icon] <: T[Hybrid] and T[Index] <: T[Hybrid], T[Symbol] <: T[Hybrid]. Hybrid is the union-like supertype.
+  - No automatic implicit coercion between Icon/Index/Symbol; conversions require explicit combinators (castIconToSymbol, annotateIndex).
+
+3.2 Modalities and what they mean
+- Icon: resemblance-based signs. Transformations on Icon preserve structural resemblance. Examples: image filters, schematic templates, parsers that preserve syntactic structure.
+  - Guarantees: transformations that claim to preserve Icon must have proof or be in a known safe subset (e.g., image convolution preserves neighborhood structure).
+- Index: causal/positional linkage to an external object/source. Index signs carry provenance tokens. Example: a sensor reading, a database row reference, a count from a wheel slot.
+  - Guarantees: Index signs must preserve provenance by default when combined unless explicitly dropped.
+- Symbol: convention-based signs. Meaning is defined by lookup, convention, or key mapping. Example: the label “A” mapped to concept “gloria.”
+  - Guarantees: Symbolic operations must respect encoding/decoding rules if an encoding is applied (Trithemius mapping).
+- Hybrid: combines properties of the above; semantics determined by component modalities.
+
+Design rationale:
+- These modalities enforce safe rewrites and guide both compile-time optimization and runtime behavior. They let the compiler avoid unsound transformations (e.g., fusing two operators that rely on different modalities without insertion of an adapter).
+
+4) Combinators and their formal semantics
+
+4.1 Primitive combinators (signature + semantics)
+- compose(f: A→B, g: B→C) : (A→C)
+  - Modality rule: if f.modality == g.modality == M and M ∈ {Icon, Symbol}, then compose.modality = M. If modalities differ, result = Hybrid.
+  - Type-check: f.output must match g.input (considering modal qualifiers).
+- map(f: A→B): List<A>[M1] → List<B>[M2]
+  - Fusion rule: map(f) ∘ map(g) => map(f∘g) if modality fusion valid.
+- fold(f: (Acc, T)->Acc, init: Acc): List<T> -> Acc
+  - If f is Index-preserving and the input list items are Index, provenance tokens propagate to result (configuration dependent).
+- choose(pred: T→Bool, thenOp: T→U, elseOp: T→U): T→U
+  - Modality: If pred is Index, then the branch decision is Index-related and provenance should be preserved. If pred is Symbol, branch choice is convention-based.
+- iterate(f: T→T, n: Int): T→T
+  - Built-in optimization for compile-time unrolling if n small and f pure.
+- combineWheels(wA, wB, rule): produces set of new signs {combine(a_i,b_j) | rule(a_i,b_j) == true}
+  - Rule: user-defined predicate that can access modalities and types of a_i and b_j.
+  - Expansion control: may be performed statically up to a budget or deferred to runtime as a parametric combinator.
+- rotateWheel(w, offset) and keyRotate(w, key_seq):
+  - Behavior: compute wheel.offset = (default_offset + offset) mod N, or apply sequence for polyalphabetic shift.
+  - Semantics: rotates mapping between slot indices and labels; important for encode/decode determinism.
+- encodeSign(sign, wheel, key) → EncToken
+  - Semantics: apply wheel encoding descriptor with key; output is opaque until decodeSign(encToken, wheel, key) is applied.
+  - Modality: encoded Symbol signs become opaque Symbol tokens (cannot be inspected without key). Index encodings append provenance info as encrypted fields.
+- decodeSign(encToken, wheel, key) → sign
+  - Inverse of encodeSign when key correct; otherwise fails or returns a restricted handle.
+
+4.2 Modal rewrite rules (example)
+- map(f:Icon) ∘ map(g:Icon) → map(f∘g) :Icon (Fusion)
+- compose(identity, f) → f ; compose(f, identity) → f
+- encodeSign followed by decodeSign with same wheel/key reduces to identity
+- combineWheels(w1,w2,rule) with empty pairing_table → no expansion
+- If a combine creates a hybrid sign where one component is Index, the result must carry provenance; compiler enforces this by adding a provenance field to the composite sign node.
+
+Rationale:
+- Rewrites are conservative: they only apply when modality and type constraints make them sound. This avoids semantic loss.
+
+5) Sign Graph IR — structure and passes
+
+5.1 SG node kinds
+- SignNode: represents an atomic sign (id, type, modality, payload)
+- CombinatorNode: represents a combinator application (operator, typed inputs)
+- WheelNode: represents a wheel asset (slots, encoding descriptor, current_offset)
+- EncodeNode / DecodeNode: specialized nodes for Trithemius encodings
+- ProvenanceNode: attaches/manipulates provenance tokens
+
+5.2 Edges and labels
+- Edges are typed (carry the type of the value) and labelled with modality. When a combinator creates a new Sign, edges record which input slots contributed (for provenance).
+
+5.3 Compiler passes
+- Parsing → initial Sign Graph creation
+- Wheel-binding pass: loads wheel assets and resolves SignNode wheel references.
+- Type & Modality inference & checking pass: validates types and modality constraints (emits explicit conversion nodes if user requested).
+- Rewrite pass: applies modality-aware rewrites (fusion, compose simplification, constant folding).
+- Budgeted expansion pass: expands combineWheels up to compile-time budget; remaining combos kept as parametric combinator nodes.
+- Encoding-lowering pass: either lowers encodeSign to primitive bit ops or leaves it as a call-out (depending on whether key is static).
+- Provenance propagation pass: ensures Index provenance tokens are threaded according to rules; may optimize or coalesce provenance traces.
+- Bytecode/lowering pass: emits VM instructions (see section 6).
+
+Rationale:
+- The SG captures both semantic and provenance information, letting the compiler reason about safe rewrites and keep traceability.
+
+6) Runtime / VM design
+
+6.1 VM architecture
+- Hybrid stack+register machine
+- Global wheel registry: stores wheel_id -> wheel state (current offset, key if set)
+- Symbol table / sign table: maps sign_id to implementation (native primitive or compiled code)
+- Provenance store/log: optional in-memory token store for emitted provenance traces
+
+6.2 Core bytecode/opcodes (conceptual)
+- PUSH_CONST value
+- CALL_SIGN sign_id           // invoke primitive or compiled Sign routine
+- APPLY_COMBINATOR comb_id    // apply combinator (inlined or call)
+- ROTATE_WHEEL wheel_id, offset
+- KEY_ROTATE wheel_id, key_seq
+- ENCODE_SIGN sign_id, wheel_id, key_ref -> pushes EncToken
+- DECODE_SIGN encToken, wheel_id, key_ref -> pushes sign handle or fails
+- PUSH_PROVENANCE token
+- MERGE_PROVENANCE -> coalesce tokens
+- RETURN
+
+6.3 Execution model
+- When CALL_SIGN invoked:
+  - If sign is primitive: consume N args, produce results.
+  - If sign is encoded and VM lacks key: behavior depends on policy: either throw, return an opaque token, or return a Symbolic placeholder.
+- Provenance: Index-type values carry provenance attached; VM ensures provenance tokens are carried through operations and emitted at IO points (configurable).
+- Encoding/decoding: if keys are present (in memory or provided), VM can perform reversible transforms. Keys are stored in a protected key store.
+
+Rationale:
+- The VM must be encoding-aware and provenance-aware so that runtime behavior mirrors compile-time reasoning about modality.
+
+7) Integration of wheel images and LOGOC doc
+
+7.1 How images map into language assets
+- Each wedge slot in your wheel images becomes a Sign object.
+- Layers/rings map to wheel.rings and inform default modalities (outer rings often Symbol, inner rings more Icon/Index).
+- Pairing charts become pairing_table assets; used by combineWheels to restrict or weight expansions.
+- SVG anchors let the visualizer highlight slot mappings before and after rotate operations.
+
+7.2 How the LOGOC training doc maps into policy assets
+- The Theotechnocosmological Constitution becomes a canonical Symbol asset (policy document). It is the ground truth used by the constitutional scorer.
+- reward_rubric.yaml becomes machine-readable configuration used by the reward model training pipeline and by the constitutional scorer that executes during evaluation.
+- The document also seeds gnosis event prompts by being referenced inside system messages (e.g., “Use the Constitution v1 scoring rubric when evaluating this response”).
+
+Rationale:
+- Treat visual artifacts as structured inputs (not just images) so the language can reference them deterministically; treat Constitution as a canonical Symbol so reward evaluation remains auditable.
+
+8) Security, provenance, and governance
+
+8.1 Provenance policy
+- Index signs must carry provenance tokens by default.
+- Any conversion that drops provenance must be explicitly requested and audited.
+- Provenance tokens contain minimal fields: source_asset, slot_index, extraction_confidence, timestamp, curator_id (optional).
+
+8.2 Key management and encoding
+- Trithemius keys are secrets. They must not be stored in plaintext in the repo.
+- Recommended: Keys held in secure secret manager (Vault), passed to runtime as ephemeral handles.
+- When encoding Sign payloads for storage, use authenticated encryption and include a hash tied to the wheel_id to prevent replay.
+
+8.3 Policy and auditable scoring
+- The constitution asset is versioned: every change creates a new constitution::vN. Reward model training references a specific version.
+- Evaluation logs must store constitution version and wheel states used during generation so the decision is reproducible.
+
+Design rationale:
+- These controls ensure that dynamic encodings and provenance manipulations can’t be used to hide behavior changes or to leak sensitive keys inadvertently.
+
+9) Optimizations, verification and correctness
+
+9.1 Static optimizations
+- Fusion: fuse map/map and compose/compose when modalities permit.
+- Partial evaluation: if a wheel offset and keys are static at compile-time, encoder/decoder transforms can be resolved at compile-time and inlined.
+- Dead-combo elimination: pairing_table and types prune combinations that are invalid or semantically-irrelevant.
+- CSE: common composite signs detected in SG are shared.
+
+9.2 Dynamic optimizations
+- JIT inlining: frequently-called composite signs can be compiled to native sequences for speed.
+- Provenance coalescing: runtime merges repeated provenance tokens into a consolidated trace to save space.
+
+9.3 Formal verification
+- Two axes:
+  - Functional correctness: type-checking and theorem-prover-backed checks for critical equivalences (e.g., encode/decode equivalence).
+  - Semiotic invariants: verify that Index provenance is preserved under specified compositions and that Icon-preserving transforms meet structural invariants (could be approximate or rely on proof obligations).
+- Proof obligations can be produced during compilation: e.g., “prove f preserves Icon resemblance” becomes a contract the implementor must satisfy or mark as unproven and disallow certain rewrites.
+
+Rationale:
+- Because signs carry different semantic commitments, verification must consider both functional and semiotic constraints.
+
+10) Examples (end-to-end), with reasoning
+
+Example A — Wheel-anchored, Trithemius-keyed generation
+- Inputs:
+  - Wheel Teologia with slots: {A:glòria[Symbol], B:essència[Symbol], C:vida[Symbol], ...}
+  - Wheel Terra with slots: {X:terra[Icon], Y:aire[Index], Z:aigua[Index], ...}
+  - Pairing rule: pair Symbol slots from Teologia with Index slots from Terra only when combine rule “makes theological claim about element” returns true.
+- Operation:
+  - keyRotate(teologia, key="TERRAE") sets new mapping.
+  - combineWheels(Teologia,Terra,rule) expands allowed pairs. Because Terra slots are Index, result composite signs carry provenance pointing to Terra slot.
+- Reasoning:
+  - Resulting composites are Symbolic labels augmented with Index provenance (where theological term asserts about element X). The reward/evaluator can check whether the Tripartite perception is satisfied by forcing the final generated text to reference theological concept (Symbol), physical property (Icon), and causal linkage (Index lineage).
+
+Example B — Iconic pipeline with fusion
+- Signs:
+  - Resize: Image[Icon] -> Image[Icon]
+  - Sharpen: Image[Icon] -> Image[Icon]
+- Program: map(Resize) ∘ map(Sharpen)
+- Compile-time:
+  - Type/modality checker sees both Icon and allows fusion: map(Resize∘Sharpen)
+  - Lower to fused routine that performs both filters in a single pass (improves cache, reduces allocations).
+- Reasoning:
+  - Icon-preserving fusion is safe because both ops preserve image structure; compiler can verify or assume under conservative contract.
+
+Example C — Constitutional scoring usage
+- Situation:
+  - Given a gnosis prompt referencing tokens from wheel slots and LOGOC constitution.
+- Flow:
+  - The system prompts the model with constitution version X and expects an output with tripartite reasoning.
+  - Evaluation pipeline uses reward_rubric.yaml to score response on 5 criteria.
+  - If response misses Index provenance where rule requires it (e.g., references a sensor reading), the reward model penalizes.
+- Reasoning:
+  - Making Constitution a first-class artifact ensures that alignment is deterministic and auditable.
+
+11) Implementation and developer ergonomics
+
+11.1 Tooling to implement
+- wheel-loader: reads SVG/JSON wheel assets -> writes wheel.json + signs.jsonl
+- sg-builder: compiles source expressions + wheel references into SG
+- validator: type/modality checking and proof-obligation generator
+- rewrites engine: applies modal rewrites with pluggable rule set
+- vm: executes compiled bytecode, encoding-aware and provenance-aware
+- visualizer: web UI to load wheels, rotate by key, preview pairings and composite generation
+- ingestion scripts: OCR + vectorization pipeline (OpenCV + Tesseract + potrace) to turn images into structured assets
+
+11.2 Reproducibility and versioning
+- Store wheel assets, sign catalogs, and constitution docs in DVC or HF private repo; version each artifact.
+- Reward model and SFT checkpoints stored in MLflow or W&B.
+
+12) Trade-offs, limitations, and mitigation
+
+12.1 Combinatorial explosion
+- Problem: full cross-product expansion of wheels can explode.
+- Mitigations:
+  - pairing_table constraints
+  - compile-time budget (max expansions)
+  - lazy/dynamic expansion at runtime
+  - heuristics that select semantically-plausible pairs (type-based filtering, curator-supplied weights)
+
+12.2 Modality complexity
+- Problem: extra burden on authors to specify modality and justify proofs.
+- Mitigations:
+  - sensible defaults inferred from inputs (textual labels -> Symbol, images -> Icon, numeric counts -> Index)
+  - explicit cast combinators with logging/auditing so conversions are visible
+
+12.3 Performance overhead
+- Problem: provenance tracking and decoding add overhead.
+- Mitigations:
+  - compile-time lowering where keys and offsets are static
+  - provenance coalescing
+  - selective instrumentation: keep provenance only when requested by policy
+
+13) Roadmap & recommended next steps
+- Immediate (MVP):
+  - Implement wheel-loader + wheel JSON schema + signs.jsonl
+  - Implement SG builder with type & modality checker
+  - Provide small interpreter for compose/map/fuse + rotateWheel and encode/decode primitives
+  - Add simple visualizer that rotates the wheel by a key and shows sign mappings
+- Medium:
+  - Full rewrite engine + budgeted expanders
+  - Bytecode emitter + small VM with provenance store and key manager
+  - Integration test: produce 50 gnosis prompts from wheel combos and run through SFT pipeline (LOGOC doc as policy)
+- Advanced:
+  - Formal verification tool for Icon-preservation claims (could be domain-specific)
+  - Secure key management integration (Vault) and audited encoding workflows
+  - Full MLOps pipeline for training the constitutional reward model using gnosis events generated from wheel assets
+
+14) Summary — why this is coherent and useful
+- LTP-ML anchors program elements in semiotics: making Icon/Index/Symbol explicit both prevents unsound transformations and offers expressive, domain-aware composition patterns.
+- Llull-inspired wheels provide a systematic, mechanical combinator-generation mechanism that supports program synthesis, DSL composition, and expansive test-case generation.
+- Trithemius-style keyed encodings add deterministic parameterization, controlled obfuscation, and test variability — useful for seeding training datasets and for managing symbolic mappings.
+- Integrating the LOGOC constitution as a first-class policy makes alignment auditable, reproducible, and versioned.
+
+If you want, I can next:
+- Produce a formal BNF grammar and type system with inference rules and subtype lattice for modal types.
+- Produce a runnable minimal prototype:
+  - Python scripts: wheel-loader (OCR + segmentation), wheel_builder (JSON output), a small SG builder, and a minimal interpreter that supports rotateWheel, encodeSign, combineWheels (budgeted).
+- Produce a sample dataset: transform a handful of your wheel slots + LOGOC doc into 20 gnosis event seed pairs suitable for SFT.
+- Produce the visualizer (SVG + small JS app) that demonstrates wheel rotation by key and shows pairing results.
+
+Which of these deliverables would you like me to produce first?

@@ -1,0 +1,44 @@
+{
+  "name": "the-sovereign",
+  "version": "2.4.0",
+  "description": "Unified Theotechnological Gnostic Ecosystem — Layered Monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bootstrap": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap.ps1",
+    "bootstrap:local": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap-local.ps1",
+    "sync": "powershell -ExecutionPolicy Bypass -File scripts/sync-canonical.ps1",
+    "status": "powershell -ExecutionPolicy Bypass -File scripts/status.ps1",
+    "check:layout": "powershell -ExecutionPolicy Bypass -File scripts/verify-layout.ps1",
+    "dev": "pnpm --recursive dev",
+    "build": "pnpm --recursive build",
+    "test": "pnpm --recursive test",
+    "lint": "pnpm --recursive lint",
+    "clean": "pnpm --recursive clean && Remove-Item -Recurse -Force node_modules, .pnpm-store -ErrorAction SilentlyContinue",
+    "prepare": "husky install || true"
+  },
+  "keywords": [
+    "gnostic",
+    "theotechnological",
+    "monad",
+    "hepar",
+    "sovereign",
+    "ai-agents",
+    "volumetric-engine"
+  ],
+  "author": "Cris Colon",
+  "license": "SEE LICENSE IN docs/LICENSE.md",
+  "workspaces": [
+    "monad-ecosystem/packages/*",
+    "gnostic-engine"
+  ],
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "husky": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.6.0"
+}

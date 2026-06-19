@@ -1,0 +1,26 @@
+[
+  {
+    "clientName": "Starter Pilot Fund",
+    "tier": "starter",
+    "email": "ops@starter-pilot.example",
+    "aumCapUsd": 5000000,
+    "dailyCallLimit": 1000,
+    "notes": "Initial pilot allocation"
+  },
+  {
+    "clientName": "Pro Market Desk",
+    "tier": "pro",
+    "email": "ops@prodesk.example",
+    "aumCapUsd": 25000000,
+    "dailyCallLimit": 10000,
+    "notes": "First paid desk account"
+  },
+  {
+    "clientName": "Fund Design Partner",
+    "tier": "fund",
+    "email": "ops@fundpartner.example",
+    "aumCapUsd": 100000000,
+    "dailyCallLimit": null,
+    "notes": "Manual issuance for fund tier"
+  }
+]

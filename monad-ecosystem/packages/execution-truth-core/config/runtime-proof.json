@@ -1,0 +1,12 @@
+{
+  "phase1aLiveProofRecorded": true,
+  "bootstrapSourceRegistered": true,
+  "observedGuardedLiveSession": false,
+  "receiptTruthValidated": false,
+  "incidentQueueClear": false,
+  "notes": [
+    "Live Phase 1a deployment proof completed on Monad mainnet on 2026-04-18.",
+    "Bootstrap approved source 0x9d4fcf7E0Ae5AE994A6eb0bCCbDfAA62E5867352 was registered during the Phase 1a live sequence.",
+    "Guarded-live runtime proof remains staged until a funded observed session, receipt-truth validation, and a clear incident queue are recorded."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slot": 42,
+  "b_attr": "Eternity",
+  "k_principle": "Middle",
+  "observations": [
+    {
+      "slot": 42,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.4921875,
+      "delta": 0.0078125,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-1",
+      "timestamp": 1781219851.7537694
+    },
+    {
+      "slot": 42,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.4921875,
+      "delta": 0.0078125,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-1",
+      "timestamp": 1781219916.1970654
+    },
+    {
+      "slot": 42,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.4765625,
+      "delta": 0.0234375,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-43",
+      "timestamp": 1781232344.0877032
+    }
+  ],
+  "current_weight": 1.0,
+  "last_recalibration_cycle": 0
+}

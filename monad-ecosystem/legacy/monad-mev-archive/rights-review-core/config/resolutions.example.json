@@ -1,0 +1,14 @@
+[
+  {
+    "eventId": "evt-operator-review-001",
+    "closed": true,
+    "resolution": "deny_internal",
+    "notes": "Operator review artifacts remain internal and do not participate in externalization."
+  },
+  {
+    "eventId": "evt-user-sensitive-001",
+    "closed": true,
+    "resolution": "redact_and_retain_internal",
+    "notes": "Sensitive identity payload is retained internally only under redaction discipline."
+  }
+]

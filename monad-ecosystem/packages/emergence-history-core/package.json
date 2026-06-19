@@ -1,0 +1,22 @@
+﻿{
+    "name":  "emergence-history-core",
+    "version":  "0.1.0",
+    "description":  "Isolated historical record store for ratified emergence claims with sequence integrity and bounded retraction sequencing",
+    "main":  "dist/index.js",
+    "types":  "dist/index.d.ts",
+    "scripts":  {
+                    "start":  "node dist/index.js",
+                    "dev":  "ts-node src/index.ts"
+                },
+    "dependencies":  {
+                         "emergence-claim-core":  "file:../emergence-claim-core"
+                     },
+    "devDependencies":  {
+                            "@types/node":  "^20.11.0",
+                            "ts-node":  "^10.9.2",
+                            "typescript":  "^5.3.3"
+                        },
+    "engines":  {
+                    "node":  "\u003e=22.0.0"
+                }
+}

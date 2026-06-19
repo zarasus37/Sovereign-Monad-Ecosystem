@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "data-rail-rights-v1",
+  "implemented": true,
+  "requiresAttribution": true,
+  "prohibitsSensitivePayloads": true,
+  "externallyEligibleActorClasses": ["ecosystem_native", "delegated_human"],
+  "externallyEligibleSurfaces": ["organ_runtime", "signal_layer", "oracle", "gnosis", "platform"],
+  "externallyEligibleOutcomes": ["accepted", "published", "qualified"],
+  "blockedTags": ["identity", "sensitive", "review"],
+  "requiresReviewableAuditTrail": true
+}

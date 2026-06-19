@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "targetEventCount": 16,
+  "targetDistinctActors": 12,
+  "targetActorClasses": 4,
+  "targetSurfaceCount": 6,
+  "targetOutcomeCount": 6,
+  "maximumSingleActorShare": 0.25,
+  "focusWindows": [
+    "capture at least one attributable gnosis-surface event",
+    "capture at least one clean rejected-outcome event",
+    "add three more distinct actors without increasing single-actor concentration",
+    "extend user-linked participation beyond sensitive containment-only flows"
+  ]
+}

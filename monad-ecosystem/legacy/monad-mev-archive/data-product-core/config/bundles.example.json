@@ -1,0 +1,79 @@
+[
+  {
+    "id": "behavioral-brief-private",
+    "audience": "limited_private",
+    "requiresExplicitActivation": false,
+    "rightsClass": "derived_safe",
+    "recommendedScope": "limited_private",
+    "productTier": "Baseline",
+    "priceModel": "private briefing subscription",
+    "revenueBand": "$2k-$10k/mo",
+    "producingOrgans": ["Cortex", "Vox", "Pneuma"]
+  },
+  {
+    "id": "activation-audit-private",
+    "audience": "operators",
+    "requiresExplicitActivation": false,
+    "rightsClass": "internal_only",
+    "recommendedScope": "limited_private",
+    "productTier": "Baseline",
+    "priceModel": "operator package",
+    "revenueBand": "$1k-$5k/mo",
+    "producingOrgans": ["Synapse", "Hepar", "Cortex"]
+  },
+  {
+    "id": "hepar-risk-api",
+    "audience": "protocols",
+    "requiresExplicitActivation": true,
+    "rightsClass": "derived_safe",
+    "recommendedScope": "limited_private",
+    "productTier": "Tier 1",
+    "priceModel": "$1k-$10k monthly per monitored protocol",
+    "revenueBand": "$60k-$600k/mo at 500+ protocols",
+    "producingOrgans": ["Hepar", "Synapse", "Vox", "Pneuma"]
+  },
+  {
+    "id": "institutional-risk-feed",
+    "audience": "institutions",
+    "requiresExplicitActivation": true,
+    "rightsClass": "derived_safe",
+    "recommendedScope": "limited_private",
+    "productTier": "Tier 2",
+    "priceModel": "$50k monthly per institution",
+    "revenueBand": "$1M-$2.5M/mo at 20-50 institutions",
+    "producingOrgans": ["Hepar", "Cortex", "Vox", "Pneuma"]
+  },
+  {
+    "id": "protocol-forensic-report",
+    "audience": "protocol founders",
+    "requiresExplicitActivation": true,
+    "rightsClass": "derived_safe",
+    "recommendedScope": "limited_private",
+    "productTier": "Tier 3",
+    "priceModel": "$5k-$25k per report",
+    "revenueBand": "$500k-$2.5M/yr at 100+ reports",
+    "producingOrgans": ["Hepar", "Cortex", "Vox"]
+  },
+  {
+    "id": "underwriting-risk-dataset",
+    "audience": "insurance underwriters",
+    "requiresExplicitActivation": true,
+    "rightsClass": "external_sensitive",
+    "recommendedScope": "public",
+    "productTier": "Tier 4",
+    "priceModel": "annual licensing",
+    "revenueBand": "$10M-$50M+/yr potential",
+    "producingOrgans": ["Hepar", "Cortex", "Synapse", "Cardia", "Pneuma"]
+  },
+  {
+    "id": "public-pattern-brief",
+    "audience": "public",
+    "requiresExplicitActivation": true,
+    "rightsClass": "external_sensitive",
+    "recommendedScope": "public",
+    "productTier": "Public",
+    "priceModel": "media/sponsorship",
+    "revenueBand": "variable",
+    "producingOrgans": ["Vox", "Cortex", "Pneuma"]
+  }
+]

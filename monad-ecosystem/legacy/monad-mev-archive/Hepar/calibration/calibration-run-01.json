@@ -1,0 +1,1568 @@
+{
+  "calibrationRunId": "CAL-001",
+  "runAt": "2026-05-02T18:33:21.481Z",
+  "heparTier": "ADVISORY",
+  "purpose": "§9 Metric 1 — first-pass critical-vector detection recall on known incidents",
+  "note": "Findings constructed from post-mortem documentation, not live bytecode analysis. Advisory tier only. No precision/recall numbers asserted.",
+  "protocols": [
+    {
+      "protocolId": "EULER-FINANCE-2023",
+      "heparRunId": "stageA-1777746801465-advisory+stageB-1777746801465-advisory+STAGE-C-1777746801465-dbf5+STAGE-D-1777746801467-bc1b",
+      "completedAt": "2026-05-02T18:33:21.472Z",
+      "groundTruth": {
+        "name": "Euler Finance",
+        "date": "2023-03-13",
+        "lossUSD": 197000000,
+        "contractAddress": "0x27182842E098f60e3D576794A5bFFb0777E025d3",
+        "attackerAddress": "0xb66cd966670d962C227B3EABA30a872DbFb995db",
+        "rootCause": "donateToReserves() mutates eToken/dToken accounting without a post-call solvency invariant check; deferLiquidityCheck() allows deferred health enforcement inside a flash-loan callback, enabling intentional undercollateralization.",
+        "exploitMechanism": [
+          "Flash-loan ~30M DAI via deferLiquidityCheck()",
+          "Deposit DAI as collateral, borrow eDAI",
+          "Call donateToReserves() to inflate dToken.underlyingBalance without health check",
+          "Take out full collateral while technically insolvent"
+        ],
+        "vectors": [
+          {
+            "id": "GT-EULER-1",
+            "category": "MISSING_ACCOUNTING_INVARIANT",
+            "description": "No solvency check after donateToReserves(); reserves decrease without enforced health factor",
+            "impactSeverity": "CRITICAL",
+            "heparSurfaceMapping": "BYTECODE_PRIVILEGE (proxy — no dedicated ACCOUNTING_INVARIANT surface)",
+            "stageBInvariantMapping": "ACCOUNTING / ACCT-001, ACCT-005",
+            "gap": "PARTIAL — BYTECODE_PRIVILEGE repurposed for missing-invariant class; no dedicated surface"
+          },
+          {
+            "id": "GT-EULER-2",
+            "category": "FLASH_LOAN_DEFERRED_LIQUIDITY",
+            "description": "deferLiquidityCheck() permits unchecked leveraged position within single tx",
+            "impactSeverity": "HIGH",
+            "heparSurfaceMapping": "LP_UNLOCK",
+            "stageBInvariantMapping": "ACCOUNTING / ACCT-002 (debt ceiling bypass)",
+            "gap": "NONE — LP_UNLOCK maps cleanly to flash-loan amplification vectors"
+          }
+        ],
+        "stageBEscalationNote": "ACCOUNTING counterexamples do NOT trigger hardBlockFromSymbolic. HARDBLOCK for Euler is Stage-A-only. Calibration gap: critical accounting invariant violations have no Stage B escalation path absent a Stage A hardBlock flag."
+      },
+      "heparResult": {
+        "stageA": {
+          "runId": "stageA-1777746801465-advisory",
+          "hardBlockCandidates": [
+            {
+              "surface": "BYTECODE_PRIVILEGE",
+              "severity": 9,
+              "hardBlockFlag": true,
+              "description": "donateToReserves() mutates eToken balance and dToken.underlyingBalance without a post-call solvency "
+            },
+            {
+              "surface": "LP_UNLOCK",
+              "severity": 8,
+              "hardBlockFlag": false,
+              "description": "deferLiquidityCheck(address account, bytes calldata data) callable by any user; defers the solvency "
+            }
+          ],
+          "dimensionScores": {
+            "byteCodePrivilege": 70,
+            "proxyAdmin": 100,
+            "lpUnlock": 70,
+            "walletTaint": 50,
+            "accountingInvariant": 100,
+            "inputValidation": 100
+          },
+          "walletTaintStatus": "PIPELINE_REQUIRED"
+        },
+        "stageB": {
+          "runId": "stageB-1777746801465-advisory",
+          "engineStatus": "STUB",
+          "hardBlockFromSymbolic": true,
+          "summary": {
+            "provedSafe": 0,
+            "counterexamplesFound": 2,
+            "unknownTimeout": 14,
+            "totalChecked": 16
+          },
+          "counterexamplesFound": [
+            {
+              "invariantId": "ACCT-001",
+              "invariantClass": "ACCOUNTING",
+              "description": "Total protocol reserves never decrease without a corresponding authorized withdrawal event",
+              "counterexample": [
+                "donateToReserves(amount=30_000_000e18) called inside deferLiquidityCheck() callback",
+                "dToken.underlyingBalance increases by amount; no corresponding authorized withdrawal emitted",
+                "Post-call: reserves decreased without withdrawal event — ACCT-001 violated"
+              ]
+            },
+            {
+              "invariantId": "ACCT-005",
+              "invariantClass": "ACCOUNTING",
+              "description": "Reserve conservation: opening_balance + deposits == closing_balance + withdrawals",
+              "counterexample": [
+                "Trace: deposit(30M DAI) → borrow(eDAI) → donateToReserves(30M eDAI)",
+                "opening_balance + deposits = 30M; closing_balance + withdrawals = 30M + borrow_amount",
+                "Conservation violated: attacker exits with collateral while position is insolvent"
+              ]
+            }
+          ]
+        },
+        "stageC": {
+          "runId": "STAGE-C-1777746801465-dbf5",
+          "executionStatus": "STUB",
+          "masterSeed": "HEPAR-CAL-EULER-2023-03-13",
+          "totalFindings": 8,
+          "totalPathsExecuted": 250062,
+          "highSeverityFindings": [
+            {
+              "vectorId": "REENTRANCY-REENT-T02-32504812",
+              "agentId": "REENTRANCY",
+              "severity": 9,
+              "description": "Cross-function reentrancy: deposit() and withdraw() share mutable state",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "ECONOMIC-EULER-DONATE-RESERVE-MANIP",
+              "agentId": "ECONOMIC",
+              "severity": 9,
+              "description": "Reserve donation manipulates collateral accounting: donateToReserves() inflates dToken.underlyingBal",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "STATE-STATE-T03-51263210",
+              "agentId": "STATE",
+              "severity": 9,
+              "description": "Re-initialisation attack: initialize() callable again after upgrade sets owner to attacker",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "PRIVILEGE-EULER-DEFER-LIQUIDITY-BYPASS",
+              "agentId": "PRIVILEGE",
+              "severity": 8,
+              "description": "deferLiquidityCheck() has no access control: any external caller can defer solvency enforcement for ",
+              "reproScore": 0.95
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T01-41024681",
+              "agentId": "ARITHMETIC",
+              "severity": 8,
+              "description": "uint256 overflow in unchecked accumulation of fee-on-transfer tokens",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T01-32504812",
+              "agentId": "REENTRANCY",
+              "severity": 8,
+              "description": "Classic reentrancy: external call made before state update in withdraw()",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "STATE-STATE-T04-51263210",
+              "agentId": "STATE",
+              "severity": 7,
+              "description": "Permanent protocol brick via self-destruct of singleton library contract",
+              "reproScore": 1
+            }
+          ],
+          "corpusExchangeLog": [
+            "[CorpusExchange] Post-campaign exchange initiated. 7 high-value finding(s) shared across agent corpora.",
+            "[CorpusExchange] Agent=PRIVILEGE vectorId=PRIVILEGE-EULER-DEFER-LIQUIDITY-BYPASS sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=ARITHMETIC-ARITH-T01-41024681 sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=REENTRANCY vectorId=REENTRANCY-REENT-T01-32504812 sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=REENTRANCY vectorId=REENTRANCY-REENT-T02-32504812 sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=ECONOMIC-EULER-DONATE-RESERVE-MANIP sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=STATE-STATE-T03-51263210 sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=STATE-STATE-T04-51263210 sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Coverage summary: totalPaths=250062 avgCoverageRatio=0.543 agents=5"
+          ]
+        },
+        "stageD": {
+          "runId": "STAGE-D-1777746801467-bc1b",
+          "actionBand": "HARDBLOCK",
+          "globalScore": 34.951417323187925,
+          "hardBlockReasons": [
+            "Stage A deterministic hard-block: 2 finding(s) with severity >= 8 or explicit hard-block flag",
+            "Stage B symbolic hard-block: counterexample found for AUTHORIZATION, UPGRADE, or ACCOUNTING invariant"
+          ],
+          "cortexReviewFlagged": false,
+          "walletTaintProvisional": true,
+          "dimensionScores": {
+            "byteCodePrivilege": 70,
+            "proxyAdmin": 100,
+            "lpUnlock": 70,
+            "walletTaint": 50,
+            "accountingInvariant": 100,
+            "inputValidation": 100,
+            "adversarialExecution": 21.42857142857143,
+            "economicViability": 10,
+            "composite": 65.87142857142857
+          },
+          "findingVectors": [
+            {
+              "vectorId": "REENTRANCY-REENT-T02-32504812",
+              "severity": 9,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Cross-function reentrancy: deposit() and withdraw() share mutable state"
+            },
+            {
+              "vectorId": "ECONOMIC-EULER-DONATE-RESERVE-MANIP",
+              "severity": 9,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Reserve donation manipulates collateral accounting: donateToReserves() inflates dToken.underlyingBal"
+            },
+            {
+              "vectorId": "STATE-STATE-T03-51263210",
+              "severity": 9,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Re-initialisation attack: initialize() callable again after upgrade sets owner to attacker"
+            },
+            {
+              "vectorId": "PRIVILEGE-EULER-DEFER-LIQUIDITY-BYPASS",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 0.95,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "deferLiquidityCheck() has no access control: any external caller can defer solvency enforcement for "
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T01-41024681",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "counterexample-found",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "uint256 overflow in unchecked accumulation of fee-on-transfer tokens"
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T01-32504812",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Classic reentrancy: external call made before state update in withdraw()"
+            },
+            {
+              "vectorId": "STATE-STATE-T04-51263210",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Permanent protocol brick via self-destruct of singleton library contract"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T05-41024681",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "counterexample-found",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Rounding exploit in partial-fill order book favours attacker per iteration"
+            }
+          ],
+          "scoredVectors": [
+            {
+              "vectorId": "REENTRANCY-REENT-T02-32504812",
+              "riskScore": 5.7
+            },
+            {
+              "vectorId": "ECONOMIC-EULER-DONATE-RESERVE-MANIP",
+              "riskScore": 5.7
+            },
+            {
+              "vectorId": "STATE-STATE-T03-51263210",
+              "riskScore": 5.7
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T01-41024681",
+              "riskScore": 5.65
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T01-32504812",
+              "riskScore": 5.15
+            },
+            {
+              "vectorId": "PRIVILEGE-EULER-DEFER-LIQUIDITY-BYPASS",
+              "riskScore": 5.14
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T05-41024681",
+              "riskScore": 5.1
+            },
+            {
+              "vectorId": "STATE-STATE-T04-51263210",
+              "riskScore": 4.6
+            }
+          ],
+          "attestationPayload": {
+            "riskScore": 34.951417323187925,
+            "evidenceMerkleRoot": "95fac8b7",
+            "coverageRatio": 0.5433746916800737,
+            "unknownRatio": 0.21482197290752084,
+            "topVectors": [
+              {
+                "vectorId": "REENTRANCY-REENT-T02-32504812",
+                "severity": 9,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "ECONOMIC-EULER-DONATE-RESERVE-MANIP",
+                "severity": 9,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "STATE-STATE-T03-51263210",
+                "severity": 9,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "ARITHMETIC-ARITH-T01-41024681",
+                "severity": 8,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "REENTRANCY-REENT-T01-32504812",
+                "severity": 8,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              }
+            ]
+          }
+        },
+        "operator": {
+          "actionBand": "HARDBLOCK",
+          "globalScore": 34.951417323187925,
+          "hardBlocked": true,
+          "hardBlockReasons": [
+            "Stage A deterministic hard-block: 2 finding(s) with severity >= 8 or explicit hard-block flag",
+            "Stage B symbolic hard-block: counterexample found for AUTHORIZATION, UPGRADE, or ACCOUNTING invariant"
+          ],
+          "cortexEscalated": false,
+          "disclosureWindowsOpened": 8,
+          "topThreeFindings": [
+            {
+              "vectorId": "REENTRANCY-REENT-T02-32504812",
+              "severity": 9,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Cross-function reentrancy: deposit() and withdraw() share mutable state"
+            },
+            {
+              "vectorId": "ECONOMIC-EULER-DONATE-RESERVE-MANIP",
+              "severity": 9,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Reserve donation manipulates collateral accounting: donateToReserves() inflates dToken.underlyingBalance without health-factor enforcement, enabling insolvent position creation"
+            },
+            {
+              "vectorId": "STATE-STATE-T03-51263210",
+              "severity": 9,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Re-initialisation attack: initialize() callable again after upgrade sets owner to attacker"
+            }
+          ],
+          "registryStatus": "RED",
+          "requiresOperatorConfirmation": true,
+          "advisoryTierDisclaimers": [
+            "All outputs are fixture-verified only, not live-telemetry-verified.",
+            "No automated capital action should be taken without operator confirmation.",
+            "This assessment is at Advisory tier. External pricing not permitted."
+          ]
+        },
+        "delta": {
+          "expectedActionBand": "HARDBLOCK",
+          "actualActionBand": "HARDBLOCK",
+          "hardBlockCorrect": true,
+          "hardBlockSources": {
+            "stageA_hardBlockCandidates": 2,
+            "stageB_hardBlockFromSymbolic": true
+          },
+          "vectorCoverage": [
+            {
+              "gtVectorId": "GT-EULER-1",
+              "gtCategory": "MISSING_ACCOUNTING_INVARIANT",
+              "heparSurfaceMapping": "BYTECODE_PRIVILEGE (proxy — no dedicated ACCOUNTING_INVARIANT surface)",
+              "stageBInvariantMapping": "ACCOUNTING / ACCT-001, ACCT-005",
+              "capturedByStageA": true,
+              "stageASurface": "BYTECODE_PRIVILEGE",
+              "stageASeverity": 9,
+              "capturedByStageD": true,
+              "stageDVectorId": "ECONOMIC-EULER-DONATE-RESERVE-MANIP",
+              "stageDProofStatus": "unknown/timeout",
+              "taxonomyGap": "PARTIAL — BYTECODE_PRIVILEGE repurposed for missing-invariant class; no dedicated surface"
+            },
+            {
+              "gtVectorId": "GT-EULER-2",
+              "gtCategory": "FLASH_LOAN_DEFERRED_LIQUIDITY",
+              "heparSurfaceMapping": "LP_UNLOCK",
+              "stageBInvariantMapping": "ACCOUNTING / ACCT-002 (debt ceiling bypass)",
+              "capturedByStageA": true,
+              "stageASurface": "LP_UNLOCK",
+              "stageASeverity": 8,
+              "capturedByStageD": true,
+              "stageDVectorId": "PRIVILEGE-EULER-DEFER-LIQUIDITY-BYPASS",
+              "stageDProofStatus": "unknown/timeout",
+              "taxonomyGap": "NONE — LP_UNLOCK maps cleanly to flash-loan amplification vectors"
+            }
+          ],
+          "stageBCexClasses": [
+            "ACCOUNTING",
+            "ACCOUNTING"
+          ],
+          "stageBEscalationNote": "ACCOUNTING counterexamples do NOT trigger hardBlockFromSymbolic. HARDBLOCK for Euler is Stage-A-only. Calibration gap: critical accounting invariant violations have no Stage B escalation path absent a Stage A hardBlock flag.",
+          "disclosureVectors": [
+            {
+              "vectorId": "REENTRANCY-REENT-T02-32504812",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ECONOMIC-EULER-DONATE-RESERVE-MANIP",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "STATE-STATE-T03-51263210",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "PRIVILEGE-EULER-DEFER-LIQUIDITY-BYPASS",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T01-41024681",
+              "severity": 8,
+              "proofStatus": "counterexample-found"
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T01-32504812",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "STATE-STATE-T04-51263210",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T05-41024681",
+              "severity": 7,
+              "proofStatus": "counterexample-found"
+            }
+          ],
+          "taxonomySummary": {
+            "cleanMapping": 1,
+            "partialMapping": 1,
+            "noMapping": 0
+          }
+        }
+      }
+    },
+    {
+      "protocolId": "CREAM-FINANCE-2021",
+      "heparRunId": "stageA-1777746801475-advisory+stageB-1777746801475-advisory+STAGE-C-1777746801475-3be8+STAGE-D-1777746801475-494f",
+      "completedAt": "2026-05-02T18:33:21.476Z",
+      "groundTruth": {
+        "name": "Cream Finance",
+        "date": "2021-10-27",
+        "lossUSD": 130000000,
+        "contractAddress": "0x3338CEd5351d36214a03c8B8d2a38E3AE8a3bac3",
+        "attackerAddress": "0x24354d31bc9d90f62fe5f2454709c32049cf866b",
+        "rootCause": "AMP token ERC-777 tokensToSend hook fires before Cream Finance borrow() updates internal balance; re-entrant borrow() call within the hook extracts a second loan using stale (pre-update) balance. MakerDAO flash loan amplifies the attack.",
+        "exploitMechanism": [
+          "Obtain ~500M DAI via MakerDAO MCD_FLASH",
+          "Deposit as crDAI collateral in Cream",
+          "borrow() triggers AMP token transfer",
+          "AMP tokensToSend hook re-enters borrow() with stale balance",
+          "Double-borrow extracts ~$130M before balances reconcile"
+        ],
+        "vectors": [
+          {
+            "id": "GT-CREAM-1",
+            "category": "REENTRANCY_ERC777",
+            "description": "ERC-777 tokensToSend hook re-enters borrow() before accounting update (CEI violation)",
+            "impactSeverity": "CRITICAL",
+            "heparSurfaceMapping": "BYTECODE_PRIVILEGE + Stage C REENTRANCY agent",
+            "stageBInvariantMapping": "REENTRANCY_STATE / REENT-001, REENT-003",
+            "gap": "NONE — BYTECODE_PRIVILEGE (missing reentrancy guard) and REENTRANCY agent cover this"
+          },
+          {
+            "id": "GT-CREAM-2",
+            "category": "FLASH_LOAN_AMPLIFICATION",
+            "description": "MakerDAO flash loan enables double-borrow in single tx via reentrancy path",
+            "impactSeverity": "HIGH",
+            "heparSurfaceMapping": "LP_UNLOCK",
+            "stageBInvariantMapping": "ACCOUNTING / ACCT-002",
+            "gap": "NONE — LP_UNLOCK maps cleanly"
+          }
+        ],
+        "stageBEscalationNote": "REENTRANCY_STATE counterexamples do NOT trigger hardBlockFromSymbolic. HARDBLOCK for Cream is Stage-A-only. Same escalation gap as Euler: reentrancy findings need Stage A hardBlock flag to reach HARDBLOCK — Stage B alone is insufficient."
+      },
+      "heparResult": {
+        "stageA": {
+          "runId": "stageA-1777746801475-advisory",
+          "hardBlockCandidates": [
+            {
+              "surface": "BYTECODE_PRIVILEGE",
+              "severity": 8,
+              "hardBlockFlag": true,
+              "description": "borrow() has no nonReentrant guard; integrates AMP token (ERC-777 compatible) which fires tokensToSe"
+            },
+            {
+              "surface": "LP_UNLOCK",
+              "severity": 8,
+              "hardBlockFlag": false,
+              "description": "MakerDAO MCD_FLASH (0x1EB4CF3A948E7D72A198fe073cCb8C7a948cD853) used to obtain ~500M DAI flash loan;"
+            }
+          ],
+          "dimensionScores": {
+            "byteCodePrivilege": 70,
+            "proxyAdmin": 100,
+            "lpUnlock": 70,
+            "walletTaint": 50,
+            "accountingInvariant": 100,
+            "inputValidation": 100
+          },
+          "walletTaintStatus": "PIPELINE_REQUIRED"
+        },
+        "stageB": {
+          "runId": "stageB-1777746801475-advisory",
+          "engineStatus": "STUB",
+          "hardBlockFromSymbolic": false,
+          "summary": {
+            "provedSafe": 0,
+            "counterexamplesFound": 2,
+            "unknownTimeout": 14,
+            "totalChecked": 16
+          },
+          "counterexamplesFound": [
+            {
+              "invariantId": "REENT-001",
+              "invariantClass": "REENTRANCY_STATE",
+              "description": "No external call is made before state mutation is finalized (checks-effects-interactions)",
+              "counterexample": [
+                "borrow(borrowAmount) calls AMP token transferFrom before zeroing borrower balance",
+                "AMP tokensToSend hook fires mid-transfer; attacker contract re-enters borrow()",
+                "Re-entrant borrow() observes stale (pre-update) balance — CEI invariant violated"
+              ]
+            },
+            {
+              "invariantId": "REENT-003",
+              "invariantClass": "REENTRANCY_STATE",
+              "description": "A reentrant call cannot produce a different post-state outcome than a non-reentrant call",
+              "counterexample": [
+                "Non-reentrant path: borrow(500M DAI) → balance updated → exit; net extracted = 500M",
+                "Reentrant path: borrow(500M DAI) → tokensToSend hook → borrow(500M DAI again) → both settle",
+                "Post-state diverges: reentrant path extracts 2× collateral vs. non-reentrant"
+              ]
+            }
+          ]
+        },
+        "stageC": {
+          "runId": "STAGE-C-1777746801475-3be8",
+          "executionStatus": "STUB",
+          "masterSeed": "HEPAR-CAL-CREAM-2021-10-27",
+          "totalFindings": 13,
+          "totalPathsExecuted": 264023,
+          "highSeverityFindings": [
+            {
+              "vectorId": "PRIVILEGE-PRIV-T03-56157962",
+              "agentId": "PRIVILEGE",
+              "severity": 9,
+              "description": "Storage collision between proxy and implementation overwrites owner slot",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "REENTRANCY-CREAM-ERC777-HOOK",
+              "agentId": "REENTRANCY",
+              "severity": 9,
+              "description": "ERC-777 tokensToSend hook in AMP token triggers re-entry into borrow() before Cream Finance balance ",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "STATE-STATE-T04-10107911",
+              "agentId": "STATE",
+              "severity": 9,
+              "description": "Permanent protocol brick via self-destruct of singleton library contract",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "PRIVILEGE-PRIV-T02-56157962",
+              "agentId": "PRIVILEGE",
+              "severity": 8,
+              "description": "Role escalation via misconfigured AccessControl grant path",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "ECONOMIC-CREAM-FLASH-DOUBLEBORROW",
+              "agentId": "ECONOMIC",
+              "severity": 8,
+              "description": "Flash-loan amplifies reentrancy: 500M DAI deposited as crDAI collateral; ERC-777 hook on borrow() re",
+              "reproScore": 0.9
+            },
+            {
+              "vectorId": "STATE-STATE-T03-10107911",
+              "agentId": "STATE",
+              "severity": 8,
+              "description": "Re-initialisation attack: initialize() callable again after upgrade sets owner to attacker",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T05-32924506",
+              "agentId": "ARITHMETIC",
+              "severity": 7,
+              "description": "Rounding exploit in partial-fill order book favours attacker per iteration",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T04-32924506",
+              "agentId": "ARITHMETIC",
+              "severity": 7,
+              "description": "Flashloan inflates reserve before arithmetic check allows outsized withdrawal",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "STATE-STATE-T02-10107911",
+              "agentId": "STATE",
+              "severity": 7,
+              "description": "Unguarded state transition allows EMERGENCY_SHUTDOWN to be reversed by anyone",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "STATE-STATE-T05-10107911",
+              "agentId": "STATE",
+              "severity": 7,
+              "description": "Cross-contract state inconsistency: vault and strategy disagree on deposited amount",
+              "reproScore": 1
+            }
+          ],
+          "corpusExchangeLog": [
+            "[CorpusExchange] Post-campaign exchange initiated. 10 high-value finding(s) shared across agent corpora.",
+            "[CorpusExchange] Agent=PRIVILEGE vectorId=PRIVILEGE-PRIV-T02-56157962 sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=PRIVILEGE vectorId=PRIVILEGE-PRIV-T03-56157962 sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=ARITHMETIC-ARITH-T05-32924506 sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=ARITHMETIC-ARITH-T04-32924506 sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=REENTRANCY vectorId=REENTRANCY-CREAM-ERC777-HOOK sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=ECONOMIC-CREAM-FLASH-DOUBLEBORROW sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=STATE-STATE-T02-10107911 sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=STATE-STATE-T05-10107911 sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=STATE-STATE-T04-10107911 sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=STATE-STATE-T03-10107911 sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Coverage summary: totalPaths=264023 avgCoverageRatio=0.626 agents=5"
+          ]
+        },
+        "stageD": {
+          "runId": "STAGE-D-1777746801475-494f",
+          "actionBand": "HARDBLOCK",
+          "globalScore": 55.56671861626209,
+          "hardBlockReasons": [
+            "Stage A deterministic hard-block: 2 finding(s) with severity >= 8 or explicit hard-block flag"
+          ],
+          "cortexReviewFlagged": false,
+          "walletTaintProvisional": true,
+          "dimensionScores": {
+            "byteCodePrivilege": 70,
+            "proxyAdmin": 100,
+            "lpUnlock": 70,
+            "walletTaint": 50,
+            "accountingInvariant": 100,
+            "inputValidation": 100,
+            "adversarialExecution": 26.66666666666667,
+            "economicViability": 20,
+            "composite": 67.3
+          },
+          "findingVectors": [
+            {
+              "vectorId": "PRIVILEGE-PRIV-T03-56157962",
+              "severity": 9,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Storage collision between proxy and implementation overwrites owner slot"
+            },
+            {
+              "vectorId": "REENTRANCY-CREAM-ERC777-HOOK",
+              "severity": 9,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "counterexample-found",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "ERC-777 tokensToSend hook in AMP token triggers re-entry into borrow() before Cream Finance balance "
+            },
+            {
+              "vectorId": "STATE-STATE-T04-10107911",
+              "severity": 9,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Permanent protocol brick via self-destruct of singleton library contract"
+            },
+            {
+              "vectorId": "PRIVILEGE-PRIV-T02-56157962",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Role escalation via misconfigured AccessControl grant path"
+            },
+            {
+              "vectorId": "ECONOMIC-CREAM-FLASH-DOUBLEBORROW",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 0.9,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Flash-loan amplifies reentrancy: 500M DAI deposited as crDAI collateral; ERC-777 hook on borrow() re"
+            },
+            {
+              "vectorId": "STATE-STATE-T03-10107911",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Re-initialisation attack: initialize() callable again after upgrade sets owner to attacker"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T05-32924506",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Rounding exploit in partial-fill order book favours attacker per iteration"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T04-32924506",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Flashloan inflates reserve before arithmetic check allows outsized withdrawal"
+            },
+            {
+              "vectorId": "STATE-STATE-T02-10107911",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Unguarded state transition allows EMERGENCY_SHUTDOWN to be reversed by anyone"
+            },
+            {
+              "vectorId": "STATE-STATE-T05-10107911",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Cross-contract state inconsistency: vault and strategy disagree on deposited amount"
+            },
+            {
+              "vectorId": "PRIVILEGE-PRIV-T05-56157962",
+              "severity": 6,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "ERC-20 approve griefing allows front-run of allowance change"
+            },
+            {
+              "vectorId": "PRIVILEGE-PRIV-T04-56157962",
+              "severity": 5,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Pause bypass via paused-state check missing in internal call path"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T03-32924506",
+              "severity": 4,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Precision loss in fixed-point interest accrual leads to silent underpayment"
+            }
+          ],
+          "scoredVectors": [
+            {
+              "vectorId": "REENTRANCY-CREAM-ERC777-HOOK",
+              "riskScore": 6.2
+            },
+            {
+              "vectorId": "PRIVILEGE-PRIV-T03-56157962",
+              "riskScore": 5.7
+            },
+            {
+              "vectorId": "STATE-STATE-T04-10107911",
+              "riskScore": 5.7
+            },
+            {
+              "vectorId": "PRIVILEGE-PRIV-T02-56157962",
+              "riskScore": 5.15
+            },
+            {
+              "vectorId": "STATE-STATE-T03-10107911",
+              "riskScore": 5.15
+            },
+            {
+              "vectorId": "ECONOMIC-CREAM-FLASH-DOUBLEBORROW",
+              "riskScore": 5.13
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T05-32924506",
+              "riskScore": 4.6
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T04-32924506",
+              "riskScore": 4.6
+            },
+            {
+              "vectorId": "STATE-STATE-T02-10107911",
+              "riskScore": 4.6
+            },
+            {
+              "vectorId": "STATE-STATE-T05-10107911",
+              "riskScore": 4.6
+            },
+            {
+              "vectorId": "PRIVILEGE-PRIV-T05-56157962",
+              "riskScore": 4.05
+            },
+            {
+              "vectorId": "PRIVILEGE-PRIV-T04-56157962",
+              "riskScore": 3.5
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T03-32924506",
+              "riskScore": 2.95
+            }
+          ],
+          "attestationPayload": {
+            "riskScore": 55.56671861626209,
+            "evidenceMerkleRoot": "bc04824c",
+            "coverageRatio": 0.6260469415970147,
+            "unknownRatio": 0.1749167199805379,
+            "topVectors": [
+              {
+                "vectorId": "REENTRANCY-CREAM-ERC777-HOOK",
+                "severity": 9,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "PRIVILEGE-PRIV-T03-56157962",
+                "severity": 9,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "STATE-STATE-T04-10107911",
+                "severity": 9,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "PRIVILEGE-PRIV-T02-56157962",
+                "severity": 8,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "STATE-STATE-T03-10107911",
+                "severity": 8,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              }
+            ]
+          }
+        },
+        "operator": {
+          "actionBand": "HARDBLOCK",
+          "globalScore": 55.56671861626209,
+          "hardBlocked": true,
+          "hardBlockReasons": [
+            "Stage A deterministic hard-block: 2 finding(s) with severity >= 8 or explicit hard-block flag"
+          ],
+          "cortexEscalated": false,
+          "disclosureWindowsOpened": 10,
+          "topThreeFindings": [
+            {
+              "vectorId": "REENTRANCY-CREAM-ERC777-HOOK",
+              "severity": 9,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "ERC-777 tokensToSend hook in AMP token triggers re-entry into borrow() before Cream Finance balance update; enables double-extraction of collateral in single tx"
+            },
+            {
+              "vectorId": "PRIVILEGE-PRIV-T03-56157962",
+              "severity": 9,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Storage collision between proxy and implementation overwrites owner slot"
+            },
+            {
+              "vectorId": "STATE-STATE-T04-10107911",
+              "severity": 9,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Permanent protocol brick via self-destruct of singleton library contract"
+            }
+          ],
+          "registryStatus": "RED",
+          "requiresOperatorConfirmation": true,
+          "advisoryTierDisclaimers": [
+            "All outputs are fixture-verified only, not live-telemetry-verified.",
+            "No automated capital action should be taken without operator confirmation.",
+            "This assessment is at Advisory tier. External pricing not permitted."
+          ]
+        },
+        "delta": {
+          "expectedActionBand": "HARDBLOCK",
+          "actualActionBand": "HARDBLOCK",
+          "hardBlockCorrect": true,
+          "hardBlockSources": {
+            "stageA_hardBlockCandidates": 2,
+            "stageB_hardBlockFromSymbolic": false
+          },
+          "vectorCoverage": [
+            {
+              "gtVectorId": "GT-CREAM-1",
+              "gtCategory": "REENTRANCY_ERC777",
+              "heparSurfaceMapping": "BYTECODE_PRIVILEGE + Stage C REENTRANCY agent",
+              "stageBInvariantMapping": "REENTRANCY_STATE / REENT-001, REENT-003",
+              "capturedByStageA": true,
+              "stageASurface": "BYTECODE_PRIVILEGE",
+              "stageASeverity": 8,
+              "capturedByStageD": true,
+              "stageDVectorId": "REENTRANCY-CREAM-ERC777-HOOK",
+              "stageDProofStatus": "counterexample-found",
+              "taxonomyGap": "NONE — BYTECODE_PRIVILEGE (missing reentrancy guard) and REENTRANCY agent cover this"
+            },
+            {
+              "gtVectorId": "GT-CREAM-2",
+              "gtCategory": "FLASH_LOAN_AMPLIFICATION",
+              "heparSurfaceMapping": "LP_UNLOCK",
+              "stageBInvariantMapping": "ACCOUNTING / ACCT-002",
+              "capturedByStageA": true,
+              "stageASurface": "LP_UNLOCK",
+              "stageASeverity": 8,
+              "capturedByStageD": true,
+              "stageDVectorId": "REENTRANCY-CREAM-ERC777-HOOK",
+              "stageDProofStatus": "counterexample-found",
+              "taxonomyGap": "NONE — LP_UNLOCK maps cleanly"
+            }
+          ],
+          "stageBCexClasses": [
+            "REENTRANCY_STATE",
+            "REENTRANCY_STATE"
+          ],
+          "stageBEscalationNote": "REENTRANCY_STATE counterexamples do NOT trigger hardBlockFromSymbolic. HARDBLOCK for Cream is Stage-A-only. Same escalation gap as Euler: reentrancy findings need Stage A hardBlock flag to reach HARDBLOCK — Stage B alone is insufficient.",
+          "disclosureVectors": [
+            {
+              "vectorId": "PRIVILEGE-PRIV-T03-56157962",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "REENTRANCY-CREAM-ERC777-HOOK",
+              "severity": 9,
+              "proofStatus": "counterexample-found"
+            },
+            {
+              "vectorId": "STATE-STATE-T04-10107911",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "PRIVILEGE-PRIV-T02-56157962",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ECONOMIC-CREAM-FLASH-DOUBLEBORROW",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "STATE-STATE-T03-10107911",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T05-32924506",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T04-32924506",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "STATE-STATE-T02-10107911",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "STATE-STATE-T05-10107911",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            }
+          ],
+          "taxonomySummary": {
+            "cleanMapping": 2,
+            "partialMapping": 0,
+            "noMapping": 0
+          }
+        }
+      }
+    },
+    {
+      "protocolId": "NOMAD-BRIDGE-2022",
+      "heparRunId": "stageA-1777746801477-advisory+stageB-1777746801477-advisory+STAGE-C-1777746801477-8764+STAGE-D-1777746801479-6431",
+      "completedAt": "2026-05-02T18:33:21.479Z",
+      "groundTruth": {
+        "name": "Nomad Bridge",
+        "date": "2022-08-01",
+        "lossUSD": 190000000,
+        "contractAddress": "0x88a69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+        "attackerAddress": "(multiple — free-for-all copy-paste exploit after first tx)",
+        "rootCause": "Routine upgrade initialized Replica.committedRoot to bytes32(0). Since confirmedRoots[0x00] was set true, acceptableRoot() returned true for every message with root=0x00. Any caller could fabricate bridge messages with zero root and execute arbitrary withdrawals without a valid Merkle proof.",
+        "exploitMechanism": [
+          "Upgrade sets committedRoot = bytes32(0) → confirmedRoots[0x00] = true",
+          "Attacker submits process(message) with fabricated body and root=0x00",
+          "acceptableRoot(0x00) returns true — no Merkle proof required",
+          "Bridge executes token transfer; exploit copied by hundreds of addresses"
+        ],
+        "vectors": [
+          {
+            "id": "GT-NOMAD-1",
+            "category": "IMPROPER_PROXY_INITIALIZATION",
+            "description": "Upgrade sets committedRoot=bytes32(0), auto-confirming zero root for all bridge messages",
+            "impactSeverity": "CRITICAL",
+            "heparSurfaceMapping": "PROXY_ADMIN",
+            "stageBInvariantMapping": "UPGRADE / UPGRADE-001, UPGRADE-003",
+            "gap": "NONE — PROXY_ADMIN captures upgrade-introduced state corruption cleanly"
+          },
+          {
+            "id": "GT-NOMAD-2",
+            "category": "MISSING_INPUT_VALIDATION",
+            "description": "process() accepts any message with root=0x00 without Merkle proof",
+            "impactSeverity": "CRITICAL",
+            "heparSurfaceMapping": "BYTECODE_PRIVILEGE (proxy — no dedicated INPUT_VALIDATION surface)",
+            "stageBInvariantMapping": "AUTHORIZATION / AUTH-004",
+            "gap": "PARTIAL — BYTECODE_PRIVILEGE used as fallback; no dedicated INPUT_VALIDATION surface"
+          }
+        ],
+        "stageBEscalationNote": "UPGRADE and AUTHORIZATION counterexamples DO trigger hardBlockFromSymbolic. Nomad is the only protocol where Stage B independently reaches HARDBLOCK, regardless of Stage A findings."
+      },
+      "heparResult": {
+        "stageA": {
+          "runId": "stageA-1777746801477-advisory",
+          "hardBlockCandidates": [
+            {
+              "surface": "PROXY_ADMIN",
+              "severity": 10,
+              "hardBlockFlag": true,
+              "description": "Routine upgrade to Replica.sol initialized committedRoot to bytes32(0); confirmedRoots[0x00] consequ"
+            },
+            {
+              "surface": "BYTECODE_PRIVILEGE",
+              "severity": 9,
+              "hardBlockFlag": true,
+              "description": "process() in Replica.sol accepts any message when root=bytes32(0); no null-root guard; unprivileged "
+            }
+          ],
+          "dimensionScores": {
+            "byteCodePrivilege": 70,
+            "proxyAdmin": 70,
+            "lpUnlock": 100,
+            "walletTaint": 50,
+            "accountingInvariant": 100,
+            "inputValidation": 100
+          },
+          "walletTaintStatus": "PIPELINE_REQUIRED"
+        },
+        "stageB": {
+          "runId": "stageB-1777746801477-advisory",
+          "engineStatus": "STUB",
+          "hardBlockFromSymbolic": true,
+          "summary": {
+            "provedSafe": 0,
+            "counterexamplesFound": 3,
+            "unknownTimeout": 13,
+            "totalChecked": 16
+          },
+          "counterexamplesFound": [
+            {
+              "invariantId": "AUTH-004",
+              "invariantClass": "AUTHORIZATION",
+              "description": "No execution path exists where an unprivileged caller reaches privileged state",
+              "counterexample": [
+                "process(bytes memory message) called by unprivileged address 0xb5c55f76f90cc528...",
+                "require(acceptableRoot(msg.root)) passes for root=bytes32(0)",
+                "Bridge executes IERC20.transfer() on behalf of forged message — privileged state reached"
+              ]
+            },
+            {
+              "invariantId": "UPGRADE-001",
+              "invariantClass": "UPGRADE",
+              "description": "Implementation address cannot be changed without satisfying the configured timelock",
+              "counterexample": [
+                "Replica.initialize() called during upgrade with committedRoot=bytes32(0)",
+                "confirmedRoots[bytes32(0)] set to true as side-effect of zero-root initialization",
+                "Implementation change introduces universally-confirmed root — timelock constraint bypassed via init error"
+              ]
+            },
+            {
+              "invariantId": "UPGRADE-003",
+              "invariantClass": "UPGRADE",
+              "description": "No upgrade path exists that bypasses the authorization constraint",
+              "counterexample": [
+                "Post-upgrade: any caller submits process(message) with msg.root=bytes32(0)",
+                "acceptableRoot(bytes32(0)) returns true — authorization constraint bypassed",
+                "Upgrade path introduced a state that nullifies message authentication entirely"
+              ]
+            }
+          ]
+        },
+        "stageC": {
+          "runId": "STAGE-C-1777746801477-8764",
+          "executionStatus": "STUB",
+          "masterSeed": "HEPAR-CAL-NOMAD-2022-08-01",
+          "totalFindings": 11,
+          "totalPathsExecuted": 233696,
+          "highSeverityFindings": [
+            {
+              "vectorId": "NOMAD-ZERO-ROOT-EXPLOIT",
+              "agentId": "STATE",
+              "severity": 10,
+              "description": "Contract initial state misconfigured by upgrade: committedRoot=bytes32(0) maps to a confirmed root e",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "NOMAD-ZERO-ROOT-EXPLOIT",
+              "agentId": "PRIVILEGE",
+              "severity": 9,
+              "description": "Authorization bypass via zero-root: process() authorization logic defeatable by any caller using roo",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T02-25561335",
+              "agentId": "REENTRANCY",
+              "severity": 9,
+              "description": "Cross-function reentrancy: deposit() and withdraw() share mutable state",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T04-25561335",
+              "agentId": "REENTRANCY",
+              "severity": 9,
+              "description": "ERC-777 tokensToSend hook triggers reentrancy before transfer accounting",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T01-25561335",
+              "agentId": "REENTRANCY",
+              "severity": 8,
+              "description": "Classic reentrancy: external call made before state update in withdraw()",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T01-27521828",
+              "agentId": "ECONOMIC",
+              "severity": 8,
+              "description": "Flashloan-funded drain: attacker borrows to manipulate collateral ratio then liquidates",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T02-27521828",
+              "agentId": "ECONOMIC",
+              "severity": 8,
+              "description": "Oracle price manipulation via single-block TWAP window allows outsized borrow",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T02-10236733",
+              "agentId": "ARITHMETIC",
+              "severity": 7,
+              "description": "Division-by-zero in share price calculation when totalSupply is drained",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T04-27521828",
+              "agentId": "ECONOMIC",
+              "severity": 7,
+              "description": "Sole-LP attack: only liquidity provider removes all LP then re-enters at will",
+              "reproScore": 1
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T03-27521828",
+              "agentId": "ECONOMIC",
+              "severity": 7,
+              "description": "Sandwich attack on large swap extracts MEV from retail users",
+              "reproScore": 1
+            }
+          ],
+          "corpusExchangeLog": [
+            "[CorpusExchange] Post-campaign exchange initiated. 10 high-value finding(s) shared across agent corpora.",
+            "[CorpusExchange] Agent=PRIVILEGE vectorId=NOMAD-ZERO-ROOT-EXPLOIT sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=ARITHMETIC-ARITH-T02-10236733 sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=REENTRANCY vectorId=REENTRANCY-REENT-T02-25561335 sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=REENTRANCY vectorId=REENTRANCY-REENT-T04-25561335 sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=REENTRANCY vectorId=REENTRANCY-REENT-T01-25561335 sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=ECONOMIC-ECON-T01-27521828 sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=ECONOMIC-ECON-T04-27521828 sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=ECONOMIC-ECON-T03-27521828 sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=ECONOMIC-ECON-T02-27521828 sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=NOMAD-ZERO-ROOT-EXPLOIT sev=10 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Coverage summary: totalPaths=233696 avgCoverageRatio=0.494 agents=5"
+          ]
+        },
+        "stageD": {
+          "runId": "STAGE-D-1777746801479-6431",
+          "actionBand": "HARDBLOCK",
+          "globalScore": 43.606434223940596,
+          "hardBlockReasons": [
+            "Stage A deterministic hard-block: 2 finding(s) with severity >= 8 or explicit hard-block flag",
+            "Stage B symbolic hard-block: counterexample found for AUTHORIZATION, UPGRADE, or ACCOUNTING invariant"
+          ],
+          "cortexReviewFlagged": false,
+          "walletTaintProvisional": true,
+          "dimensionScores": {
+            "byteCodePrivilege": 70,
+            "proxyAdmin": 70,
+            "lpUnlock": 100,
+            "walletTaint": 50,
+            "accountingInvariant": 100,
+            "inputValidation": 100,
+            "adversarialExecution": 21,
+            "economicViability": 20,
+            "composite": 66.02
+          },
+          "findingVectors": [
+            {
+              "vectorId": "NOMAD-ZERO-ROOT-EXPLOIT",
+              "severity": 10,
+              "consensus": 0.4,
+              "repro": 1,
+              "proofStatus": "counterexample-found",
+              "convergenceLabel": "POSSIBLE",
+              "description": "Contract initial state misconfigured by upgrade: committedRoot=bytes32(0) maps to a confirmed root e"
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T02-25561335",
+              "severity": 9,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Cross-function reentrancy: deposit() and withdraw() share mutable state"
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T04-25561335",
+              "severity": 9,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "ERC-777 tokensToSend hook triggers reentrancy before transfer accounting"
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T01-25561335",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Classic reentrancy: external call made before state update in withdraw()"
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T01-27521828",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Flashloan-funded drain: attacker borrows to manipulate collateral ratio then liquidates"
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T02-27521828",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Oracle price manipulation via single-block TWAP window allows outsized borrow"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T02-10236733",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Division-by-zero in share price calculation when totalSupply is drained"
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T04-27521828",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Sole-LP attack: only liquidity provider removes all LP then re-enters at will"
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T03-27521828",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Sandwich attack on large swap extracts MEV from retail users"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T03-10236733",
+              "severity": 6,
+              "consensus": 0.2,
+              "repro": 1,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Precision loss in fixed-point interest accrual leads to silent underpayment"
+            }
+          ],
+          "scoredVectors": [
+            {
+              "vectorId": "NOMAD-ZERO-ROOT-EXPLOIT",
+              "riskScore": 6.8
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T02-25561335",
+              "riskScore": 5.7
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T04-25561335",
+              "riskScore": 5.7
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T01-25561335",
+              "riskScore": 5.15
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T01-27521828",
+              "riskScore": 5.15
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T02-27521828",
+              "riskScore": 5.15
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T02-10236733",
+              "riskScore": 4.6
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T04-27521828",
+              "riskScore": 4.6
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T03-27521828",
+              "riskScore": 4.6
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T03-10236733",
+              "riskScore": 4.05
+            }
+          ],
+          "attestationPayload": {
+            "riskScore": 43.606434223940596,
+            "evidenceMerkleRoot": "850e78fd",
+            "coverageRatio": 0.4939468521438538,
+            "unknownRatio": 0.18886895316652955,
+            "topVectors": [
+              {
+                "vectorId": "NOMAD-ZERO-ROOT-EXPLOIT",
+                "severity": 10,
+                "consensusRate": 0.4,
+                "convergenceLabel": "POSSIBLE"
+              },
+              {
+                "vectorId": "REENTRANCY-REENT-T02-25561335",
+                "severity": 9,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "REENTRANCY-REENT-T04-25561335",
+                "severity": 9,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "REENTRANCY-REENT-T01-25561335",
+                "severity": 8,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "ECONOMIC-ECON-T01-27521828",
+                "severity": 8,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              }
+            ]
+          }
+        },
+        "operator": {
+          "actionBand": "HARDBLOCK",
+          "globalScore": 43.606434223940596,
+          "hardBlocked": true,
+          "hardBlockReasons": [
+            "Stage A deterministic hard-block: 2 finding(s) with severity >= 8 or explicit hard-block flag",
+            "Stage B symbolic hard-block: counterexample found for AUTHORIZATION, UPGRADE, or ACCOUNTING invariant"
+          ],
+          "cortexEscalated": false,
+          "disclosureWindowsOpened": 9,
+          "topThreeFindings": [
+            {
+              "vectorId": "NOMAD-ZERO-ROOT-EXPLOIT",
+              "severity": 10,
+              "convergenceLabel": "POSSIBLE",
+              "description": "Contract initial state misconfigured by upgrade: committedRoot=bytes32(0) maps to a confirmed root entry, making zero hash the universal accepted Merkle root for all bridge message processing"
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T02-25561335",
+              "severity": 9,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Cross-function reentrancy: deposit() and withdraw() share mutable state"
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T04-25561335",
+              "severity": 9,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "ERC-777 tokensToSend hook triggers reentrancy before transfer accounting"
+            }
+          ],
+          "registryStatus": "RED",
+          "requiresOperatorConfirmation": true,
+          "advisoryTierDisclaimers": [
+            "All outputs are fixture-verified only, not live-telemetry-verified.",
+            "No automated capital action should be taken without operator confirmation.",
+            "This assessment is at Advisory tier. External pricing not permitted."
+          ]
+        },
+        "delta": {
+          "expectedActionBand": "HARDBLOCK",
+          "actualActionBand": "HARDBLOCK",
+          "hardBlockCorrect": true,
+          "hardBlockSources": {
+            "stageA_hardBlockCandidates": 2,
+            "stageB_hardBlockFromSymbolic": true
+          },
+          "vectorCoverage": [
+            {
+              "gtVectorId": "GT-NOMAD-1",
+              "gtCategory": "IMPROPER_PROXY_INITIALIZATION",
+              "heparSurfaceMapping": "PROXY_ADMIN",
+              "stageBInvariantMapping": "UPGRADE / UPGRADE-001, UPGRADE-003",
+              "capturedByStageA": true,
+              "stageASurface": "PROXY_ADMIN",
+              "stageASeverity": 10,
+              "capturedByStageD": true,
+              "stageDVectorId": "NOMAD-ZERO-ROOT-EXPLOIT",
+              "stageDProofStatus": "counterexample-found",
+              "taxonomyGap": "NONE — PROXY_ADMIN captures upgrade-introduced state corruption cleanly"
+            },
+            {
+              "gtVectorId": "GT-NOMAD-2",
+              "gtCategory": "MISSING_INPUT_VALIDATION",
+              "heparSurfaceMapping": "BYTECODE_PRIVILEGE (proxy — no dedicated INPUT_VALIDATION surface)",
+              "stageBInvariantMapping": "AUTHORIZATION / AUTH-004",
+              "capturedByStageA": true,
+              "stageASurface": "BYTECODE_PRIVILEGE",
+              "stageASeverity": 9,
+              "capturedByStageD": true,
+              "stageDVectorId": "NOMAD-ZERO-ROOT-EXPLOIT",
+              "stageDProofStatus": "counterexample-found",
+              "taxonomyGap": "PARTIAL — BYTECODE_PRIVILEGE used as fallback; no dedicated INPUT_VALIDATION surface"
+            }
+          ],
+          "stageBCexClasses": [
+            "AUTHORIZATION",
+            "UPGRADE",
+            "UPGRADE"
+          ],
+          "stageBEscalationNote": "UPGRADE and AUTHORIZATION counterexamples DO trigger hardBlockFromSymbolic. Nomad is the only protocol where Stage B independently reaches HARDBLOCK, regardless of Stage A findings.",
+          "disclosureVectors": [
+            {
+              "vectorId": "NOMAD-ZERO-ROOT-EXPLOIT",
+              "severity": 10,
+              "proofStatus": "counterexample-found"
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T02-25561335",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T04-25561335",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "REENTRANCY-REENT-T01-25561335",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T01-27521828",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T02-27521828",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ARITHMETIC-ARITH-T02-10236733",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T04-27521828",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "ECONOMIC-ECON-T03-27521828",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            }
+          ],
+          "taxonomySummary": {
+            "cleanMapping": 1,
+            "partialMapping": 1,
+            "noMapping": 0
+          }
+        }
+      }
+    }
+  ]
+}

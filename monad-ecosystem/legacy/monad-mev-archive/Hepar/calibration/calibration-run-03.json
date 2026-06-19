@@ -1,0 +1,84 @@
+{
+  "calibrationRunId": "CAL-003",
+  "runAt": "2026-05-02T18:33:21.493Z",
+  "heparTier": "ADVISORY",
+  "purpose": "Gap closure verification: PROBABLE_CRITICAL_RESTRICT rule added to actionBand.ts. Confirms bZx and Harvest now correctly reach RESTRICTED (not ALLOW) when 3/5 agents report severity-9 vectors (flash-loan oracle manipulation class).",
+  "gapClosed": "SCORING_UNDERWEIGHT_PARTIAL_CONSENSUS_ECONOMIC",
+  "ruleAdded": {
+    "name": "PROBABLE_CRITICAL_RESTRICT",
+    "condition": "consensus >= 0.60 (PROBABLE) AND severity >= 9 (CRITICAL)",
+    "effect": "minimum RESTRICTED (floor only — does not cap higher bands)",
+    "file": "hepar/lib/scoring/actionBand.ts"
+  },
+  "successCriteria": {
+    "SC1": "bZx actionBand = RESTRICTED (was ALLOW before gap closure)",
+    "SC2": "Harvest actionBand = RESTRICTED (was ALLOW before gap closure)",
+    "SC3": "Mango actionBand = HARDBLOCK (unchanged — CERTAIN_CRITICAL still fires)",
+    "SC4": "bZx and Harvest escalationPath = STAGE_C_PROBABLE_CRITICAL",
+    "SC5": "Zero regressions across 534 assertions"
+  },
+  "actualResults": {
+    "SC1": "bZx: PASS (RESTRICTED)",
+    "SC2": "Harvest: PASS (RESTRICTED)",
+    "SC3": "Mango: PASS (HARDBLOCK)",
+    "SC4": "bZx path: STAGE_C_PROBABLE_CRITICAL / Harvest path: STAGE_C_PROBABLE_CRITICAL",
+    "SC5": "See test suite run — 534 assertions, 0 failures"
+  },
+  "allPass": true,
+  "protocols": [
+    {
+      "protocolId": "BZX-2020-02",
+      "name": "bZx Protocol",
+      "expectedBand": "RESTRICTED",
+      "actualBand": "RESTRICTED",
+      "expectedPath": "STAGE_C_PROBABLE_CRITICAL",
+      "actualPath": "STAGE_C_PROBABLE_CRITICAL",
+      "stageCDriven": true,
+      "globalScore": 18.40486186798787,
+      "hardBlockSources": {
+        "stageA_hardBlockCandidates": 0,
+        "stageB_hardBlockFromSymbolic": false,
+        "stageC_certainCritical": false,
+        "stageC_probableCritical": true,
+        "stageC_scoreGte80": false
+      },
+      "pass": true
+    },
+    {
+      "protocolId": "HARVEST-FINANCE-2020",
+      "name": "Harvest Finance",
+      "expectedBand": "RESTRICTED",
+      "actualBand": "RESTRICTED",
+      "expectedPath": "STAGE_C_PROBABLE_CRITICAL",
+      "actualPath": "STAGE_C_PROBABLE_CRITICAL",
+      "stageCDriven": true,
+      "globalScore": 19.195834164539665,
+      "hardBlockSources": {
+        "stageA_hardBlockCandidates": 0,
+        "stageB_hardBlockFromSymbolic": false,
+        "stageC_certainCritical": false,
+        "stageC_probableCritical": true,
+        "stageC_scoreGte80": false
+      },
+      "pass": true
+    },
+    {
+      "protocolId": "MANGO-MARKETS-2022",
+      "name": "Mango Markets",
+      "expectedBand": "HARDBLOCK",
+      "actualBand": "HARDBLOCK",
+      "expectedPath": "STAGE_C_CERTAIN_CRITICAL",
+      "actualPath": "STAGE_C_CERTAIN_CRITICAL",
+      "stageCDriven": true,
+      "globalScore": 57.84149625489191,
+      "hardBlockSources": {
+        "stageA_hardBlockCandidates": 0,
+        "stageB_hardBlockFromSymbolic": false,
+        "stageC_certainCritical": true,
+        "stageC_probableCritical": false,
+        "stageC_scoreGte80": false
+      },
+      "pass": true
+    }
+  ]
+}

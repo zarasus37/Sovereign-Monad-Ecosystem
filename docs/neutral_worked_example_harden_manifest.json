@@ -1,0 +1,250 @@
+{
+  "combos_count": 340,
+  "lexicon_size": 144,
+  "seq_len": 2,
+  "base_key": 7,
+  "success": 340,
+  "failures": 0,
+  "mappings_sample": {
+    "A": {
+      "index": 0,
+      "composite": "NEUTRAL_001|NEUTRAL_001",
+      "encoded": "UMDDCMY_568|GYPPOYK_124",
+      "recovered_base": 7,
+      "recovered_index": 0,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_001"
+      ],
+      "ok": true
+    },
+    "B": {
+      "index": 1,
+      "composite": "NEUTRAL_001|NEUTRAL_002",
+      "encoded": "UMDDCMY_568|GYPPOYK_125",
+      "recovered_base": 7,
+      "recovered_index": 1,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_002"
+      ],
+      "ok": true
+    },
+    "C": {
+      "index": 2,
+      "composite": "NEUTRAL_001|NEUTRAL_003",
+      "encoded": "UMDDCMY_568|GYPPOYK_126",
+      "recovered_base": 7,
+      "recovered_index": 2,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_003"
+      ],
+      "ok": true
+    },
+    "D": {
+      "index": 3,
+      "composite": "NEUTRAL_001|NEUTRAL_004",
+      "encoded": "UMDDCMY_568|GYPPOYK_127",
+      "recovered_base": 7,
+      "recovered_index": 3,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_004"
+      ],
+      "ok": true
+    },
+    "AA": {
+      "index": 4,
+      "composite": "NEUTRAL_001|NEUTRAL_005",
+      "encoded": "UMDDCMY_568|GYPPOYK_128",
+      "recovered_base": 7,
+      "recovered_index": 4,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_005"
+      ],
+      "ok": true
+    },
+    "AB": {
+      "index": 5,
+      "composite": "NEUTRAL_001|NEUTRAL_006",
+      "encoded": "UMDDCMY_568|GYPPOYK_129",
+      "recovered_base": 7,
+      "recovered_index": 5,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_006"
+      ],
+      "ok": true
+    },
+    "AC": {
+      "index": 6,
+      "composite": "NEUTRAL_001|NEUTRAL_007",
+      "encoded": "UMDDCMY_568|GYPPOYK_120",
+      "recovered_base": 7,
+      "recovered_index": 6,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_007"
+      ],
+      "ok": true
+    },
+    "AD": {
+      "index": 7,
+      "composite": "NEUTRAL_001|NEUTRAL_008",
+      "encoded": "UMDDCMY_568|GYPPOYK_121",
+      "recovered_base": 7,
+      "recovered_index": 7,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_008"
+      ],
+      "ok": true
+    },
+    "BA": {
+      "index": 8,
+      "composite": "NEUTRAL_001|NEUTRAL_009",
+      "encoded": "UMDDCMY_568|GYPPOYK_122",
+      "recovered_base": 7,
+      "recovered_index": 8,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_009"
+      ],
+      "ok": true
+    },
+    "BB": {
+      "index": 9,
+      "composite": "NEUTRAL_001|NEUTRAL_010",
+      "encoded": "UMDDCMY_568|GYPPOYK_133",
+      "recovered_base": 7,
+      "recovered_index": 9,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_010"
+      ],
+      "ok": true
+    },
+    "BC": {
+      "index": 10,
+      "composite": "NEUTRAL_001|NEUTRAL_011",
+      "encoded": "UMDDCMY_568|GYPPOYK_134",
+      "recovered_base": 7,
+      "recovered_index": 10,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_011"
+      ],
+      "ok": true
+    },
+    "BD": {
+      "index": 11,
+      "composite": "NEUTRAL_001|NEUTRAL_012",
+      "encoded": "UMDDCMY_568|GYPPOYK_135",
+      "recovered_base": 7,
+      "recovered_index": 11,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_012"
+      ],
+      "ok": true
+    },
+    "CA": {
+      "index": 12,
+      "composite": "NEUTRAL_001|NEUTRAL_013",
+      "encoded": "UMDDCMY_568|GYPPOYK_136",
+      "recovered_base": 7,
+      "recovered_index": 12,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_013"
+      ],
+      "ok": true
+    },
+    "CB": {
+      "index": 13,
+      "composite": "NEUTRAL_001|NEUTRAL_014",
+      "encoded": "UMDDCMY_568|GYPPOYK_137",
+      "recovered_base": 7,
+      "recovered_index": 13,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_014"
+      ],
+      "ok": true
+    },
+    "CC": {
+      "index": 14,
+      "composite": "NEUTRAL_001|NEUTRAL_015",
+      "encoded": "UMDDCMY_568|GYPPOYK_138",
+      "recovered_base": 7,
+      "recovered_index": 14,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_015"
+      ],
+      "ok": true
+    },
+    "CD": {
+      "index": 15,
+      "composite": "NEUTRAL_001|NEUTRAL_016",
+      "encoded": "UMDDCMY_568|GYPPOYK_139",
+      "recovered_base": 7,
+      "recovered_index": 15,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_016"
+      ],
+      "ok": true
+    },
+    "DA": {
+      "index": 16,
+      "composite": "NEUTRAL_001|NEUTRAL_017",
+      "encoded": "UMDDCMY_568|GYPPOYK_130",
+      "recovered_base": 7,
+      "recovered_index": 16,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_017"
+      ],
+      "ok": true
+    },
+    "DB": {
+      "index": 17,
+      "composite": "NEUTRAL_001|NEUTRAL_018",
+      "encoded": "UMDDCMY_568|GYPPOYK_131",
+      "recovered_base": 7,
+      "recovered_index": 17,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_018"
+      ],
+      "ok": true
+    },
+    "DC": {
+      "index": 18,
+      "composite": "NEUTRAL_001|NEUTRAL_019",
+      "encoded": "UMDDCMY_568|GYPPOYK_132",
+      "recovered_base": 7,
+      "recovered_index": 18,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_019"
+      ],
+      "ok": true
+    },
+    "DD": {
+      "index": 19,
+      "composite": "NEUTRAL_001|NEUTRAL_020",
+      "encoded": "UMDDCMY_568|GYPPOYK_143",
+      "recovered_base": 7,
+      "recovered_index": 19,
+      "recovered_parts": [
+        "NEUTRAL_001",
+        "NEUTRAL_020"
+      ],
+      "ok": true
+    }
+  }
+}

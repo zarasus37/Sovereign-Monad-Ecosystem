@@ -1,0 +1,19 @@
+{
+  "deploymentReportPath": "./deployments/phase1a-deploy-phase1a.json",
+  "sources": [
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "approved": true,
+      "label": "Temporary Bootstrap Source"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "approved": true,
+      "label": "Stake-linked MonadSpin Source"
+    }
+  ],
+  "cutover": {
+    "bootstrapSourceAddress": "0x0000000000000000000000000000000000000000",
+    "revokeBootstrapAfterCutover": false
+  }
+}

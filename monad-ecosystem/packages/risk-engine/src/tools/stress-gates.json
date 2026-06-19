@@ -1,0 +1,54 @@
+{
+  "notes": "Sanity gates for simulated scenarios. These are not live-trading guarantees; they are expected model-shape checks.",
+  "scenarios": {
+    "baseline_inventory": {
+      "expectedPass": true,
+      "minEvMean": 100,
+      "minSharpeLike": 5,
+      "maxPLossGt10Pct": 0.001
+    },
+    "baseline_bridge": {
+      "expectedPass": false,
+      "maxApprovals": 1
+    },
+    "low_spread_inventory": {
+      "expectedPass": false,
+      "maxApprovals": 0,
+      "maxEvMean": 25
+    },
+    "high_vol_inventory": {
+      "expectedPass": true,
+      "minEvMean": 100,
+      "minSharpeLike": 3
+    },
+    "large_size_inventory": {
+      "expectedPass": true,
+      "minEvMean": 100,
+      "minSharpeLike": 3
+    },
+    "long_bridge_delay": {
+      "expectedPass": false,
+      "maxApprovals": 1
+    },
+    "fee_shock_bridge": {
+      "expectedPass": false,
+      "maxApprovals": 0,
+      "maxEvMean": 50
+    },
+    "bridge_failure_shock": {
+      "expectedPass": false,
+      "maxApprovals": 0,
+      "maxPLossGt10Pct": 0.05
+    },
+    "thin_liquidity_inventory": {
+      "expectedPass": false,
+      "maxApprovals": 0,
+      "maxEvMean": 100
+    },
+    "bridge_stress_extreme": {
+      "expectedPass": false,
+      "maxApprovals": 0,
+      "maxSharpeLike": 0.5
+    }
+  }
+}

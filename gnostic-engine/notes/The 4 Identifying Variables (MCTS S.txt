@@ -1,0 +1,14 @@
+ The 4 Identifying Variables (MCTS Sequence)
+In a supply chain exploit search, the MCTS sequence explores these specific "identifying variables" to determine the exploit's viability:
+Dependency Depth (V1): The number of layers deep the target package sits (Transitive risk).
+Maintainer Entropy (V2): The frequency and reputation of commits (Social engineering/compromise risk).
+Network Surface (V3): Does the package make external calls or require specific permissions?
+Version Drift (V4): The gap between the installed version and the most secure/current version.
+🌾 Data-PBFP: Foraging Logic
+The Data-PBFP (Pre-Buffer Foraging Processor) acts as the pneumatic intake. It doesn't "think"; it filters. It takes raw, noisy data bits and reduces them to localized binary logic (Monads).
+Foraging: High-volume ingestion of raw metadata.
+Monad Isolation: Splitting data into independent bits so a "bad" bit doesn't infect the overarching synaptic network.
+🧬 Updated Scaffold Logic
+config.py (New Exploit Variables)
+
+

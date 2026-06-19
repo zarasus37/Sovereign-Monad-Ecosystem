@@ -1,0 +1,262 @@
+{
+  "generatedAt": "2026-04-21T05:53:36.568Z",
+  "status": "verified",
+  "network": "phase1a",
+  "chainId": 143,
+  "reportPath": "C:\\Users\\crisc\\Dev\\agents\\sovereign-monad\\deployments\\phase1a-deploy-phase1a.json",
+  "configPath": "C:\\Users\\crisc\\Dev\\agents\\sovereign-monad\\config\\phase1a.deploy.json",
+  "deployer": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+  "deployerBalanceNative": "0.000735",
+  "founderAddress": "0xD86Ed529AB21D84eFF8Fe13261eaeC589BA9Ae66",
+  "approvedSourceAddress": "0x9d4fcf7E0Ae5AE994A6eb0bCCbDfAA62E5867352",
+  "primaryRouter": "0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982",
+  "primaryRouterTx": "0x78bc936c000d555d2714462e6f2a7aef5cc9d32e3ea7fbb2ff876e529f51fdfe",
+  "primaryRouterExplorerUrl": "https://monadscan.com/tx/0x78bc936c000d555d2714462e6f2a7aef5cc9d32e3ea7fbb2ff876e529f51fdfe",
+  "addresses": {
+    "dove": "0x550675701B7359C4F81C79A376cC87b9439c40c1",
+    "governance": "0x5BAF977F3EdfB783C904E82B68Fd476C236635Ae",
+    "receiver": "0x9CEC40c3F7f758bB40aF761a5024A6B007115055",
+    "treasury": "0xA36F3dABDda3CF0AC21C9b3326115808cA5EEA7C",
+    "mev": "0xfB556b6f93c9C5c703e2C121B03b23CBD43E666B",
+    "ops": "0x64771e57A0E36277e700c8b69Adc09Db4dcA02Fa",
+    "dataYield": "0x39A6EeeD870dBa53BC23fEeCdFf96aB793BC613B",
+    "founderSink": "0x6047c904AE3804a624298084df2C4b32b516Ac71",
+    "delegatePools": "0xE8bb66369832C7205b60F845EAe13E5d4fc78479",
+    "router": "0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982",
+    "observer": "0xbb588A64C82a4a13f866B59c0b6B69DD910504a1"
+  },
+  "code": {
+    "dove": {
+      "address": "0x550675701B7359C4F81C79A376cC87b9439c40c1",
+      "present": true,
+      "byteLength": 8289,
+      "explorerUrl": "https://monadscan.com/address/0x550675701B7359C4F81C79A376cC87b9439c40c1"
+    },
+    "governance": {
+      "address": "0x5BAF977F3EdfB783C904E82B68Fd476C236635Ae",
+      "present": true,
+      "byteLength": 2360,
+      "explorerUrl": "https://monadscan.com/address/0x5BAF977F3EdfB783C904E82B68Fd476C236635Ae"
+    },
+    "receiver": {
+      "address": "0x9CEC40c3F7f758bB40aF761a5024A6B007115055",
+      "present": true,
+      "byteLength": 4393,
+      "explorerUrl": "https://monadscan.com/address/0x9CEC40c3F7f758bB40aF761a5024A6B007115055"
+    },
+    "treasury": {
+      "address": "0xA36F3dABDda3CF0AC21C9b3326115808cA5EEA7C",
+      "present": true,
+      "byteLength": 2035,
+      "explorerUrl": "https://monadscan.com/address/0xA36F3dABDda3CF0AC21C9b3326115808cA5EEA7C"
+    },
+    "mev": {
+      "address": "0xfB556b6f93c9C5c703e2C121B03b23CBD43E666B",
+      "present": true,
+      "byteLength": 3202,
+      "explorerUrl": "https://monadscan.com/address/0xfB556b6f93c9C5c703e2C121B03b23CBD43E666B"
+    },
+    "ops": {
+      "address": "0x64771e57A0E36277e700c8b69Adc09Db4dcA02Fa",
+      "present": true,
+      "byteLength": 2790,
+      "explorerUrl": "https://monadscan.com/address/0x64771e57A0E36277e700c8b69Adc09Db4dcA02Fa"
+    },
+    "dataYield": {
+      "address": "0x39A6EeeD870dBa53BC23fEeCdFf96aB793BC613B",
+      "present": true,
+      "byteLength": 3420,
+      "explorerUrl": "https://monadscan.com/address/0x39A6EeeD870dBa53BC23fEeCdFf96aB793BC613B"
+    },
+    "founderSink": {
+      "address": "0x6047c904AE3804a624298084df2C4b32b516Ac71",
+      "present": true,
+      "byteLength": 3632,
+      "explorerUrl": "https://monadscan.com/address/0x6047c904AE3804a624298084df2C4b32b516Ac71"
+    },
+    "delegatePools": {
+      "address": "0xE8bb66369832C7205b60F845EAe13E5d4fc78479",
+      "present": true,
+      "byteLength": 2800,
+      "explorerUrl": "https://monadscan.com/address/0xE8bb66369832C7205b60F845EAe13E5d4fc78479"
+    },
+    "router": {
+      "address": "0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982",
+      "present": true,
+      "byteLength": 6546,
+      "explorerUrl": "https://monadscan.com/address/0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982"
+    },
+    "observer": {
+      "address": "0xbb588A64C82a4a13f866B59c0b6B69DD910504a1",
+      "present": true,
+      "byteLength": 2974,
+      "explorerUrl": "https://monadscan.com/address/0xbb588A64C82a4a13f866B59c0b6B69DD910504a1"
+    }
+  },
+  "creationTransactions": {
+    "dove": {
+      "ok": true,
+      "contractKey": "dove",
+      "address": "0x550675701B7359C4F81C79A376cC87b9439c40c1",
+      "txHash": "0xa6e1719fb856634ac10db96a96b04d373c6c3ab66fb540e9727fb9a9fa82cdfa",
+      "explorerUrl": "https://monadscan.com/tx/0xa6e1719fb856634ac10db96a96b04d373c6c3ab66fb540e9727fb9a9fa82cdfa",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 29,
+      "blockNumber": 69021905,
+      "status": 1,
+      "contractAddress": "0x550675701B7359C4F81C79A376cC87b9439c40c1",
+      "gasUsed": "2232332",
+      "gasPrice": "103000000000"
+    },
+    "governance": {
+      "ok": true,
+      "contractKey": "governance",
+      "address": "0x5BAF977F3EdfB783C904E82B68Fd476C236635Ae",
+      "txHash": "0x37ba98fe6d539bedd63900e2b1ac68780cd65ddccb16f8255c1267c2d1921305",
+      "explorerUrl": "https://monadscan.com/tx/0x37ba98fe6d539bedd63900e2b1ac68780cd65ddccb16f8255c1267c2d1921305",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 30,
+      "blockNumber": 69021908,
+      "status": 1,
+      "contractAddress": "0x5BAF977F3EdfB783C904E82B68Fd476C236635Ae",
+      "gasUsed": "599914",
+      "gasPrice": "103000000000"
+    },
+    "receiver": {
+      "ok": true,
+      "contractKey": "receiver",
+      "address": "0x9CEC40c3F7f758bB40aF761a5024A6B007115055",
+      "txHash": "0x68dd24a754f80b04999f697d5690d01eda7922f2f7667ec957d3628e982dd8ba",
+      "explorerUrl": "https://monadscan.com/tx/0x68dd24a754f80b04999f697d5690d01eda7922f2f7667ec957d3628e982dd8ba",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 32,
+      "blockNumber": 69021915,
+      "status": 1,
+      "contractAddress": "0x9CEC40c3F7f758bB40aF761a5024A6B007115055",
+      "gasUsed": "1011891",
+      "gasPrice": "103000000000"
+    },
+    "treasury": {
+      "ok": true,
+      "contractKey": "treasury",
+      "address": "0xA36F3dABDda3CF0AC21C9b3326115808cA5EEA7C",
+      "txHash": "0x79ebfda3a949dbd4e04c671cae1746e885f9093c667016a90dbb8a3101b28c0d",
+      "explorerUrl": "https://monadscan.com/tx/0x79ebfda3a949dbd4e04c671cae1746e885f9093c667016a90dbb8a3101b28c0d",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 34,
+      "blockNumber": 69021923,
+      "status": 1,
+      "contractAddress": "0xA36F3dABDda3CF0AC21C9b3326115808cA5EEA7C",
+      "gasUsed": "499911",
+      "gasPrice": "102000000000"
+    },
+    "mev": {
+      "ok": true,
+      "contractKey": "mev",
+      "address": "0xfB556b6f93c9C5c703e2C121B03b23CBD43E666B",
+      "txHash": "0xff3c57f53188b440e2b5c7a05de0cd70f08d11d4c12ad448e0c7d4652486b177",
+      "explorerUrl": "https://monadscan.com/tx/0xff3c57f53188b440e2b5c7a05de0cd70f08d11d4c12ad448e0c7d4652486b177",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 35,
+      "blockNumber": 69021929,
+      "status": 1,
+      "contractAddress": "0xfB556b6f93c9C5c703e2C121B03b23CBD43E666B",
+      "gasUsed": "752890",
+      "gasPrice": "103000000000"
+    },
+    "ops": {
+      "ok": true,
+      "contractKey": "ops",
+      "address": "0x64771e57A0E36277e700c8b69Adc09Db4dcA02Fa",
+      "txHash": "0x4a445eb22455c3224a72723ddd7f76370cd3564a729cb244e0202b7400f5fb9c",
+      "explorerUrl": "https://monadscan.com/tx/0x4a445eb22455c3224a72723ddd7f76370cd3564a729cb244e0202b7400f5fb9c",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 36,
+      "blockNumber": 69021932,
+      "status": 1,
+      "contractAddress": "0x64771e57A0E36277e700c8b69Adc09Db4dcA02Fa",
+      "gasUsed": "663735",
+      "gasPrice": "103000000000"
+    },
+    "dataYield": {
+      "ok": true,
+      "contractKey": "dataYield",
+      "address": "0x39A6EeeD870dBa53BC23fEeCdFf96aB793BC613B",
+      "txHash": "0x772745af4f820d63d65ba09a552f470c734741ee4481b9d9f8d4f72e985036e7",
+      "explorerUrl": "https://monadscan.com/tx/0x772745af4f820d63d65ba09a552f470c734741ee4481b9d9f8d4f72e985036e7",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 37,
+      "blockNumber": 69021937,
+      "status": 1,
+      "contractAddress": "0x39A6EeeD870dBa53BC23fEeCdFf96aB793BC613B",
+      "gasUsed": "800140",
+      "gasPrice": "103000000000"
+    },
+    "founderSink": {
+      "ok": true,
+      "contractKey": "founderSink",
+      "address": "0x6047c904AE3804a624298084df2C4b32b516Ac71",
+      "txHash": "0x9aa6f951c65073c62d56d711c2a7426c9c62dff4ceeb1befd44ba67157f94ef7",
+      "explorerUrl": "https://monadscan.com/tx/0x9aa6f951c65073c62d56d711c2a7426c9c62dff4ceeb1befd44ba67157f94ef7",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 38,
+      "blockNumber": 69021942,
+      "status": 1,
+      "contractAddress": "0x6047c904AE3804a624298084df2C4b32b516Ac71",
+      "gasUsed": "876067",
+      "gasPrice": "120000000000"
+    },
+    "delegatePools": {
+      "ok": true,
+      "contractKey": "delegatePools",
+      "address": "0xE8bb66369832C7205b60F845EAe13E5d4fc78479",
+      "txHash": "0x206e922d4be2de96673c29cd76ba9f573c75c6873459f851ff9b6d8c4c2e980f",
+      "explorerUrl": "https://monadscan.com/tx/0x206e922d4be2de96673c29cd76ba9f573c75c6873459f851ff9b6d8c4c2e980f",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 39,
+      "blockNumber": 69021944,
+      "status": 1,
+      "contractAddress": "0xE8bb66369832C7205b60F845EAe13E5d4fc78479",
+      "gasUsed": "665888",
+      "gasPrice": "120000000000"
+    },
+    "router": {
+      "ok": true,
+      "contractKey": "router",
+      "address": "0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982",
+      "txHash": "0x78bc936c000d555d2714462e6f2a7aef5cc9d32e3ea7fbb2ff876e529f51fdfe",
+      "explorerUrl": "https://monadscan.com/tx/0x78bc936c000d555d2714462e6f2a7aef5cc9d32e3ea7fbb2ff876e529f51fdfe",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 40,
+      "blockNumber": 69021947,
+      "status": 1,
+      "contractAddress": "0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982",
+      "gasUsed": "1510780",
+      "gasPrice": "108000000000"
+    },
+    "observer": {
+      "ok": true,
+      "contractKey": "observer",
+      "address": "0xbb588A64C82a4a13f866B59c0b6B69DD910504a1",
+      "txHash": "0x4dc7f0f2a99b865ffe5424e9d55d48bedc69634ff43af5a914370f660b700ff1",
+      "explorerUrl": "https://monadscan.com/tx/0x4dc7f0f2a99b865ffe5424e9d55d48bedc69634ff43af5a914370f660b700ff1",
+      "from": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+      "nonce": 62,
+      "blockNumber": 69022040,
+      "status": 1,
+      "contractAddress": "0xbb588A64C82a4a13f866B59c0b6B69DD910504a1",
+      "gasUsed": "704894",
+      "gasPrice": "102000000000"
+    }
+  },
+  "checks": {
+    "receiverRouterLinked": true,
+    "routerReceiverLinked": true,
+    "dataYieldMevLinked": true,
+    "observerInitialized": true,
+    "sinkRegistryLinked": true,
+    "approvedSourceRegistered": true,
+    "observerCount": 11
+  },
+  "failures": []
+}

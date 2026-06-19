@@ -1,0 +1,94 @@
+This is the binary foundation of your Data-PBFP layer. These bitmasks strip away the "story" and leave only the verifiable, pneumatic truth.
+
+
+"""
+src/intake/bitmasks.py
+Binary Monad reduction logic for the Succor Gnostic Engine.
+Reduces high-level supply chain metadata into 8-bit integrity signatures.
+"""
+
+from dataclasses import dataclass
+from typing import Dict
+
+@dataclass
+class MonadMask:
+    label: str
+    bits: Dict[int, str]
+
+# --- V1: DEPENDENCY DEPTH (Structural Ancestry) ---
+V1_MASK = MonadMask(
+    label="Dependency_Depth",
+    bits={
+        0: "D_ROOT",   # 1 if top-level; 0 if transitive/nested
+        1: "D_PIN",    # 1 if versions are pinned; 0 if wildcard/range
+        2: "D_AUTH",   # 1 if verified owner; 0 if anonymous/unverified
+        3: "D_VULN",   # 1 if zero CVEs in tree; 0 if vulnerabilities found
+        4: "D_PURG",   # 1 if zero dead/unused deps; 0 if bloated
+        5: "D_LIC",    # 1 if license compatible; 0 if conflict
+        6: "D_MNT",    # 1 if active maintenance (<1yr); 0 if stagnant
+        7: "D_CIRC",   # 1 if clean tree; 0 if recursive/circular
+    }
+)
+
+# --- V2: MAINTAINER ENTROPY (Social/Integrity Velocity) ---
+V2_MASK = MonadMask(
+    label="Maintainer_Entropy",
+    bits={
+        0: "M_AGE",    # 1 if account > 24mo; 0 if new
+        1: "M_MFA",    # 1 if MFA signed; 0 if unsigned
+        2: "M_VEL",    # 1 if consistent velocity; 0 if anomalous spikes
+        3: "M_GEO",    # 1 if region matches history; 0 if VPN/New
+        4: "M_COL",    # 1 if multi-collaborator; 0 if solo/isolated
+        5: "M_REP",    # 1 if trusted domains; 0 if unknown
+        6: "M_KEY",    # 1 if GPG keys valid; 0 if failed/missing
+        7: "M_SOC",    # 1 if external social verify; 0 if ghost
+    }
+)
+
+# --- V3: NETWORK SURFACE (Behavioral Kinetics) ---
+V3_MASK = MonadMask(
+    label="Network_Surface",
+    bits={
+        0: "N_PORT",   # 1 if standard (80/443); 0 if non-standard/high
+        1: "N_ENCR",   # 1 if encrypted; 0 if plaintext
+        2: "N_DIREC",  # 1 if outbound only; 0 if bi-directional
+        3: "N_DNS",    # 1 if known DNS; 0 if hardcoded/DOH
+        4: "N_PERM",   # 1 if user-level; 0 if root/sudo escalation
+        5: "N_FREQ",   # 1 if heartbeat; 0 if burst exfiltration
+        6: "N_DEST",   # 1 if safe-range destination; 0 if darknet/new
+        7: "N_API",    # 1 if documented API use; 0 if socket injection
+    }
+)
+
+# --- V4: VERSION DRIFT (Legal/Security Alignment) ---
+V4_MASK = MonadMask(
+    label="Version_Drift",
+    bits={
+        0: "V_LATEST", # 1 if on latest; 0 if behind
+        1: "V_SEMVER", # 1 if semantic versioning; 0 if non-standard
+        2: "V_TAG",    # 1 if tag matches hash; 0 if drift detected
+        3: "V_SIGN",   # 1 if package is signed; 0 if unsigned
+        4: "V_REPO",   # 1 if repo matches package origin; 0 if redirected
+        5: "V_DEPR",   # 1 if not deprecated; 0 if EOL
+        6: "V_PATCH",  # 1 if patch notes exist; 0 if silent update
+        7: "V_SIZE",   # 1 if size matches expected; 0 if unexplained bloat
+    }
+)
+
+class MonadReducer:
+    """Reduces raw Boolean results into 8-bit hex signatures."""
+    
+    @staticmethod
+    def to_hex(results: list[bool]) -> str:
+        """Converts 8 bits to a Hexadecimal string (e.g. 0xB4)"""
+        byte_val = 0
+        for i, bit in enumerate(results):
+            if bit:
+                byte_val |= (1 << i)
+        return hex(byte_val).upper()
+
+    @staticmethod
+    def evaluate_clarity(hex_val: str) -> float:
+        """Calculates percentage of bits set to 1."""
+        byte_val = int(hex_val, 16)
+        return bin(byte_val).count('1') / 8.0

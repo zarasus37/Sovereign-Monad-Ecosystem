@@ -1,0 +1,26 @@
+[
+  {
+    "id": "key-native-synapse",
+    "subjectId": "native-synapse",
+    "activationClass": "ecosystem_native",
+    "requestedScopes": ["runtime.observe", "signal.route", "builder.compose"],
+    "nftRequired": false,
+    "delegateAgentPresent": false
+  },
+  {
+    "id": "key-delegated-research",
+    "subjectId": "delegated-research-user",
+    "activationClass": "delegated_human",
+    "requestedScopes": ["research.read", "dashboard.view"],
+    "nftRequired": false,
+    "delegateAgentPresent": true
+  },
+  {
+    "id": "key-future-nft",
+    "subjectId": "future-buyer",
+    "activationClass": "user_linked",
+    "requestedScopes": ["keys.activate", "identity.link"],
+    "nftRequired": true,
+    "delegateAgentPresent": false
+  }
+]

@@ -1,0 +1,176 @@
+{
+  "network": "phase1a",
+  "chainId": 143,
+  "generatedAt": "2026-04-18T23:33:58.285Z",
+  "status": "complete",
+  "deployer": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+  "founderAddress": "0xD86Ed529AB21D84eFF8Fe13261eaeC589BA9Ae66",
+  "approvedSourceAddress": "0x9d4fcf7E0Ae5AE994A6eb0bCCbDfAA62E5867352",
+  "completedStep": 21,
+  "addresses": {
+    "dove": "0x550675701B7359C4F81C79A376cC87b9439c40c1",
+    "governance": "0x5BAF977F3EdfB783C904E82B68Fd476C236635Ae",
+    "receiver": "0x9CEC40c3F7f758bB40aF761a5024A6B007115055",
+    "treasury": "0xA36F3dABDda3CF0AC21C9b3326115808cA5EEA7C",
+    "mev": "0xfB556b6f93c9C5c703e2C121B03b23CBD43E666B",
+    "ops": "0x64771e57A0E36277e700c8b69Adc09Db4dcA02Fa",
+    "dataYield": "0x39A6EeeD870dBa53BC23fEeCdFf96aB793BC613B",
+    "founderSink": "0x6047c904AE3804a624298084df2C4b32b516Ac71",
+    "delegatePools": "0xE8bb66369832C7205b60F845EAe13E5d4fc78479",
+    "router": "0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982",
+    "observer": "0xbb588A64C82a4a13f866B59c0b6B69DD910504a1"
+  },
+  "creationTransactions": {
+    "dove": "0xa6e1719fb856634ac10db96a96b04d373c6c3ab66fb540e9727fb9a9fa82cdfa",
+    "governance": "0x37ba98fe6d539bedd63900e2b1ac68780cd65ddccb16f8255c1267c2d1921305",
+    "receiver": "0x68dd24a754f80b04999f697d5690d01eda7922f2f7667ec957d3628e982dd8ba",
+    "treasury": "0x79ebfda3a949dbd4e04c671cae1746e885f9093c667016a90dbb8a3101b28c0d",
+    "mev": "0xff3c57f53188b440e2b5c7a05de0cd70f08d11d4c12ad448e0c7d4652486b177",
+    "ops": "0x4a445eb22455c3224a72723ddd7f76370cd3564a729cb244e0202b7400f5fb9c",
+    "dataYield": "0x772745af4f820d63d65ba09a552f470c734741ee4481b9d9f8d4f72e985036e7",
+    "founderSink": "0x9aa6f951c65073c62d56d711c2a7426c9c62dff4ceeb1befd44ba67157f94ef7",
+    "delegatePools": "0x206e922d4be2de96673c29cd76ba9f573c75c6873459f851ff9b6d8c4c2e980f",
+    "router": "0x78bc936c000d555d2714462e6f2a7aef5cc9d32e3ea7fbb2ff876e529f51fdfe",
+    "observer": "0x4dc7f0f2a99b865ffe5424e9d55d48bedc69634ff43af5a914370f660b700ff1"
+  },
+  "steps": [
+    {
+      "step": 1,
+      "label": "Deploy DoveCore.sol",
+      "address": "0x550675701B7359C4F81C79A376cC87b9439c40c1"
+    },
+    {
+      "step": 2,
+      "label": "Deploy GovernanceController.sol(doveCore)",
+      "address": "0x5BAF977F3EdfB783C904E82B68Fd476C236635Ae"
+    },
+    {
+      "step": 3,
+      "label": "Register GovernanceController as observer",
+      "address": "0x5BAF977F3EdfB783C904E82B68Fd476C236635Ae",
+      "observerLabel": "GovernanceController"
+    },
+    {
+      "step": 4,
+      "label": "Deploy InboundReceiver.sol",
+      "address": "0x9CEC40c3F7f758bB40aF761a5024A6B007115055"
+    },
+    {
+      "step": 5,
+      "label": "Register InboundReceiver as observer",
+      "address": "0x9CEC40c3F7f758bB40aF761a5024A6B007115055",
+      "observerLabel": "InboundReceiver"
+    },
+    {
+      "step": 6,
+      "label": "Deploy RevenueSinkTreasury.sol",
+      "address": "0xA36F3dABDda3CF0AC21C9b3326115808cA5EEA7C"
+    },
+    {
+      "step": 7,
+      "label": "Deploy RevenueSinkMEV.sol",
+      "address": "0xfB556b6f93c9C5c703e2C121B03b23CBD43E666B"
+    },
+    {
+      "step": 8,
+      "label": "Deploy RevenueSinkOpsDev.sol",
+      "address": "0x64771e57A0E36277e700c8b69Adc09Db4dcA02Fa"
+    },
+    {
+      "step": 9,
+      "label": "Deploy RevenueSinkDataYield.sol",
+      "address": "0x39A6EeeD870dBa53BC23fEeCdFf96aB793BC613B"
+    },
+    {
+      "step": 10,
+      "label": "Deploy RevenueSinkFounder.sol",
+      "address": "0x6047c904AE3804a624298084df2C4b32b516Ac71"
+    },
+    {
+      "step": 11,
+      "label": "Deploy RevenueSinkDelegatePools.sol",
+      "address": "0xE8bb66369832C7205b60F845EAe13E5d4fc78479"
+    },
+    {
+      "step": 12,
+      "label": "Deploy RevenueRouter.sol",
+      "address": "0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982"
+    },
+    {
+      "step": 13,
+      "label": "Register router and sinks as observers",
+      "observerResults": [
+        {
+          "address": "0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982",
+          "observerLabel": "RevenueRouter"
+        },
+        {
+          "address": "0xA36F3dABDda3CF0AC21C9b3326115808cA5EEA7C",
+          "observerLabel": "RevenueSinkTreasury"
+        },
+        {
+          "address": "0xfB556b6f93c9C5c703e2C121B03b23CBD43E666B",
+          "observerLabel": "RevenueSinkMEV"
+        },
+        {
+          "address": "0x64771e57A0E36277e700c8b69Adc09Db4dcA02Fa",
+          "observerLabel": "RevenueSinkOpsDev"
+        },
+        {
+          "address": "0x39A6EeeD870dBa53BC23fEeCdFf96aB793BC613B",
+          "observerLabel": "RevenueSinkDataYield"
+        },
+        {
+          "address": "0x6047c904AE3804a624298084df2C4b32b516Ac71",
+          "observerLabel": "RevenueSinkFounder"
+        },
+        {
+          "address": "0xE8bb66369832C7205b60F845EAe13E5d4fc78479",
+          "observerLabel": "RevenueSinkDelegatePools"
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "label": "Initialize router sinks"
+    },
+    {
+      "step": 15,
+      "label": "Set receiver on router"
+    },
+    {
+      "step": 16,
+      "label": "Set router / receiver addresses across system"
+    },
+    {
+      "step": 17,
+      "label": "Deploy DoveRouterObserver.sol",
+      "address": "0xbb588A64C82a4a13f866B59c0b6B69DD910504a1"
+    },
+    {
+      "step": 18,
+      "label": "Register DoveRouterObserver",
+      "address": "0xbb588A64C82a4a13f866B59c0b6B69DD910504a1",
+      "observerLabel": "DoveRouterObserver"
+    },
+    {
+      "step": 19,
+      "label": "Initialize DoveRouterObserver with system addresses"
+    },
+    {
+      "step": 20,
+      "label": "Wire stipend / treasury references",
+      "note": "Current reconstructed executable subset wires the DataYield -> MEV redirection linkage; no separate treasury-reference setter exists in the present Phase 1a contracts."
+    },
+    {
+      "step": 21,
+      "label": "Register initial approved source",
+      "approvedSource": "0x9d4fcf7E0Ae5AE994A6eb0bCCbDfAA62E5867352",
+      "approvedSourceLabel": "Bootstrap Revenue Source (temporary until Stake integration)",
+      "note": "Use a bootstrap source if the Stake-linked MonadSpin source is not yet deployed."
+    }
+  ],
+  "configPath": "C:\\Users\\crisc\\Dev\\agents\\sovereign-monad\\config\\phase1a.deploy.json",
+  "checkpointPath": "C:\\Users\\crisc\\Dev\\agents\\sovereign-monad\\deployments\\phase1a-progress-phase1a.json",
+  "resumeReportPath": "C:\\Users\\crisc\\Dev\\agents\\sovereign-monad\\deployments\\phase1a-progress-phase1a.json"
+}

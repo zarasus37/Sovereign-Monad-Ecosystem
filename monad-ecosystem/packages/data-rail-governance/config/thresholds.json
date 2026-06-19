@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "data-rail-thresholds-v1",
+  "minimumEventCount": 8,
+  "minimumDistinctActors": 5,
+  "minimumActorClasses": 3,
+  "minimumSurfaces": 3,
+  "minimumOutcomes": 4,
+  "maximumSingleActorShare": 0.4,
+  "requireEcosystemNativeAndNonNativeMix": true
+}

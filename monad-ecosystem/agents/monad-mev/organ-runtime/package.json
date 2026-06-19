@@ -1,0 +1,38 @@
+{
+  "name": "organ-runtime",
+  "version": "0.1.0",
+  "description": "Zero-capital runtime scaffold for the first Sovereign Monad organ set",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest --runInBand",
+    "calibrate:intelligence": "ts-node src/tools/calibrate-organ-intelligence.ts",
+    "calibrate:intelligence:live": "ts-node src/tools/calibrate-organ-intelligence.ts --mode live --config config/runtime.json",
+    "monitor": "ts-node src/tools/pipeline-monitor.ts"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.9.3",
+    "dotenv": "^16.4.5",
+    "pino": "^8.21.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/tests"
+    ]
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

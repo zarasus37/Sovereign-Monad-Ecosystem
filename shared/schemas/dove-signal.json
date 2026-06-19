@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DoveSignal",
+  "type": "object",
+  "properties": {
+    "signalId": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "tier": { "type": "integer", "enum": [1, 2, 3] },
+    "layer": {
+      "type": "string",
+      "enum": [
+        "funnel", "engine", "treasury", "dao", "intelligence", "oracle",
+        "signal-layer", "platform", "keys", "narrative", "dove", "gnosis",
+        "revenue-router", "data-rail", "emergence", "system"
+      ]
+    },
+    "driftCategory": {
+      "type": "string",
+      "enum": [
+        "experiential.drift", "founder.centering", "ego.capture",
+        "layer.self.optimization", "capital.concentration", "extraction.pattern",
+        "monoculture.formation", "dogma.detection", "participation.diversity.low",
+        "macro.micro.divergence", "agent.hollow.convergence",
+        "knowledge.weaponized", "licensing.misalignment", "data.revenue.misrouted",
+        "key.consolidation", "archonic.construct", "access.exclusion",
+        "founder.draw.excessive", "axiom.contradiction", "boundary.stress.detected"
+      ]
+    },
+    "observedValue": { "type": "string" },
+    "threshold": { "type": "string" },
+    "description": { "type": "string" },
+    "governanceProposalGenerated": { "type": "boolean" },
+    "governanceProposalId": { "type": "string" },
+    "resolved": { "type": "boolean" },
+    "resolvedAt": { "type": "string", "format": "date-time" }
+  },
+  "required": [
+    "signalId", "timestamp", "tier", "layer", "driftCategory",
+    "observedValue", "threshold", "description", "governanceProposalGenerated",
+    "resolved"
+  ]
+}

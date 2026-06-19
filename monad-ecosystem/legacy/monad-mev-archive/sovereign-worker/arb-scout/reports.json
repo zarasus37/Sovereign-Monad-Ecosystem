@@ -1,0 +1,92 @@
+[
+  {
+    "wallet": "0x9A8F92A830A5CB89A3816E3D267CB7791C16B04D",
+    "row": {
+      "bridge_tx_count": 500,
+      "first_seen": "2026-03-21 11:24:23.000 UTC",
+      "last_seen": "2026-04-17 16:39:23.000 UTC",
+      "median_eth_per_tx": 0,
+      "wallet": "0x9A8F92A830A5CB89A3816E3D267CB7791C16B04D"
+    },
+    "params": {
+      "spreadBps": 120,
+      "vol": 0.006945,
+      "bridgeWindowSec": 900,
+      "portfolioUsd": 500000.0,
+      "capitalBaseUsd": 500000.0,
+      "observedMedianBridgeUsd": 0.0,
+      "outreachReady": true
+    },
+    "identity": {
+      "label": "0x9A8F...B04D",
+      "ens": null,
+      "twitter": null,
+      "github": null,
+      "source": "none"
+    },
+    "result": {
+      "decision": "APPROVE",
+      "effectiveSpreadBps": 70.21,
+      "kellyFraction": 145.5739,
+      "recommendedSizeUsd": 50000,
+      "expectedValueUsd": 262.04,
+      "sharpeLike": 22.6464,
+      "tailLossP95Usd": 238.58,
+      "tailLossPct": 0,
+      "bridgeFailureAdjusted": true,
+      "monteCarloRuns": 1000,
+      "decisionGate": {
+        "evPassed": true,
+        "sharpePassed": true,
+        "tailPassed": true
+      },
+      "callsRemainingToday": 9996
+    },
+    "report": "===================================================\n  SOVEREIGN RGE v2 - WALLET EVALUATION REPORT\n===================================================\n  Wallet:        0x9A8F92A830A5CB89A3816E3D267CB7791C16B04D\n  Identity:      0x9A8F...B04D\n  Bridge txs:    500 in last 30 days\n  Last active:   2026-04-17\n\n  Parameters used (reconstructed from on-chain data):\n    Capital base proxy used:         $500,000\n    Spread assumption:               120 bps (activity/notional band)\n    Volatility input:                0.65 annualized (ETH)\n    Bridge window:                   900s\n\n  RGE v2 Evaluation (1000 Monte Carlo paths):\n    APPROVE - EV $+262, size $50,000\n    Effective spread after costs:    70.2 bps\n    Fractional Kelly fraction:       145.5739\n    Sharpe score:                    22.65\n    Tail loss (p95):                 $239 (0.477% of recommended size | 0.0477% of capital base)\n    Bridge failure adjusted:         True\n\n  Gate results:\n    EV >= $10:                 PASS ($+262)\n    Sharpe >= 0.3:             PASS (22.65)\n    Tail loss <= 30% of size:  PASS (0.477%)\n\n  Outreach:\n    Hey \u2014 noticed your wallet has been hitting cross-chain bridge routes\n    actively (500 txs in the last 30 days).\n\n    We ran your activity pattern through RGE v2 \u2014 our Monte Carlo risk\n    engine for cross-chain arb. Here's what it produces on a 120-bps\n    opportunity with a 15-minute bridge window at your scale:\n\n      Decision:    APPROVE\n      Eff. spread: 70.2 bps after costs\n      EV:          $+262\n      Sharpe:      22.65\n      Tail loss:   $239 at p95\n      Size:        $50,000 recommended\n\n    Offering founding-rate API access before public launch \u2014\n    Founding Starter at $800/mo (locked for life).\n    Pre-sale: https://sovereign-web-6rk.pages.dev/sovereign-presale.html\n\n    Happy to run a live eval on any specific opportunity you're looking at.\n    Reply with the spread and asset and I'll send the full output.\n==================================================="
+  },
+  {
+    "wallet": "0x30D9619CE3F81D901CC33D0304212CC31A7F1D97",
+    "row": {
+      "bridge_tx_count": 460,
+      "first_seen": "2026-03-18 21:30:59.000 UTC",
+      "last_seen": "2026-03-31 07:59:11.000 UTC",
+      "median_eth_per_tx": 0,
+      "wallet": "0x30D9619CE3F81D901CC33D0304212CC31A7F1D97"
+    },
+    "params": {
+      "spreadBps": 120,
+      "vol": 0.006945,
+      "bridgeWindowSec": 900,
+      "portfolioUsd": 500000.0,
+      "capitalBaseUsd": 500000.0,
+      "observedMedianBridgeUsd": 0.0,
+      "outreachReady": true
+    },
+    "identity": {
+      "label": "0x30D9...1D97",
+      "ens": null,
+      "twitter": null,
+      "github": null,
+      "source": "none"
+    },
+    "result": {
+      "decision": "APPROVE",
+      "effectiveSpreadBps": 70.21,
+      "kellyFraction": 145.5739,
+      "recommendedSizeUsd": 50000,
+      "expectedValueUsd": 261.28,
+      "sharpeLike": 6.3094,
+      "tailLossP95Usd": 240.97,
+      "tailLossPct": 0,
+      "bridgeFailureAdjusted": true,
+      "monteCarloRuns": 1000,
+      "decisionGate": {
+        "evPassed": true,
+        "sharpePassed": true,
+        "tailPassed": true
+      },
+      "callsRemainingToday": 9996
+    },
+    "report": "===================================================\n  SOVEREIGN RGE v2 - WALLET EVALUATION REPORT\n===================================================\n  Wallet:        0x30D9619CE3F81D901CC33D0304212CC31A7F1D97\n  Identity:      0x30D9...1D97\n  Bridge txs:    460 in last 30 days\n  Last active:   2026-03-31\n\n  Parameters used (reconstructed from on-chain data):\n    Capital base proxy used:         $500,000\n    Spread assumption:               120 bps (activity/notional band)\n    Volatility input:                0.65 annualized (ETH)\n    Bridge window:                   900s\n\n  RGE v2 Evaluation (1000 Monte Carlo paths):\n    APPROVE - EV $+261, size $50,000\n    Effective spread after costs:    70.2 bps\n    Fractional Kelly fraction:       145.5739\n    Sharpe score:                    6.31\n    Tail loss (p95):                 $241 (0.482% of recommended size | 0.0482% of capital base)\n    Bridge failure adjusted:         True\n\n  Gate results:\n    EV >= $10:                 PASS ($+261)\n    Sharpe >= 0.3:             PASS (6.31)\n    Tail loss <= 30% of size:  PASS (0.482%)\n\n  Outreach:\n    Hey \u2014 noticed your wallet has been hitting cross-chain bridge routes\n    actively (460 txs in the last 30 days).\n\n    We ran your activity pattern through RGE v2 \u2014 our Monte Carlo risk\n    engine for cross-chain arb. Here's what it produces on a 120-bps\n    opportunity with a 15-minute bridge window at your scale:\n\n      Decision:    APPROVE\n      Eff. spread: 70.2 bps after costs\n      EV:          $+261\n      Sharpe:      6.31\n      Tail loss:   $241 at p95\n      Size:        $50,000 recommended\n\n    Offering founding-rate API access before public launch \u2014\n    Founding Starter at $800/mo (locked for life).\n    Pre-sale: https://sovereign-web-6rk.pages.dev/sovereign-presale.html\n\n    Happy to run a live eval on any specific opportunity you're looking at.\n    Reply with the spread and asset and I'll send the full output.\n==================================================="
+  }
+]

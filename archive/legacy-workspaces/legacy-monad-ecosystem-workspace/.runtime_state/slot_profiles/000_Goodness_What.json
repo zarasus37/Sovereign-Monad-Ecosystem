@@ -1,0 +1,18 @@
+{
+  "slot": 0,
+  "b_attr": "Goodness",
+  "k_principle": "What",
+  "observations": [
+    {
+      "slot": 0,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.453125,
+      "delta": 0.046875,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-1",
+      "timestamp": 1781232342.505006
+    }
+  ],
+  "current_weight": 1.0,
+  "last_recalibration_cycle": 0
+}

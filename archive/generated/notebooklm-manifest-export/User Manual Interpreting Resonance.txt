@@ -1,0 +1,14 @@
+User Manual: Interpreting Resonance Scores
+The Resonance Metric (R) determines the "3D Depth" of the result. Use this guide to adjudicate system outputs:
+R > 0.90 (Focal Point):
+Status: Durable Truth.
+Action: High-confidence execution. Both lanes are perfectly aligned.
+0.70 < R < 0.89 (Stable):
+Status: High Integrity.
+Action: Safe for analysis, though minor signal noise exists in the bitmask.
+0.50 < R < 0.69 (Divergent):
+Status: Blurred Vision.
+Action: Proceed with caution. Indicates Lane A found an exploit that Lane B cannot fully verify.
+R < 0.50 (Null Point):
+Status: Blindness / Ambiguity Error.
+Action: REJECT. The tracks are looking at different realities. Trigger "Blink" recovery.

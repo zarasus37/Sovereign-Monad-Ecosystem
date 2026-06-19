@@ -1,0 +1,20 @@
+{
+  "name": "activation-decision-core",
+  "version": "0.1.0",
+  "description": "Local activation decision discipline for Data Rail externalization",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "node tests/run-tests.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

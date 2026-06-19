@@ -1,0 +1,13 @@
+{
+  "rewardBands": {
+    "observe": 1,
+    "acknowledge": 2
+  },
+  "actorClassMultipliers": {
+    "ecosystem_native": 1,
+    "delegated_human": 0.75,
+    "operator_review": 0.5,
+    "user_linked": 0.5
+  },
+  "unit": "internal_credit"
+}

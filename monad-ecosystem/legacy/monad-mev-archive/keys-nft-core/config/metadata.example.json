@@ -1,0 +1,54 @@
+{
+  "collectionName": "Sovereign Monad Organ Keys",
+  "networkLive": false,
+  "tokens": [
+    {
+      "tokenId": "cardia-organ-key",
+      "organ": "Cardia",
+      "role": "organ_identity",
+      "metadataStatus": "defined",
+      "transferability": "non_transferable",
+      "delegateCapable": false
+    },
+    {
+      "tokenId": "pneuma-organ-key",
+      "organ": "Pneuma",
+      "role": "organ_identity",
+      "metadataStatus": "defined",
+      "transferability": "non_transferable",
+      "delegateCapable": true
+    },
+    {
+      "tokenId": "hepar-organ-key",
+      "organ": "Hepar",
+      "role": "organ_identity",
+      "metadataStatus": "defined",
+      "transferability": "non_transferable",
+      "delegateCapable": false
+    },
+    {
+      "tokenId": "cortex-organ-key",
+      "organ": "Cortex",
+      "role": "organ_identity",
+      "metadataStatus": "defined",
+      "transferability": "non_transferable",
+      "delegateCapable": true
+    },
+    {
+      "tokenId": "synapse-organ-key",
+      "organ": "Synapse",
+      "role": "organ_identity",
+      "metadataStatus": "defined",
+      "transferability": "non_transferable",
+      "delegateCapable": false
+    },
+    {
+      "tokenId": "vox-organ-key",
+      "organ": "Vox",
+      "role": "organ_identity",
+      "metadataStatus": "defined",
+      "transferability": "non_transferable",
+      "delegateCapable": true
+    }
+  ]
+}

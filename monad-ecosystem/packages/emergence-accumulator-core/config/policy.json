@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0",
+  "minimumWindowCountForReview": 5,
+  "targetWindowCount": 8,
+  "minimumObservableWindowCount": 2,
+  "minimumFormingOrBetterStreak": 5,
+  "cadenceHours": 24
+}

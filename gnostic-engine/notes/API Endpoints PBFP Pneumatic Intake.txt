@@ -1,0 +1,14 @@
+API Endpoints: PBFP Pneumatic Intake
+The Data-PBFP layer exposes these endpoints to feed raw bits into the synaptic network.
+1. POST /intake/forage
+Purpose: Ingests raw supply chain metadata.
+Payload: { "target": "package_name", "depth": "recursive" }
+Response: 202 Accepted (Initiates pneumatic pull).
+2. GET /intake/monads/{var_id}
+Purpose: Retrieves the 8-bit mask for a specific variable.
+Variable IDs: V1 (Depth), V2 (Entropy), V3 (Surface), V4 (Drift).
+Response: { "var": "V2", "mask": "0xB4", "clarity": 0.82 }
+3. POST /intake/blink
+Purpose: Forces a high-intensity re-forage to resolve a Null Point.
+Payload: { "null_var": "V3", "intensity": "BRUTE_FORCE" }
+Response: New monad signature and resonance delta.

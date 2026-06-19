@@ -1,0 +1,9 @@
+{
+  "id": "local-operator-surface",
+  "title": "Local Operator Surface",
+  "category": "internal_surface",
+  "localOnly": true,
+  "outwardFacing": false,
+  "touchesCapital": false,
+  "requiredCapabilities": ["state_api", "dashboard", "gnosis"]
+}

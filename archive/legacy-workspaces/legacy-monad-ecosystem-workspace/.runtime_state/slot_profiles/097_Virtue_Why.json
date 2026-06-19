@@ -1,0 +1,18 @@
+{
+  "slot": 97,
+  "b_attr": "Virtue",
+  "k_principle": "Why",
+  "observations": [
+    {
+      "slot": 97,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.4453125,
+      "delta": 0.0546875,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-98",
+      "timestamp": 1781232346.0564835
+    }
+  ],
+  "current_weight": 1.0,
+  "last_recalibration_cycle": 0
+}

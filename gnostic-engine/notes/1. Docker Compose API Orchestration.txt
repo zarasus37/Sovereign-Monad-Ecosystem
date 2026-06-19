@@ -1,0 +1,29 @@
+1. Docker Compose: API Orchestration
+This file spins up the Synaptic Network (API) and a Worker Node to handle the MCTS/MCCM parallel tracks.
+
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=PRODUCTION
+      - RESONANCE_THRESHOLD=0.85
+    volumes:
+      - ./src:/app/src
+    command: uvicorn src.intake.api:app --host 0.0.0.0 --port 8000
+
+  worker:
+    build: .
+    depends_on:
+      - api
+    environment:
+      - TRACK_TYPE=PARALLEL_STEREOPSIS
+    command: python src/tracks/executor.py
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"

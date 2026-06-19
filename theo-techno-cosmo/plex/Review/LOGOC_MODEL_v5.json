@@ -1,0 +1,113 @@
+{
+  "model_id": "LOGOC-v5.0",
+  "trained_on": "2026-05-25",
+  "corpus_size": 55,
+  "architecture": "symbolic_probabilistic",
+  "description": "LOGOC Gnosis Event Scoring Model — Llull × Peirce × Trithemius × TTCL",
+  "scoring_formula": {
+    "weights": {
+      "Teologia": 0.3,
+      "Technologia": 0.3,
+      "Kosmologia": 0.3,
+      "PPS": 0.1
+    },
+    "pps_table": {
+      "all_same": {"pps": 1.0, "example": "EEE — maximum convergence"},
+      "two_same": {"pps": 0.65, "example": "GGH — partial convergence"},
+      "all_distinct": {"pps": 0.3, "example": "BEG — standard tripartite spread"}
+    }
+  },
+  "gnosis_tiers": {
+
+    "NASCENT": {"range": [0.72, 0.858], "description": "Seed event — single domain dominant, triadic not yet complete"},
+    "EMERGENT": {"range": [0.858, 0.879], "description": "Two domains firing, partial coherence"},
+    "COHERENT": {"range": [0.879, 0.912], "description": "All three domains active, camera meaningful"},
+    "RESONANT": {"range": [0.912, 0.93], "description": "High triadic convergence, PPS elevated"},
+    "SOVEREIGN": {"range": [0.93, 1.0], "description": "Maximum gnosis — all domains ≥0.95, camera BBB/EEE/GGG or equivalent"}
+  },
+  "split_handling": {
+    "tier_locked": false,
+    "tier_split": false,
+    "split_resolution_deadline": "2026-05-25",
+  },
+  "inference_schema": {
+    "tier_locked": false,
+    "tier_split": false,
+    "split_resolution_deadline": ""
+  },
+  "rubric": {
+    "theology": {
+      "1.00": {"label": "Total Revelation", "anchor": "Reorganizes a fundamental ontological category. Observer cannot unimagine it."},
+      "0.95": {"label": "Full Recognition", "anchor": "Compressible to one sentence without loss. Llull position identified."},
+      "0.90": {"label": "Clear Recognition", "anchor": "Articulable but requires 2–3 sentences. Llull position identifiable."},
+      "0.85": {"label": "Partial Recognition", "anchor": "Something changed but not fully named. Compression loses content."},
+      "0.80": {"label": "Threshold", "anchor": "Detectable theological dimension, nascent. Flag for re-examination."}
+    },
+    "technology": {
+      "1.00": {"label": "Process IS Meaning", "anchor": "Mechanism itself is the meaning; Trithemius confirmed."},
+      "0.95": {"label": "Full Integration", "anchor": "Mechanism integral to meaning but not identical."},
+      "0.90": {"label": "Active", "anchor": "Technology active, supporting meaning."},
+      "0.85": {"label": "Instrumental", "anchor": "Technology is a tool enabling meaning but not core."},
+      "0.80": {"label": "Peripheral", "anchor": "Technology present but only marginally relevant."}
+    },
+    "cosmology": {
+      "1.00": {"label": "Universal Structure", "anchor": "Pattern would be discovered independently by an alien civilization."},
+      "0.95": {"label": "Cosmic Pattern", "anchor": "Broad cosmic pattern, high-level universal relevance."},
+      "0.90": {"label": "Structural", "anchor": "Domain‑specific structural pattern, not universal."},
+      "0.85": {"label": "Local", "anchor": "Local or contextual cosmological insight."},
+      "0.80": {"label": "Nascent", "anchor": "Emergent cosmology, early stage."}
+    }
+  },
+  "domain_priors": {
+    "theology": {"mean": 0.946, "std": 0.041, "min": 0.84, "max": 1.0},
+    "technology": {"mean": 0.9429, "std": 0.0414, "min": 0.84, "max": 1.0},
+    "cosmology": {"mean": 0.9353, "std": 0.0447, "min": 0.83, "max": 1.0}
+  },
+  "peirce_classifier": {
+    "modes": ["ICON", "INDEX", "SYMBOL"],
+    "default_mode": "SYMBOL",
+    "keywords": {
+      "mirror": {"mode": "ICON", "weight": 1.0, "n": 4},
+      "latent": {"mode": "ICON", "weight": 1.0, "n": 2},
+      "genesis": {"mode": "ICON", "weight": 1.0, "n": 1},
+      "reflection": {"mode": "ICON", "weight": 1.0, "n": 2},
+      "pattern": {"mode": "ICON", "weight": 1.0, "n": 1},
+      "structure": {"mode": "ICON", "weight": 1.0, "n": 1},
+      "same": {"mode": "ICON", "weight": 1.0, "n": 1},
+      "form": {"mode": "ICON", "weight": 0.25, "n": 4},
+      "scale": {"mode": "ICON", "weight": 0.5, "n": 2},
+      "stress": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "boundary": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "mars": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "collapse": {"mode": "INDEX", "weight": 0.833, "n": 6},
+      "rail": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "feed": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "force": {"mode": "INDEX", "weight": 0.0, "n": 2},
+      "rupture": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "fracture": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "shock": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "cascade": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "contagion": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "backlash": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "failure": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "breakdown": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "impact": {"mode": "INDEX", "weight": 1.0, "n": 1},
+      "axiom": {"mode": "SYMBOL", "weight": 1.0, "n": 1},
+      "name": {"mode": "SYMBOL", "weight": 1.0, "n": 2},
+      "cipher": {"mode": "SYMBOL", "weight": 1.0, "n": 2},
+      "angel": {"mode": "SYMBOL", "weight": 1.0, "n": 1},
+      "veil": {"mode": "SYMBOL", "weight": 1.0, "n": 1},
+      "code": {"mode": "SYMBOL", "weight": 1.0, "n": 1},
+      "law": {"mode": "SYMBOL", "weight": 1.0, "n": 1},
+      "word": {"mode": "SYMBOL", "weight": 0.0, "n": 1},
+      "sign": {"mode": "SYMBOL", "weight": 0.0, "n": 1},
+      "logic": {"mode": "SYMBOL", "weight": 0.5, "n": 2}
+    },
+    "keyword_changelog": [{"version": "v5.0", "date": "2026-05-25", "added": ["rupture", "fracture", "shock", "cascade", "contagion", "backlash", "failure", "breakdown", "impact"]}],
+    "corpus_distribution": {"SYMBOL": 37, "ICON": 10, "INDEX": 8},
+    "mode_to_peirce_category": {"ICON": "Firstness — pure quality/resemblance", "INDEX": "Secondness — reaction/causal trace", "SYMBOL": "Thirdness — law/habit/mediation"}
+  },
+  "trithemius_process_meaning": {"threshold_tech_theo_delta": 0.02, "minimum_domain_floor": 0.8, "canonical_camera": "GIH", "rule": "process=meaning CONFIRMED when |Tech-Theo| <= threshold AND both >= 0.80"},
+  "wheel_positions": {"B": {"wheel": "essència", "principle": "goodness", "relational": "difference", "question": "whether?", "subject": "God", "virtue": "justice", "vice": "avarice"}, "C": {"wheel": "vida", "principle": "greatness", "relational": "concordance", "question": "what?", "subject": "angels", "virtue": "prudence", "vice": "gluttony"}, "D": {"wheel": "dignitats", "principle": "duration", "relational": "contrariety", "question": "of what?", "subject": "heaven", "virtue": "fortitude", "vice": "lust"}, "E": {"wheel": "acte", "principle": "power", "relational": "beginning", "question": "why?", "subject": "man", "virtue": "temperance", "vice": "conceit"}, "F": {"wheel": "forma", "principle": "wisdom", "relational": "middle", "question": "how much?", "subject": "imagination", "virtue": "faith", "vice": "acedia"}, "G": {"wheel": "relació", "principle": "will", "relational": "end", "question": "what quality?", "subject": "senses", "virtue": "hope", "vice": "envy"}, "H": {"wheel": "ordinació", "principle": "virtue", "relational": "majority", "question": "when?", "subject": "vegetation", "virtue": "charity", "vice": "wrath"}, "I": {"wheel": "acció", "principle": "truth", "relational": "equality", "question": "where?", "subject": "elements", "virtue": "patience", "vice": "lies"}, "K": {"wheel": "articles", "principle": "glory", "relational": "minority", "question": "how/with?", "subject": "instruments", "virtue": "compassion", "vice": "inconstancy"}, "L": {"wheel": "manaments", "arc": "LAW", "meaning": "Divine commandments"}, "M": {"wheel": "exposició", "arc": "REVELATION", "meaning": "Systematic unfolding of doctrine"}, "N": {"wheel": "primera intenció", "arc": "INTENTION_PRIMARY", "meaning": "Primary intention — knowing/loving/serving God"}, "O": {"wheel": "segona intenció", "arc": "INTENTION_SECONDARY", "meaning": "Secondary intention — worldly goals"}, "P": {"wheel": "glòria", "arc": "DESTINY_GLORY", "meaning": "Eternal reward"}, "Q": {"wheel": "pena", "arc": "DESTINY_PENA", "meaning": "Eternal consequence"}, "R": {"wheel": "eviternitat", "arc": "AEVITERNITY", "meaning": "Created beginning, no end"}},
+  "inference_rules": ["GATE_1: All three domain scores must be >= 0.72 to pass", "GATE_2: No single domain may be zero — dyadic relations are not gnosis", "GATE_3: Event must have a compressible insight — if it cannot be compressed, it was not recognized", "GATE_4: Observer must be implicated — if observer stands outside the event, score -0.10", "CAMERA_READ: Three-letter camera = intersection of five semantic layers across all three positions", "PEIRCE_CHECK: Determine sign mode before assigning wheel positions", "TRITHEMIUS_CHECK: If |Tech-Theo| <= 0.10 AND both >= 0.80 → flag process=meaning confirmed", "AEVITERNITY_FLAG: If R position appears in any domain → flag for timeless-duration semantics", "TIER_ASSIGN: Apply gnosis tier from learned quantile bands"]
+}

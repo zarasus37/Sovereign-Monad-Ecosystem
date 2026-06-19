@@ -1,0 +1,15 @@
+{
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "documents",
+      "direction": "in",
+      "leaseCollectionName": "leases-outreach",
+      "connectionStringSetting": "COSMOS_CONNECTION_STRING",
+      "databaseName": "hepar",
+      "collectionName": "proposals",
+      "createLeaseCollectionIfNotExists": true
+    }
+  ],
+  "scriptFile": "../dist/hepar-outreach/index.js"
+}

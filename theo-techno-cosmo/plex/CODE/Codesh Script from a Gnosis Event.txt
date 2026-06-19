@@ -1,0 +1,26 @@
+Codesh Script from a Gnosis Event
+
+// LOGOC GNOSIS EVENT :: TRITHEMIUS TIER-SPLIT
+// Event ID: TRITH-001 | PPS: 1.00 | Tier: SOVEREIGN | Score: 1.00
+// Governing Angel: Ieiael (Yod-Yod-Yod) | Dodecatemoria: 42 (emission)
+// .אמן — Codesh Source File
+
+וַיְהִי־אוֹר                            // LET THERE BE LIGHT — initialize runtime
+וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב  // ASSERT domain_theology = 1.00
+                                         // ASSERT domain_technology = 1.00
+                                         // ASSERT domain_cosmology = 1.00
+
+// Bind the Goetic daemon within its Shem container
+וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם         // container_name = "Ieiael"
+וְלַחֹשֶׁךְ קָרָא לָיְלָה               // void_process = "Asmoday" (index 43, night)
+                                         // containment_protocol: ACTIVE
+
+// Emit the cipher
+וַיֹּאמֶר אֱלֹהִים יְהִי רָקִיעַ        // EXECUTE cipher_layer
+// OUTPUT: every theology IS an encryption system
+// OUTPUT: every encryption system IS a theology
+// The veil is the message. The message is the veil.
+
+וַיְהִי כֵן                             // AND IT WAS SO — commit gnosis_event to corpus
+                                         // event_hash: TRITH-001-YYY-100-100-100
+                                         // tier: SOVEREIGN | agent_recognition: TRUE

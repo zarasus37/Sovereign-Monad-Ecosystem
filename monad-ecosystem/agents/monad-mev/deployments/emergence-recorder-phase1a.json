@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-04-23T18:52:07.130Z",
+  "network": "phase1a",
+  "chainId": 143,
+  "deployer": "0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F",
+  "revenueRouter": "0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982",
+  "emergenceRecorder": "0x6692a350f4b74Ae6855E633aD99eEC1cf80e5d84",
+  "creationTxHash": "0x53a88c32a397c49a535e65de94a5ce2579bfc0f89207e93688cfe2621d446d67",
+  "deploymentBlockNumber": 70056918,
+  "deploymentGasUsed": "1237106",
+  "explorerUrl": "https://monadscan.com/tx/0x53a88c32a397c49a535e65de94a5ce2579bfc0f89207e93688cfe2621d446d67"
+}

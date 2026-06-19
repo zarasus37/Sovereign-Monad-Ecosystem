@@ -1,0 +1,10 @@
+{
+    "status": "LIVE_FUNDED",
+    "activation_timestamp": "2026-06-12T05:44:43.228162",
+    "dynamic_allocation_bands": [
+        15000,
+        100000
+    ],
+    "agent0_capacity_lock": 4000,
+    "mode": "PRODUCTION"
+}

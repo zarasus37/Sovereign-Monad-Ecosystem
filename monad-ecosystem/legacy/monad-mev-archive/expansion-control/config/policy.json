@@ -1,0 +1,6 @@
+{
+  "allowLocalInternalExpansionDuringStress": true,
+  "requireIntegrityClearForOutwardExpansion": true,
+  "requireTier0ForOutwardExpansion": true,
+  "blockCapitalExpansionWhenDeploymentBlocked": true
+}

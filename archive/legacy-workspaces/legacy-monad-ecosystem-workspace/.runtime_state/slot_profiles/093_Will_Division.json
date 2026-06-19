@@ -1,0 +1,18 @@
+{
+  "slot": 93,
+  "b_attr": "Will",
+  "k_principle": "Division",
+  "observations": [
+    {
+      "slot": 93,
+      "predicted_friction": 0.5,
+      "observed_friction": 0.4609375,
+      "delta": 0.0390625,
+      "category": "WITHIN_VARIANCE",
+      "cycle_id": "CYCLE-94",
+      "timestamp": 1781232345.916678
+    }
+  ],
+  "current_weight": 1.0,
+  "last_recalibration_cycle": 0
+}

@@ -1,0 +1,80 @@
+Level 1 — The Canonical Stack (Documentation Fix)
+The three contributors need to be permanently reframed in every document from parallel peers into a vertical three-layer stack with explicit dependency arrows:
+
+╔══════════════════════════════════════════════════════╗
+║  LAYER 0 — MODAL TYPE ENFORCEMENT                    ║
+║  C.S. Peirce  (1839–1914)                            ║
+║  "What KIND of meaning is this sign carrying?"       ║
+║  Icon → Cosmology                                    ║
+║  Index → Technology                                  ║
+║  Symbol → Theology                                   ║
+║  compose(f,g).mode = f.mode ⊔ g.mode                 ║
+║  Without this layer: wheels produce noise, not signs ║
+╠══════════════════════════════════════════════════════╣
+║  LAYER 1 — ENCODING / KEY ROTATION                   ║
+║  Johannes Trithemius  (1462–1516)                    ║
+║  "HOW are the wheels turned and sequenced?"          ║
+║  Cryptographic offset · Key hash · Phase schedule    ║
+║  Without this layer: wheels repeat, never generate   ║
+╠══════════════════════════════════════════════════════╣
+║  LAYER 2 — COMBINATORIAL ASSET                       ║
+║  Ramon Llull  (1232–1316)                            ║
+║  "WHAT slots exist and what do they contain?"        ║
+║  Figura A · T · V · X · S · Theologia               ║
+║  Without this layer: nothing to type or encode       ║
+╚══════════════════════════════════════════════════════╝
+
+
+
+
+
+Level 2 — The Constitution Scorer (Enforcement Fix)
+Right now the constitution scorer enforces tripartite presence as a scoring criterion. The Peirce fix makes it a pre-scoring gate — before any event is evaluated, the modal types must be explicitly declared and structurally consistent:
+
+STAGE 0  Modal Type Gate  ← NEW  (Peirce enforcement)
+  Every admitted event must declare:
+    theology_slot  → must carry  Symbol modality
+    technology_slot → must carry  Index  modality  
+    cosmology_slot  → must carry  Icon   modality
+  
+  Any slot with PURE modality → REJECT
+  Any slot with mismatched modality → REJECT
+  Hybrid allowed ONLY after explicit compose() call
+  
+  Rationale: Tripartite presence without modal typing
+  is Secondness pretending to be Thirdness.
+  The three domains must not just BE present —
+  they must be present AS THE CORRECT TYPE.
+
+
+Level 3 — The Training Data (Corpus Fix)
+Every gnosis event in the corpus needs a modal_types field added — this is what makes Peirce visible in the data rather than invisible in the compiler:
+
+{
+  "title": "The Illumination on Mount Randa",
+  "voice": "Ramon Llull",
+  "score": 1.0,
+  "modal_types": {
+    "theology_slot":   {"figura": "A",        "modality": "Symbol", 
+                        "peirce_class": "Third"},
+    "technology_slot": {"figura": "S",        "modality": "Index",  
+                        "peirce_class": "Second"},
+    "cosmology_slot":  {"figura": "T",        "modality": "Icon",   
+                        "peirce_class": "First"},
+    "compose_result":  "HYBRID",
+    "thirdness_present": true
+  }
+}
+
+
+
+What the Full Fix Looks Like in Practice
+Every layer now has a clear Peirce signature
+
+| Layer               | Before Fix                         | After Fix                                                    |
+| ------------------- | ---------------------------------- | ------------------------------------------------------------ |
+| Documentation       | Peirce listed as a council voice   | Peirce as Layer 0 of the stack — foundational enforcer       |
+| Constitution Scorer | Stage 1 checks tripartite presence | Stage 0 checks modal type validity first                     |
+| Corpus schema       | wheel_slots: [A, T, S]             | modal_types: {Symbol, Icon, Index} + thirdness_present: true |
+| Visual presentation | Three parallel contributors        | Vertical stack — Peirce at the base                          |
+| Training signal     | Three-domain balance rewarded      | Modal type coherence rewarded before domain balance          |

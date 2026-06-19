@@ -1,0 +1,10 @@
+{
+  "requireExecutionTruthStatus": "closed",
+  "requireCardiaStatus": "ready_for_guarded_live",
+  "allowPrivateLicensedBeforePublic": true,
+  "requireLicensedDeploymentDoc": true,
+  "requireGuardedLiveActivationDoc": true,
+  "requireOperatorRunbook": true,
+  "requireDataProductPrepared": true,
+  "requireNarrativeSurface": true
+}

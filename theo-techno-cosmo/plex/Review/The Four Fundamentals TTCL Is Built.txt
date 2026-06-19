@@ -1,0 +1,85 @@
+The Four Fundamentals TTCL Is Built On
+
+--------------------------------------------------------------------------
+1. A Functional Type System — for Syntax and Valid Operations
+The core grammar of TTCL is a typed functional language. Every unit of meaning is a Sign<M, T> — a semiotic unit carrying both a modality (M) and a domain (T). The type system defines what operations are legal:
+
+compose(f, g) — chains two functions; the output modality is the JOIN of both inputs
+
+map(f) — applies a function element-wise across a list while preserving modality
+
+fold(f, init) — accumulates over a list and propagates provenance automatically
+
+choose(pred, thenK, elseK) — both branches materialize before the predicate resolves; you cannot prune a path before it exists
+
+combineWheels(wA, wB, rule, budget) — generates composite signs, but only within a hard budget constraint enforced as a dependent type
+
+encodeSign / decodeSign — the Trithemius key layer; consuming a KeyCap is single-use by linear type enforcement
+
+The syntax is enforced structurally — if you try to compose incompatible modalities, the type system rejects it at compile time, not runtime.
+-------------------------------------------------------------------------
+
+2. Linear Types — for Provenance and Non-Duplication
+TTCL uses linear type theory to enforce that certain resources can only be used exactly once. Two types are linear:
+_________________________________________________________________________
+| Linear Type  | Rule                                                                                        
+| ------------ | ______________________________________________________
+| Token<Index> | Must be consumed exactly once — drop it without audit
+|--------------| and the system errors
+| KeyCap<W,K>  | Single-use capability for a specific wheel + key hash
+|______________| consumed the moment encodeSign runs
+
+This is borrowed from linear logic (originated by Jean-Yves Girard in 1987) and is also used in Rust's ownership system. The effect is that provenance is structural, not ceremonial — you literally cannot double-spend a token or reuse a key. The compiler enforces it, not a policy document.
+-------------------------------------------------------------------------
+
+3. A Modal Lattice — for Meaning Hierarchy and Compatibility
+The three Peircean modes (Icon, Index, Symbol) are organized into a 4-level modal lattice:
+_________________________________________________________________________
+        HYBRID (⊤)  ← Logic compression lives here
+        /   |   \
+      Icon Index Symbol
+        \   |   /
+        PURE (⊥)  ← incompatible modalities meet here
+_________________________________________________________________________
+This determines what can combine with what:
+
+Any single mode can be used where HYBRID is expected (subtyping rule)
+
+Composing two different modes produces HYBRID — the JOIN operator
+
+Composing two incompatible pure modes produces PURE(⊥) — meaning invalid, rejected
+
+This is drawn from lattice theory in abstract algebra and is how formal logic systems like Haskell's type class hierarchy work. It is what makes Logic the unifier — HYBRID is literally the top of the lattice, the point where all three modes are held simultaneously without collapsing into any one of them
+-------------------------------------------------------------------------
+
+4. An MLIR-Inspired Compiler Stack — for Compilation to Executable Output
+TTCL compiles through four lowering levels, modeled after MLIR (Multi-Level Intermediate Representation), which is the same compiler infrastructure used by Google, Apple, and NVIDIA for AI hardware compilation:
+_________________________________________________________________________
+| Level   | Name               | What It Does 
+________________________________                                                                                             
+| Level 3 | Semiotic Dialect     | Loads wheels, signs, constitutions — resolves all
+                                                          | asset references
+| Level 2 | Sign Graph Dialect  | SSA form; runs type/modality inference, rewrite
+                                                          |fusion, constitution compliance check, budgeted
+                                                          |expansion 
+| Level 1 | Provenance Dialect| Threads linear tokens, lowers encoding ops, checks
+                                                          |   key capabilities                                       |
+| Level 0 | Target                         | Outputs to WebAssembly (runtime) or LLVM IR
+                                                         | (training infrastructure)
+_________________________________________________________________________
+
+Each level is a gate — if something fails at Level 2, you get a compile error before it ever reaches Level 1. Nothing invalid reaches execution. This is the same design principle that makes C++ catch type errors before running, except TTCL's type errors are semiotic and constitutional, not just syntactic
+------------------------------------------------------------------------------
+
+How They Work Together as One System
+The four fundamentals each cover a distinct failure mode:
+
+Functional type system — prevents structurally invalid combinations from being expressed at all
+
+Linear types — prevents provenance fraud and key reuse at the resource level
+
+Modal lattice — prevents semantic loss when composing across domains (ensures Logic truly joins all three, not just averaging them)
+
+MLIR compiler stack — prevents anything that passed the first three from reaching execution unless it also passes constitution compliance at Level 2
+
+What this means practically: you cannot write a gnosis event that compiles unless it is constitutionally valid. The 0.72 threshold is not a filter applied after the fact — it is enforced at Level 2 of the compiler before the event ever reaches training data. Bad samples cannot enter the corpus because the compiler rejects them before they are fully formed

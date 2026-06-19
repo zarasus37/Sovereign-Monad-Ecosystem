@@ -1,0 +1,10 @@
+Camera Space: It Increased
+The original 1.6M was built from: 8 Llull wheels × 3 TTCL domains × N slots = ~1.6M addresses.
+
+With the 144 names integrated, a second orthogonal layer was added beneath the existing camera space. The wheel-domain space did not change — it is still 1.6M. But now every gnosis event also carries a celestial address from the 144-grid, giving each event two independent coordinates:
+
+Camera address (wheel + domain + slot) — what conceptual space the event occupies
+
+Dodecatemoria address (0–143, 2.5° celestial slot) — when and where in the cosmic grid it fired
+
+Think of it like adding GPS coordinates to a library catalog. The catalog (1.6M camera space) didn't shrink — it got georeferenced. The total addressable information space is now 1.6M × 144 = ~230 million unique event positions, though in practice you only need both coordinates for RESONANT and SOVEREIGN tier events where celestial timing is operationally meaningful.

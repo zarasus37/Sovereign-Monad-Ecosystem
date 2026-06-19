@@ -1,0 +1,17 @@
+{
+    "DataRailConsistent":  true,
+    "SynchronizationStatus":  "FULLY SYNCED",
+    "TotalEnrichedLeads":  50,
+    "AllOrganPayloadsIntact":  true,
+    "ProposalsGenerated":  8,
+    "Dispatched":  3,
+    "LatestSentFolder":  "G:\\My Drive\\The_Sovereign\\archive\\legacy-workspaces\\monad-mev-diagnostics-2026-05\\outreach\\sent\\batch-2026-05-09-03-41-total-standard-DISPATCHED-2026-05-09-03-42",
+    "LatestBatch":  "G:\\My Drive\\The_Sovereign\\archive\\legacy-workspaces\\monad-mev-diagnostics-2026-05\\proposals\\batch-2026-05-13-22-20",
+    "Timestamp":  {
+                      "value":  "\/Date(1778762761803)\/",
+                      "DisplayHint":  2,
+                      "DateTime":  "Thursday, May 14, 2026 7:46:01 AM"
+                  }
+}
+
+

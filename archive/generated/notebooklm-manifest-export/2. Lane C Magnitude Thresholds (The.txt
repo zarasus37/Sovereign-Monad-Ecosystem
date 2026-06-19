@@ -1,0 +1,9 @@
+2. Lane C "Magnitude Thresholds" (The Kill-Switch)
+Lane C measures the Blast Radius. If an exploit is too "Wide," the system kills the process to save computational energy, regardless of how "True" it is.
+The "Too Wide" Limit:
+Horizontal Scale (W_HOST): > 25% of internal infrastructure.
+User Contagion (W_USER): > 50% of the active user base.
+Registry Drift (W_REPO): Present in > 5 public registries simultaneously.
+Volume Threshold (W_TRAF): Data movement > 500MB/minute.
+The Master Kill Logic:
+If RHCP Spin > 0.75 AND W_CONG = 0 (Contagion Active), the system triggers an Immediate Magnitude Reject.

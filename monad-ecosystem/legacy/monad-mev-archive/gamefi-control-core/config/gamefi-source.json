@@ -1,0 +1,19 @@
+{
+    "sources":  {
+                    "bootstrap":  {
+                                      "address":  "0x9d4fcf7E0Ae5AE994A6eb0bCCbDfAA62E5867352",
+                                      "label":  "Bootstrap Revenue Source",
+                                      "active":  true,
+                                      "note":  "Temporary source used until the Stake-linked source exists on-chain and is registered."
+                                  },
+                    "stake":  {
+                                  "address":  null,
+                                  "label":  "Stake-Linked Revenue Source",
+                                  "active":  false,
+                                  "note":  "Do not activate until the Stake-linked source is deployed and registered."
+                              }
+                },
+    "cutover":  {
+                    "revokeBootstrapOnCutover":  false
+                }
+}

@@ -1,0 +1,12 @@
+{
+  "requirePhase1aLiveProof": true,
+  "requireBootstrapSourceRegistration": true,
+  "requireGuardedLiveProfile": true,
+  "requireGuardedLiveActivationDoc": true,
+  "requireOperatorRunbook": true,
+  "requireRuntimeArtifact": true,
+  "requireProviderStabilityImplementation": true,
+  "requireObservedGuardedLiveSession": true,
+  "requireReceiptTruthValidation": true,
+  "requireIncidentQueueClear": true
+}

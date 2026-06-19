@@ -1,0 +1,21 @@
+The Pulfrich Implementation
+We are modifying the SynapticWatcher to maintain a Delayed Mirror of the verification track. When the Master Logic Gate performs its check, it doesn't just look at the current state—it looks at the relationship between the "now" of discovery and the "then" of verification.
+
+
+class PulfrichWatcher(SynapticWatcher):
+    def __init__(self, delay_ms=10):
+        super().__init__()
+        self.delay_ms = delay_ms # The "Tilt" factor
+
+    def get_elliptical_parallax(self, var_id):
+        history = self.history.get(var_id, [])
+        if len(history) < 2:
+            return None
+        
+        # Lane A is current, Lane B is 'delayed' by the tilt factor
+        discovery_now = history[-1][1]
+        verification_delayed = history[-2][1]
+        
+        # Calculate the phase-shift angle (The Tilt)
+        phase_tilt = np.arctan2(discovery_now, verification_delayed)
+        return round(np.degrees(phase_tilt), 2)

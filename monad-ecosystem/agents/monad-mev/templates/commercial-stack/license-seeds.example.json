@@ -1,0 +1,18 @@
+[
+  {
+    "customer": "Fund Design Partner",
+    "tier": "fund",
+    "licenseKey": "SMEV-FUND-DESIGN-001",
+    "maxActivations": 2,
+    "status": "active",
+    "notes": "Initial fund customer license"
+  },
+  {
+    "customer": "Enterprise Beta Counterparty",
+    "tier": "enterprise",
+    "licenseKey": "SMEV-ENT-BETA-001",
+    "maxActivations": 5,
+    "status": "active",
+    "notes": "Enterprise pilot deployment"
+  }
+]

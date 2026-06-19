@@ -1,0 +1,29 @@
+{
+  "overview": "The Sovereign Monad Control Center is the operational OS layer for a self-governing, philosophically-grounded multi-agent ecosystem. It provides real-time observability and control across 15 architectural layers — monitoring three improvement agents (Synapse, Vox, Pneuma), six institutional organs, system integrity via the Gnosis Integrity Layer, build pipeline progress, and deployment orchestration. The first specialized control center for integrity-focused, multi-agent ecosystem governance.",
+  "features": [
+    "Six core advanced panels: Integrity Auditor, Build Pipeline Tracker, Kafka Wiring Diagram, Skills Matrix, Cost Estimator, Deployment Orchestration",
+    "15-layer sidebar navigation using ecosystem's own terminology",
+    "Three improvement agent monitoring: Synapse, Vox, Pneuma with live integrity scores",
+    "Gnosis Integrity Layer with axiom drift detection",
+    "Fixed Kafka event topology visualization (agent-to-topic map)",
+    "Agent skills matrix with shared capability highlighting",
+    "Interactive infrastructure cost estimator (cycles, RPC, gas)",
+    "Step-by-step deployment orchestration with Docker Compose guidance",
+    "Real-time system metrics (CPU, Memory, Uptime) with configurable thresholds",
+    "Refined cyberpunk aesthetic: dark #0A0A0A background, cyan/magenta/amber accents"
+  ],
+  "category": "dashboard",
+  "tags": [
+    "ai-agents",
+    "multi-agent",
+    "ecosystem",
+    "dashboard",
+    "monitoring",
+    "blockchain",
+    "cyberpunk",
+    "control-center",
+    "integrity",
+    "defi"
+  ],
+  "last_updated": "2026-05-07T11:24:21.519Z"
+}

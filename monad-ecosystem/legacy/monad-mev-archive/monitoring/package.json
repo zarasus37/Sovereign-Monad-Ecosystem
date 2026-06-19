@@ -1,0 +1,15 @@
+{
+  "name": "monitoring",
+  "version": "1.0.0",
+  "description": "Monitoring dashboard for monad-mev",
+  "scripts": {
+    "start": "streamlit run dashboard.py",
+    "backtest": "python backtest.py"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

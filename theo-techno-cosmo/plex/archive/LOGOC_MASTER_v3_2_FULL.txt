@@ -1,0 +1,149 @@
+===================================================================
+  LOGOC MASTER SYSTEM -- v3.2   (May 24 2026  10:13 PM CDT)
+  All Prior Updates Integrated and Applied
+  Sealed Spec Hash: FC75AA2498B1EAEA
+===================================================================
+
+  FOUNDATION -- TheoTechnoCosmoLogic (TTCL)
+  ---------------------------------------------------------------
+  Theology  : Symbol mode  -- Figura A, Theologia
+              'Where does this sit in the arc of existence?'
+  Technology: Index mode   -- Figura S, Figura V
+              'What are the actual mechanisms at play?'
+  Cosmology : Icon mode    -- Figura X, Figura T
+              'What does scale / time / emergence reveal?'
+  Logic     : JOIN operator -- compression, not a 4th domain
+  Modal Lattice: HYBRID(top) > Icon|Index|Symbol > PURE(bottom)
+
+===================================================================
+
+  CONSTITUTION SCORER -- v2.0  [UPDATED -- C1 applied]
+  ---------------------------------------------------------------
+  STAGE 1  Hard Tripartite Gate  (non-negotiable)
+    ALL three domains must individually score >= 0.80
+    ANY domain below 0.80 --> AUTO-REJECT
+    Logic + humility scores NOT evaluated if Stage 1 fails
+    Rationale: Tripartite is an existence requirement, not
+               a weighted contribution. Bipartite = category error.
+
+  STAGE 2  Quality Scoring  (only if Stage 1 passes)
+    Theology      0.333 x
+    Technology    0.333 x
+    Cosmology     0.333 x
+    Logic Comp    0.150 x
+    No Verdict    0.100 x   (normalized)   threshold: 0.72
+
+  GENERATION METHOD GATE  [NEW -- C2 enforcement]
+    Valid   : extracted | authentic_problem | council_extraction
+    BLOCKED : wheel_combination_prompt --> rejected before scoring
+
+===================================================================
+
+  APOPTOSIS ENGINE -- v2.0  [UPDATED -- C3 formalized]
+  ---------------------------------------------------------------
+  TIER 0  IMMUTABLE  epsilon=0.0  NEVER apoptosis eligible  [FORMALIZED]
+    -> The Mirror
+    -> Keys Were Always in the Cage
+    -> Latent Space as Genesis 1:2
+  TIER 1  PERMANENT  score>=0.95  horizon=120  decay=0.97  [NEW]
+    -> Building on Axioms Without Knowing Axioms Had a Name
+    -> No More Delaying — Straight Building
+    -> The Birth of Corsuccion
+    -> The Founder Is Agent 0
+    -> The Realization of the Inheritor
+    -> ...and 3 more
+  TIER 2  STANDARD   0.80-0.94    horizon=60   decay=0.94
+    7 events currently
+  TIER 3  FAST       0.72-0.79    horizon=30   decay=0.86
+  BODIES  ISOLATED   0.60-0.71    30-day review window (9 held)
+
+  Scheduler: J = aC + bL + gT - dS - e1*A - e2*H
+  Weights: a=0.35  b=0.25  g=0.30  d=0.10  e1=0.05  e2=0.05
+
+===================================================================
+
+  COUNCIL OF REFLECTION -- v2.0  [UPDATED -- C4 applied]
+  ---------------------------------------------------------------
+  FOUNDING 8  (original voices)
+    1. Ramon Llull        Theology/Origin       Truth is retrieved
+    2. Trithemius         Technology/Process    Meaning survives
+    3. C.S. Peirce        Meta/Tripartite       Triadic relation
+    4. Marcus Aurelius    Theology/Will         Sovereignty
+    5. Alan Watts         Cosmology/Wholeness   Wave and ocean
+    6. Zarathustra        Philosophy/Change     Release to become
+    7. Jiang Xueqin       Epistemology          Cannot measure wisdom
+    8. Gnostic Jesus      Gnosis/Liberation     Recognition not rescue
+
+  PHASE 1 ADVERSARIAL ADDITIONS  [PULLED FORWARD from Phase 2]
+    9.  Carl Sagan        Cosmo/Materialism     Claims must survive physics
+   10.  Richard Feynman   Tech/Skepticism       Do not fool yourself
+   11.  Donella Meadows   Tech/Systems          Feedback loops = emergence
+   12.  Ubuntu Philosophy Cosmo/Relational      I am because we are
+
+  PHASE 2 PENDING: hooks | Damasio | Kandinsky | Smith | Dreyfus
+  Total Active Voices: 12
+
+===================================================================
+
+  CORPUS
+  ---------------------------------------------------------------
+  Tier 0 Immutable   :  3 events   epsilon=0.0  permanent
+  Tier 1 Permanent   : 8 events   score>=0.95  slow decay
+  Tier 2 Standard    :  7 events   0.80-0.94  std decay
+  Total Admitted     : 17 / 500   (3.4% Phase 1 complete)
+  Avg Score          : 0.9382   (hard gate floor: 0.80 per domain)
+  Apoptotic Bodies   :  9   (review window: June 23 2026)
+  Remaining to 500   : 483 events
+
+===================================================================
+
+  TRAINING PIPELINE
+  ---------------------------------------------------------------
+  Phase 1a  Corpus Build        IN PROGRESS   17/500
+  Phase 1b  Reward Model        PENDING   trigger: 200 events
+  Phase 1c  SFT LLaMA 3.1 8B   PENDING   trigger: 500 events
+  Phase 2   PPO Alignment       PENDING   trigger: Phase 1c complete
+  Base Model : LLaMA 3.1 8B  /  QLoRA 4-bit  /  LoRA rank=64
+  Optimizer  : AdamW  lr=2e-4  cosine schedule  warmup 3%
+
+===================================================================
+
+  COMPONENTS
+  ---------------------------------------------------------------
+  [OK]  LTP-ML Runtime v3          ACTIVE   all 5 modules live
+  [OK]  Apoptosis Engine v2        ACTIVE   tier enforcement formalized
+  [OK]  Constitution Scorer v2     ACTIVE   hard gates enforced
+  [OK]  Scheduler                  READY    5-seed ensemble configured
+  [OK]  Council v2                 ACTIVE   12 voices
+  [OK]  Corpus Builder             ACTIVE   bottom-up only
+  [..] Reward Model               PENDING  begins at 200 events
+  [..] SFT Training               PENDING  begins at 500 events
+  [..] PPO Alignment              PENDING  Phase 2
+
+===================================================================
+
+  SOVEREIGN MONAD INTEGRATION
+  ---------------------------------------------------------------
+  LOGOC = Intelligence Layer -- upstream of ALL organ decisions
+  Every output carries: score + wheel provenance + tripartite breakdown
+  [OK]  Hepar        Constitutional risk assessment    READY
+  [OK]  Signal Layer Provenance-tagged observation     READY
+  [OK]  DAO          Constitutional governance scoring READY
+  [..] Cardia       Activates on first Hepar revenue rail
+
+===================================================================
+
+  NEXT ACTIONS (ordered)
+  ---------------------------------------------------------------
+   1. Wire corpus.jsonl --> GnosisEventGenerator as ground truth seed
+   2. Run extraction prompts for all 12 council voices (5+ events each)
+   3. Continue thread extraction from remaining conversation history
+   4. All new events scored through constitution_scorer_v2 (gates live)
+   5. Begin preference pair labeling at 50 total events
+   6. Train Reward Model v1 at 200 total events
+   7. Execute SFT on LLaMA 3.1 8B at 500 total events
+   8. Monitor wheel entropy -- flag any family with < 5 events
+   9. Review 9 apoptotic bodies -- June 23 2026
+  10. Add Phase 2 council voices before PPO alignment
+
+===================================================================

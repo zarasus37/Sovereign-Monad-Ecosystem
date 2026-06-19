@@ -1,0 +1,12 @@
+{
+  "productionInfraConfigured": false,
+  "licensedPrivatePathValidated": false,
+  "operatorMonitoringReady": false,
+  "publicSurfaceReady": false,
+  "activationApproved": false,
+  "publicActivationLive": false,
+  "notes": [
+    "Private/licensed activation should precede any broader public activation.",
+    "Public activation remains downstream of execution truth closure and funded Cardia readiness."
+  ]
+}

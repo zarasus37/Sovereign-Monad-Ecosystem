@@ -1,0 +1,33 @@
+{
+  "name": "@sovereign/bus",
+  "version": "1.0.0",
+  "description": "Sovereign Monad internal event bus — typed, append-logged, Kafka-compatible signal backbone",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "echo 'No lint step for bus package'"
+  },
+  "dependencies": {
+    "@sovereign/types": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}

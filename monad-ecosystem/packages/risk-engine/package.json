@@ -1,0 +1,34 @@
+{
+  "name": "risk-engine",
+  "version": "1.0.0",
+  "description": "Phase 5 - Monte Carlo risk engine for cross-chain arbitrage",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "stress:matrix": "node dist/tools/stress-matrix.js",
+    "stress:matrix:json": "node dist/tools/stress-matrix.js --json",
+    "stress:matrix:report": "node dist/tools/stress-matrix.js --json --out artifacts/stress-matrix.json"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "kafkajs": "^2.2.4",
+    "pino": "^8.21.0",
+    "uuid": "^9.0.1",
+    "@sovereign/types": "workspace:*",
+    "@sovereign/bus": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/uuid": "^9.0.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

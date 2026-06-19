@@ -1,0 +1,26 @@
+import json, os
+import numpy as np
+import pandas as pd
+
+output_dir = '/home/user/output/ttcl_ltpml/'
+
+# Load enriched corpus
+with open(output_dir + 'logoc_corpus_full_integrated_v5.jsonl') as f:
+    corpus = [json.loads(line) for line in f]
+
+df = pd.DataFrame(corpus)
+print(f"Corpus shape: {df.shape}")
+print(f"Columns: {list(df.columns)}")
+print(f"\nv4_score stats:")
+print(df['v4_score'].describe())
+print(f"\nPeirce mode counts:\n{df['peirce_mode'].value_counts()}")
+print(f"\nCamera (llull_camera) unique: {df['llull_camera'].nunique()}")
+print(f"\nTop cameras:\n{df['llull_camera'].value_counts().head(10)}")
+
+# Extract positions
+df['theo_pos']  = df['wheel_positions'].apply(lambda x: x.get('Teologia','B'))
+df['tech_pos']  = df['wheel_positions'].apply(lambda x: x.get('Technologia','B'))
+df['kosmo_pos'] = df['wheel_positions'].apply(lambda x: x.get('Kosmologia','B'))
+
+# PPS raw
+print(f"\nPPS distribution:\n{df['pps'].value_counts()}")

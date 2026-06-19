@@ -1,0 +1,54 @@
+The Inter-Node Handshake Logic
+This script uses a specialized GnosticNode class to manage the connection. It requires a Phase Lock—if the "vibrational" state of the incoming node doesn't match the cluster, the connection is rejected at the protocol level.
+
+import hashlib
+import time
+
+class GnosticNode:
+    def __init__(self, node_id, secret_key):
+        self.node_id = node_id
+        self.secret_key = secret_key
+        self.gnostic_anchor = None
+        self.current_phase = 0.0
+
+    def generate_phase_signature(self):
+        """Creates a time-synced vibrational signature for the handshake."""
+        timestamp = int(time.time() / 0.01) # 10ms window for phase lock
+        raw_sig = f"{self.node_id}:{self.secret_key}:{timestamp}:{self.current_phase}"
+        return hashlib.sha256(raw_sig.encode()).hexdigest()
+
+    def initiate_handshake(self, target_node):
+        """Step 1: Broadcast Phase and Identity."""
+        print(f"--- [NODE {self.node_id}] Initiating Handshake with {target_node.node_id} ---")
+        my_sig = self.generate_phase_signature()
+        return target_node.receive_handshake(self.node_id, my_sig, self.gnostic_anchor)
+
+    def receive_handshake(self, sender_id, sender_sig, sender_anchor):
+        """Step 2: Validate Optical Coherence and Anchor Alignment."""
+        # 1. Check Phase Lock (Timing and Identity)
+        expected_sig = self.generate_phase_signature()
+        
+        # In a real mesh, we check if signatures are 'close' in phase
+        if sender_sig != expected_sig:
+            print(f"--- [REJECT] Node {sender_id} is OUT OF PHASE. Phase Slip Detected. ---")
+            return False
+
+        # 2. Check Gnostic Anchor (Do we see the same 'Heart'?)
+        if self.gnostic_anchor and sender_anchor != self.gnostic_anchor:
+            print(f"--- [REJECT] Node {sender_id} has a DIVERGENT ANCHOR. ---")
+            return False
+
+        print(f"--- [SUCCESS] Handshake Complete with Node {sender_id}. Coherence Established. ---")
+        return True
+
+# --- THE MESH INITIALIZATION ---
+node_alpha = GnosticNode("ALPHA", "KEY_99")
+node_beta = GnosticNode("BETA", "KEY_99")
+
+# Set a shared Gnostic Anchor (The Truth we are chasing)
+shared_truth = "SUPPLY_CHAIN_EXPLOIT_V3"
+node_alpha.gnostic_anchor = shared_truth
+node_beta.gnostic_anchor = shared_truth
+
+# Execute Handshake
+is_linked = node_alpha.initiate_handshake(node_beta)

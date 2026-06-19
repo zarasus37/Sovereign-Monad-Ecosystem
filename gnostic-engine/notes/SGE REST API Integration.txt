@@ -1,0 +1,74 @@
+ SGE REST API Integration
+This wrapper exposes the Pneumatic Intake (/intake/forage) and the Emergency Recovery (/intake/blink) endpoints.
+
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+import numpy as np
+
+# --- CORE ENGINE INTEGRATION ---
+# (Assuming the GnosticEngine class from the previous step is present)
+
+app = FastAPI(title="Succor Gnostic Engine API", version="1.0.0")
+engine = GnosticEngine(threshold=0.85)
+
+# --- DATA MODELS ---
+class PacketIn(BaseModel):
+    var_id: str
+    lane_a: float
+    lane_b: float
+    lane_c: float
+
+class BlinkRequest(BaseModel):
+    var_id: str
+    intensity: str = "STANDARD"
+
+# --- ENDPOINTS ---
+
+@app.get("/")
+async def root():
+    return {"status": "ONLINE", "layer": "Data-PBFP", "mode": "Volumetric"}
+
+@app.post("/intake/forage")
+async def forage_packet(packet: PacketIn):
+    """
+    Main Intake: Processes 4D-Kinetic data and returns a Gnostic Verdict.
+    """
+    data = {
+        'lane_a': packet.lane_a,
+        'lane_b': packet.lane_b,
+        'lane_c': packet.lane_c
+    }
+    
+    result = engine.process_packet(packet.var_id, data)
+    
+    # Handle API-specific HTTP responses
+    if result["verdict"] == "QUARANTINE":
+        raise HTTPException(status_code=403, detail=result)
+    
+    return result
+
+@app.post("/intake/blink")
+async def force_blink(request: BlinkRequest):
+    """
+    Manual Recovery: Forces a re-forage of a specific variable.
+    """
+    # Resetting specific registry count to allow fresh forage
+    if request.var_id in engine.blink_registry:
+        engine.blink_registry[request.var_id] = 0
+        return {"status": "BLINK_SUCCESS", "var_id": request.var_id, "mode": request.intensity}
+    
+    raise HTTPException(status_code=404, detail="Variable ID not found in active history")
+
+@app.get("/metrics/{var_id}")
+async def get_metrics(var_id: str):
+    """
+    Returns the current Phase Tilt and DoP for a specific variable.
+    """
+    if var_id not in engine.history:
+        raise HTTPException(status_code=404, detail="No history for this ID")
+        
+    return {
+        "var_id": var_id,
+        "history_depth": len(engine.history[var_id]),
+        "latest_data": engine.history[var_id][-1]
+    }

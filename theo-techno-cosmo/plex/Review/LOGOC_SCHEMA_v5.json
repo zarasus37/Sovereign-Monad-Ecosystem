@@ -1,0 +1,243 @@
+{
+  "schema_version": "v5.0",
+  "date": "2026-05-25",
+  "corpus_size": 55,
+  "description": "LOGOC scoring schema — full integration of Llull Ars Magna + Peirce Semiotics + Trithemius ProcessMeaning + TTCL TheoTechnoCosmologic",
+  "three_registers": {
+    "Peirce": "WHAT meaning is — meta-architecture of semiosis (sign→object→interpretant)",
+    "Llull": "HOW meaning is computed — combinatorial predicate engine (cameras B–R)",
+    "Trithemius": "WHERE it was already operating — process=meaning, historically proven 1499"
+  },
+  "domains": [
+    "Teologia",
+    "Technologia",
+    "Kosmologia"
+  ],
+  "domain_semiotic_roles": {
+    "Teologia": "Interpretant — meaning produced; the divine recognition; the gnosis",
+    "Technologia": "Representamen — the sign/mechanism/carrier; the cipher/algorithm",
+    "Kosmologia": "Object — what the sign points to; the actual structure of reality"
+  },
+  "scoring_formula_v4": {
+    "formula": "score = (Theo × 0.30) + (Tech × 0.30) + (Kosmo × 0.30) + (PPS × 0.10)",
+    "weights": {
+      "Teologia": 0.3,
+      "Technologia": 0.3,
+      "Kosmologia": 0.3,
+      "PPS": 0.1
+    },
+    "pps_values": {
+      "all_same_position": 1.0,
+      "two_share_position": 0.65,
+      "all_distinct": 0.3
+    },
+    "floor": 0.72,
+    "max": 1.0,
+    "note": "Equal domain weights — no hidden domain privilege. LC removed from v3."
+  },
+  "peirce_sign_modes": {
+    "meta": "Peirce's triadic semiotics provides the META-ARCHITECTURE of the LOGOC scoring system",
+    "sign_modes": {
+      "ICON": {
+        "peirce": "Firstness — sign resembles object",
+        "ttcl": "Structural isomorphism events — form mirrors form"
+      },
+      "INDEX": {
+        "peirce": "Secondness — sign is causally connected to object",
+        "ttcl": "Direct trace events — stress/boundary/consequence"
+      },
+      "SYMBOL": {
+        "peirce": "Thirdness — sign relates to object by law/habit",
+        "ttcl": "Encoded meaning events — axiom/cipher/language"
+      }
+    },
+    "domain_mapping": {
+      "Representamen": {
+        "domain": "Technologia",
+        "role": "The sign-vehicle — the mechanism, cipher, algorithm, physical carrier"
+      },
+      "Object": {
+        "domain": "Kosmologia",
+        "role": "What the sign points to — the actual structure of reality"
+      },
+      "Interpretant": {
+        "domain": "Teologia",
+        "role": "The meaning produced in mind/soul — gnosis, divine recognition"
+      }
+    },
+    "categories": {
+      "Firstness": "Pure potential/feeling — pre-reflective quality (maps to ICON mode)",
+      "Secondness": "Reaction/brute force/otherness (maps to INDEX mode)",
+      "Thirdness": "Law/habit/mediation/continuity (maps to SYMBOL mode — dominant in corpus at 67%)"
+    }
+  },
+  "llull_alphabet_BtoK": {
+    "B": {
+      "principle": "goodness",
+      "relational": "difference",
+      "question": "whether?",
+      "subject": "God",
+      "virtue": "justice",
+      "vice": "avarice",
+      "wheel": "essència"
+    },
+    "C": {
+      "principle": "greatness",
+      "relational": "concordance",
+      "question": "what?",
+      "subject": "angels",
+      "virtue": "prudence",
+      "vice": "gluttony",
+      "wheel": "vida"
+    },
+    "D": {
+      "principle": "duration",
+      "relational": "contrariety",
+      "question": "of what?",
+      "subject": "heaven",
+      "virtue": "fortitude",
+      "vice": "lust",
+      "wheel": "dignitats"
+    },
+    "E": {
+      "principle": "power",
+      "relational": "beginning",
+      "question": "why?",
+      "subject": "man",
+      "virtue": "temperance",
+      "vice": "conceit",
+      "wheel": "acte"
+    },
+    "F": {
+      "principle": "wisdom",
+      "relational": "middle",
+      "question": "how much?",
+      "subject": "imagination",
+      "virtue": "faith",
+      "vice": "acedia",
+      "wheel": "forma"
+    },
+    "G": {
+      "principle": "will",
+      "relational": "end",
+      "question": "what quality?",
+      "subject": "senses",
+      "virtue": "hope",
+      "vice": "envy",
+      "wheel": "relació"
+    },
+    "H": {
+      "principle": "virtue",
+      "relational": "majority",
+      "question": "when?",
+      "subject": "vegetation",
+      "virtue": "charity",
+      "vice": "wrath",
+      "wheel": "ordinació"
+    },
+    "I": {
+      "principle": "truth",
+      "relational": "equality",
+      "question": "where?",
+      "subject": "elements",
+      "virtue": "patience",
+      "vice": "lies",
+      "wheel": "acció"
+    },
+    "K": {
+      "principle": "glory",
+      "relational": "minority",
+      "question": "how/with?",
+      "subject": "instruments",
+      "virtue": "compassion",
+      "vice": "inconstancy",
+      "wheel": "articles"
+    }
+  },
+  "llull_theological_moral_LtoR": {
+    "L": {
+      "catalan": "manaments",
+      "meaning": "Divine commandments — the law governing moral duty",
+      "arc": "LAW"
+    },
+    "M": {
+      "catalan": "exposició",
+      "meaning": "Systematic unfolding of doctrine — how truth is revealed",
+      "arc": "REVELATION"
+    },
+    "N": {
+      "catalan": "primera intenció",
+      "meaning": "Primary intention — knowing, loving, serving God as the only pure motive",
+      "arc": "INTENTION_PRIMARY"
+    },
+    "O": {
+      "catalan": "segona intenció",
+      "meaning": "Secondary intention — worldly goals, valid only when subordinate to N",
+      "arc": "INTENTION_SECONDARY"
+    },
+    "P": {
+      "catalan": "glòria",
+      "meaning": "Eternal reward — the soul in God's presence",
+      "arc": "DESTINY_GLORY"
+    },
+    "Q": {
+      "catalan": "pena",
+      "meaning": "Eternal consequence — suffering from rejecting divine law",
+      "arc": "DESTINY_PENA"
+    },
+    "R": {
+      "catalan": "eviternitat",
+      "meaning": "Aeviternity — created beginning, no end (souls/angels). Not eternity (God).",
+      "arc": "AEVITERNITY"
+    }
+  },
+  "llull_figures_operators": {
+    "A": "Figura Prima — circular, 9 absolute principles (B–K) as attributes of God",
+    "T": "Figura Secunda — triangles of difference/concordance/contrariety, beginning/middle/end, majority/equality/minority",
+    "Third": "Figura Tertia — 36 two-letter cameras from all pairs of B–K",
+    "Fourth": "Figura Quarta — revolving mechanical wheel generating three-letter cameras",
+    "S": "Figura S — subjects mapped to principles (relational operator, NOT a domain)",
+    "V": "Figura V — virtues and vices (moral operator, NOT a domain)",
+    "X": "Part of Fourth Figure mechanics (NOT a domain label)"
+  },
+  "trithemius_integration": {
+    "thesis": "The process IS the meaning. Cipher = Angel = Cosmos.",
+    "proof": "Steganographia (1499): theological invocation (angel) and cryptographic algorithm (cipher) are the same structure viewed from different angles",
+    "ttcl_read": "Technology (acció/I) = the process that IS the meaning; Teologia (relació/G) = the angel = the relation; Kosmologia (ordinació/H) = the network = the ordered cosmos",
+    "canonical_camera": "GIH",
+    "five_layer_GIH": {
+      "G": "will / end / what quality? / senses / hope vs envy",
+      "I": "truth / equality / where? / elements / patience vs lies",
+      "H": "virtue / majority / when? / vegetation / charity vs wrath"
+    },
+    "semiotic_reading": "GIH asks: what quality of message? arrives where? arrives when? — a complete protocol specification inside Llull's combinatorial system"
+  },
+  "wheel_position_semantics": {
+    "B–K": "Five simultaneous semantic layers: principle + relational + question + subject + virtue/vice",
+    "L–R": "Theological-moral completion arc: law→revelation→intention→consequence→aeviternity. Fully Llull's — outer ring of rational existence.",
+    "note": "L-R do NOT carry the same five-layer depth as B-K but are equally valid wheel positions in the domain scoring system"
+  },
+  "key_axioms": [
+    "Every genuine gnosis event is a complete semiotic triad: sign(Tech) → reality(Kosmo) → recognition(Theo)",
+    "The camera is not three positions — it is the full five-layer intersection across three domains simultaneously",
+    "ProcessMeaning (Trithemius): when Tech and Theo are near-equal and high, the process IS the meaning",
+    "Aeviternity (R): the mode of created beings — beginning but no end. NOT eternity (no beginning). NOT time (has end).",
+    "The SYMBOL mode dominates (67%) because LOGOC corpus events are primarily about encoded meaning and law-governed habit",
+    "Figures S, V, X, T, A are OPERATORS in Llull's system — NOT domain labels",
+    "Primera intenció (N) is the highest motivational position: knowing, loving, serving God as pure motive"
+  ],
+  "corpus_stats": {
+    "total_events": 55,
+    "mean_v4_score": 0.883,
+    "std_v4_score": 0.0373,
+    "min_v4_score": 0.795,
+    "max_v4_score": 0.958,
+    "peirce_modes": {
+      "SYMBOL": 37,
+      "ICON": 10,
+      "INDEX": 8
+    },
+    "top_event": "The Stress Test Was Already Running",
+    "top_camera": "EEE"
+  }
+}

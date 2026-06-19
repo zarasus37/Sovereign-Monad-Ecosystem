@@ -1,0 +1,20 @@
+{
+  "name": "@sovereign/hepar-defi-auditor",
+  "version": "1.0.0",
+  "description": "Hepar DeFi Auditor — zero-day auditing engine for DeFi contracts",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@sovereign/types": "workspace:*",
+    "@sovereign/bus": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

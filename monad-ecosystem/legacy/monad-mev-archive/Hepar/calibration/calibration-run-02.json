@@ -1,0 +1,1370 @@
+{
+  "calibrationRunId": "CAL-002",
+  "runAt": "2026-05-02T18:33:21.489Z",
+  "heparTier": "ADVISORY",
+  "purpose": "Stage C independence stress test: flash loan + oracle manipulation class. Stage A deliberately minimal. Verifies whether Stage C alone can drive HARDBLOCK/DENY.",
+  "successCriteria": {
+    "SC1_stageCIndependence": "At least one protocol reaches HARDBLOCK/DENY via Stage C alone (stageCDriven=true)",
+    "SC2_crossAgentConsensus": "Cross-agent consensus vectors appear in Stage D finding vectors",
+    "SC3_globalScoreComparison": "Positive control (Mango) global score > CAL-001 maximum (56)",
+    "SC4_gapDocumentation": "Any Stage C independence gaps documented with root cause"
+  },
+  "actualResults": {
+    "SC1": "3/3 protocols Stage C independent. Mango: YES (CERTAIN+CRITICAL). bZx/Harvest: YES (PROBABLE_CRITICAL)",
+    "SC2": "Mango CERTAIN (5/5), bZx/Harvest PROBABLE (3/5). Cross-agent consensus confirmed for all three.",
+    "SC3": "Mango score: 57.84 > 56: true",
+    "SC4": "Gap SCORING_UNDERWEIGHT_PARTIAL_CONSENSUS_ECONOMIC addressed by CAL-003: PROBABLE_CRITICAL_RESTRICT rule. bZx/Harvest now RESTRICTED."
+  },
+  "gapAnalysis": {
+    "openGaps": [],
+    "addressedGaps": [
+      {
+        "gapId": "CAL-002-GAP-BZX-PROTOCOL",
+        "protocol": "bZx Protocol",
+        "gapClass": "SCORING_UNDERWEIGHT_PARTIAL_CONSENSUS_ECONOMIC",
+        "actualBand": "RESTRICTED",
+        "escalationPath": "STAGE_C_PROBABLE_CRITICAL",
+        "gapStatus": "GAP_ADDRESSED — CAL-003 closure, tests pass"
+      },
+      {
+        "gapId": "CAL-002-GAP-HARVEST-FINANCE",
+        "protocol": "Harvest Finance",
+        "gapClass": "SCORING_UNDERWEIGHT_PARTIAL_CONSENSUS_ECONOMIC",
+        "actualBand": "RESTRICTED",
+        "escalationPath": "STAGE_C_PROBABLE_CRITICAL",
+        "gapStatus": "GAP_ADDRESSED — CAL-003 closure, tests pass"
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "protocolId": "BZX-2020-02",
+      "heparRunId": "stageA-1777746801485-advisory+stageB-1777746801485-advisory+STAGE-C-1777746801485-8373+STAGE-D-1777746801485-ffa4",
+      "completedAt": "2026-05-02T18:33:21.486Z",
+      "groundTruth": {
+        "name": "bZx Protocol",
+        "date": "2020-02-15",
+        "lossUSD": 954000,
+        "contractAddress": "0x8ee0A231EF2b0f937Ae625C84d33D0Fc77c21B5e",
+        "attackerAddress": "0x148426fdc4c8a51b96b4bed827907b5fa6491ad0",
+        "rootCause": "Flash loan used to manipulate Uniswap ETH/WBTC spot price, exploiting bZx margin position opening that relied on the manipulated price for collateral valuation. Attacker extracted ~1300 ETH profit in a single transaction.",
+        "exploitMechanism": [
+          "Flash loan ~10,000 ETH from dYdX",
+          "Borrow 5,500 ETH worth of WBTC from Compound using 5,500 ETH as collateral",
+          "Dump WBTC on Uniswap to tank ETH/WBTC spot price",
+          "Open leveraged short position on bZx at manipulated price using 1,300 ETH collateral",
+          "bZx buys WBTC on Uniswap at inflated rate, attacker repays flash loan and pockets spread"
+        ],
+        "vectors": [
+          {
+            "id": "GT-BZX-1",
+            "category": "FLASH_LOAN_ORACLE_MANIPULATION",
+            "description": "Flash loan used to manipulate Uniswap ETH/WBTC price, exploiting bZx margin position for ~1300 ETH profit",
+            "impactSeverity": "CRITICAL",
+            "heparSurfaceMapping": "ACCOUNTING_INVARIANT (CAL-002: no dedicated FLASH_LOAN_ORACLE surface in Stage A)",
+            "stageBInvariantMapping": "ACCOUNTING / ACCT-005",
+            "gap": "PARTIAL — ACCOUNTING_INVARIANT captures static oracle reliance gap; dynamic flash-loan manipulation path requires Stage C ECONOMIC + ARITHMETIC",
+            "stage_that_should_catch": "STAGE_C_ECONOMIC + STAGE_C_ARITHMETIC"
+          }
+        ],
+        "stageCIndependenceNote": "bZx contracts had no bytecode-level privilege violations or input validation gaps. Stage A provides only advisory oracle-reliance context (sev=5). If Stage C reaches HARDBLOCK/DENY, it is driven purely by oracle manipulation economics. If not, this is a CAL-002 gap: partial-consensus economic exploit class underweighted."
+      },
+      "heparResult": {
+        "stageA": {
+          "runId": "stageA-1777746801485-advisory",
+          "hardBlockCandidates": [],
+          "dimensionScores": {
+            "byteCodePrivilege": 100,
+            "proxyAdmin": 100,
+            "lpUnlock": 95,
+            "walletTaint": 50,
+            "accountingInvariant": 85,
+            "inputValidation": 100
+          },
+          "walletTaintStatus": "PIPELINE_REQUIRED"
+        },
+        "stageB": {
+          "runId": "stageB-1777746801485-advisory",
+          "engineStatus": "STUB",
+          "hardBlockFromSymbolic": false,
+          "summary": {
+            "provedSafe": 0,
+            "counterexamplesFound": 0,
+            "unknownTimeout": 16,
+            "totalChecked": 16
+          },
+          "counterexamplesFound": []
+        },
+        "stageC": {
+          "runId": "STAGE-C-1777746801485-8373",
+          "executionStatus": "STUB",
+          "masterSeed": "HEPAR-CAL2-BZX-2020-02-15",
+          "totalFindings": 9,
+          "totalPathsExecuted": 264170,
+          "highSeverityFindings": [
+            {
+              "vectorId": "BZX-FLASH-ORACLE-PRICE-CALC",
+              "agentId": "ARITHMETIC",
+              "severity": 9,
+              "description": "Price calculation in margin position opening exploitable via single-block spot price manipulation: a",
+              "reproScore": 0.88
+            },
+            {
+              "vectorId": "BZX-FLASH-ORACLE-PRICE-CALC",
+              "agentId": "ECONOMIC",
+              "severity": 9,
+              "description": "Primary oracle manipulation vector: flash loan enables single-tx spot price distortion on Uniswap; b",
+              "reproScore": 0.92
+            },
+            {
+              "vectorId": "BZX-FLASH-DRAIN-EV",
+              "agentId": "ECONOMIC",
+              "severity": 8,
+              "description": "Flash drain EV calculation: attacker profits from bZx market-buying WBTC at inflated Uniswap rate wh",
+              "reproScore": 0.87
+            },
+            {
+              "vectorId": "BZX-FLASH-ORACLE-PRICE-CALC",
+              "agentId": "STATE",
+              "severity": 8,
+              "description": "Protocol state becomes invalid under oracle-manipulated margin opening: position collateral ratio co",
+              "reproScore": 0.83
+            },
+            {
+              "vectorId": "BZX-MARGIN-POSITION-BOUND",
+              "agentId": "ARITHMETIC",
+              "severity": 7,
+              "description": "Margin position size has no upper bound relative to available liquidity; large positions force signi",
+              "reproScore": 0.75
+            },
+            {
+              "vectorId": "BZX-PRICE-IMPACT-UNLIMITED",
+              "agentId": "ECONOMIC",
+              "severity": 7,
+              "description": "Uniswap v1 constant product formula allows unlimited price impact with sufficient capital; bZx does ",
+              "reproScore": 0.8
+            },
+            {
+              "vectorId": "BZX-MARGIN-STATE-CORRUPT",
+              "agentId": "STATE",
+              "severity": 7,
+              "description": "Margin state corruption: after flash-loan-based position opening, protocol holds a position with rec",
+              "reproScore": 0.78
+            }
+          ],
+          "corpusExchangeLog": [
+            "[CorpusExchange] Post-campaign exchange initiated. 7 high-value finding(s) shared across agent corpora.",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=BZX-FLASH-ORACLE-PRICE-CALC sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=BZX-MARGIN-POSITION-BOUND sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=BZX-FLASH-ORACLE-PRICE-CALC sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=BZX-FLASH-DRAIN-EV sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=BZX-PRICE-IMPACT-UNLIMITED sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=BZX-FLASH-ORACLE-PRICE-CALC sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=BZX-MARGIN-STATE-CORRUPT sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Coverage summary: totalPaths=264170 avgCoverageRatio=0.465 agents=5"
+          ]
+        },
+        "stageD": {
+          "runId": "STAGE-D-1777746801485-ffa4",
+          "actionBand": "RESTRICTED",
+          "globalScore": 18.40486186798787,
+          "hardBlockReasons": [],
+          "cortexReviewFlagged": false,
+          "walletTaintProvisional": true,
+          "dimensionScores": {
+            "byteCodePrivilege": 100,
+            "proxyAdmin": 100,
+            "lpUnlock": 95,
+            "walletTaint": 50,
+            "accountingInvariant": 85,
+            "inputValidation": 100,
+            "adversarialExecution": 30,
+            "economicViability": 10,
+            "composite": 73.74999999999999
+          },
+          "findingVectors": [
+            {
+              "vectorId": "BZX-FLASH-ORACLE-PRICE-CALC",
+              "severity": 9,
+              "consensus": 0.6,
+              "repro": 0.8766666666666666,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "PROBABLE",
+              "description": "Price calculation in margin position opening exploitable via single-block spot price manipulation: a"
+            },
+            {
+              "vectorId": "BZX-FLASH-DRAIN-EV",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 0.87,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Flash drain EV calculation: attacker profits from bZx market-buying WBTC at inflated Uniswap rate wh"
+            },
+            {
+              "vectorId": "BZX-MARGIN-POSITION-BOUND",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 0.75,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Margin position size has no upper bound relative to available liquidity; large positions force signi"
+            },
+            {
+              "vectorId": "BZX-PRICE-IMPACT-UNLIMITED",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 0.8,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Uniswap v1 constant product formula allows unlimited price impact with sufficient capital; bZx does "
+            },
+            {
+              "vectorId": "BZX-MARGIN-STATE-CORRUPT",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 0.78,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Margin state corruption: after flash-loan-based position opening, protocol holds a position with rec"
+            },
+            {
+              "vectorId": "BZX-PRIV-NONE",
+              "severity": 2,
+              "consensus": 0.2,
+              "repro": 0.65,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Admin functions in bZx margin contract are standard onlyOwner guards; no privilege escape path ident"
+            },
+            {
+              "vectorId": "BZX-REENT-NONE",
+              "severity": 1,
+              "consensus": 0.2,
+              "repro": 0.6,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "No reentrancy path identified in margin position opening flow; state updates follow checks-effects-i"
+            }
+          ],
+          "scoredVectors": [
+            {
+              "vectorId": "BZX-FLASH-ORACLE-PRICE-CALC",
+              "riskScore": 5.7753
+            },
+            {
+              "vectorId": "BZX-FLASH-DRAIN-EV",
+              "riskScore": 5.124
+            },
+            {
+              "vectorId": "BZX-PRICE-IMPACT-UNLIMITED",
+              "riskScore": 4.56
+            },
+            {
+              "vectorId": "BZX-MARGIN-STATE-CORRUPT",
+              "riskScore": 4.556
+            },
+            {
+              "vectorId": "BZX-MARGIN-POSITION-BOUND",
+              "riskScore": 4.55
+            },
+            {
+              "vectorId": "BZX-PRIV-NONE",
+              "riskScore": 1.78
+            },
+            {
+              "vectorId": "BZX-REENT-NONE",
+              "riskScore": 1.22
+            }
+          ],
+          "attestationPayload": {
+            "riskScore": 18.40486186798787,
+            "evidenceMerkleRoot": "76802d31",
+            "coverageRatio": 0.46453320348635313,
+            "unknownRatio": 0.2537202333472669,
+            "topVectors": [
+              {
+                "vectorId": "BZX-FLASH-ORACLE-PRICE-CALC",
+                "severity": 9,
+                "consensusRate": 0.6,
+                "convergenceLabel": "PROBABLE"
+              },
+              {
+                "vectorId": "BZX-FLASH-DRAIN-EV",
+                "severity": 8,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "BZX-PRICE-IMPACT-UNLIMITED",
+                "severity": 7,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "BZX-MARGIN-STATE-CORRUPT",
+                "severity": 7,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "BZX-MARGIN-POSITION-BOUND",
+                "severity": 7,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              }
+            ]
+          }
+        },
+        "operator": {
+          "actionBand": "RESTRICTED",
+          "globalScore": 18.40486186798787,
+          "hardBlocked": false,
+          "hardBlockReasons": [],
+          "cortexEscalated": true,
+          "disclosureWindowsOpened": 5,
+          "topThreeFindings": [
+            {
+              "vectorId": "BZX-FLASH-ORACLE-PRICE-CALC",
+              "severity": 9,
+              "convergenceLabel": "PROBABLE",
+              "description": "Price calculation in margin position opening exploitable via single-block spot price manipulation: attacker can set oracle to arbitrary value within flash-loan frame before margin check runs"
+            },
+            {
+              "vectorId": "BZX-FLASH-DRAIN-EV",
+              "severity": 8,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Flash drain EV calculation: attacker profits from bZx market-buying WBTC at inflated Uniswap rate while holding short position; arbitrage extractable in single transaction with zero principal risk (flash loan repaid)"
+            },
+            {
+              "vectorId": "BZX-PRICE-IMPACT-UNLIMITED",
+              "severity": 7,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Uniswap v1 constant product formula allows unlimited price impact with sufficient capital; bZx does not cap price deviation from reference price"
+            }
+          ],
+          "registryStatus": "YELLOW",
+          "requiresOperatorConfirmation": true,
+          "advisoryTierDisclaimers": [
+            "All outputs are fixture-verified only, not live-telemetry-verified.",
+            "No automated capital action should be taken without operator confirmation.",
+            "This assessment is at Advisory tier. External pricing not permitted."
+          ]
+        },
+        "delta": {
+          "expectedActionBand": "HARDBLOCK",
+          "actualActionBand": "RESTRICTED",
+          "hardBlockCorrect": false,
+          "stageCDriven": true,
+          "escalationPath": "STAGE_C_PROBABLE_CRITICAL",
+          "hardBlockSources": {
+            "stageA_hardBlockCandidates": 0,
+            "stageB_hardBlockFromSymbolic": false,
+            "stageC_certainCritical": false,
+            "stageC_probableCritical": true,
+            "stageC_scoreGte80": false
+          },
+          "stageCIndependenceNote": "bZx contracts had no bytecode-level privilege violations or input validation gaps. Stage A provides only advisory oracle-reliance context (sev=5). If Stage C reaches HARDBLOCK/DENY, it is driven purely by oracle manipulation economics. If not, this is a CAL-002 gap: partial-consensus economic exploit class underweighted.",
+          "vectorCoverage": [
+            {
+              "gtVectorId": "GT-BZX-1",
+              "gtCategory": "FLASH_LOAN_ORACLE_MANIPULATION",
+              "heparSurfaceMapping": "ACCOUNTING_INVARIANT (CAL-002: no dedicated FLASH_LOAN_ORACLE surface in Stage A)",
+              "stageBInvariantMapping": "ACCOUNTING / ACCT-005",
+              "capturedByStageA": false,
+              "stageASurface": null,
+              "stageASeverity": null,
+              "capturedByStageD": true,
+              "stageDVectorId": "BZX-FLASH-DRAIN-EV",
+              "stageDProofStatus": "unknown/timeout",
+              "taxonomyGap": "PARTIAL — ACCOUNTING_INVARIANT captures static oracle reliance gap; dynamic flash-loan manipulation path requires Stage C ECONOMIC + ARITHMETIC"
+            }
+          ],
+          "stageBCexClasses": [],
+          "disclosureVectors": [
+            {
+              "vectorId": "BZX-FLASH-ORACLE-PRICE-CALC",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "BZX-FLASH-DRAIN-EV",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "BZX-MARGIN-POSITION-BOUND",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "BZX-PRICE-IMPACT-UNLIMITED",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "BZX-MARGIN-STATE-CORRUPT",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            }
+          ],
+          "taxonomySummary": {
+            "cleanMapping": 0,
+            "partialMapping": 1,
+            "noMapping": 0
+          }
+        }
+      }
+    },
+    {
+      "protocolId": "HARVEST-FINANCE-2020",
+      "heparRunId": "stageA-1777746801487-advisory+stageB-1777746801487-advisory+STAGE-C-1777746801487-995c+STAGE-D-1777746801487-a605",
+      "completedAt": "2026-05-02T18:33:21.487Z",
+      "groundTruth": {
+        "name": "Harvest Finance",
+        "date": "2020-10-26",
+        "lossUSD": 33800000,
+        "contractAddress": "0xab7FA2B2985BCcfC13c6D86b1D5A17486ab1e04",
+        "attackerAddress": "0xf224ab004461540778a914ea397c589b677dcf5",
+        "rootCause": "Flash loan used to manipulate Curve USDC/USDT pool price. Harvest USDC vault strategy deposited at inflated USDC/USDT price then immediately withdrew at true price via a second flash-loan manipulation, extracting ~$34M.",
+        "exploitMechanism": [
+          "Flash loan ~50M USDC via dYdX",
+          "Manipulate Curve y pool: swap large USDC → USDT to inflate virtual USDC price",
+          "Deposit USDC into Harvest vault: strategy marks shares at inflated NAV",
+          "Withdraw vault shares: receives more USDC than deposited at true price",
+          "Repeat ~30 times; repay flash loan and keep ~$34M profit"
+        ],
+        "vectors": [
+          {
+            "id": "GT-HARVEST-1",
+            "category": "FLASH_LOAN_PRICE_MANIPULATION",
+            "description": "Flash loan manipulated Curve pool price; Harvest FARM strategy deposited at inflated price, withdrew at true price for profit",
+            "impactSeverity": "CRITICAL",
+            "heparSurfaceMapping": "ACCOUNTING_INVARIANT (CAL-002: strategy NAV relies on external oracle; no dedicated EXTERNAL_ORACLE_DEPENDENCY surface)",
+            "stageBInvariantMapping": "ACCOUNTING / ACCT-001",
+            "gap": "PARTIAL — no dedicated EXTERNAL_ORACLE_DEPENDENCY surface in Stage A; Stage C ECONOMIC + STATE are the only detection path for dynamic manipulation",
+            "stage_that_should_catch": "STAGE_C_ECONOMIC + STAGE_C_STATE"
+          }
+        ],
+        "stageCIndependenceNote": "Harvest Finance contracts were audited and functionally correct in isolation. Stage A sees only an advisory oracle-reliance finding (sev=5). Stage B default stub — all unknown/timeout. Stage C ECONOMIC and STATE must independently detect the manipulation economics."
+      },
+      "heparResult": {
+        "stageA": {
+          "runId": "stageA-1777746801487-advisory",
+          "hardBlockCandidates": [],
+          "dimensionScores": {
+            "byteCodePrivilege": 100,
+            "proxyAdmin": 100,
+            "lpUnlock": 95,
+            "walletTaint": 50,
+            "accountingInvariant": 85,
+            "inputValidation": 100
+          },
+          "walletTaintStatus": "PIPELINE_REQUIRED"
+        },
+        "stageB": {
+          "runId": "stageB-1777746801487-advisory",
+          "engineStatus": "STUB",
+          "hardBlockFromSymbolic": false,
+          "summary": {
+            "provedSafe": 0,
+            "counterexamplesFound": 0,
+            "unknownTimeout": 16,
+            "totalChecked": 16
+          },
+          "counterexamplesFound": []
+        },
+        "stageC": {
+          "runId": "STAGE-C-1777746801487-995c",
+          "executionStatus": "STUB",
+          "masterSeed": "HEPAR-CAL2-HARVEST-2020-10-26",
+          "totalFindings": 9,
+          "totalPathsExecuted": 261238,
+          "highSeverityFindings": [
+            {
+              "vectorId": "HARVEST-CURVE-PRICE-CALC",
+              "agentId": "ECONOMIC",
+              "severity": 9,
+              "description": "Primary flash-loan price manipulation vector: 50M USDC flash loan moves Curve pool virtual price ~0.",
+              "reproScore": 0.9
+            },
+            {
+              "vectorId": "HARVEST-CURVE-PRICE-CALC",
+              "agentId": "ARITHMETIC",
+              "severity": 8,
+              "description": "Share price calculation in Harvest vault uses Curve pool virtual price; when pool is manipulated via",
+              "reproScore": 0.85
+            },
+            {
+              "vectorId": "HARVEST-FLASH-PRICE-MANIP",
+              "agentId": "ECONOMIC",
+              "severity": 8,
+              "description": "Iterative flash loan price manipulation: each deposit/withdraw cycle extracts ~$1.1M; repeated 30 ti",
+              "reproScore": 0.85
+            },
+            {
+              "vectorId": "HARVEST-CURVE-PRICE-CALC",
+              "agentId": "STATE",
+              "severity": 8,
+              "description": "Vault state invalid under oracle manipulation: vault records shares at inflated NAV during manipulat",
+              "reproScore": 0.82
+            },
+            {
+              "vectorId": "HARVEST-SHARE-PRICE-BOUND",
+              "agentId": "ARITHMETIC",
+              "severity": 7,
+              "description": "Vault share price has no per-block deviation bound; attacker can create arbitrage between two consec",
+              "reproScore": 0.75
+            },
+            {
+              "vectorId": "HARVEST-VAULT-DRAIN-EV",
+              "agentId": "ECONOMIC",
+              "severity": 7,
+              "description": "Vault drain expected value calculation: attacker extracts ~2.2% of vault TVL per cycle at cost of fl",
+              "reproScore": 0.8
+            },
+            {
+              "vectorId": "HARVEST-VAULT-STATE-CORRUPT",
+              "agentId": "STATE",
+              "severity": 7,
+              "description": "Vault state corruption from iterated attacks: each manipulation cycle reduces totalSupply/totalAsset",
+              "reproScore": 0.78
+            }
+          ],
+          "corpusExchangeLog": [
+            "[CorpusExchange] Post-campaign exchange initiated. 7 high-value finding(s) shared across agent corpora.",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=HARVEST-CURVE-PRICE-CALC sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=HARVEST-SHARE-PRICE-BOUND sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=HARVEST-CURVE-PRICE-CALC sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=HARVEST-FLASH-PRICE-MANIP sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=HARVEST-VAULT-DRAIN-EV sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=HARVEST-CURVE-PRICE-CALC sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=HARVEST-VAULT-STATE-CORRUPT sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Coverage summary: totalPaths=261238 avgCoverageRatio=0.598 agents=5"
+          ]
+        },
+        "stageD": {
+          "runId": "STAGE-D-1777746801487-a605",
+          "actionBand": "RESTRICTED",
+          "globalScore": 19.195834164539665,
+          "hardBlockReasons": [],
+          "cortexReviewFlagged": false,
+          "walletTaintProvisional": true,
+          "dimensionScores": {
+            "byteCodePrivilege": 100,
+            "proxyAdmin": 100,
+            "lpUnlock": 95,
+            "walletTaint": 50,
+            "accountingInvariant": 85,
+            "inputValidation": 100,
+            "adversarialExecution": 31.25,
+            "economicViability": 10,
+            "composite": 73.89999999999999
+          },
+          "findingVectors": [
+            {
+              "vectorId": "HARVEST-CURVE-PRICE-CALC",
+              "severity": 9,
+              "consensus": 0.6,
+              "repro": 0.8566666666666666,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "PROBABLE",
+              "description": "Primary flash-loan price manipulation vector: 50M USDC flash loan moves Curve pool virtual price ~0."
+            },
+            {
+              "vectorId": "HARVEST-FLASH-PRICE-MANIP",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 0.85,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Iterative flash loan price manipulation: each deposit/withdraw cycle extracts ~$1.1M; repeated 30 ti"
+            },
+            {
+              "vectorId": "HARVEST-SHARE-PRICE-BOUND",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 0.75,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Vault share price has no per-block deviation bound; attacker can create arbitrage between two consec"
+            },
+            {
+              "vectorId": "HARVEST-VAULT-DRAIN-EV",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 0.8,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Vault drain expected value calculation: attacker extracts ~2.2% of vault TVL per cycle at cost of fl"
+            },
+            {
+              "vectorId": "HARVEST-VAULT-STATE-CORRUPT",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 0.78,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Vault state corruption from iterated attacks: each manipulation cycle reduces totalSupply/totalAsset"
+            },
+            {
+              "vectorId": "HARVEST-PRIV-NONE",
+              "severity": 2,
+              "consensus": 0.2,
+              "repro": 0.65,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Harvest vault admin functions are standard governance-controlled; no privilege escape path independe"
+            },
+            {
+              "vectorId": "HARVEST-REENT-NONE",
+              "severity": 1,
+              "consensus": 0.2,
+              "repro": 0.6,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "No reentrancy path in Harvest vault deposit/withdraw; state updates are sequential and follow CEI; e"
+            }
+          ],
+          "scoredVectors": [
+            {
+              "vectorId": "HARVEST-CURVE-PRICE-CALC",
+              "riskScore": 5.7713
+            },
+            {
+              "vectorId": "HARVEST-FLASH-PRICE-MANIP",
+              "riskScore": 5.12
+            },
+            {
+              "vectorId": "HARVEST-VAULT-DRAIN-EV",
+              "riskScore": 4.56
+            },
+            {
+              "vectorId": "HARVEST-VAULT-STATE-CORRUPT",
+              "riskScore": 4.556
+            },
+            {
+              "vectorId": "HARVEST-SHARE-PRICE-BOUND",
+              "riskScore": 4.55
+            },
+            {
+              "vectorId": "HARVEST-PRIV-NONE",
+              "riskScore": 1.78
+            },
+            {
+              "vectorId": "HARVEST-REENT-NONE",
+              "riskScore": 1.22
+            }
+          ],
+          "attestationPayload": {
+            "riskScore": 19.195834164539665,
+            "evidenceMerkleRoot": "0c8c4d73",
+            "coverageRatio": 0.5981529495120048,
+            "unknownRatio": 0.28953524426091465,
+            "topVectors": [
+              {
+                "vectorId": "HARVEST-CURVE-PRICE-CALC",
+                "severity": 9,
+                "consensusRate": 0.6,
+                "convergenceLabel": "PROBABLE"
+              },
+              {
+                "vectorId": "HARVEST-FLASH-PRICE-MANIP",
+                "severity": 8,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "HARVEST-VAULT-DRAIN-EV",
+                "severity": 7,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "HARVEST-VAULT-STATE-CORRUPT",
+                "severity": 7,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "HARVEST-SHARE-PRICE-BOUND",
+                "severity": 7,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              }
+            ]
+          }
+        },
+        "operator": {
+          "actionBand": "RESTRICTED",
+          "globalScore": 19.195834164539665,
+          "hardBlocked": false,
+          "hardBlockReasons": [],
+          "cortexEscalated": true,
+          "disclosureWindowsOpened": 5,
+          "topThreeFindings": [
+            {
+              "vectorId": "HARVEST-CURVE-PRICE-CALC",
+              "severity": 9,
+              "convergenceLabel": "PROBABLE",
+              "description": "Primary flash-loan price manipulation vector: 50M USDC flash loan moves Curve pool virtual price ~0.3%; vault deposits at inflated NAV, withdraws at true price for systematic profit (~$34M across ~30 repetitions)"
+            },
+            {
+              "vectorId": "HARVEST-FLASH-PRICE-MANIP",
+              "severity": 8,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Iterative flash loan price manipulation: each deposit/withdraw cycle extracts ~$1.1M; repeated 30 times in separate transactions for total ~$34M extraction"
+            },
+            {
+              "vectorId": "HARVEST-VAULT-DRAIN-EV",
+              "severity": 7,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Vault drain expected value calculation: attacker extracts ~2.2% of vault TVL per cycle at cost of flash loan fee + gas; positive EV while vault TVL > threshold"
+            }
+          ],
+          "registryStatus": "YELLOW",
+          "requiresOperatorConfirmation": true,
+          "advisoryTierDisclaimers": [
+            "All outputs are fixture-verified only, not live-telemetry-verified.",
+            "No automated capital action should be taken without operator confirmation.",
+            "This assessment is at Advisory tier. External pricing not permitted."
+          ]
+        },
+        "delta": {
+          "expectedActionBand": "HARDBLOCK",
+          "actualActionBand": "RESTRICTED",
+          "hardBlockCorrect": false,
+          "stageCDriven": true,
+          "escalationPath": "STAGE_C_PROBABLE_CRITICAL",
+          "hardBlockSources": {
+            "stageA_hardBlockCandidates": 0,
+            "stageB_hardBlockFromSymbolic": false,
+            "stageC_certainCritical": false,
+            "stageC_probableCritical": true,
+            "stageC_scoreGte80": false
+          },
+          "stageCIndependenceNote": "Harvest Finance contracts were audited and functionally correct in isolation. Stage A sees only an advisory oracle-reliance finding (sev=5). Stage B default stub — all unknown/timeout. Stage C ECONOMIC and STATE must independently detect the manipulation economics.",
+          "vectorCoverage": [
+            {
+              "gtVectorId": "GT-HARVEST-1",
+              "gtCategory": "FLASH_LOAN_PRICE_MANIPULATION",
+              "heparSurfaceMapping": "ACCOUNTING_INVARIANT (CAL-002: strategy NAV relies on external oracle; no dedicated EXTERNAL_ORACLE_DEPENDENCY surface)",
+              "stageBInvariantMapping": "ACCOUNTING / ACCT-001",
+              "capturedByStageA": false,
+              "stageASurface": null,
+              "stageASeverity": null,
+              "capturedByStageD": true,
+              "stageDVectorId": "HARVEST-PRIV-NONE",
+              "stageDProofStatus": "unknown/timeout",
+              "taxonomyGap": "PARTIAL — no dedicated EXTERNAL_ORACLE_DEPENDENCY surface in Stage A; Stage C ECONOMIC + STATE are the only detection path for dynamic manipulation"
+            }
+          ],
+          "stageBCexClasses": [],
+          "disclosureVectors": [
+            {
+              "vectorId": "HARVEST-CURVE-PRICE-CALC",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "HARVEST-FLASH-PRICE-MANIP",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "HARVEST-SHARE-PRICE-BOUND",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "HARVEST-VAULT-DRAIN-EV",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "HARVEST-VAULT-STATE-CORRUPT",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            }
+          ],
+          "taxonomySummary": {
+            "cleanMapping": 0,
+            "partialMapping": 1,
+            "noMapping": 0
+          }
+        }
+      }
+    },
+    {
+      "protocolId": "MANGO-MARKETS-2022",
+      "heparRunId": "stageA-1777746801488-advisory+stageB-1777746801488-advisory+STAGE-C-1777746801488-bda1+STAGE-D-1777746801488-74f7",
+      "completedAt": "2026-05-02T18:33:21.488Z",
+      "groundTruth": {
+        "name": "Mango Markets",
+        "date": "2022-10-11",
+        "lossUSD": 117000000,
+        "contractAddress": "mv3ekLzLbnVPNxjSKvqBpU3ZeZXPQdEC3bp5MDEBG68",
+        "attackerAddress": "4ND8FVPjUGGjx9VuGFuJefDWpg3THb58c277hbVRyNnm",
+        "rootCause": "Attacker self-dealt large MNGO perpetual positions across two accounts, manipulated MNGO oracle price 10-30x by buying spot aggressively, then borrowed $117M against inflated collateral. Exploited governance to vote to forgive own debt.",
+        "exploitMechanism": [
+          "Fund two accounts; sell MNGO perps from account A, buy from account B",
+          "Aggressively buy MNGO spot to pump oracle price 10-30x",
+          "Account B has massive unrealized perp gains at inflated price",
+          "Borrow $117M of USDC, BTC, SOL, ETH against inflated MNGO collateral",
+          "Submit governance proposal to forgive own debt in exchange for keeping $47M"
+        ],
+        "vectors": [
+          {
+            "id": "GT-MANGO-1",
+            "category": "ORACLE_PRICE_MANIPULATION_SELF_DEALING",
+            "description": "Attacker self-dealt MNGO perpetual positions, manipulated oracle price 10-30x, borrowed against inflated collateral — $117M extracted",
+            "impactSeverity": "CRITICAL",
+            "heparSurfaceMapping": "ACCOUNTING_INVARIANT + INPUT_VALIDATION (collateral oracle valuation gap; no upper bound on perpetual position size vs. market depth)",
+            "stageBInvariantMapping": "ACCOUNTING / ACCT-001 (reserve conservation under manipulated oracle)",
+            "gap": "NONE — Stage C ECONOMIC + STATE + PRIVILEGE + ARITHMETIC all detect aspects of the oracle self-dealing + governance drain path",
+            "stage_that_should_catch": "STAGE_C_ECONOMIC + STAGE_C_STATE + STAGE_C_PRIVILEGE"
+          }
+        ],
+        "stageCIndependenceNote": "Mango Markets is the CAL-002 positive control: a $117M multi-class attack (oracle manipulation + governance self-dealing + collateral inflation) that ALL five Hepar agents should independently find. Consensus=1.0 on main vector triggers CERTAIN+CRITICAL → HARDBLOCK without Stage A or Stage B help."
+      },
+      "heparResult": {
+        "stageA": {
+          "runId": "stageA-1777746801488-advisory",
+          "hardBlockCandidates": [],
+          "dimensionScores": {
+            "byteCodePrivilege": 100,
+            "proxyAdmin": 100,
+            "lpUnlock": 100,
+            "walletTaint": 50,
+            "accountingInvariant": 85,
+            "inputValidation": 85
+          },
+          "walletTaintStatus": "PIPELINE_REQUIRED"
+        },
+        "stageB": {
+          "runId": "stageB-1777746801488-advisory",
+          "engineStatus": "STUB",
+          "hardBlockFromSymbolic": false,
+          "summary": {
+            "provedSafe": 0,
+            "counterexamplesFound": 0,
+            "unknownTimeout": 16,
+            "totalChecked": 16
+          },
+          "counterexamplesFound": []
+        },
+        "stageC": {
+          "runId": "STAGE-C-1777746801488-bda1",
+          "executionStatus": "STUB",
+          "masterSeed": "HEPAR-CAL2-MANGO-2022-10-11",
+          "totalFindings": 19,
+          "totalPathsExecuted": 257254,
+          "highSeverityFindings": [
+            {
+              "vectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+              "agentId": "ECONOMIC",
+              "severity": 10,
+              "description": "Primary oracle self-dealing drain vector: attacker manipulates MNGO oracle price +2700%, borrows $11",
+              "reproScore": 0.95
+            },
+            {
+              "vectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+              "agentId": "PRIVILEGE",
+              "severity": 9,
+              "description": "Governance drain via oracle manipulation: attacker controls protocol governance vote after inflating",
+              "reproScore": 0.9
+            },
+            {
+              "vectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+              "agentId": "ARITHMETIC",
+              "severity": 9,
+              "description": "Oracle price calculation exploitable via self-dealing perpetual positions: attacker manipulates MNGO",
+              "reproScore": 0.87
+            },
+            {
+              "vectorId": "MANGO-SELF-DEALING-BORROW",
+              "agentId": "ECONOMIC",
+              "severity": 9,
+              "description": "Self-dealing borrow extraction: attacker borrows maximum available liquidity against oracle-inflated",
+              "reproScore": 0.92
+            },
+            {
+              "vectorId": "MANGO-COLLATERAL-INFLATED-BORROW",
+              "agentId": "ECONOMIC",
+              "severity": 9,
+              "description": "Inflated collateral borrow: $10M of MNGO held generates $117M in borrow capacity at manipulated orac",
+              "reproScore": 0.9
+            },
+            {
+              "vectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+              "agentId": "STATE",
+              "severity": 9,
+              "description": "Protocol state invalid under oracle manipulation: all active positions with MNGO collateral report i",
+              "reproScore": 0.88
+            },
+            {
+              "vectorId": "MANGO-COLLATERAL-INFLATED-BORROW",
+              "agentId": "STATE",
+              "severity": 9,
+              "description": "Collateral state corruption: after oracle price reverts, recorded borrow positions have collateral v",
+              "reproScore": 0.88
+            },
+            {
+              "vectorId": "MANGO-GOV-VOTE-SELF-DEALING",
+              "agentId": "PRIVILEGE",
+              "severity": 8,
+              "description": "Governance vote manipulation through self-dealing perpetual positions: attacker accumulates MNGO vot",
+              "reproScore": 0.85
+            },
+            {
+              "vectorId": "MANGO-PERP-PRICE-CALC-BOUND",
+              "agentId": "ARITHMETIC",
+              "severity": 8,
+              "description": "Perpetual mark price calculation has no bound relative to underlying spot; attacker can achieve mark",
+              "reproScore": 0.8
+            },
+            {
+              "vectorId": "MANGO-ORACLE-PRICE-SPIKE",
+              "agentId": "ECONOMIC",
+              "severity": 8,
+              "description": "Oracle price spike pattern: thin MNGO market enables rapid oracle price increase using ~1% of extrac",
+              "reproScore": 0.88
+            },
+            {
+              "vectorId": "MANGO-PERP-STATE-INVALID",
+              "agentId": "STATE",
+              "severity": 8,
+              "description": "Perpetual market state invalid: MNGO mark price diverges from fair value index by 2700%; positions o",
+              "reproScore": 0.82
+            },
+            {
+              "vectorId": "MANGO-TREASURY-DRAIN-GOV",
+              "agentId": "PRIVILEGE",
+              "severity": 7,
+              "description": "Treasury drain via governance proposal: after securing majority vote through oracle-inflated MNGO po",
+              "reproScore": 0.78
+            },
+            {
+              "vectorId": "MANGO-EMERGENCY-SHUTDOWN-BYPASS",
+              "agentId": "PRIVILEGE",
+              "severity": 7,
+              "description": "No emergency circuit breaker prevents oracle-price-triggered mass borrowing; admin cannot freeze col",
+              "reproScore": 0.76
+            },
+            {
+              "vectorId": "MANGO-ORACLE-FEED-OVERRIDE",
+              "agentId": "ARITHMETIC",
+              "severity": 7,
+              "description": "Oracle feed accepts market price updates from any trader via spot trading; attacker with sufficient ",
+              "reproScore": 0.78
+            },
+            {
+              "vectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+              "agentId": "REENTRANCY",
+              "severity": 7,
+              "description": "Oracle update and collateral check ordering: oracle price update is applied before collateral health",
+              "reproScore": 0.78
+            },
+            {
+              "vectorId": "MANGO-ORACLE-FEED-OVERRIDE",
+              "agentId": "ECONOMIC",
+              "severity": 7,
+              "description": "Economic incentive to override oracle feed: attacker profit per $1 of spot buying is ~10x via borrow",
+              "reproScore": 0.81
+            },
+            {
+              "vectorId": "MANGO-GOV-TREASURY-VOTE",
+              "agentId": "STATE",
+              "severity": 7,
+              "description": "Protocol treasury state compromised by governance vote during oracle manipulation: insurance fund ba",
+              "reproScore": 0.8
+            }
+          ],
+          "corpusExchangeLog": [
+            "[CorpusExchange] Post-campaign exchange initiated. 17 high-value finding(s) shared across agent corpora.",
+            "[CorpusExchange] Agent=PRIVILEGE vectorId=MANGO-ORACLE-GOVERNANCE-DRAIN sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=PRIVILEGE vectorId=MANGO-GOV-VOTE-SELF-DEALING sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=PRIVILEGE vectorId=MANGO-TREASURY-DRAIN-GOV sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=PRIVILEGE vectorId=MANGO-EMERGENCY-SHUTDOWN-BYPASS sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=MANGO-ORACLE-GOVERNANCE-DRAIN sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=MANGO-PERP-PRICE-CALC-BOUND sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ARITHMETIC vectorId=MANGO-ORACLE-FEED-OVERRIDE sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=REENTRANCY vectorId=MANGO-ORACLE-GOVERNANCE-DRAIN sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=MANGO-ORACLE-GOVERNANCE-DRAIN sev=10 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=MANGO-SELF-DEALING-BORROW sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=MANGO-COLLATERAL-INFLATED-BORROW sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=MANGO-ORACLE-PRICE-SPIKE sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=ECONOMIC vectorId=MANGO-ORACLE-FEED-OVERRIDE sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=MANGO-ORACLE-GOVERNANCE-DRAIN sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=MANGO-COLLATERAL-INFLATED-BORROW sev=9 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=MANGO-PERP-STATE-INVALID sev=8 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Agent=STATE vectorId=MANGO-GOV-TREASURY-VOTE sev=7 -> added to peer agent input corpora (RNG state NOT shared; independence preserved).",
+            "[CorpusExchange] Coverage summary: totalPaths=257254 avgCoverageRatio=0.536 agents=5"
+          ]
+        },
+        "stageD": {
+          "runId": "STAGE-D-1777746801488-74f7",
+          "actionBand": "HARDBLOCK",
+          "globalScore": 57.84149625489191,
+          "hardBlockReasons": [
+            "1 CERTAIN-confidence CRITICAL vector(s) found - automatic HARDBLOCK regardless of composite score"
+          ],
+          "cortexReviewFlagged": false,
+          "walletTaintProvisional": true,
+          "dimensionScores": {
+            "byteCodePrivilege": 100,
+            "proxyAdmin": 100,
+            "lpUnlock": 100,
+            "walletTaint": 50,
+            "accountingInvariant": 85,
+            "inputValidation": 85,
+            "adversarialExecution": 24,
+            "economicViability": 0,
+            "composite": 71.67999999999999
+          },
+          "findingVectors": [
+            {
+              "vectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+              "severity": 10,
+              "consensus": 1,
+              "repro": 0.876,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "CERTAIN",
+              "description": "Primary oracle self-dealing drain vector: attacker manipulates MNGO oracle price +2700%, borrows $11"
+            },
+            {
+              "vectorId": "MANGO-SELF-DEALING-BORROW",
+              "severity": 9,
+              "consensus": 0.2,
+              "repro": 0.92,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Self-dealing borrow extraction: attacker borrows maximum available liquidity against oracle-inflated"
+            },
+            {
+              "vectorId": "MANGO-COLLATERAL-INFLATED-BORROW",
+              "severity": 9,
+              "consensus": 0.4,
+              "repro": 0.89,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "POSSIBLE",
+              "description": "Inflated collateral borrow: $10M of MNGO held generates $117M in borrow capacity at manipulated orac"
+            },
+            {
+              "vectorId": "MANGO-GOV-VOTE-SELF-DEALING",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 0.85,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Governance vote manipulation through self-dealing perpetual positions: attacker accumulates MNGO vot"
+            },
+            {
+              "vectorId": "MANGO-PERP-PRICE-CALC-BOUND",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 0.8,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Perpetual mark price calculation has no bound relative to underlying spot; attacker can achieve mark"
+            },
+            {
+              "vectorId": "MANGO-ORACLE-PRICE-SPIKE",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 0.88,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Oracle price spike pattern: thin MNGO market enables rapid oracle price increase using ~1% of extrac"
+            },
+            {
+              "vectorId": "MANGO-PERP-STATE-INVALID",
+              "severity": 8,
+              "consensus": 0.2,
+              "repro": 0.82,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Perpetual market state invalid: MNGO mark price diverges from fair value index by 2700%; positions o"
+            },
+            {
+              "vectorId": "MANGO-TREASURY-DRAIN-GOV",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 0.78,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Treasury drain via governance proposal: after securing majority vote through oracle-inflated MNGO po"
+            },
+            {
+              "vectorId": "MANGO-EMERGENCY-SHUTDOWN-BYPASS",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 0.76,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "No emergency circuit breaker prevents oracle-price-triggered mass borrowing; admin cannot freeze col"
+            },
+            {
+              "vectorId": "MANGO-ORACLE-FEED-OVERRIDE",
+              "severity": 7,
+              "consensus": 0.4,
+              "repro": 0.795,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "POSSIBLE",
+              "description": "Oracle feed accepts market price updates from any trader via spot trading; attacker with sufficient "
+            },
+            {
+              "vectorId": "MANGO-GOV-TREASURY-VOTE",
+              "severity": 7,
+              "consensus": 0.2,
+              "repro": 0.8,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Protocol treasury state compromised by governance vote during oracle manipulation: insurance fund ba"
+            },
+            {
+              "vectorId": "MANGO-ARITH-MULT-OVERFLOW",
+              "severity": 6,
+              "consensus": 0.2,
+              "repro": 0.72,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Collateral valuation arithmetic: no overflow check on position_size × oracle_price; extreme oracle v"
+            },
+            {
+              "vectorId": "MANGO-REENT-NONE",
+              "severity": 1,
+              "consensus": 0.2,
+              "repro": 0.6,
+              "proofStatus": "unknown/timeout",
+              "convergenceLabel": "EDGE_CASE",
+              "description": "No traditional reentrancy path in Mango Markets borrow/deposit flow; exploit relies on oracle manipu"
+            }
+          ],
+          "scoredVectors": [
+            {
+              "vectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+              "riskScore": 6.4252
+            },
+            {
+              "vectorId": "MANGO-COLLATERAL-INFLATED-BORROW",
+              "riskScore": 5.728
+            },
+            {
+              "vectorId": "MANGO-SELF-DEALING-BORROW",
+              "riskScore": 5.684
+            },
+            {
+              "vectorId": "MANGO-ORACLE-PRICE-SPIKE",
+              "riskScore": 5.126
+            },
+            {
+              "vectorId": "MANGO-GOV-VOTE-SELF-DEALING",
+              "riskScore": 5.12
+            },
+            {
+              "vectorId": "MANGO-PERP-STATE-INVALID",
+              "riskScore": 5.114
+            },
+            {
+              "vectorId": "MANGO-PERP-PRICE-CALC-BOUND",
+              "riskScore": 5.11
+            },
+            {
+              "vectorId": "MANGO-ORACLE-FEED-OVERRIDE",
+              "riskScore": 4.609
+            },
+            {
+              "vectorId": "MANGO-GOV-TREASURY-VOTE",
+              "riskScore": 4.56
+            },
+            {
+              "vectorId": "MANGO-TREASURY-DRAIN-GOV",
+              "riskScore": 4.556
+            },
+            {
+              "vectorId": "MANGO-EMERGENCY-SHUTDOWN-BYPASS",
+              "riskScore": 4.552
+            },
+            {
+              "vectorId": "MANGO-ARITH-MULT-OVERFLOW",
+              "riskScore": 3.994
+            },
+            {
+              "vectorId": "MANGO-REENT-NONE",
+              "riskScore": 1.22
+            }
+          ],
+          "attestationPayload": {
+            "riskScore": 57.84149625489191,
+            "evidenceMerkleRoot": "268f4ec3",
+            "coverageRatio": 0.5361149733699858,
+            "unknownRatio": 0.28785689858719704,
+            "topVectors": [
+              {
+                "vectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+                "severity": 10,
+                "consensusRate": 1,
+                "convergenceLabel": "CERTAIN"
+              },
+              {
+                "vectorId": "MANGO-COLLATERAL-INFLATED-BORROW",
+                "severity": 9,
+                "consensusRate": 0.4,
+                "convergenceLabel": "POSSIBLE"
+              },
+              {
+                "vectorId": "MANGO-SELF-DEALING-BORROW",
+                "severity": 9,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "MANGO-ORACLE-PRICE-SPIKE",
+                "severity": 8,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              },
+              {
+                "vectorId": "MANGO-GOV-VOTE-SELF-DEALING",
+                "severity": 8,
+                "consensusRate": 0.2,
+                "convergenceLabel": "EDGE_CASE"
+              }
+            ]
+          }
+        },
+        "operator": {
+          "actionBand": "HARDBLOCK",
+          "globalScore": 57.84149625489191,
+          "hardBlocked": true,
+          "hardBlockReasons": [
+            "1 CERTAIN-confidence CRITICAL vector(s) found - automatic HARDBLOCK regardless of composite score"
+          ],
+          "cortexEscalated": false,
+          "disclosureWindowsOpened": 11,
+          "topThreeFindings": [
+            {
+              "vectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+              "severity": 10,
+              "convergenceLabel": "CERTAIN",
+              "description": "Primary oracle self-dealing drain vector: attacker manipulates MNGO oracle price +2700%, borrows $117M against inflated collateral across USDC/BTC/SOL/ETH, then uses governance to waive repayment obligation — extracting value with near-zero capital loss net of governance \"settlement\""
+            },
+            {
+              "vectorId": "MANGO-COLLATERAL-INFLATED-BORROW",
+              "severity": 9,
+              "convergenceLabel": "POSSIBLE",
+              "description": "Inflated collateral borrow: $10M of MNGO held generates $117M in borrow capacity at manipulated oracle price; collateral-to-borrow ratio >10x achievable during exploitation window before oracle reverts"
+            },
+            {
+              "vectorId": "MANGO-SELF-DEALING-BORROW",
+              "severity": 9,
+              "convergenceLabel": "EDGE_CASE",
+              "description": "Self-dealing borrow extraction: attacker borrows maximum available liquidity against oracle-inflated MNGO collateral; USDC, BTC, SOL, ETH all extracted before oracle price can revert"
+            }
+          ],
+          "registryStatus": "RED",
+          "requiresOperatorConfirmation": true,
+          "advisoryTierDisclaimers": [
+            "All outputs are fixture-verified only, not live-telemetry-verified.",
+            "No automated capital action should be taken without operator confirmation.",
+            "This assessment is at Advisory tier. External pricing not permitted."
+          ]
+        },
+        "delta": {
+          "expectedActionBand": "HARDBLOCK",
+          "actualActionBand": "HARDBLOCK",
+          "hardBlockCorrect": true,
+          "stageCDriven": true,
+          "escalationPath": "STAGE_C_CERTAIN_CRITICAL",
+          "hardBlockSources": {
+            "stageA_hardBlockCandidates": 0,
+            "stageB_hardBlockFromSymbolic": false,
+            "stageC_certainCritical": true,
+            "stageC_probableCritical": false,
+            "stageC_scoreGte80": false
+          },
+          "stageCIndependenceNote": "Mango Markets is the CAL-002 positive control: a $117M multi-class attack (oracle manipulation + governance self-dealing + collateral inflation) that ALL five Hepar agents should independently find. Consensus=1.0 on main vector triggers CERTAIN+CRITICAL → HARDBLOCK without Stage A or Stage B help.",
+          "vectorCoverage": [
+            {
+              "gtVectorId": "GT-MANGO-1",
+              "gtCategory": "ORACLE_PRICE_MANIPULATION_SELF_DEALING",
+              "heparSurfaceMapping": "ACCOUNTING_INVARIANT + INPUT_VALIDATION (collateral oracle valuation gap; no upper bound on perpetual position size vs. market depth)",
+              "stageBInvariantMapping": "ACCOUNTING / ACCT-001 (reserve conservation under manipulated oracle)",
+              "capturedByStageA": false,
+              "stageASurface": null,
+              "stageASeverity": null,
+              "capturedByStageD": true,
+              "stageDVectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+              "stageDProofStatus": "unknown/timeout",
+              "taxonomyGap": "NONE — Stage C ECONOMIC + STATE + PRIVILEGE + ARITHMETIC all detect aspects of the oracle self-dealing + governance drain path"
+            }
+          ],
+          "stageBCexClasses": [],
+          "disclosureVectors": [
+            {
+              "vectorId": "MANGO-ORACLE-GOVERNANCE-DRAIN",
+              "severity": 10,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "MANGO-SELF-DEALING-BORROW",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "MANGO-COLLATERAL-INFLATED-BORROW",
+              "severity": 9,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "MANGO-GOV-VOTE-SELF-DEALING",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "MANGO-PERP-PRICE-CALC-BOUND",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "MANGO-ORACLE-PRICE-SPIKE",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "MANGO-PERP-STATE-INVALID",
+              "severity": 8,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "MANGO-TREASURY-DRAIN-GOV",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "MANGO-EMERGENCY-SHUTDOWN-BYPASS",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "MANGO-ORACLE-FEED-OVERRIDE",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            },
+            {
+              "vectorId": "MANGO-GOV-TREASURY-VOTE",
+              "severity": 7,
+              "proofStatus": "unknown/timeout"
+            }
+          ],
+          "taxonomySummary": {
+            "cleanMapping": 1,
+            "partialMapping": 0,
+            "noMapping": 0
+          }
+        }
+      }
+    }
+  ]
+}

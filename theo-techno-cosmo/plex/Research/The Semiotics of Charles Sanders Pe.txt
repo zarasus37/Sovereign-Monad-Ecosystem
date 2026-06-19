@@ -1,0 +1,8 @@
+The Semiotics of Charles Sanders Peirce
+The diagram illustrates the triadic (three-part) relationship that forms a sign:
+Representamen / Signifier (Bottom Left)
+Definition: The symbol – the form of the sign.
+Interpretant / Signified (Top)
+Definition: The sense made of the sign.
+Referent / Object (Bottom Right)
+Definition: What the sign "stands for" or represents.

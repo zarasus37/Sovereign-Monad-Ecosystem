@@ -1,0 +1,38 @@
+{
+  "constitution": {
+    "schemaVersion": "1.0.0",
+    "charterVersion": "dao-local-v1",
+    "minimumSponsorCount": 1,
+    "requiredSponsorClasses": ["ecosystem_native"],
+    "handoffRequiresDelegateAgent": true,
+    "capitalProposalsRemainDeferred": true,
+    "onchainProposalsRemainDeferred": true
+  },
+  "proposals": [
+    {
+      "id": "dao-prop-001",
+      "title": "Add local review lane for narrative publication",
+      "summary": "Tighten local publication review so public narrative cannot bypass activation discipline.",
+      "sponsorClasses": ["ecosystem_native", "operator_review"],
+      "delegateAgentPresent": true,
+      "affectsCapital": false,
+      "touchesOnchain": false,
+      "alignmentNotes": [
+        "preserves activation discipline",
+        "does not expand capital authority"
+      ]
+    },
+    {
+      "id": "dao-prop-002",
+      "title": "Authorize treasury spend for public expansion",
+      "summary": "Premature treasury-linked expansion should remain deferred until Phase 1a and treasury maturity are live.",
+      "sponsorClasses": ["delegated_human"],
+      "delegateAgentPresent": false,
+      "affectsCapital": true,
+      "touchesOnchain": true,
+      "alignmentNotes": [
+        "requests funded expansion"
+      ]
+    }
+  ]
+}

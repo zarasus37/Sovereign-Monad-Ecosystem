@@ -1,0 +1,8 @@
+{
+  "expectedChainId": 143,
+  "founderAddress": "0xD86Ed529AB21D84eFF8Fe13261eaeC589BA9Ae66",
+  "approvedSourceAddress": "0x9d4fcf7E0Ae5AE994A6eb0bCCbDfAA62E5867352",
+  "approvedSourceLabel": "Bootstrap Revenue Source (temporary until Stake integration)",
+  "minDeployerBalanceNative": "1",
+  "recommendedDeployerBalanceNative": "10"
+}

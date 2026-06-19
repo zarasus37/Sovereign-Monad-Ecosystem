@@ -1,0 +1,24 @@
+﻿{
+    "name":  "emergence-claim-core",
+    "version":  "0.1.0",
+    "description":  "Local emergence claim, ratification, evaluation, and retraction artifacts for bounded recognition design",
+    "main":  "dist/index.js",
+    "types":  "dist/index.d.ts",
+    "scripts":  {
+                    "start":  "node dist/index.js",
+                    "dev":  "ts-node src/index.ts",
+                    "live:agent":  "node dist/run-live-agent.js",
+                    "live:agent0":  "node dist/register-agent-0.js"
+                },
+    "dependencies":  {
+                         "ethers":  "^6.13.5"
+                     },
+    "devDependencies":  {
+                            "@types/node":  "^20.11.0",
+                            "ts-node":  "^10.9.2",
+                            "typescript":  "^5.3.3"
+                        },
+    "engines":  {
+                    "node":  "\u003e=22.0.0"
+                }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "operator-runbook-surface",
+    "title": "Operator Runbook Surface",
+    "description": "Structured internal operator flows on top of the dashboard and shared state API.",
+    "stage": "local_analysis",
+    "requiredCapabilities": ["state_api", "dashboard", "gnosis", "boundary_stress"],
+    "outwardFacing": false,
+    "touchesCapital": false
+  },
+  {
+    "id": "ecosystem-builder-workbench",
+    "title": "Ecosystem Builder Workbench",
+    "description": "Internal builder tooling for composing new surfaces against the verified local stack.",
+    "stage": "local_analysis",
+    "requiredCapabilities": ["state_api", "dashboard", "organ_runtime", "signal_layer"],
+    "outwardFacing": false,
+    "touchesCapital": false
+  },
+  {
+    "id": "buyer-facing-platform-portal",
+    "title": "Buyer-Facing Platform Portal",
+    "description": "External platform surface for buyers and outside operators.",
+    "stage": "outward_expansion",
+    "requiredCapabilities": ["state_api", "dashboard", "oracle", "gnosis"],
+    "outwardFacing": true,
+    "touchesCapital": false
+  },
+  {
+    "id": "keys-activation-surface",
+    "title": "Keys Activation Surface",
+    "description": "Local staging surface for future user-linked keys and delegation boundaries.",
+    "stage": "next_layer",
+    "requiredCapabilities": ["state_api", "dashboard", "gnosis", "boundary_stress"],
+    "outwardFacing": false,
+    "touchesCapital": false
+  }
+]

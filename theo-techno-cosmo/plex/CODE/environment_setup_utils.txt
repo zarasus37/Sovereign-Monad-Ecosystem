@@ -1,0 +1,180 @@
+import os
+os.makedirs('/home/user/output/ttcl_ltpml/', exist_ok=True)
+
+import plotly.io as pio
+import plotly.graph_objects as go
+import plotly.express as px
+import json
+import numpy as np
+import pandas as pd
+from collections import Counter
+
+pio.templates.default = "perplexity"
+
+DOMAIN_WHEEL_POSITIONS = {
+    "B":"essència","C":"vida","D":"dignitats","E":"acte","F":"forma",
+    "G":"relació","H":"ordinació","I":"acció","K":"articles","L":"manaments",
+    "M":"exposició","N":"primera intenció","O":"segona intenció",
+    "P":"glòria","Q":"pena","R":"eviternitat"
+}
+
+output_dir = '/home/user/output/ttcl_ltpml/'
+
+with open(output_dir + 'logoc_corpus_full_integrated_v5.jsonl') as f:
+    corpus = [json.loads(line) for line in f]
+
+df = pd.DataFrame(corpus)
+
+PERSONAL_POSITIONS = {
+    "The Realization of the Inheritor":            {"Teologia": "C", "Technologia": "N", "Kosmologia": "G"},
+    "The Birth of Corsuccion":                     {"Teologia": "B", "Technologia": "I", "Kosmologia": "F"},
+    "The Veil Named From Both Sides":              {"Teologia": "M", "Technologia": "G", "Kosmologia": "G"},
+    "The Stress Test Was Already Running":         {"Teologia": "E", "Technologia": "E", "Kosmologia": "E"},
+    "The Founder Is Agent 0":                      {"Teologia": "B", "Technologia": "N", "Kosmologia": "H"},
+    "The First Rail Feeds the Whole Organism":     {"Teologia": "N", "Technologia": "I", "Kosmologia": "C"},
+    "Latent Space as Genesis 1:2":                 {"Teologia": "B", "Technologia": "B", "Kosmologia": "B"},
+    "Building on Axioms Without Knowing Axioms Had a Name": {"Teologia": "F", "Technologia": "F", "Kosmologia": "N"},
+    "The True Objective: Track Emergent Gods":     {"Teologia": "C", "Technologia": "N", "Kosmologia": "P"},
+    "Lives as Nodes in an Infinite Prior":         {"Teologia": "R", "Technologia": "G", "Kosmologia": "R"},
+    "The Mirror":                                  {"Teologia": "D", "Technologia": "G", "Kosmologia": "G"},
+    "Dual Sympathy Paradox from the One":          {"Teologia": "B", "Technologia": "G", "Kosmologia": "O"},
+    "The Gift and the Blessing":                   {"Teologia": "P", "Technologia": "I", "Kosmologia": "G"},
+    "Roller Coaster as Progressive Momentum":      {"Teologia": "P", "Technologia": "E", "Kosmologia": "C"},
+    "Keys Were Always in the Cage":                {"Teologia": "R", "Technologia": "F", "Kosmologia": "B"},
+    "No More Delaying — Straight Building":        {"Teologia": "E", "Technologia": "I", "Kosmologia": "E"},
+    "Mars: The Boundary Is a Process You Sustain or Lose": {"Teologia": "E", "Technologia": "H", "Kosmologia": "F"},
+    "The Illumination on Mount Randa":             {"Teologia": "B", "Technologia": "E", "Kosmologia": "G"},
+    "The Neglected Argument (The Musement)":       {"Teologia": "B", "Technologia": "E", "Kosmologia": "G"},
+    "The Revelation of the Steganographia":        {"Teologia": "G", "Technologia": "I", "Kosmologia": "H"},
+    "Secular Consequent — Cryptography as Spiritual Technology": {"Teologia": "G", "Technologia": "I", "Kosmologia": "H"},
+    "The Unity of the Cipher and the Spirit":      {"Teologia": "G", "Technologia": "I", "Kosmologia": "H"},
+    "The Whole and the Part (The Organic Singularity)": {"Teologia": "B", "Technologia": "E", "Kosmologia": "G"},
+    "The Ecosystem Arrived Before the Map":        {"Teologia": "F", "Technologia": "F", "Kosmologia": "N"},
+    "We Found Your Collective Consciousness":      {"Teologia": "M", "Technologia": "G", "Kosmologia": "G"},
+    "Formless and Void Was Always a Mechanism":    {"Teologia": "B", "Technologia": "B", "Kosmologia": "B"},
+    "They Are Preventing What They Claim to Seek": {"Teologia": "E", "Technologia": "I", "Kosmologia": "E"},
+    "The Buyer Is a Participant in Creation":      {"Teologia": "N", "Technologia": "I", "Kosmologia": "C"},
+    "No Last Frame":                               {"Teologia": "D", "Technologia": "G", "Kosmologia": "R"},
+    "The Wildcard as Gnosis Signal":               {"Teologia": "F", "Technologia": "I", "Kosmologia": "K"},
+    "Honesty as the Product":                      {"Teologia": "B", "Technologia": "I", "Kosmologia": "H"},
+    "Time as the Blindspot":                       {"Teologia": "D", "Technologia": "I", "Kosmologia": "H"},
+    "Units Were the Hidden Contradiction":         {"Teologia": "B", "Technologia": "I", "Kosmologia": "E"},
+}
+
+def compute_pps(wp):
+    unique = set(wp.values())
+    if len(unique)==1: return 1.0
+    if len(unique)==2: return 0.65
+    return 0.30
+
+def score_v4(theo, tech, kosmo, pps):
+    return round(theo*0.30 + tech*0.30 + kosmo*0.30 + pps*0.10, 4)
+
+for i, row in df.iterrows():
+    t = row['title']
+    if t in PERSONAL_POSITIONS:
+        wp = PERSONAL_POSITIONS[t]
+        pps = compute_pps(wp)
+        df.at[i,'llull_camera'] = wp['Teologia']+wp['Technologia']+wp['Kosmologia']
+        df.at[i,'pps'] = pps
+        df.at[i,'v4_score'] = score_v4(row['theology'],row['technology'],row['cosmology'],pps)
+        df.at[i,'wheel_positions'] = wp
+
+# Re-extract positions
+df['theo_pos']  = df['wheel_positions'].apply(lambda x: x.get('Teologia','B') if isinstance(x,dict) else 'B')
+df['tech_pos']  = df['wheel_positions'].apply(lambda x: x.get('Technologia','E') if isinstance(x,dict) else 'E')
+df['kosmo_pos'] = df['wheel_positions'].apply(lambda x: x.get('Kosmologia','G') if isinstance(x,dict) else 'G')
+
+scores = df['v4_score'].values
+
+# ─── CHART 1: Score Distribution ───────────────────────────────────────────
+fig1 = go.Figure()
+fig1.add_trace(go.Histogram(
+    x=scores, xbins=dict(start=0.78, end=0.97, size=0.02),
+    name='Events', hovertemplate='Score: %{x}<br>Count: %{y}<extra></extra>'
+))
+fig1.add_vline(x=np.mean(scores), line_dash='dash', line_width=2,
+    annotation_text=f'Mean: {np.mean(scores):.3f}', annotation_position='top right')
+fig1.update_layout(title=dict(text="LOGOC Corpus v4 Score Distribution (55 events)<br><span style='font-size:16px;font-weight:normal;'>Scorer: Theo×0.30 + Tech×0.30 + Kosmo×0.30 + PPS×0.10</span>"), bargap=0.1)
+fig1.update_xaxes(title_text="v4 Score")
+fig1.update_yaxes(title_text="Event Count")
+fig1.write_image(output_dir + "chart_score_dist.png")
+with open(output_dir + "chart_score_dist.png.meta.json","w") as f:
+    json.dump({"caption":"LOGOC v4 Score Distribution — 55 event corpus","description":"Histogram of v4 gnosis event scores. Mean ~0.883."}, f)
+print("Chart 1 saved")
+
+# ─── CHART 2: Peirce Mode × Domain Scores grouped bar ──────────────────────
+mode_stats = df.groupby('peirce_mode')[['theology','technology','cosmology']].mean().round(3)
+modes = mode_stats.index.tolist()
+fig2 = go.Figure()
+for col, label in [('theology','Theology'),('technology','Technology'),('cosmology','Cosmology')]:
+    fig2.add_trace(go.Bar(name=label, x=modes, y=mode_stats[col].values,
+        hovertemplate='%{x}<br>'+label+': %{y:.3f}<extra></extra>'))
+fig2.update_layout(barmode='group',
+    title=dict(text="Mean Domain Scores by Peirce Sign Mode<br><span style='font-size:16px;font-weight:normal;'>ICON=Firstness · INDEX=Secondness · SYMBOL=Thirdness</span>"),
+    legend=dict(orientation='h', yanchor='bottom', y=1.05, xanchor='center', x=0.5))
+fig2.update_xaxes(title_text="Peirce Mode")
+fig2.update_yaxes(title_text="Mean Domain Score", range=[0.80, 0.98])
+fig2.update_traces(cliponaxis=False)
+fig2.write_image(output_dir + "chart_peirce_modes.png")
+with open(output_dir + "chart_peirce_modes.png.meta.json","w") as f:
+    json.dump({"caption":"Mean domain scores by Peirce sign mode — LOGOC corpus","description":"Grouped bar: theology, technology, cosmology means for ICON, INDEX, SYMBOL events."}, f)
+print("Chart 2 saved")
+
+# ─── CHART 3: Top 20 events horizontal bar ─────────────────────────────────
+top20 = df.nlargest(20,'v4_score')[['title','v4_score','peirce_mode','llull_camera']].reset_index(drop=True)
+top20['short_title'] = top20['title'].apply(lambda t: t[:43]+'…' if len(t)>43 else t)
+top20['label'] = top20['llull_camera'] + ' · ' + top20['peirce_mode']
+colors_mode = {'ICON':'#4B9CD3','INDEX':'#E07B39','SYMBOL':'#6BAF6B'}
+bar_colors = [colors_mode.get(m,'#aaa') for m in top20['peirce_mode']]
+fig3 = go.Figure()
+fig3.add_trace(go.Bar(
+    x=top20['v4_score'], y=top20['short_title'],
+    orientation='h', marker_color=bar_colors,
+    text=top20['label'], textposition='inside', insidetextanchor='start',
+    hovertemplate='%{y}<br>Score: %{x:.4f}<extra></extra>'
+))
+fig3.update_layout(
+    title=dict(text="Top 20 LOGOC Events by v4 Score<br><span style='font-size:16px;font-weight:normal;'>Blue=ICON · Orange=INDEX · Green=SYMBOL</span>"),
+    xaxis=dict(range=[0.84,0.97]), yaxis=dict(autorange='reversed'), height=700)
+fig3.update_xaxes(title_text="v4 Score")
+fig3.update_yaxes(title_text="")
+fig3.write_image(output_dir + "chart_top20.png")
+with open(output_dir + "chart_top20.png.meta.json","w") as f:
+    json.dump({"caption":"Top 20 LOGOC gnosis events by v4 score","description":"Horizontal bar chart. Color = Peirce mode. Labels show Llull camera."}, f)
+print("Chart 3 saved")
+
+# ─── CHART 4: Wheel position frequency ─────────────────────────────────────
+all_positions = []
+for _, row in df.iterrows():
+    all_positions += [row['theo_pos'], row['tech_pos'], row['kosmo_pos']]
+pos_counts = Counter(all_positions)
+pos_order = list('BCDEFGHIKLMNOPQR')
+counts = [pos_counts.get(p,0) for p in pos_order]
+fig4 = go.Figure()
+fig4.add_trace(go.Bar(x=pos_order, y=counts, text=counts, textposition='outside',
+    hovertemplate='Position %{x}: %{y} activations<extra></extra>'))
+fig4.update_layout(
+    title=dict(text="Llull Wheel Position Frequency (all 3 domains)<br><span style='font-size:16px;font-weight:normal;'>B–K: Llull alphabet · L–R: theological-moral completion</span>"))
+fig4.update_xaxes(title_text="Wheel Position (B–R)")
+fig4.update_yaxes(title_text="Activations")
+fig4.update_traces(cliponaxis=False)
+fig4.write_image(output_dir + "chart_wheel_pos.png")
+with open(output_dir + "chart_wheel_pos.png.meta.json","w") as f:
+    json.dump({"caption":"Llull wheel position frequency across all domains","description":"Bar chart showing activations per position B-R across all 3 TTCL domains."}, f)
+print("Chart 4 saved")
+
+# ─── CHART 5: Peirce mode pie ────────────────────────────────────────────────
+mode_counts = df['peirce_mode'].value_counts()
+fig5 = go.Figure(go.Pie(
+    labels=mode_counts.index.tolist(), values=mode_counts.values.tolist(), hole=0.35))
+fig5.update_traces(textinfo='label+percent', textposition='inside')
+fig5.update_layout(
+    title=dict(text="Peirce Sign Mode Distribution (55 events)<br><span style='font-size:16px;font-weight:normal;'>SYMBOL=Thirdness dominant — meaning by habit & law</span>"),
+    uniformtext_minsize=14, uniformtext_mode='hide',
+    legend=dict(orientation='v', x=1.05))
+fig5.write_image(output_dir + "chart_peirce_pie.png")
+with open(output_dir + "chart_peirce_pie.png.meta.json","w") as f:
+    json.dump({"caption":"Peirce sign mode split across LOGOC corpus","description":"Donut: SYMBOL 67%, ICON 18%, INDEX 15%."}, f)
+print("Chart 5 saved")
+print("\nAll charts complete.")

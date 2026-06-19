@@ -1,0 +1,15 @@
+{
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "documents",
+      "direction": "in",
+      "leaseCollectionName": "leases-assessment",
+      "connectionStringSetting": "COSMOS_CONNECTION_STRING",
+      "databaseName": "hepar",
+      "collectionName": "enriched-leads",
+      "createLeaseCollectionIfNotExists": true
+    }
+  ],
+  "scriptFile": "../dist/hepar-assessment-trigger/index.js"
+}

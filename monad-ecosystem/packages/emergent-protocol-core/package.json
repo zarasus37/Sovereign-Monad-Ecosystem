@@ -1,0 +1,26 @@
+{
+  "name": "@sovereign/emergent-protocol-core",
+  "version": "0.1.0",
+  "description": "Local emergent protocol discovery, pattern extraction, and validation scaffold",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@sovereign/types": "workspace:*",
+    "@sovereign/bus": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

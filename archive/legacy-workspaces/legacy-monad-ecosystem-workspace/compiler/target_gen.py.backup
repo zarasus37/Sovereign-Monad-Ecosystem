@@ -1,0 +1,120 @@
+import time
+from typing import Dict, Any, Tuple
+
+class TargetGenerator:
+    """
+    Level 0: Target Generation (Peircean Execution Gate)
+    The final exit node of the compiler stack. Evaluates Peircean camera
+    perspectives, calculates PPS, and emits secure execution targets.
+    """
+    def __init__(self):
+        print("[Compiler Core] Level 0 TargetGenerator online. Triadic minimal gates armed.")
+
+    @staticmethod
+    def validate_camera_perspective(camera: str) -> bool:
+        """
+        Enforces the primary cosmic design rule: No dyads allowed.
+        Perspective must be a pure Monad (1 unique state like EEE) or
+        a fully differentiated Triad (3 unique states like ABC).
+        """
+        if not isinstance(camera, str):
+            return False
+            
+        clean_camera = camera.strip().upper()
+        if len(clean_camera) != 3:
+            print(f"[Peircean Gate] Structural Error: Camera length is {len(clean_camera)}, must be 3.")
+            return False
+
+        distinct_count = len(set(clean_camera))
+        
+        # Explicit Dyadic Intercept (Exactly 2 unique properties e.g., AAB, ABB)
+        if distinct_count == 2:
+            print(f"[Peircean Gate] !!! DYADIC COLLAPSE !!! Asymmetric reduction forbidden in '{clean_camera}'.")
+            return False
+            
+        return distinct_count in {1, 3}
+
+    @staticmethod
+    def compute_pps(perspective: str) -> float:
+        """
+        Calculates the exact Peircean Perspective Purity Score (PPS).
+        PPS = 1.00 when all components match (Maximum Coherence / Monad).
+        PPS = 0.30 when all components vary (Balanced Triadic Tension).
+        """
+        if not TargetGenerator.validate_camera_perspective(perspective):
+            return 0.0
+            
+        clean_persp = perspective.strip().upper()
+        distinct_count = len(set(clean_persp))
+        
+        if distinct_count == 1:
+            return 1.00  # Pure unified insight state
+        return 0.30      # Differentiated analytical state
+
+    def compile_to_backend_target(self, provenance_package: Dict[str, Any], camera_perspective: str) -> Dict[str, Any]:
+        """
+        Executes the final lowering pass. Bridges Level 1 provenance containers
+        with Level 0 execution targets based on Peircean semiotic verification.
+        """
+        print(f"\n[Target Gen] Intercepting sealed container for final compilation gate...")
+        
+        # 1. Enforce strict Triadic Gate verification
+        if not self.validate_camera_perspective(camera_perspective):
+            return {
+                "status": "TARGET_COMPILE_FAILED",
+                "error_vector": "Peircean Triadic Gate Exception: Dyadic Collapse or Structural Failure."
+            }
+            
+        # 2. Extract structural metrics
+        pps_score = self.compute_pps(camera_perspective)
+        semiotic_mode = "SYMBOL" if pps_score == 1.00 else "INDEX"
+        
+        # 3. Inherit and unpack verified upstream data from your provenance layers
+        inherited_envelope = provenance_package.get("encapsulated_state", {})
+        isolated_rail = inherited_envelope.get("isolated_data_rail", {})
+        
+        print(f"[Target Gen] Gate passed. Semiotic Target Mode: {semiotic_mode} | Computed PPS: {pps_score:.2f}")
+        
+        # 4. Emit the finalized, optimized execution block for the downstream submodules
+        finalized_monad_target = {
+            "status": "TARGET_LOCKED_FOR_EXECUTION",
+            "compilation_timestamp_ns": time.time_ns(),
+            "semiotic_execution_mode": semiotic_mode,
+            "peircean_metrics": {
+                "pps_purity_score": pps_score,
+                "inherited_friction_floor": inherited_envelope.get("pps_score_inheritance", 0.0)
+            },
+            "immutable_execution_payload": {
+                "bytecode_alias": isolated_rail.get("bytecode_alias", "NULL_OP"),
+                "macrocosmic_slot_target": inherited_envelope.get("macrocosmic_slot_target", 0),
+                "trithemius_lock_signature": provenance_package.get("trithemius_cipher_signature", "UNSIGNED")
+            }
+        }
+        
+        print("[Target Gen] Monad execution target finalized and locked.")
+        return finalized_monad_target
+
+# ==========================================
+# LOCAL TARGET-GEN VERIFICATION SUITE
+# ==========================================
+if __name__ == "__main__":
+    generator = TargetGenerator()
+    
+    # Mocking data sealed by your Level 1 Provenance engine module
+    mock_provenance_input = {
+        "container_header": "SHEM_ANGEL_BOUND_WRAPPER",
+        "trithemius_cipher_signature": "KREHQHV_VWUHDP_LQWDNH",
+        "encapsulated_state": {
+            "macrocosmic_slot_target": 72,
+            "pps_score_inheritance": 0.95,
+            "isolated_data_rail": {"bytecode_alias": "REVENUE_STREAM_INTAKE"}
+        }
+    }
+    
+    # Test Pass 1: Maximum Coherence Monad perspective (EEE)
+    print("--- RUNNING GATE PASS 1 (MAX COHERENCE) ---")
+    output_a = generator.compile_to_backend_target(mock_provenance_input, camera_perspective="EEE")
+    
+    # Test Pass 2: Critical Failure due to Dyadic Collapse configuration (ABB)
+    print("\n--- RUNNING GATE PASS 2 (DYADIC EXPLOTIATION REJECT) ---")
+    output_b = generator.compile_to_backend_target(mock_provenance_input, camera_perspective="ABB")

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "bounded-organ-coordination",
+    "minimumReadiness": "forming",
+    "minimumAccumulation": "review_ready",
+    "requiresIntegrity": "clear",
+    "downstreamPath": "protocol_candidate_review"
+  },
+  {
+    "id": "rights-safe-externalization-discipline",
+    "minimumReadiness": "observable",
+    "minimumAccumulation": "review_ready",
+    "requiresIntegrity": "clear",
+    "downstreamPath": "externalization_design_review"
+  },
+  {
+    "id": "formal-emergent-protocol",
+    "minimumReadiness": "observable",
+    "minimumAccumulation": "target_met",
+    "requiresIntegrity": "clear",
+    "downstreamPath": "formal_protocol_spec"
+  }
+]

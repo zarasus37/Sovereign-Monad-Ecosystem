@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HeparAuditResult",
+  "type": "object",
+  "properties": {
+    "auditId": { "type": "string" },
+    "startedAt": { "type": "string", "format": "date-time" },
+    "completedAt": { "type": "string", "format": "date-time" },
+    "target": { "type": "string" },
+    "protocolName": { "type": "string" },
+    "chain": { "type": "string" },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stage": { "type": "string", "enum": ["A", "B", "C", "D"] },
+          "completed": { "type": "boolean" },
+          "elapsedMs": { "type": "integer" },
+          "findingCounts": {
+            "type": "object",
+            "properties": {
+              "info": { "type": "integer" },
+              "low": { "type": "integer" },
+              "medium": { "type": "integer" },
+              "high": { "type": "integer" },
+              "critical": { "type": "integer" }
+            },
+            "required": ["info", "low", "medium", "high", "critical"]
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "findingId": { "type": "string" },
+                "stage": { "type": "string", "enum": ["A", "B", "C", "D"] },
+                "severity": { "type": "string", "enum": ["info", "low", "medium", "high", "critical"] },
+                "category": {
+                  "type": "string",
+                  "enum": [
+                    "privilege", "access-control", "arithmetic", "overflow",
+                    "reentrancy", "call-chain", "economic", "incentive",
+                    "governance", "state-consistency", "oracle-dependency",
+                    "liquidity-risk", "informational"
+                  ]
+                },
+                "title": { "type": "string" },
+                "description": { "type": "string" },
+                "contractAddress": { "type": "string" },
+                "functionName": { "type": "string" },
+                "recommendation": { "type": "string" },
+                "evidence": { "type": "array", "items": { "type": "string" } }
+              },
+              "required": ["findingId", "stage", "severity", "category", "title", "description", "recommendation", "evidence"]
+            }
+          }
+        },
+        "required": ["stage", "completed", "elapsedMs", "findingCounts", "findings"]
+      }
+    },
+    "allFindings": {
+      "type": "array",
+      "items": { "$ref": "#/properties/stages/items/properties/findings/items" }
+    },
+    "score": {
+      "type": "object",
+      "properties": {
+        "overall": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "stageScores": {
+          "type": "object",
+          "properties": {
+            "A": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "B": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "C": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "D": { "type": "integer", "minimum": 0, "maximum": 100 }
+          },
+          "required": ["A", "B", "C", "D"]
+        },
+        "tvlTier": { "type": "string", "enum": ["micro", "small", "mid", "large", "institutional"] },
+        "governanceScore": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "heuristicConfidence": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+      },
+      "required": ["overall", "stageScores", "tvlTier", "governanceScore", "heuristicConfidence"]
+    },
+    "allocationRecommendation": { "type": "string", "enum": ["advisable", "caution", "do-not-allocate"] },
+    "suggestedAllocationCapUsd": { "type": ["number", "null"] },
+    "lightVerifyCertification": { "type": "string", "enum": ["pending", "certified", "failed"] },
+    "forensicReportGenerated": { "type": "boolean" },
+    "forensicReportUri": { "type": "string" }
+  },
+  "required": [
+    "auditId", "startedAt", "completedAt", "target", "chain", "stages",
+    "allFindings", "score", "allocationRecommendation", "suggestedAllocationCapUsd",
+    "lightVerifyCertification", "forensicReportGenerated"
+  ]
+}
