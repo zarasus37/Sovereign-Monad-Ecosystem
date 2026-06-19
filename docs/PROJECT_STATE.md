@@ -31,15 +31,18 @@ If you are picking up work in a fresh session, read this file first after `READM
 
 - Root docs now define the unified structure.
 - Pillar-level READMEs are standardized.
-- Active code paths are aligned to the current `v2.4.0` operating model.
+- The `sovereign-types` package has been established as the single source of truth for telemetry, signals, and ecosystem data.
+- The `sovereign-bus` is fully implemented as an event backbone and connected to `hepar-core`, `gnosis-evaluator`, `risk-engine`, and `data-rail-core`.
+- The `gnostic-engine` now emits a live SSE feed (`/api/v1/gnosis/stream`) connecting directly to the frontend `control-center` React app.
+- All core ecosystem packages have been populated, strictly typed, and built without error.
+- Vitest integration testing suite is running and passing across all bus signal paths (Dove, Gnosis, Hepar, Data Rail).
 - The repo moves cleanly from `G:\My Drive\The_Sovereign` to the new canonical OneDrive path.
 
 ## What Is Still In Progress
 
 - Further deep cleanup inside legacy pillar content, especially `theo-techno-cosmo/`.
-- Remaining runtime hardening in `gnostic-engine/` after the current deprecation warning.
-- Deeper end-to-end wiring of `monad-ecosystem/control-center/` to live telemetry and execution surfaces, now focused on producer and watcher integration.
-- Any archive-only path or historical note cleanup that does not affect active work.
+- Hardening the Kafka bridge (currently running in local pure-node mode).
+- Deepening UI interactions in `control-center/` beyond read-only telemetry.
 
 ## Next Actions
 

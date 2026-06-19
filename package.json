@@ -13,6 +13,9 @@
     "dev": "pnpm --recursive dev",
     "build": "pnpm --recursive build",
     "test": "pnpm --recursive test",
+    "test:integration": "vitest run monad-ecosystem/tests/integration/",
+    "typecheck": "pnpm --recursive tsc --noEmit",
+    "validate": "pnpm check:layout && pnpm typecheck && pnpm test:integration",
     "lint": "pnpm --recursive lint",
     "clean": "pnpm --recursive clean && Remove-Item -Recurse -Force node_modules, .pnpm-store -ErrorAction SilentlyContinue",
     "prepare": "husky install || true"
@@ -33,8 +36,9 @@
     "gnostic-engine"
   ],
   "devDependencies": {
+    "husky": "^9.0.0",
     "typescript": "^5.6.0",
-    "husky": "^9.0.0"
+    "vitest": "^2.0.0"
   },
   "engines": {
     "node": ">=20.0.0",
