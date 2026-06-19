@@ -23,6 +23,7 @@ export type SignalLayer =
   | 'revenue-router'
   | 'data-rail'
   | 'emergence'
+  | 'cardia'
   | 'system';
 
 /** All valid event types within the ecosystem. */
@@ -68,7 +69,9 @@ export type SignalEventType =
   | 'system.health'
   | 'system.error'
   | 'system.startup'
-  | 'system.shutdown';
+  | 'system.shutdown'
+  // Cardia events
+  | 'cardia.activated';
 
 /** Severity levels for events that carry a severity. */
 export type EventSeverity = 'info' | 'warning' | 'critical' | 'fatal';

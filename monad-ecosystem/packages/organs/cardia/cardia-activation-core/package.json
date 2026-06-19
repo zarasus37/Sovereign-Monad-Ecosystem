@@ -1,13 +1,26 @@
 {
-  "name": "cardia-activation-core",
+  "name": "@sovereign/cardia-activation-core",
   "version": "0.1.0",
   "description": "Local funded Cardia activation readiness surface",
-  "main": "dist/index.js",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "node ../../../../../node_modules/typescript/bin/tsc -p tsconfig.json",
+    "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
     "test": "node tests/run-tests.js"
+  },
+  "dependencies": {
+    "@sovereign/bus": "workspace:*",
+    "@sovereign/types": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

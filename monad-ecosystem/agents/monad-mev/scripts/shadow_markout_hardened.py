@@ -486,4 +486,7 @@ if __name__ == "__main__":
         for slot, ret in sorted(by_slot.items())[:5]:
             print(f"  Slot {slot:03d}: {ret:.1f}%")
 
+        from monad_price_fetcher import _close_http_client
+        await _close_http_client()
+
     asyncio.run(main())

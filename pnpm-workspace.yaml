@@ -10,6 +10,7 @@ packages:
 
   # ── Monad Ecosystem (economic / agentic pillar) ───────────────────────────
   - 'monad-ecosystem/packages/*'
+  - 'monad-ecosystem/packages/organs/*/*'
 
   # ── Control Center (ICP app — frontend + Node.js bridge backend) ──────────
   # Included in workspace so root pnpm build covers it.

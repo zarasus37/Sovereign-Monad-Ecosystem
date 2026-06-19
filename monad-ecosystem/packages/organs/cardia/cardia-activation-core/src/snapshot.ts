@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { CardiaActivationInput, CardiaActivationPolicy, CardiaActivationRecord, CardiaActivationSnapshot } from './types';
+import { CardiaActivationInput, CardiaActivationPolicy, CardiaActivationRecord, CardiaActivationSnapshot } from './types.js';
 
 function readJson<T>(filePath: string): T {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));

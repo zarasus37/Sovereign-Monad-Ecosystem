@@ -1,0 +1,21 @@
+{
+  "total_trades": 50,
+  "total_predicted_pnl": 49.75,
+  "total_actual_pnl_t15": 47.26249999999999,
+  "total_actual_pnl_t60": 44.77499999999999,
+  "alpha_retention_t15": 94.99999999999997,
+  "alpha_retention_t60": 89.99999999999999,
+  "gate_threshold": 80.0,
+  "gate_passed": true,
+  "retention_mean": 95.0,
+  "retention_stdev": 6.909717531729282e-15,
+  "retention_min": 94.99999999999999,
+  "retention_max": 95.0,
+  "trades_below_gate": 0,
+  "adverse_selection_count": 0,
+  "adverse_selection_rate": 0.0,
+  "capacity_ceiling_usd": 3999.9999999999945,
+  "conclusion": "CONCLUSION: Markout rules satisfied. Agent 0 exhibits stable off-chain execution truth. Ready for Explicit Operator Review.",
+  "timestamp": 1781859012.8283265,
+  "report_signature": "194019eda5c5b012"
+}
