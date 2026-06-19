@@ -428,6 +428,28 @@ importers:
         specifier: ^5.3.3
         version: 5.9.3
 
+  monad-ecosystem/packages/gnosis-security-engine:
+    devDependencies:
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+
+  monad-ecosystem/packages/hepar-core:
+    dependencies:
+      '@sovereign/bus':
+        specifier: workspace:*
+        version: link:../sovereign-bus
+      '@sovereign/hepar-defi-auditor':
+        specifier: workspace:*
+        version: link:../hepar-defi-auditor
+      '@sovereign/types':
+        specifier: workspace:*
+        version: link:../sovereign-types
+    devDependencies:
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+
   monad-ecosystem/packages/hepar-defi-auditor:
     dependencies:
       '@sovereign/bus':
@@ -451,6 +473,12 @@ importers:
         version: 10.9.2(@types/node@20.19.43)(typescript@5.9.3)
       typescript:
         specifier: ^5.3.3
+        version: 5.9.3
+
+  monad-ecosystem/packages/organ-runtime:
+    devDependencies:
+      typescript:
+        specifier: ^5.0.0
         version: 5.9.3
 
   monad-ecosystem/packages/population-expansion-core:

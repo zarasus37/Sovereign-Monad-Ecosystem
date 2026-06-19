@@ -1,0 +1,20 @@
+{
+  "name": "@sovereign/hepar-core",
+  "version": "1.0.0",
+  "description": "Hepar core stage orchestrator",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@sovereign/bus": "workspace:*",
+    "@sovereign/types": "workspace:*",
+    "@sovereign/hepar-defi-auditor": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
