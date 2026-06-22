@@ -1,0 +1,100 @@
+{
+  "version": "v5.9",
+  "applied_at": "2026-06-22T16:30:58.496715Z",
+  "source_corpus": "master_corpus_v5.8_final.jsonl",
+  "target_corpus": "master_corpus_v5.9.jsonl",
+  "corrections": [
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353â€“13_ev10",
+      "action": "reclassify",
+      "old_class": 2,
+      "new_class": 42,
+      "rationale": "General law/dictum: rubric=(0,0,0,1,0,0,1,0) resolves to Class 4"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990â€“931 BCE) GNOSI_ev05",
+      "action": "reclassify",
+      "old_class": 2,
+      "new_class": 42,
+      "rationale": "General law/dictum: rubric=(0,0,0,1,0,0,1,0) resolves to Class 4"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev13",
+      "action": "reclassify",
+      "old_class": 2,
+      "new_class": 42,
+      "rationale": "General law/dictum: rubric=(0,0,0,1,0,0,1,0) resolves to Class 4"
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev2",
+      "action": "reclassify",
+      "old_class": 2,
+      "new_class": 4,
+      "rationale": "General law/dictum: rubric=(0,0,0,1,0,0,1,0) resolves to Class 4"
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev3",
+      "action": "reclassify",
+      "old_class": 2,
+      "new_class": 4,
+      "rationale": "General law/dictum: rubric=(0,0,0,1,0,0,1,0) resolves to Class 4"
+    },
+    {
+      "event_id": "gnosis_Zarathustra_ev2",
+      "action": "reclassify",
+      "old_class": 2,
+      "new_class": 4,
+      "rationale": "General law/dictum: rubric=(0,0,0,1,0,0,1,0) resolves to Class 4"
+    }
+  ],
+  "removed": [],
+  "model_path": "logs\\audit\\ml_classifier_v12.json",
+  "test_accuracy": 0.9861,
+  "full_accuracy": 0.991,
+  "per_class_full": {
+    "2": {
+      "correct": 71,
+      "total": 71
+    },
+    "8": {
+      "correct": 7,
+      "total": 7
+    },
+    "9": {
+      "correct": 17,
+      "total": 17
+    },
+    "0": {
+      "correct": 84,
+      "total": 84
+    },
+    "1": {
+      "correct": 30,
+      "total": 30
+    },
+    "7": {
+      "correct": 33,
+      "total": 33
+    },
+    "4": {
+      "correct": 15,
+      "total": 18
+    },
+    "3": {
+      "correct": 16,
+      "total": 16
+    },
+    "42": {
+      "correct": 25,
+      "total": 25
+    },
+    "6": {
+      "correct": 12,
+      "total": 12
+    },
+    "5": {
+      "correct": 21,
+      "total": 21
+    }
+  }
+}
