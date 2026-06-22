@@ -33,6 +33,44 @@ MIN_EVENTS = 10
 SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
 
 
+# ── Case normalization ───────────────────────────────────────────────────────────
+# The corpus stores triad components in mixed case (e.g. "ICON" and "Icon" both
+# appear as `peirce.mode` values, with the same semantic meaning). The pattern
+# detectors below hard-code canonical-uppercase lookups ("ICON", "INDEX",
+# "SYMBOL"), so events stored under mixed case would silently never trigger.
+# Normalize at the histogram-construction step so both forms collapse into the
+# canonical bucket (uppercase for modes, capitalized for triad components).
+
+_MODE_CANONICAL = {
+    "ICON": "ICON", "INDEX": "INDEX", "SYMBOL": "SYMBOL",
+    "Icon": "ICON", "Index": "INDEX", "Symbol": "SYMBOL",
+    "icon": "ICON", "index": "INDEX", "symbol": "SYMBOL",
+}
+
+_VEHICLE_CANONICAL = {
+    "Qualisign": "Qualisign", "Sinsign": "Sinsign", "Legisign": "Legisign",
+    "QUALISIGN": "Qualisign", "SINSIGN": "Sinsign", "LEGISIGN": "Legisign",
+    "qualisign": "Qualisign", "sinsign": "Sinsign", "legisign": "Legisign",
+}
+
+_OBJECT_CANONICAL = {
+    "Icon": "Icon", "Index": "Index", "Symbol": "Symbol",
+    "ICON": "Icon", "INDEX": "Index", "SYMBOL": "Symbol",
+    "icon": "Icon", "index": "Index", "symbol": "Symbol",
+}
+
+_INTERPRETANT_CANONICAL = {
+    "Rheme": "Rheme", "Dicent": "Dicent", "Argument": "Argument",
+    "RHEME": "Rheme", "DICENT": "Dicent", "ARGUMENT": "Argument",
+    "rheme": "Rheme", "dicent": "Dicent", "argument": "Argument",
+}
+
+
+def _canon(value, table):
+    """Return canonical form of a mixed-case Peirce component; pass-through if unknown."""
+    return table.get(value, value)
+
+
 # ── Snapshot computation ──────────────────────────────────────────────────────
 
 def compute_snapshot(events, cycle_id):
@@ -56,12 +94,12 @@ def compute_snapshot(events, cycle_id):
         cid = p["sign_class_id"]
         class_hist[cid] += 1
         band_hist[p["pragmatism_band"]] += 1
-        mode_hist[p["mode"]] += 1
+        mode_hist[_canon(p["mode"], _MODE_CANONICAL)] += 1
         path = p["path"]
         if len(path) >= 3:
-            vehicle_hist[path[0]] += 1
-            object_hist[path[1]] += 1
-            interpretant_hist[path[2]] += 1
+            vehicle_hist[_canon(path[0], _VEHICLE_CANONICAL)] += 1
+            object_hist[_canon(path[1], _OBJECT_CANONICAL)] += 1
+            interpretant_hist[_canon(path[2], _INTERPRETANT_CANONICAL)] += 1
         firstness_sum += p.get("firstness_weight", 0.33)
         secondness_sum += p.get("secondness_weight", 0.33)
         thirdness_sum += p.get("thirdness_weight", 0.33)
