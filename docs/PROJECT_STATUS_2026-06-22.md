@@ -2,9 +2,9 @@
 
 **Date:** 2026-06-22  
 **Branch:** main  
-**Last Commit:** `403c106` — chore: sync all project files to remote repository  
-**Total Tracked Files:** 1,281  
-**Untracked (New):** 3 files  
+**Last Commit:** `ec782ee` — deps(monad-mev): add pyproject.toml declaring httpx + eth-account  
+**Total Tracked Files:** 1,282  
+**Untracked (New):** 2 files (.girignore, gh.exe — both ignored)  
 
 ---
 
@@ -121,13 +121,13 @@ monad_price_fetcher.py
 
 | Priority | Task | Status |
 |----------|------|--------|
-| P1 | Commit 3 untracked post-commit files | ⏳ Pending (drift report + snapshot) |
+| P1 | Commit 3 untracked post-commit files | ✅ Done (commits 474f652 + 661189d) |
 | P2 | Test x402 with real wallet + USDC on Base Sepolia | ⏳ Blocked (needs wallet funding) |
-| P3 | Add `eth-account` to requirements.txt / pyproject.toml | ⏳ Pending (for pay-per-request) |
+| P3 | Add `eth-account` to requirements.txt / pyproject.toml | ✅ Done (pyproject.toml + verified) |
 | P4 | Monitor drift after 24 hours | ⏳ Scheduled (drift_cron.py ready) |
-| P5 | Wire frontend to `logoc-corpus-production.json` | ⏳ Pending (control-center ready) |
+| P5 | Wire frontend to `logoc-corpus-production.json` | ✅ Done (commit 5854b7a — corpus points at v5.8 final) |
 | P6 | Class 2 boundary research (3 remaining errors) | ⏳ Low priority (99.1% is sufficient) |
-| P7 | `gh.exe` decision — commit or .gitignore | ⏳ Pending |
+| P7 | `gh.exe` decision — commit or .gitignore | ✅ Done (.gitignore + .girignore, commit 474f652) |
 
 ---
 
@@ -206,7 +206,8 @@ git push origin main
 
 - **LOGOC corpus:** 334 events, 11 classes, 99.1% ML accuracy, 100% test accuracy
 - **Production pipeline:** `LogocMLPipeline` with rubric + ML ensemble triage
-- **x402 integration:** Full Python implementation with 2 payment models, auto-refresh, provider pool fallback
+- **x402 integration:** Full Python implementation with 2 payment models, auto-refresh, provider pool fallback, **eth-account declared in pyproject.toml** (pay-per-request path now exercisable)
 - **Documentation:** x402 setup guide, env template, 6-test validation suite
-- **All files committed:** Yes (except 3 post-commit artifacts)
-- **Ready for production:** Yes (pending x402 wallet funding for live testing)
+- **Control-center wiring:** Corpus pipeline (dev plugin + build script) pointed at v5.8 final; static fallback regenerated (334 events, 0 pending)
+- **All files committed:** Yes
+- **Ready for production:** Yes (pending x402 wallet funding for live testing; pay-per-request code path now verified loadable end-to-end)
