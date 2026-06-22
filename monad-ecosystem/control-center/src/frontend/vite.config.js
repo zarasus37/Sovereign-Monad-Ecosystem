@@ -54,7 +54,7 @@ export default defineConfig({
     environment(["STORAGE_GATEWAY_URL"]),
     environment(["VITE_GNOSTIC_API_URL"]),
     react(),
-    logocApiPlugin(), // Live LOGOC corpus API — reads from master_corpus_v5.2.jsonl
+    logocApiPlugin(), // Live LOGOC corpus API — reads from master_corpus_v5.8_final.jsonl
   ],
   resolve: {
     alias: [

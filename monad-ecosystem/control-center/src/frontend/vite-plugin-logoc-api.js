@@ -9,14 +9,14 @@ const __dirname = path.dirname(__filename);
  * Vite plugin that serves the LOGOC corpus as a live API endpoint.
  *
  * Endpoint: GET /api/v1/logoc/corpus
- * Reads from: ../../../../../logs/corpus/master_corpus_v5.2.jsonl
+ * Reads from: ../../../../../logs/corpus/master_corpus_v5.8_final.jsonl
  * Serves the same snapshot structure as the static build.
  */
 
 export function logocApiPlugin() {
   const CORPUS_PATH = path.resolve(
     __dirname,
-    "../../../../../logs/corpus/master_corpus_v5.2.jsonl"
+    "../../../../../logs/corpus/master_corpus_v5.8_final.jsonl"
   );
 
   function buildSnapshot() {

@@ -216,6 +216,36 @@ export function buildPpsBandScatter(
 }
 
 /**
+ * Build triad co-occurrence heatmap (Mode × Band) from event Peirce blocks.
+ * Returns counts for every (mode, band) cell — used by LogocPage for the
+ * 3×3 Mode×Band grid visualization.
+ */
+export function buildTriadHeatmap(
+  events: LogocEvent[],
+): { mode: "ICON" | "INDEX" | "SYMBOL"; band: PragmatismBand; count: number }[] {
+  const modes = ["ICON", "INDEX", "SYMBOL"] as const;
+  const bands = ["INSTINCT", "EXPERIENCE", "FORMAL_THOUGHT"] as const;
+  const counts: Record<string, number> = {};
+  for (const m of modes) {
+    for (const b of bands) {
+      counts[`${m}|${b}`] = 0;
+    }
+  }
+  for (const ev of events) {
+    if (!ev.peirce || ev.peirce_migration_pending) continue;
+    const key = `${ev.peirce.mode}|${ev.peirce.pragmatism_band}`;
+    if (key in counts) counts[key]++;
+  }
+  const out: { mode: "ICON" | "INDEX" | "SYMBOL"; band: PragmatismBand; count: number }[] = [];
+  for (const m of modes) {
+    for (const b of bands) {
+      out.push({ mode: m, band: b, count: counts[`${m}|${b}`] });
+    }
+  }
+  return out;
+}
+
+/**
  * Filter events that need human review (pipeline flagged or migration pending).
  */
 export function getHumanReviewEvents(events: LogocEvent[]): LogocEvent[] {
