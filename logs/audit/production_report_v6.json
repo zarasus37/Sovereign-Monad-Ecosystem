@@ -1,0 +1,67 @@
+{
+  "version": "P6_production",
+  "corpus_size": 334,
+  "model_version": "v11_final",
+  "ml_accuracy": 0.991,
+  "rubric_accuracy": 0.6923,
+  "auto_accept_rate": 0.8383,
+  "human_review_rate": 0.1078,
+  "ambiguous_rate": 0.0539,
+  "per_class": {
+    "2": {
+      "total": 77,
+      "ml_correct": 74,
+      "ml_accuracy": 0.961
+    },
+    "7": {
+      "total": 33,
+      "ml_correct": 33,
+      "ml_accuracy": 1.0
+    },
+    "5": {
+      "total": 21,
+      "ml_correct": 21,
+      "ml_accuracy": 1.0
+    },
+    "8": {
+      "total": 7,
+      "ml_correct": 7,
+      "ml_accuracy": 1.0
+    },
+    "9": {
+      "total": 17,
+      "ml_correct": 17,
+      "ml_accuracy": 1.0
+    },
+    "0": {
+      "total": 84,
+      "ml_correct": 84,
+      "ml_accuracy": 1.0
+    },
+    "1": {
+      "total": 30,
+      "ml_correct": 30,
+      "ml_accuracy": 1.0
+    },
+    "3": {
+      "total": 16,
+      "ml_correct": 16,
+      "ml_accuracy": 1.0
+    },
+    "4": {
+      "total": 15,
+      "ml_correct": 15,
+      "ml_accuracy": 1.0
+    },
+    "6": {
+      "total": 12,
+      "ml_correct": 12,
+      "ml_accuracy": 1.0
+    },
+    "42": {
+      "total": 22,
+      "ml_correct": 22,
+      "ml_accuracy": 1.0
+    }
+  }
+}

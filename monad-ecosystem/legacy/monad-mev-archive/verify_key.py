@@ -1,6 +1,6 @@
 import requests
 
-key = "sk-sovereign-36b7cb69c79c401e1c674c084c5af286"
+key = "YOUR_API_KEY_HERE"
 r = requests.post(
     "https://sovereign-rge-api.sovereign-mev.workers.dev/evaluate",
     headers={"x-api-key": key, "Content-Type": "application/json"},

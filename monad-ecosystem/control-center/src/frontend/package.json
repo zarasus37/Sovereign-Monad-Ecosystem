@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && pnpm copy:env",
+    "build": "node scripts/build-corpus.js && vite build && pnpm copy:env",
+    "build:corpus": "node scripts/build-corpus.js",
     "copy:env": "node -e \"const fs=require('fs'); fs.copyFileSync('env.json', 'dist/env.json')\"",
     "typecheck": "tsc --noEmit",
     "check": "biome check src",

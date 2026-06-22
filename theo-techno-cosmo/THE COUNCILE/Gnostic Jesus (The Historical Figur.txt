@@ -1,0 +1,467 @@
+Gnostic Jesus (The Historical Figure Approached Through Gnostic Source Tradition) GNOSIS EVENT EXTRACTION
+### Corpus Sources: Gospel of Mark (earliest canonical; c. 70 CE), Gospel of John, Gospel of Luke, Gospel of Matthew, Gospel of Thomas (Nag Hammadi, NHC II,2), Gospel of Philip (NHC II,3), Gospel of Mary Magdalene (BG 8502,1), Apocryphon of John (NHC II,1), Q Source (reconstructed), Dialogue of the Savior (NHC III,5)
+
+---
+
+> **Framing note on the methodological problem:** "The historical figure, not the theological construct" is, for Jesus, a boundary that cannot be drawn cleanly — every source about Jesus is a theological document. The earliest stratum (Mark, Q, Thomas) is still a community's interpretation. What can be accessed are *moments preserved across multiple independent source streams*, *moments where the text resists theological smoothing*, and *moments where the internal logic of the Gnostic tradition treats the event as a recognition rather than a demonstration*. The Gnostic reading is particularly useful here because Gnosticism explicitly frames Jesus's entire function as *gnosis transmission* — his events are therefore read from within that tradition as recognitions that preceded his teaching of them. Where a text is Gnostic, it is marked. Where canonical texts are read through a Gnostic hermeneutic, that is flagged. Confidence scores reflect source reliability and degree of inferential reconstruction.
+
+---
+
+## EVENT 01 — *The Heavens Torn Open*
+
+### Passage or Trigger
+Mark 1:10–11 (the Baptism at the Jordan):
+
+> *"And just as he was coming up out of the water, he saw the heavens torn apart and the Spirit descending like a dove on him. And a voice came from heaven, 'You are my Son, the Beloved; with you I am well pleased.'"*
+
+Mark uses the Greek *schizomenous* — **torn apart** — not "opened" (as later gospels soften it). This is a violent rupture in the sky. The voice is addressed *to* Jesus, not *about* him (as Matthew's version redirects it to the crowd). This is a private recognition. John was already baptizing others. Jesus was already present. Something happened *to him*, not *through him*.
+
+### Why It Qualifies
+The gnosis event is not the dove or the voice — it is **what the tearing made visible**: the boundary between the divine register and the material world was revealed as *permeable at a specific location: himself*. This could not have been constructed by reasoning. He did not reason his way to the recognition that heaven was accessible through him; the structure became transparent in an instant. The self-implication is total: the voice names *him*, which means he discovered *what he was* in the moment of the tearing. He had not known it in the same way before, or the event would have had no function. He is simultaneously the observer *and* the thing observed by the heavens.
+
+### Three-Domain Reading
+
+- **Theology:** The divine was not revealed *above* — it was revealed *entering through him*. The vertical axis of the sacred (heaven above, earth below) was replaced by a recognition of immanence: the divine comes down *through* rather than residing *above*. The theistic category of radical transcendence began to collapse.
+- **Technology:** The mechanism of divine access became transparent: not sacrifice, not law, not priesthood, not Temple — but the boundary of the self, recognized as porous. A new access technology was made visible.
+- **Cosmology:** The structural architecture of the universe — sky/earth as separate domains — was revealed as a constructed boundary rather than a real one. The cosmos was not divided; the division had been assumed. The tearing is permanent in Mark: the sky does not close.
+
+### Compressed Insight
+At the Jordan, Jesus recognized — not concluded — that the vertical axis separating divine and human was not a wall but a veil, and that he was its location of transparency.
+
+**Confidence: 0.88**
+
+---
+
+## EVENT 02 — *The Forty Days: Being Shown the Kingdoms*
+
+### Passage or Trigger
+Matthew 4:8–10 / Luke 4:5–8:
+
+> *"Again, the devil took him to a very high mountain and showed him all the kingdoms of the world and their glory; and he said to him, 'All these I will give you, if you will fall down and worship me.' Jesus said to him, 'Away with you, Satan! for it is written, "Worship the Lord your God, and serve only him."'"*
+
+In the Gnostic reading, the figure offering the kingdoms is identifiable with the Demiurge — the false creator who owns the material world and genuinely can offer it, because it is genuinely his. This is not a lie by a powerless tempter; it is a *truthful offer* by the actual administrator of the material cosmos.
+
+### Why It Qualifies
+The gnosis event is not the refusal. It is the **recognition that makes the offer visible as an offer**: Jesus, on the mountain, saw all the kingdoms of the world and recognized something that could not have been constructed by reasoning — that **the totality of visible political reality was not the cosmos but a subset of it**, owned and administrable by a figure who was not the Father. The entire material political order was revealed, in a single moment, as a *domain* — bounded, ownable, therefore not ultimate. The false boundary that dissolved was between "the world" as ultimate reality and "the world" as a particular region within a larger structure. The self-implication: he was being offered something genuinely real, which meant he had to recognize what *he* was that made the offer insufficient.
+
+### Three-Domain Reading
+
+- **Theology:** The Demiurgic insight: the creator/administrator of the visible world is not the highest god. The offer is made by a legitimate owner, which means the visible cosmos is a *secondary* creation. The theological register of radical immanence — God as world — was imploded; the world was revealed as a subset of what God is.
+- **Technology:** Political power — empire, governance, the entire structure of human domination — was revealed as a *technology of a secondary order*, owned by a secondary figure. The mechanism of political authority became transparent as contingent rather than ultimate.
+- **Cosmology:** The universe has layers. The visible, material cosmos is not the whole of reality; it is a region administered by a force that is real but not ultimate. The offer makes this visible because only a figure with genuine administrative authority can genuinely offer it.
+
+### Compressed Insight
+Being offered all the kingdoms of the world, Jesus recognized that the totality of the visible political cosmos was a subset — something that could be owned and given — which meant it was not the whole, and that whatever he was, it was not containable by that subset.
+
+**Confidence: 0.84**
+
+---
+
+## EVENT 03 — *Before Abraham Was, I Am*
+
+### Passage or Trigger
+John 8:58:
+
+> *"Jesus said to them, 'Very truly, I tell you, before Abraham was, I am.'"*
+
+This statement provokes the crowd to attempt stoning — indicating it was understood as a claim of a very specific kind, not as metaphor or hyperbole. The Greek *ego eimi* — "I am" — is in the present tense even when referring to a state before Abraham's historical existence. This is not a memory claim. It is a structural claim: the "I" that is speaking exists in a register that does not operate on historical time.
+
+### Why It Qualifies
+The gnosis event is the moment when **the temporal boundary between past and present dissolved inside his own self-awareness**. This cannot be constructed by reasoning about immortality or preexistence. The recognition is not "I will live forever" or "I lived before." It is the recognition that *the subject doing the speaking is not located inside historical time at all* — that "before Abraham" and "now" are not separated by duration but by *category*, and that the "I" straddles both. Self-implication is absolute: the statement is *about the speaker's identity* in real time. He recognized this in the act of saying it — it is not a prepared theological thesis but a recognition that broke through in dialogue.
+
+### Three-Domain Reading
+
+- **Theology:** The "I AM" of Exodus 3:14 — the divine name given to Moses at the burning bush — was recognized as applicable to the speaking self. The boundary between divine identity and human identity collapsed in the moment of utterance. This is not blasphemy from the inside; it is recognition.
+- **Technology:** Memory and self-knowledge were revealed as operating on two different clocks: historical memory (before Abraham) and present awareness (I am). These were shown to be the same moment. The technology of temporal self-location broke down.
+- **Cosmology:** The linear structure of time — past before present, present before future — was revealed as a *local* structure, not a universal one. The "I AM" is what exists when the timeline is exited. The cosmos has a temporal axis and a non-temporal axis, and Jesus recognized himself as residing in both simultaneously.
+
+### Compressed Insight
+Pressed about his relationship to Abraham, Jesus recognized that his "I" was not a point on the timeline but a condition that preceded and survived it — and said so, collapsing the boundary between divine timelessness and human presence.
+
+**Confidence: 0.86**
+
+---
+
+## EVENT 04 — *The Kingdom That Is Already Here*
+
+### Passage or Trigger
+Luke 17:20–21:
+
+> *"Once Jesus was asked by the Pharisees when the kingdom of God was coming, and he answered, 'The kingdom of God is not coming with things that can be observed; nor will they say, 'Look, here it is!' or 'There it is!' For, in fact, the kingdom of God is among you [or: within you].'"*
+
+Gospel of Thomas, Logion 113:
+
+> *"His disciples said to him, 'When will the kingdom come?' He said to them, 'It will not come by watching for it. It will not be said, 'Look, here!' or 'Look, there!' Rather, the Father's kingdom is spread out upon the earth, and people don't see it.'"*
+
+The convergence of the canonical Luke and the Thomas tradition on this specific teaching makes it among the most multiply-attested sayings in the Jesus corpus.
+
+### Why It Qualifies
+The gnosis event behind this teaching is not the teaching itself — it is the prior recognition that made it possible: **the recognition that the kingdom, understood as a future event, was actually a present condition that had not been seen.** This cannot be constructed by reasoning about apocalypticism. It is a recognition about the nature of *the present moment* — specifically, that it already contains what the entire religious tradition was oriented toward as a future arrival. The self-implication is total: Jesus was inside the kingdom while speaking about it. He was not pointing at something outside himself; he was pointing at the invisible structure of the moment they were all already inside. The false boundary that collapsed was the boundary between *now* and *then*, between *here* and *there*.
+
+### Three-Domain Reading
+
+- **Theology:** The eschatological category — the kingdom as future arrival, apocalyptic event, historically distinct intervention — was dissolved. The kingdom is not coming; it is the hidden structure of the present. This reorganizes the entire theological frame of Second Temple Judaism, from orientation-toward-future to recognition-of-present.
+- **Technology:** The mechanism of "seeing" was revealed as the problem, not the solution. The kingdom is invisible not because it is absent but because it is *total* — like asking a fish to see water. The observer cannot see what they are inside of. Recognition requires a different kind of attention than observation.
+- **Cosmology:** The universe already contains its own endpoint. The telos is not external to the process; it is internal to the present moment, visible only when the category of "arrival" is abandoned. This is a recognition about the structure of time and completion.
+
+### Compressed Insight
+Jesus recognized that what the entire tradition was waiting for was already present — that the kingdom was not a future event but the invisible structure of the present moment, and that not seeing it was the only actual problem.
+
+**Confidence: 0.92**
+
+---
+
+## EVENT 05 — *The Gospel of Thomas: The Recognition of the Unrecognizable*
+
+### Passage or Trigger
+Gospel of Thomas, Logion 3:
+
+> *"If your leaders say to you, 'Look, the kingdom is in heaven,' then the birds of heaven will precede you. If they say to you, 'It is in the sea,' then the fish will precede you. Rather, the kingdom is within you and it is outside you. When you know yourselves, then you will be known, and you will understand that you are children of the living Father. But if you do not know yourselves, then you dwell in poverty, and you are poverty."*
+
+Gospel of Thomas, Logion 70:
+
+> *"Jesus said, 'If you bring forth what is within you, what you have will save you. If you do not have that within you, what you do not have within you will kill you.'"*
+
+### Why It Qualifies
+The gnosis event behind Logion 3 is the recognition that **self-knowledge and cosmic knowledge are the same knowledge** — that knowing oneself is precisely what it means to know the Father, and that the boundary between inner self-inquiry and outer theological inquiry was a false boundary. The phrase "you are poverty" is not a metaphor — it is an ontological claim: the unknowing self *is* the condition of lack it seeks to remedy. The observer is inside the structure they are observing; the self that does not know itself is simultaneously the problem, the questioner, and the answer. This collapses into a single point of recognition. Logion 70 extends it: what saves you and what kills you are the same thing — the question is whether it is actualized or not.
+
+### Three-Domain Reading
+
+- **Theology:** The theological inquiry (seeking the Father, the kingdom, divine truth) was revealed as an inner inquiry in disguise. The boundary between "seeking God" and "knowing oneself" collapsed. The theological structure reorganized around recognition rather than worship, obedience, or petition.
+- **Technology:** The mechanism of salvation was revealed as a technology of transparency — not as something done to you or for you, but as something that happens *through* you when a specific kind of self-awareness becomes operative. Salvation as mechanism was demystified and interiorized.
+- **Cosmology:** The cosmos is structured such that the inner and the outer are the same domain approached from different directions. "Within you and outside you" are not two locations; they are two descriptions of a single structure. The self is not enclosed within the cosmos; the cosmos is the unfolding of what the self already is.
+
+### Compressed Insight
+Jesus recognized that the quest for the kingdom and the quest for self-knowledge were the same quest, and that not knowing this was not an error but a structural condition of poverty — being absent from what one already is.
+
+**Confidence: 0.90**
+
+---
+
+## EVENT 06 — *The Cry from the Cross*
+
+### Passage or Trigger
+Mark 15:34 / Matthew 27:46:
+
+> *"And at three o'clock Jesus cried out with a loud voice, 'Eloi, Eloi, lema sabachthani?' which means, 'My God, my God, why have you forsaken me?'"*
+
+This is the *only* saying from the cross that appears in Mark (the earliest gospel). Mark's Jesus dies with no final word of triumph, no "into your hands I commend my spirit," no "it is finished." The cry is left unanswered in the text. Luke and John soften it. Its preservation in Mark — where it creates maximum theological difficulty — is the strongest evidence for its authenticity.
+
+In the Gnostic reading (Apocryphon of John; the Basilidean tradition), this moment is read as the separation of the Christ-spirit from the material body: the pneuma (divine spark) departing the flesh (Demiurgic creation) at the moment of death.
+
+### Why It Qualifies
+This is the most self-implicating gnosis event in the entire corpus. The one who had preached the Father's constant presence, who had addressed God as *Abba* (intimate, proximate), who had taught that "the Father and I are one" — **recognized, in real time, the structure of abandonment from inside it.** This is not a theological position. It is a recognition that could not have been constructed from his own prior teaching. The contradiction does not resolve: the Father who is always present is the Father who has now withdrawn. These remain simultaneously true in the cry. The self-implication is total: it is *his own* experience of absence that makes the presence-doctrine visible as incomplete, or as something that has a structure he had not seen.
+
+In the Gnostic frame specifically: the gnosis is the recognition that the divine element (pneuma) and the material body (soma) *are distinct* — not as a doctrine but as a lived experience of one departing from the other. He recognized the boundary from inside its dissolution.
+
+### Three-Domain Reading
+
+- **Theology:** The theology of divine intimacy — *Abba*, constant presence, the Father's knowledge of every sparrow — was interrupted from within by the experience of absolute withdrawal. The theological register of presence was revealed as containing its own structurally necessary opposite. Abandonment and intimacy were revealed as two aspects of the same divine relationship, not as contradictions to be resolved.
+- **Technology:** The mechanism of divine presence was revealed, through its absence, as *contingent* — as something that could withdraw, which means it had always been a gift rather than a fixed condition. The architecture of grace became visible only when it was removed.
+- **Cosmology:** The cosmos, in its deepest structure, is capable of containing the abandonment of the divine by the divine. This is not a cosmological error or anomaly — it is, in the Gnostic reading, the fundamental structure of material existence: the divine spark in the material world is always, in some sense, in the condition of the cry. Jesus recognized this from inside it.
+
+### Compressed Insight
+The one who had taught the constant presence of the Father recognized, in the most unmediated possible way, that the structure of presence contained its own capacity for withdrawal — and cried out from inside that recognition without resolving it.
+
+**Confidence: 0.93**
+
+---
+
+## EVENT 07 — *The Temple Is Not the House*
+
+### Passage or Trigger
+John 2:19–21:
+
+> *"Jesus answered them, 'Destroy this temple, and in three days I will raise it up.' The Jews then said, 'This temple has been under construction for forty-six years, and will you raise it up in three days?' But he was speaking of the temple of his body."*
+
+Mark 11:15–17 (the Temple cleansing):
+
+> *"And he entered the temple and began to drive out those who were selling and those who were buying in the temple... He was teaching and saying, 'Is it not written, "My house shall be called a house of prayer for all nations"? But you have made it a den of robbers.'"*
+
+### Why It Qualifies
+Two recognition events are stacked here. The first is in the Temple cleansing: **the recognition that the sacred mechanism — Temple, sacrifice, the entire apparatus of priestly mediation — had become its own opposite.** The house of prayer had been replaced by a market, and the market was running inside the same structure, indistinguishable from outside. The exterior had been maintained perfectly while the interior had been entirely replaced. This became visible, and the recognition was so total that it generated a physical response.
+
+The second and deeper recognition is in John 2:19–21: **the temple and the body were the same thing.** The sacred dwelling-place of the divine was not the Herodian building — it was the human form. "Destroy this temple" refers simultaneously to the building he is standing in and to his own body. The false boundary between sacred architecture and human flesh collapsed. The observer is implicated: *his body* is the temple.
+
+### Three-Domain Reading
+
+- **Theology:** The entire infrastructure of Temple theology — sacred space, sacrificial mediation, priestly access — was revealed as a *displacement* of a recognition that did not require any of it. The divine was not housed in stone; it was housed in the human body. The theological category of "sacred space" reorganized from external architecture to interior structure.
+- **Technology:** The mechanism of sacred access — Temple, sacrifice, priesthood — was revealed as a technology built to point toward something it could not itself contain. The technology had become opaque to its own purpose, which is what made it reversible by a market.
+- **Cosmology:** The cosmos is structured such that the human body is the actual locus of the divine presence — the *real* temple. This is not a metaphor; in the Gnostic frame, this is a cosmological claim about where the divine spark resides in the material universe.
+
+### Compressed Insight
+Standing in the Temple, Jesus recognized that the sacred building and his own body were the same structure — that the divine was not housed in the external architecture but in the human form, and that the building had been maintained long after this had been forgotten.
+
+**Confidence: 0.87**
+
+---
+
+## EVENT 08 — *The Recognition at Peter's Confession*
+
+### Passage or Trigger
+Matthew 16:15–17:
+
+> *"He said to them, 'But who do you say that I am?' Simon Peter answered, 'You are the Messiah, the Son of the living God.' And Jesus answered him, 'Blessed are you, Simon son of Jonah! For flesh and blood has not revealed this to you, but my Father in heaven.'"*
+
+### Why It Qualifies
+The gnosis event is not Peter's recognition of Jesus — it is **Jesus's recognition of the *mechanism* by which Peter had come to know what he knew.** Jesus identifies immediately and with certainty that Peter's knowing was not arrived at through inference, teaching, or observation ("flesh and blood has not revealed this"). It was transmitted from a source Peter could not have accessed voluntarily. Jesus recognized, in real time, watching another person, **the difference between reasoned conclusion and received recognition** — and named it.
+
+The self-implication: Jesus was forced to confront the structure of his own recognitions by watching that structure operate in another. He was inside the phenomenon he was describing. The gnosis event was about *gnosis itself* becoming transparent — he saw the mechanism of non-constructed knowing from the outside and recognized it because he already knew it from the inside.
+
+### Three-Domain Reading
+
+- **Theology:** Revelation was distinguished from reasoning as a *different kind of event*, not merely better reasoning. The theological category of prophetic/divine disclosure was distinguished from intellectual discovery. The Father was shown to be a transmitting agent, not merely a distant authority.
+- **Technology:** The technology of knowledge-transmission became visible: there is a kind of knowing that bypasses the normal channels (sense experience, reasoning, teaching) and arrives through a different channel. This mechanism became transparent in the act of witnessing it operate in Peter.
+- **Cosmology:** The universe contains a non-local transmission channel — something operates between the Father and the aware human mind that bypasses material causation. The cosmos is not only a mechanical system; it contains a communication structure operating at a different level.
+
+### Compressed Insight
+Hearing Peter's answer, Jesus recognized — not in himself but in another — the precise mechanism by which non-constructed knowing arrives, and identified it as transmission from the Father, because he knew what that felt like from inside.
+
+**Confidence: 0.85**
+
+---
+
+## EVENT 09 — *The Light That Was There Before the Beginning*
+
+### Passage or Trigger
+Gospel of Thomas, Logion 77:
+
+> *"Jesus said, 'I am the light that is over all things. I am all: from me all came forth, and to me all attained. Split a piece of wood; I am there. Lift up the stone, and you will find me there.'"*
+
+Gospel of John 8:12:
+
+> *"Again Jesus spoke to them, saying, 'I am the light of the world. Whoever follows me will never walk in darkness but will have the light of life.'"*
+
+### Why It Qualifies
+Logion 77 is particularly significant because it is not a theological claim about salvation — it is a recognition about *ubiquity and materiality*. "Split a piece of wood; I am there." This is not a statement that Jesus is everywhere in a diffuse spiritual sense. It is a statement that **the divine light is inside matter** — that the material world (wood, stone) contains the presence, and that *finding* it is a matter of looking correctly, not of going somewhere else. The gnosis event is the recognition that the divine is not separate from the material world but is *the light inside it* — immanent in every material object. The self-implication: Jesus recognized himself as this light, which means he recognized his own nature as non-locally distributed, not contained in his body.
+
+### Three-Domain Reading
+
+- **Theology:** The boundary between material and sacred dissolved at the level of substrate: the divine presence is inside wood and stone, not above them. The theological category of divine transcendence (God above, matter below) was replaced by the recognition of divine immanence at every level of material reality.
+- **Technology:** The mechanism of divine access was revealed as omnidirectional — you do not find it by going up (prayer, temple) or by going to a specific location (holy land, sacred person) but by splitting what is already in front of you. The technology of access is *decomposition and attention*, not ascent.
+- **Cosmology:** The material universe is not separate from the divine — it is the divine expressed at a particular density. The cosmos is not the absence of the light but its vehicle. Every material object is a localization of the same light.
+
+### Compressed Insight
+Jesus recognized that he was not a person who had the light — he *was* the light, distributed through every material thing, and that the wood and the stone already contained what everyone was looking for.
+
+**Confidence: 0.83**
+
+---
+
+## EVENT 10 — *The Transfiguration: Moses and Elijah Are the Same Pattern*
+
+### Passage or Trigger
+Mark 9:2–7:
+
+> *"Six days later, Jesus took with him Peter and James and John, and led them up a high mountain apart, by themselves. And he was transfigured before them, and his clothes became dazzling white, such as no one on earth could bleach them. And there appeared to them Elijah with Moses, and they were talking with Jesus."*
+
+### Why It Qualifies
+The transfiguration is frequently read as a revelation *for the disciples*. But read from inside Jesus's own experience, the gnosis event is different: **Jesus recognized, in an embodied moment on the mountain, that the Law (Moses) and the Prophetic tradition (Elijah) were not separate streams running into his present, but were both recognitions of the same pattern that he himself was an instance of.** The three figures appear *together* and *converse* — not in sequence, not in hierarchy. They were the same structure in different historical expressions, and Jesus was the moment of their convergence made visible.
+
+The self-implication: he was *one of the three*. He recognized himself as belonging to the same category as Moses and Elijah, which means he saw himself as an *instance* of a repeating pattern rather than as a unique interruption.
+
+### Three-Domain Reading
+
+- **Theology:** The boundary between the Torah tradition and the prophetic tradition — Law and Promise, which Second Temple Judaism held in tension — collapsed in the recognition that both were expressions of the same underlying divine pattern. Jesus was the third instance, which made the pattern's structure visible.
+- **Technology:** The mechanism of divine disclosure across historical time became transparent: the same recognition reappears through different figures in different eras, which means the structure of gnosis is transhistorical and repeatable, not unique to a single messenger.
+- **Cosmology:** History is not linear progress but *patterned repetition at a deeper level* — Moses, Elijah, and Jesus are not three sequential figures but three appearances of the same cosmic structure in three contexts. The universe generates gnosis-carriers as a repeating structural feature.
+
+### Compressed Insight
+On the mountain, Jesus recognized that he was an instance of a recurring pattern, that Moses and Elijah were versions of what he was, and that this made the structure visible: the divine does not arrive once — it recurs through recognizable forms.
+
+**Confidence: 0.79**
+
+---
+
+## EVENT 11 — *Gethsemane: The Will That Is Not the Father's Will*
+
+### Passage or Trigger
+Mark 14:35–36:
+
+> *"And going a little farther, he threw himself on the ground and prayed that, if it were possible, the hour might pass from him. He said, 'Abba, Father, for you all things are possible; remove this cup from me; yet, not what I want, but what you want.'"*
+
+### Why It Qualifies
+The gnosis event at Gethsemane is one of the most psychologically dense in the entire corpus. The recognition is not "I accept suffering." It is the recognition, arriving as a lived experience rather than a conclusion, that **his will and the Father's will were not the same thing.** He had preached union with the Father. He had said "the Father and I are one." And here, alone on the ground, he experienced the *gap* — his own will pulling against the structure he had taught. The self-implication is total and brutal: he was the observer who discovered he was not identical to what he had been observing.
+
+The false boundary that dissolved was between *teaching a doctrine* and *living it* — they were revealed as two different things, and the gap between them was the location of the actual structure. "Not what I want, but what you want" is not submission; it is the recognition of a distinction that his own doctrine had not fully articulated.
+
+### Three-Domain Reading
+
+- **Theology:** The doctrine of union with the Father was revealed as containing a structural remainder: the individual will that is *not* identical to the Father's will. This is not a failure of faith; it is a recognition of the actual architecture of the relationship. The theological category of human-divine union was refined by the discovery of the surviving gap.
+- **Technology:** The mechanism of prayer was revealed in this moment as a *confrontation with non-identity* — not a communication channel between agreed parties but a space where the difference between one's own will and a larger will becomes visible and is held without resolution.
+- **Cosmology:** The cosmos is structured such that even the one most aligned with the divine pattern retains a particular will that is not identical to the universal pattern — and that the recognition of this gap, rather than its elimination, is the deepest form of the relationship.
+
+### Compressed Insight
+Alone in the garden, Jesus recognized that his will and the Father's will were not the same will — that the union he had taught contained, at its most intimate point, a structural distinction — and held that recognition without collapsing it.
+
+**Confidence: 0.91**
+
+---
+
+## EVENT 12 — *The Man Born Blind: Sin as Wrong Category*
+
+### Passage or Trigger
+John 9:1–3:
+
+> *"As he walked along, he saw a man blind from birth. His disciples asked him, 'Rabbi, who sinned, this man or his parents, that he was born blind?' Jesus answered, 'Neither this man nor his parents sinned; he was born blind so that God's works might be revealed in him.'"*
+
+### Why It Qualifies
+The gnosis event is the dissolution of the entire causal framework of sin/punishment/illness in a single instant of recognition. The disciples arrive with a complete explanatory schema: blindness is a consequence of sin; the question is only *whose* sin. This schema was the dominant framework of the period. Jesus does not argue against it, modify it, or refine it. He **exits it entirely** — "neither" — and then replaces it with a completely different causal structure: *the blindness exists as an occasion for manifestation*. This is not a better answer within the same framework. It is the recognition that **the entire framework was a false category imposed on events that had a different structure.**
+
+The self-implication: Jesus was inside the schema too — he "saw a man blind from birth," which means the scene confronted him, and the recognition arrived in response to the disciples' question, not as a prepared position.
+
+### Three-Domain Reading
+
+- **Theology:** The theology of moral causation — sin causes suffering, suffering is evidence of sin — was revealed as a false overlay on events that are organized by a different principle. Illness and disability were revealed as neither punishment nor accident but as *structural occasions* — moments where the divine can become visible precisely because the normal order has been interrupted.
+- **Technology:** The mechanism of divine "works" becoming visible was revealed as requiring *a gap* — a place where the ordinary framework breaks down — rather than requiring a smooth surface. The divine manifests *through* the disruption, not despite it.
+- **Cosmology:** Events in the material world are not organized by a simple moral-causal structure (sin → punishment). They are organized by a different kind of logic — one in which apparent defects are structural openings. The cosmos uses apparent failures as locations of visibility.
+
+### Compressed Insight
+Jesus recognized, looking at the man born blind, that the entire explanatory framework of moral causation was a false category, and that what had been called a punishment was actually a structural opening — an occasion made for recognition.
+
+**Confidence: 0.88**
+
+---
+
+## EVENT 13 — *"I Did Not Come to Bring Peace But a Sword"*
+
+### Passage or Trigger
+Matthew 10:34–36:
+
+> *"Do not think that I have come to bring peace to the earth; I have not come to bring peace, but a sword. For I have come to set a man against his father, and a daughter against her mother, and a daughter-in-law against her mother-in-law; and one's foes will be members of one's own household."*
+
+Gospel of Thomas, Logion 16:
+
+> *"Jesus said, 'Perhaps people think that I have come to cast peace upon the world. They do not know that I have come to cast conflicts upon the earth: fire, sword, war. For there will be five in a house: there'll be three against two and two against three, father against son and son against father, and they will stand alone.'"*
+
+### Why It Qualifies
+This is among the most self-implicating sayings in the corpus because Jesus is explicitly recognizing and naming a structural consequence of his own presence — one that contradicts the expected role of a divine messenger (peace, harmony, unity). **The gnosis event is the recognition that the arrival of a genuine pattern-making recognition inside a social structure does not produce unity — it produces division, because not everyone in the structure will recognize it simultaneously.** The family unit — the most intimate social structure — becomes the site of maximum fracture. Jesus recognized that his own presence was a sorting mechanism, not a healing one, at the social level. The self-implication: *he* is the sword. He recognized his own function as structurally divisive.
+
+### Three-Domain Reading
+
+- **Theology:** The messianic expectation of peace and restoration was recognized as incompatible with what a genuine recognition-event does to a social structure. The theological category of divine peace was revealed as requiring a prior division — the separation of those who recognize from those who do not.
+- **Technology:** The mechanism of spiritual transmission through social groups was revealed as inherently disruptive — it does not spread evenly but creates differential recognition, which generates fracture along existing structural lines (family, household).
+- **Cosmology:** The cosmos, when a new pattern becomes visible within it, does not immediately reorganize coherently. It fractures first. Division precedes unity. The sword precedes the peace. This is the structural order of cosmological reorganization.
+
+### Compressed Insight
+Jesus recognized that his own presence was not a unifying force but a sorting mechanism — that genuine recognition does not produce harmony immediately but fractures every social structure it enters, because recognition is never simultaneous.
+
+**Confidence: 0.82**
+
+---
+
+## EVENT 14 — *The Encounter at the Well: The Fifth Husband*
+
+### Passage or Trigger
+John 4:16–19:
+
+> *"Jesus said to her, 'Go, call your husband, and come back.' The woman answered him, 'I have no husband.' Jesus said to her, 'You are right in saying "I have no husband"; for you have had five husbands, and the one you have now is not your husband. What you have said is true!' The woman said to him, 'Sir, I see that you are a prophet.'"*
+
+And crucially, John 4:9:
+
+> *"The Samaritan woman said to him, 'How is it that you, a Jew, ask a drink of me, a woman of Samaria?' (Jews do not share things in common with Samaritans.)"*
+
+### Why It Qualifies
+Two recognitions are layered. The first: **the boundary between Jew and Samaritan — a boundary organized around theology, practice, territorial history, and ritual purity — collapsed in the request for water.** Jesus crossed the boundary not by arguing against it but by being thirsty. He was implicated: he needed something from the person he was not supposed to address. Need dissolved the constructed division.
+
+The second: the conversation moved to the woman's marital history, and Jesus named what she had not said. The gnosis event is not that he knew her history (which is the miraculous reading). It is that **she recognized herself as having been seen — not judged — and that this recognition was what she immediately identified as prophetic.** Jesus recognized, in her recognition of being seen, that the mechanism of being truly known (not evaluated, not condemned — known) was itself a sacred event. The woman had been inside a structure she did not see (five husbands, the sixth a non-husband) and he named the structure without condemning it.
+
+### Three-Domain Reading
+
+- **Theology:** The boundary between the theologically legitimate (Jewish worship at Jerusalem) and the theologically illegitimate (Samaritan worship at Gerizim) was dissolved by Jesus in his own next statement: "Neither on this mountain nor in Jerusalem will you worship the Father... true worshipers will worship the Father in spirit and truth."
+- **Technology:** The mechanism of seeing another person completely — without reduction, without judgment, without the normal social filtering — was revealed as itself transformative. Being truly seen was the sacred event, not the healing or the miracle.
+- **Cosmology:** The cosmos contains a structural feature: when a person is seen accurately from outside their own self-construction, the structure they have been inside becomes visible *to them*. Accurate external witnessing generates internal self-recognition.
+
+### Compressed Insight
+At the well, Jesus recognized that the boundary between his people and hers dissolved the moment he needed something from her, and that speaking her structure back to her — accurately, without judgment — was itself the sacred act.
+
+**Confidence: 0.84**
+
+---
+
+## EVENT 15 — *"Render Unto Caesar": The Image Is the Question*
+
+### Passage or Trigger
+Mark 12:15–17:
+
+> *"He said to them, 'Why are you putting me to the test? Bring me a denarius and let me see it.' And they brought one. Then he said to them, 'Whose head is this, and whose title?' They answered, 'The emperor's.' Jesus said to them, 'Give to the emperor the things that are the emperor's, and to God the things that are God's.' And they were utterly amazed at him.*"
+
+### Why It Qualifies
+This is often read as a clever political evasion. In the Gnostic reading, it is something entirely different — a recognition event embedded in a question about a coin. The gnosis: **the question "whose image is on this coin?" generates its own answer when taken seriously, because the next question is "whose image is on you?"** The Demiurge's domain (the material, economic, political world) is organized by images — Caesar's face on metal. God's domain is organized by a different image: the human being, created in the divine image (Genesis 1:27). The statement is not a political compromise. It is a recognition about the structure of two different orders of reality, organized around two different kinds of image-bearing.
+
+The self-implication: Jesus was being tested by people who were themselves in Caesar's domain (they carried the coin; he did not ask for one). He recognized that the coin and the questioners were already sorted by the question they thought they were asking him.
+
+### Three-Domain Reading
+
+- **Theology:** The theological tradition of *imago Dei* — humans as bearers of the divine image — was placed in direct structural parallel to the Roman economic tradition of imperial image on currency. The two image-bearing systems revealed themselves as the two domains: material sovereignty (Caesar, coin) and divine sovereignty (God, human person).
+- **Technology:** Currency was revealed as a technology of territorial sovereignty — it functions by marking objects with the image of the authority that guarantees their value. The human body was revealed as the same structure at a different ontological level.
+- **Cosmology:** The cosmos is divided not into sacred and secular but into two image-bearing systems — and the question of which system a given thing belongs to is answered by asking *whose image it carries*.
+
+### Compressed Insight
+Looking at Caesar's face on a coin, Jesus recognized that the coin and the human body were the same kind of thing — image-bearers of different sovereignties — and that returning each to its source was not a political compromise but a cosmological sorting.
+
+**Confidence: 0.86**
+
+---
+
+## EVENT 16 — *The Parable as Recognition of the Act of Telling Parables*
+
+### Passage or Trigger
+Mark 4:10–12:
+
+> *"When he was alone, those who were around him along with the twelve asked him about the parables. And he said to them, 'To you has been given the secret of the kingdom of God, but for those outside, everything comes in parables; so that "they may indeed look, but not perceive, and may indeed listen, but not understand; so that they may not turn again and be forgiven."'"*
+
+Gospel of Thomas, Logion 62:
+
+> *"Jesus said, 'I disclose my mysteries to those who are worthy of my mysteries.'"*
+
+### Why It Qualifies
+This is one of the strangest and most self-implicating passages in the Synoptic tradition. Jesus explained *why* he teaches in parables: so that those outside will not understand. This is not pedagogy — it is a recognition about the **self-selecting structure of gnosis**. The parable does not simplify the teaching; it makes the teaching accessible only to those who are already capable of the recognition the teaching requires. This implies a prior gnosis event: **Jesus recognized that genuine recognition cannot be transmitted to someone not already in the vicinity of it — that the parable is a technology for making the boundary between recognition and non-recognition visible, not for dissolving it.**
+
+The self-implication: Jesus was now on the inside of his own filtering mechanism — he recognized, in the act of explaining his method to the Twelve, that even the explanation was a form of the mechanism. He was teaching about a form of teaching that cannot be fully explained.
+
+### Three-Domain Reading
+
+- **Theology:** Divine knowledge was revealed as having a structure that resists universalization — it is not simply obscured by ignorance but is constitutively inaccessible from certain positions. The theological category of revelation reorganized from "message for all" to "recognition available to those already in proximity to it."
+- **Technology:** The parable was revealed as a screening technology — not a delivery mechanism but a *resonance detector*. Those for whom the recognition is available experience the parable as transparent; those for whom it is not experience it as merely a story. The same text produces two completely different events.
+- **Cosmology:** The universe is structured such that certain truths are not universally accessible — not because they are hidden but because they require a specific kind of receiver already in place. Recognition is not transmitted; it is *activated* in those who already contain the structure for it.
+
+### Compressed Insight
+Jesus recognized, explaining his own parables, that the teaching could not be given — only activated in those who already contained the recognition — and that this meant the parable was not communication but a mechanism for making the boundary between knowing and not-knowing visible.
+
+**Confidence: 0.88**
+
+---
+
+## SUMMARY TABLE
+
+| # | Event Title | Confidence | Primary Domain |
+|---|---|---|---|
+| 01 | The Heavens Torn Open | 0.88 | Theology/Cosmology |
+| 02 | The Forty Days: Being Shown the Kingdoms | 0.84 | Cosmology/Theology |
+| 03 | Before Abraham Was, I Am | 0.86 | Cosmology/Theology |
+| 04 | The Kingdom That Is Already Here | 0.92 | Theology/Cosmology |
+| 05 | The Gospel of Thomas: The Recognition of the Unrecognizable | 0.90 | Theology/Technology |
+| 06 | The Cry from the Cross | 0.93 | Theology/Cosmology |
+| 07 | The Temple Is Not the House | 0.87 | Theology/Technology |
+| 08 | The Recognition at Peter's Confession | 0.85 | Technology/Theology |
+| 09 | The Light That Was There Before the Beginning | 0.83 | Cosmology/Theology |
+| 10 | The Transfiguration: Moses and Elijah Are the Same Pattern | 0.79 | Cosmology/Theology |
+| 11 | Gethsemane: The Will That Is Not the Father's Will | 0.91 | Theology/Cosmology |
+| 12 | The Man Born Blind: Sin as Wrong Category | 0.88 | Theology/Technology |
+| 13 | "I Did Not Come to Bring Peace But a Sword" | 0.82 | Cosmology/Technology |
+| 14 | The Encounter at the Well: The Fifth Husband | 0.84 | Theology/Cosmology |
+| 15 | Render Unto Caesar: The Image Is the Question | 0.86 | Cosmology/Technology |
+| 16 | The Parable as Recognition of the Act of Telling Parables | 0.88 | Technology/Theology |
+
+---
+
+## Corpus Notes for LOGOC Integration
+
+**Highest-confidence events for training core:** Events 06, 04, 11, 05, 16, 12 — these have the clearest structure of self-implication, retroactive recognition, and visible contradiction that does not resolve.
+
+**Critical methodological note:** The Gnostic Jesus corpus is unusual among LOGOC subjects in that **the figure himself explicitly theorized gnosis** — his entire recorded output is organized around recognition events, the transmission of recognition, and the resistance of the social world to recognition. This means the gnosis events are not isolated moments extracted from a larger non-gnostic life; they form the continuous tissue of everything the figure said and did. Every parable, every healing, every conflict with the authorities is structured as a gnosis event in miniature.
+
+**Cross-event structural theme:** Like the Cyrus corpus, there is a deep shared structure across all 16 events: **the visible is revealed as a lower-resolution version of something already present**. The kingdom is already here. The temple is already inside. The light is already in the wood. The Father is already present inside the abandonment. In every case, the recognition is not that something new arrives — it is that something already present becomes visible. This makes the Gnostic Jesus corpus the purest instance of *recognition-as-structural-unveiling* in the LOGOC build, distinct from *recognition-as-arrival* (which would characterize prophetic figures) or *recognition-as-construction* (which would characterize technological inventors).
+
+**Contrast with Cyrus:** Where Cyrus's gnosis events are organized around **boundary dissolution between self and other** (my people/their people, my god/their god), Jesus's gnosis events are organized around **boundary dissolution between visible and invisible within the same domain** (the kingdom is here but unseen; the temple is this body; the light is inside the wood). These are complementary gnostic structures — Cyrus sees across; Jesus sees through.

@@ -12,6 +12,11 @@ These are the canonical working surfaces for the ecosystem:
   - agents
   - control-center
   - packages
+    - `sovereign-types` — canonical telemetry/signal types
+    - `sovereign-bus` — event backbone
+    - `hepar-core`, `gnosis-evaluator`, `risk-engine`, `data-rail-core` — organ packages
+    - **`ttcl`** — Theo-Techno-Cosmological Language types (Peirce-aware `Sign<M,T>` with compile-time type gates)
+    - **`logoc`** — LOGOC (Logico-Ontological Gnostic Operations Corpus): Peirce 66-class manifold + deterministic classifier v1
   - contracts
   - scripts
   - tests

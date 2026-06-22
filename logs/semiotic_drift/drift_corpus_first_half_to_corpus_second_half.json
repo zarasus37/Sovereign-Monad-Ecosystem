@@ -1,0 +1,16 @@
+{
+  "cycle_id": "corpus_second_half",
+  "previous_cycle_id": "corpus_first_half",
+  "timestamp": 1781942462.7741292,
+  "kl_divergence": 0.2756340333738879,
+  "chi_squared": 0.7952666562202375,
+  "max_class_delta": 0.18755328218243822,
+  "max_class_delta_id": 7,
+  "band_deltas": {
+    "EXPERIENCE": -0.018542199488491062,
+    "FORMAL_THOUGHT": 0.018542199488491007
+  },
+  "drift_patterns": [],
+  "drift_score": 0.6562659846547314,
+  "category": "SYSTEMATIC_DRIFT"
+}

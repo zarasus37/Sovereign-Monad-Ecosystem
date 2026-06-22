@@ -1,0 +1,2306 @@
+{
+  "summary": {
+    "total_events": 332,
+    "rubric_accuracy": 0.7741,
+    "ml_accuracy": 0.9337,
+    "ensemble_agreement": 0.756,
+    "auto_accept_rate": 0.756,
+    "human_review_rate": 0.244,
+    "rubric_error_count": 75,
+    "ml_error_count": 22,
+    "both_wrong_count": 12,
+    "rubric_ml_disagree_count": 67
+  },
+  "by_class": {
+    "0": {
+      "total": 84,
+      "rubric_ok": 82,
+      "ml_ok": 83,
+      "hr": 3,
+      "auto": 81
+    },
+    "1": {
+      "total": 29,
+      "rubric_ok": 23,
+      "ml_ok": 29,
+      "hr": 6,
+      "auto": 23
+    },
+    "2": {
+      "total": 79,
+      "rubric_ok": 19,
+      "ml_ok": 73,
+      "hr": 58,
+      "auto": 21
+    },
+    "3": {
+      "total": 16,
+      "rubric_ok": 16,
+      "ml_ok": 16,
+      "hr": 0,
+      "auto": 16
+    },
+    "4": {
+      "total": 15,
+      "rubric_ok": 15,
+      "ml_ok": 15,
+      "hr": 0,
+      "auto": 15
+    },
+    "5": {
+      "total": 19,
+      "rubric_ok": 19,
+      "ml_ok": 19,
+      "hr": 0,
+      "auto": 19
+    },
+    "6": {
+      "total": 12,
+      "rubric_ok": 12,
+      "ml_ok": 12,
+      "hr": 0,
+      "auto": 12
+    },
+    "7": {
+      "total": 32,
+      "rubric_ok": 32,
+      "ml_ok": 32,
+      "hr": 0,
+      "auto": 32
+    },
+    "8": {
+      "total": 6,
+      "rubric_ok": 6,
+      "ml_ok": 6,
+      "hr": 0,
+      "auto": 6
+    },
+    "9": {
+      "total": 18,
+      "rubric_ok": 11,
+      "ml_ok": 5,
+      "hr": 12,
+      "auto": 6
+    },
+    "42": {
+      "total": 22,
+      "rubric_ok": 22,
+      "ml_ok": 20,
+      "hr": 2,
+      "auto": 20
+    }
+  },
+  "by_rubric_method": {
+    "direct": 238,
+    "ambiguous": 14,
+    "fallback_interpretant": 36,
+    "fallback_object": 44
+  },
+  "by_hr_reason": {
+    "ensemble_disagree": 81
+  },
+  "hr_flag_profiles": {
+    "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1": 12,
+    "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1": 11,
+    "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1": 8,
+    "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0": 7,
+    "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0": 7,
+    "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1": 5,
+    "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1": 5,
+    "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=0": 4,
+    "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0": 4,
+    "SO=1 RB=0 SI=0 CA=0 CO=0 PO=1 FA=0 RE=0": 4,
+    "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1": 3,
+    "SO=1 RB=0 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1": 2,
+    "SO=1 RB=0 SI=0 CA=0 CO=0 PO=0 FA=0 RE=0": 2,
+    "SO=1 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1": 1,
+    "SO=1 RB=1 SI=1 CA=1 CO=0 PO=0 FA=1 RE=1": 1,
+    "SO=1 RB=1 SI=1 CA=0 CO=0 PO=0 FA=1 RE=0": 1,
+    "SO=0 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1": 1,
+    "SO=0 RB=0 SI=0 CA=1 CO=0 PO=1 FA=0 RE=1": 1,
+    "SO=0 RB=0 SI=1 CA=1 CO=1 PO=1 FA=0 RE=1": 1,
+    "SO=0 RB=0 SI=0 CA=0 CO=0 PO=0 FA=1 RE=0": 1
+  },
+  "rubric_errors": [
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev02",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Akhenaten now knew that he alone truly saw what everyone saw daily \u00e2\u20ac\u201d and that this epistemological privilege, not political power, was the foundation of his religious authority. The gnosis is the recognition of a structural paradox: that the Aten was fully visible to all eyes, yet only the king tr"
+    },
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev04",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Akhenaten now knew that all life processes were solar processes \u00e2\u20ac\u201d that the many gods of Egypt were not separate beings but partial perceptions of a single source, and that recognizing this dissolved the entire polytheistic structure. The gnosis is the recognition that all biological processes are "
+    },
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev10",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 42,
+      "method": "direct",
+      "ml_conf": 0.55,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Akhenaten now knew that he was attempting to bind the future through present declaration \u00e2\u20ac\u201d and that this was a wager on whether his recognition would persist after his death, not a guarantee. The gnosis is the recognition that he was attempting to bind the future through present declaration\u00e2\u20ac\u201d tha"
+    },
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev11",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.962,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Akhenaten now knew that his vision could not be transmitted to his successors \u00e2\u20ac\u201d that each person must see for themselves, and that this meant his religious revolution would die with him. The gnosis is the recognition that genuine recognition cannot be transmitted\u00e2\u20ac\u201d that his children, his courtier"
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev05",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "method": "ambiguous",
+      "ml_conf": 0.94,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Spinoza now knew that freedom was not the power to interrupt the causal order but the understanding of the causal order \u00e2\u20ac\u201d and that this understanding transformed the experience of necessity from bondage to liberation. The gnosis is the recognition that freedom is not the capacity to have done othe"
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev10",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "method": "ambiguous",
+      "ml_conf": 0.94,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Spinoza now knew that the philosophical life did not require withdrawal from material labor but could be constituted through it \u00e2\u20ac\u201d that the clarity he sought in thought was the same clarity he produced in glass, and that each informed the other. The gnosis is the recognition that philosophical clar"
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev12",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Spinoza now knew that the ordinary goods of human life were not merely morally suspect but structurally incapable of providing what they promised \u00e2\u20ac\u201d and that the only true good was the understanding of Nature, which cannot be lost because it is not an external object. The gnosis is the recognition "
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev15",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "method": "ambiguous",
+      "ml_conf": 0.958,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Spinoza now knew that death was not a problem to be solved or a state to be prepared for but a limit that the free person simply does not attend to \u00e2\u20ac\u201d that wisdom is meditation on life, because life is what exists and death is what does not. The gnosis is the recognition that death is not an event "
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev2",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "method": "ambiguous",
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Personal identity is an illusion of scale; we are individual waves in a single, continuous ocean of thought. * Tripartite Camera Address: A high-speed thermal map of a city where individual heat signatures bleed together into a single glowing organism. * Confidence Score: 0.97 ----------------------"
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev3",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "method": "ambiguous",
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "We do not live in a world of objects, but in a living dialogue where every thing is a message waiting to be read. * Tripartite Camera Address: A 3D diagram of a triangle where the camera rotates so fast the three points merge into a single white dot. * Confidence Score: 0.94 ------------------------"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev01",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Divine authority is not located in a god \u00e2\u20ac\u201d it is located in the coherence between a ruler's actions and a people's cosmological expectations, and Cyrus was now able to enter that coherence from the outside. The gnosis is not that Cyrus decided to use Marduk rhetorically. The gnosis is the prior re"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev02",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "The fortress had already fallen in the domain of meaning before it fell in the domain of stone, which means the real work of conquest had always been invisible. This is a retroactive gnosis event. Cyrus had pursued a strategy of religious legitimation, political patience, and the cultivation of inte"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev05",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Looking at Croesus on the pyre, Cyrus recognized that the scene of his own triumph was also, from a slightly adjusted vantage, the scene of his own future ruin \u00e2\u20ac\u201d and that the only way to stop seeing it was to stop the fire. The gnosis event is the moment Cyrus *saw himself in Croesus* \u00e2\u20ac\u201d not abst"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev06",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Cyrus recognized that an empire achieves coherence not by making everything the same but by becoming the common structure within which many different things are allowed to remain themselves. Every prior empire had operated on the implicit assumption that unity required uniformity \u00e2\u20ac\u201d that to govern "
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev07",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Cyrus recognized that the man who had twice violated sacred commands was the most faithful person in his world, and that this meant faithfulness was a category organized around pattern rather than institution. The recognition is that *loyalty and treachery are not moral opposites but structural posi"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev08",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Cyrus, who had once saved Croesus because he recognized his own future in Croesus's burning, then walked into exactly that future \u00e2\u20ac\u201d and may have recognized, in the final moment, that seeing a pattern clearly is not the same as escaping it. This is the most speculative event in this corpus, and the"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev10",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.962,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Cyrus recognized that he was already dead from the future's perspective, and chose to speak from inside that recognition \u00e2\u20ac\u201d addressing the one who would come to confirm it. The inscription is a gnosis event recorded in stone. Cyrus recognized \u00e2\u20ac\u201d from inside his life and power \u00e2\u20ac\u201d that he was alrea"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev11",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Cyrus recognized that the empire he was building was not the conquest of one people by another but the external expression of a unity that had already existed inside his own body, in his blood, before he had ever made a decision. The gnosis event is the recognition that the boundary between conquero"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev12",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Cyrus recognized that the Jewish exile had not dissolved the Jewish people but had crystallized them, and that returning them to their land was not restoration but the recognition of a reality that had never actually been destroyed. The gnosis event is subtle but structurally significant: Cyrus reco"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev01",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.82,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Nietzsche now knew that his inner experience \u00e2\u20ac\u201d previously inarticulate and isolating \u00e2\u20ac\u201d was not his private pathology but a map of reality, and that the map had already been drawn by a predecessor he had not known existed. The gnosis is not the content of Schopenhauer's philosophy \u00e2\u20ac\u201d Nietzsche h"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev02",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Nietzsche now knew that what Greek scholarship had studied as two separate divine principles were a single structure seen from two angles, and that this structure was the engine of all culture, not merely Greek culture. What became transparent was the structural unity of opposites that Greek scholar"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev06",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Nietzsche now knew that the philosophy he had offered to others as truth about reality had been an autobiography of his own needs \u00e2\u20ac\u201d and that recognizing this required him to begin philosophy again from scratch. The gnosis is the retroactive recognition of his own previous philosophy as consolation"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev07",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Nietzsche now knew that his central recognition \u00e2\u20ac\u201d the collapse of the metaphysical foundation of Western morality \u00e2\u20ac\u201d was true *and* premature, that the conditions for its general reception did not yet exist, and that this meant he was speaking into a void that would only become a receiving ear af"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev08",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Nietzsche now knew \u00e2\u20ac\u201d not as a theory but as a recognition received beside a pyramid-shaped rock \u00e2\u20ac\u201d that the question of whether life is worth living is not a question about life in general but a question that must be answered about *this specific life, in this specific moment*, with full knowledg"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev10",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Nietzsche now knew that the reception of his most important work was structurally impossible for the audience of his actual historical moment \u00e2\u20ac\u201d not because they were stupid but because they had already achieved the terminal condition his work was designed to prevent. The gnosis here is not the con"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev11",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Nietzsche now knew that his critique of the morality of weakness was produced by a man whose entire life had been shaped by weakness \u00e2\u20ac\u201d and that this did not necessarily invalidate the critique but made it structurally indistinguishable, from the outside, from the very ressentiment he was diagnosin"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev18",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "This is the most extreme and most contested gnosis event in this entire extraction. The standard reading is that the Turin collapse is madness, not recognition \u00e2\u20ac\u201d that the letters are symptoms of neurological breakdown (possibly caused by syphilis, possibly hereditary) and should not be read as phi"
+    },
+    {
+      "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev11",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Bruno now knew that the seven years of imprisonment were not the interruption of his philosophical life but its final and most decisive phase \u00e2\u20ac\u201d that the cell was where his vision proved it could not be extinguished by external force. The gnosis is the recognition that imprisonment was not interrup"
+    },
+    {
+      "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev12",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "method": "ambiguous",
+      "ml_conf": 0.94,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Bruno now knew that recantation was not an option available to him \u00e2\u20ac\u201d not because he was stubborn but because genuine recognition cannot be reversed by external force. The gnosis is the recognition that recantation was not a verbal act but a structural self-negation\u00e2\u20ac\u201d that to recant would not be t"
+    },
+    {
+      "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev13",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Bruno now knew that the fire would not destroy what he had seen \u00e2\u20ac\u201d that his death was not the end of his vision but the act through which it would be transmitted to those who came after. The gnosis is the recognition that death by fire was not the destruction of his vision but its final expression\u00e2"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev02",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Being offered all the kingdoms of the world, Jesus recognized that the totality of the visible political cosmos was a subset \u00e2\u20ac\u201d something that could be owned and given \u00e2\u20ac\u201d which meant it was not the whole, and that whatever he was, it was not containable by that subset. The gnosis event is not the "
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev03",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Pressed about his relationship to Abraham, Jesus recognized that his \"I\" was not a point on the timeline but a condition that preceded and survived it \u00e2\u20ac\u201d and said so, collapsing the boundary between divine timelessness and human presence. The gnosis event is the moment when the temporal boundary be"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev05",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Jesus recognized that the quest for the kingdom and the quest for self-knowledge were the same quest, and that not knowing this was not an error but a structural condition of poverty \u00e2\u20ac\u201d being absent from what one already is. The gnosis event behind Logion 3 is the recognition that self-knowledge an"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev07",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Standing in the Temple, Jesus recognized that the sacred building and his own body were the same structure \u00e2\u20ac\u201d that the divine was not housed in the external architecture but in the human form, and that the building had been maintained long after this had been forgotten. Two recognition events are s"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev08",
+      "actual": 9,
+      "rubric": 42,
+      "ml": 42,
+      "method": "direct",
+      "ml_conf": 0.952,
+      "flags": "SO=1 RB=1 SI=1 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Hearing Peter's answer, Jesus recognized \u00e2\u20ac\u201d not in himself but in another \u00e2\u20ac\u201d the precise mechanism by which non-constructed knowing arrives, and identified it as transmission from the Father, because he knew what that felt like from inside. The gnosis event is not Peter's recognition of Jesus \u00e2\u20ac\u201d "
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev09",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.996,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Jesus recognized that he was not a person who had the light \u00e2\u20ac\u201d he *was* the light, distributed through every material thing, and that the wood and the stone already contained what everyone was looking for. Logion 77 is particularly significant because it is not a theological claim about salvation \u00e2"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev12",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.533,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Jesus recognized, looking at the man born blind, that the entire explanatory framework of moral causation was a false category, and that what had been called a punishment was actually a structural opening \u00e2\u20ac\u201d an occasion made for recognition. The gnosis event is the dissolution of the entire causal "
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev13",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.533,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Jesus recognized that his own presence was not a unifying force but a sorting mechanism \u00e2\u20ac\u201d that genuine recognition does not produce harmony immediately but fractures every social structure it enters, because recognition is never simultaneous. This is among the most self-implicating sayings in the "
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev15",
+      "actual": 9,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.761,
+      "flags": "SO=1 RB=1 SI=1 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Looking at Caesar's face on a coin, Jesus recognized that the coin and the human body were the same kind of thing \u00e2\u20ac\u201d image-bearers of different sovereignties \u00e2\u20ac\u201d and that returning each to its source was not a political compromise but a cosmological sorting. This is often read as a clever political"
+    },
+    {
+      "event_id": "gnosis_Jiang Xueqin (1976\u00e2\u20ac\u201c)_ev3",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 9,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.925,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "You cannot fix a machine while your own identity is a component produced by that machine's factory. * Best Tripartite Camera Address: A 360-degree pan in a hall of mirrors where every reflection is trying to break the mirror next to it. * Confidence Score: 0.91 ------------------------------ Best Ex"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev03",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that the Temple both was and was not God's dwelling \u00e2\u20ac\u201d that divine presence could be locally real without divine being being locally contained, and that this paradox was the structure of sacred space. The gnosis is the simultaneous recognition of two contradictory truths: that the "
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev04",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.962,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Solomon now knew that his wisdom was not fully visible to those within his kingdom \u00e2\u20ac\u201d that it required the testimony of a skeptical outsider to confirm its reality, and that this was the structure of all self-knowledge. The gnosis is the recognition that wisdom's reality is confirmed not by insider"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev05",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 42,
+      "method": "direct",
+      "ml_conf": 0.55,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that all his achievements \u00e2\u20ac\u201d wisdom, wealth, building \u00e2\u20ac\u201d were vapor when viewed from the standpoint of death \u00e2\u20ac\u201d and that this was not a flaw in the achievements but a structural feature of existence under the sun. The gnosis is the recognition that all human achievement, includin"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev09",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that his covenant with God was not unconditional \u00e2\u20ac\u201d that his own unfaithfulness had consequences that his wisdom could not prevent, and that divine favor could be withdrawn. The gnosis is the recognition that divine patience had a limit\u00e2\u20ac\u201d that the covenant made at Gibeon was not u"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev10",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that his kingdom would not endure after his death \u00e2\u20ac\u201d that his life's work would be divided, and that this division was not political accident but structural consequence. The gnosis (if Solomon became aware of this prophecy during his lifetime) is the retroactive recognition that hi"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev12",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "method": "ambiguous",
+      "ml_conf": 0.94,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that his reign was not a fresh start \u00e2\u20ac\u201d that he inherited his father's sins along with his father's throne, and that the sword would not depart because of what David had done before Solomon was born. The gnosis is the recognition that the father's sin produces consequences for the "
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev02",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Through Rusticus, Marcus recognized that he had been performing Stoicism brilliantly and practicing it barely \u00e2\u20ac\u201d and that the performance was the specific obstacle, because it produced the feeling of arrival without the condition. Before Rusticus, Marcus had been a student of rhetoric under Fronto "
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev03",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Marcus recognized \u00e2\u20ac\u201d not once but repeatedly, across years and campaigns \u00e2\u20ac\u201d that the present moment was the only location in which anything he valued could exist or be practiced, and that he kept leaving it. The Meditations are written across multiple years \u00e2\u20ac\u201d some books during the Dacian and Sar"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev04",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Looking down from above at the great armies and ceremonies of history and finding them indistinguishable from each other, Marcus recognized that the weight of his own position \u00e2\u20ac\u201d which he felt every morning \u00e2\u20ac\u201d was not a feature of the universe but a feature of the altitude from which he was lookin"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev05",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.82,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Somewhere on the Danube frontier, facing a war he had not chosen and could not avoid, Marcus recognized that waiting for better conditions to practice philosophy was the specific error \u00e2\u20ac\u201d that the war, the plague, and the frustration were not interruptions of his life but its actual content. The fo"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev09",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "When Cassius was killed before Marcus could pardon him, Marcus recognized that his most genuine virtue \u00e2\u20ac\u201d clemency \u00e2\u20ac\u201d had been rendered unverifiable by an event outside his control, and that this was not tragic coincidence but the normal relationship between character and circumstance. This is one"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev10",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Making Commodus co-emperor, Marcus recognized \u00e2\u20ac\u201d not as a conclusion but as a lived fact \u00e2\u20ac\u201d that his love for his son was stronger than his philosophical commitments, and that this was true even though he knew it was philosophically incorrect, and that knowing it was incorrect did not change it. M"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev14",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Writing what became his last entry, Marcus recognized that the sense of incompleteness he felt about his life was not a measure of the life's actual condition \u00e2\u20ac\u201d that \"three acts is the whole play\" when the playwright decides it is, and that the grace being demanded of him was to accept that judgme"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius_ev1",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "method": "ambiguous",
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Individual identity is a linguistic error; we are functional extensions of a single, living intelligence. * Tripartite Camera Address: A macro shot of a single cell that zooms out rapidly until the cell is revealed to be a pixel in an eye looking back at the viewer. * Confidence Score: 1.0 ---------"
+    },
+    {
+      "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev06",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "method": "ambiguous",
+      "ml_conf": 0.94,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Napoleon now knew that a people's collective will to resist was a military factor that could not be eliminated by battlefield victory \u00e2\u20ac\u201d and that this made some wars structurally unwinnable. The gnosis is the recognition that national resistance is not a military phenomenon but a metaphysical one\u00e2\u20ac"
+    },
+    {
+      "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev10",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 3,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.802,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Napoleon now knew that his identity was not tied to the scale of his rule but to the structural impulse to rule \u00e2\u20ac\u201d and that this essence would not allow him to rest on Elba. The gnosis is the recognition that his identity as ruler was not dependent on the scale of his rule\u00e2\u20ac\u201d that the same structur"
+    },
+    {
+      "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev16",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.962,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Napoleon now knew that glory was incompatible with happiness, that he knew this, and that he would still have chosen glory \u00e2\u20ac\u201d and that this revealed something about the structure of great men that wisdom cannot alter. The gnosis is the recognition that glory is structurally incompatible with happin"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev01",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that the gap between sacred and secular authority was not a metaphysical divide but an engineering absence \u00e2\u20ac\u201d a missing weapon. This is not a logical inference \u00e2\u20ac\u201d it is a recognition of structure that had become *visible* through a specific historical event. The false category"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev05",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that the gap between his theory and its implementation was not merely practical but structural \u00e2\u20ac\u201d and that he himself, by advocating for the militia, had been a mechanism in the production of his own ruin. This is a gnosis event of the retroactive recognition type. What became "
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev07",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.82,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that his exile from Florentine political life had accidentally placed him in a position to receive a kind of instruction that no active political career could have given him \u00e2\u20ac\u201d that the ancients would only speak to a man who had been stripped of everything else. This is a self-"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev08",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that all political philosophy before him had been systematically producing dangerous incompetence by training rulers to navigate an imaginary world while inhabiting a real one. This passage is the announcement of a gnosis event that has already occurred \u00e2\u20ac\u201d it is the verbal crys"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev15",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Machiavelli now knew \u00e2\u20ac\u201d in the only way that could not be argued away \u00e2\u20ac\u201d that the political wisdom he had extracted from his observation of power was not a tool that power would reward but a condition that power would never tolerate in its own ranks. This is the final and most devastating gnosis e"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev16",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 2,
+      "method": "direct",
+      "ml_conf": 0.533,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that the entire humanist tradition of political education had been operating with a broken conceptual tool \u00e2\u20ac\u201d a word that made moral goodness and political effectiveness appear to be the same thing, thus preventing the political thinker from ever confronting the actual choice b"
+    },
+    {
+      "event_id": "gnosis_Sun Tzu (Sun Wu, c. 544\u00e2\u20ac\u201c496 BCE) GN_ev04",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "method": "ambiguous",
+      "ml_conf": 0.958,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Sun Tzu now knew that the ultimate strategic position was not the best formation but the absence of formation \u00e2\u20ac\u201d that formlessness was invulnerable because it offered no target. The gnosis is the recognition that form itself is the vulnerability\u00e2\u20ac\u201d that any definite arrangement can be analyzed, cou"
+    },
+    {
+      "event_id": "gnosis_The Gnostic Jesus_ev2",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Divinity is not a destination to be reached, but an inherent structural identity to be remembered. * Best Tripartite Camera Address: A slow zoom through a drop of water that reveals an entire galaxy identical to the one outside the drop. * Confidence Score: 0.97 ------------------------------ as Gno"
+    },
+    {
+      "event_id": "gnosis_The Gnostic Jesus_ev4",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "method": "ambiguous",
+      "ml_conf": 0.891,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "To know the Truth is to realize that you are every character in the story, including the villain and the victim. * Best Tripartite Camera Address: A rapid-fire montage of faces\u00e2\u20ac\u201ddifferent ages, races, and expressions\u00e2\u20ac\u201dblending into a single, unmoving eye. * Confidence Score: 0.90 -----------------"
+    },
+    {
+      "event_id": "gnosis_Zarathustra_ev2",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "method": "ambiguous",
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Reality is the spark generated by the collision of two opposing but equal primal forces. * Tripartite Camera Address: Two identical orbs of light orbiting each other so fast they appear to be a single, pulsing line. * Confidence Score: 0.96 ------------------------------"
+    },
+    {
+      "event_id": "phase3_c1_peirce_musement_single",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This particular instance of Musement \u2014 a single moment of playful attention where this specific idea emerged from the quality of this specific attention. The token-event of mind at play, a single occurrence of the feeling of possibility."
+    },
+    {
+      "event_id": "phase3_c1_akhenaten_single_ray",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This single ray of the Aten \u2014 a particular instance of solar light striking the face at this moment, creating this specific sensation of warmth and radiance. The token-event of light, a single occurrence of the feeling-quality."
+    },
+    {
+      "event_id": "phase3_c1_bruno_single_vision",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This single visionary experience \u2014 a particular ecstatic moment when the crystalline spheres dissolved for Bruno, a single token-instance of the icon-like vision of boundless space. The single occurrence of the feeling of infinity."
+    },
+    {
+      "event_id": "phase3_c1_watts_single_moment",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This single moment of the watercourse way \u2014 a particular instance of feeling the flow of the river as identical to the flow of consciousness. The token-event of the sensation of identity between self and stream."
+    },
+    {
+      "event_id": "phase3_c1_spinoza_single_feeling",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This single feeling of the eternal \u2014 a particular moment when the mind experienced its own eternity, not as a general truth but as this specific token-event of timelessness. The single instance of the qualitative feeling of eternity."
+    },
+    {
+      "event_id": "phase3_c1_marcus_single_drop",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "method": "fallback_interpretant",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This single drop in the ocean \u2014 a particular moment when Marcus felt the dissolution of the Emperor into the cosmos, a token-event of the feeling of cosmic continuity. The single instance of the qualitative sensation of oneness."
+    },
+    {
+      "event_id": "gnosis_Aristotle_04",
+      "actual": 0,
+      "rubric": null,
+      "ml": 0,
+      "method": "ambiguous",
+      "ml_conf": 0.936,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=1 FA=0 RE=1",
+      "narrative": "Metaphysics XII.9 (Lambda):\n And thought thinks itself because it shares the nature of the object of thought; for it becomes an object of thought in coming into contact with and thinking its objects, so that thought and its object are the same. For the faculty of receiving its object \u2014 that is, the "
+    },
+    {
+      "event_id": "gnosis_Irenaeus of Lyon_05",
+      "actual": 0,
+      "rubric": null,
+      "ml": 0,
+      "method": "ambiguous",
+      "ml_conf": 0.914,
+      "flags": "SO=0 RB=0 SI=1 CA=1 CO=1 PO=1 FA=0 RE=1",
+      "narrative": "The Two Hands of God: Word and Spirit Are Not Intermediaries Adversus Haereses, IV.Preface.4 and V.6.1:\n Now God shall be glorified in his handiwork, fitting it so as to be conformable to, and modeled after, his own Son. For by the hands of the Father, that is, by the Son and the Holy Spirit, man, a"
+    }
+  ],
+  "ml_errors": [
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev10",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 42,
+      "ml_conf": 0.55,
+      "top3": [
+        [
+          42,
+          0.5501571268757919
+        ],
+        [
+          2,
+          0.4471268554946893
+        ],
+        [
+          6,
+          0.0017763660262133743
+        ]
+      ],
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Akhenaten now knew that he was attempting to bind the future through present declaration \u00e2\u20ac\u201d and that this was a wager on whether his recognition would persist after his death, not a guarantee. The gnosis is the recognition that he was attempting to bind the future through present declaration\u00e2\u20ac\u201d tha"
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev2",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "ml_conf": 0.483,
+      "top3": [
+        [
+          5,
+          0.48253831007402986
+        ],
+        [
+          2,
+          0.46150113113521474
+        ],
+        [
+          0,
+          0.034562365003666905
+        ]
+      ],
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Personal identity is an illusion of scale; we are individual waves in a single, continuous ocean of thought. * Tripartite Camera Address: A high-speed thermal map of a city where individual heat signatures bleed together into a single glowing organism. * Confidence Score: 0.97 ----------------------"
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev3",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "ml_conf": 0.483,
+      "top3": [
+        [
+          5,
+          0.48253831007402986
+        ],
+        [
+          2,
+          0.46150113113521474
+        ],
+        [
+          0,
+          0.034562365003666905
+        ]
+      ],
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "We do not live in a world of objects, but in a living dialogue where every thing is a message waiting to be read. * Tripartite Camera Address: A 3D diagram of a triangle where the camera rotates so fast the three points merge into a single white dot. * Confidence Score: 0.94 ------------------------"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev01",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "ml_conf": 0.82,
+      "top3": [
+        [
+          42,
+          0.820061218858531
+        ],
+        [
+          3,
+          0.13579815501544806
+        ],
+        [
+          2,
+          0.01732490515700838
+        ]
+      ],
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Nietzsche now knew that his inner experience \u00e2\u20ac\u201d previously inarticulate and isolating \u00e2\u20ac\u201d was not his private pathology but a map of reality, and that the map had already been drawn by a predecessor he had not known existed. The gnosis is not the content of Schopenhauer's philosophy \u00e2\u20ac\u201d Nietzsche h"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev08",
+      "actual": 9,
+      "rubric": 42,
+      "ml": 42,
+      "ml_conf": 0.952,
+      "top3": [
+        [
+          42,
+          0.951690290332936
+        ],
+        [
+          2,
+          0.04532010671090928
+        ],
+        [
+          6,
+          0.001152318752026734
+        ]
+      ],
+      "flags": "SO=1 RB=1 SI=1 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Hearing Peter's answer, Jesus recognized \u00e2\u20ac\u201d not in himself but in another \u00e2\u20ac\u201d the precise mechanism by which non-constructed knowing arrives, and identified it as transmission from the Father, because he knew what that felt like from inside. The gnosis event is not Peter's recognition of Jesus \u00e2\u20ac\u201d "
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev15",
+      "actual": 9,
+      "rubric": 8,
+      "ml": 2,
+      "ml_conf": 0.761,
+      "top3": [
+        [
+          2,
+          0.7613606901287452
+        ],
+        [
+          42,
+          0.14182773562731682
+        ],
+        [
+          8,
+          0.06278142489214505
+        ]
+      ],
+      "flags": "SO=1 RB=1 SI=1 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Looking at Caesar's face on a coin, Jesus recognized that the coin and the human body were the same kind of thing \u00e2\u20ac\u201d image-bearers of different sovereignties \u00e2\u20ac\u201d and that returning each to its source was not a political compromise but a cosmological sorting. This is often read as a clever political"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev05",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 42,
+      "ml_conf": 0.55,
+      "top3": [
+        [
+          42,
+          0.5501571268757919
+        ],
+        [
+          2,
+          0.4471268554946893
+        ],
+        [
+          6,
+          0.0017763660262133743
+        ]
+      ],
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that all his achievements \u00e2\u20ac\u201d wisdom, wealth, building \u00e2\u20ac\u201d were vapor when viewed from the standpoint of death \u00e2\u20ac\u201d and that this was not a flaw in the achievements but a structural feature of existence under the sun. The gnosis is the recognition that all human achievement, includin"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev05",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "ml_conf": 0.82,
+      "top3": [
+        [
+          42,
+          0.820061218858531
+        ],
+        [
+          3,
+          0.13579815501544806
+        ],
+        [
+          2,
+          0.01732490515700838
+        ]
+      ],
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Somewhere on the Danube frontier, facing a war he had not chosen and could not avoid, Marcus recognized that waiting for better conditions to practice philosophy was the specific error \u00e2\u20ac\u201d that the war, the plague, and the frustration were not interruptions of his life but its actual content. The fo"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius_ev1",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "ml_conf": 0.483,
+      "top3": [
+        [
+          5,
+          0.48253831007402986
+        ],
+        [
+          2,
+          0.46150113113521474
+        ],
+        [
+          0,
+          0.034562365003666905
+        ]
+      ],
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Individual identity is a linguistic error; we are functional extensions of a single, living intelligence. * Tripartite Camera Address: A macro shot of a single cell that zooms out rapidly until the cell is revealed to be a pixel in an eye looking back at the viewer. * Confidence Score: 1.0 ---------"
+    },
+    {
+      "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev10",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 3,
+      "ml_conf": 0.802,
+      "top3": [
+        [
+          3,
+          0.8020102548915555
+        ],
+        [
+          9,
+          0.13051952340251327
+        ],
+        [
+          4,
+          0.021386948458880038
+        ]
+      ],
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Napoleon now knew that his identity was not tied to the scale of his rule but to the structural impulse to rule \u00e2\u20ac\u201d and that this essence would not allow him to rest on Elba. The gnosis is the recognition that his identity as ruler was not dependent on the scale of his rule\u00e2\u20ac\u201d that the same structur"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev07",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "ml_conf": 0.82,
+      "top3": [
+        [
+          42,
+          0.820061218858531
+        ],
+        [
+          3,
+          0.13579815501544806
+        ],
+        [
+          2,
+          0.01732490515700838
+        ]
+      ],
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that his exile from Florentine political life had accidentally placed him in a position to receive a kind of instruction that no active political career could have given him \u00e2\u20ac\u201d that the ancients would only speak to a man who had been stripped of everything else. This is a self-"
+    },
+    {
+      "event_id": "gnosis_Zarathustra_ev2",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "ml_conf": 0.483,
+      "top3": [
+        [
+          5,
+          0.48253831007402986
+        ],
+        [
+          2,
+          0.46150113113521474
+        ],
+        [
+          0,
+          0.034562365003666905
+        ]
+      ],
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Reality is the spark generated by the collision of two opposing but equal primal forces. * Tripartite Camera Address: Two identical orbs of light orbiting each other so fast they appear to be a single, pulsing line. * Confidence Score: 0.96 ------------------------------"
+    },
+    {
+      "event_id": "gnosis_Alan Watts_01",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "ml_conf": 0.505,
+      "top3": [
+        [
+          1,
+          0.504538040044337
+        ],
+        [
+          9,
+          0.42613407399491304
+        ],
+        [
+          0,
+          0.04516342713856926
+        ]
+      ],
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=0 FA=0 RE=0",
+      "narrative": "The Gnosis of the Patterned Wall In his autobiography In My Own Way, Watts describes a childhood fever where he became fascinated by the intricate patterns of Chinese embroidery and tea-chest designs in his home. He saw these not as things, but as vectors of energy. It was a pre-logical recognition "
+    },
+    {
+      "event_id": "gnosis_Alan Watts_06",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "ml_conf": 0.834,
+      "top3": [
+        [
+          1,
+          0.8344084106609038
+        ],
+        [
+          0,
+          0.13037079748497188
+        ],
+        [
+          3,
+          0.021834319912511495
+        ]
+      ],
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "The Complementary Contradiction His lecture series on The Philosophy of Nature, where he categorized all thinkers into Prickles (logical, precise, discrete) and Goo (mystical, flowing, holistic). He recognized that these are not \"conflicting\" theories, but \"complementary\" modes of a single cosmic pr"
+    },
+    {
+      "event_id": "gnosis_Charles Sanders Peirce_03",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "ml_conf": 0.834,
+      "top3": [
+        [
+          1,
+          0.8344084106609038
+        ],
+        [
+          0,
+          0.13037079748497188
+        ],
+        [
+          3,
+          0.021834319912511495
+        ]
+      ],
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "The Neglected Argument While attending a service at St. Thomas's Episcopal Church in New York (1892), Peirce\u2014previously a skeptic\u2014experienced a sudden, overwhelming sense of the reality of God while observing the ritual. It was a \"recognition of the Absolute\" through the medium of aesthetic and comm"
+    },
+    {
+      "event_id": "gnosis_Ramon Llull_07",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "ml_conf": 0.505,
+      "top3": [
+        [
+          1,
+          0.504538040044337
+        ],
+        [
+          9,
+          0.42613407399491304
+        ],
+        [
+          0,
+          0.04516342713856926
+        ]
+      ],
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=0 FA=0 RE=0",
+      "narrative": "The Dissolution of the Lover and the Beloved In the Book of the Lover and the Beloved, Llull writes: The Lover and the Beloved met, and the Beloved said to the Lover: 'You need not speak; a nod is enough for me to know your heart.' This represents the collapse of the \"Self/Other\" boundary in the mys"
+    },
+    {
+      "event_id": "gnosis_Aristotle_15",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "ml_conf": 0.834,
+      "top3": [
+        [
+          1,
+          0.8344084106609038
+        ],
+        [
+          0,
+          0.13037079748497188
+        ],
+        [
+          3,
+          0.021834319912511495
+        ]
+      ],
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "When Athens indicted Aristotle for impiety (asebeia) following Alexander's death in 323 BCE \u2014 the same charge used to kill Socrates in 399 BCE \u2014 Aristotle fled to Chalcis in Euboea. The explanation preserved by later sources (Aelian, Varia Historia III.36, though the historicity is debated):\n Aristo"
+    },
+    {
+      "event_id": "gnosis_Thales of Miletus_06",
+      "actual": 0,
+      "rubric": 0,
+      "ml": 9,
+      "ml_conf": 0.571,
+      "top3": [
+        [
+          9,
+          0.570712791203387
+        ],
+        [
+          0,
+          0.2531126069534447
+        ],
+        [
+          5,
+          0.08392777249198816
+        ]
+      ],
+      "flags": "SO=0 RB=0 SI=0 CA=0 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "The Flooding Nile (Geometry from Mud) Diogenes Laertius (Lives, I.27) records that Thales visited Egypt and demonstrated the measurement of the height of the pyramids by their shadows \u2014 using the moment at which a vertical stick casts a shadow equal to its own height as the moment to measure the pyr"
+    },
+    {
+      "event_id": "gnosis_Galileo Galilei_02",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "ml_conf": 0.834,
+      "top3": [
+        [
+          1,
+          0.8344084106609038
+        ],
+        [
+          0,
+          0.13037079748497188
+        ],
+        [
+          3,
+          0.021834319912511495
+        ]
+      ],
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "The Medicean Stars (The Non-Centrality of the Earth) January 7\u201313, 1610: The observation of four small stars moving around Jupiter.\n I should have examined the distance between them and Jupiter... but the sight of them being in a straight line... and then seeing them change position... my amazement "
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev09",
+      "actual": 42,
+      "rubric": 42,
+      "ml": 2,
+      "ml_conf": 0.533,
+      "top3": [
+        [
+          2,
+          0.5329203328132402
+        ],
+        [
+          42,
+          0.46243596118706576
+        ],
+        [
+          8,
+          0.00303261762718994
+        ]
+      ],
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Spinoza now knew that Scripture was not a source of truth about reality but a source of moral instruction for the multitude \u00e2\u20ac\u201d and that recognizing this liberated philosophy from theology without requiring the persecution of religion. The gnosis is the recognition that Scripture can be studied by t"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev08",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "ml_conf": 0.808,
+      "top3": [
+        [
+          1,
+          0.8082931888592165
+        ],
+        [
+          3,
+          0.09400423219405728
+        ],
+        [
+          0,
+          0.07924107118456504
+        ]
+      ],
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "Writing about death's naturalness for the fifteenth time in his private journal, Marcus recognized that he understood the correct position completely and was still grieving \u00e2\u20ac\u201d and that this gap between understanding and feeling was not a failure of philosophy but a feature of being a body inside a "
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev11",
+      "actual": 42,
+      "rubric": 42,
+      "ml": 2,
+      "ml_conf": 0.533,
+      "top3": [
+        [
+          2,
+          0.5329203328132402
+        ],
+        [
+          42,
+          0.46243596118706576
+        ],
+        [
+          8,
+          0.00303261762718994
+        ]
+      ],
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that every legitimate order has a murdered Remus at its foundation, and that the success of the order is precisely what makes the murder invisible \u00e2\u20ac\u201d and therefore repeatable. The false category boundary that dissolved here is between legitimacy and violence at the moment of fo"
+    }
+  ],
+  "both_wrong": [
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev10",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 42,
+      "ml_conf": 0.55,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Akhenaten now knew that he was attempting to bind the future through present declaration \u00e2\u20ac\u201d and that this was a wager on whether his recognition would persist after his death, not a guarantee. The gnosis is the recognition that he was attempting to bind the future through present declaration\u00e2\u20ac\u201d tha"
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev2",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Personal identity is an illusion of scale; we are individual waves in a single, continuous ocean of thought. * Tripartite Camera Address: A high-speed thermal map of a city where individual heat signatures bleed together into a single glowing organism. * Confidence Score: 0.97 ----------------------"
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev3",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "We do not live in a world of objects, but in a living dialogue where every thing is a message waiting to be read. * Tripartite Camera Address: A 3D diagram of a triangle where the camera rotates so fast the three points merge into a single white dot. * Confidence Score: 0.94 ------------------------"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev01",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "ml_conf": 0.82,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Nietzsche now knew that his inner experience \u00e2\u20ac\u201d previously inarticulate and isolating \u00e2\u20ac\u201d was not his private pathology but a map of reality, and that the map had already been drawn by a predecessor he had not known existed. The gnosis is not the content of Schopenhauer's philosophy \u00e2\u20ac\u201d Nietzsche h"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev08",
+      "actual": 9,
+      "rubric": 42,
+      "ml": 42,
+      "ml_conf": 0.952,
+      "flags": "SO=1 RB=1 SI=1 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Hearing Peter's answer, Jesus recognized \u00e2\u20ac\u201d not in himself but in another \u00e2\u20ac\u201d the precise mechanism by which non-constructed knowing arrives, and identified it as transmission from the Father, because he knew what that felt like from inside. The gnosis event is not Peter's recognition of Jesus \u00e2\u20ac\u201d "
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev15",
+      "actual": 9,
+      "rubric": 8,
+      "ml": 2,
+      "ml_conf": 0.761,
+      "flags": "SO=1 RB=1 SI=1 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Looking at Caesar's face on a coin, Jesus recognized that the coin and the human body were the same kind of thing \u00e2\u20ac\u201d image-bearers of different sovereignties \u00e2\u20ac\u201d and that returning each to its source was not a political compromise but a cosmological sorting. This is often read as a clever political"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev05",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 42,
+      "ml_conf": 0.55,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that all his achievements \u00e2\u20ac\u201d wisdom, wealth, building \u00e2\u20ac\u201d were vapor when viewed from the standpoint of death \u00e2\u20ac\u201d and that this was not a flaw in the achievements but a structural feature of existence under the sun. The gnosis is the recognition that all human achievement, includin"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev05",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "ml_conf": 0.82,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Somewhere on the Danube frontier, facing a war he had not chosen and could not avoid, Marcus recognized that waiting for better conditions to practice philosophy was the specific error \u00e2\u20ac\u201d that the war, the plague, and the frustration were not interruptions of his life but its actual content. The fo"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius_ev1",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Individual identity is a linguistic error; we are functional extensions of a single, living intelligence. * Tripartite Camera Address: A macro shot of a single cell that zooms out rapidly until the cell is revealed to be a pixel in an eye looking back at the viewer. * Confidence Score: 1.0 ---------"
+    },
+    {
+      "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev10",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 3,
+      "ml_conf": 0.802,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Napoleon now knew that his identity was not tied to the scale of his rule but to the structural impulse to rule \u00e2\u20ac\u201d and that this essence would not allow him to rest on Elba. The gnosis is the recognition that his identity as ruler was not dependent on the scale of his rule\u00e2\u20ac\u201d that the same structur"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev07",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "ml_conf": 0.82,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that his exile from Florentine political life had accidentally placed him in a position to receive a kind of instruction that no active political career could have given him \u00e2\u20ac\u201d that the ancients would only speak to a man who had been stripped of everything else. This is a self-"
+    },
+    {
+      "event_id": "gnosis_Zarathustra_ev2",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Reality is the spark generated by the collision of two opposing but equal primal forces. * Tripartite Camera Address: Two identical orbs of light orbiting each other so fast they appear to be a single, pulsing line. * Confidence Score: 0.96 ------------------------------"
+    }
+  ],
+  "human_review_events": [
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev02",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Akhenaten now knew that he alone truly saw what everyone saw daily \u00e2\u20ac\u201d and that this epistemological privilege, not political power, was the foundation of his religious authority. The gnosis is the recognition of a structural paradox: that the Aten was fully visible to all eyes, yet only the king tr"
+    },
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev04",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Akhenaten now knew that all life processes were solar processes \u00e2\u20ac\u201d that the many gods of Egypt were not separate beings but partial perceptions of a single source, and that recognizing this dissolved the entire polytheistic structure. The gnosis is the recognition that all biological processes are "
+    },
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev11",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.962,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Akhenaten now knew that his vision could not be transmitted to his successors \u00e2\u20ac\u201d that each person must see for themselves, and that this meant his religious revolution would die with him. The gnosis is the recognition that genuine recognition cannot be transmitted\u00e2\u20ac\u201d that his children, his courtier"
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev05",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.94,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Spinoza now knew that freedom was not the power to interrupt the causal order but the understanding of the causal order \u00e2\u20ac\u201d and that this understanding transformed the experience of necessity from bondage to liberation. The gnosis is the recognition that freedom is not the capacity to have done othe"
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev10",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.94,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Spinoza now knew that the philosophical life did not require withdrawal from material labor but could be constituted through it \u00e2\u20ac\u201d that the clarity he sought in thought was the same clarity he produced in glass, and that each informed the other. The gnosis is the recognition that philosophical clar"
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev12",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Spinoza now knew that the ordinary goods of human life were not merely morally suspect but structurally incapable of providing what they promised \u00e2\u20ac\u201d and that the only true good was the understanding of Nature, which cannot be lost because it is not an external object. The gnosis is the recognition "
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev15",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.958,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Spinoza now knew that death was not a problem to be solved or a state to be prepared for but a limit that the free person simply does not attend to \u00e2\u20ac\u201d that wisdom is meditation on life, because life is what exists and death is what does not. The gnosis is the recognition that death is not an event "
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev2",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Personal identity is an illusion of scale; we are individual waves in a single, continuous ocean of thought. * Tripartite Camera Address: A high-speed thermal map of a city where individual heat signatures bleed together into a single glowing organism. * Confidence Score: 0.97 ----------------------"
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev3",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "We do not live in a world of objects, but in a living dialogue where every thing is a message waiting to be read. * Tripartite Camera Address: A 3D diagram of a triangle where the camera rotates so fast the three points merge into a single white dot. * Confidence Score: 0.94 ------------------------"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev01",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Divine authority is not located in a god \u00e2\u20ac\u201d it is located in the coherence between a ruler's actions and a people's cosmological expectations, and Cyrus was now able to enter that coherence from the outside. The gnosis is not that Cyrus decided to use Marduk rhetorically. The gnosis is the prior re"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev02",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "The fortress had already fallen in the domain of meaning before it fell in the domain of stone, which means the real work of conquest had always been invisible. This is a retroactive gnosis event. Cyrus had pursued a strategy of religious legitimation, political patience, and the cultivation of inte"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev05",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Looking at Croesus on the pyre, Cyrus recognized that the scene of his own triumph was also, from a slightly adjusted vantage, the scene of his own future ruin \u00e2\u20ac\u201d and that the only way to stop seeing it was to stop the fire. The gnosis event is the moment Cyrus *saw himself in Croesus* \u00e2\u20ac\u201d not abst"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev06",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Cyrus recognized that an empire achieves coherence not by making everything the same but by becoming the common structure within which many different things are allowed to remain themselves. Every prior empire had operated on the implicit assumption that unity required uniformity \u00e2\u20ac\u201d that to govern "
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev07",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Cyrus recognized that the man who had twice violated sacred commands was the most faithful person in his world, and that this meant faithfulness was a category organized around pattern rather than institution. The recognition is that *loyalty and treachery are not moral opposites but structural posi"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev08",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Cyrus, who had once saved Croesus because he recognized his own future in Croesus's burning, then walked into exactly that future \u00e2\u20ac\u201d and may have recognized, in the final moment, that seeing a pattern clearly is not the same as escaping it. This is the most speculative event in this corpus, and the"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev10",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.962,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Cyrus recognized that he was already dead from the future's perspective, and chose to speak from inside that recognition \u00e2\u20ac\u201d addressing the one who would come to confirm it. The inscription is a gnosis event recorded in stone. Cyrus recognized \u00e2\u20ac\u201d from inside his life and power \u00e2\u20ac\u201d that he was alrea"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev11",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Cyrus recognized that the empire he was building was not the conquest of one people by another but the external expression of a unity that had already existed inside his own body, in his blood, before he had ever made a decision. The gnosis event is the recognition that the boundary between conquero"
+    },
+    {
+      "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev12",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Cyrus recognized that the Jewish exile had not dissolved the Jewish people but had crystallized them, and that returning them to their land was not restoration but the recognition of a reality that had never actually been destroyed. The gnosis event is subtle but structurally significant: Cyrus reco"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev01",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.82,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Nietzsche now knew that his inner experience \u00e2\u20ac\u201d previously inarticulate and isolating \u00e2\u20ac\u201d was not his private pathology but a map of reality, and that the map had already been drawn by a predecessor he had not known existed. The gnosis is not the content of Schopenhauer's philosophy \u00e2\u20ac\u201d Nietzsche h"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev02",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Nietzsche now knew that what Greek scholarship had studied as two separate divine principles were a single structure seen from two angles, and that this structure was the engine of all culture, not merely Greek culture. What became transparent was the structural unity of opposites that Greek scholar"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev06",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Nietzsche now knew that the philosophy he had offered to others as truth about reality had been an autobiography of his own needs \u00e2\u20ac\u201d and that recognizing this required him to begin philosophy again from scratch. The gnosis is the retroactive recognition of his own previous philosophy as consolation"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev07",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Nietzsche now knew that his central recognition \u00e2\u20ac\u201d the collapse of the metaphysical foundation of Western morality \u00e2\u20ac\u201d was true *and* premature, that the conditions for its general reception did not yet exist, and that this meant he was speaking into a void that would only become a receiving ear af"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev08",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Nietzsche now knew \u00e2\u20ac\u201d not as a theory but as a recognition received beside a pyramid-shaped rock \u00e2\u20ac\u201d that the question of whether life is worth living is not a question about life in general but a question that must be answered about *this specific life, in this specific moment*, with full knowledg"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev10",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Nietzsche now knew that the reception of his most important work was structurally impossible for the audience of his actual historical moment \u00e2\u20ac\u201d not because they were stupid but because they had already achieved the terminal condition his work was designed to prevent. The gnosis here is not the con"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev11",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Nietzsche now knew that his critique of the morality of weakness was produced by a man whose entire life had been shaped by weakness \u00e2\u20ac\u201d and that this did not necessarily invalidate the critique but made it structurally indistinguishable, from the outside, from the very ressentiment he was diagnosin"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev18",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "This is the most extreme and most contested gnosis event in this entire extraction. The standard reading is that the Turin collapse is madness, not recognition \u00e2\u20ac\u201d that the letters are symptoms of neurological breakdown (possibly caused by syphilis, possibly hereditary) and should not be read as phi"
+    },
+    {
+      "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev11",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Bruno now knew that the seven years of imprisonment were not the interruption of his philosophical life but its final and most decisive phase \u00e2\u20ac\u201d that the cell was where his vision proved it could not be extinguished by external force. The gnosis is the recognition that imprisonment was not interrup"
+    },
+    {
+      "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev12",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.94,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Bruno now knew that recantation was not an option available to him \u00e2\u20ac\u201d not because he was stubborn but because genuine recognition cannot be reversed by external force. The gnosis is the recognition that recantation was not a verbal act but a structural self-negation\u00e2\u20ac\u201d that to recant would not be t"
+    },
+    {
+      "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev13",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Bruno now knew that the fire would not destroy what he had seen \u00e2\u20ac\u201d that his death was not the end of his vision but the act through which it would be transmitted to those who came after. The gnosis is the recognition that death by fire was not the destruction of his vision but its final expression\u00e2"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev02",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Being offered all the kingdoms of the world, Jesus recognized that the totality of the visible political cosmos was a subset \u00e2\u20ac\u201d something that could be owned and given \u00e2\u20ac\u201d which meant it was not the whole, and that whatever he was, it was not containable by that subset. The gnosis event is not the "
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev03",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Pressed about his relationship to Abraham, Jesus recognized that his \"I\" was not a point on the timeline but a condition that preceded and survived it \u00e2\u20ac\u201d and said so, collapsing the boundary between divine timelessness and human presence. The gnosis event is the moment when the temporal boundary be"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev05",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Jesus recognized that the quest for the kingdom and the quest for self-knowledge were the same quest, and that not knowing this was not an error but a structural condition of poverty \u00e2\u20ac\u201d being absent from what one already is. The gnosis event behind Logion 3 is the recognition that self-knowledge an"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev07",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.883,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Standing in the Temple, Jesus recognized that the sacred building and his own body were the same structure \u00e2\u20ac\u201d that the divine was not housed in the external architecture but in the human form, and that the building had been maintained long after this had been forgotten. Two recognition events are s"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev09",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.996,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Jesus recognized that he was not a person who had the light \u00e2\u20ac\u201d he *was* the light, distributed through every material thing, and that the wood and the stone already contained what everyone was looking for. Logion 77 is particularly significant because it is not a theological claim about salvation \u00e2"
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev12",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.533,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Jesus recognized, looking at the man born blind, that the entire explanatory framework of moral causation was a false category, and that what had been called a punishment was actually a structural opening \u00e2\u20ac\u201d an occasion made for recognition. The gnosis event is the dissolution of the entire causal "
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev13",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.533,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Jesus recognized that his own presence was not a unifying force but a sorting mechanism \u00e2\u20ac\u201d that genuine recognition does not produce harmony immediately but fractures every social structure it enters, because recognition is never simultaneous. This is among the most self-implicating sayings in the "
+    },
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev15",
+      "actual": 9,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.761,
+      "flags": "SO=1 RB=1 SI=1 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Looking at Caesar's face on a coin, Jesus recognized that the coin and the human body were the same kind of thing \u00e2\u20ac\u201d image-bearers of different sovereignties \u00e2\u20ac\u201d and that returning each to its source was not a political compromise but a cosmological sorting. This is often read as a clever political"
+    },
+    {
+      "event_id": "gnosis_Jiang Xueqin (1976\u00e2\u20ac\u201c)_ev3",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 9,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.925,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "You cannot fix a machine while your own identity is a component produced by that machine's factory. * Best Tripartite Camera Address: A 360-degree pan in a hall of mirrors where every reflection is trying to break the mirror next to it. * Confidence Score: 0.91 ------------------------------ Best Ex"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev03",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that the Temple both was and was not God's dwelling \u00e2\u20ac\u201d that divine presence could be locally real without divine being being locally contained, and that this paradox was the structure of sacred space. The gnosis is the simultaneous recognition of two contradictory truths: that the "
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev04",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.962,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Solomon now knew that his wisdom was not fully visible to those within his kingdom \u00e2\u20ac\u201d that it required the testimony of a skeptical outsider to confirm its reality, and that this was the structure of all self-knowledge. The gnosis is the recognition that wisdom's reality is confirmed not by insider"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev09",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that his covenant with God was not unconditional \u00e2\u20ac\u201d that his own unfaithfulness had consequences that his wisdom could not prevent, and that divine favor could be withdrawn. The gnosis is the recognition that divine patience had a limit\u00e2\u20ac\u201d that the covenant made at Gibeon was not u"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev10",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that his kingdom would not endure after his death \u00e2\u20ac\u201d that his life's work would be divided, and that this division was not political accident but structural consequence. The gnosis (if Solomon became aware of this prophecy during his lifetime) is the retroactive recognition that hi"
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev12",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.94,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Solomon now knew that his reign was not a fresh start \u00e2\u20ac\u201d that he inherited his father's sins along with his father's throne, and that the sword would not depart because of what David had done before Solomon was born. The gnosis is the recognition that the father's sin produces consequences for the "
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev02",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Through Rusticus, Marcus recognized that he had been performing Stoicism brilliantly and practicing it barely \u00e2\u20ac\u201d and that the performance was the specific obstacle, because it produced the feeling of arrival without the condition. Before Rusticus, Marcus had been a student of rhetoric under Fronto "
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev03",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Marcus recognized \u00e2\u20ac\u201d not once but repeatedly, across years and campaigns \u00e2\u20ac\u201d that the present moment was the only location in which anything he valued could exist or be practiced, and that he kept leaving it. The Meditations are written across multiple years \u00e2\u20ac\u201d some books during the Dacian and Sar"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev04",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Looking down from above at the great armies and ceremonies of history and finding them indistinguishable from each other, Marcus recognized that the weight of his own position \u00e2\u20ac\u201d which he felt every morning \u00e2\u20ac\u201d was not a feature of the universe but a feature of the altitude from which he was lookin"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev05",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.82,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Somewhere on the Danube frontier, facing a war he had not chosen and could not avoid, Marcus recognized that waiting for better conditions to practice philosophy was the specific error \u00e2\u20ac\u201d that the war, the plague, and the frustration were not interruptions of his life but its actual content. The fo"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev09",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "When Cassius was killed before Marcus could pardon him, Marcus recognized that his most genuine virtue \u00e2\u20ac\u201d clemency \u00e2\u20ac\u201d had been rendered unverifiable by an event outside his control, and that this was not tragic coincidence but the normal relationship between character and circumstance. This is one"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev10",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Making Commodus co-emperor, Marcus recognized \u00e2\u20ac\u201d not as a conclusion but as a lived fact \u00e2\u20ac\u201d that his love for his son was stronger than his philosophical commitments, and that this was true even though he knew it was philosophically incorrect, and that knowing it was incorrect did not change it. M"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev14",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Writing what became his last entry, Marcus recognized that the sense of incompleteness he felt about his life was not a measure of the life's actual condition \u00e2\u20ac\u201d that \"three acts is the whole play\" when the playwright decides it is, and that the grace being demanded of him was to accept that judgme"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius_ev1",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Individual identity is a linguistic error; we are functional extensions of a single, living intelligence. * Tripartite Camera Address: A macro shot of a single cell that zooms out rapidly until the cell is revealed to be a pixel in an eye looking back at the viewer. * Confidence Score: 1.0 ---------"
+    },
+    {
+      "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev06",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.94,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=1 FA=1 RE=1",
+      "narrative": "Napoleon now knew that a people's collective will to resist was a military factor that could not be eliminated by battlefield victory \u00e2\u20ac\u201d and that this made some wars structurally unwinnable. The gnosis is the recognition that national resistance is not a military phenomenon but a metaphysical one\u00e2\u20ac"
+    },
+    {
+      "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev16",
+      "actual": 2,
+      "rubric": 5,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.962,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=0",
+      "narrative": "Napoleon now knew that glory was incompatible with happiness, that he knew this, and that he would still have chosen glory \u00e2\u20ac\u201d and that this revealed something about the structure of great men that wisdom cannot alter. The gnosis is the recognition that glory is structurally incompatible with happin"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev01",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that the gap between sacred and secular authority was not a metaphysical divide but an engineering absence \u00e2\u20ac\u201d a missing weapon. This is not a logical inference \u00e2\u20ac\u201d it is a recognition of structure that had become *visible* through a specific historical event. The false category"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev05",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.977,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=0 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that the gap between his theory and its implementation was not merely practical but structural \u00e2\u20ac\u201d and that he himself, by advocating for the militia, had been a mechanism in the production of his own ruin. This is a gnosis event of the retroactive recognition type. What became "
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev07",
+      "actual": 9,
+      "rubric": 3,
+      "ml": 42,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.82,
+      "flags": "SO=1 RB=1 SI=1 CA=0 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that his exile from Florentine political life had accidentally placed him in a position to receive a kind of instruction that no active political career could have given him \u00e2\u20ac\u201d that the ancients would only speak to a man who had been stripped of everything else. This is a self-"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev08",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that all political philosophy before him had been systematically producing dangerous incompetence by training rulers to navigate an imaginary world while inhabiting a real one. This passage is the announcement of a gnosis event that has already occurred \u00e2\u20ac\u201d it is the verbal crys"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev15",
+      "actual": 2,
+      "rubric": 8,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.981,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Machiavelli now knew \u00e2\u20ac\u201d in the only way that could not be argued away \u00e2\u20ac\u201d that the political wisdom he had extracted from his observation of power was not a tool that power would reward but a condition that power would never tolerate in its own ranks. This is the final and most devastating gnosis e"
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev16",
+      "actual": 2,
+      "rubric": 42,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.533,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that the entire humanist tradition of political education had been operating with a broken conceptual tool \u00e2\u20ac\u201d a word that made moral goodness and political effectiveness appear to be the same thing, thus preventing the political thinker from ever confronting the actual choice b"
+    },
+    {
+      "event_id": "gnosis_Sun Tzu (Sun Wu, c. 544\u00e2\u20ac\u201c496 BCE) GN_ev04",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.958,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Sun Tzu now knew that the ultimate strategic position was not the best formation but the absence of formation \u00e2\u20ac\u201d that formlessness was invulnerable because it offered no target. The gnosis is the recognition that form itself is the vulnerability\u00e2\u20ac\u201d that any definite arrangement can be analyzed, cou"
+    },
+    {
+      "event_id": "gnosis_The Gnostic Jesus_ev2",
+      "actual": 2,
+      "rubric": 1,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.998,
+      "flags": "SO=1 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "Divinity is not a destination to be reached, but an inherent structural identity to be remembered. * Best Tripartite Camera Address: A slow zoom through a drop of water that reveals an entire galaxy identical to the one outside the drop. * Confidence Score: 0.97 ------------------------------ as Gno"
+    },
+    {
+      "event_id": "gnosis_The Gnostic Jesus_ev4",
+      "actual": 2,
+      "rubric": null,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.891,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=1 FA=1 RE=1",
+      "narrative": "To know the Truth is to realize that you are every character in the story, including the villain and the victim. * Best Tripartite Camera Address: A rapid-fire montage of faces\u00e2\u20ac\u201ddifferent ages, races, and expressions\u00e2\u20ac\u201dblending into a single, unmoving eye. * Confidence Score: 0.90 -----------------"
+    },
+    {
+      "event_id": "gnosis_Zarathustra_ev2",
+      "actual": 2,
+      "rubric": null,
+      "ml": 5,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.483,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "Reality is the spark generated by the collision of two opposing but equal primal forces. * Tripartite Camera Address: Two identical orbs of light orbiting each other so fast they appear to be a single, pulsing line. * Confidence Score: 0.96 ------------------------------"
+    },
+    {
+      "event_id": "phase3_c1_peirce_musement_single",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This particular instance of Musement \u2014 a single moment of playful attention where this specific idea emerged from the quality of this specific attention. The token-event of mind at play, a single occurrence of the feeling of possibility."
+    },
+    {
+      "event_id": "phase3_c1_akhenaten_single_ray",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This single ray of the Aten \u2014 a particular instance of solar light striking the face at this moment, creating this specific sensation of warmth and radiance. The token-event of light, a single occurrence of the feeling-quality."
+    },
+    {
+      "event_id": "phase3_c1_bruno_single_vision",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This single visionary experience \u2014 a particular ecstatic moment when the crystalline spheres dissolved for Bruno, a single token-instance of the icon-like vision of boundless space. The single occurrence of the feeling of infinity."
+    },
+    {
+      "event_id": "phase3_c1_watts_single_moment",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This single moment of the watercourse way \u2014 a particular instance of feeling the flow of the river as identical to the flow of consciousness. The token-event of the sensation of identity between self and stream."
+    },
+    {
+      "event_id": "phase3_c1_spinoza_single_feeling",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This single feeling of the eternal \u2014 a particular moment when the mind experienced its own eternity, not as a general truth but as this specific token-event of timelessness. The single instance of the qualitative feeling of eternity."
+    },
+    {
+      "event_id": "phase3_c1_marcus_single_drop",
+      "actual": 1,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "This single drop in the ocean \u2014 a particular moment when Marcus felt the dissolution of the Emperor into the cosmos, a token-event of the feeling of cosmic continuity. The single instance of the qualitative sensation of oneness."
+    },
+    {
+      "event_id": "gnosis_Alan Watts_01",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.505,
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=0 FA=0 RE=0",
+      "narrative": "The Gnosis of the Patterned Wall In his autobiography In My Own Way, Watts describes a childhood fever where he became fascinated by the intricate patterns of Chinese embroidery and tea-chest designs in his home. He saw these not as things, but as vectors of energy. It was a pre-logical recognition "
+    },
+    {
+      "event_id": "gnosis_Alan Watts_06",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.834,
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "The Complementary Contradiction His lecture series on The Philosophy of Nature, where he categorized all thinkers into Prickles (logical, precise, discrete) and Goo (mystical, flowing, holistic). He recognized that these are not \"conflicting\" theories, but \"complementary\" modes of a single cosmic pr"
+    },
+    {
+      "event_id": "gnosis_Charles Sanders Peirce_03",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.834,
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "The Neglected Argument While attending a service at St. Thomas's Episcopal Church in New York (1892), Peirce\u2014previously a skeptic\u2014experienced a sudden, overwhelming sense of the reality of God while observing the ritual. It was a \"recognition of the Absolute\" through the medium of aesthetic and comm"
+    },
+    {
+      "event_id": "gnosis_Ramon Llull_07",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.505,
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=0 FA=0 RE=0",
+      "narrative": "The Dissolution of the Lover and the Beloved In the Book of the Lover and the Beloved, Llull writes: The Lover and the Beloved met, and the Beloved said to the Lover: 'You need not speak; a nod is enough for me to know your heart.' This represents the collapse of the \"Self/Other\" boundary in the mys"
+    },
+    {
+      "event_id": "gnosis_Aristotle_04",
+      "actual": 0,
+      "rubric": null,
+      "ml": 0,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.936,
+      "flags": "SO=0 RB=0 SI=0 CA=1 CO=0 PO=1 FA=0 RE=1",
+      "narrative": "Metaphysics XII.9 (Lambda):\n And thought thinks itself because it shares the nature of the object of thought; for it becomes an object of thought in coming into contact with and thinking its objects, so that thought and its object are the same. For the faculty of receiving its object \u2014 that is, the "
+    },
+    {
+      "event_id": "gnosis_Aristotle_15",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.834,
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "When Athens indicted Aristotle for impiety (asebeia) following Alexander's death in 323 BCE \u2014 the same charge used to kill Socrates in 399 BCE \u2014 Aristotle fled to Chalcis in Euboea. The explanation preserved by later sources (Aelian, Varia Historia III.36, though the historicity is debated):\n Aristo"
+    },
+    {
+      "event_id": "gnosis_Irenaeus of Lyon_05",
+      "actual": 0,
+      "rubric": null,
+      "ml": 0,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.914,
+      "flags": "SO=0 RB=0 SI=1 CA=1 CO=1 PO=1 FA=0 RE=1",
+      "narrative": "The Two Hands of God: Word and Spirit Are Not Intermediaries Adversus Haereses, IV.Preface.4 and V.6.1:\n Now God shall be glorified in his handiwork, fitting it so as to be conformable to, and modeled after, his own Son. For by the hands of the Father, that is, by the Son and the Holy Spirit, man, a"
+    },
+    {
+      "event_id": "gnosis_Thales of Miletus_06",
+      "actual": 0,
+      "rubric": 0,
+      "ml": 9,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.571,
+      "flags": "SO=0 RB=0 SI=0 CA=0 CO=0 PO=0 FA=1 RE=0",
+      "narrative": "The Flooding Nile (Geometry from Mud) Diogenes Laertius (Lives, I.27) records that Thales visited Egypt and demonstrated the measurement of the height of the pyramids by their shadows \u2014 using the moment at which a vertical stick casts a shadow equal to its own height as the moment to measure the pyr"
+    },
+    {
+      "event_id": "gnosis_Galileo Galilei_02",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.834,
+      "flags": "SO=1 RB=0 SI=0 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "The Medicean Stars (The Non-Centrality of the Earth) January 7\u201313, 1610: The observation of four small stars moving around Jupiter.\n I should have examined the distance between them and Jupiter... but the sight of them being in a straight line... and then seeing them change position... my amazement "
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev09",
+      "actual": 42,
+      "rubric": 42,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.533,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Spinoza now knew that Scripture was not a source of truth about reality but a source of moral instruction for the multitude \u00e2\u20ac\u201d and that recognizing this liberated philosophy from theology without requiring the persecution of religion. The gnosis is the recognition that Scripture can be studied by t"
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev08",
+      "actual": 9,
+      "rubric": 9,
+      "ml": 1,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.808,
+      "flags": "SO=1 RB=0 SI=1 CA=0 CO=0 PO=1 FA=0 RE=0",
+      "narrative": "Writing about death's naturalness for the fifteenth time in his private journal, Marcus recognized that he understood the correct position completely and was still grieving \u00e2\u20ac\u201d and that this gap between understanding and feeling was not a failure of philosophy but a feature of being a body inside a "
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev11",
+      "actual": 42,
+      "rubric": 42,
+      "ml": 2,
+      "reason": "ensemble_disagree",
+      "ml_conf": 0.533,
+      "flags": "SO=1 RB=1 SI=0 CA=1 CO=1 PO=0 FA=1 RE=1",
+      "narrative": "Machiavelli now knew that every legitimate order has a murdered Remus at its foundation, and that the success of the order is precisely what makes the murder invisible \u00e2\u20ac\u201d and therefore repeatable. The false category boundary that dissolved here is between legitimacy and violence at the moment of fo"
+    }
+  ]
+}

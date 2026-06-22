@@ -1,0 +1,322 @@
+Cyrus the Great (c. 600–530 BCE) GNOSIS EVENT EXTRACTION
+### Corpus Sources: Cyrus Cylinder, Herodotus (*Histories*), Xenophon (*Cyropaedia*), Hebrew Bible (Isaiah 44–45, Ezra 1, 2 Chronicles 36), Ctesias (*Persica*), Pasargadae tomb inscription, Behistun-adjacent Persian administrative records
+
+---
+
+> **Framing note:** Cyrus presents a particular challenge for gnosis extraction because the primary sources are mostly *about* him rather than *by* him. The Cyrus Cylinder is the closest thing to a first-person document. Xenophon's *Cyropaedia* is philosophical fiction. Herodotus is a Greek interpreting a Persian. This means most gnosis events must be reconstructed from the *structure of decisions* — from what Cyrus did, which reveals what he had recognized. Where this inference is occurring, the confidence score reflects it. No event has been fabricated. All are anchored in documented historical record or reliable ancient testimony.
+
+---
+
+## EVENT 01 — *The Proclamation That Named a Foreign God as Sovereign*
+
+### Passage or Trigger
+The Cyrus Cylinder (c. 539 BCE), lines 12–19:
+
+> *"Marduk, the great lord, a protector of his people/worshippers, beheld with pleasure his (i.e., Cyrus's) good deeds and his upright mind and (therefore) ordered him to march against his city Babylon... He made him set out on the road to Babylon going at his side like a real friend."*
+
+Cyrus — a Persian, a worshipper of Ahura Mazda by background — issued this proclamation in the name of Marduk, the chief Babylonian deity, presenting himself as Marduk's chosen king. He did not do this as propaganda he disbelieved. The administrative, religious, and material consequences of the Cylinder were all structured *as if* the claim were real.
+
+### Why It Qualifies
+The gnosis is not that Cyrus decided to use Marduk rhetorically. The gnosis is the prior recognition that made that decision *available*: **divine legitimacy is not a property of a god — it is a property of the relationship between a ruler and a people's structure of meaning.** This could not have been constructed by reasoning alone because every prior conqueror had brought their gods *with* them, replacing the conquered deity. Cyrus recognized, in a moment that was not derivable from military logic, that the structure of divine authority was portable and that he could stand *inside* a foreign theological framework without betraying his own. The categories "my god" and "their god" became transparent as a single category: *the god that sanctions order*.
+
+### Three-Domain Reading
+
+- **Theology:** The boundary between legitimate and foreign divinity dissolved. Cyrus recognized that theological authority was not ethnic or tribal — it was *functional*. Marduk and Ahura Mazda were not competitors; they were instances of the same structure. This is one of the earliest documented recognitions of what we might call theological functionalism.
+- **Technology:** The mechanism of legitimacy itself became transparent — not as force, not as bloodline, but as *narrative coherence within a community's symbolic order*. Cyrus saw that governance is a technology of meaning, not merely of coercion.
+- **Cosmology:** The implicit recognition that the cosmos does not have a single center of divine authority — that the universe is plurally organized around multiple legitimate nodes of order, each internally coherent. This dissolves the flat cosmological map where one god/one people/one truth occupies the apex.
+
+### Compressed Insight
+Divine authority is not located in a god — it is located in the coherence between a ruler's actions and a people's cosmological expectations, and Cyrus was now able to enter that coherence from the outside.
+
+**Confidence: 0.87**
+
+---
+
+## EVENT 02 — *Babylon Opens Its Gates*
+
+### Passage or Trigger
+Herodotus (*Histories*, I.191) and the Nabonidus Chronicle both record that Babylon fell to Cyrus in October 539 BCE with negligible military resistance. The city — one of the largest and most fortified in the ancient world, surrounded by walls Herodotus called impregnable — simply capitulated. Its priests had already designated Cyrus as legitimate king in Marduk's name. The gates were opened from within.
+
+### Why It Qualifies
+This is a retroactive gnosis event. Cyrus had pursued a strategy of religious legitimation, political patience, and the cultivation of internal Babylonian dissent (particularly among the priestly class alienated by Nabonidus's neglect of Marduk's cult). When Babylon opened, the recognition was not "my strategy worked" — it was something more vertiginous: **the greatest fortress in the world had already fallen before a single soldier reached the wall.** The conquest was complete in the invisible domain before it happened in the visible one. What became transparent was that *military force and political reality were operating on separate timescales*, and that the latter preceded the former.
+
+### Three-Domain Reading
+
+- **Theology:** The recognition that the priestly class — the administrators of divine meaning — were the actual gatekeepers of political power, not the walls or the army. Spiritual authority and military authority were the same force operating at different speeds.
+- **Technology:** Siege warfare as a technology was revealed as *secondary*. The primary technology of conquest was the management of symbolic legitimacy. Cyrus had invented something — call it ideological engineering — before there was a word for it.
+- **Cosmology:** A city-state had been understood as a physical-political entity bounded by its walls. Cyrus's recognition dissolves this: the *real* boundary of a polity is its population's belief in its own legitimacy. The walls were already inside.
+
+### Compressed Insight
+The fortress had already fallen in the domain of meaning before it fell in the domain of stone, which means the real work of conquest had always been invisible.
+
+**Confidence: 0.83**
+
+---
+
+## EVENT 03 — *The Recognition Inside Isaiah's Naming*
+
+### Passage or Trigger
+Isaiah 44:28 – 45:1 (Hebrew Bible):
+
+> *"Who says of Cyrus, 'He is my shepherd, and he shall fulfill all my purpose'; saying of Jerusalem, 'She shall be built,' and of the temple, 'Your foundation shall be laid.'... Thus says the LORD to his anointed, to Cyrus, whose right hand I have grasped, to subdue nations before him..."*
+
+Ezra 1:1–3 records that Cyrus, upon taking Babylon, issued his decree permitting the Jewish exiles to return and rebuild the Temple — and that he explicitly attributed his authority to "the LORD, the God of heaven." Whether Cyrus read Isaiah or was informed of the prophecy by Jewish advisors is debated; what is not debated is that the Edict of Cyrus was issued and that it invoked a specifically Hebrew theological framework.
+
+### Why It Qualifies
+Cyrus was the only non-Jewish figure in the entire Hebrew Bible to be named *mashiach* — anointed. If (as many scholars argue) Cyrus encountered this prophecy — a text that named *him by name* as the instrument of a foreign god before he had done the things the text described — the gnosis event is structurally extraordinary: **he was reading his own name inside a destiny he had not authored, written before he existed, in a language not his own, by a people not his own.** The self-implication is total. The observer finds themselves already inside the structure they are observing. The "I" that Cyrus brings to the text is already predicted *in* the text.
+
+Even if Cyrus never read Isaiah, the gnosis event may have occurred when Jewish advisors informed him of the prophecy: at that moment, his own actions became retroactively transparent as fulfillments of a pattern he had not known he was enacting.
+
+### Three-Domain Reading
+
+- **Theology:** The recognition that theological election is not membership-dependent — that a god can choose an outsider, that the "anointed" is a *relational category*, not an ethnic or ritual one. The boundary between insider and outsider in sacred designation collapsed.
+- **Technology:** The mechanism of prophecy became transparent: prophecy is a technology for retrospective meaning-construction, which operates *forward* in time only because the pattern it describes is structural rather than particular. Cyrus sees how the machinery works from inside it.
+- **Cosmology:** A named individual became visible as a *node in a transpersonal pattern* — as a function in a cosmic structure that exceeds any single culture's frame. The universe was shown to be organizing events across traditions and centuries without the consent of the actors.
+
+### Compressed Insight
+Cyrus found his name in a text he did not write, written by a people not his own, predicting what he would do — and recognized that he had been inside a structure he could not see until he looked.
+
+**Confidence: 0.79**
+
+---
+
+## EVENT 04 — *The Survival He Did Not Choose*
+
+### Passage or Trigger
+Herodotus (*Histories*, I.107–122) records in detail: Astyages, King of the Medes and Cyrus's maternal grandfather, received a dream interpreted as meaning his grandson would overthrow him. He ordered Harpagus, a trusted general, to take the infant Cyrus and kill him. Harpagus instead gave the child to a herdsman named Mitradates, who raised him as his own. Years later, Cyrus's identity was discovered, Astyages confronted him — and rather than executing him, recognized the dream's inevitability and let him live.
+
+The moment of gnosis is not when Cyrus was born, nor when he was saved. It is when Cyrus *learned what had happened* — when he was told that he should not exist, that his survival was the result of a chain of disobedience and substitution that he had never initiated or authorized.
+
+### Why It Qualifies
+Cyrus's very existence was revealed to be a consequence of *other people's moral choices made under conditions of fear* — Harpagus's refusal to kill a child, a herdsman's decision to raise him. **Cyrus recognized that his identity was not self-originated — that the "I" standing before him was a residue of other people's gnosis events.** His survival was not his achievement. His kingship was already prefigured in the structure of events before he had any self. The self-implication is maximal: he *is* the consequence of decisions he did not make.
+
+### Three-Domain Reading
+
+- **Theology:** The recognition that divine providence operates through human disobedience — that Astyages's dream was fulfilled not by compliance but by defection. Theological order, Cyrus recognized, uses moral failure as its mechanism. This is not an abstract theological position; it is a recognition Cyrus had about his own body.
+- **Technology:** The technology of dynastic succession — the attempt by Astyages to engineer the future by eliminating a threat — was revealed as producing precisely the outcome it sought to prevent. Control mechanisms, when sufficiently comprehensive, generate their own opposites.
+- **Cosmology:** The structural pattern: the attempt to suppress a pattern is the mechanism of its expression. The cosmos arranges things such that the very action taken against a destiny is the action that fulfills it. Cyrus was the living proof of this.
+
+### Compressed Insight
+Cyrus learned that he existed because his grandfather had tried to ensure he did not, and in that moment recognized that his selfhood was not his own — it was the shape left by other people's fear.
+
+**Confidence: 0.84**
+
+---
+
+## EVENT 05 — *The Conquered King Who Became the Counselor*
+
+### Passage or Trigger
+Herodotus (*Histories*, I.86–90) records that after defeating Croesus of Lydia, Cyrus ordered him to be burned alive on a pyre. As the pyre was lit, Croesus cried out the name of Solon — the Athenian sage who had once warned him that no man should be counted happy until he was dead. Cyrus, hearing this and learning the story of Solon's warning, stopped the execution. He recognized something in Croesus's situation that reflected on *his own*: that he, Cyrus, standing at the apex of his power, was in exactly the position Croesus had been in before his fall.
+
+Herodotus writes:
+> *"Thinking this — that he, a mortal man, was burning alive another mortal man who had been no less happy than himself — and fearing retribution, and reflecting that there was nothing stable in human affairs, he commanded that the burning should be extinguished."*
+
+Croesus then became Cyrus's advisor.
+
+### Why It Qualifies
+The gnosis event is the moment Cyrus *saw himself in Croesus* — not abstractly, but with the vertiginous recognition that the structure he was observing (conquered king, at the height of former glory, now burning) was a structure he was *also inside*. **He was simultaneously the executioner and the figure on the pyre — not yet burning, but structurally identical to the one who was.** The recognition was not that "power is transient" as an abstract truth. It was the recognition that his own triumph was visible, from a slightly different angle, as its own undoing already underway.
+
+### Three-Domain Reading
+
+- **Theology:** The category of divine retribution (*nemesis* in the Greek frame; *arta* in the Persian) became personally visible — not as a cosmic law observed from outside, but as something Cyrus could feel pressing against his own situation. Theological retribution became self-implicating.
+- **Technology:** The technology of execution — a demonstration of sovereign power — was revealed in the moment of its use to be a mirror. The mechanism of dominance generated a reflection that implicated its operator.
+- **Cosmology:** The pattern of reversal — the Heraclitean recognition that every position contains its opposite — became concretely visible in the scene before him. Fortune's wheel was not a metaphor; it was the burning pyre, and Cyrus was on both sides of it simultaneously.
+
+### Compressed Insight
+Looking at Croesus on the pyre, Cyrus recognized that the scene of his own triumph was also, from a slightly adjusted vantage, the scene of his own future ruin — and that the only way to stop seeing it was to stop the fire.
+
+**Confidence: 0.86**
+
+---
+
+## EVENT 06 — *The Satrapy: Governing Without Erasing*
+
+### Passage or Trigger
+Cyrus instituted the satrapy system — a mechanism by which conquered territories retained their own laws, religious practices, local languages, and administrative customs, supervised by a Persian governor (satrap) but not replaced or homogenized. This was not the practice of any prior empire. Assyrians deported and replaced populations. Babylonians imposed cultural absorption. Cyrus preserved and even *funded* the restoration of local religious sites (including the Jewish Temple, the temples of Babylon, and others recorded in the Cyrus Cylinder).
+
+The administrative decision implies a prior *recognition* — and this is where the gnosis event lies.
+
+### Why It Qualifies
+Every prior empire had operated on the implicit assumption that unity required uniformity — that to govern a people you had to make them the same kind of people. **Cyrus recognized that this assumption was wrong — not as a strategic refinement but as a structural insight: that *diversity of practice* and *unity of order* were not opposed categories, and that the empire was stronger precisely because the center did not try to become the whole.** This is not a moral conclusion (don't moralize) — it is a recognition about the nature of systems. He saw that homogenization is not the mechanism of coherence; *hierarchy with preserved local integrity* is. The false boundary that dissolved was: center/periphery as opposed principles.
+
+### Three-Domain Reading
+
+- **Theology:** Local gods were recognized not as defeated by Persian gods but as nodes in a larger theological ecology. The Achaemenid empire was, theologically, a federation of valid cosmologies. This was unprecedented.
+- **Technology:** Governance as a technology was fundamentally reconceived: the mechanism of control shifted from *replacement* to *superposition*. Cyrus did not replace local systems; he placed Persian authority *above* them while leaving them intact — a fundamentally different engineering of power.
+- **Cosmology:** The universe was revealed (at the level of political organization) as an ecology rather than a hierarchy of essences — a structure in which diversity at lower levels produces coherence at higher levels rather than threatening it.
+
+### Compressed Insight
+Cyrus recognized that an empire achieves coherence not by making everything the same but by becoming the common structure within which many different things are allowed to remain themselves.
+
+**Confidence: 0.88**
+
+---
+
+## EVENT 07 — *The Harpagus Recognition: Treachery as Structural Loyalty*
+
+### Passage or Trigger
+Herodotus (*Histories*, I.123–125) records that Harpagus — the general who had saved the infant Cyrus against Astyages's orders — later *defected to Cyrus* when Cyrus rose in rebellion against Median power, taking much of the Median army with him. Astyages discovered that Harpagus had both betrayed the infanticide order *and* was now betraying the kingdom — and punished him grotesquely (serving him his own son at a banquet). Harpagus maintained composure and continued his defection.
+
+The gnosis event for Cyrus is the moment he received Harpagus's letter of defection and recognized the structure of what was being offered: **the same man whose disobedience had created him was now committing a second act of disobedience to fulfill him.** Harpagus was loyal to Cyrus *through* his disloyalty to Astyages — the same act performed twice was both treachery and fidelity simultaneously, depending only on the frame.
+
+### Why It Qualifies
+The recognition is that *loyalty and treachery are not moral opposites but structural positions relative to an organizing center*. Harpagus had never betrayed Cyrus. He had twice betrayed Astyages in Cyrus's favor. The same act — disobeying a direct command — was the proof of his deepest fidelity. The categories dissolved: "traitor" and "loyal servant" were revealed as the same person, the same action, seen from two different centers.
+
+### Three-Domain Reading
+
+- **Theology:** The theodicy of obedience and disobedience: the most sacred act in the creation of Cyrus's kingdom (saving the infant) was a sin against the reigning order. The moral universe was revealed to be organized around *what* one is faithful to, not whether one is faithful.
+- **Technology:** The mechanism of political loyalty — what actually binds a general to a king — was revealed as not contractual but *cosmological*: Harpagus was loyal to the pattern that Cyrus represented, not to the institutional structure of Median power. Institutional loyalty and structural loyalty were separated.
+- **Cosmology:** The recognition that historical actors are often loyal to *patterns larger than the institutions they serve* — and that the universe uses their apparent betrayals to advance those patterns.
+
+### Compressed Insight
+Cyrus recognized that the man who had twice violated sacred commands was the most faithful person in his world, and that this meant faithfulness was a category organized around pattern rather than institution.
+
+**Confidence: 0.78**
+
+---
+
+## EVENT 08 — *The Crossing of the Araxes: The Limit Reveals Itself*
+
+### Passage or Trigger
+Herodotus (*Histories*, I.204–214) records Cyrus's final campaign against the Massagetae, a nomadic people led by Queen Tomyris, east of the Caspian. Croesus (now his advisor) counseled him not to cross the Araxes River into Massagetae territory, arguing it was strategically and symbolically reckless. Cyrus crossed anyway. He won the first engagement by a trick — leaving wine in his camp to intoxicate the Massagetae — then was defeated and killed in the subsequent battle.
+
+Tomyris reportedly had his head submerged in a vessel of blood, saying: *"I warned you that I would quench your thirst for blood, and so I shall."*
+
+The gnosis event — if it occurred — would have been in the moment *before* the crossing, or possibly in the moment of final defeat: **the recognition that he had become what he had once recognized in Croesus on the pyre.** The structure he had seen in another had arrived.
+
+### Why It Qualifies
+This is the most speculative event in this corpus, and the confidence reflects that. But the *structure* of what Herodotus records is a gnosis event: Cyrus had the counsel of the man he had saved precisely in order to *not* make this mistake. He had the teaching — from Croesus, from his own recognition at the pyre — about the mutability of fortune. And then the pattern consumed him anyway. **The gnosis event is the moment where Cyrus recognized, perhaps in the final battle, that the recognition he had achieved at the pyre had not made him immune to the pattern — it had only made him capable of seeing it arrive.** Understanding a structure does not remove you from it.
+
+### Three-Domain Reading
+
+- **Theology:** The recognition (if it occurred) that divine retribution/nemesis does not spare those who understand it — that comprehension of a theological law does not exempt the comprehender. Knowledge of fate is not protection from it.
+- **Technology:** The mechanism of overreach — *hubris* in the Greek frame — was revealed as operating even in those who understand the mechanism. The tool of recognition does not disable the tool of expansion. These are different systems.
+- **Cosmology:** The universe does not reward those who understand its patterns with exemption from them. The cosmos is not a tutoring system. Recognition is not salvation.
+
+### Compressed Insight
+Cyrus, who had once saved Croesus because he recognized his own future in Croesus's burning, then walked into exactly that future — and may have recognized, in the final moment, that seeing a pattern clearly is not the same as escaping it.
+
+**Confidence: 0.61**
+
+---
+
+## EVENT 09 — *The Garden as Universe: Pairidaeza*
+
+### Passage or Trigger
+Cyrus founded Pasargadae (c. 547 BCE) and within it constructed the first *pairidaeza* — from Old Persian *pairi* (around) + *daeza* (wall) — an enclosed garden that modeled an ideal cosmos. This word entered Greek as *paradeisos*, Hebrew as *pardes*, and eventually became the English *paradise*. The garden was geometrically organized, with formal water channels, symmetrical plantings, and pavilions positioned to relate to the layout of the whole.
+
+The recognition implied by the act of building this thing is the gnosis event.
+
+### Why It Qualifies
+Cyrus was the ruler of an empire encompassing enormous ecological diversity — from the Mediterranean coast to the Iranian plateau to the edge of Central Asia. To build a *walled garden* as the symbolic center of this empire is to make a specific statement about the relationship between cosmos and enclosure. **The gnosis event is the recognition that the universe is not infinite formlessness but *ordered enclosure* — that the highest form of cosmic reality is not expansion but contained perfection.** This is self-implicating: Cyrus, who had expanded in every direction, chose as his symbolic home a bounded garden. He recognized that the real achievement was not the circumference of his empire but the coherence of a center.
+
+### Three-Domain Reading
+
+- **Theology:** The garden as sacred space — the template that enters monotheism as the Garden of Eden, the enclosed paradise. Cyrus was constructing a theology of *bounded divine order* against the formlessness of conquest.
+- **Technology:** The garden is a technology of idealization — a mechanism for making a bounded territory model the principles of universal order. It is a simulation of the cosmos at human scale, designed to make the cosmos *legible* from inside.
+- **Cosmology:** The universe was recognized as coherent-and-bounded rather than as infinite-and-expanding. The cosmos is a *pairidaeza* — a walled structure of organized beauty. This is one of the oldest surviving cosmological intuitions encoded in built form.
+
+### Compressed Insight
+Cyrus recognized that the universe was not his empire — it was the garden at the center of his empire, and that containing something perfectly was an act of greater power than expanding it indefinitely.
+
+**Confidence: 0.74**
+
+---
+
+## EVENT 10 — *The Inscription That Addressed the Future*
+
+### Passage or Trigger
+The tomb of Cyrus at Pasargadae bore this inscription, reported by multiple ancient sources including Strabo and Arrian (who record that Alexander the Great read it when he visited):
+
+> *"O man, whoever you are and wherever you come from — for I know that you will come — I am Cyrus, son of Cambyses, who founded the empire of the Persians and was king of Asia. Do not begrudge me this monument."*
+
+This was apparently composed by or under Cyrus for his own tomb — a document written to be read after his death, addressed to a future reader whose identity he explicitly acknowledges as unknown.
+
+### Why It Qualifies
+The inscription is a gnosis event recorded in stone. Cyrus recognized — from inside his life and power — that he was already a *past* figure from the perspective of the future reader. **He collapsed the temporal boundary between his own present and his future obsolescence, and spoke from inside that collapsed boundary.** The "I" in the inscription is simultaneously the living Cyrus and the dead one; the reader is simultaneously an unknown future person and the already-predicted visitor. "I know that you will come" is not a prophecy — it is a recognition that the structure of power always generates curiosity about its origin, and that the future is already arriving. He implicated himself in a moment he could not live to witness.
+
+### Three-Domain Reading
+
+- **Theology:** A recognition of what survives death — not the body or the empire, but the *address*, the *voice*. Cyrus chose to speak across death rather than claim to escape it. This is theologically humble in a remarkable way: he does not claim immortality; he claims *communicability*.
+- **Technology:** The monument is revealed as a communication technology — not a marker of achievement but a *medium* across which a self addresses its own future dissolution. Cyrus was engineering a temporal message, not a spatial trophy.
+- **Cosmology:** The recognition that time is a structure in which every present is already a past from another vantage point — and that this is not tragic but *addressable*. The cosmos contains the possibility of speaking across its own temporal axis.
+
+### Compressed Insight
+Cyrus recognized that he was already dead from the future's perspective, and chose to speak from inside that recognition — addressing the one who would come to confirm it.
+
+**Confidence: 0.91**
+
+---
+
+## EVENT 11 — *The Median Identity That Was Also His Own*
+
+### Passage or Trigger
+Cyrus was the son of a Persian father (Cambyses I, a vassal king) and a Median mother (Mandane, daughter of Astyages). He was simultaneously Persian and Median by blood — a member of both the ruling imperial culture he would overthrow and the rising culture he would elevate. When he defeated Astyages and unified the Medes and Persians, he did not present it as conquest. He presented it as *succession* — as a continuation of Median royal legitimacy through the maternal line.
+
+### Why It Qualifies
+The gnosis event is the recognition that **the boundary between conqueror and conquered was located inside his own body before it was located in any political structure.** He was both simultaneously. The unification of Media and Persia was not an external political act for Cyrus — it was a recognition that the structure of the conflict had already been resolved inside himself, and that the empire was the externalizing of an internal collapse of a false boundary. He did not conquer his grandfather's kingdom; he recognized that he had always already *been* both sides of the boundary.
+
+### Three-Domain Reading
+
+- **Theology:** The two sacred lineages — Median (associated with Zoroastrianism and Ahura Mazda in one stream) and Persian (Achaemenid) — were united not by theological merger but by the recognition that they were already aspects of a single inherited structure in the person of Cyrus.
+- **Technology:** The mechanism of dynastic legitimacy was revealed as capable of operating through the *maternal* line against the dominant patrilineal assumption. A different channel of transmission was recognized as valid.
+- **Cosmology:** The recognition that every apparent opposition (two peoples, two empires, two bloodlines) may already have been resolved at a deeper structural level — and that the work of the conscious actor is to *recognize* the resolution that is already there, not to *produce* it.
+
+### Compressed Insight
+Cyrus recognized that the empire he was building was not the conquest of one people by another but the external expression of a unity that had already existed inside his own body, in his blood, before he had ever made a decision.
+
+**Confidence: 0.82**
+
+---
+
+## EVENT 12 — *The Permission to Return: Exile as Preserved Identity*
+
+### Passage or Trigger
+Ezra 1:1–4 (Hebrew Bible):
+
+> *"In the first year of Cyrus king of Persia, in order to fulfill the word of the LORD spoken by Jeremiah, the LORD moved the heart of Cyrus king of Persia to make a proclamation... 'The LORD, the God of heaven, has given me all the kingdoms of the earth and he has appointed me to build a temple for him at Jerusalem in Judah. Any of his people among you may go up...'"*
+
+Cyrus released the Jewish exiles from Babylonian captivity, funded the rebuilding of the Temple in Jerusalem, and returned the sacred vessels Nebuchadnezzar had taken. The Edict of Cyrus is one of the few Achaemenid documents corroborated by both Jewish scripture and archaeological evidence (confirmed broadly by the Cyrus Cylinder's language of restoring displaced peoples).
+
+### Why It Qualifies
+The gnosis event is subtle but structurally significant: Cyrus recognized that **exile had preserved rather than destroyed the identity it sought to erase.** The Babylonian strategy of deportation had been a technology of identity dissolution. Cyrus recognized that it had failed — that the Jewish people in exile were *more* organized around their identity, not less. The act of returning them was not charity; it was the recognition that **a people's identity is not housed in their territory — it is housed in their memory and their practice, and it cannot be confiscated by spatial displacement.** The category "people" and "place" were revealed as not equivalent. A people without a place is still a people.
+
+### Three-Domain Reading
+
+- **Theology:** The recognition that a god's presence is not geographically located — that the God of Israel survived the Temple's destruction and the diaspora, which means that gods (or the structures they represent) are not spatial entities. This is a profound theological insight, and Cyrus acted on it.
+- **Technology:** Deportation as a technology of erasure was revealed as producing instead a technology of preservation — the concentration of a people's identity, intensified by exile. Cyrus recognized the mechanism had produced its opposite result.
+- **Cosmology:** Identity is revealed as a pattern rather than a location — as something that can be preserved across spatial displacement because it is encoded in practice, text, and memory rather than territory.
+
+### Compressed Insight
+Cyrus recognized that the Jewish exile had not dissolved the Jewish people but had crystallized them, and that returning them to their land was not restoration but the recognition of a reality that had never actually been destroyed.
+
+**Confidence: 0.85**
+
+---
+
+## SUMMARY TABLE
+
+| # | Event Title | Confidence | Primary Domain of Gnosis |
+|---|---|---|---|
+| 01 | The Proclamation That Named a Foreign God as Sovereign | 0.87 | Theology/Technology |
+| 02 | Babylon Opens Its Gates | 0.83 | Technology/Cosmology |
+| 03 | The Recognition Inside Isaiah's Naming | 0.79 | Theology/Cosmology |
+| 04 | The Survival He Did Not Choose | 0.84 | Cosmology/Theology |
+| 05 | The Conquered King Who Became the Counselor | 0.86 | Cosmology/Theology |
+| 06 | The Satrapy: Governing Without Erasing | 0.88 | Technology/Cosmology |
+| 07 | The Harpagus Recognition: Treachery as Structural Loyalty | 0.78 | Theology/Technology |
+| 08 | The Crossing of the Araxes: The Limit Reveals Itself | 0.61 | Cosmology |
+| 09 | The Garden as Universe: Pairidaeza | 0.74 | Cosmology/Theology |
+| 10 | The Inscription That Addressed the Future | 0.91 | Cosmology/Technology |
+| 11 | The Median Identity That Was Also His Own | 0.82 | Cosmology/Theology |
+| 12 | The Permission to Return: Exile as Preserved Identity | 0.85 | Theology/Cosmology |
+
+---
+
+## Corpus Notes for LOGOC Integration
+
+**Highest-confidence events for training core:** Events 10, 06, 01, 05, 04, 12 — these have the clearest structure of self-implication and retroactive recognition grounded in documented primary sources.
+
+**Events requiring epistemological flagging:** Event 03 (Isaiah) depends on whether Cyrus encountered the text; Event 08 (Araxes) depends on an interior recognition that may not have occurred consciously. Both are structurally valid as gnosis event *candidates* but should be marked as reconstructed-from-pattern rather than documented-from-record.
+
+**Cross-domain coherence:** Cyrus's gnosis events share a deep structural theme across all twelve: **the false boundary between inside and outside.** His god/their god; my people/their people; my bloodline/their bloodline; the conqueror/the conquered; the living present/the dead future. Every one of his recognitions involves the collapse of a boundary that had been treated as essential and was revealed as constructed. This makes Cyrus an exceptionally coherent subject for cross-domain LOGOC corpus building — his events form a family, not a list.

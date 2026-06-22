@@ -1,0 +1,41 @@
+{
+  "cycle_id": "corpus_second_half",
+  "timestamp": 1781942462.7734895,
+  "total_events": 93,
+  "accepted_events": 69,
+  "pending_events": 24,
+  "class_histogram": {
+    "7": 17,
+    "8": 18,
+    "5": 4,
+    "42": 16,
+    "2": 12,
+    "9": 2
+  },
+  "band_histogram": {
+    "FORMAL_THOUGHT": 51,
+    "EXPERIENCE": 18
+  },
+  "mode_histogram": {
+    "SYMBOL": 33,
+    "INDEX": 34,
+    "ICON": 2
+  },
+  "vehicle_histogram": {
+    "Legisign": 55,
+    "Sinsign": 14
+  },
+  "object_histogram": {
+    "Symbol": 33,
+    "Index": 34,
+    "Icon": 2
+  },
+  "interpretant_histogram": {
+    "Dicent": 35,
+    "Argument": 34
+  },
+  "avg_firstness": 0.0840579710144927,
+  "avg_secondness": 0.43768115942029,
+  "avg_thirdness": 0.4782608695652175,
+  "avg_pps": 0.9159420289855074
+}

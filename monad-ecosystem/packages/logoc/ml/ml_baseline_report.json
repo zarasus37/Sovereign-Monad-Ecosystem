@@ -1,0 +1,291 @@
+{
+  "corpus_stats": {
+    "total_events": 190,
+    "accepted": 164,
+    "pending": 26,
+    "class_distribution": {
+      "2": 79,
+      "7": 32,
+      "5": 19,
+      "9": 10,
+      "42": 22,
+      "8": 2
+    },
+    "band_distribution": {
+      "EXPERIENCE": 108,
+      "FORMAL_THOUGHT": 56
+    }
+  },
+  "feature_importance": {
+    "single_occurrence": 0.003532468108460307,
+    "rule_based": 0.0396680124104023,
+    "similarity": 0.1334366351366043,
+    "causality": 0.15007174015045166,
+    "convention": 0.17780084908008575,
+    "possibility": 0.003640243085101247,
+    "fact": 0.0,
+    "reason": 0.05212244391441345
+  },
+  "cv_results": {
+    "naive_bayes": {
+      "mean_accuracy": 0.7327976190476191,
+      "std_accuracy": 0.028136823541442417,
+      "fold_accuracies": [
+        0.6857142857142857,
+        0.7428571428571429,
+        0.71875,
+        0.75,
+        0.7666666666666667
+      ]
+    },
+    "knn_k3": {
+      "mean_accuracy": 0.6432142857142857,
+      "std_accuracy": 0.08299557401525968,
+      "fold_accuracies": [
+        0.7142857142857143,
+        0.7142857142857143,
+        0.5,
+        0.6875,
+        0.6
+      ]
+    }
+  },
+  "pending_predictions": [
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev03",
+      "predicted_class": 42,
+      "confidence_margin": 0.8776136790279541,
+      "top_2_classes": [
+        42,
+        7
+      ]
+    },
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev06",
+      "predicted_class": 42,
+      "confidence_margin": 0.8776136790279541,
+      "top_2_classes": [
+        42,
+        7
+      ]
+    },
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev07",
+      "predicted_class": 42,
+      "confidence_margin": 0.4845710909183465,
+      "top_2_classes": [
+        42,
+        7
+      ]
+    },
+    {
+      "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev12",
+      "predicted_class": 42,
+      "confidence_margin": 0.8776136790279541,
+      "top_2_classes": [
+        42,
+        7
+      ]
+    },
+    {
+      "event_id": "gnosis_Alan Watts (1915\u00e2\u20ac\u201c1973)_ev1",
+      "predicted_class": 2,
+      "confidence_margin": 3.4414768321752387,
+      "top_2_classes": [
+        2,
+        5
+      ]
+    },
+    {
+      "event_id": "gnosis_Alan Watts (1915\u00e2\u20ac\u201c1973)_ev2",
+      "predicted_class": 2,
+      "confidence_margin": 3.4414768321752387,
+      "top_2_classes": [
+        2,
+        5
+      ]
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev11",
+      "predicted_class": 42,
+      "confidence_margin": 0.8776136790279541,
+      "top_2_classes": [
+        42,
+        7
+      ]
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev13",
+      "predicted_class": 7,
+      "confidence_margin": 2.5591583961487494,
+      "top_2_classes": [
+        7,
+        2
+      ]
+    },
+    {
+      "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev14",
+      "predicted_class": 2,
+      "confidence_margin": 3.135574242987529,
+      "top_2_classes": [
+        2,
+        7
+      ]
+    },
+    {
+      "event_id": "gnosis_CHARLES PEIRCE_ev1",
+      "predicted_class": 9,
+      "confidence_margin": 3.0687981950612606,
+      "top_2_classes": [
+        9,
+        8
+      ]
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev04",
+      "predicted_class": 2,
+      "confidence_margin": 3.831850746908544,
+      "top_2_classes": [
+        2,
+        5
+      ]
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev09",
+      "predicted_class": 2,
+      "confidence_margin": 2.7967332634268516,
+      "top_2_classes": [
+        2,
+        42
+      ]
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev15",
+      "predicted_class": 7,
+      "confidence_margin": 2.5591583961487494,
+      "top_2_classes": [
+        7,
+        2
+      ]
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev17",
+      "predicted_class": 7,
+      "confidence_margin": 2.268103639218329,
+      "top_2_classes": [
+        7,
+        2
+      ]
+    },
+    {
+      "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev06",
+      "predicted_class": 42,
+      "confidence_margin": 0.4845710909183465,
+      "top_2_classes": [
+        42,
+        7
+      ]
+    },
+    {
+      "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev08",
+      "predicted_class": 7,
+      "confidence_margin": 2.5591583961487494,
+      "top_2_classes": [
+        7,
+        2
+      ]
+    },
+    {
+      "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev11",
+      "predicted_class": 2,
+      "confidence_margin": 2.7967332634268516,
+      "top_2_classes": [
+        2,
+        42
+      ]
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev08",
+      "predicted_class": 9,
+      "confidence_margin": 0.6102362086514468,
+      "top_2_classes": [
+        9,
+        2
+      ]
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev12",
+      "predicted_class": 9,
+      "confidence_margin": 2.489319120688104,
+      "top_2_classes": [
+        9,
+        42
+      ]
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius_ev2",
+      "predicted_class": 2,
+      "confidence_margin": 3.4414768321752387,
+      "top_2_classes": [
+        2,
+        5
+      ]
+    },
+    {
+      "event_id": "gnosis_Marcus Aurelius_ev4",
+      "predicted_class": 2,
+      "confidence_margin": 3.0216229866149744,
+      "top_2_classes": [
+        2,
+        5
+      ]
+    },
+    {
+      "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev02",
+      "predicted_class": 2,
+      "confidence_margin": 2.7967332634268516,
+      "top_2_classes": [
+        2,
+        42
+      ]
+    },
+    {
+      "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev04",
+      "predicted_class": 42,
+      "confidence_margin": 0.4845710909183465,
+      "top_2_classes": [
+        42,
+        7
+      ]
+    },
+    {
+      "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev02",
+      "predicted_class": 2,
+      "confidence_margin": 3.135574242987529,
+      "top_2_classes": [
+        2,
+        7
+      ]
+    },
+    {
+      "event_id": "gnosis_Sun Tzu (Sun Wu, c. 544\u00e2\u20ac\u201c496 BCE) GN_ev05",
+      "predicted_class": 7,
+      "confidence_margin": 2.268103639218329,
+      "top_2_classes": [
+        7,
+        2
+      ]
+    },
+    {
+      "event_id": "gnosis_Zarathustra_ev3",
+      "predicted_class": 2,
+      "confidence_margin": 3.4414768321752387,
+      "top_2_classes": [
+        2,
+        5
+      ]
+    }
+  ],
+  "model_type": "naive_bayes_bernoulli",
+  "timestamp": "2026-06-20T00:00:00Z"
+}

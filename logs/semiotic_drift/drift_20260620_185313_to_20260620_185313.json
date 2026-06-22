@@ -1,0 +1,18 @@
+{
+  "cycle_id": "20260620_185313",
+  "previous_cycle_id": "20260620_185313",
+  "timestamp": 1781981593.7708678,
+  "datetime_utc": "2026-06-20T18:53:13.770867Z",
+  "kl_divergence": 20.911314,
+  "chi_squared": 1.0,
+  "max_class_delta": 0.2507,
+  "max_class_delta_id": 0,
+  "band_deltas": {
+    "INSTINCT": 0.0,
+    "EXPERIENCE": 0.0,
+    "FORMAL_THOUGHT": 0.0
+  },
+  "drift_patterns": [],
+  "drift_score": 0.6752,
+  "category": "SYSTEMATIC_DRIFT"
+}

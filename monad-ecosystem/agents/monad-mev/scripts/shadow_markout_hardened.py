@@ -200,7 +200,7 @@ class ShadowMarkoutAnalyzer:
         else:
             # RPC unavailable — use fallback (clearly flagged)
             trade.actual_pnl_t15 = trade.predicted_pnl * self.fallback_slippage_t15
-            logger.warning(f"[{trade.id}] T+15s RPC unavailable — using fallback multiplier")
+            logger.info(f"[{trade.id}] T+15s RPC unavailable — using fallback multiplier")
 
         if price_t60 is not None and trade.entry_price > 0:
             trade.price_t60 = price_t60
@@ -487,6 +487,9 @@ if __name__ == "__main__":
             print(f"  Slot {slot:03d}: {ret:.1f}%")
 
         from monad_price_fetcher import _close_http_client
-        await _close_http_client()
+        try:
+            await _close_http_client()
+        except Exception:
+            pass
 
     asyncio.run(main())

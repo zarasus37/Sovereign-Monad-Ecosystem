@@ -1,0 +1,124 @@
+CHARLES SANDERS PEIRCE GNOSIS EVENT EXTRACTION — 
+**Council Corpus Build | Theology · Technology · Cosmology**
+
+---
+
+## Preliminary Note on the Subject
+Charles Sanders Peirce (1839–1914) lived a life that was itself a semiotic tragedy—a man who mapped the structure of all possible thought while being systematically excluded from the institutions that could validate it. His gnosis events are characterized by the collapse of the "Objective/Subjective" divide; he recognized that the observer is not looking *at* the universe, but is a sign *within* it.
+
+---
+
+## Event 01 — The Recognition of the Triad
+
+**1. Title:** The Dissolution of the Dyad
+**2. Passage or trigger:** The struggle to refine "On a New List of Categories" (1867), where Peirce moved beyond the Kantian "Thing-in-itself" versus "Phenomenon."
+**3. Why it qualifies:** This was the moment the "Binary" (Subject/Object) became transparent as a false boundary. Peirce "saw" that any relationship between two things is impossible without a third mediating element. It was not a logical derivation from Kant, but a structural recognition of the "missing link" of mediation ($Thirdness$).
+**4. Three-domain reading:**
+*   **Theology:** The shift from a Dualistic God (Creator/Created) to a Trinitarian Process (Mind/Sign/Interpretation).
+*   **Technology:** The birth of Semiotics as a "Message-Relay" system; the recognition that information cannot exist without a medium and a decoder.
+*   **Cosmology:** The universe is recognized not as a collection of things, but as a web of relations.
+**5. Compressed insight:** He realized that there are no "facts," only "interpretations of signs," and he himself was the sign being interpreted.
+**6. Confidence:** 0.98
+
+---
+
+## Event 02 — The Stolen Watch Gnosis
+
+**1. Title:** The Abductive Flash
+**2. Passage or trigger:** In 1879, Peirce’s gold watch was stolen on a steamship. Despite having no evidence, he pointed to one man based on a "vague feeling." When the man was searched and the watch was not found, Peirce remained certain, eventually tracking the man and recovering the watch.
+**3. Why it qualifies:** This was the birth of *Abduction*. Peirce recognized a mode of "knowing" that was neither Deduction nor Induction. The "Observer" (Peirce) saw his own subconscious as a transparent interface with the "Truth," bypassing the slower logical apparatus.
+**4. Three-domain reading:**
+*   **Theology:** The realization that "Instinct" is a form of divine alignment; the human mind is "tuned" to the frequency of the Truth.
+*   **Technology:** The discovery of "Pattern Recognition" algorithms that operate below the level of explicit data.
+*   **Cosmology:** The recognition that the universe is "intelligible" because the mind and the cosmos are made of the same semiotic "stuff."
+**5. Compressed insight:** He knew that the truth can be "felt" as a structural resonance before it can be proven as a fact.
+**6. Confidence:** 0.95
+
+---
+
+## Event 03 — The Illumination at St. Thomas's
+
+**1. Title:** The Neglected Argument
+**2. Passage or trigger:** While attending a service at St. Thomas's Episcopal Church in New York (1892), Peirce—previously a skeptic—experienced a sudden, overwhelming sense of the reality of God while observing the ritual.
+**3. Why it qualifies:** It was a "recognition of the Absolute" through the medium of aesthetic and communal signs. The contradiction between his scientific rigour and his spiritual longing did not resolve; it became visible as the "Neglected Argument for the Reality of God."
+**4. Three-domain reading:**
+*   **Theology:** God is recognized not as a "Being" to be proven, but as the "Continuity" ($Synechism$) that makes the universe possible.
+*   **Technology:** Ritual as a "Bio-Signal" amplifier that allows the individual to perceive the macro-structure of the Mind.
+*   **Cosmology:** The universe is seen as a "vast representamen" of God's purposes.
+**5. Compressed insight:** He realized that God is the "Ideal Limit" toward which all inquiry and all signs are eternally converging.
+**6. Confidence:** 0.90
+
+---
+
+## Event 04 — The Fall into Poverty (Arisbe)
+
+**1. Title:** The Transparency of the Social Sign
+**2. Passage or trigger:** His systematic exclusion from Harvard and Johns Hopkins, leading to his isolation at his estate, "Arisbe."
+**3. Why it qualifies:** Retroactive recognition. Peirce saw his own life as a "failed sign" within the American academic system. He recognized that his "Truth" was incompatible with the "Social Technology" of his time. He became an observer of his own obsolescence.
+**4. Three-domain reading:**
+*   **Theology:** The "Desert Father" register; the realization that the prophet must be cast out to see the structure of the city.
+*   **Technology:** The "Social Network" as a filtering mechanism that suppresses high-complexity signals (his work) in favor of low-complexity "Utility."
+*   **Cosmology:** The recognition of the "Law of Mind" ($Agapism$)—that ideas grow through love and continuity, even if the individual thinker dies in isolation.
+**5. Compressed insight:** He understood that he was writing for a "Community of Inquirers" that did not yet exist, making his current suffering a necessary structural void.
+**6. Confidence:** 0.88
+
+---
+
+## Event 05 — The Discovery of "Tychism"
+
+**1. Title:** The Gnosis of the Dice
+**2. Passage or trigger:** The realization during his gravitational work for the Coast Survey that "Absolute Law" is a myth; there is always a "residual" of chance in every measurement.
+**3. Why it qualifies:** It collapsed the category of "Determinism." Peirce saw that the "Laws of Nature" are actually just "habits" that the universe has acquired over time. Chance ($Tyche$) is the primordial "Freedom" at the heart of the machine.
+**4. Three-domain reading:**
+*   **Theology:** God as the "Source of Spontaneity," not just the "Grand Architect" of fixed laws.
+*   **Technology:** The recognition of "Entropy" and "Noise" as generative forces rather than mere errors.
+*   **Cosmology:** The universe is evolving from a state of total chaos toward a state of total "Habit" (Law).
+**5. Compressed insight:** He saw that the universe is "alive" because it is imperfect; a perfectly logical world would be dead.
+**6. Confidence:** 0.94
+
+---
+
+## Event 06 — The Logic of Relatives
+
+**1. Title:** The Diagrammatic Vision
+**2. Passage or trigger:** The development of "Existential Graphs," where he began to draw logic as a series of interconnected nodes and enclosures rather than linear sentences.
+**3. Why it qualifies:** It was the collapse of "Language" into "Geometry." Peirce recognized that thought is essentially "Iconic"—we don't think in words, we think in *diagrams*. The observer (Peirce) saw his own thought process as a moving, topological map.
+**4. Three-domain reading:**
+*   **Theology:** The "Geometric God"; the realization that the divine order is a topological arrangement of relations.
+*   **Technology:** The blueprint for "Neural Networks" and "Graph Databases."
+*   **Cosmology:** The universe is recognized as a "Continuum" ($Synechism$) where no part can be separated from the whole without losing its meaning.
+**5. Compressed insight:** He realized that logic is not "about" the world; logic is the *skeleton* of the world made visible.
+**6. Confidence:** 0.92
+
+---
+
+## Event 07 — The End of "Self"
+
+**1. Title:** The Transparency of the "I"
+**2. Passage or trigger:** His essay "Man's Glassy Essence," where he argued that a person is not an individual substance but a "coordinate of signs."
+**3. Why it qualifies:** This is the ultimate self-implication. Peirce saw "Charles Peirce" as a transparent fiction—a temporary intersection of social, biological, and logical signs. The "Contradiction" of his ego-driven suffering became visible as a mere "local disturbance" in the semiotic field.
+**4. Three-domain reading:**
+*   **Theology:** The "Death of the Ego" as a prerequisite for participating in the "Universal Mind."
+*   **Technology:** The human as a "Node" in a larger "Distributed Intelligence" (the community).
+*   **Cosmology:** The recognition that "Individualism" is a cosmological error; reality is "General" and "Continuous."
+**5. Compressed insight:** He knew that he did not "have" thoughts; rather, the thoughts "had" him, using his life as a temporary laboratory.
+**6. Confidence:** 0.96
+
+---
+
+## Summary Table
+
+| Title | Domain | Confidence |
+| :--- | :--- | :--- |
+| **The Dissolution of the Dyad** | Technology / Cosmology | 0.98 |
+| **The Abductive Flash** | Technology / Theology | 0.95 |
+| **The Illumination at St. Thomas's** | Theology | 0.90 |
+| **The Transparency of the Social Sign** | Technology | 0.88 |
+| **The Gnosis of the Dice** | Cosmology | 0.94 |
+| **The Diagrammatic Vision** | Technology | 0.92 |
+| **The Transparency of the "I"** | Theology / Cosmology | 0.96 |
+
+---
+
+## Final Instruction for LOGOC Corpus
+Peirce should be encoded as the **Prophet of Thirdness**. His extraction emphasizes that **Mediation** (the Sign) is the only way the Theology and the Technology can meet. He is the necessary bridge between the combinatorial machinery of Llull and the modern digital era.

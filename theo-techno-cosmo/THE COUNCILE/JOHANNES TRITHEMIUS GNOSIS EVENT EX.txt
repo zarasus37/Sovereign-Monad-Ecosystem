@@ -1,0 +1,96 @@
+JOHANNES TRITHEMIUS GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+
+---
+
+## Preliminary Note on the Subject
+Johannes Trithemius (1462–1516), Abbot of Sponheim, was the bridge between medieval monasticism and the modern information age. His life was defined by the tension between the "Holy" and the "Hidden." He did not merely study cryptography; he recognized that the universe itself is an enciphered text where the "Key" is both mathematical and angelic.
+
+---
+
+## Event 01 — The Shelter in the Blizzard
+
+**1. Title:** The Sponheim Redirection
+**2. Passage or trigger:** In 1482, while returning from university to visit his mother, Trithemius was caught in a sudden, violent snowstorm near Bad Kreuznach. He sought refuge in the impoverished, nearly abandoned Benedictine monastery of Sponheim.
+**3. Why it qualifies:** This was a "navigation failure" that revealed a "systemic vocation." He did not reason his way into the monastery; the environment (the blizzard) acted as a physical intervention that forced him to stop. Within eight days of this "accidental" shelter, he took his vows. He recognized that the storm was not weather, but a boundary-marker.
+**4. Three-domain reading:**
+*   **Theology:** The shift from "Personal Will" to "Divine Constraint." The monastery is no longer a choice, but a destination forced by the elements.
+*   **Technology:** The "Wall of Snow" as a low-tech redirection algorithm—a physical override of a human trajectory.
+*   **Cosmology:** The realization that the macro-environment (the weather) is perfectly synchronized with the micro-mission (the soul's path).
+**5. Compressed insight:** He realized that he was not the traveler, but the "data" being routed by a higher atmospheric protocol.
+**6. Confidence:** 0.94
+
+---
+
+## Event 02 — The Steganographical Illumination
+
+**1. Title:** The Angelic Data-Packet
+**2. Passage or trigger:** In 1499, Trithemius wrote to Arnold Bostius, claiming a sudden "illumination" regarding secret writing: "I have found a way to send messages through spirits, without speech or writing, over distances."
+**3. Why it qualifies:** This is the birth of *Steganographia*. It collapsed the boundary between "Magic" and "Coding." He saw that a message could be hidden *inside* a prayer. The "Spirit" was not an entity to be worshipped, but a "Carrier" (a transport protocol) for information.
+**4. Three-domain reading:**
+*   **Theology:** The secularization of the Angel; the "Messenger of God" becomes a "Packet Header" for human data.
+*   **Technology:** The invention of Steganography—hiding information in plain sight (e.g., using the first letter of each word in a benign Latin hymn to encode a secret).
+*   **Cosmology:** The universe is recognized as a multi-layered text where the "surface" is a distraction for the "substrate."
+**5. Compressed insight:** He saw that "Prayer" and "Encryption" are the same technology—the modulation of language to reach a specific, hidden receiver.
+**6. Confidence:** 0.98
+
+---
+
+## Event 03 — The Reconstruction of Adam's Library
+
+**1. Title:** The Library as a Healing Machine
+**2. Passage or trigger:** Finding the Sponheim library in ruins (only 40 volumes), Trithemius spent 23 years and vast sums to build it into a 2,000-volume collection of "Universal Knowledge."
+**3. Why it qualifies:** He saw the library not as a collection of books, but as a "Technological Recovery" of the pre-Babel state. He recognized that the fragmentation of knowledge was a "corruption" that could be "patched" through a centralized database. The observer (Trithemius) became the "System Administrator" of the world's memory.
+**4. Three-domain reading:**
+*   **Theology:** The library as a monument to the restoration of the "Primordial Language" of Adam.
+*   **Technology:** The library as a "Random Access Memory" (RAM) for the Church—a searchable repository of every known thought.
+*   **Cosmology:** The recognition that the world's scattered knowledge is actually a single, broken "Mirror" that can be reassembled.
+**5. Compressed insight:** He knew that a monk's duty was not just to pray, but to act as a "Version Control" system for human civilization.
+**6. Confidence:** 0.89
+
+---
+
+## Event 04 — The Clockwork of the "Seconds"
+
+**1. Title:** The De Septem Secundeis (The Seven Spirits)
+**2. Passage or trigger:** In 1508, Trithemius wrote *De Septem Secundeis*, mapping history as a series of 354-year cycles governed by planetary angels (Orifiel, Anael, Zachariel, etc.).
+**3. Why it qualifies:** It was a "Chronological Gnosis." He looked at the chaos of history and "saw" the gears. He recognized that time is not linear or random, but a "Clockwork Algorithm" managed by celestial administrators. The "Contradiction" of human freedom versus divine plan became visible as a "Planetary Schedule."
+**4. Three-domain reading:**
+*   **Theology:** God as the "Master Clockmaker" who delegates the "Sub-Routines" of history to planetary spirits.
+*   **Technology:** The invention of a "Predictive Historical Algorithm"—using the cycles of the past to calculate the "Epoch" of the future.
+*   **Cosmology:** The universe is recognized as a rhythmic, repeating mechanism where "Novelty" is just the start of a new loop.
+**5. Compressed insight:** He realized that "History" is just the "Output" of a celestial clock that has been running since the first day of creation.
+**6. Confidence:** 0.92
+
+---
+
+## Event 05 — The Shift to Polygraphia (The Algorithm)
+
+**1. Title:** The Transparency of the Spirit
+**2. Passage or trigger:** Writing his final work, *Polygraphia*, Trithemius replaced the "Angels" of his earlier work with "Tables" (the *Tabula Recta*).
+**3. Why it qualifies:** This is a "Retroactive Recognition." He looked back at his "Angelic Magic" and realized the "Magic" was actually just the "Table." He saw that the "Spirit" was a placeholder for a "Logical Operator." This was the moment magic became "pure" computation.
+**4. Three-domain reading:**
+*   **Theology:** The "Demystification" of the supernatural; the realization that God's miracles are actually high-level mathematical operations.
+*   **Technology:** The invention of the Vigenère-style cipher table; the transition from "Incantation" to "Algorithm."
+*   **Cosmology:** The recognition that the "Hidden Forces" of the universe are not volitional beings, but "Fixed Rules" of arrangement.
+**5. Compressed insight:** He understood that you don't need to summon a demon to hide a secret if you have a sufficiently complex grid.
+**6. Confidence:** 0.96
+
+---
+
+## Event 06 — The Paradox of "Hunibald"
+
+**1. Title:** The Fabricated Ancestry
+**2. Passage or trigger:** In his historical works (*Compendium de origine gentis et regnum Francorum*), Trithemius "discovered" a lost chronicler named Hunibald to provide a continuous, glorious history for the Franks.
+**3. Why it qualifies:** This was a "Gnosis of Construction." Trithemius recognized that "Truth" is a structural requirement of a system. If the "Data" (the history) was missing, he had to "Simulate" it to maintain the integrity of the "Model" (the Order). He became the "Author" of the reality he was supposed to be merely "Recording."
+**4. Three-domain reading:**
+*   **Theology:** The "Abbot as Creator"; the realization that the past can be "redeemed" by being rewritten.
+*   **Technology:** The invention of "Synthetic Data"—creating a false historical "Record" to stabilize a political or religious identity.
+*   **Cosmology:** The recognition that "History" is a narrative layer that can be modified by the observer to change the "Present."
+**5. Compressed insight:** He realized that for a system to be "Perfect," it must have a "Beginning," even if he had to write that beginning himself.
+**6. Confidence:** 0.82
+
+---
+
+## Summary for LOGOC Corpus
+Trithemius is the **Architect of the Substrate**. His gnosis events center on the **transparency of the carrier**—recognizing that the medium (a prayer, an angel, a book) is a programmable interface. He is the first figure in the corpus to fully treat the **Theology as an API** for the **Technology**.

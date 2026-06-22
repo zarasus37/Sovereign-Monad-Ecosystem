@@ -1,0 +1,992 @@
+[
+  {
+    "id": 0,
+    "label": "Rhematic-Iconic-Qualisign",
+    "path": [
+      "Qualisign",
+      "Icon",
+      "Rheme"
+    ],
+    "firstness_weight": 1.0,
+    "secondness_weight": 0.0,
+    "thirdness_weight": 0.0,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 0.0
+  },
+  {
+    "id": 1,
+    "label": "Rhematic-Indexical-Sinsign",
+    "path": [
+      "Sinsign",
+      "Index",
+      "Rheme"
+    ],
+    "firstness_weight": 0.5,
+    "secondness_weight": 0.5,
+    "thirdness_weight": 0.0,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 60.0
+  },
+  {
+    "id": 2,
+    "label": "Dicent-Indexical-Sinsign",
+    "path": [
+      "Sinsign",
+      "Index",
+      "Dicent"
+    ],
+    "firstness_weight": 0.0,
+    "secondness_weight": 1.0,
+    "thirdness_weight": 0.0,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 120.0
+  },
+  {
+    "id": 3,
+    "label": "Rhematic-Iconic-Legisign",
+    "path": [
+      "Legisign",
+      "Icon",
+      "Rheme"
+    ],
+    "firstness_weight": 0.8,
+    "secondness_weight": 0.1,
+    "thirdness_weight": 0.1,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 30.0
+  },
+  {
+    "id": 4,
+    "label": "Rhematic-Indexical-Legisign",
+    "path": [
+      "Legisign",
+      "Index",
+      "Rheme"
+    ],
+    "firstness_weight": 0.4,
+    "secondness_weight": 0.5,
+    "thirdness_weight": 0.1,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 90.0
+  },
+  {
+    "id": 5,
+    "label": "Dicent-Indexical-Legisign",
+    "path": [
+      "Legisign",
+      "Index",
+      "Dicent"
+    ],
+    "firstness_weight": 0.1,
+    "secondness_weight": 0.6,
+    "thirdness_weight": 0.3,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 150.0
+  },
+  {
+    "id": 6,
+    "label": "Rhematic-Symbol-Legisign",
+    "path": [
+      "Legisign",
+      "Symbol",
+      "Rheme"
+    ],
+    "firstness_weight": 0.3,
+    "secondness_weight": 0.2,
+    "thirdness_weight": 0.5,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 180.0
+  },
+  {
+    "id": 7,
+    "label": "Dicent-Symbol-Legisign",
+    "path": [
+      "Legisign",
+      "Symbol",
+      "Dicent"
+    ],
+    "firstness_weight": 0.1,
+    "secondness_weight": 0.4,
+    "thirdness_weight": 0.5,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 210.0
+  },
+  {
+    "id": 8,
+    "label": "Delome-Symbol-Legisign",
+    "path": [
+      "Legisign",
+      "Index",
+      "Argument"
+    ],
+    "firstness_weight": 0.05,
+    "secondness_weight": 0.1,
+    "thirdness_weight": 0.85,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 270.0
+  },
+  {
+    "id": 9,
+    "label": "Dicent-Iconic-Sinsign",
+    "path": [
+      "Sinsign",
+      "Icon",
+      "Dicent"
+    ],
+    "firstness_weight": 0.2,
+    "secondness_weight": 0.8,
+    "thirdness_weight": 0.0,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 130.0
+  },
+  {
+    "id": 10,
+    "label": "PeirceClass-10",
+    "path": [
+      "Vehicle-10",
+      "Object-10",
+      "Interpretant-10"
+    ],
+    "firstness_weight": 0.846,
+    "secondness_weight": 0.077,
+    "thirdness_weight": 0.077,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 54.5
+  },
+  {
+    "id": 11,
+    "label": "PeirceClass-11",
+    "path": [
+      "Vehicle-11",
+      "Object-11",
+      "Interpretant-11"
+    ],
+    "firstness_weight": 0.831,
+    "secondness_weight": 0.085,
+    "thirdness_weight": 0.084,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 60.0
+  },
+  {
+    "id": 12,
+    "label": "PeirceClass-12",
+    "path": [
+      "Vehicle-12",
+      "Object-12",
+      "Interpretant-12"
+    ],
+    "firstness_weight": 0.815,
+    "secondness_weight": 0.092,
+    "thirdness_weight": 0.093,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 65.5
+  },
+  {
+    "id": 13,
+    "label": "PeirceClass-13",
+    "path": [
+      "Vehicle-13",
+      "Object-13",
+      "Interpretant-13"
+    ],
+    "firstness_weight": 0.8,
+    "secondness_weight": 0.1,
+    "thirdness_weight": 0.1,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 70.9
+  },
+  {
+    "id": 14,
+    "label": "PeirceClass-14",
+    "path": [
+      "Vehicle-14",
+      "Object-14",
+      "Interpretant-14"
+    ],
+    "firstness_weight": 0.785,
+    "secondness_weight": 0.108,
+    "thirdness_weight": 0.107,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 76.4
+  },
+  {
+    "id": 15,
+    "label": "PeirceClass-15",
+    "path": [
+      "Vehicle-15",
+      "Object-15",
+      "Interpretant-15"
+    ],
+    "firstness_weight": 0.769,
+    "secondness_weight": 0.115,
+    "thirdness_weight": 0.116,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 81.8
+  },
+  {
+    "id": 16,
+    "label": "PeirceClass-16",
+    "path": [
+      "Vehicle-16",
+      "Object-16",
+      "Interpretant-16"
+    ],
+    "firstness_weight": 0.754,
+    "secondness_weight": 0.123,
+    "thirdness_weight": 0.123,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 87.3
+  },
+  {
+    "id": 17,
+    "label": "PeirceClass-17",
+    "path": [
+      "Vehicle-17",
+      "Object-17",
+      "Interpretant-17"
+    ],
+    "firstness_weight": 0.738,
+    "secondness_weight": 0.131,
+    "thirdness_weight": 0.131,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 92.7
+  },
+  {
+    "id": 18,
+    "label": "PeirceClass-18",
+    "path": [
+      "Vehicle-18",
+      "Object-18",
+      "Interpretant-18"
+    ],
+    "firstness_weight": 0.723,
+    "secondness_weight": 0.138,
+    "thirdness_weight": 0.139,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 98.2
+  },
+  {
+    "id": 19,
+    "label": "PeirceClass-19",
+    "path": [
+      "Vehicle-19",
+      "Object-19",
+      "Interpretant-19"
+    ],
+    "firstness_weight": 0.708,
+    "secondness_weight": 0.146,
+    "thirdness_weight": 0.146,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 103.6
+  },
+  {
+    "id": 20,
+    "label": "PeirceClass-20",
+    "path": [
+      "Vehicle-20",
+      "Object-20",
+      "Interpretant-20"
+    ],
+    "firstness_weight": 0.692,
+    "secondness_weight": 0.154,
+    "thirdness_weight": 0.154,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 109.1
+  },
+  {
+    "id": 21,
+    "label": "PeirceClass-21",
+    "path": [
+      "Vehicle-21",
+      "Object-21",
+      "Interpretant-21"
+    ],
+    "firstness_weight": 0.677,
+    "secondness_weight": 0.162,
+    "thirdness_weight": 0.161,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 114.5
+  },
+  {
+    "id": 22,
+    "label": "PeirceClass-22",
+    "path": [
+      "Vehicle-22",
+      "Object-22",
+      "Interpretant-22"
+    ],
+    "firstness_weight": 0.662,
+    "secondness_weight": 0.169,
+    "thirdness_weight": 0.169,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 120.0
+  },
+  {
+    "id": 23,
+    "label": "PeirceClass-23",
+    "path": [
+      "Vehicle-23",
+      "Object-23",
+      "Interpretant-23"
+    ],
+    "firstness_weight": 0.646,
+    "secondness_weight": 0.177,
+    "thirdness_weight": 0.177,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 125.5
+  },
+  {
+    "id": 24,
+    "label": "PeirceClass-24",
+    "path": [
+      "Vehicle-24",
+      "Object-24",
+      "Interpretant-24"
+    ],
+    "firstness_weight": 0.631,
+    "secondness_weight": 0.185,
+    "thirdness_weight": 0.184,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 130.9
+  },
+  {
+    "id": 25,
+    "label": "PeirceClass-25",
+    "path": [
+      "Vehicle-25",
+      "Object-25",
+      "Interpretant-25"
+    ],
+    "firstness_weight": 0.615,
+    "secondness_weight": 0.192,
+    "thirdness_weight": 0.193,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 136.4
+  },
+  {
+    "id": 26,
+    "label": "PeirceClass-26",
+    "path": [
+      "Vehicle-26",
+      "Object-26",
+      "Interpretant-26"
+    ],
+    "firstness_weight": 0.6,
+    "secondness_weight": 0.2,
+    "thirdness_weight": 0.2,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 141.8
+  },
+  {
+    "id": 27,
+    "label": "PeirceClass-27",
+    "path": [
+      "Vehicle-27",
+      "Object-27",
+      "Interpretant-27"
+    ],
+    "firstness_weight": 0.585,
+    "secondness_weight": 0.208,
+    "thirdness_weight": 0.207,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 147.3
+  },
+  {
+    "id": 28,
+    "label": "PeirceClass-28",
+    "path": [
+      "Vehicle-28",
+      "Object-28",
+      "Interpretant-28"
+    ],
+    "firstness_weight": 0.569,
+    "secondness_weight": 0.215,
+    "thirdness_weight": 0.216,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 152.7
+  },
+  {
+    "id": 29,
+    "label": "PeirceClass-29",
+    "path": [
+      "Vehicle-29",
+      "Object-29",
+      "Interpretant-29"
+    ],
+    "firstness_weight": 0.554,
+    "secondness_weight": 0.223,
+    "thirdness_weight": 0.223,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 158.2
+  },
+  {
+    "id": 30,
+    "label": "PeirceClass-30",
+    "path": [
+      "Vehicle-30",
+      "Object-30",
+      "Interpretant-30"
+    ],
+    "firstness_weight": 0.538,
+    "secondness_weight": 0.231,
+    "thirdness_weight": 0.231,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 163.6
+  },
+  {
+    "id": 31,
+    "label": "PeirceClass-31",
+    "path": [
+      "Vehicle-31",
+      "Object-31",
+      "Interpretant-31"
+    ],
+    "firstness_weight": 0.523,
+    "secondness_weight": 0.238,
+    "thirdness_weight": 0.239,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 169.1
+  },
+  {
+    "id": 32,
+    "label": "PeirceClass-32",
+    "path": [
+      "Vehicle-32",
+      "Object-32",
+      "Interpretant-32"
+    ],
+    "firstness_weight": 0.508,
+    "secondness_weight": 0.246,
+    "thirdness_weight": 0.246,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 174.5
+  },
+  {
+    "id": 33,
+    "label": "PeirceClass-33",
+    "path": [
+      "Vehicle-33",
+      "Object-33",
+      "Interpretant-33"
+    ],
+    "firstness_weight": 0.492,
+    "secondness_weight": 0.254,
+    "thirdness_weight": 0.254,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 180.0
+  },
+  {
+    "id": 34,
+    "label": "PeirceClass-34",
+    "path": [
+      "Vehicle-34",
+      "Object-34",
+      "Interpretant-34"
+    ],
+    "firstness_weight": 0.477,
+    "secondness_weight": 0.262,
+    "thirdness_weight": 0.261,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 185.5
+  },
+  {
+    "id": 35,
+    "label": "PeirceClass-35",
+    "path": [
+      "Vehicle-35",
+      "Object-35",
+      "Interpretant-35"
+    ],
+    "firstness_weight": 0.462,
+    "secondness_weight": 0.269,
+    "thirdness_weight": 0.269,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 190.9
+  },
+  {
+    "id": 36,
+    "label": "PeirceClass-36",
+    "path": [
+      "Vehicle-36",
+      "Object-36",
+      "Interpretant-36"
+    ],
+    "firstness_weight": 0.446,
+    "secondness_weight": 0.277,
+    "thirdness_weight": 0.277,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 196.4
+  },
+  {
+    "id": 37,
+    "label": "PeirceClass-37",
+    "path": [
+      "Vehicle-37",
+      "Object-37",
+      "Interpretant-37"
+    ],
+    "firstness_weight": 0.431,
+    "secondness_weight": 0.285,
+    "thirdness_weight": 0.284,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 201.8
+  },
+  {
+    "id": 38,
+    "label": "PeirceClass-38",
+    "path": [
+      "Vehicle-38",
+      "Object-38",
+      "Interpretant-38"
+    ],
+    "firstness_weight": 0.415,
+    "secondness_weight": 0.292,
+    "thirdness_weight": 0.293,
+    "pragmatism_band": "INSTINCT",
+    "ring_radius": 1,
+    "ring_angle_deg": 207.3
+  },
+  {
+    "id": 39,
+    "label": "PeirceClass-39",
+    "path": [
+      "Vehicle-39",
+      "Object-39",
+      "Interpretant-39"
+    ],
+    "firstness_weight": 0.4,
+    "secondness_weight": 0.3,
+    "thirdness_weight": 0.3,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 212.7
+  },
+  {
+    "id": 40,
+    "label": "PeirceClass-40",
+    "path": [
+      "Vehicle-40",
+      "Object-40",
+      "Interpretant-40"
+    ],
+    "firstness_weight": 0.385,
+    "secondness_weight": 0.308,
+    "thirdness_weight": 0.307,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 218.2
+  },
+  {
+    "id": 41,
+    "label": "PeirceClass-41",
+    "path": [
+      "Vehicle-41",
+      "Object-41",
+      "Interpretant-41"
+    ],
+    "firstness_weight": 0.369,
+    "secondness_weight": 0.315,
+    "thirdness_weight": 0.316,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 223.6
+  },
+  {
+    "id": 42,
+    "label": "Legisign-Symbol-Argument",
+    "path": [
+      "Legisign",
+      "Symbol",
+      "Argument"
+    ],
+    "firstness_weight": 0.15,
+    "secondness_weight": 0.35,
+    "thirdness_weight": 0.5,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 240.0
+  },
+  {
+    "id": 43,
+    "label": "PeirceClass-43",
+    "path": [
+      "Vehicle-43",
+      "Object-43",
+      "Interpretant-43"
+    ],
+    "firstness_weight": 0.338,
+    "secondness_weight": 0.331,
+    "thirdness_weight": 0.331,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 234.5
+  },
+  {
+    "id": 44,
+    "label": "PeirceClass-44",
+    "path": [
+      "Vehicle-44",
+      "Object-44",
+      "Interpretant-44"
+    ],
+    "firstness_weight": 0.323,
+    "secondness_weight": 0.338,
+    "thirdness_weight": 0.339,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 240.0
+  },
+  {
+    "id": 45,
+    "label": "PeirceClass-45",
+    "path": [
+      "Vehicle-45",
+      "Object-45",
+      "Interpretant-45"
+    ],
+    "firstness_weight": 0.308,
+    "secondness_weight": 0.346,
+    "thirdness_weight": 0.346,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 245.5
+  },
+  {
+    "id": 46,
+    "label": "PeirceClass-46",
+    "path": [
+      "Vehicle-46",
+      "Object-46",
+      "Interpretant-46"
+    ],
+    "firstness_weight": 0.292,
+    "secondness_weight": 0.354,
+    "thirdness_weight": 0.354,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 250.9
+  },
+  {
+    "id": 47,
+    "label": "PeirceClass-47",
+    "path": [
+      "Vehicle-47",
+      "Object-47",
+      "Interpretant-47"
+    ],
+    "firstness_weight": 0.277,
+    "secondness_weight": 0.362,
+    "thirdness_weight": 0.361,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 256.4
+  },
+  {
+    "id": 48,
+    "label": "PeirceClass-48",
+    "path": [
+      "Vehicle-48",
+      "Object-48",
+      "Interpretant-48"
+    ],
+    "firstness_weight": 0.262,
+    "secondness_weight": 0.369,
+    "thirdness_weight": 0.369,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 261.8
+  },
+  {
+    "id": 49,
+    "label": "PeirceClass-49",
+    "path": [
+      "Vehicle-49",
+      "Object-49",
+      "Interpretant-49"
+    ],
+    "firstness_weight": 0.246,
+    "secondness_weight": 0.377,
+    "thirdness_weight": 0.377,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 267.3
+  },
+  {
+    "id": 50,
+    "label": "PeirceClass-50",
+    "path": [
+      "Vehicle-50",
+      "Object-50",
+      "Interpretant-50"
+    ],
+    "firstness_weight": 0.231,
+    "secondness_weight": 0.385,
+    "thirdness_weight": 0.384,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 272.7
+  },
+  {
+    "id": 51,
+    "label": "PeirceClass-51",
+    "path": [
+      "Vehicle-51",
+      "Object-51",
+      "Interpretant-51"
+    ],
+    "firstness_weight": 0.215,
+    "secondness_weight": 0.392,
+    "thirdness_weight": 0.393,
+    "pragmatism_band": "EXPERIENCE",
+    "ring_radius": 2,
+    "ring_angle_deg": 278.2
+  },
+  {
+    "id": 52,
+    "label": "PeirceClass-52",
+    "path": [
+      "Vehicle-52",
+      "Object-52",
+      "Interpretant-52"
+    ],
+    "firstness_weight": 0.2,
+    "secondness_weight": 0.4,
+    "thirdness_weight": 0.4,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 283.6
+  },
+  {
+    "id": 53,
+    "label": "PeirceClass-53",
+    "path": [
+      "Vehicle-53",
+      "Object-53",
+      "Interpretant-53"
+    ],
+    "firstness_weight": 0.185,
+    "secondness_weight": 0.408,
+    "thirdness_weight": 0.407,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 289.1
+  },
+  {
+    "id": 54,
+    "label": "PeirceClass-54",
+    "path": [
+      "Vehicle-54",
+      "Object-54",
+      "Interpretant-54"
+    ],
+    "firstness_weight": 0.169,
+    "secondness_weight": 0.415,
+    "thirdness_weight": 0.416,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 294.5
+  },
+  {
+    "id": 55,
+    "label": "PeirceClass-55",
+    "path": [
+      "Vehicle-55",
+      "Object-55",
+      "Interpretant-55"
+    ],
+    "firstness_weight": 0.154,
+    "secondness_weight": 0.423,
+    "thirdness_weight": 0.423,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 300.0
+  },
+  {
+    "id": 56,
+    "label": "PeirceClass-56",
+    "path": [
+      "Vehicle-56",
+      "Object-56",
+      "Interpretant-56"
+    ],
+    "firstness_weight": 0.138,
+    "secondness_weight": 0.431,
+    "thirdness_weight": 0.431,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 305.5
+  },
+  {
+    "id": 57,
+    "label": "PeirceClass-57",
+    "path": [
+      "Vehicle-57",
+      "Object-57",
+      "Interpretant-57"
+    ],
+    "firstness_weight": 0.123,
+    "secondness_weight": 0.438,
+    "thirdness_weight": 0.439,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 310.9
+  },
+  {
+    "id": 58,
+    "label": "PeirceClass-58",
+    "path": [
+      "Vehicle-58",
+      "Object-58",
+      "Interpretant-58"
+    ],
+    "firstness_weight": 0.108,
+    "secondness_weight": 0.446,
+    "thirdness_weight": 0.446,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 316.4
+  },
+  {
+    "id": 59,
+    "label": "PeirceClass-59",
+    "path": [
+      "Vehicle-59",
+      "Object-59",
+      "Interpretant-59"
+    ],
+    "firstness_weight": 0.092,
+    "secondness_weight": 0.454,
+    "thirdness_weight": 0.454,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 321.8
+  },
+  {
+    "id": 60,
+    "label": "PeirceClass-60",
+    "path": [
+      "Vehicle-60",
+      "Object-60",
+      "Interpretant-60"
+    ],
+    "firstness_weight": 0.077,
+    "secondness_weight": 0.462,
+    "thirdness_weight": 0.461,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 327.3
+  },
+  {
+    "id": 61,
+    "label": "PeirceClass-61",
+    "path": [
+      "Vehicle-61",
+      "Object-61",
+      "Interpretant-61"
+    ],
+    "firstness_weight": 0.062,
+    "secondness_weight": 0.469,
+    "thirdness_weight": 0.469,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 332.7
+  },
+  {
+    "id": 62,
+    "label": "PeirceClass-62",
+    "path": [
+      "Vehicle-62",
+      "Object-62",
+      "Interpretant-62"
+    ],
+    "firstness_weight": 0.046,
+    "secondness_weight": 0.477,
+    "thirdness_weight": 0.477,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 338.2
+  },
+  {
+    "id": 63,
+    "label": "PeirceClass-63",
+    "path": [
+      "Vehicle-63",
+      "Object-63",
+      "Interpretant-63"
+    ],
+    "firstness_weight": 0.031,
+    "secondness_weight": 0.485,
+    "thirdness_weight": 0.484,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 343.6
+  },
+  {
+    "id": 64,
+    "label": "PeirceClass-64",
+    "path": [
+      "Vehicle-64",
+      "Object-64",
+      "Interpretant-64"
+    ],
+    "firstness_weight": 0.015,
+    "secondness_weight": 0.492,
+    "thirdness_weight": 0.493,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 349.1
+  },
+  {
+    "id": 65,
+    "label": "PeirceClass-65",
+    "path": [
+      "Vehicle-65",
+      "Object-65",
+      "Interpretant-65"
+    ],
+    "firstness_weight": 0.0,
+    "secondness_weight": 0.5,
+    "thirdness_weight": 0.5,
+    "pragmatism_band": "FORMAL_THOUGHT",
+    "ring_radius": 3,
+    "ring_angle_deg": 354.5
+  }
+]

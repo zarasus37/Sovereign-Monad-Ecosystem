@@ -1,0 +1,228 @@
+# logoc/spec/peirce_rules.yml
+# Single source of truth for Peirce classification rubric.
+# Consumed by both Python and TypeScript classifier implementations.
+
+version: "1.1.0"
+
+# ------------------------------------------------------------------
+# Feature Space Contract
+# The classifier may ONLY inspect the following fields.
+# Any additional fields injected into a LogocEvent must be ignored.
+# ------------------------------------------------------------------
+feature_space:
+  - narrative
+  - semiotic_flags.single_occurrence
+  - semiotic_flags.rule_based
+  - semiotic_flags.similarity
+  - semiotic_flags.causality
+  - semiotic_flags.convention
+  - semiotic_flags.possibility
+  - semiotic_flags.fact
+  - semiotic_flags.reason
+
+# ------------------------------------------------------------------
+# Ambiguity Policy
+# When no single rubric branch dominates (i.e. no condition matches),
+# the event is marked peirce_migration_pending.
+# ------------------------------------------------------------------
+ambiguity_policy:
+  action: "mark_migration_pending"
+  migration_source: "heuristic_v1_pending"
+  description: >
+    If the classifier cannot resolve a unique branch for any triad
+    (vehicle, object-relation, or interpretant), the event is left
+    unclassified. A downstream pipeline or human operator may later
+    re-evaluate the event with enriched features or updated heuristics.
+
+# ------------------------------------------------------------------
+# Disambiguation Policy
+# When multiple flags are set within the SAME triad (e.g., possibility
+# AND fact AND reason), the classifier uses narrative strong indicators
+# to break ties. If no strong indicators match, it falls back to the
+# default priority order defined in each triad section.
+# ------------------------------------------------------------------
+disambiguation:
+  strategy: "narrative_strong_indicators_then_priority"
+  description: >
+    For each triad, if multiple feature_flags are set, count strong
+    indicator keyword matches in the narrative. The option with the
+    highest match count wins. If tie persists, use the triad's default
+    priority order (lower number = higher priority).
+
+# ------------------------------------------------------------------
+# Triadic Classification Rubric
+# Each decision is independent: vehicle -> object-relation -> interpretant.
+# ------------------------------------------------------------------
+root:
+  question: "What is the ontological status of the sign vehicle?"
+  default_priority: ["LEGISIGN", "SINSIGN", "QUALISIGN"]
+  options:
+    QUALISIGN:
+      description: "A quality without token or rule; pure feeling or description."
+      priority: 1
+      conditions:
+        - type: heuristic
+          field: "narrative"
+          keywords: ["quality", "pure", "feel", "sensation", "description"]
+      strong_indicators:
+        - "pure feeling"
+        - "sensation of"
+        - "immediate quality"
+        - "redness"
+        - "color"
+        - "sound"
+    SINSIGN:
+      description: "A single actual token or occurrence."
+      priority: 2
+      conditions:
+        - type: feature_flag
+          field: "semiotic_flags.single_occurrence"
+          value: true
+        - type: heuristic
+          field: "narrative"
+          keywords: ["single", "token", "this", "event", "occurrence", "instance"]
+      strong_indicators:
+        - "this single"
+        - "this event"
+        - "single occurrence"
+        - "token of"
+        - "actual instance"
+    LEGISIGN:
+      description: "A general type, law, or convention."
+      priority: 3
+      conditions:
+        - type: feature_flag
+          field: "semiotic_flags.rule_based"
+          value: true
+        - type: heuristic
+          field: "narrative"
+          keywords: ["rule", "law", "convention", "type", "general", "universal"]
+      strong_indicators:
+        - "general rule"
+        - "universal law"
+        - "convention dictates"
+        - "type of"
+
+icon_index_symbol:
+  question: "What is the relation to the dynamic object?"
+  default_priority: ["SYMBOL", "INDEX", "ICON"]
+  options:
+    ICON:
+      description: "Resemblance, likeness, or diagrammatic relation."
+      priority: 1
+      conditions:
+        - type: feature_flag
+          field: "semiotic_flags.similarity"
+          value: true
+        - type: heuristic
+          field: "narrative"
+          keywords: ["icon", "image", "resemble", "diagram", "likeness", "like", "mirror"]
+      strong_indicators:
+        - "resembles"
+        - "image of"
+        - "diagrammatic"
+        - "likeness"
+        - "mirror of"
+        - "parallel to"
+    INDEX:
+      description: "Causal, pointer, or symptomatic relation."
+      priority: 2
+      conditions:
+        - type: feature_flag
+          field: "semiotic_flags.causality"
+          value: true
+        - type: heuristic
+          field: "narrative"
+          keywords: ["index", "causal", "pointer", "symptom", "trace", "caused", "because", "led to"]
+      strong_indicators:
+        - "caused by"
+        - "causal link"
+        - "pointer to"
+        - "symptom of"
+        - "trace of"
+        - "because of"
+        - "led to"
+    SYMBOL:
+      description: "Arbitrary, conventional, or language-based relation."
+      priority: 3
+      conditions:
+        - type: feature_flag
+          field: "semiotic_flags.convention"
+          value: true
+        - type: heuristic
+          field: "narrative"
+          keywords: ["symbol", "word", "language", "arbitrary", "convention", "name", "called"]
+      strong_indicators:
+        - "symbol of"
+        - "word for"
+        - "language of"
+        - "conventionally called"
+        - "arbitrary sign"
+
+rheme_dicent_argument:
+  question: "What is the interpretant's mode of apprehension?"
+  default_priority: ["ARGUMENT", "DICENT", "RHEME"]
+  options:
+    RHEME:
+      description: "Possibility, may, might, or potential."
+      priority: 1
+      conditions:
+        - type: feature_flag
+          field: "semiotic_flags.possibility"
+          value: true
+        - type: heuristic
+          field: "narrative"
+          keywords: ["possibility", "may", "might", "could", "potential", "perhaps", "maybe"]
+      strong_indicators:
+        - "pure possibility"
+        - "may be"
+        - "might be"
+        - "could potentially"
+        - "what if"
+        - "imagine"
+        - "conceivable"
+      # Rheme is the weakest interpretant; when multiple flags are set
+      # without strong indicators, Rheme loses to Dicent and Argument.
+      disambiguation_weight: 0.5
+    DICENT:
+      description: "Fact, assertion, or true/false proposition."
+      priority: 2
+      conditions:
+        - type: feature_flag
+          field: "semiotic_flags.fact"
+          value: true
+        - type: heuristic
+          field: "narrative"
+          keywords: ["fact", "assertion", "true", "false", "state", "is", "was", "actually"]
+      strong_indicators:
+        - "the fact that"
+        - "it is true that"
+        - "state of affairs"
+        - "actually is"
+        - "assertion that"
+        - "proposition that"
+      disambiguation_weight: 1.0
+    ARGUMENT:
+      description: "Proof, conclusion, or reasoned inference."
+      priority: 3
+      conditions:
+        - type: feature_flag
+          field: "semiotic_flags.reason"
+          value: true
+        - type: heuristic
+          field: "narrative"
+          keywords: ["argument", "proof", "conclude", "therefore", "theorem", "reason", "inference", "conclusion"]
+      strong_indicators:
+        - "therefore"
+        - "it follows that"
+        - "conclusion is"
+        - "proof that"
+        - "reasoned inference"
+        - "theorem"
+        - "deduction"
+        - "consequently"
+        - "as a result"
+        - "this means that"
+      # Argument is the dominant interpretant for gnosis events.
+      # When multiple flags are set, strong Argument indicators override.
+      disambiguation_weight: 1.5

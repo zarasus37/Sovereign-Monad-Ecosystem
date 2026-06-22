@@ -1,0 +1,1615 @@
+[
+  {
+    "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev02",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev04",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 8,
+    "new_rubric_class": 1,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.996
+  },
+  {
+    "event_id": "gnosis_Akhenaten (Amenhotep IV, c. 1353\u00e2\u20ac\u201c13_ev11",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.962,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev05",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "convention": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": null,
+    "new_rubric_class": 1,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.94,
+    "new_ml_conf": 0.998
+  },
+  {
+    "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev10",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "convention": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": null,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.94,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev12",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Baruch Spinoza (1632\u00e2\u20ac\u201c1677) GNOSIS E_ev15",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "convention": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": null,
+    "new_rubric_class": 1,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.958,
+    "new_ml_conf": 0.653
+  },
+  {
+    "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev01",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": false,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 8,
+    "new_rubric_class": 8,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.981
+  },
+  {
+    "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev02",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "new_flags": {
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 5,
+    "old_ml_class": 2,
+    "new_ml_class": 5,
+    "old_ml_conf": 0.883,
+    "new_ml_conf": 0.942
+  },
+  {
+    "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev05",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.883,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev06",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev07",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 8,
+    "new_rubric_class": 8,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.433
+  },
+  {
+    "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev08",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev10",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.962,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev11",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.883,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Cyrus the Great (c. 600\u00e2\u20ac\u201c530 BCE) GN_ev12",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.883,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev02",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.883,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev06",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.883,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev07",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev08",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 8,
+    "new_rubric_class": 8,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.433
+  },
+  {
+    "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev10",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 1,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.998,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev11",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 5,
+    "old_ml_class": 2,
+    "new_ml_class": 5,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.942
+  },
+  {
+    "event_id": "gnosis_Friedrich Nietzsche (1844\u00e2\u20ac\u201c1900) GNO_ev18",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev11",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 1,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.998,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev12",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "convention": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": null,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.94,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Giordano Bruno (1548\u00e2\u20ac\u201c1600) GNOSIS E_ev13",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 1,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.998,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev02",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev03",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev05",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 8,
+    "new_rubric_class": 1,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.996
+  },
+  {
+    "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev07",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.883,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev09",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": false,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 1,
+    "new_rubric_class": 1,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.996,
+    "new_ml_conf": 0.996
+  },
+  {
+    "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev12",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "convention": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "convention": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 42,
+    "new_rubric_class": 9,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.533,
+    "new_ml_conf": 0.967
+  },
+  {
+    "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev13",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "convention": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 42,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.533,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Jiang Xueqin (1976\u00e2\u20ac\u201c)_ev3",
+    "actual_class": 9,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "similarity": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "similarity": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 3,
+    "new_rubric_class": 9,
+    "old_ml_class": 9,
+    "new_ml_class": 9,
+    "old_ml_conf": 0.925,
+    "new_ml_conf": 0.998
+  },
+  {
+    "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev03",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 8,
+    "new_rubric_class": 1,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.998
+  },
+  {
+    "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev04",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.962,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev09",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 1,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.998,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev10",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 1,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.998,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_King Solomon (c. 990\u00e2\u20ac\u201c931 BCE) GNOSI_ev12",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "convention": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": null,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.94,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev02",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev03",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 1,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.998,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev04",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 1,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.998,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev09",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev10",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Marcus Aurelius Antoninus Augustus_ev14",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 8,
+    "new_rubric_class": 1,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.996
+  },
+  {
+    "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev06",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "convention": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": null,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.94,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Napoleon Bonaparte (1769\u00e2\u20ac\u201c1821) GNOS_ev16",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 5,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.962,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev01",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 8,
+    "new_rubric_class": 1,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.996
+  },
+  {
+    "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev05",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.977,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev08",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 5,
+    "old_ml_class": 2,
+    "new_ml_class": 5,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.942
+  },
+  {
+    "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev15",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 8,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.981,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "gnosis_Niccol\u00c3\u00b2 Machiavelli (1469\u00e2\u20ac\u201c1527) GNO_ev16",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "convention": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "convention": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 42,
+    "new_rubric_class": 9,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.533,
+    "new_ml_conf": 0.967
+  },
+  {
+    "event_id": "gnosis_Sun Tzu (Sun Wu, c. 544\u00e2\u20ac\u201c496 BCE) GN_ev04",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "convention": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": null,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.958,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_The Gnostic Jesus_ev2",
+    "actual_class": 2,
+    "old_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": false,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 1,
+    "new_rubric_class": 1,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.998,
+    "new_ml_conf": 0.998
+  },
+  {
+    "event_id": "gnosis_The Gnostic Jesus_ev4",
+    "actual_class": 2,
+    "old_flags": {
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": null,
+    "new_rubric_class": 2,
+    "old_ml_class": 2,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.891,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "phase3_c1_peirce_musement_single",
+    "actual_class": 1,
+    "old_flags": {
+      "single_occurrence": true,
+      "similarity": true,
+      "possibility": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 9,
+    "new_rubric_class": 2,
+    "old_ml_class": 1,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.808,
+    "new_ml_conf": 0.973
+  },
+  {
+    "event_id": "phase3_c1_akhenaten_single_ray",
+    "actual_class": 1,
+    "old_flags": {
+      "single_occurrence": true,
+      "similarity": true,
+      "possibility": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 9,
+    "new_rubric_class": 2,
+    "old_ml_class": 1,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.808,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "phase3_c1_bruno_single_vision",
+    "actual_class": 1,
+    "old_flags": {
+      "single_occurrence": true,
+      "similarity": true,
+      "possibility": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "similarity": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 9,
+    "new_rubric_class": 9,
+    "old_ml_class": 1,
+    "new_ml_class": 9,
+    "old_ml_conf": 0.808,
+    "new_ml_conf": 0.998
+  },
+  {
+    "event_id": "phase3_c1_watts_single_moment",
+    "actual_class": 1,
+    "old_flags": {
+      "single_occurrence": true,
+      "similarity": true,
+      "possibility": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 9,
+    "new_rubric_class": 2,
+    "old_ml_class": 1,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.808,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "phase3_c1_spinoza_single_feeling",
+    "actual_class": 1,
+    "old_flags": {
+      "single_occurrence": true,
+      "similarity": true,
+      "possibility": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "rule_based": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": 9,
+    "new_rubric_class": 5,
+    "old_ml_class": 1,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.808,
+    "new_ml_conf": 0.883
+  },
+  {
+    "event_id": "phase3_c1_marcus_single_drop",
+    "actual_class": 1,
+    "old_flags": {
+      "single_occurrence": true,
+      "similarity": true,
+      "possibility": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "fact": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "auto_accept",
+    "old_rubric_class": 9,
+    "new_rubric_class": 2,
+    "old_ml_class": 1,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.808,
+    "new_ml_conf": 0.948
+  },
+  {
+    "event_id": "gnosis_Aristotle_04",
+    "actual_class": 0,
+    "old_flags": {
+      "causality": true,
+      "possibility": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "causality": true,
+      "possibility": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": null,
+    "new_rubric_class": 1,
+    "old_ml_class": 0,
+    "new_ml_class": 1,
+    "old_ml_conf": 0.936,
+    "new_ml_conf": 0.453
+  },
+  {
+    "event_id": "gnosis_Irenaeus of Lyon_05",
+    "actual_class": 0,
+    "old_flags": {
+      "similarity": true,
+      "causality": true,
+      "convention": true,
+      "possibility": true,
+      "reason": true
+    },
+    "new_flags": {
+      "single_occurrence": true,
+      "similarity": true,
+      "causality": true,
+      "possibility": true,
+      "fact": true,
+      "reason": true
+    },
+    "flags_changed": true,
+    "old_triage_status": "human_review",
+    "new_triage_status": "human_review",
+    "old_rubric_class": null,
+    "new_rubric_class": 1,
+    "old_ml_class": 0,
+    "new_ml_class": 2,
+    "old_ml_conf": 0.914,
+    "new_ml_conf": 0.942
+  }
+]

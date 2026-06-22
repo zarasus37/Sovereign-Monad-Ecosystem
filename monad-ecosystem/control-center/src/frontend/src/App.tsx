@@ -6,6 +6,8 @@ import DeploymentPage from "@/pages/DeploymentPage";
 import GovernancePage from "@/pages/GovernancePage";
 import HepaPage from "@/pages/HepaPage";
 import IntegrityPage from "@/pages/IntegrityPage";
+import LogocPage from "@/pages/LogocPage";
+import LogocReviewPage from "@/pages/LogocReviewPage";
 import NetworkPage from "@/pages/NetworkPage";
 import OrganSystemPage from "@/pages/OrganSystemPage";
 import OverviewPage from "@/pages/OverviewPage";
@@ -63,6 +65,16 @@ const routes = [
     getParentRoute: () => rootRoute,
     path: "/cardia",
     component: CardiaPage,
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/logoc",
+    component: LogocPage,
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/logoc-review",
+    component: LogocReviewPage,
   }),
   createRoute({
     getParentRoute: () => rootRoute,

@@ -1,0 +1,18 @@
+{
+  "name": "@sovereign/logoc",
+  "version": "1.0.0",
+  "description": "LOGOC (Logico-Ontological Gnostic Operations Corpus) TS implementation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

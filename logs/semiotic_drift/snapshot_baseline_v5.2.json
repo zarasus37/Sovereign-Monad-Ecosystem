@@ -1,0 +1,59 @@
+{
+  "cycle_id": "baseline_v5.2",
+  "timestamp": 1781958088.73456,
+  "total_events": 328,
+  "accepted_events": 328,
+  "pending_events": 0,
+  "class_histogram": {
+    "0": 84,
+    "1": 29,
+    "2": 79,
+    "3": 16,
+    "4": 15,
+    "5": 19,
+    "6": 12,
+    "7": 32,
+    "8": 2,
+    "9": 18,
+    "42": 22
+  },
+  "band_histogram": {
+    "EXPERIENCE": 131,
+    "FORMAL_THOUGHT": 68,
+    "INSTINCT": 129
+  },
+  "mode_histogram": {
+    "ICON": 28,
+    "INDEX": 106,
+    "Icon": 96,
+    "Index": 32,
+    "SYMBOL": 60,
+    "Symbol": 6
+  },
+  "vehicle_histogram": {
+    "LEGISIGN": 18,
+    "Legisign": 100,
+    "QUALISIGN": 6,
+    "Qualisign": 78,
+    "SINSIGN": 6,
+    "Sinsign": 120
+  },
+  "object_histogram": {
+    "ICON": 18,
+    "INDEX": 6,
+    "Icon": 106,
+    "Index": 132,
+    "SYMBOL": 6,
+    "Symbol": 60
+  },
+  "interpretant_histogram": {
+    "Argument": 24,
+    "Dicent": 148,
+    "RHEME": 30,
+    "Rheme": 126
+  },
+  "avg_firstness": 0.4018,
+  "avg_secondness": 0.4601,
+  "avg_thirdness": 0.1381,
+  "avg_pps": 0.5982
+}

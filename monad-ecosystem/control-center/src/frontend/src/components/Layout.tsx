@@ -22,6 +22,8 @@ const NAV_LAYERS = [
   { layer: 13, label: "Cost & Infrastructure", route: "/cost" },
   { layer: 14, label: "Ecosystem Governance", route: "/governance" },
   { layer: 15, label: "System State & Observability", route: "/system-state" },
+  { layer: 16, label: "LOGOC Corpus Explorer", route: "/logoc" },
+  { layer: 17, label: "LOGOC Human Review", route: "/logoc-review" },
 ] as const;
 
 function Sidebar() {
@@ -104,7 +106,7 @@ function Sidebar() {
           </span>
         </div>
         <div className="font-mono text-[9px] text-muted-foreground/30 tracking-wider">
-          15-LAYER ECOSYSTEM OS
+          17-LAYER ECOSYSTEM OS
         </div>
       </div>
     </aside>

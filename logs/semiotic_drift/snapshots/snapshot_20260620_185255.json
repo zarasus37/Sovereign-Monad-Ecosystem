@@ -1,0 +1,60 @@
+{
+  "cycle_id": "20260620_185255",
+  "timestamp": 1781981575.0258472,
+  "datetime_utc": "2026-06-20T18:52:55.025847Z",
+  "total_events": 335,
+  "accepted_events": 335,
+  "pending_events": 0,
+  "class_histogram": {
+    "2": 79,
+    "7": 32,
+    "5": 19,
+    "9": 21,
+    "0": 84,
+    "1": 29,
+    "3": 16,
+    "4": 15,
+    "6": 12,
+    "42": 22,
+    "8": 6
+  },
+  "band_histogram": {
+    "EXPERIENCE": 134,
+    "FORMAL_THOUGHT": 72,
+    "INSTINCT": 129
+  },
+  "mode_histogram": {
+    "INDEX": 106,
+    "SYMBOL": 60,
+    "ICON": 28,
+    "Icon": 99,
+    "Index": 36,
+    "Symbol": 6
+  },
+  "vehicle_histogram": {
+    "Sinsign": 123,
+    "Legisign": 104,
+    "QUALISIGN": 6,
+    "SINSIGN": 6,
+    "LEGISIGN": 18,
+    "Qualisign": 78
+  },
+  "object_histogram": {
+    "Index": 136,
+    "Symbol": 60,
+    "Icon": 109,
+    "ICON": 18,
+    "INDEX": 6,
+    "SYMBOL": 6
+  },
+  "interpretant_histogram": {
+    "Dicent": 151,
+    "RHEME": 30,
+    "Rheme": 126,
+    "Argument": 28
+  },
+  "avg_firstness": 0.3958,
+  "avg_secondness": 0.4588,
+  "avg_thirdness": 0.1454,
+  "avg_pps": 0.6042
+}

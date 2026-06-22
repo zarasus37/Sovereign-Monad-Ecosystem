@@ -1,9 +1,9 @@
-# SOVEREIGN MONAD ECOSYSTEM — MASTER OPERATING FILE v2.4.0
+# SOVEREIGN MONAD ECOSYSTEM — MASTER OPERATING FILE v2.5.0
 
 > This is the single canonical source of truth for the Sovereign Monad Ecosystem.
 > All participants — human or AI — synchronize to this file.
 > Do not act on subordinate documents if they conflict with this file.
-> Last updated 6/12/2026
+> Last updated 6/19/2026
 ---
 
 # SECTION 1 — WHAT THIS FILE IS
@@ -1984,6 +1984,41 @@ Every update should include: date, version, changed section(s), exact new status
 ---
 
 # SECTION 19 — CHANGE LOG
+
+## v2.5.0 — June 19, 2026
+
+**Change Type:** Major — Peirce 66-Class Semiotic Manifold Integration
+
+**Summary:**
+
+- **LOGOC schema upgraded v5.1 → v5.2:** `peirce` block mandatory for new events; `schema_version` const-gated; Draft 2020-12 JSON Schema with full `semiotic_flags` coverage (8 flags) and `peirce_migration_pending` / `peirce_migration_source` fields for backward-compat migration
+- **PeirceManifold (Python + TS):** 66-class canonical table loaded from `spec/peirce_sign_classes.json` (single source of truth); distance metric composite (ring radius + angular arc + path Hamming); `neighbors()`, `in_band()`, `lookup_by_path()`, `get()`, `has_path()`; singleton access via `get_manifold()` / `getManifold()`
+- **PeirceClassifier v1.1 (rubric-heuristic with manifold-aware disambiguation):** triad-by-triad deterministic rubric driven by `spec/peirce_rules.yml` (feature-space contract + ambiguity policy + disambiguation weights + strong narrative indicators); `classify_path()` with manifold validation (`has_path()`); `annotate()` pipeline hook; `AmbiguousClassificationError` with `peirce_migration_pending` flag and `heuristic_v1_pending` source
+- **Peirce ML Classifier v2.0 (Phase 2 complete):** `peirce/ml_classifier.py` — `LogisticRegressionClassifier` (softmax + L2 + class weighting), `NaiveBayesClassifier` (Bernoulli), `EnsembleClassifier` (bootstrap decision stumps), `MLPeirceClassifier` (ensemble wrapper with confidence thresholding); `scripts/train_ml_classifier.py` production pipeline; 5-fold stratified CV: Naive Bayes 73.3% ± 2.8%, Logistic Regression 56.3% ± 8.0%; ambiguity reduced from 13.7% (rubric alone) to 4.2% (rubric + ML ensemble); 95.8% classification coverage on 190-event corpus; model persistence to JSON; `tests/test_ml_classifier.py` 11 tests
+- **Phase 3 — Corpus Expansion for All 11 Real Classes:** 30 synthetic events generated for 5 missing classes (0, 1, 3, 4, 6) using existing gnosis narratives reframed as possibilities/feelings (fact=false, reason=false); `scripts/phase3_corpus_expansion.py` generation script; all synthetic events tagged with `phase3_synthetic` source for auditability; corpus expanded from 190 → 220 events (190 natural + 30 synthetic); ML v3 retrained: Naive Bayes 79.4% ± 0.8%, Logistic Regression 64.5% ± 6.2%; ambiguity further reduced from 4.2% → 1.8%; coverage increased from 95.8% → 98.2%; all 11 real Peirce classes now represented (previously 6)
+- **TTCL Sign<M,T> upgraded with PeirceSignature:** `RequireFormalThought`, `RequireStrongSecondness`, `RequireArgument` type-gating utility types; `prove()` / `emitObservation()` / `distill()` compile-time gated signatures demonstrating semiotic constraints as type-level invariants
+- **Analytics Layer (Corpus Explorer):** `control-center/src/frontend/src/pages/LogocPage.tsx` — recharts-based corpus explorer with band/class distribution charts, PPS scatter plot, triad heatmap, filters, and event inspector; route `/logoc` in `App.tsx`; navigation in `Layout.tsx` layer 16; `logoc-api.ts` type-safe client
+- **Antikythera Observability (Semiotic Drift):** `peirce/semiotic_drift.py` — KL divergence + chi-squared drift metrics across cycles; 5 drift pattern detectors (ICON_SURGE, FORMAL_THOUGHT_DECLINE, INDEX_ATROPHY, FIRSTNESS_SURGE, THIRDNESS_COLLAPSE); `logs/corpus/semiotic_drift_report.json` sample output
+- **Quality gates:** 62+ Python tests (pytest) passing + 18 TypeScript tests (vitest) passing; manifold integrity, classifier golden-file accuracy, distribution metrics, migration v5.1→v5.2 round-trip, schema validation invariants, semiotic drift detection, ML classifier feature extraction / fit / predict / proba / serialization / end-to-end training, JSON schema field coverage
+
+**Axiom alignment:**
+
+- **Axiom 6 (Demiurge/Constraints):** semiotic type constraints now enforced at compile-time in TTCL via `RequireFormalThought` / `RequireStrongSecondness` / `RequireArgument` gates
+- **Axiom 8 (Gnosis):** classifier makes pattern recognition structurally addressable — every narrative resolves to a precise position in Peirce-space, not an ad-hoc tag; ML learns from rubric-classified events to reduce ambiguity while maintaining structural addressability
+- **Axiom 11 (Constraint Validation):** ambiguity policy prevents silent misclassification; ML confidence thresholding prevents low-confidence predictions from being accepted as false positives
+- **Axiom 12 (Resonant Convergence):** Peirce 66-class manifold independently mirrors the geometry already established by PPS + 144-grid; Borges' signtree topology maps to the same compression/decompression structure without inheritance or imitation; 11-class training distribution now mirrors the complete manifold topology, not just the natural gnosis bias toward DICENT/ARGUMENT interpretants; synthetic INSTINCT-band events (0, 1, 3) bring pure feeling/quality into the classification space
+
+**State after update:**
+
+- Active master phase remains **Phase 1a**
+- Peirce classifier stack: rubric v1.1 (deterministic) + ML v3.0 (probabilistic fallback) + human review triage (1.8% residual ambiguity)
+- **Corpus backfill complete:** 21 sovereign-bus signals backfilled to v5.2 LOGOC events; 6 migrated (28.6%, all EXPERIENCE band), 15 flagged `peirce_migration_pending` (71.4%); golden sample of 5 reviewed — 4 accepted into corpus, 1 flagged for human review
+- **Gnosis corpus (rubric + ML v3):** 220 unique events from 20 files (190 natural + 30 synthetic); 194 classified by rubric (88.2% success rate), 26 pending; ML v3 predicts 22 of 26 pending with high confidence (≥0.55); 4 events remain ambiguous for human review (1.8% of corpus); all 11 real Peirce classes now represented
+- **Analytics layer:** Corpus Explorer UI live at `/logoc` route with static JSON data; backend API integration needed for live updates
+- **Antikythera observability:** Semiotic drift detection implemented with 5 pattern detectors; manual trigger only — scheduler integration pending
+- No new blockers introduced; all tests (62+ Python + 18 TS) pass without regression
+- All artifacts live under `monad-ecosystem/packages/ttcl` and `monad-ecosystem/packages/logoc`; backfill outputs live under `logs/corpus/`
+- **Next priority:** Phase 4 — Class 5 data quality fix (natural events have noisy flag combinations) + Class 8 expansion (only 2 examples); cleaner feature vectors for under-performing classes
 
 ## v2.0.0 — March 27, 2026
 

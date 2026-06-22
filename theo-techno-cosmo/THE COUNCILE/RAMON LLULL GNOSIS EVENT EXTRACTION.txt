@@ -1,0 +1,156 @@
+RAMON LLULL GNOSIS EVENT EXTRACTION — RAMON LLULL
+**Council Corpus Build | Theology · Technology · Cosmology**
+
+---
+
+## Preliminary Note on the Subject
+Ramon Llull (1232–1316) represents the ultimate "Gnostic Engineer." His life was a series of ruptures where the courtly, secular world of Majorca was systematically dismantled and replaced by a combinatorial machine intended to "prove" the divine. Unlike a mere logician, Llull did not deduce his system; he "saw" it as a topological arrangement of God's attributes.
+
+---
+
+## Event 01 — The Interruption of the Canticle
+
+**1. Title:** The Fivefold Vision of the Crucified Christ
+**2. Passage or trigger:** In his autobiography, the *Vita Coetanea*, Llull describes sitting on his bed, composing a "vile song" (a courtly love poem) to a lady. Suddenly, he saw "the Lord God Jesus Christ on the Cross." This happened five times. 
+**3. Why it qualifies:** This was the inaugural collapse of the "Courtly Love" category. The object of desire (the lady) was instantly replaced by the Object of Sacrifice (the Christ). It was not a logical realization of sin, but a visual interruption of a creative act that made his current life position transparent as a "vile" performance.
+**4. Three-domain reading:**
+*   **Theology:** The shift from God as a distant figure of dogma to God as an immediate, visual, and interrupting Presence.
+*   **Technology:** The "Vision" acts as a primitive override mechanism—a spiritual signal that jams the frequency of secular poetic production.
+*   **Cosmology:** The realization that the vertical axis (The Crucifixion) intersects the horizontal axis (Human Desire) at every point in space-time.
+**5. Compressed insight:** He recognized that the language of love he had mastered was merely a rehearsal for a Beloved who required his total annihilation.
+**6. Confidence:** 0.95
+
+---
+
+## Event 02 — The Illumination on Mount Randa
+
+**1. Title:** The Vision of the Paper Circles
+**2. Passage or trigger:** After eight years of study and solitude on Mount Randa, Llull was "suddenly illuminated" by God. He saw "the form and method of making a book against the errors of the infidels." 
+**3. Why it qualifies:** This is the birth of the *Ars Magna*. It was the moment logic became a *machine*. He did not reason his way to the alphabet of the Art ($A, B, C...$); he saw the attributes of God (Power, Wisdom, Love, etc.) as moving, combinatorial parts of a cosmic engine.
+**4. Three-domain reading:**
+*   **Theology:** The *Dignitates* (Divine Attributes) are no longer just adjectives; they are active, generative principles that calculate reality.
+*   **Technology:** The invention of the "Volvelle"—concentric, rotating paper wheels. This is the first analog computer for logical operations.
+*   **Cosmology:** The universe is recognized as a computation performed by the Divine Mind, where every being is a result of a specific combination of God's "Letters."
+**5. Compressed insight:** He saw that the mind of God is an algorithm, and the human mind can participate in that algorithm through combinatorial geometry.
+**6. Confidence:** 1.00
+
+---
+
+## Event 03 — The Death of the Arabic Teacher
+
+**1. Title:** The Paradox of the Saracen Slave
+**2. Passage or trigger:** Llull bought a Moorish slave to teach him Arabic. After nine years, the slave, hearing Llull blaspheme Muhammad, attacked him with a knife. Llull overpowered him, imprisoned him, and while Llull was deciding whether to kill or free him, the slave committed suicide.
+**3. Why it qualifies:** This event collapsed the boundary between "Teaching" and "Warfare." Llull recognized his own implication in a structure of violence: he needed the "Other" (the Arabic language) to convert the "Other," but the process created a feedback loop of mutual destruction.
+**4. Three-domain reading:**
+*   **Theology:** The realization that the "Word" (missionary work) is inseparable from the "Sword" (coercion), complicating the ideal of pure rational conversion.
+*   **Technology:** The failure of the "Language Interface"—the realization that data transfer (teaching) can be corrupted by the emotional state of the medium.
+*   **Cosmology:** Recognition of the "Antagonist" as a necessary but unstable element in the universal conversion system.
+**5. Compressed insight:** He realized that he could own a man's body and his language, but the "Art" could not bridge the chasm of a soul that preferred death to conversion.
+**6. Confidence:** 0.88
+
+---
+
+## Event 04 — The Crisis of Genoa
+
+**1. Title:** The Sickness of the Cowardly Body
+**2. Passage or trigger:** In 1291, ready to depart for his first mission to Tunis, Llull was seized by such a profound fear of being killed or imprisoned that he abandoned the ship. He immediately fell into a death-like illness, which only lifted when he forced himself onto another ship.
+**3. Why it qualifies:** The observer (Llull) saw his own body as a "biological protest" against his Art. The contradiction between his logical "Art of Martyrdom" and his animal "Will to Survive" became a physical pathology.
+**4. Three-domain reading:**
+*   **Theology:** A register shift where "Fear of God" is replaced by "Fear of Man," revealing the fragility of intellectual faith.
+*   **Technology:** The "Body" as a hardware constraint that can crash the "Mission Software."
+*   **Cosmology:** The recognition that the micro-cosmos (the body) must be in forced alignment with the macro-cosmos (the Art) for the system to function.
+**5. Compressed insight:** He understood that the Art was useless unless the hardware (the flesh) was willing to be destroyed to prove the logic.
+**6. Confidence:** 0.92
+
+---
+
+## Event 05 — The Recognition of the Great Chain
+
+**1. Title:** The Arbor Scientiae (Tree of Science)
+**2. Passage or trigger:** While walking in a forest near Paris, Llull looked at the trees and saw them not as biological entities, but as the structural metaphor for the hierarchy of all knowledge.
+**3. Why it qualifies:** It collapsed the boundary between "Nature" and "Logic." The "Tree" became a transparent diagram of the Great Chain of Being, showing how the same $Dignitates$ (attributes) flow from the roots (elements) to the branches (angels and God).
+**4. Three-domain reading:**
+*   **Theology:** The realization that theology is not a separate branch, but the "sap" that flows through all sciences (Physics, Law, Medicine).
+*   **Technology:** The "Tree" as a data structure—a hierarchical taxonomy that organizes the entire universe into a searchable, relational database.
+*   **Cosmology:** The organic unity of the universe; the microcosm of the leaf contains the logic of the macrocosm of the stars.
+**5. Compressed insight:** He saw that there is only one "Science," and all disciplines are merely different "heights" on the same vertical trunk.
+**6. Confidence:** 0.85
+
+---
+
+## Event 06 — The Forest of the Three Religions
+
+**1. Title:** The Recognition of the Shared Trees
+**2. Passage or trigger:** In his book *The Gentile and the Three Wise Men*, Llull depicts a Jew, a Christian, and a Muslim using the same "Trees of the Art" to explain their faiths to a pagan.
+**3. Why it qualifies:** This is a meta-recognition. Llull saw that the *structure* of reality is more fundamental than the *content* of revelation. He recognized that all monotheisms are essentially using the same computational "OS" (the Divine Attributes), even if their "Apps" (dogmas) differ.
+**4. Three-domain reading:**
+*   **Theology:** The shift toward a "Universal Monotheism" based on common logical properties rather than scriptural authority.
+*   **Technology:** The "Art" as a Universal Translator or a common API that allows different theological systems to interoperate.
+*   **Cosmology:** The universe is structured by a single set of "Rules of Play" that are accessible to all rational beings regardless of their culture.
+**5. Compressed insight:** He recognized that the "Infidel" is not an enemy of God, but a user of the same system who has made a combinatorial error.
+**6. Confidence:** 0.90
+
+---
+
+## Event 07 — The Language of the "Amic" (Friend)
+
+**1. Title:** The Dissolution of the Lover and the Beloved
+**2. Passage or trigger:** In the *Book of the Lover and the Beloved*, Llull writes: "The Lover and the Beloved met, and the Beloved said to the Lover: 'You need not speak; a nod is enough for me to know your heart.'"
+**3. Why it qualifies:** This represents the collapse of the "Self/Other" boundary in the mystical register. After years of building a massive logical machine to reach God, Llull recognizes a "Gnosis of Silence" where the complexity of the Art vanishes into a single, transparent glance.
+**4. Three-domain reading:**
+*   **Theology:** The transition from *Kataphatic* theology (knowing God through attributes) to *Apophatic* theology (knowing God through union).
+*   **Technology:** The "Signal-to-Noise" ratio reaches infinity; the communication channel is so pure that data transfer (speech) is redundant.
+*   **Cosmology:** The realization that the ultimate structure of the universe is not "Logic," but "Love" (the union of the two).
+**5. Compressed insight:** He realized that the billion combinations of his Art were merely the scaffolding for a house he was already standing in.
+**6. Confidence:** 0.80
+
+---
+
+## Event 08 — The Failure at the University of Paris
+
+**1. Title:** The Recognition of the "Art's" Incommunicability
+**2. Passage or trigger:** Llull spent years trying to get his Art approved by the scholastic masters at the Sorbonne. Despite his logic being "irrefutable" in his own mind, they viewed it as a bizarre, circular eccentricity.
+**3. Why it qualifies:** Retroactive recognition. He saw his own "Art" from the outside—as a structure that was too perfect to be accepted by a world built on Aristotelian linear syllogisms. The "Observer" (Llull) became visible as a "Fool" (*Phantasticus*) within the institution he tried to save.
+**4. Three-domain reading:**
+*   **Theology:** The conflict between "Institutional Theology" (authority) and "Gnostic Theology" (illumination).
+*   **Technology:** The "Interface Failure"—the realization that a superior technology (the Art) cannot be adopted if the "User Environment" (the University) is built on incompatible legacy code.
+*   **Cosmology:** The recognition that the world is not yet "ready" for the cosmic computation.
+**5. Compressed insight:** He understood that being right is a different category from being understood, and that his Art belonged to a future that hadn't arrived.
+**6. Confidence:** 0.89
+
+---
+
+## Event 09 — The Transformation of the "Alphabet"
+
+**1. Title:** The Collapse of Letter and Essence
+**2. Passage or trigger:** The moment in the *Ars Brevis* where Llull formalizes that $B$ = Goodness, $C$ = Greatness, etc. 
+**3. Why it qualifies:** This is the collapse of the "Signifier/Signified" boundary. For Llull, the letter $B$ does not just *represent* goodness; it *activates* it within the logical wheel. The alphabet becomes a set of "Logical Atoms."
+**4. Three-domain reading:**
+*   **Theology:** The "Letters" are the digital DNA of the Divine Mind.
+*   **Technology:** Symbolic Logic. This is the moment "Reasoning" is divorced from "Natural Language" and becomes "Code."
+*   **Cosmology:** The universe is recognized as being composed of a finite set of principles that, through infinite combination, create the appearance of infinite variety.
+**5. Compressed insight:** He saw that the complexity of the world is just a high-level language compiled from a nine-letter alphabet.
+**6. Confidence:** 0.94
+
+---
+
+## Event 10 — The Final Stone at Bougie
+
+**1. Title:** The Logic of the Final Breath
+**2. Passage or trigger:** In 1315, at the age of 83, Llull went to North Africa (Bougie) to preach openly, knowing he would be stoned. 
+**3. Why it qualifies:** This was the final self-implication. The "Art" required a "Proof." The proof was not another book, but the physical destruction of the "Artist." He saw his own death as the final rotation of the wheel—the moment the Lover and the Beloved finally become one.
+**4. Three-domain reading:**
+*   **Theology:** The ultimate shift from "Theology as Theory" to "Theology as Flesh-Witness."
+*   **Technology:** The "Destructive Test"—the point where a system is pushed to its breaking point to verify its integrity.
+*   **Cosmology:** The recognition that the "End" of a life is the only way to exit the combinatorial loop of the material world.
+**5. Compressed insight:** He knew that for his Art to be "General" and "Universal," it had to include the terminal point of his own heartbeat.
+**6. Confidence:** 0.91
+
+---
+
+## Summary of Extraction
+The LOGOC corpus should treat Llull not as a philosopher, but as a **topological observer**. His gnosis events are consistently marked by the **spatialization of thought**—turning abstract ideas into wheels, trees, and maps. 
+
+*   **Total Events:** 10
+*   **Primary Domain:** Technology (Logic as Machine)
+*   **Key Category Collapse:** Symbolic Logic / Divine Essence

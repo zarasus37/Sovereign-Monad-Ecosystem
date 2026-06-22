@@ -2,7 +2,7 @@ import requests
 
 BASE = "https://sovereign-rge-api.sovereign-mev.workers.dev"
 PAYLOAD = {"spreadBps": 80, "vol": 0.00694, "portfolioUsd": 500000, "bridgeWindowSec": 900}
-VALID_KEY = "sk-sovereign-63bf83724a3ed42bb3ee2951c9423509"
+VALID_KEY = "YOUR_API_KEY_HERE"
 
 tests = [
     ("no key (no header)",         {}),

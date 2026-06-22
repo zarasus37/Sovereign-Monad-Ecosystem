@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from "url";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import environment from "vite-plugin-environment";
+import { logocApiPlugin } from "./vite-plugin-logoc-api.js";
 
 const ii_url =
   process.env.DFX_NETWORK === "local"
@@ -53,6 +54,7 @@ export default defineConfig({
     environment(["STORAGE_GATEWAY_URL"]),
     environment(["VITE_GNOSTIC_API_URL"]),
     react(),
+    logocApiPlugin(), // Live LOGOC corpus API — reads from master_corpus_v5.2.jsonl
   ],
   resolve: {
     alias: [

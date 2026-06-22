@@ -1,0 +1,416 @@
+King Solomon (c. 990–931 BCE) GNOSIS EVENT EXTRACTION
+### Corpus: 1 Kings 1–11, 2 Chronicles 1–9, Proverbs (attributed), Ecclesiastes (Qohelet, attributed), Song of Songs (attributed), rabbinic traditions, archaeological evidence from Jerusalem
+
+---
+
+## Methodological Frame
+
+Solomon presents significant challenges for gnosis extraction: **no first-person contemporary accounts survive**, and the primary sources are **theological narratives** (Deuteronomistic history) that interpret events through a religious lens. Unlike Napoleon or Nietzsche, we have no letters, no self-reporting, no phenomenological accounts.
+
+However, the biblical corpus contains several moments that carry the structural markers of gnosis:
+- **The dream at Gibeon** — presented as direct divine encounter
+- **The judgment of the two women** — displays a recognition about maternal nature
+- **Temple dedication** — theological crystallization
+- **Ecclesiastes** — if Solomonic, contains dense retroactive recognition about vanity, wisdom, and death
+- **The turning in old age** — potential recognition of structural contradiction
+
+I extract conservatively — distinguishing between **theological narration** (what the text says God did) and **recognition markers** (what Solomon himself appears to have seen).
+
+---
+
+## EVENT 01 — The Dream at Gibeon: Recognition That Wisdom Was the Only Request That Contained Its Own Fulfillment
+
+**Title:** *The Night That Gave Him Everything By Asking for Nothing*
+
+**Passage or trigger:**
+1 Kings 3:5–9 (at Gibeon, early in his reign):
+
+> "In Gibeon the Lord appeared to Solomon in a dream by night; and God said, 'Ask what I shall give you.' And Solomon said: 'You have shown great and steadfast love to your servant David my father, because he walked before you in faithfulness, in righteousness, and in uprightness of heart toward you; and you have kept for him this great and steadfast love, and have given him a son to sit on his throne this day. And now, O Lord my God, you have made your servant king in place of David my father, although I am but a little child; I do not know how to go out or come in... Give your servant therefore an understanding mind to govern your people, that I may discern between good and evil; for who is able to govern this your great people?'"
+
+1 Kings 3:10–12:
+
+> "It pleased the Lord that Solomon had asked this. And God said to him, 'Because you have asked this, and have not asked for yourself long life or riches or the life of your enemies, but have asked for yourself understanding to discern what is right, behold, I now do according to your word. Behold, I give you a wise and discerning mind, so that none like you has been before you and none like you shall arise after you. I give you also what you have not asked, both riches and honor, so that no other king shall compare with you.'"
+
+**Why it qualifies:**
+The gnosis is not the divine appearance — that is theological narration. The gnosis is Solomon's **recognition that wisdom was the only request that, if granted, would make all other requests unnecessary or achievable**. He did not ask for riches, long life, or military victory — the standard royal requests. He asked for the *capacity to navigate reality correctly*. This is not reasoning toward a strategic choice; it is recognition that wisdom is the foundational good from which other goods flow (or become irrelevant).
+
+The false boundary that dissolved: **means/ends**. Wisdom is not a means to an end; it is the end that reorganizes all other ends. The king who has wisdom does not need to ask for riches — riches become secondary. The king who lacks wisdom will misuse whatever he asks for.
+
+The self-implication: Solomon recognized that he was **not qualified to rule** ("I am but a little child; I do not know how to go out or come in") — and that this recognition of incapacity was itself the beginning of capacity. The observer saw his own position inside the structure he was about to operate.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *divine gift* — that God gives what is asked — was transformed. God gives most when the request is for the capacity to navigate reality, not for reality to be rearranged. The request for wisdom is the request that pleases heaven because it is the request that acknowledges dependence.
+- **Technology:** The mechanism that became transparent was **wisdom as meta-technology** — that discernment is not one tool among many but the tool that selects and uses all other tools correctly.
+- **Cosmology:** The structural pattern: **foundational capacities make derivative capacities unnecessary or automatic**. The one who can discern correctly does not need to ask for success; success follows discernment.
+
+**Compressed insight:**
+Solomon now knew that wisdom was not one good among many but the foundational good that made all other goods either achievable or irrelevant — and that asking for it was the only request that contained its own fulfillment.
+
+**Confidence:** 0.85
+
+---
+
+## EVENT 02 — The Judgment of the Two Women: Recognition That Truth Could Be Extracted Through Proposed Violence
+
+**Title:** *The Sword That Revealed the Mother*
+
+**Passage or trigger:**
+1 Kings 3:16–27 — two prostitutes come to Solomon, each claiming the same living child. After hearing both claims, Solomon orders:
+
+> "Bring me a sword. Divide the living child in two, and give half to the one and half to the other."
+
+Then the text records the recognition:
+
+> "Then the woman whose son was alive said to the king, because her heart yearned for her son, 'Oh, my lord, give her the living child, and by no means put him to death.' But the other said, 'It shall be neither mine nor yours, but divide it.' Then the king answered, 'Give the first woman the living child, and by no means put him to death. She is his mother.'"
+
+**Why it qualifies:**
+The gnosis is not the cleverness of the solution — that could be reasoned toward. The gnosis is the **recognition that maternal love could be made visible through proposed violence against its object** — that the true mother would rather lose the child than see the child harmed, while the false mother would rather see the child destroyed than see the rival win. This is not logical deduction; it is insight into the structure of love itself.
+
+The false boundary that dissolved: **justice/mercy**. These are not opposed. The proposed violence was not cruelty but a diagnostic instrument — and the mercy (sparing the child) was achieved through the threat, not despite it. The sword was not the opposite of wisdom; it was wisdom's instrument.
+
+The self-implication: Solomon recognized that he was **not merely adjudicating a dispute but revealing a universal truth about love** — that genuine love is identified by willingness to sacrifice possession for the beloved's welfare. He was inside the structure he was observing: the king who loves his people would rather lose them than harm them.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *divine judgment* — that God discerns the heart — receives a royal-human form. The king can discern what is hidden not through supernatural power but through structural insight into love's nature.
+- **Technology:** The mechanism that became transparent was **proposed violence as diagnostic technology** — that threatening destruction can reveal true attachment more clearly than offering reward.
+- **Cosmology:** The structural pattern: **love is identified by what it will not permit, not by what it claims**. The true mother was known by what she refused (the child's death), not by what she asserted (her claim).
+
+**Compressed insight:**
+Solomon now knew that true love could be distinguished from false claim not by what each asserted but by what each would sacrifice — and that the threat of destruction was a more reliable truth-instrument than the promise of reward.
+
+**Confidence:** 0.88
+
+---
+
+## EVENT 03 — The Temple Completion: Recognition That the House Was for God But Also for the Nation's Identity
+
+**Title:** *The Building That Built the Builder*
+
+**Passage or trigger:**
+1 Kings 8:10–13, at the Temple dedication:
+
+> "And when the priests came out of the Holy Place, a cloud filled the house of the Lord, so that the priests could not stand to minister because of the cloud; for the glory of the Lord filled the house of the Lord. Then Solomon said: 'The Lord has said that he would dwell in thick darkness. I have indeed built you an exalted house, a place for you to dwell in forever.'"
+
+And 1 Kings 8:27:
+
+> "But will God indeed dwell on the earth? Behold, heaven and the highest heaven cannot contain you; how much less this house that I have built!"
+
+**Why it qualifies:**
+The gnosis is the **simultaneous recognition of two contradictory truths**: that the Temple was genuinely God's dwelling place (the cloud filled it), AND that God could not be contained by any building (heaven cannot contain Him). This is not a logical contradiction to be resolved; it is a structural paradox to be held. Solomon saw both truths at once and did not attempt to dissolve the tension.
+
+The false boundary that dissolved: **immanent/transcendent divine**. God was both present in the Temple AND beyond all containment. These are not competing claims; they are simultaneous realities. The sacred space was both real and provisional.
+
+The self-implication: Solomon recognized that he was **both the builder of God's house and the recipient of God's presence** — that the Temple was not merely a national project but a personal encounter. He built the house; the house then housed him in its meaning.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *divine presence* — that God can be locally present while universally transcendent — was crystallized. The Temple was not God's prison but God's chosen locus of encounter. This is a sophisticated theology of sacred space.
+- **Technology:** The mechanism that became transparent was **architecture as theological statement** — that building is not merely construction but the creation of a space where heaven and earth meet.
+- **Cosmology:** The structural pattern: **finite containers can hold infinite meaning without holding the infinite itself**. The Temple contained God's presence without containing God's being.
+
+**Compressed insight:**
+Solomon now knew that the Temple both was and was not God's dwelling — that divine presence could be locally real without divine being being locally contained, and that this paradox was the structure of sacred space.
+
+**Confidence:** 0.86
+
+---
+
+## EVENT 04 — The Queen of Sheba's Visit: Recognition That Wisdom Was Visible to Outsiders
+
+**Title:** *The Foreign Queen Who Confirmed What the Home Nation Could Not See*
+
+**Passage or trigger:**
+1 Kings 10:1–9:
+
+> "Now when the queen of Sheba heard of the fame of Solomon concerning the name of the Lord, she came to test him with hard questions... She came with a very great retinue... And when the queen of Sheba had seen all the wisdom of Solomon, the house that he had built, the food of his table, the seating of his servants, the attendance of his ministers, their clothing, his cupbearers, and his burnt offerings that he offered at the house of the Lord, there was no more spirit in her."
+
+And her declaration:
+
+> "The report was true that I heard in my own land of your words and of your wisdom, but I did not believe the reports until I came and my own eyes had seen it. And behold, the half was not told me. Your wisdom and prosperity surpass the report that I heard."
+
+**Why it qualifies:**
+The gnosis is the recognition that **wisdom's reality is confirmed not by insiders but by skeptical outsiders** — that the Queen of Sheba came to test him and left transformed. The entire framework of royal reputation assumed that fame was self-generated. What became transparent was that genuine wisdom is validated by those who have nothing to gain from flattery.
+
+The false boundary that dissolved: **insider/outsider knowledge**. The home nation could not see Solomon's wisdom clearly (too close, too invested). The foreign queen saw it clearly (distance, skepticism). True recognition comes from outside the system.
+
+The self-implication: Solomon recognized that his wisdom was **not self-validating** — that it required the testimony of outsiders to confirm its reality. He was inside a system that could not see itself clearly.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *witness* — that truth requires testimony — receives a diplomatic form. The Queen of Sheba was not merely a visitor; she was a witness whose testimony carried weight precisely because she was external.
+- **Technology:** The mechanism that became transparent was **external validation as truth technology** — that skeptical outsiders are better validators than invested insiders.
+- **Cosmology:** The structural pattern: **systems cannot fully see themselves**. External observation is required for complete self-knowledge.
+
+**Compressed insight:**
+Solomon now knew that his wisdom was not fully visible to those within his kingdom — that it required the testimony of a skeptical outsider to confirm its reality, and that this was the structure of all self-knowledge.
+
+**Confidence:** 0.82
+
+---
+
+## EVENT 05 — Ecclesiastes Opening: Recognition That All Human Labor Was Vapor
+
+**Title:** *The Vapor That Was All Achievement*
+
+**Passage or trigger:**
+Ecclesiastes 1:2–3 (attributed to Solomon as Qohelet):
+
+> "Vanity of vanities, says the Preacher, vanity of vanities! All is vanity. What does man gain by all his toil at which he toils under the sun?"
+
+And Ecclesiastes 1:14:
+
+> "I have seen all the works that are done under the sun, and behold, all is vanity and a striving after wind."
+
+**Why it qualifies:**
+The gnosis is the recognition that **all human achievement, including wisdom, wealth, and building, was structurally empty** — not because it was worthless, but because it was temporary and could not be carried beyond death. This is not cynical reasoning; it is phenomenological reportage ("I have seen"). The entire framework of royal legacy assumed that building, accumulating, and achieving were inherently meaningful. What became transparent was that meaning requires permanence, and nothing under the sun is permanent.
+
+The false boundary that dissolved: **meaningful/meaningless labor**. These are not intrinsic properties of work. All work is "vapor" (hebel — smoke, breath, vanity) when viewed from the standpoint of death. The distinction collapses.
+
+The self-implication: Solomon (if this is his late voice) recognized that **his own life's work — the Temple, the palace, the wealth, the wisdom — was vapor** — that he had spent decades building what death would render meaningless. The observer was inside the vanity he was describing.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *earthly reward* — that righteousness is rewarded in this life — was structurally challenged. Even the most righteous and wise king (Solomon) found his achievements empty. The reward is not in the achievement but in the relationship to the achiever.
+- **Technology:** The mechanism that became transparent was **death as the great equalizer** — that mortality renders all achievements structurally equivalent (temporary).
+- **Cosmology:** The structural pattern: **all sub-lunar phenomena share the same ontological status** (vapor). The distinctions between them are real but not ultimately significant.
+
+**Compressed insight:**
+Solomon now knew that all his achievements — wisdom, wealth, building — were vapor when viewed from the standpoint of death — and that this was not a flaw in the achievements but a structural feature of existence under the sun.
+
+**Confidence:** 0.79 (Solomonic authorship of Ecclesiastes is debated)
+
+---
+
+## EVENT 06 — Ecclesiastes: Recognition That Wisdom and Folly Shared the Same End
+
+**Title:** *The Wise Man and the Fool Both Die*
+
+**Passage or trigger:**
+Ecclesiastes 2:14–16:
+
+> "The wise person has his eyes in his head, but the fool walks in darkness. And yet I perceived that one fate comes to them all. Then I said in my heart, 'What happens to the fool will happen to me also. Why then have I been so very wise?' And I said in my heart that this also is vanity. For of the wise as of the fool there is no enduring remembrance, seeing that in the days to come all will have been long forgotten. Alas, the wise dies just like the fool!"
+
+**Why it qualifies:**
+The gnosis is the recognition that **wisdom does not conquer death** — that the wise man and the fool share the same fate, and that this equality undermines wisdom's claim to superiority. The entire wisdom tradition (including Solomon's own Proverbs) assumed that wisdom was inherently better, inherently rewarded. What became transparent was that wisdom is better for living but does not change the structure of dying.
+
+The false boundary that dissolved: **wisdom/folly as ultimate categories**. These are functionally different for life but equivalent for death. The distinction is real but not ultimately significant.
+
+The self-implication: Solomon recognized that **his own wisdom would not preserve him from death or ensure his remembrance** — that the gift he had asked for at Gibeon would not save him from the fate of fools. The observer was inside the vanity he was describing.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *wisdom as divine favor* — that God rewards the wise — was structurally challenged. The wise die like fools. Divine favor does not change mortality.
+- **Technology:** The mechanism that became transparent was **death as the limit of wisdom's utility** — that wisdom operates within life but has no purchase on death.
+- **Cosmology:** The structural pattern: **all human distinctions are erased by death**. This is not injustice; it is the structure of finitude.
+
+**Compressed insight:**
+Solomon now knew that wisdom did not ultimately distinguish him from fools — that both die the same death, and that this equality undermined wisdom's claim to ultimate significance.
+
+**Confidence:** 0.80
+
+---
+
+## EVENT 07 — Ecclesiastes: Recognition That Pleasure Was a Test That Failed
+
+**Title:** *The Laughter That Was Madness*
+
+**Passage or trigger:**
+Ecclesiastes 2:1–11:
+
+> "I said in my heart, 'Come now, I will test you with pleasure; enjoy yourself.' But behold, this also was vanity. I said of laughter, 'It is mad,' and of pleasure, 'What use is it?'... I made myself great works. I built houses and planted vineyards for myself... I bought slaves... I gathered silver and gold... So I became great and surpassed all who were before me in Jerusalem. Also my wisdom remained with me. And whatever my eyes desired I did not keep from them. I did not withhold my heart from any pleasure... And behold, all was vanity and a striving after wind."
+
+**Why it qualifies:**
+The gnosis is the recognition that **pleasure, fully pursued, reveals its own emptiness** — that the one who has unlimited access to pleasure discovers that pleasure does not satisfy. This is not moral reasoning ("pleasure is sinful"); it is phenomenological reportage ("I tested it; it failed"). The entire framework of desire assumes that satisfaction comes from obtaining the desired. What became transparent was that satisfaction does not come from obtaining — it comes from elsewhere, or not at all.
+
+The false boundary that dissolved: **satisfaction/desire**. These are not causally linked. Obtaining what you desire does not produce satisfaction. The structure of desire is such that it regenerates faster than it can be fulfilled.
+
+The self-implication: Solomon recognized that **his own pursuit of pleasure — wives, wealth, luxury — had not satisfied him** — that he was the empirical proof that unlimited access to desire's objects produces unlimited dissatisfaction. The observer was the subject of the failed experiment.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *earthly blessing* — that God's favor brings material satisfaction — was structurally challenged. Solomon had every earthly blessing and found them empty. Blessing is not satisfaction.
+- **Technology:** The mechanism that became transparent was **hedonic adaptation** — that pleasure diminishes with repetition, requiring more for the same effect, in an endless cycle.
+- **Cosmology:** The structural pattern: **desire is not structured to be satisfied**. It is structured to regenerate. This is not a flaw; it is the nature of desiring consciousness.
+
+**Compressed insight:**
+Solomon now knew that pleasure could not satisfy — that obtaining what he desired did not produce satisfaction, and that this was not a flaw in the pleasures but a structural feature of desire itself.
+
+**Confidence:** 0.81
+
+---
+
+## EVENT 08 — The Many Wives: Recognition That Political Alliance Was Spiritual Fragmentation
+
+**Title:** *The Seven Hundred Who Turned the Heart*
+
+**Passage or trigger:**
+1 Kings 11:1–4:
+
+> "Now King Solomon loved many foreign women... He had seven hundred wives, who were princesses, and three hundred concubines. And his wives turned away his heart. For when Solomon was old his wives turned away his heart after other gods, and his heart was not wholly true to the Lord his God, as was the heart of David his father."
+
+**Why it qualifies:**
+The gnosis (likely retroactive, in old age) is the recognition that **political marriages were not neutral instruments but active agents of theological transformation** — that each wife brought not merely alliance but allegiance, not merely presence but devotion. The entire framework of royal marriage assumed that wives could be politically useful while religiously neutral. What became transparent was that intimacy produces identification — that you cannot sleep beside a devotee of another god without that god gaining a claim on you.
+
+The false boundary that dissolved: **political/personal devotion**. These are not separate spheres. The political marriage was personally transformative. The heart was turned not by force but by love — by the genuine affection that developed with hundreds of women over decades.
+
+The self-implication: Solomon recognized that **he was not betrayed by his wives; he was transformed by them** — that his own heart had turned, not through coercion but through the natural development of love across many relationships. He was inside the fragmentation he was describing.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *undivided heart* — that one must serve God alone — was structurally challenged by the reality of human capacity for multiple devotions. Solomon's heart was not "wholly true" — not through rebellion but through proliferation.
+- **Technology:** The mechanism that became transparent was **intimacy as theological vector** — that those you love shape what you worship. Political technology (marriage alliance) had theological consequences.
+- **Cosmology:** The structural pattern: **the heart is not infinitely divisible**. You cannot love seven hundred gods through seven hundred wives without fragmentation. There is a limit to devotional capacity.
+
+**Compressed insight:**
+Solomon now knew that his political marriages had not been religiously neutral — that each wife had turned his heart toward her gods, and that his own heart was not capable of remaining undivided across seven hundred devotions.
+
+**Confidence:** 0.84
+
+---
+
+## EVENT 09 — The Divine Rebuke: Recognition That Covenant Had Consequences
+
+**Title:** *The Lord Who Was Angry After All*
+
+**Passage or trigger:**
+1 Kings 11:9–11:
+
+> "And the Lord was angry with Solomon, because his heart had turned away from the Lord, the God of Israel, who had appeared to him twice, and had not kept what the Lord commanded... Therefore the Lord said to Solomon, 'Since this has been your practice and you have not kept my covenant and my statutes that I have commanded you, I will surely tear the kingdom from you and will give it to your servant.'"
+
+**Why it qualifies:**
+The gnosis is the recognition that **divine patience had a limit** — that the covenant made at Gibeon was not unconditional, and that his own actions had consequences that could not be wished away. The entire framework of his reign assumed that his wisdom and his father's merit would protect him indefinitely. What became transparent was that covenant requires reciprocity — and that he had failed his side.
+
+The false boundary that dissolved: **divine favor/divine judgment**. These are not opposed. The same God who gave wisdom could withdraw the kingdom. Favor was not permanent; it was conditional on faithfulness.
+
+The self-implication: Solomon recognized that **he was not exempt from the covenant he was supposed to uphold** — that his wisdom had not made him immune to the consequences of unfaithfulness. The observer was the judged.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *covenant* — that relationship with God involves mutual obligation — was crystallized. Solomon was not above covenant; he was bound by it.
+- **Technology:** The mechanism that became transparent was **consequence as covenant enforcement** — that breaking covenant produces structural consequences, not merely divine displeasure.
+- **Cosmology:** The structural pattern: **all gifts are conditional on their proper use**. Wisdom given can be wisdom misused, and misuse produces loss.
+
+**Compressed insight:**
+Solomon now knew that his covenant with God was not unconditional — that his own unfaithfulness had consequences that his wisdom could not prevent, and that divine favor could be withdrawn.
+
+**Confidence:** 0.83
+
+---
+
+## EVENT 10 — The Kingdom's Division: Recognition That His Legacy Was Already Dying
+
+**Title:** *The Son Who Would Not Hold What the Father Built*
+
+**Passage or trigger:**
+1 Kings 11:29–31 (the prophet Ahijah's prophecy to Jeroboam, during Solomon's lifetime):
+
+> "And at that time, when Jeroboam went out of Jerusalem, the prophet Ahijah the Shilonite found him on the road... Then Ahijah laid hold of the new garment that was on him, and tore it into twelve pieces. And he said to Jeroboam, 'Take for yourself ten pieces, for thus says the Lord, the God of Israel: Behold, I am about to tear the kingdom from the hand of Solomon and will give you ten tribes.'"
+
+**Why it qualifies:**
+The gnosis (if Solomon became aware of this prophecy during his lifetime) is the **retroactive recognition that his kingdom would not endure** — that the unity he had built would be torn apart after his death, and that this was not merely political fortune but divine judgment. The entire framework of royal legacy assumed that what the king built would endure. What became transparent was that legacy is not controlled by the builder — that the future belongs to those who come after, not to the one who built.
+
+The false boundary that dissolved: **building/enduring**. These are not causally linked. What is built does not necessarily endure. The kingdom's division revealed that Solomon's work was temporary.
+
+The self-implication: Solomon recognized that **his life's work would be dismantled after his death** — that he was building something he would not see completed, and that the completion would be division rather than unity. The observer was inside the legacy that was already dying.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *dynastic promise* — that David's line would endure — was preserved but transformed. The line would continue, but the kingdom would be divided. Promise is fulfilled in unexpected ways.
+- **Technology:** The mechanism that became transparent was **political fragmentation as covenant consequence** — that breaking covenant produces structural division, not merely personal loss.
+- **Cosmology:** The structural pattern: **all human constructions are temporary**. Even the greatest kingdom will be divided. This is not tragedy; it is the nature of temporal construction.
+
+**Compressed insight:**
+Solomon now knew that his kingdom would not endure after his death — that his life's work would be divided, and that this division was not political accident but structural consequence.
+
+**Confidence:** 0.78 (unclear if Solomon knew of this prophecy)
+
+---
+
+## EVENT 11 — Ecclesiastes Closing: Recognition That God Was the Only Meaning That Survived Vanity
+
+**Title:** *The End of the Matter: Fear God*
+
+**Passage or trigger:**
+Ecclesiastes 12:13–14 (the conclusion, after all the vanity has been surveyed):
+
+> "The end of the matter; all has been heard. Fear God and keep his commandments, for this is the whole duty of man. For God will bring every deed into judgment, with every secret thing, whether good or evil."
+
+**Why it qualifies:**
+The gnosis is the **retroactive recognition that all the vanity surveyed throughout the book was not the final word** — that meaning exists, but it exists in relationship to God, not in earthly achievement. This is not a pious add-on; it is the structural conclusion that makes sense of all the preceding vanity. The entire book has demonstrated that nothing under the sun has ultimate meaning. What became transparent was that meaning comes from above the sun — from the God who judges and who is not vapor.
+
+The false boundary that dissolved: **sacred/secular meaning**. All meaning is sacred or it is not meaning. The secular sphere (under the sun) is vapor; the sacred sphere (fear of God) is solid.
+
+The self-implication: Solomon (if this is his voice) recognized that **his own life's error was seeking meaning under the sun** — that the meaning he sought was available all along in the fear of God, but he had to exhaust all other options to see this. The observer was the one who had taken the long way home.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *fear of God* — that reverence is the beginning of wisdom — was crystallized as the end of wisdom too. After all the searching, the beginning is revealed as the destination.
+- **Technology:** The mechanism that became transparent was **exhaustion as pedagogical technology** — that sometimes the only way to learn is to try everything else first.
+- **Cosmology:** The structural pattern: **meaning is not found in the world but in relationship to the world's source**. The vapor becomes meaningful when seen as gift from God.
+
+**Compressed insight:**
+Solomon now knew that meaning was not found in anything under the sun — that only the fear of God provided a foundation that could support the weight of ultimate significance.
+
+**Confidence:** 0.82
+
+---
+
+## EVENT 12 — The Death of David: Recognition That the Father's Sin Was the Son's Burden
+
+**Title:** *The Sword That Would Not Depart*
+
+**Passage or trigger:**
+2 Samuel 12:10 (Nathan's prophecy to David, fulfilled in Solomon's reign):
+
+> "Now therefore the sword shall never depart from your house, because you have despised me and have taken the wife of Uriah the Hittite to be your wife."
+
+1 Kings 1–2 records the fulfillment: Adonijah's rebellion, Joab's execution, Shimei's death — all during Solomon's early reign.
+
+**Why it qualifies:**
+The gnosis is the recognition that **the father's sin produces consequences for the son** — that Solomon inherited not merely a kingdom but a kingdom wounded by David's adultery and murder. The entire framework of dynastic succession assumed that the son inherits the father's achievement. What became transparent was that the son inherits the father's wounds too — and must deal with them.
+
+The false boundary that dissolved: **personal/generational consequence**. These are not separate. David's sin was personal to David but had structural consequences for Solomon's reign. The sword did not depart.
+
+The self-implication: Solomon recognized that **his reign was not his own** — that he was operating within a field of consequences he did not create but had to navigate. The observer was inside a drama that began before his birth.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *generational consequence* — that the sins of the fathers affect the children — was empirically confirmed. Solomon lived the fulfillment of Nathan's prophecy.
+- **Technology:** The mechanism that became transparent was **inherited conflict as political burden** — that some problems are not created by the current ruler but must be solved by him.
+- **Cosmology:** The structural pattern: **no person is an isolated moral agent**. We operate within fields of consequence created by others.
+
+**Compressed insight:**
+Solomon now knew that his reign was not a fresh start — that he inherited his father's sins along with his father's throne, and that the sword would not depart because of what David had done before Solomon was born.
+
+**Confidence:** 0.80
+
+---
+
+## SUMMARY TABLE
+
+| # | Title | Core dissolution | Domain cluster | Self-implication | Confidence |
+|---|-------|-----------------|----------------|-----------------|------------|
+| 01 | The Night That Gave Him Everything By Asking for Nothing | Means/ends | Theology/Technology | High: he was unqualified to rule | 0.85 |
+| 02 | The Sword That Revealed the Mother | Justice/mercy | Theology/Technology | High: king as lover of people | 0.88 |
+| 03 | The Building That Built the Builder | Immanent/transcendent divine | Theology/Cosmology | High: he was housed by the house | 0.86 |
+| 04 | The Foreign Queen Who Confirmed What the Home Nation Could Not See | Insider/outsider knowledge | Technology/Cosmology | High: wisdom not self-validating | 0.82 |
+| 05 | The Vapor That Was All Achievement | Meaningful/meaningless labor | Theology/Cosmology | Maximum: his work was vapor | 0.79 |
+| 06 | The Wise Man and the Fool Both Die | Wisdom/folly as ultimate | Theology/Cosmology | Maximum: his wisdom wouldn't save him | 0.80 |
+| 07 | The Laughter That Was Madness | Satisfaction/desire | Theology/Cosmology | Maximum: he was the failed experiment | 0.81 |
+| 08 | The Seven Hundred Who Turned the Heart | Political/personal devotion | Theology/Technology | High: his heart turned through love | 0.84 |
+| 09 | The Lord Who Was Angry After All | Divine favor/divine judgment | Theology/Cosmology | High: he was not exempt from covenant | 0.83 |
+| 10 | The Son Who Would Not Hold What the Father Built | Building/enduring | Theology/Cosmology | High: his legacy was already dying | 0.78 |
+| 11 | The End of the Matter: Fear God | Sacred/secular meaning | Theology/Cosmology | Maximum: he took the long way home | 0.82 |
+| 12 | The Sword That Would Not Depart | Personal/generational consequence | Theology/Cosmology | High: he inherited David's wounds | 0.80 |
+
+---
+
+## Meta-observation for the LOGOC Corpus
+
+Solomon's gnosis events cluster around **retroactive recognition from the standpoint of Ecclesiastes** — the voice that looks back on a life of wisdom, wealth, pleasure, and building and finds it all vapor. This makes him uniquely valuable for the corpus: his gnosis events demonstrate that **recognition can come at the end of a life** — that the wisdom he asked for at Gibeon ultimately revealed the limits of wisdom itself.
+
+The self-implication in Solomon is distinctive: he repeatedly recognizes that **he was inside the structures he was analyzing** — that his own life was the empirical proof of vanity, that his own heart had turned, that his own kingdom would be divided. This is not abstract philosophy; it is autobiography disguised as wisdom literature.
+
+The source limitations (biblical narration rather than first-person account, debated authorship of Ecclesiastes) mean confidence scores are generally lower than for figures with better documentation. But the core recognitions — wisdom's limits, vanity of achievement, death as equalizer, meaning found only in God — are among the most profound in the Western corpus.

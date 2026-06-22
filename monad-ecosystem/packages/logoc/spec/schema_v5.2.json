@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sovereign.ecosystem/logoc/event-v5.2.schema.json",
+  "title": "LOGOC Event Schema v5.2",
+  "description": "Versioned event schema for the Logico-Ontological Gnostic Operations Corpus (Draft 2020-12)",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "LOGOC-Event-v5.2"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "narrative": {
+      "type": "string"
+    },
+    "semiotic_flags": {
+      "type": "object",
+      "properties": {
+        "single_occurrence": { "type": "boolean" },
+        "rule_based": { "type": "boolean" },
+        "similarity": { "type": "boolean" },
+        "causality": { "type": "boolean" },
+        "convention": { "type": "boolean" },
+        "possibility": { "type": "boolean" },
+        "fact": { "type": "boolean" },
+        "reason": { "type": "boolean" }
+      }
+    },
+    "peirce": {
+      "type": "object",
+      "description": "Peirce block for 66-class triadic expansion (may be null if migration pending)",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["ICON", "INDEX", "SYMBOL"]
+        },
+        "sign_class_id": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65
+        },
+        "sign_class_label": {
+          "type": "string"
+        },
+        "path": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "firstness_weight": { "type": "number" },
+        "secondness_weight": { "type": "number" },
+        "thirdness_weight": { "type": "number" },
+        "pragmatism_band": {
+          "type": "string",
+          "enum": ["INSTINCT", "EXPERIENCE", "FORMAL_THOUGHT"]
+        }
+      },
+      "required": [
+        "mode",
+        "sign_class_id",
+        "sign_class_label",
+        "path",
+        "firstness_weight",
+        "secondness_weight",
+        "thirdness_weight",
+        "pragmatism_band"
+      ]
+    },
+    "peirce_migration_pending": {
+      "type": "boolean",
+      "description": "True when the event could not be classified into a single triadic path"
+    },
+    "peirce_migration_source": {
+      "type": ["string", "null"],
+      "description": "Source system that produced the pending classification, or null if resolved"
+    }
+  },
+  "required": ["schema_version", "event_id", "timestamp", "narrative"]
+}
