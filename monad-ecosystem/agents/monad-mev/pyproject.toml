@@ -1,0 +1,21 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "monad-mev-scripts"
+version = "1.0.0"
+description = "Monad MEV agent scripts — x402 QuickNode price fetcher, auth flow, and supporting helpers"
+authors = ["Sovereign Team"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+# httpx — required for x402 HTTP client (credit-drawdown, pay-per-request, provider pool)
+httpx = "^0.27.0"
+# eth-account — required for x402 SIWX (HTTP auth) and EIP-712 (pay-per-request signing).
+# Treated as core because credit-drawdown auto-refresh via HTTP SIWX requires it too.
+eth-account = "^0.13.0"
+
+[tool.poetry.group.dev.dependencies]
+# test_x402_auth.py is stdlib-based; pytest reserved for future suite expansion.
+pytest = "^7.0.0"

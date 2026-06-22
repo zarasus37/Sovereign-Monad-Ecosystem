@@ -6,10 +6,14 @@
 #   - credit-drawdown: JWT session (simpler, no per-request signing)
 #   - pay-per-request: EIP-712 signing per request (true x402 protocol)
 #
-# Dependencies:
-#   Required:  httpx  (already in monad_price_fetcher.py)
-#   Optional:  eth-account  (for pay-per-request signing)
-#              pip install eth-account
+# Dependencies (declared in ../pyproject.toml):
+#   Required:  httpx         — HTTP client (credit-drawdown, pay-per-request, provider pool)
+#   Required:  eth-account   — SIWX (HTTP auth) + EIP-712 (pay-per-request signing)
+#                              Lazy-imported so the module loads cleanly without it;
+#                              pay-per-request + HTTP auth paths return None until installed.
+#
+# Install:   poetry install  (from the monad-mev directory)
+#            — or —  pip install httpx eth-account
 #
 # Docs: https://www.quicknode.com/docs/build-with-ai/x402-payments
 #       https://github.com/coinbase/x402
@@ -621,10 +625,11 @@ C) Nanopayment (Circle Gateway, batched payments)
    2. Requires one-time USDC deposit to Gateway contract.
    3. See QuickNode docs for Gateway setup.
 
-DEPENDENCIES:
-  - httpx (already in monad_price_fetcher.py)
-  - eth-account (optional, for pay-per-request + HTTP auth)
-    pip install eth-account
+DEPENDENCIES (declared in ../pyproject.toml):
+  - httpx       — HTTP client (always required)
+  - eth-account — SIWX (HTTP auth) + EIP-712 (pay-per-request signing)
+    Install via:  poetry install  (recommended)
+                  — or —  pip install httpx eth-account
 
 ENVIRONMENT VARIABLES:
   X402_EVM_PRIVATE_KEY    Your wallet private key (0x...)

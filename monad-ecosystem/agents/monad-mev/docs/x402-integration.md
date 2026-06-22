@@ -38,11 +38,11 @@ This guide covers integrating **x402 QuickNode** into the Monad MEV price fetche
 ### 1. Prerequisites
 
 ```bash
-# Python dependencies (already in monad_price_fetcher.py)
-pip install httpx
-
-# Optional: for pay-per-request signing
-pip install eth-account
+# Install all Python dependencies from the manifest
+# (httpx for the HTTP client, eth-account for SIWX + EIP-712 signing)
+poetry install
+# — or, without poetry —
+pip install httpx eth-account
 
 # Node.js (only for JWT helper alternative)
 # node --version  # v18+ recommended
