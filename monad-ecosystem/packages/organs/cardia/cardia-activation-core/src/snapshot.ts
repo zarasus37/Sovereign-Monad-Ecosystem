@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { pathToFileURL } from 'url';
 import { CardiaActivationInput, CardiaActivationPolicy, CardiaActivationRecord, CardiaActivationSnapshot } from './types.js';
 
 function readJson<T>(filePath: string): T {
@@ -96,9 +97,9 @@ export function buildCardiaActivationSnapshot(
   };
 }
 
-export function loadLocalCardiaActivationSnapshot(packageRoot: string): CardiaActivationSnapshot {
-  const policyPath = path.resolve(packageRoot, 'cardia-activation-core', 'config', 'policy.json');
-  const recordPath = path.resolve(packageRoot, 'cardia-activation-core', 'config', 'activation-record.json');
+export async function loadLocalCardiaActivationSnapshot(packageRoot: string): Promise<CardiaActivationSnapshot> {
+  const policyPath = path.resolve(packageRoot, 'cardia', 'cardia-activation-core', 'config', 'policy.json');
+  const recordPath = path.resolve(packageRoot, 'cardia', 'cardia-activation-core', 'config', 'activation-record.json');
   const runtimeConfigPath = path.resolve(packageRoot, 'organ-runtime', 'config', 'runtime.json');
   const executionTruthModulePath = path.resolve(packageRoot, 'execution-truth-core', 'dist', 'index.js');
   const organRuntimeModulePath = path.resolve(packageRoot, 'organ-runtime', 'dist', 'index.js');
@@ -107,15 +108,15 @@ export function loadLocalCardiaActivationSnapshot(packageRoot: string): CardiaAc
   const record = readJson<CardiaActivationRecord>(recordPath);
   const runtimeConfig = readJson<any>(runtimeConfigPath);
 
-  const { loadLocalExecutionTruthSnapshot } = require(executionTruthModulePath) as {
+  const executionTruthModule = await import(pathToFileURL(executionTruthModulePath).href) as {
     loadLocalExecutionTruthSnapshot: (packageRoot: string) => any;
   };
-  const { buildRuntimeSnapshot } = require(organRuntimeModulePath) as {
+  const organRuntimeModule = await import(pathToFileURL(organRuntimeModulePath).href) as {
     buildRuntimeSnapshot: (config: any) => any;
   };
 
-  const executionTruth = loadLocalExecutionTruthSnapshot(packageRoot);
-  const runtimeSnapshot = buildRuntimeSnapshot(runtimeConfig);
+  const executionTruth = executionTruthModule.loadLocalExecutionTruthSnapshot(packageRoot);
+  const runtimeSnapshot = organRuntimeModule.buildRuntimeSnapshot(runtimeConfig);
   const cardia = runtimeSnapshot.cardia || { deploymentMode: 'blocked', reserveHealthy: false };
 
   return buildCardiaActivationSnapshot(

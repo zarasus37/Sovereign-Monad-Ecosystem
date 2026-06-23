@@ -11,7 +11,7 @@
     "status": "powershell -ExecutionPolicy Bypass -File scripts/status.ps1",
     "check:layout": "powershell -ExecutionPolicy Bypass -File scripts/verify-layout.ps1",
     "dev": "pnpm --recursive dev",
-    "build": "pnpm --recursive build",
+    "build": "pnpm --filter=!public-activation-core --recursive build",
     "test": "pnpm --recursive test",
     "test:integration": "vitest run monad-ecosystem/tests/integration/",
     "typecheck": "pnpm --recursive tsc --noEmit",

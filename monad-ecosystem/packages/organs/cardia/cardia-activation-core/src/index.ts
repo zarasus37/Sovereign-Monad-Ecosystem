@@ -25,8 +25,8 @@ import { EventBus } from '@sovereign/bus';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-function main() {
-  const snapshot = loadLocalCardiaActivationSnapshot(path.resolve(__dirname, '..', '..'));
+async function main() {
+  const snapshot = await loadLocalCardiaActivationSnapshot(path.resolve(__dirname, '..', '..'));
   process.stdout.write(`${JSON.stringify(snapshot, null, 2)}\n`);
 
   // Wire Cardia to the Sovereign Bus
@@ -56,11 +56,9 @@ function main() {
 // ESM-compatible entry-point guard
 const isMain = process.argv[1] === fileURLToPath(import.meta.url);
 if (isMain) {
-  try {
-    main();
-  } catch (err) {
+  main().catch((err) => {
     const message = err instanceof Error ? err.message : String(err);
     console.error(message);
     process.exitCode = 1;
-  }
+  });
 }

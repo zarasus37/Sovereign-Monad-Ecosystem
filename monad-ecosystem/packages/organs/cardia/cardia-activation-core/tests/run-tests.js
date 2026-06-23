@@ -1,10 +1,12 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
-const path = require('node:path');
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const { buildCardiaActivationSnapshot, loadLocalCardiaActivationSnapshot } = require(
-  path.resolve(__dirname, '..', 'dist', 'index.js'),
-);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const distPath = path.resolve(__dirname, '..', 'dist', 'index.js');
+const distUrl = new URL(`file://${distPath.replace(/\\/g, '/')}`);
+const { buildCardiaActivationSnapshot, loadLocalCardiaActivationSnapshot } = await import(distUrl);
 
 const basePolicy = {
   minimumExecutionTruthStatus: 'staged',
@@ -61,8 +63,9 @@ test('buildCardiaActivationSnapshot reaches ready_for_guarded_live only after fu
   assert.equal(snapshot.status, 'ready_for_guarded_live');
 });
 
-test('loadLocalCardiaActivationSnapshot reflects the current ready_for_funding local posture', () => {
-  const snapshot = loadLocalCardiaActivationSnapshot(path.resolve(__dirname, '..', '..'));
+test('loadLocalCardiaActivationSnapshot reflects the current ready_for_funding local posture', async () => {
+  const packageRoot = path.resolve(__dirname, '..', '..', '..');
+  const snapshot = await loadLocalCardiaActivationSnapshot(packageRoot);
   assert.equal(snapshot.implemented, true);
   assert.equal(snapshot.status, 'ready_for_funding');
   assert.equal(snapshot.walletFunded, false);

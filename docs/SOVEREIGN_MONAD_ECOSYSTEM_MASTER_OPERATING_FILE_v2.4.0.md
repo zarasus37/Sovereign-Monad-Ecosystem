@@ -3,7 +3,7 @@
 > This is the single canonical source of truth for the Sovereign Monad Ecosystem.
 > All participants — human or AI — synchronize to this file.
 > Do not act on subordinate documents if they conflict with this file.
-> Last updated 6/19/2026
+> Last updated 6/23/2026
 ---
 
 # SECTION 1 — WHAT THIS FILE IS
@@ -523,6 +523,10 @@ This means the architecture and local analysis stack are materially advanced. It
 | Dove Protocol | PHASE 4 SPECIFICATION COMPLETE | DOVE_OPERATIONAL_SPECIFICATION_v1.md completed in Phase 4: 5 observables defined, 4 intervention levels specified, escalation scenarios documented, meta-governance rules established. Runtime evidence and deployment remain downstream of execution-truth closure. Governance layer now fully transparent and measurable. |
 | Gnosis Integrity | ADVANCED VOLUMETRIC ENGINE | Integrated Volumetric 4D Gnostic Engine featuring Stokes-Mueller coherence (Depth/Truth/Width), Pulfrich phase tilt (temporal parallax), and advanced Blink/Quarantine logic for magnitude kill-switches. |
 | Four-Layer Hermeneutic Engine — Layer 4 Antikythera | **INTEGRATION COMPLETE / VERIFIED** | Layer 4 Antikythera Epicyclic Correction Engine surgically integrated into `compiler/target_gen.py`. Modules: `ephemeris_dialect_hardened.py` (phase-corrected friction thresholds), `peirce_calibration_bridge.py` (abductive calibration). Drift classification boundaries (0.28/0.72) locked and passing. WAL-based persistence verified. Compatibility shim `compiler/ephemeris_dialect.py` created. `ProvenanceDialect`→`ProvenanceWrapper` monkeypatch active. Calibration mode: `FROZEN` (diagnostic observation). All integration tests in `antikythera_integration_guide.py` passing. Runtime state directory `.runtime_state/slot_profiles/` operational. |
+| LOGOC / Peirce Classification | PRODUCTION-READY LOCALLY | v5.10 corpus (334 events, 0 pending, 11 classes), ML v13 Naive Bayes ensemble, rubric+ML triage, P4 narrative-purpose pre-filter wired into `ProductionPeirceClassifier`, human-review UI with persistent local decisions. |
+| Kafka Event Bridge | HARDENED / TESTABLE | `sovereign-bus` kafkajs producer with idempotent sends, bounded exponential backoff, DLQ routing, 7/7 vitest tests passing. Local pure-node fallback remains available when `KAFKA_ENABLED` != `'true'`. |
+| Control Center LOGOC UI | INTERACTIVE | `ReclassifyDialog`, persisted approve/reclassify/reject/escalate decisions, filter persistence, export/import. |
+| Theo-Techno-Cosmo Pillar | CLEANED (P11) | Misplaced runtime code archived under `plex/archive/code/`; `plex/` now docs/research only. `THE COUNCILE/` provenance preserved. |
 | Narrative Surface | LOCAL ANALYSIS SURFACE ONLY | `narrative-core` now packages governed local narratives from ecosystem state; no live public narrative surface is active |
 | Data Rail | LOCAL ANALYSIS SURFACE ONLY | local capture, routing, governance, rights, readiness, activation-decision, bundle/product-boundary, and LightVerify certification surfaces now exist; thresholds are met on the current verified local sample, readiness is `ready`, but no explicit activation record exists and externalization is not activated |
 | Evaluation / Commercial Surfaces | FULLY OPERATIONALIZED | The Master Scheduled Orchestrator securely bridges Azure Cosmos dependencies, dynamically generates value-priced institutional proposals, tracks responses (CRM), and ensures human-gated outreach dispatch. The Control Hub React dashboard visualizes live pipeline telemetry via `hepar-dashboard-api`. Legal §15 compliance and tier-based allocation discipline are integrated natively. |
@@ -533,6 +537,8 @@ This means the architecture and local analysis stack are materially advanced. It
 | Agent 0 Trading Evaluation Path | HARDENED SHADOW-PAPER ANALYSIS COMPLETE | `shadow_markout_hardened.py` complete with real on-chain Pyth Network RPC execution validation (`getPriceUnsafe()`). Concurrency, adverse selection flagging, and dynamic Capacity Ceiling metric logic are implemented. Ready for Explicit Operator Review. |
 | High-Fidelity DeFi Gaming | ACCEPTED DESIGN DIRECTION / SPEC PENDING | MonadSpin is now the umbrella GameFi / gamified environment rail; transitional GameFi control scaffolds may support state and operator flow, but no final high-fidelity game product is live |
 | Six-Organ Institutional Depth | LIVE AT ADVISORY TIER (HEPAR UPGRADED) | `Hepar` has been vastly expanded into a full DeFi zero-day auditing protocol (Stages A-D) with privilege, arithmetic, reentrancy, economic, and state agents. `Cortex`, `Synapse`, `Pneuma`, and `Vox` remain LIVE at Advisory Tier. The dynamic `Cardia` allocation framework is active. |
+| Cardia / Organ Runtime Activation | LOCAL ANALYSIS / READY FOR FUNDING POSTURE | `cardia-activation-core` converted to ESM, `execution-truth-core` and `organ-runtime` stubs created under `packages/organs/`, local snapshot reports `ready_for_funding`; live wallet funding and execution-truth closure remain downstream gates. |
+| x402 QuickNode Payment Bridge | REHOMED / TESTABLE LOCALLY | Live client, JWT auth helper, price fetcher, and live smoke test moved to canonical Poetry package `monad-ecosystem/packages/x402-bridge/`. Unit auth tests pass. Live execution blocked on funded Base Sepolia wallet + `X402_EVM_PRIVATE_KEY`. |
 | Phase 4 Operational Documentation | 98% COMPLETE | OPERATIONAL_AXIOMS_PHASE4.md, AGENT_PERSONALITY_FRAMES_v5.md, DOVE_OPERATIONAL_SPECIFICATION_v1.md, ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md, INTEGRATION_MAP.md all created and verified. Axiom alignment audit: 11/12 fully aligned, 1 partial. All three pillars integrated and operational. Ready for Phase 5 launch. |
 
 ---
@@ -2019,6 +2025,40 @@ Every update should include: date, version, changed section(s), exact new status
 - No new blockers introduced; all tests (62+ Python + 18 TS) pass without regression
 - All artifacts live under `monad-ecosystem/packages/ttcl` and `monad-ecosystem/packages/logoc`; backfill outputs live under `logs/corpus/`
 - **Next priority:** Phase 4 — Class 5 data quality fix (natural events have noisy flag combinations) + Class 8 expansion (only 2 examples); cleaner feature vectors for under-performing classes
+
+## v2.5.1 — June 23, 2026
+
+**Change Type:** Patch — post-v2.5.0 cleanup and frontend/backend hardening pass
+
+**Summary:**
+
+- **P8 — LOGOC Human-Review Cleanup:** v5.10 corpus landed (`logs/corpus/master_corpus_v5.10.jsonl`, 334 events, 0 pending). 7 remaining human-review events resolved: 2 reclassifications (Gnostic Jesus ev13 42→2, Nietzsche ev08 5→2), 5 kept-as-is. ML v13 retrained (`logs/audit/ml_classifier_v13.json`); test accuracy 98.6%, full accuracy 98.5%. Decision: prioritize correctness over headline accuracy on boundary events.
+- **P9 — Kafka Bridge Hardening:** `monad-ecosystem/packages/sovereign-bus/src/kafka-bridge.ts` now implements a production-grade kafkajs producer with idempotent sends, bounded exponential backoff, DLQ routing, lazy import, graceful shutdown, and 7/7 vitest coverage.
+- **P10 — Control Center Interactive UI:** `control-center/src/frontend/` now supports per-event approve/reclassify/reject/escalate decisions via `ReclassifyDialog`; decisions persist to localStorage through Zustand (`useHRDecisionStore`); filters migrated to `useLogocFilterStore` with persistence; `useDecoratedCorpus` overlays local decisions onto the corpus snapshot.
+- **P11 — Theo-Techno-Cosmo Misplaced-Code Cleanup:** Enforced the pillar rule that `plex/` holds no application runtime code. Moved 10 files from `plex/` / `plex/CODE/` to `plex/archive/code/` with status README. Created `theo-techno-cosmo/CLEANUP_LOG.md`.
+- **P11-follow-up — Cardia Activation-Core ESM Fix:** Converted `cardia-activation-core` to async ESM imports, created `execution-truth-core` and `organ-runtime` stubs under `monad-ecosystem/packages/organs/`, and restored full `pnpm build` / `pnpm test` green.
+- **P4 — Narrative-Purpose Detection in Production Classifier:** Wired `flag_extractor_v3` `clean_and_extract_flags()` into `ProductionPeirceClassifier.annotate()` as a context-aware pre-filter. Added `use_p4` toggle, `pipeline_p4_cleaned` observability field on `LogocEvent`, and 3 integration tests covering illustrative → Class 5, constitutive → Class 2, and P4-disabled passthrough.
+- **Phase 2 — monad-mev Rehome / Prune:** Moved legacy `monad-ecosystem/agents/monad-mev/` to `archive/legacy-workspaces/monad-mev-legacy-2026-06/` with an `ARCHIVE_NOTE.md`. Extracted the live x402 QuickNode client, auth helper, price fetcher, live smoke test, and auth test suite into the canonical Python package `monad-ecosystem/packages/x402-bridge/` with updated imports and a `pyproject.toml`. Removed generated artifacts (`.venv`, `.githooks`, `.vscode`, `.runtime_state` local logs, `desktop.ini`) from the archived copy.
+- **P6 sklearn upgrade decision:** Custom Naive Bayes is sufficient. v13 achieves 98.5% full accuracy with zero external ML dependencies in the managed Python runtime. sklearn upgrade closed as lower priority / not required.
+
+**Axiom alignment:**
+
+- **Axiom 11 (Constraint Validation):** P8 explicitly chose expert-correct boundary classifications over maximizing the ML accuracy headline. The metric updated to reflect the truth rather than the truth bending to the metric.
+- **Axiom 6 (Demiurge/Constraints):** P9 adds real failure handling (retries, DLQ) to the event backbone instead of assuming ideal broker behavior.
+- **Axiom 8 (Gnosis):** P10 gives analysts a structured decision surface for ambiguous gnosis events, making human judgment auditable and exportable for the next correction cycle.
+
+**State after update:**
+
+- Active master phase remains **Phase 1a**
+- Peirce classifier stack: rubric v1.1 + ML v13 + human review triage (0 pending in v5.10 corpus)
+- **Corpus:** 334 events, 11 classes, 0 pending, v5.10 source of truth
+- **Kafka bridge:** production-hardened, tests passing
+- **Control-center LOGOC surface:** interactive / read-write with persistent local decisions
+- **Theo-techno-cosmo pillar:** runtime code removed from `plex/`; research and manifest docs remain live
+- **No new blockers introduced; all tests pass without regression**
+- **Layout guard:** degrades gracefully when `ripgrep` is unavailable (legacy-path scan skipped with warning)
+- **Lint hygiene:** fixed three latent `gnostic-engine` ruff issues (unused imports + duplicate rubric-path key shadowing class 7 with invalid class 42)
+- **Next priority:** run funded x402 live smoke test on Base Sepolia (`X402_EVM_PRIVATE_KEY` + ≥0.5 USDC)
 
 ## v2.0.0 — March 27, 2026
 

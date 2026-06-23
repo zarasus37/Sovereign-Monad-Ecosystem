@@ -1,4 +1,4 @@
-# Succor Gnostic Engine
+# Gnostic Engine Notes
 ## Author: Cris Colon | Architecture: Volumetric 4D
 
 ### Launch Sequence:

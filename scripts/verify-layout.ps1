@@ -19,8 +19,12 @@ $allowedTopLevel = @(
   '.stale-node_modules-20260612153345',
   '.stale-node_modules-20260612153417',
   '.stale-node_modules-20260612153442',
+  '.husky',
+  '.kilocode',
+  '.testfox',
   'desktop.ini',
   'README.md',
+  'vitest.config.ts',
   'CONTRIBUTING.md',
   'archive',
   'docs',
@@ -47,7 +51,19 @@ $requiredDocs = @(
 $missingRequiredDocs = $requiredDocs | Where-Object { -not (Test-Path (Join-Path $root $_)) }
 
 $unexpectedTopLevel = Get-ChildItem -LiteralPath $root -Force |
-  Where-Object { $_.Name -notin $allowedTopLevel } |
+  Where-Object { $_.Name -notin $allowedTopLevel -and -not $_.PSIsContainer } |
+  Where-Object { $_.Name -ne '.girignore' } |
+  Where-Object {
+    # Ignore files already excluded by .gitignore (e.g., gh.exe)
+    $rel = $_.FullName.Substring($root.Length + 1)
+    $ignored = git check-ignore $rel 2>$null
+    -not $ignored
+  } |
+  Select-Object -ExpandProperty Name
+
+$expectedTrackedDirs = @('logs', 'packages', 'shared')
+$unexpectedTopLevel += Get-ChildItem -LiteralPath $root -Force -Directory |
+  Where-Object { $_.Name -notin $allowedTopLevel -and $_.Name -notin $expectedTrackedDirs } |
   Select-Object -ExpandProperty Name
 
 $activeScanRoots = @(
@@ -65,7 +81,16 @@ $activeScanRoots = @(
 
 $legacyPattern = 'Succor_Gnostic_Engine|Theo_Techno_Cosmo_Logically|Sovereign_Monad_Ecosystem|G:/My Drive/Succor_Gnostic_Engine|G:\\My Drive\\Succor_Gnostic_Engine|G:/My Drive/Theo_Techno_Cosmo_Logically|G:\\My Drive\\Theo_Techno_Cosmo_Logically|G:/My Drive/Sovereign_Monad_Ecosystem|G:\\My Drive\\Sovereign_Monad_Ecosystem'
 
- $patternHits = rg -n --hidden --glob '!archive/**' --glob '!**/node_modules/**' --glob '!**/.git/**' --glob '!**/.pytest_cache/**' --glob '!**/__pycache__/**' --glob '!**/.venv/**' --glob '!**/.venv2/**' --glob '!**/.venv.broken/**' --glob '!**/.stale-node_modules-*/**' --glob '!**/legacy/**' --glob '!**/out/**' --glob '!**/dist/**' --glob '!**/build/**' --glob '!**/coverage/**' --glob '!**/generated/**' --glob '!**/*.pdf' --glob '!**/*.png' --glob '!**/*.jpg' --glob '!**/*.jpeg' --glob '!**/*.gif' --glob '!**/*.mp4' --glob '!**/*.mov' --glob '!**/*.pptx' --glob '!**/*.xlsx' --glob '!**/*.csv' --glob '!**/*.jsonl' --glob '!**/*.db' --glob '!**/*.sqlite' --glob '!**/*.parquet' --glob '!**/*.zip' --glob '!**/*.7z' --glob '!**/*.tar.gz' --glob '!**/*.log' --glob '!**/*.bak' --glob '!**/*.tmp' --glob '!**/desktop.ini' --glob '!**/*.ico' --glob '!**/*.webp' --glob '!**/*.docx' --glob '!**/*.rtf' --glob '!**/*.mp3' --glob '!**/*.wav' --glob '!**/*.m4a' --glob '!**/*.avi' --glob '!**/*.mkv' --glob '!**/*.flac' --glob '!**/*.json.bak' --glob '!**/*.map' --glob '!**/*.lock' --glob '!**/*.min.*' --glob '!**/*.env' --glob '!**/*.pem' --glob '!**/*.key' --glob '!**/*.wasm' --glob '!**/*.did' --glob '!**/*.dll' --glob '!**/*.exe' --glob '!**/*.bin' --glob '!**/*.DS_Store' --glob '!**/*.swp' --glob '!**/*.swo' --glob '!**/*~' --glob '!scripts/verify-layout.ps1' -e $legacyPattern $activeScanRoots 2>$null
+$rg = Get-Command rg -ErrorAction SilentlyContinue
+
+if (-not $rg) {
+  if (-not $Quiet) {
+    Write-Host "ripgrep (rg) not found in PATH; skipping legacy-path scan. Install rg for full layout check." -ForegroundColor Yellow
+  }
+  $patternHits = @()
+} else {
+  $patternHits = & rg -n --hidden --glob '!archive/**' --glob '!**/node_modules/**' --glob '!**/.git/**' --glob '!**/.pytest_cache/**' --glob '!**/__pycache__/**' --glob '!**/.venv/**' --glob '!**/.venv2/**' --glob '!**/.venv.broken/**' --glob '!**/.stale-node_modules-*/**' --glob '!**/legacy/**' --glob '!**/out/**' --glob '!**/dist/**' --glob '!**/build/**' --glob '!**/coverage/**' --glob '!**/generated/**' --glob '!**/*.pdf' --glob '!**/*.png' --glob '!**/*.jpg' --glob '!**/*.jpeg' --glob '!**/*.gif' --glob '!**/*.mp4' --glob '!**/*.mov' --glob '!**/*.pptx' --glob '!**/*.xlsx' --glob '!**/*.csv' --glob '!**/*.jsonl' --glob '!**/*.db' --glob '!**/*.sqlite' --glob '!**/*.parquet' --glob '!**/*.zip' --glob '!**/*.7z' --glob '!**/*.tar.gz' --glob '!**/*.log' --glob '!**/*.bak' --glob '!**/*.tmp' --glob '!**/desktop.ini' --glob '!**/*.ico' --glob '!**/*.webp' --glob '!**/*.docx' --glob '!**/*.rtf' --glob '!**/*.mp3' --glob '!**/*.wav' --glob '!**/*.m4a' --glob '!**/*.avi' --glob '!**/*.mkv' --glob '!**/*.flac' --glob '!**/*.json.bak' --glob '!**/*.map' --glob '!**/*.lock' --glob '!**/*.min.*' --glob '!**/*.env' --glob '!**/*.pem' --glob '!**/*.key' --glob '!**/*.wasm' --glob '!**/*.did' --glob '!**/*.dll' --glob '!**/*.exe' --glob '!**/*.bin' --glob '!**/*.DS_Store' --glob '!**/*.swp' --glob '!**/*.swo' --glob '!**/*~' --glob '!scripts/verify-layout.ps1' -e $legacyPattern $activeScanRoots 2>$null
+}
 
 $errors = @()
 

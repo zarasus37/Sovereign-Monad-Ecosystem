@@ -52,7 +52,6 @@ class LogocMLPipeline:
         (0, 1, 0, 0, 1, 0, 1, 0): 7,   # Dicent-Symbol-Legisign (general law)
         (0, 1, 0, 1, 0, 0, 0, 1): 8,   # Argument-Indexical-Legisign
         (1, 0, 1, 0, 0, 0, 1, 0): 9,   # Dicent-Iconic-Sinsign
-        (0, 1, 0, 0, 1, 0, 1, 0): 42,  # Dicent-Symbol-Legisign (rubric)
     }
     
     def __init__(self, model_path: Optional[str] = None):
@@ -169,8 +168,6 @@ class LogocMLPipeline:
     @classmethod
     def train_from_corpus(cls, events: List[Dict[str, Any]]) -> dict:
         """Train a new Naive Bayes model from a corpus of events."""
-        from collections import defaultdict
-        
         feature_names = cls.FEATURE_NAMES
         X = []
         y = []

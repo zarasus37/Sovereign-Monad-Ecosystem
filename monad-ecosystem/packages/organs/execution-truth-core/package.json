@@ -1,0 +1,15 @@
+{
+  "name": "@sovereign/execution-truth-core",
+  "version": "0.1.0",
+  "description": "Sovereign Ecosystem Package: execution-truth-core",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\""
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

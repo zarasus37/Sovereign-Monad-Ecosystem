@@ -271,7 +271,7 @@ class ProductionPeirceClassifier:
 
     Usage:
         classifier = ProductionPeirceClassifier()  # loads default ML model
-        event = classifier.annotate(event)         # rubric → ML triage → auto/human
+        event = classifier.annotate(event)         # P4 flag clean → rubric → ML triage → auto/human
     """
 
     def __init__(
@@ -279,9 +279,14 @@ class ProductionPeirceClassifier:
         rubric_classifier: Optional[PeirceClassifier] = None,
         model_path: Optional[Path] = None,
         spec_path: Optional[Path] = None,
+        use_p4: bool = True,
     ):
         self.rubric = rubric_classifier or PeirceClassifier()
         self.pipeline = self._load_pipeline(model_path, spec_path)
+        self.use_p4 = use_p4
+        self._p4_cleaner = None
+        if use_p4:
+            self._p4_cleaner = self._load_p4_cleaner()
 
     def _load_pipeline(self, model_path, spec_path):
         """Load ML pipeline if numpy and model files are available."""
@@ -292,36 +297,73 @@ class ProductionPeirceClassifier:
             # numpy missing or model files absent → rubric-only fallback
             return None
 
+    def _load_p4_cleaner(self):
+        """Load P4 flag-cleaning helper if flag_extractor_v3 is available."""
+        try:
+            from scripts.flag_extractor_v3 import clean_and_extract_flags
+            return clean_and_extract_flags
+        except Exception:
+            # If flag_extractor_v3 cannot be imported (path, deps, etc.), fall back gracefully
+            return None
+
     def classify(self, event: LogocEvent) -> int:
         """Fast rubric-only classification (no ML overhead)."""
         return self.rubric.classify(event)
 
-    def annotate(self, event: LogocEvent) -> LogocEvent:
-        """
-        Production annotation with full ML triage.
+    def _apply_p4_cleaning(self, event: LogocEvent) -> LogocEvent:
+        """Run P4 narrative-purpose detection and update event.semiotic_flags."""
+        if self._p4_cleaner is None:
+            event.pipeline_p4_cleaned = False
+            return event
 
-        Flow:
-          1. Run rubric classification (fast, deterministic)
-          2. Run ML pipeline triage on flags
-          3. If auto_accept → populate peirce, clear migration_pending
-          4. If human_review → peirce=None, migration_pending=True
-          5. Store pipeline metadata on event for observability
-        """
-        if self.pipeline is None:
-            # Fallback to rubric-only when ML is unavailable
-            return self.rubric.annotate(event)
-
-        # Step 1: Extract flags for pipeline
         flags = event.semiotic_flags or SemioticFlags()
         flags_dict = {k: getattr(flags, k, False) for k in [
             "single_occurrence", "rule_based", "similarity", "causality",
             "convention", "possibility", "fact", "reason",
         ]}
 
-        # Step 2: Run ML triage
+        cleaned = self._p4_cleaner(
+            narrative=event.narrative or "",
+            existing_flags=flags_dict,
+        )
+
+        event.semiotic_flags = SemioticFlags(**cleaned)
+        event.pipeline_p4_cleaned = True
+        return event
+
+    def annotate(self, event: LogocEvent) -> LogocEvent:
+        """
+        Production annotation with full ML triage.
+
+        Flow:
+          1. P4 narrative-purpose flag cleaning (if enabled and available)
+          2. Run ML pipeline triage on cleaned flags
+          3. If auto_accept → populate peirce, clear migration_pending
+          4. If human_review → peirce=None, migration_pending=True
+          5. Store pipeline metadata on event for observability
+        """
+        if self.pipeline is None:
+            # Fallback to rubric-only when ML is unavailable
+            # Still apply P4 cleaning so rubric sees corrected flags
+            if self.use_p4 and self._p4_cleaner is not None:
+                event = self._apply_p4_cleaning(event)
+            return self.rubric.annotate(event)
+
+        # Step 1: P4 narrative-purpose flag cleaning
+        if self.use_p4:
+            event = self._apply_p4_cleaning(event)
+
+        # Step 2: Extract cleaned flags for pipeline
+        flags = event.semiotic_flags or SemioticFlags()
+        flags_dict = {k: getattr(flags, k, False) for k in [
+            "single_occurrence", "rule_based", "similarity", "causality",
+            "convention", "possibility", "fact", "reason",
+        ]}
+
+        # Step 3: Run ML triage
         triage = self.pipeline.triage(flags_dict, event_id=event.event_id)
 
-        # Step 3: Apply triage result
+        # Step 4: Apply triage result
         if triage["status"] == "auto_accept":
             class_id = triage["class_id"]
             try:
@@ -349,7 +391,7 @@ class ProductionPeirceClassifier:
             event.peirce_migration_pending = True
             event.peirce_migration_source = "pipeline_human_review"
 
-        # Step 4: Store pipeline metadata on event
+        # Step 5: Store pipeline metadata on event
         event.pipeline_triage_status = triage["status"]
         event.pipeline_triage_reason = triage["reason"]
         event.pipeline_ml_confidence = triage["ml"]["confidence"]

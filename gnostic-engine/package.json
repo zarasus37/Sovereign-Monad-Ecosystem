@@ -7,7 +7,7 @@
   "scripts": {
     "api": "uv run uvicorn api.gnostic_api:app --reload --port 8000",
     "dev": "uv run uvicorn api.gnostic_api:app --reload --port 8000",
-    "test": "uv run pytest tests/ -v",
+    "test": "powershell -Command \"if (Test-Path .venv/Scripts/python.exe) { .venv/Scripts/python.exe -m pytest tests/ -v } else { uv run pytest tests/ -v }\"",
     "lint": "uv run ruff check src/",
     "type-check": "uv run mypy src/",
     "format": "uv run ruff format src/",

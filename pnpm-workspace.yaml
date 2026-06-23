@@ -10,7 +10,10 @@ packages:
 
   # ── Monad Ecosystem (economic / agentic pillar) ───────────────────────────
   - 'monad-ecosystem/packages/*'
+  - 'monad-ecosystem/packages/organs/*'
   - 'monad-ecosystem/packages/organs/*/*'
+  # Note: public-activation-core is intentionally scaffold-only (README + package.json);
+  # it has no src/ or tsconfig.json and is excluded from the build approval list.
 
   # ── Control Center (ICP app — frontend + Node.js bridge backend) ──────────
   # Included in workspace so root pnpm build covers it.

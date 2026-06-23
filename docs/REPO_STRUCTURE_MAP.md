@@ -73,5 +73,5 @@ The long-term target is:
 3. quarantine legacy material under `legacy/` or `archive/`
 4. keep generated and local-only artifacts out of the mental model
 5. use the MOF and companion docs to define the authoritative operating state
-6. run `pnpm check:layout` before committing structural changes
+6. run `pnpm check:layout` before committing structural changes (if `ripgrep`/`rg` is unavailable the legacy-path scan is skipped with a warning, but the top-level guard still runs)
 

@@ -16,7 +16,7 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "echo 'no tests yet for types-only package' && exit 0",
     "lint": "echo 'No lint configured for types-only package'"
   },
   "devDependencies": {

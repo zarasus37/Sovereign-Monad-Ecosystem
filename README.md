@@ -133,11 +133,12 @@ New to the Sovereign Monad? Begin with the [Theo-Techno-Cosmo quick start guide]
 ---
 
 **Next Phases (roadmap)**
-- Phase 2: Rehome & prune `monad-ecosystem/agents/monad-mev/`
-- Phase 3: Convert `gnostic-engine/` to a proper Python package and remove "Succor" references
-- Phase 4: Polish `theo-techno-cosmo/` onboarding
+- Phase 2: Rehome & prune `monad-ecosystem/agents/monad-mev/` ✅ (legacy archived; live x402 code moved to `monad-ecosystem/packages/x402-bridge/`)
+- Phase 3: Convert `gnostic-engine/` to a proper Python package and remove "Succor" references ✅
+- Phase 4: Polish `theo-techno-cosmo/` onboarding + wire P4 narrative-purpose detection into LOGOC ✅
 - Phase 5: Cross-layer integration & shared types
-- Phase 6: Update MOF header + sync discipline
+- Phase 6: Update MOF header + sync discipline ✅
+- **Active frontier:** Funded x402 live smoke test on Base Sepolia (blocked on wallet funding)
 
 See the Master Operating File in `docs/` for the full axioms, architecture, and execution instructions.
 

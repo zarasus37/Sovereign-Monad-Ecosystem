@@ -53,3 +53,4 @@ class LogocEvent(BaseModel):
     pipeline_rubric_method: Optional[str] = None  # "direct" | "fallback_interpretant" | ...
     pipeline_rubric_class_id: Optional[int] = None
     pipeline_ml_class_id: Optional[int] = None
+    pipeline_p4_cleaned: bool = False  # P4 narrative-purpose flag cleaning was applied

@@ -13,7 +13,11 @@ from peirce.models import LogocEvent, SemioticFlags
 
 def test_production_classifier_rubric_fallback():
     """When ML pipeline is unavailable, ProductionPeirceClassifier falls back to rubric-only."""
-    prod = ProductionPeirceClassifier(model_path=None, spec_path=None)
+    from pathlib import Path
+    prod = ProductionPeirceClassifier(
+        model_path=Path("/nonexistent/model.json"),
+        spec_path=Path("/nonexistent/spec.json"),
+    )
     assert prod.pipeline is None
 
     event = LogocEvent(
@@ -193,6 +197,79 @@ def test_production_classifier_fast_classify():
     print(f"  Fast classify: class={class_id}")
 
 
+def test_production_classifier_p4_illustrative_to_class5():
+    """P4 cleaning should turn an illustrative historical narrative into Class 5, not Class 2."""
+    prod = ProductionPeirceClassifier()
+    if prod.pipeline is None:
+        print("SKIP: ML pipeline not available in this environment")
+        return
+    if prod._p4_cleaner is None:
+        print("SKIP: P4 flag extractor not importable in this environment")
+        return
+
+    # Raw flags look like Class 2 (temporal anchor + causality + fact)
+    # But the narrative is ILLUSTRATIVE: Austerlitz is used as an example of a general principle
+    event = LogocEvent(
+        event_id="test_p4_illustrative_001",
+        timestamp="2026-06-20T00:00:00Z",
+        narrative="Austerlitz 1805 demonstrates the principle of concentration of force: the successful deployment of superior combat power at the decisive point consistently produces victory across all theaters of war.",
+        semiotic_flags=SemioticFlags(single_occurrence=True, causality=True, fact=True),
+    )
+    annotated = prod.annotate(event)
+
+    assert annotated.pipeline_p4_cleaned is True, "P4 cleaning should be recorded"
+    assert annotated.peirce is not None, f"Expected auto-accept, got status={annotated.pipeline_triage_status}"
+    assert annotated.peirce.sign_class_id == 5, f"Expected Class 5 after P4 cleaning, got {annotated.peirce.sign_class_id}"
+    assert annotated.semiotic_flags.rule_based is True, "P4 should set rule_based=True for illustrative principle"
+    assert annotated.semiotic_flags.single_occurrence is False, "P4 should clear single_occurrence for illustrative narrative"
+    print(f"  P4 illustrative → Class {annotated.peirce.sign_class_id}")
+
+
+def test_production_classifier_p4_constitutive_stays_class2():
+    """P4 cleaning should keep a constitutive historical narrative as Class 2."""
+    prod = ProductionPeirceClassifier()
+    if prod.pipeline is None:
+        print("SKIP: ML pipeline not available in this environment")
+        return
+    if prod._p4_cleaner is None:
+        print("SKIP: P4 flag extractor not importable in this environment")
+        return
+
+    event = LogocEvent(
+        event_id="test_p4_constitutive_001",
+        timestamp="2026-06-20T00:00:00Z",
+        narrative="Napoleon's strategy at the Battle of Austerlitz in 1805 was decisive because the French army outmaneuvered the Austro-Russian forces, leading to a crushing victory that ended the Third Coalition.",
+        semiotic_flags=SemioticFlags(single_occurrence=True, causality=True, fact=True),
+    )
+    annotated = prod.annotate(event)
+
+    assert annotated.pipeline_p4_cleaned is True
+    assert annotated.peirce is not None, f"Expected auto-accept, got status={annotated.pipeline_triage_status}"
+    assert annotated.peirce.sign_class_id == 2, f"Expected Class 2 for constitutive narrative, got {annotated.peirce.sign_class_id}"
+    assert annotated.semiotic_flags.single_occurrence is True
+    print(f"  P4 constitutive → Class {annotated.peirce.sign_class_id}")
+
+
+def test_production_classifier_p4_can_be_disabled():
+    """With use_p4=False, raw flags are passed through unchanged."""
+    prod = ProductionPeirceClassifier(use_p4=False)
+    if prod.pipeline is None:
+        print("SKIP: ML pipeline not available in this environment")
+        return
+
+    event = LogocEvent(
+        event_id="test_p4_disabled_001",
+        timestamp="2026-06-20T00:00:00Z",
+        narrative="Austerlitz 1805 demonstrates the principle of concentration of force.",
+        semiotic_flags=SemioticFlags(single_occurrence=True, causality=True, fact=True),
+    )
+    annotated = prod.annotate(event)
+
+    assert annotated.pipeline_p4_cleaned is False
+    assert annotated.semiotic_flags.single_occurrence is True
+    print(f"  P4 disabled → raw flags preserved")
+
+
 def run_all_tests():
     """Run all pipeline integration tests."""
     tests = [
@@ -203,6 +280,9 @@ def run_all_tests():
         test_production_classifier_class2_vs_class5,
         test_production_classifier_ambiguous_event,
         test_production_classifier_fast_classify,
+        test_production_classifier_p4_illustrative_to_class5,
+        test_production_classifier_p4_constitutive_stays_class2,
+        test_production_classifier_p4_can_be_disabled,
     ]
 
     passed = 0

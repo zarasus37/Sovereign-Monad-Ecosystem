@@ -19,14 +19,12 @@
     "build": "passing",
     "test": "passing",
     "lint": "passing",
-    "layout_check": "passing",
+    "layout_check": "passing; legacy-path scan skipped with warning when ripgrep is unavailable",
     "frontend_typecheck": "passing",
     "frontend_build": "passing"
   },
   "known_follow_ups": [
-    "Deep cleanup of legacy content under theo-techno-cosmo",
-    "Gnostic Engine runtime hardening after the current FastAPI/Starlette httpx warning",
-    "Deeper control-center integration with live telemetry and execution surfaces, now focused on producer and watcher integration"
+    "Run funded x402 live smoke test on Base Sepolia (active next; preflight confirmed 0 ETH / 0 USDC on P2 settlement wallet)"
   ],
-  "last_validated": "2026-06-18"
+  "last_validated": "2026-06-23"
 }
