@@ -36,10 +36,14 @@ import {
   useLogocCorpus,
   useFilteredCorpus,
   useLogocFilters,
+  useHRDecisionStore,
+  useDecoratedCorpus,
 } from "@/hooks/use-logoc";
 import { useNavigate } from "@tanstack/react-router";
 import type { LogocEvent, PragmatismBand } from "@/services/logoc-api";
 import { computePps, getHumanReviewEvents } from "@/services/logoc-api";
+import { ReclassifyDialog } from "@/components/reclassify-dialog";
+import { toast } from "sonner";
 import {
   BookOpen,
   Filter,
@@ -49,6 +53,8 @@ import {
   CheckCircle,
   BrainCircuit,
   Flag,
+  Pencil,
+  Download,
 } from "lucide-react";
 
 // ── Color palette (matches dark theme) ──────────────────────────────────────────
@@ -143,13 +149,20 @@ function TriadHeatmapCell({
 // ── Main page ───────────────────────────────────────────────────────────────────
 
 export default function LogocPage() {
-  const { data: corpus, isLoading, error, refetch } = useLogocCorpus();
+  const { data: rawCorpus, isLoading, error, refetch } = useLogocCorpus();
   const { filters, setBand, setMode, setMigrationPending, setSource, reset } = useLogocFilters();
+  const corpus = useDecoratedCorpus(rawCorpus);
   const { events, total, bandDistribution, classDistribution, ppsScatter, triadHeatmap } =
     useFilteredCorpus(corpus, filters);
 
+  const decisionCount = useHRDecisionStore((s) => Object.keys(s.byId).length);
+  const exportDecisions = useHRDecisionStore((s) => s.exportAll);
+  const importDecisions = useHRDecisionStore((s) => s.importMany);
+  const clearAllDecisions = useHRDecisionStore((s) => s.clearAll);
+
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
+  const [reviewingId, setReviewingId] = useState<string | null>(null);
 
   const filteredEvents = useMemo(() => {
     if (!searchTerm) return events;
@@ -159,6 +172,49 @@ export default function LogocPage() {
         e.event_id.toLowerCase().includes(searchTerm.toLowerCase()),
     );
   }, [events, searchTerm]);
+
+  const reviewingEvent = useMemo(() => {
+    if (!reviewingId) return null;
+    return events.find((e) => e.event_id === reviewingId) ?? null;
+  }, [events, reviewingId]);
+
+  function handleExportDecisions() {
+    const all = exportDecisions();
+    if (all.length === 0) {
+      toast.info("No decisions to export yet.");
+      return;
+    }
+    const blob = new Blob([JSON.stringify(all, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `logoc-hr-decisions-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    toast.success(`Exported ${all.length} decisions.`);
+  }
+
+  function handleImportDecisions() {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "application/json";
+    input.onchange = async (e) => {
+      const file = (e.target as HTMLInputElement).files?.[0];
+      if (!file) return;
+      try {
+        const text = await file.text();
+        const parsed = JSON.parse(text);
+        if (!Array.isArray(parsed)) throw new Error("Expected a JSON array");
+        importDecisions(parsed);
+        toast.success(`Imported ${parsed.length} decisions.`);
+      } catch (err) {
+        toast.error(`Import failed: ${err instanceof Error ? err.message : String(err)}`);
+      }
+    };
+    input.click();
+  }
 
   const maxHeatmapCount = useMemo(() => {
     return Math.max(...triadHeatmap.map((h) => h.count), 1);
@@ -212,6 +268,42 @@ export default function LogocPage() {
             <Flag className="h-3 w-3 mr-1" />
             Review {corpus ? getHumanReviewEvents(corpus.events).length : 0}
           </Button>
+          {decisionCount > 0 && (
+            <Button
+              variant="outline"
+              size="sm"
+              className="h-7 text-[10px] font-mono border-emerald-500/40 text-emerald-500 hover:bg-emerald-500/10"
+              onClick={handleExportDecisions}
+              data-ocid="logoc.export_decisions.button"
+            >
+              <Download className="h-3 w-3 mr-1" />
+              Export {decisionCount}
+            </Button>
+          )}
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-7 text-[10px] font-mono"
+            onClick={handleImportDecisions}
+            data-ocid="logoc.import_decisions.button"
+          >
+            Import
+          </Button>
+          {decisionCount > 0 && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="h-7 text-[10px] font-mono text-destructive"
+              onClick={() => {
+                if (window.confirm(`Clear all ${decisionCount} decisions?`)) {
+                  clearAllDecisions();
+                  toast.success("All decisions cleared.");
+                }
+              }}
+            >
+              Clear all
+            </Button>
+          )}
           <Badge variant="outline" className="font-mono text-[10px]">
             <CheckCircle className="h-3 w-3 mr-1 text-primary" />
             {corpus?.accepted ?? 0} accepted
@@ -516,40 +608,79 @@ export default function LogocPage() {
                   <TableHead className="text-[10px] font-mono uppercase w-48">Path</TableHead>
                   <TableHead className="text-[10px] font-mono uppercase w-16">PPS</TableHead>
                   <TableHead className="text-[10px] font-mono uppercase">Narrative</TableHead>
+                  <TableHead className="text-[10px] font-mono uppercase w-28">Decision</TableHead>
+                  <TableHead className="text-[10px] font-mono uppercase w-16 text-right">Act</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {filteredEvents.slice(0, 50).map((ev: LogocEvent) => (
-                  <TableRow key={ev.event_id} className="border-border/50">
-                    <TableCell className="font-mono text-[10px] text-muted-foreground">
-                      {ev.event_id}
-                    </TableCell>
-                    <TableCell>
-                      <PragmatismBandBadge
-                        band={
-                          ev.peirce_migration_pending
-                            ? "PENDING"
-                            : ev.peirce?.pragmatism_band
-                        }
-                      />
-                    </TableCell>
-                    <TableCell>
-                      <ModeBadge mode={ev.peirce?.mode} />
-                    </TableCell>
-                    <TableCell>
-                      <PeircePathBadge path={ev.peirce?.path} />
-                    </TableCell>
-                    <TableCell className="font-mono text-[10px]">
-                      {ev.peirce ? computePps(ev).toFixed(2) : "—"}
-                    </TableCell>
-                    <TableCell className="text-[11px] text-muted-foreground max-w-md truncate">
-                      {ev.narrative}
-                    </TableCell>
-                  </TableRow>
-                ))}
+                {filteredEvents.slice(0, 50).map((ev) => {
+                  const localDecision = (ev as LogocEvent & { _local_decision?: { kind: string; newClassId?: number } })._local_decision;
+                  return (
+                    <TableRow key={ev.event_id} className="border-border/50">
+                      <TableCell className="font-mono text-[10px] text-muted-foreground">
+                        {ev.event_id}
+                      </TableCell>
+                      <TableCell>
+                        <PragmatismBandBadge
+                          band={
+                            ev.peirce_migration_pending
+                              ? "PENDING"
+                              : ev.peirce?.pragmatism_band
+                          }
+                        />
+                      </TableCell>
+                      <TableCell>
+                        <ModeBadge mode={ev.peirce?.mode} />
+                      </TableCell>
+                      <TableCell>
+                        <PeircePathBadge path={ev.peirce?.path} />
+                      </TableCell>
+                      <TableCell className="font-mono text-[10px]">
+                        {ev.peirce ? computePps(ev).toFixed(2) : "—"}
+                      </TableCell>
+                      <TableCell className="text-[11px] text-muted-foreground max-w-md truncate">
+                        {ev.narrative}
+                      </TableCell>
+                      <TableCell>
+                        {localDecision ? (
+                          <Badge
+                            variant="outline"
+                            className={`font-mono text-[10px] ${
+                              localDecision.kind === "approved"
+                                ? "border-emerald-500/60 text-emerald-500"
+                                : localDecision.kind === "rejected"
+                                  ? "border-destructive/60 text-destructive"
+                                  : localDecision.kind === "reclassify"
+                                    ? "border-blue-500/60 text-blue-500"
+                                    : "border-amber-500/60 text-amber-500"
+                            }`}
+                          >
+                            {localDecision.kind === "reclassify" && localDecision.newClassId !== undefined
+                              ? `→ ${localDecision.newClassId}`
+                              : localDecision.kind}
+                          </Badge>
+                        ) : (
+                          <span className="text-[10px] font-mono text-muted-foreground">—</span>
+                        )}
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="h-6 w-6 p-0"
+                          onClick={() => setReviewingId(ev.event_id)}
+                          title="Review / reclassify"
+                          data-ocid="logoc.row.review_button"
+                        >
+                          <Pencil className="h-3 w-3" />
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  );
+                })}
                 {filteredEvents.length === 0 && (
                   <TableRow>
-                    <TableCell colSpan={6} className="text-center py-8 text-muted-foreground text-xs font-mono">
+                    <TableCell colSpan={8} className="text-center py-8 text-muted-foreground text-xs font-mono">
                       No events match current filters
                     </TableCell>
                   </TableRow>
@@ -564,6 +695,13 @@ export default function LogocPage() {
           )}
         </CardContent>
       </Card>
+
+      <ReclassifyDialog
+        eventId={reviewingId}
+        eventSummary={reviewingEvent?.narrative}
+        currentClassId={reviewingEvent?.peirce?.sign_class_id ?? null}
+        onClose={() => setReviewingId(null)}
+      />
     </div>
   );
 }
