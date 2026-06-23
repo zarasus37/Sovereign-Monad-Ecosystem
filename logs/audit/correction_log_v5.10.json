@@ -1,0 +1,120 @@
+{
+  "version": "v5.10",
+  "applied_at": "2026-06-23T10:19:12.406560Z",
+  "source_corpus": "master_corpus_v5.9.jsonl",
+  "target_corpus": "master_corpus_v5.10.jsonl",
+  "phase": "P8 (HR review)",
+  "corrections": [
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev13",
+      "action": "reclassify",
+      "old_class": 42,
+      "new_class": 2,
+      "old_flags": {
+        "single_occurrence": true,
+        "rule_based": true,
+        "similarity": false,
+        "causality": true,
+        "convention": true,
+        "possibility": false,
+        "fact": true,
+        "reason": true
+      },
+      "rationale": "Class 42 → 2: single demonstrative recognition, path Sinsign/Index/Dicent"
+    },
+    {
+      "event_id": "gnosis_Friedrich Nietzsche (1844â€“1900) GNO_ev08",
+      "action": "reclassify",
+      "old_class": 5,
+      "new_class": 2,
+      "old_flags": {
+        "single_occurrence": false,
+        "rule_based": true,
+        "similarity": false,
+        "causality": true,
+        "convention": false,
+        "possibility": true,
+        "fact": true,
+        "reason": false
+      },
+      "rationale": "Class 5 → 2: single biographical receipt of universal, path Sinsign/Index/Dicent"
+    }
+  ],
+  "removed": [],
+  "kept_as_is": [
+    {
+      "event_id": "Spinoza_ev09",
+      "old_class": 42,
+      "rationale": "ML agrees with flagged; rubric low-confidence only — verified Class 42"
+    },
+    {
+      "event_id": "Machiavelli_ev11",
+      "old_class": 42,
+      "rationale": "ML agrees with flagged; rubric low-confidence only — verified Class 42"
+    },
+    {
+      "event_id": "Akhenaten_ev06",
+      "old_class": 4,
+      "rationale": "Path-class gap (Rheme-Indexical-Legisign); rubric general law — verified Class 4"
+    },
+    {
+      "event_id": "Bruno_ev06",
+      "old_class": 4,
+      "rationale": "Path-class gap (Rheme-Indexical-Legisign); rubric general law — verified Class 4"
+    },
+    {
+      "event_id": "Trithemius_ev01",
+      "old_class": 1,
+      "rationale": "Confidence 0.96, ML agrees — verified Class 1"
+    }
+  ],
+  "model_path": "logs\\audit\\ml_classifier_v13.json",
+  "test_accuracy": 0.9859,
+  "full_accuracy": 0.985,
+  "per_class_full": {
+    "2": {
+      "correct": 71,
+      "total": 73
+    },
+    "8": {
+      "correct": 7,
+      "total": 7
+    },
+    "9": {
+      "correct": 17,
+      "total": 17
+    },
+    "0": {
+      "correct": 84,
+      "total": 84
+    },
+    "1": {
+      "correct": 30,
+      "total": 30
+    },
+    "7": {
+      "correct": 33,
+      "total": 33
+    },
+    "4": {
+      "correct": 15,
+      "total": 18
+    },
+    "3": {
+      "correct": 16,
+      "total": 16
+    },
+    "42": {
+      "correct": 24,
+      "total": 24
+    },
+    "6": {
+      "correct": 12,
+      "total": 12
+    },
+    "5": {
+      "correct": 20,
+      "total": 20
+    }
+  }
+}

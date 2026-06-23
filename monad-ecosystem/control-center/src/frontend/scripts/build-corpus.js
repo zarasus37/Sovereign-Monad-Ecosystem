@@ -1,7 +1,7 @@
 /**
  * build-corpus.js
  *
- * Converts master_corpus_v5.9.jsonl → public/logoc-corpus.json
+ * Converts master_corpus_v5.10.jsonl → public/logoc-corpus.json
  * Run before `vite build` to ensure the static corpus is up to date.
  */
 
@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 const CORPUS_JSONL = path.resolve(
   __dirname,
-  "../../../../../logs/corpus/master_corpus_v5.9.jsonl"
+  "../../../../../logs/corpus/master_corpus_v5.10.jsonl"
 );
 const OUTPUT_JSON = path.resolve(__dirname, "../public/logoc-corpus.json");
 
