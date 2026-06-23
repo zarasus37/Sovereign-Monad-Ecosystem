@@ -71,6 +71,45 @@ unsubscribe();
 | `KAFKA_ENABLED` | No | Set to `true` to enable Kafka forwarding |
 | `KAFKA_BROKERS` | If Kafka enabled | Comma-separated broker addresses |
 | `KAFKA_CLIENT_ID` | No | Client ID for this producer (default: `sovereign-bus`) |
+| `KAFKA_MAX_RETRIES` | No | Per-send retry attempts (default `3`) |
+| `KAFKA_INITIAL_BACKOFF_MS` | No | Initial backoff in ms (default `100`, doubles each attempt) |
+| `KAFKA_MAX_BACKOFF_MS` | No | Max backoff in ms (default `5000`) |
+
+## Production Hardening (P9)
+
+The bridge implements a real `kafkajs` producer with:
+
+- **Idempotent producer** with `acks=all` and `maxInFlightRequests=5`
+- **Bounded exponential backoff** with configurable ceiling
+- **Dead-letter routing** — events that exhaust all retries are forwarded to `<topic>.dlq` with full diagnostic headers (`dlq-reason`, `dlq-source-topic`, `dlq-source-error`, `dlq-ts`)
+- **Lazy `kafkajs` import** — the package builds even when `kafkajs` is not installed; the import is only attempted when `KAFKA_ENABLED=true`
+- **Graceful shutdown** — `detach()` flushes, disconnects, and clears subscriptions
+- **Connection observability** — logs `producer.connect`, `producer.disconnect`, `producer.network.request_timeout`
+- **Structured headers** — every message carries `event-type`, `event-layer`, `correlation-id`, and (when present) `event-hash`
+- **Testable port** — all Kafka calls go through a `KafkaProducerLike` interface; the test suite injects a mock producer and runs in 162ms with no broker required
+
+### Topic map (read-only, exposed via `KafkaBridge.getTopicMap()`)
+
+| SignalEventType | Kafka Topic | DLQ Topic |
+|---|---|---|
+| `price.updated` | `monad.price` | `monad.price.dlq` |
+| `spread.detected` | `signals.spread` | `signals.spread.dlq` |
+| `oracle.regime.classified` | `risk.evaluation` | `risk.evaluation.dlq` |
+| `trade.approved` | `portfolio.approved` | `portfolio.approved.dlq` |
+| `trade.executed` | `execution.monad` | `execution.monad.dlq` |
+| `system.health` | `system.health` | `system.health.dlq` |
+| `hepar.audit.completed` | `hepar.audit.completed` | `hepar.audit.completed.dlq` |
+| `gnosis.score.computed` | `gnosis.score` | `gnosis.score.dlq` |
+| `dove.signal.tier1/2/3` | `dove.signals` | `dove.signals.dlq` |
+| `data-rail.activated` | `data-rail.lifecycle` | `data-rail.lifecycle.dlq` |
+| `emergence.claim.submitted` | `emergence.claims` | `emergence.claims.dlq` |
+| `revenue.routed` | `revenue.router` | `revenue.router.dlq` |
+
+### Tests
+
+```bash
+pnpm test       # 7/7 pass in ~160ms, no broker required
+```
 
 ---
 
