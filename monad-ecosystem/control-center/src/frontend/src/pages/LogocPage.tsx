@@ -199,7 +199,7 @@ export default function LogocPage() {
             LOGOC Corpus Explorer
           </h1>
           <p className="text-[10px] font-mono text-muted-foreground tracking-widest mt-0.5">
-            Peirce 66-class semiotic manifold — v5.2 corpus
+            Peirce 66-class semiotic manifold — v5.9 corpus
           </p>
         </div>
         <div className="flex items-center gap-3">
