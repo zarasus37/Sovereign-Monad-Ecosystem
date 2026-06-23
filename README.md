@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # The Sovereign
 
 **Unified Theotechnological Gnostic Ecosystem** - Layered Monorepo (v2.4.0)
