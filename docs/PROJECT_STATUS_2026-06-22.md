@@ -2,8 +2,8 @@
 
 **Date:** 2026-06-22  
 **Branch:** main  
-**Last Commit:** `a0adfa6` — feat(logoc): v5.9 corpus with 6 Class-2-zone reclassifications + ML v12  
-**Total Tracked Files:** 1,286  
+**Last Commit:** `377c227` — feat(monad-mev): add x402_live_smoke.py — staged end-to-end P2 unblock  
+**Total Tracked Files:** 1,287  
 **Untracked (New):** 4 files (.girignore, gh.exe — both ignored; 2 drift artifacts)  
 
 ---
@@ -81,6 +81,47 @@ Six events flagged as Class 2 had rubric or ML disagreements:
 
 ---
 
+## Phase P2 — x402 Live Unblock (READY)
+
+### Verified live (2026-06-22)
+
+Probed `https://x402.quicknode.com/monad-mainnet` with `httpx` + `monad-mev-fetcher/1.0` UA. Endpoint is live and returns proper HTTP 402 with full x402 v2 payment options:
+
+| Option | Network | Cost | Source |
+|--------|---------|------|--------|
+| per-request | `eip155:84532` (Base Sepolia) | $0.001 USDC/req (1,000 base units) | x402 accepts[1] |
+| per-request | `eip155:84532` | $1.00 USDC/req (1,000,000 base units) | x402 accepts[0] |
+| nanopayment | `eip155:84532` | $0.0001 USDC/req, batched, 7-day timeout | x402 accepts[2] |
+| credit-drawdown | (SIWX auth) | **1M credits/month free** | hidden behind /auth |
+
+- Settlement address: `0xF46394adDdA95A3d5bCC1124605E3d15D204623C`
+- USDC contract (Base Sepolia): `0x036CbD53842c5426634e7929541eC2318f3dCF7e`
+- Circle Gateway contract (Base Sepolia): `0x0077777d7EBA4688BDeF3E311b846F25870A19B9`
+- Cloudflare 1010 WAF blocks bare `urllib` — must use `httpx` (already in `x402_quicknode.py`)
+
+### Settlement wallet (P2)
+
+**Address:** `0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F` (Base Sepolia, EIP-55 valid)
+**Required balance:** ≥0.5 USDC + ~0.01 ETH for gas
+**Faucet:** https://faucet.coinbase.com/
+
+### One-command unblock (3 stages)
+
+```bash
+# Stage 1 — preflight (works today, no creds)
+X402_EVM_PRIVATE_KEY_ADDRESS=0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F \
+  python monad-ecosystem/agents/monad-mev/scripts/x402_live_smoke.py --stage preflight
+
+# Stage 2 — SIWX enrollment (set key in your shell, never paste in chat)
+export X402_EVM_PRIVATE_KEY=0x...
+python monad-ecosystem/agents/monad-mev/scripts/x402_live_smoke.py --stage siwx
+
+# Stage 3 — live RPC via credit-drawdown
+python monad-ecosystem/agents/monad-mev/scripts/x402_live_smoke.py --stage live
+```
+
+---
+
 ## Phase P6 — x402 QuickNode Integration (COMPLETE)
 
 ### Architecture
@@ -142,7 +183,7 @@ monad_price_fetcher.py
 | Priority | Task | Status |
 |----------|------|--------|
 | P1 | Commit 3 untracked post-commit files | ✅ Done (commits 474f652 + 661189d) |
-| P2 | Test x402 with real wallet + USDC on Base Sepolia | ⏳ Blocked (needs wallet funding) |
+| P2 | Test x402 with real wallet + USDC on Base Sepolia | 🟡 Ready (x402_live_smoke.py staged; needs `X402_EVM_PRIVATE_KEY` in shell) |
 | P3 | Add `eth-account` to requirements.txt / pyproject.toml | ✅ Done (pyproject.toml + verified) |
 | P4 | Monitor drift after 24 hours | ✅ Done (drift_cron.py normalization fix + fresh snapshot 20260622_162714; KL=0 vs prev) |
 | P5 | Wire frontend to `logoc-corpus-production.json` | ✅ Done (commit 5854b7a — corpus points at v5.8 final) |
@@ -232,4 +273,4 @@ git push origin main
 - **Documentation:** x402 setup guide, env template, 6-test validation suite
 - **Control-center wiring:** Corpus pipeline (dev plugin + build script) pointed at v5.8 final; static fallback regenerated (334 events, 0 pending)
 - **All files committed:** Yes (last commit a0adfa6)
-- **Ready for production:** Yes (pending x402 wallet funding for live testing; pay-per-request code path now verified loadable end-to-end)
+- **Ready for production:** Yes (x402 endpoint live, payment options verified; P2 unblock is `export X402_EVM_PRIVATE_KEY=…` + `x402_live_smoke.py --stage live` once wallet is funded with ≥0.5 USDC on Base Sepolia)

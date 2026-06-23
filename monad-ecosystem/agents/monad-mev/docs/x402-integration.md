@@ -84,6 +84,8 @@ Your wallet needs USDC on the **payment network** (Base Sepolia for dev), not on
 **Option B: Bridge from Base Mainnet**
 - Use the official Base bridge
 
+**Active settlement wallet (P2):** `0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F` (Base Sepolia, EIP-55 valid). Fund this address with ≥0.5 USDC + 0.01 ETH for gas to enable the credit-drawdown enrollment.
+
 ### 5. Run the Test
 
 ```bash
@@ -298,7 +300,8 @@ export MONAD_RPC_PRIMARY=https://rpc1.monad.xyz
 | `x402_quicknode.py` | Python x402 client (credit-drawdown + pay-per-request) |
 | `monad_price_fetcher.py` | Price fetcher with x402 as primary provider |
 | `get_x402_jwt.js` | Node.js helper for JWT (optional, fallback only) |
-| `test_x402_auth.py` | Test suite for x402 module validation |
+| `test_x402_auth.py` | Test suite for x402 module validation (offline) |
+| `x402_live_smoke.py` | End-to-end live verification (3 staged commands) |
 | `.env.example` | Environment variable template |
 
 ---
@@ -312,6 +315,82 @@ export MONAD_RPC_PRIMARY=https://rpc1.monad.xyz
 3. **Network scope:** The private key signs on the **payment network** (Base Sepolia/Base Mainnet), not on Monad. The target network (Monad) is queried, not signed.
 
 4. **JWT caching:** The JWT is stored in-memory only. It is not written to disk. Each process instance authenticates independently.
+
+---
+
+## Live Verification (P2 Unblock)
+
+The `x402_live_smoke.py` script is the one-command P2 unblock. Three stages, each independently runnable:
+
+### Stage 1: Pre-flight (no creds required)
+
+```bash
+# Address-only — no signing, no network secret exposure
+X402_EVM_PRIVATE_KEY_ADDRESS=0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F \
+  python x402_live_smoke.py --stage preflight
+```
+
+Output:
+- EIP-55 checksum validation
+- ETH + USDC balance check on Base Sepolia
+- SIWX message construction (266 chars)
+
+### Stage 2: SIWX enrollment (requires X402_EVM_PRIVATE_KEY)
+
+```bash
+# Set the key in your shell only — never commit, never paste in chat
+export X402_EVM_PRIVATE_KEY=0x...
+export X402_EVM_PRIVATE_KEY_ADDRESS=0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F
+python x402_live_smoke.py --stage siwx
+```
+
+Output:
+- EIP-191 personal_sign over the SIWX message
+- POST to `https://x402.quicknode.com/auth` with signed message
+- JWT cached to `.env` as `X402_JWT_TOKEN`
+
+### Stage 3: Live RPC (requires JWT)
+
+```bash
+python x402_live_smoke.py --stage live
+```
+
+Output:
+- One `eth_blockNumber` call via credit-drawdown
+- Block height reported
+- `X-Credits-Remaining` header captured if exposed
+
+### Verified Live (2026-06-22)
+
+The endpoint `https://x402.quicknode.com/monad-mainnet` returns HTTP 402 with this x402 v2 body (truncated):
+
+```json
+{
+  "x402Version": 2,
+  "resource": {"url": "https://x402.quicknode.com/monad-mainnet", ...},
+  "accepts": [
+    {"scheme": "exact", "network": "eip155:84532", "amount": "1000000",
+     "payTo": "0xF46394adDdA95A3d5bCC1124605E3d15D204623C",
+     "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+     "extra": {"name": "USDC", "version": "2"}},
+    {"scheme": "exact", "network": "eip155:84532", "amount": "1000",
+     "payTo": "0xF46394adDdA95A3d5bCC1124605E3d15D204623C",
+     "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+     "extra": {"name": "USDC", "version": "2"}},
+    {"scheme": "exact", "network": "eip155:84532", "amount": "100",
+     "extra": {"name": "GatewayWalletBatched", "verifyingContract":
+       "0x0077777d7EBA4688BDeF3E311b846F25870A19B9"}},
+    {"scheme": "exact", "network": "eip155:8453",   "amount": "10000000", ...}
+  ]
+}
+```
+
+**Confirmed payment options (Base Sepolia):**
+- **per-request**: 1,000,000 (= $1.00 USDC) or 1,000 (= $0.001 USDC) per call
+- **nanopayment**: 100 base units per batched call ($0.0001), 7-day timeout, Circle Gateway contract `0x0077777d7EBA4688BDeF3E311b846F25870A19B9`
+- **credit-drawdown**: SIWX auth required (not exposed in 402 body); 1M credits/month free tier
+
+Cloudflare 1010 WAF blocks bare `urllib` requests — must use `httpx` with proper `User-Agent: monad-mev-fetcher/1.0` header (already handled by `x402_quicknode.py`).
 
 ---
 
