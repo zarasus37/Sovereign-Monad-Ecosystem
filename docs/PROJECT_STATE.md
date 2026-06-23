@@ -2,21 +2,20 @@
 
 This is the canonical resume point for the Sovereign Monad ecosystem.
 
-If you are picking up work in a fresh session, read this file first after `README.md` and `docs/OPEN_FIRST.md`.
+If you are picking up work in a fresh session, read this file after `README.md` and `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`.
 
 ## Canonical Source
 
 - Root workspace: `C:\Users\crisc\OneDrive - Southern Careers Institute\My Drive\The_Sovereign`
 - Authority chain:
-  1. `README.md`
-  2. `docs/OPEN_FIRST.md`
-  3. `docs/PROJECT_STATE.md`
-  4. `docs/REPO_STRUCTURE_MAP.md`
-  5. `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` (v2.5.0 changelog active)
+  1. `README.md` — entry point and how to run the ecosystem
+  2. `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` — authoritative operating backbone: philosophy, architecture, roadmap, blockers
+  3. `docs/PROJECT_STATE.md` — current build-state snapshot and next actions
+  4. `docs/REPO_STRUCTURE_MAP.md` — structural layout of active, archived, and generated surfaces
 
 ## Current Snapshot
 
-- The repo is structurally clean and organized into three active pillars:
+- The repo is structurally clean and organized into three active ecosystem domains:
   - `theo-techno-cosmo/`
   - `gnostic-engine/`
   - `monad-ecosystem/`

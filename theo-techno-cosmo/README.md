@@ -13,10 +13,9 @@ Theo-Techno-Cosmo is the philosophical and doctrinal pillar of the Sovereign Mon
 
 ## Run
 
-This pillar is not an application runtime. Use it by reading and navigating the docs:
+This domain is not an application runtime. Use it by reading and navigating the docs:
 
 - Start with `README.md`
-- Then read `../docs/OPEN_FIRST.md`
 - Then read `../docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`
 
 ## Do Not Put Here

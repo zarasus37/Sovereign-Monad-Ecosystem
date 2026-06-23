@@ -7,10 +7,9 @@ This repository is the unified workspace for the Sovereign Monad ecosystem.
 Before making changes, read:
 
 1. `README.md`
-2. `docs/OPEN_FIRST.md`
+2. `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`
 3. `docs/PROJECT_STATE.md`
 4. `docs/REPO_STRUCTURE_MAP.md`
-5. `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`
 
 ## Working Rules
 

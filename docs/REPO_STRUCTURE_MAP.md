@@ -30,10 +30,10 @@ These are the canonical working surfaces for the ecosystem:
 
 These files define system-level truth and should be treated as primary references:
 
-- `docs/OPEN_FIRST.md`
-- `docs/PROJECT_STATE.md`
-- `docs/PROJECT_STATE.json`
-- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`
+- `README.md` — entry point: how to run the ecosystem and where to read next
+- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` — authoritative operating backbone: philosophy, architecture, roadmap, blockers
+- `docs/PROJECT_STATE.md` — build-state snapshot and resume point during active work
+- `docs/PROJECT_STATE.json` — machine-readable state summary
 - `docs/ECOSYSTEM_BUILD_MAP.md`
 - `docs/BUILD_EXECUTION_FLOW.md`
 - `docs/CANONICAL_SYNC_DISCIPLINE.md`
@@ -68,8 +68,8 @@ These folders are workspace artifacts, not product architecture:
 
 The long-term target is:
 
-1. keep the three active pillars under one unified root
-2. use `docs/OPEN_FIRST.md` as the entry order for new sessions
+1. keep the three active domains under one unified root
+2. use `README.md` as the entry point and `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` as the authoritative operating backbone
 3. quarantine legacy material under `legacy/` or `archive/`
 4. keep generated and local-only artifacts out of the mental model
 5. use the MOF and companion docs to define the authoritative operating state

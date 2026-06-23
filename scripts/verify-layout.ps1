@@ -41,9 +41,9 @@ $allowedTopLevel = @(
 )
 
 $requiredDocs = @(
+  'README.md',
   'docs/PROJECT_STATE.md',
   'docs/PROJECT_STATE.json',
-  'docs/OPEN_FIRST.md',
   'docs/REPO_STRUCTURE_MAP.md',
   'docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md'
 )
