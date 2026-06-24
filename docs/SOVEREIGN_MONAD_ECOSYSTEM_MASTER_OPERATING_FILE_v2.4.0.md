@@ -1,4 +1,4 @@
-# SOVEREIGN MONAD ECOSYSTEM — MASTER OPERATING FILE v2.5.0
+# SOVEREIGN MONAD ECOSYSTEM — MASTER OPERATING FILE v2.5.2
 
 > This is the single canonical source of truth for the Sovereign Monad Ecosystem.
 > All participants — human or AI — synchronize to this file.
@@ -539,6 +539,7 @@ This means the architecture and local analysis stack are materially advanced. It
 | Six-Organ Institutional Depth | LIVE AT ADVISORY TIER (HEPAR UPGRADED) | `Hepar` has been vastly expanded into a full DeFi zero-day auditing protocol (Stages A-D) with privilege, arithmetic, reentrancy, economic, and state agents. `Cortex`, `Synapse`, `Pneuma`, and `Vox` remain LIVE at Advisory Tier. The dynamic `Cardia` allocation framework is active. |
 | Cardia / Organ Runtime Activation | LOCAL ANALYSIS / READY FOR FUNDING POSTURE | `cardia-activation-core` converted to ESM, `execution-truth-core` and `organ-runtime` stubs created under `packages/organs/`, local snapshot reports `ready_for_funding`; live wallet funding and execution-truth closure remain downstream gates. |
 | x402 QuickNode Payment Bridge | REHOMED / TESTABLE LOCALLY | Live client, JWT auth helper, price fetcher, and live smoke test moved to canonical Poetry package `monad-ecosystem/packages/x402-bridge/`. Unit auth tests pass. Live execution blocked on funded Base Sepolia wallet + `X402_EVM_PRIVATE_KEY`. |
+| Cross-Domain Contract Layer | DOCUMENTED | `shared/schemas/` holds portable JSON-schema contracts; `@sovereign/types` and `@sovereign/bus` provide the typed TypeScript contract and event backbone across all active domains. |
 | Phase 4 Operational Documentation | 98% COMPLETE | OPERATIONAL_AXIOMS_PHASE4.md, AGENT_PERSONALITY_FRAMES_v5.md, DOVE_OPERATIONAL_SPECIFICATION_v1.md, ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md, INTEGRATION_MAP.md all created and verified. Axiom alignment audit: 11/12 fully aligned, 1 partial. All three pillars integrated and operational. Ready for Phase 5 launch. |
 
 ---
@@ -2026,6 +2027,37 @@ Every update should include: date, version, changed section(s), exact new status
 - All artifacts live under `monad-ecosystem/packages/ttcl` and `monad-ecosystem/packages/logoc`; backfill outputs live under `logs/corpus/`
 - **Next priority:** Phase 4 — Class 5 data quality fix (natural events have noisy flag combinations) + Class 8 expansion (only 2 examples); cleaner feature vectors for under-performing classes
 
+## v2.5.2 — June 23, 2026
+
+**Change Type:** Patch — final structural cleanup and contract-layer documentation
+
+**Summary:**
+
+- **Final repository cleanup:**
+  - Removed ~576 stray `desktop.ini` files (untracked Windows folder metadata already ignored by `.gitignore`).
+  - Deleted stale backup directories `monad-ecosystem/agents/monad-mev-secrets-backup/` and `monad-ecosystem/agents/sovereign-monad-backup/`.
+  - Removed duplicate root `packages/logoc/` (canonical spec remains in `monad-ecosystem/packages/logoc/`).
+  - Moved stale `infrastructure/` (legacy Azure Function + default Vite dashboard) into `archive/infrastructure/`.
+  - Moved `notes/` (SGE deep-dive text files) into `archive/notes/`.
+  - Removed `monad-ecosystem/agents/config` (GitKraken cache), the `.girignore` typo file, and root `.pytest_cache`/`.kilocode`/`.testfox`/`.smartroute` artifacts.
+  - Removed `package-lock.json` files from active pnpm-workspace packages; legacy archive copies remain untouched.
+  - Moved local GitHub CLI mirror `gh.exe` from root to `archive/tools/`.
+- **Cross-domain contract layer documented:** `shared/schemas/` now holds the portable JSON schemas (`signal-event`, `dove-signal`, `gnosis-score`, `hepar-audit-result`) alongside the canonical `@sovereign/types` TypeScript contract and `@sovereign/bus` typed event backbone.
+- **`.gitignore` hygiene:** added `.kilocode/` and `.ruff_cache/`.
+- **README / docs sync:** refreshed `README.md`, `docs/REPO_STRUCTURE_MAP.md`, and `docs/PROJECT_STATE.md` to reflect the cleaned structure and the shared schema / sovereign-types contract layer.
+
+**Axiom alignment:**
+
+- **Axiom 11 (Constraint Validation):** Cleanup removes stale/duplicate surfaces that could create confusion about what is canonical, keeping documentation faithful to the actual repo state.
+- **Axiom 6 (Demiurge/Constraints):** The contract layer (`shared/schemas/` + `@sovereign/types`) creates a hard boundary against silent interface drift between domains.
+
+**State after update:**
+
+- Active master phase remains **Phase 1a**
+- Repo now reads as one coherent ecosystem rather than stitched-together projects
+- Three active domains (`theo-techno-cosmo/`, `gnostic-engine/`, `monad-ecosystem/`) plus the cross-domain contract layer (`shared/schemas/`, `@sovereign/types`) are clearly separated from archived material under `archive/`
+- **Next priority:** run funded x402 live smoke test on Base Sepolia (`X402_EVM_PRIVATE_KEY` + ≥0.5 USDC)
+
 ## v2.5.1 — June 23, 2026
 
 **Change Type:** Patch — post-v2.5.0 cleanup and frontend/backend hardening pass
@@ -2785,4 +2817,4 @@ It moves forward through:
 
 ---
 
-*End of SOVEREIGN MONAD ECOSYSTEM — MASTER OPERATING FILE v2.4.0*
+*End of SOVEREIGN MONAD ECOSYSTEM — MASTER OPERATING FILE v2.5.2*

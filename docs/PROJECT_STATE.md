@@ -15,6 +15,16 @@ If you are picking up work in a fresh session, read this file after `README.md` 
 
 ## Current Snapshot
 
+- Final repository cleanup is complete:
+  - Removed ~576 stray `desktop.ini` files (untracked Windows folder metadata).
+  - Deleted stale backup directories under `monad-ecosystem/agents/`.
+  - Removed the duplicate root `packages/logoc/` (canonical spec lives in `monad-ecosystem/packages/logoc/`).
+  - Moved the stale `infrastructure/` Azure Function + default Vite dashboard into `archive/infrastructure/`.
+  - Moved `notes/` (SGE deep-dive text files) into `archive/notes/`.
+  - Removed `monad-ecosystem/agents/config` (GitKraken cache), the `.girignore` typo file, and root `.pytest_cache`/`.kilocode`/`.testfox`/`.smartroute` artifacts.
+  - Removed `package-lock.json` files from active pnpm-workspace packages.
+  - Added `.kilocode/` and `.ruff_cache/` to `.gitignore`.
+  - Documented `shared/schemas/` + `@sovereign/types` as the cross-domain contract layer.
 - The repo is structurally clean and organized into three active ecosystem domains:
   - `theo-techno-cosmo/`
   - `gnostic-engine/`
@@ -34,7 +44,7 @@ If you are picking up work in a fresh session, read this file after `README.md` 
 
 - Root docs now define the unified structure.
 - Pillar-level READMEs are standardized.
-- The `sovereign-types` package has been established as the single source of truth for telemetry, signals, and ecosystem data.
+- The `sovereign-types` package has been established as the single source of truth for telemetry, signals, and ecosystem data; `shared/schemas/` holds the matching portable JSON-schema contracts.
 - The `sovereign-bus` is fully implemented as an event backbone and connected to `hepar-core`, `gnosis-evaluator`, `risk-engine`, and `data-rail-core`.
 - The `gnostic-engine` now emits a live SSE feed (`/api/v1/gnosis/stream`) connecting directly to the frontend `control-center` React app.
 - All core ecosystem packages have been populated, strictly typed, and built without error.
@@ -753,7 +763,7 @@ The following items are **complete** and should no longer be treated as in-progr
 ## Next Actions
 
 1. Run the x402 live smoke test once the Base Sepolia wallet is funded (`X402_EVM_PRIVATE_KEY` + ≥0.5 USDC). This is the current active frontier.
-2. Continue normal development inside the approved pillar directories only.
+2. Continue normal development inside the approved active domains only.
 3. Update this file whenever the project state changes in a meaningful way.
 4. Run `pnpm check:layout` after structural changes (it now degrades gracefully when `ripgrep` is unavailable).
 

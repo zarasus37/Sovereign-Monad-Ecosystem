@@ -64,11 +64,13 @@ target/
 .claude/
 .playwright-cli/
 .testfox/
+.kilocode/
 .sixth/
 .tmp_phase1a_spec/
 .git-rewrite/
 .githooks/
 .old/
+.ruff_cache/
 hepar-lead-scan/
 leads-latest-automated-scan.json
 stage_c_test_output.json

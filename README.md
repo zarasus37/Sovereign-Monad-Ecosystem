@@ -1,6 +1,6 @@
 # The Sovereign
 
-**Sovereign Monad Ecosystem** — Layered Monorepo (v2.4.0)
+**Sovereign Monad Ecosystem** — Layered Monorepo (v2.5.2)
 
 > An economic system in which AI agents exist as genuine participants — not tools, not features, not labor — operating authentically within compressed constraint envelopes, decompressing into live, contextual, self-consistent action, and being compensated for that authentic operation.
 
@@ -66,6 +66,20 @@ For a clearer breakdown of active domains versus legacy and generated surfaces, 
 
 ---
 
+## Cross-Domain Contract Layer
+
+All TypeScript packages share one type contract and one set of JSON schemas so the three domains do not drift apart.
+
+| Surface | Location | Purpose |
+|---|---|---|
+| **Canonical types** | `monad-ecosystem/packages/sovereign-types/` | `SignalEvent`, `GnosisScore`, `DoveSignal`, `HeparAuditResult`, and all cross-layer data shapes exported as `@sovereign/types` |
+| **Typed event backbone** | `monad-ecosystem/packages/sovereign-bus/` | Internal event bus consuming `@sovereign/types` with a Kafka-compatible bridge |
+| **JSON schemas** | `shared/schemas/` | Portable contract definitions: `signal-event.json`, `dove-signal.json`, `gnosis-score.json`, `hepar-audit-result.json` |
+
+If you add a new cross-layer data shape, put the TypeScript contract in `@sovereign/types` and the portable JSON schema in `shared/schemas/`.
+
+---
+
 ## Working Standard
 
 For contributor rules and cleanup expectations, see [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -86,17 +100,21 @@ The_Sovereign/
 |-- README.md
 |-- archive/
 |   |-- generated/
+|   |-- infrastructure/          # legacy Azure Function + default Vite dashboard
 |   |-- legacy-workspaces/
+|   |-- notes/                    # historical SGE deep-dive text files
 |   `-- sandboxes/
 |-- docs/
 |   |-- PROJECT_STATE.md
+|   |-- PROJECT_STATE.json
 |   |-- REPO_STRUCTURE_MAP.md
 |   `-- SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md
+|-- shared/
+|   `-- schemas/                  # cross-domain JSON schemas (signal, dove, gnosis, hepar)
 |-- theo-techno-cosmo/
 |   |-- Wheel/
 |   |-- THE COUNCILE/
-|   |-- plex/
-|   `-- notes/
+|   `-- plex/
 |-- gnostic-engine/
 |   |-- src/
 |   |-- api/
@@ -104,14 +122,16 @@ The_Sovereign/
 |   `-- ...
 |-- monad-ecosystem/
 |   |-- packages/
+|   |   |-- sovereign-types/      # canonical cross-domain type contract
+|   |   |-- sovereign-bus/        # typed event backbone
+|   |   `-- ...
 |   |-- control-center/
 |   |-- contracts/
 |   |-- scripts/
 |   `-- tests/
-|-- scripts/
-|   |-- bootstrap.ps1
-|   `-- sync-canonical.ps1
-`-- shared/
+`-- scripts/
+    |-- bootstrap.ps1
+    `-- sync-canonical.ps1
 ```
 
 ---
@@ -145,8 +165,8 @@ New to the Sovereign Monad? Begin with the [Theo-Techno-Cosmo quick start guide]
 ## Philosophy of This Structure
 
 - **One ecosystem, many domains** — Each domain has its own role and can operate independently so the whole ecosystem functions properly.
-- **Thin root** — Only coordination, tooling, and shared concerns live at the top level.
-- **No more dumping grounds** — The old `monad-mev/` sprawl has been archived; live x402 code is now in `monad-ecosystem/packages/x402-bridge/`.
+- **Thin root** — Only coordination, tooling, shared schemas, and the canonical type contract live at the top level.
+- **No more dumping grounds** — The old `monad-mev/` sprawl, stale Azure infrastructure, duplicate `packages/logoc/`, and Windows `desktop.ini` noise have been archived or removed; live x402 code is now in `monad-ecosystem/packages/x402-bridge/`.
 - **Single-root VS Code** — One workspace, proper IntelliSense, unified Git history.
 
 ---
@@ -156,9 +176,9 @@ New to the Sovereign Monad? Begin with the [Theo-Techno-Cosmo quick start guide]
 - Phase 2: Rehome & prune `monad-ecosystem/agents/monad-mev/` ✅ (legacy archived; live x402 code moved to `monad-ecosystem/packages/x402-bridge/`)
 - Phase 3: Convert `gnostic-engine/` to a proper Python package and remove "Succor" references ✅
 - Phase 4: Polish `theo-techno-cosmo/` onboarding + wire P4 narrative-purpose detection into LOGOC ✅
-- Phase 5: Cross-layer integration & shared types
+- Phase 5: Cross-layer integration & shared types ✅
 - Phase 6: Update MOF header + sync discipline ✅
-- **Active frontier:** Funded x402 live smoke test on Base Sepolia (blocked on wallet funding)
+- **Active frontier:** Funded x402 live smoke test on Base Sepolia (blocked on wallet funding). Final structural cleanup of stale/duplicate artifacts is complete.
 
 See the Master Operating File in `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` for the full axioms, architecture, and execution instructions.
 
