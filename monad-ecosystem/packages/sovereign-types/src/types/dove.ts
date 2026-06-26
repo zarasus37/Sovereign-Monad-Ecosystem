@@ -30,6 +30,8 @@ export type DriftCategory =
   | 'monoculture.formation'
   | 'dogma.detection'
   | 'participation.diversity.low'
+  // Population plurality alignment (positive signal)
+  | 'personality.diversity.healthy'
   // Intelligence / Agent drift
   | 'macro.micro.divergence'
   | 'agent.hollow.convergence'

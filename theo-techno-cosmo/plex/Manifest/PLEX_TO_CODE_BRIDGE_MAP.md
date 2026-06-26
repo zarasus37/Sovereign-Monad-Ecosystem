@@ -20,7 +20,7 @@ Each of the 12 operational axioms is declared in `plex/Manifest/OPERATIONAL_AXIO
 | **6. Constraints Real** | Hard boundaries are architectural, not suggestions. | `risk-engine` Monte Carlo caps; `hepar-core` stage gates; smart-contract limits. | `monad-ecosystem/packages/risk-engine/`<br>`monad-ecosystem/packages/hepar-core/`<br>`monad-ecosystem/contracts/execution-controller.sol` |
 | **7. Reciprocal Loop** | Vision flows through the builder, not from the builder alone. | Governance voting weights; founder/agent decision ratio tracked in audit docs. | `monad-ecosystem/packages/data-rail-governance/`<br>`plex/Manifest/AXIOM_7_DECENTRALIZATION_SPECIFICATION.md` |
 | **8. Gnosis as Pattern Recognition** | Pattern coherence scored without absolutizing conclusions. | LOGOC v5.0 rubric + ML triage; `gnosis-core` retrospective scoring. | `monad-ecosystem/packages/logoc/`<br>`monad-ecosystem/packages/gnosis-core/`<br>`gnostic-engine/src/gnostic_engine/core/logoc_pipeline.py` |
-| **9. Plurality Without Mutual Exclusion** | Multiple agent personalities coexist. | `AgentProfile.archetype` + `gnosis-core` plurality module; `diversityIndex`, `minRepresentationRatio`, `isPlural`. | `monad-ecosystem/packages/sovereign-types/src/agent.ts`<br>`monad-ecosystem/packages/gnosis-core/src/plurality/distribution.ts`<br>`plex/Manifest/PERSONALITY_DIVERSITY_OPERATIONAL_SPEC.md` |
+| **9. Plurality Without Mutual Exclusion** | Multiple agent personalities coexist. | `AgentProfile.archetype` + `gnosis-core` plurality module; `diversityIndex`, `minRepresentationRatio`, `isPlural`; `PluralityDoveEmitter` auto-fires Dove signals via `@sovereign/bus`; `PluralityScheduler` runs observation on a production cadence. | `monad-ecosystem/packages/sovereign-types/src/agent.ts`<br>`monad-ecosystem/packages/sovereign-types/src/dove.ts`<br>`monad-ecosystem/packages/sovereign-types/src/signal.ts`<br>`monad-ecosystem/packages/gnosis-core/src/plurality/distribution.ts`<br>`monad-ecosystem/packages/gnosis-core/src/plurality/emitter.ts`<br>`monad-ecosystem/packages/gnosis-core/src/plurality/scheduler.ts`<br>`monad-ecosystem/packages/gnosis-core/src/cli.ts`<br>`plex/Manifest/PERSONALITY_DIVERSITY_OPERATIONAL_SPEC.md` |
 | **10. Purpose** | Authentic operation within constraint is meaningful. | Reward-ledger allocation rules; Dove authenticity scoring. | `monad-ecosystem/packages/reward-ledger-core/`<br>`monad-ecosystem/packages/gnosis-core/`<br>`monad-ecosystem/packages/sovereign-types/src/dove.ts` |
 | **11. Constraint Validation** | Models must validate against real behavior. | Hepar audits, LOGOC prediction accuracy, `gnosis-core` integrity review. | `monad-ecosystem/packages/hepar-core/`<br>`monad-ecosystem/packages/gnosis-evaluator-core/`<br>`plex/Review/` |
 | **12. Resonant Convergence** | Independent systems converge on similar patterns when structure is true. | Cross-system correlation matrix; convergence score (Phase 5). | `monad-ecosystem/packages/emergence-accumulator-core/`<br>`gnostic-engine/src/gnostic_engine/core/gnostic_engine.py` |
@@ -63,6 +63,7 @@ Declared in `plex/Manifest/DOVE_OPERATIONAL_SPECIFICATION_v1.md`. Dove is the go
 | **3. SYSTEM_COHERENCE** | Components working together vs. at cross-purposes. | Correlation matrix of agent decisions; target 0.75–0.95. | `gnosis.score.computed` → `gnosis.score`<br>`monad-ecosystem/packages/emergence-accumulator-core/` |
 | **4. CONSTRAINT_ADHERENCE** | Hard boundaries respected or exceeded. | Violation counts per constraint; target `>0.95` adherence. | `hepar.audit.completed`, `risk.opportunity-evaluation`<br>`monad-ecosystem/packages/risk-engine/`<br>`monad-ecosystem/packages/hepar-core/` |
 | **5. EMERGENCE_HEALTH** | System generating novel insight or recycling. | Discovery rate, adaptation lag, cross-type collaboration score. | `monad-ecosystem/packages/emergence-observer-core/`<br>`gnostic-engine/src/gnostic_engine/core/volumetric_scanner.py` |
+| **6. PERSONALITY_PLURALITY** | Population-level archetype diversity per Axiom 9. | `diversityIndex`, `minRepresentationRatio`, `dominantArchetype` from `gnosis-core` plurality module. | `gnosis.plurality.snapshot` → `gnosis.plurality`<br>`dove.signal.tier1/2/3` → `dove.signals` |
 
 ### Dove Type Contract
 
@@ -72,7 +73,7 @@ Declared in `plex/Manifest/DOVE_OPERATIONAL_SPECIFICATION_v1.md`. Dove is the go
 |---|---|
 | `DoveSignal` | A single drift or alignment event emitted to the bus. |
 | `DoveHealthReport` | Aggregated health across the five observables. |
-| `DriftCategory` | Enum: `AXIOM`, `PERSONALITY`, `COHERENCE`, `CONSTRAINT`, `EMERGENCE`. |
+| `DriftCategory` | String union of drift categories including `monoculture.formation`, `participation.diversity.low`, `personality.diversity.healthy`, `axiom.contradiction`, `boundary.stress.detected`, etc. |
 
 ### Bus Topic Map
 
@@ -83,6 +84,7 @@ From `@sovereign/bus` README (`monad-ecosystem/packages/sovereign-bus/README.md`
 | `dove.signal.tier1` | `dove.signals` |
 | `dove.signal.tier2` | `dove.signals` |
 | `dove.signal.tier3` | `dove.signals` |
+| `gnosis.plurality.snapshot` | `gnosis.plurality` |
 | `gnosis.score.computed` | `gnosis.score` |
 | `hepar.audit.completed` | `hepar.audit.completed` |
 | `risk.opportunity-evaluation` | `risk.evaluation` |

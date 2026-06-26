@@ -46,6 +46,7 @@ export type SignalEventType =
   | 'gnosis.score.computed'
   | 'gnosis.blink.triggered'
   | 'gnosis.quarantine.triggered'
+  | 'gnosis.plurality.snapshot'
   // Dove events
   | 'dove.signal.tier1'
   | 'dove.signal.tier2'

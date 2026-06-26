@@ -15,14 +15,19 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
+    "dev:run": "ts-node src/cli.ts",
+    "start": "node dist/cli.js",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@sovereign/types": "workspace:*"
+    "@sovereign/types": "workspace:*",
+    "@sovereign/bus": "workspace:*"
   },
   "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.0",
     "vitest": "^2.0.0"
   },

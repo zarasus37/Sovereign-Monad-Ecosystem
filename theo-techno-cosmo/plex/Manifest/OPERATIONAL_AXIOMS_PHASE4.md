@@ -141,19 +141,23 @@ This document maps each axiom to:
 ---
 
 ### Axiom 9: Plurality Without Mutual Exclusion
-**Status**: ⚠️ PARTIAL
+**Status**: ✅ ACTIVE
 **Operational Enforcement**:
 - Six PLEX archetypes encoded in `AgentProfile.archetype` (`@sovereign/types`)
 - Diversity metrics computed by `@sovereign/gnosis-core` plurality module
 - Default plurality threshold (0.6) enforces meaningful archetype spread
+- `PluralityDoveEmitter` wires snapshots into `@sovereign/bus` and auto-fires Dove signals when thresholds are crossed
+- `PluralityScheduler` + `src/cli.ts` run the observation on a configurable production cadence (default 15 minutes)
 **Measurement**:
 - `diversityIndex` — normalized Shannon entropy across six archetypes
 - `minRepresentationRatio` — balance between most- and least-represented archetype
 - `dominantArchetype` — concentration risk indicator
 - `isPlural` — boolean pass/fail against threshold
-**Example**: A population of 6 agents with one of each archetype scores `diversityIndex ≈ 1.0`; a population of 10 Executors scores 0
+- Bus events: `gnosis.plurality.snapshot`, `dove.signal.tier1/2/3` with drift categories `participation.diversity.low`, `monoculture.formation`, `personality.diversity.healthy`
+- Scheduler state: running/stopped via `PluralityScheduler.start()` / `stop()`
+**Example**: A population of 6 agents with one of each archetype scores `diversityIndex ≈ 1.0` and emits `personality.diversity.healthy`; a population of 10 Executors emits `monoculture.formation` (Tier 3 after two consecutive snapshots); `pnpm start` in `gnosis-core` runs continuous monitoring
 **Violations**: If system requires all agents to converge on same values → loses adaptive plurality
-**Phase 4 Status**: PARTIALLY ACTIVE. Archetype identity and diversity metrics implemented; automated Dove bus emission pending Phase 5
+**Phase 4 Status**: ACTIVE. Archetype identity, diversity metrics, automated Dove bus emission, and production scheduler implemented in `@sovereign/gnosis-core`
 
 ---
 

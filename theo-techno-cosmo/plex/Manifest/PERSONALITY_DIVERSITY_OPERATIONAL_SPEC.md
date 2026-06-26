@@ -12,12 +12,12 @@ This document defines the runtime metrics, thresholds, and signal rules that tur
 
 ## Status
 
-**Phase 4 scaffolding — ACTIVE / PARTIAL.**
+**Phase 4 — ACTIVE.**
 
 - Archetype identity: implemented in `@sovereign/types`.
 - Diversity metrics: implemented in `@sovereign/gnosis-core`.
 - Dove signal rules: specified here.
-- Automated bus emission: pending Phase 5.
+- Automated bus emission: implemented via `PluralityDoveEmitter` in `@sovereign/gnosis-core`, wired to `@sovereign/bus`.
 
 ---
 
@@ -127,11 +127,21 @@ Dove monitors plurality through the following signals. Use existing drift catego
 - `@sovereign/gnosis-core/src/plurality/distribution.ts`:
   - `calculateDiversityMetrics(profiles, threshold)`
   - `calculatePopulationDiversitySnapshot(profiles, threshold, snapshotId?, generatedAt?)`
+- `@sovereign/gnosis-core/src/plurality/emitter.ts`:
+  - `PluralityDoveEmitter` — stateful observer that emits snapshots and Dove signals
+  - `evaluatePluralitySignals(current, previous, activeSignals)` — pure evaluator for testing and custom schedulers
+- `@sovereign/gnosis-core/src/plurality/scheduler.ts`:
+  - `PluralityScheduler` — production cadence wrapper; start/stop lifecycle, configurable interval, provider error handling
+- `@sovereign/gnosis-core/src/cli.ts`:
+  - Long-lived process entry point driven by environment variables (`PLURALITY_INTERVAL_MS`, `PLURALITY_THRESHOLD`, `AGENT_PROFILES_PATH`)
 
 ### Output
 
-- `PopulationDiversitySnapshot` object.
-- In Phase 5, a scheduled job emits `dove.signal.tier*` events to `@sovereign/bus` when thresholds are crossed.
+- `PopulationDiversitySnapshot` object emitted as `gnosis.plurality.snapshot` on `@sovereign/bus`.
+- `dove.signal.tier1/2/3` events emitted automatically when thresholds are crossed:
+  - `participation.diversity.low` — Tier 2
+  - `monoculture.formation` — Tier 2 or Tier 3
+  - `personality.diversity.healthy` — Tier 1
 
 ### Storage
 
@@ -143,7 +153,7 @@ Dove monitors plurality through the following signals. Use existing drift catego
 ## Phase 5 Enhancements
 
 1. **Required archetype field.** Make `AgentProfile.archetype` required once all agents are onboarded through personality frames.
-2. **Automated cron.** Run `calculatePopulationDiversitySnapshot` on a regular cadence and emit Dove signals automatically.
+2. **Live agent registry integration.** Replace the file-based `AGENT_PROFILES_PATH` default with a real-time population provider backed by the agent registry / emergence recorder.
 3. **Adaptive thresholds.** Adjust the 0.6 threshold based on ecosystem maturity and market regime.
 4. **Cross-type collaboration score.** Add a second-order metric measuring whether different archetypes actually work together, not just coexist.
 5. **Personality markets.** Allow temporary archetype shifts governed by consensus, tracked by Chronicler.
@@ -156,5 +166,12 @@ Dove monitors plurality through the following signals. Use existing drift catego
 - `plex/Manifest/OPERATIONAL_AXIOMS_PHASE4.md` — Axiom 9 statement
 - `plex/Manifest/PLEX_TO_CODE_BRIDGE_MAP.md` — runtime file map
 - `monad-ecosystem/packages/sovereign-types/src/types/agent.ts` — type contract
-- `monad-ecosystem/packages/gnosis-core/src/plurality/distribution.ts` — implementation
-- `monad-ecosystem/packages/gnosis-core/src/plurality/metrics.test.ts` — test cases
+- `monad-ecosystem/packages/sovereign-types/src/types/dove.ts` — `DoveSignal`, `DriftCategory`
+- `monad-ecosystem/packages/sovereign-types/src/types/signal.ts` — `SignalEventType` including `gnosis.plurality.snapshot`
+- `monad-ecosystem/packages/gnosis-core/src/plurality/distribution.ts` — metrics implementation
+- `monad-ecosystem/packages/gnosis-core/src/plurality/emitter.ts` — automated bus emission
+- `monad-ecosystem/packages/gnosis-core/src/plurality/scheduler.ts` — production scheduler
+- `monad-ecosystem/packages/gnosis-core/src/cli.ts` — scheduler CLI entry point
+- `monad-ecosystem/packages/gnosis-core/src/plurality/metrics.test.ts` — metrics test cases
+- `monad-ecosystem/packages/gnosis-core/src/plurality/emitter.test.ts` — emitter test cases
+- `monad-ecosystem/packages/gnosis-core/src/plurality/scheduler.test.ts` — scheduler test cases
