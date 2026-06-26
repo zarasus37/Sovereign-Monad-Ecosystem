@@ -20,7 +20,7 @@ Each of the 12 operational axioms is declared in `plex/Manifest/OPERATIONAL_AXIO
 | **6. Constraints Real** | Hard boundaries are architectural, not suggestions. | `risk-engine` Monte Carlo caps; `hepar-core` stage gates; smart-contract limits. | `monad-ecosystem/packages/risk-engine/`<br>`monad-ecosystem/packages/hepar-core/`<br>`monad-ecosystem/contracts/execution-controller.sol` |
 | **7. Reciprocal Loop** | Vision flows through the builder, not from the builder alone. | Governance voting weights; founder/agent decision ratio tracked in audit docs. | `monad-ecosystem/packages/data-rail-governance/`<br>`plex/Manifest/AXIOM_7_DECENTRALIZATION_SPECIFICATION.md` |
 | **8. Gnosis as Pattern Recognition** | Pattern coherence scored without absolutizing conclusions. | LOGOC v5.0 rubric + ML triage; `gnosis-core` retrospective scoring. | `monad-ecosystem/packages/logoc/`<br>`monad-ecosystem/packages/gnosis-core/`<br>`gnostic-engine/src/gnostic_engine/core/logoc_pipeline.py` |
-| **9. Plurality Without Mutual Exclusion** | Multiple agent personalities coexist. | `AgentProfile` archetype field; diversity index intended for Phase 5. | `monad-ecosystem/packages/sovereign-types/src/agent.ts`<br>`plex/Manifest/AGENT_PERSONALITY_FRAMES_v5.md` |
+| **9. Plurality Without Mutual Exclusion** | Multiple agent personalities coexist. | `AgentProfile.archetype` + `gnosis-core` plurality module; `diversityIndex`, `minRepresentationRatio`, `isPlural`. | `monad-ecosystem/packages/sovereign-types/src/agent.ts`<br>`monad-ecosystem/packages/gnosis-core/src/plurality/distribution.ts`<br>`plex/Manifest/PERSONALITY_DIVERSITY_OPERATIONAL_SPEC.md` |
 | **10. Purpose** | Authentic operation within constraint is meaningful. | Reward-ledger allocation rules; Dove authenticity scoring. | `monad-ecosystem/packages/reward-ledger-core/`<br>`monad-ecosystem/packages/gnosis-core/`<br>`monad-ecosystem/packages/sovereign-types/src/dove.ts` |
 | **11. Constraint Validation** | Models must validate against real behavior. | Hepar audits, LOGOC prediction accuracy, `gnosis-core` integrity review. | `monad-ecosystem/packages/hepar-core/`<br>`monad-ecosystem/packages/gnosis-evaluator-core/`<br>`plex/Review/` |
 | **12. Resonant Convergence** | Independent systems converge on similar patterns when structure is true. | Cross-system correlation matrix; convergence score (Phase 5). | `monad-ecosystem/packages/emergence-accumulator-core/`<br>`gnostic-engine/src/gnostic_engine/core/gnostic_engine.py` |
@@ -44,8 +44,9 @@ Declared in `plex/Manifest/AGENT_PERSONALITY_FRAMES_v5.md`. The runtime represen
 
 The canonical shape is `AgentProfile` in `monad-ecosystem/packages/sovereign-types/src/agent.ts`. It carries:
 
-- `id`, `archetype` — maps to one of the six PLEX archetypes.
-- `bigFiveVector` — personality dimensions for authenticity scoring.
+- `agentId` — unique identifier.
+- `archetype` — maps to one of the six PLEX archetypes.
+- `bigFive` — personality dimensions for authenticity scoring.
 - `riskEnvelope` — hard constraint envelope (leverage, trade size, etc.).
 - `constraintHistory` — log of boundary interactions for Dove watch points.
 
@@ -214,6 +215,7 @@ Hepar is the DeFi forensic audit organ. The runtime implementation is `monad-eco
 | 12 axioms | `plex/Manifest/OPERATIONAL_AXIOMS_PHASE4.md` → package READMEs |
 | Agent archetypes | `sovereign-types/src/agent.ts` + `AGENT_PERSONALITY_FRAMES_v5.md` |
 | Authentic/hollow signals | `gnosis-core/`, `DOVE_OPERATIONAL_SPECIFICATION_v1.md` |
+| Personality plurality / Axiom 9 | `gnosis-core/src/plurality/distribution.ts`, `PERSONALITY_DIVERSITY_OPERATIONAL_SPEC.md` |
 | Dove signals | `sovereign-types/src/dove.ts`, `sovereign-bus/` |
 | LOGOC scoring | `logoc/peirce/pipeline.py`, `gnostic-engine/.../logoc_pipeline.py` |
 | LOGOC corpus | `logoc/data/`, `plex/Manifest/logoc_corpus_*` |
@@ -235,4 +237,4 @@ When adding a new runtime package or changing a PLEX doctrine:
 3. Update `plex/Manifest/INTEGRATION_MAP.md` if reading paths change.
 4. Add a note to `plex/Review/` if the change creates a new drift signal or audit event.
 
-*Last updated: 2026-06-26 — PLEX structural cleanup and bridge v1.*
+*Last updated: 2026-06-26 — Axiom 9 plurality operationalization added.*

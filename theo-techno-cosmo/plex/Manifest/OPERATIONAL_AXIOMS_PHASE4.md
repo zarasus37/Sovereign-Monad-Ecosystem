@@ -141,18 +141,19 @@ This document maps each axiom to:
 ---
 
 ### Axiom 9: Plurality Without Mutual Exclusion
-**Status**: ⏳ PENDING
+**Status**: ⚠️ PARTIAL
 **Operational Enforcement**:
-- Multiple agent personalities can coexist without conflict
-- Agent archetypes (Researcher, Operator, Governor) can have conflicting internal values yet work together
-- System stability even when agents disagree on means
+- Six PLEX archetypes encoded in `AgentProfile.archetype` (`@sovereign/types`)
+- Diversity metrics computed by `@sovereign/gnosis-core` plurality module
+- Default plurality threshold (0.6) enforces meaningful archetype spread
 **Measurement**:
-- Personality diversity index (higher = better)
-- Agent conflict frequency & resolution time
-- System performance with vs. without personality diversity
-**Example**: Researcher agents want to explore; Operator agents want to execute—both needed, tension productive
+- `diversityIndex` — normalized Shannon entropy across six archetypes
+- `minRepresentationRatio` — balance between most- and least-represented archetype
+- `dominantArchetype` — concentration risk indicator
+- `isPlural` — boolean pass/fail against threshold
+**Example**: A population of 6 agents with one of each archetype scores `diversityIndex ≈ 1.0`; a population of 10 Executors scores 0
 **Violations**: If system requires all agents to converge on same values → loses adaptive plurality
-**Phase 4 Status**: SCAFFOLDED (personality frames defined); operationalization in Phase 5
+**Phase 4 Status**: PARTIALLY ACTIVE. Archetype identity and diversity metrics implemented; automated Dove bus emission pending Phase 5
 
 ---
 
@@ -216,7 +217,7 @@ This document maps each axiom to:
 | 6. Constraints Real | ✅ Active | Smart contracts | Boundary violation rate | None |
 | 7. Reciprocal Loop | ⚠️ Partial | Governance structure | Decision ratio (founder/agent) | Decentralization pending |
 | 8. Gnosis Pattern | ✅ Active | LOGOC v5.0 | Confidence scores | None |
-| 9. Plurality | ⏳ Pending | Personality archetypes | Diversity index | Personality frame implementation |
+| 9. Plurality | ⚠️ Partial | `AgentProfile.archetype` + `gnosis-core` plurality | Diversity index, minRepresentationRatio | Automated Dove bus emission pending Phase 5 |
 | 10. Purpose | ✅ Active | Reward model | Satisfaction under constraint | None |
 | 11. Constraint Validation | ✅ Active | Empirical audit | Model accuracy | None |
 | 12. Resonant Convergence | ⏳ Pending | Cross-system audit | Resonance score | Phase 5 validation |
