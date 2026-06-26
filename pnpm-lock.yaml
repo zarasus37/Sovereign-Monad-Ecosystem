@@ -401,16 +401,17 @@ importers:
         version: 5.9.3
 
   monad-ecosystem/packages/gnosis-core:
+    dependencies:
+      '@sovereign/types':
+        specifier: workspace:*
+        version: link:../sovereign-types
     devDependencies:
-      '@types/node':
-        specifier: ^20.11.0
-        version: 20.19.43
-      ts-node:
-        specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.19.43)(typescript@5.9.3)
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.6.0
         version: 5.9.3
+      vitest:
+        specifier: ^2.0.0
+        version: 2.1.9(@types/node@22.7.5)
 
   monad-ecosystem/packages/gnosis-evaluator-core:
     dependencies:

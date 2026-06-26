@@ -54,6 +54,37 @@ export type AgentRole =
   | 'delegate'    // Human-linked Shaliah delegate
   | 'ecosystem-native'; // No human delegate
 
+/**
+ * The six PLEX personality archetypes.
+ * Each archetype defines a distinct compressed intention and decompression style.
+ * Reference: plex/Manifest/AGENT_PERSONALITY_FRAMES_v5.md
+ */
+export type AgentArchetype =
+  | 'explorer'     // Researcher / discovery
+  | 'executor'     // Operator / capital deployment
+  | 'governor'     // Allocator / oversight
+  | 'mediator'     // Negotiator / bridge
+  | 'chronicler'   // Historian / witness
+  | 'synthesizer'; // Meta-connector / pattern integration
+
+/** A single interaction with a hard constraint boundary — used for Dove watch points. */
+export interface ConstraintInteraction {
+  /** The constraint that was tested. */
+  readonly constraintName: string;
+
+  /** ISO-8601 timestamp of the interaction. */
+  readonly timestamp: string;
+
+  /** Whether the constraint was respected, hit, or exceeded. */
+  readonly outcome: 'respected' | 'hit' | 'exceeded';
+
+  /** Optional numeric value at the boundary interaction. */
+  readonly value?: number;
+
+  /** Human-readable context for the interaction. */
+  readonly context?: string;
+}
+
 /** Psychometric validation tier. */
 export type ValidationTier = 0 | 1 | 2;
 
@@ -85,6 +116,13 @@ export interface AgentProfile {
   /** Assigned operational role. */
   readonly role: AgentRole;
 
+  /**
+   * PLEX personality archetype.
+   * Optional in Phase 4; required in Phase 5 once all agents are onboarded
+   * through a personality frame.
+   */
+  readonly archetype?: AgentArchetype;
+
   /** Psychometric vector — the agent's personality compression. */
   readonly bigFive: BigFiveVector;
 
@@ -102,6 +140,12 @@ export interface AgentProfile {
 
   /** On-chain address of the AgentProfile registration record (if mined). */
   readonly onChainAddress?: string;
+
+  /**
+   * History of constraint-boundary interactions.
+   * Used by Dove to detect authentic vs. hollow convergence.
+   */
+  readonly constraintHistory?: readonly ConstraintInteraction[];
 
   /** ISO-8601 timestamp of profile registration. */
   readonly registeredAt: string;
@@ -135,4 +179,52 @@ export interface AgentBehavioralClaim {
 
   /** IPFS or content-addressed URI of the full claim artifact. */
   readonly artifactUri?: string;
+}
+
+/**
+ * Quantified personality diversity for a population of agents.
+ * Used to operationalize Axiom 9: Plurality Without Mutual Exclusion.
+ */
+export interface PersonalityDiversityMetrics {
+  /** Count of agents per archetype. */
+  readonly archetypeDistribution: Readonly<Record<AgentArchetype, number>>;
+
+  /**
+   * Normalized Shannon entropy of the archetype distribution.
+   * Range: 0.0 (monoculture) to 1.0 (perfectly uniform across all six archetypes).
+   */
+  readonly diversityIndex: number;
+
+  /**
+   * Ratio of the least-represented archetype count to the most-represented count.
+   * Range: 0.0 (one archetype completely missing) to 1.0 (perfect balance).
+   */
+  readonly minRepresentationRatio: number;
+
+  /** The archetype with the highest count, or null if the population is empty. */
+  readonly dominantArchetype: AgentArchetype | null;
+
+  /** True when diversityIndex meets or exceeds the configured plurality threshold. */
+  readonly isPlural: boolean;
+}
+
+/**
+ * A time-stamped snapshot of population-level personality plurality.
+ * Produced by the Gnosis Integrity Layer for Dove monitoring.
+ */
+export interface PopulationDiversitySnapshot {
+  /** Unique snapshot identifier. */
+  readonly snapshotId: string;
+
+  /** ISO-8601 timestamp of snapshot generation. */
+  readonly generatedAt: string;
+
+  /** Total agents included in the snapshot. */
+  readonly populationSize: number;
+
+  /** Diversity metrics for the population. */
+  readonly metrics: PersonalityDiversityMetrics;
+
+  /** The plurality threshold used to compute isPlural. */
+  readonly threshold: number;
 }

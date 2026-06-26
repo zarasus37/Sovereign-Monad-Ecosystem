@@ -1,25 +1,36 @@
-﻿{
-    "name":  "gnosis-core",
-    "version":  "0.1.0",
-    "description":  "Retrospective-only Gnosis integrity scaffold for decompression and hollow-convergence analysis",
-    "main":  "dist/index.js",
-    "scripts":  {
-                    "start":  "node dist/index.js",
-                    "dev":  "ts-node src/index.ts"
-                },
-    "devDependencies":  {
-                            "@types/node":  "^20.11.0",
-                            "ts-node":  "^10.9.2",
-                            "typescript":  "^5.3.3"
-                        },
-    "jest":  {
-                 "preset":  "ts-jest",
-                 "testEnvironment":  "node",
-                 "roots":  [
-                               "\u003crootDir\u003e/tests"
-                           ]
-             },
-    "engines":  {
-                    "node":  "\u003e=22.0.0"
-                }
+{
+  "name": "@sovereign/gnosis-core",
+  "version": "0.2.0",
+  "description": "Retrospective-only Gnosis integrity scaffold for decompression, hollow-convergence analysis, and personality plurality monitoring",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@sovereign/types": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  }
 }

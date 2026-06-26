@@ -25,10 +25,14 @@ export type {
   HexacoHonestyHumility,
   HoganRiskProfile,
   AgentRole,
+  AgentArchetype,
   ValidationTier,
   RiskEnvelope,
+  ConstraintInteraction,
   AgentProfile,
   AgentBehavioralClaim,
+  PersonalityDiversityMetrics,
+  PopulationDiversitySnapshot,
 } from './types/agent.js';
 
 // ── Gnosis Integrity Layer ───────────────────────────────────────────────────
