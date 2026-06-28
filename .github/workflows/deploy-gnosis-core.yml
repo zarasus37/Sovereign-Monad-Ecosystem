@@ -1,0 +1,109 @@
+name: Deploy — Gnosis Core Plurality Scheduler
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'monad-ecosystem/packages/gnosis-core/**'
+      - 'monad-ecosystem/packages/sovereign-types/**'
+      - 'monad-ecosystem/packages/sovereign-bus/**'
+      - '.github/workflows/deploy-gnosis-core.yml'
+  pull_request:
+    branches: [main, master]
+    paths:
+      - 'monad-ecosystem/packages/gnosis-core/**'
+      - 'monad-ecosystem/packages/sovereign-types/**'
+      - 'monad-ecosystem/packages/sovereign-bus/**'
+      - '.github/workflows/deploy-gnosis-core.yml'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment target'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+
+jobs:
+  build-and-test:
+    name: Build and test gnosis-core
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: monad-ecosystem/packages/gnosis-core
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.6.0
+          run_install: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install monorepo dependencies
+        run: pnpm install --frozen-lockfile
+        working-directory: .
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Test
+        run: pnpm run test
+
+      - name: Smoke test scheduler CLI
+        run: |
+          mkdir -p .smoke logs
+          cat > .smoke/profiles.json <<'JSON'
+          [
+            {
+              "agentId": "agent-explorer-1",
+              "name": "Explorer One",
+              "role": "ecosystem-native",
+              "archetype": "explorer",
+              "bigFive": { "conscientiousness": 0.5, "neuroticism": 0.5, "openness": 0.8, "agreeableness": 0.5, "extraversion": 0.5 },
+              "hexaco": { "honestyHumility": 0.6 },
+              "hoganRisk": { "excitability": 0.3, "skepticism": 0.5, "cautious": 0.5, "independent": 0.6, "mischievous": 0.2 },
+              "validationTier": 1,
+              "riskEnvelope": { "maxPositionFraction": 0.1, "maxDrawdownThreshold": 0.03, "minEdgeBps": 12, "kellyFraction": 0.25, "capitalAuthorized": false },
+              "registeredAt": "2026-06-26T00:00:00.000Z"
+            },
+            {
+              "agentId": "agent-executor-1",
+              "name": "Executor One",
+              "role": "ecosystem-native",
+              "archetype": "executor",
+              "bigFive": { "conscientiousness": 0.8, "neuroticism": 0.3, "openness": 0.4, "agreeableness": 0.5, "extraversion": 0.5 },
+              "hexaco": { "honestyHumility": 0.7 },
+              "hoganRisk": { "excitability": 0.2, "skepticism": 0.4, "cautious": 0.7, "independent": 0.4, "mischievous": 0.1 },
+              "validationTier": 1,
+              "riskEnvelope": { "maxPositionFraction": 0.1, "maxDrawdownThreshold": 0.03, "minEdgeBps": 12, "kellyFraction": 0.25, "capitalAuthorized": false },
+              "registeredAt": "2026-06-26T00:00:00.000Z"
+            }
+          ]
+          JSON
+          PLURALITY_INTERVAL_MS=3000 AGENT_PROFILES_PATH="./.smoke/profiles.json" timeout -s INT 8 node dist/cli.js || true
+          test -f logs/signal-stream.jsonl || exit 1
+          grep -q 'gnosis.plurality.snapshot' logs/signal-stream.jsonl || exit 1
+          rm -rf .smoke logs
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gnosis-core-dist-${{ github.sha }}
+          path: monad-ecosystem/packages/gnosis-core/dist
+          if-no-files-found: error

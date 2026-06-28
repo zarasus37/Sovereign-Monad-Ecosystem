@@ -20,6 +20,15 @@ pnpm run build
 pnpm run typecheck
 pnpm run test
 pnpm start           # run the production plurality scheduler
+pnpm run dev:run     # run scheduler in development (ts-node)
+```
+
+### Docker
+
+```bash
+# Build and run the scheduler container
+docker build -t sovereign-gnosis-core -f monad-ecosystem/packages/gnosis-core/Dockerfile .
+docker run -e AGENT_PROFILES_PATH=/data/classified-agents.json -v $(pwd)/data:/data sovereign-gnosis-core
 ```
 
 ### Production scheduler CLI
