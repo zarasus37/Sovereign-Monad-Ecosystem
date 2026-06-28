@@ -143,16 +143,28 @@ The PLEX continuously tests: **When reality contradicts our models, does the mod
 ```
 plex/
 ├── Manifest/
-│   ├── [Current operational doctrines]
-│   ├── [Agent personality frames]
-│   ├── [Conscience frame specifications]
-│   └── [Live constraint parameters]
+│   ├── OPERATIONAL_AXIOMS_PHASE4.md          # 12 axioms → current status
+│   ├── AGENT_PERSONALITY_FRAMES_v5.md        # six archetypes + Dove watch points
+│   ├── DOVE_OPERATIONAL_SPECIFICATION_v1.md  # five observables + intervention rules
+│   ├── ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md   # cross-pillar quarterly audit
+│   ├── INTEGRATION_MAP.md                    # knowledge navigation by role
+│   ├── LOGOC_FORMAL_INTEGRATION_v5.md        # LOGOC human-readable integration
+│   ├── LOGOC_v5_RELEASE_README.md            # LOGOC v5.0 release notes
+│   ├── LOGOC_MODEL_v5.json                   # trained model (canonical)
+│   ├── LOGOC_SCHEMA_v5.json                  # theoretical schema (canonical)
+│   ├── logoc_corpus_v5_final.csv             # 55-event corpus (canonical)
+│   ├── logoc_corpus_full_integrated_v5.jsonl # full semiotic corpus (canonical)
+│   ├── logoc_inference_v5.py                 # original release inference script
+│   ├── DATA_INDEX.md                         # canonical data inventory
+│   └── PLEX_TO_CODE_BRIDGE_MAP.md            # philosophy → runtime artifact map
 │
 ├── Review/
 │   ├── [Drift analysis]
 │   ├── [Alignment audits]
 │   ├── [Axiom validation results]
-│   └── [Dove signal logs]
+│   ├── [Dove signal logs]
+│   ├── DATA_ARTIFACTS_IN_REVIEW.md           # inventory of data artifacts here
+│   └── *_REVIEW_VARIANT.*                    # labeled working-session variants
 │
 ├── Research/
 │   ├── [Personality type outcomes]
@@ -163,20 +175,26 @@ plex/
 ├── archive/
 │   ├── [Phase 1-3 configurations]
 │   ├── [Deprecated doctrines]
-│   └── [Historical decision logs]
-│
-├── APOPTOSIS_FRAMEWORK_INTEGRATION.md
-│   └── [Case study: how operational apoptosis validates system integrity]
+│   ├── [Historical decision logs]
+│   └── code/                                  # archived research scripts
 │
 ├── CODE/
-│   └── [Implementation examples: constraint in code]
+│   ├── README.md                              # reference-only code directory
+│   ├── apoptosis_engine_reference.py          # apoptosis scheduler sketch
+│   ├── preference_pair_generator_reference.py # reward-pair generator sketch
+│   └── logoc_inference_reference.py           # LOGOC inference sketch
 │
-├── Manifest/
-│   └── [File-role mappings and organizational metadata]
-│
-└── apoptosis_engine.py
-    └── [Computational implementation of operational apoptosis]
+└── APOPTOSIS_FRAMEWORK_INTEGRATION.md
+    └── [Case study: how operational apoptosis validates system integrity]
 ```
+
+### What Changed Recently
+
+- `CODE/` was restored from `archive/code/` as a **reference-examples** directory, not a production package.
+- Duplicate LOGOC data artifacts between `Manifest/` and `Review/` were reconciled. Canonical schemas, models, and corpora live in `Manifest/`; review variants are explicitly labeled in `Review/`.
+- `Manifest/DATA_INDEX.md` now lists every canonical data/model file and its consumers.
+- `Manifest/PLEX_TO_CODE_BRIDGE_MAP.md` maps PLEX concepts to live runtime artifacts in `gnostic-engine/` and `monad-ecosystem/`.
+- `apoptosis_engine.py` remains archived at `plex/archive/code/apoptosis_engine.py`; the live reference copy is at `plex/CODE/apoptosis_engine_reference.py`.
 
 ---
 

@@ -60,6 +60,7 @@ unsubscribe();
 | `system.health` | `system.health` |
 | `hepar.audit.completed` | `hepar.audit.completed` |
 | `gnosis.score.computed` | `gnosis.score` |
+| `gnosis.plurality.snapshot` | `gnosis.plurality` |
 | `dove.signal.tier*` | `dove.signals` |
 
 ---
@@ -100,6 +101,7 @@ The bridge implements a real `kafkajs` producer with:
 | `system.health` | `system.health` | `system.health.dlq` |
 | `hepar.audit.completed` | `hepar.audit.completed` | `hepar.audit.completed.dlq` |
 | `gnosis.score.computed` | `gnosis.score` | `gnosis.score.dlq` |
+| `gnosis.plurality.snapshot` | `gnosis.plurality` | `gnosis.plurality.dlq` |
 | `dove.signal.tier1/2/3` | `dove.signals` | `dove.signals.dlq` |
 | `data-rail.activated` | `data-rail.lifecycle` | `data-rail.lifecycle.dlq` |
 | `emergence.claim.submitted` | `emergence.claims` | `emergence.claims.dlq` |

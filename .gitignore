@@ -39,7 +39,7 @@ parts/
 sdist/
 var/
 wheels/
-MANIFEST
+/MANIFEST
 *.log
 
 # Node / JS / TS / Motoko

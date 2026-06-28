@@ -29,6 +29,7 @@
  *   execution.eth       | eth-arb-bot             → portfolio-manager
  *   execution.bridge    | bridge-exec-bot         → portfolio-manager
  *   system.health       | all services            → DoveRouterObserver
+ *   gnosis.plurality    | gnosis-core             → DoveRouterObserver
  */
 
 import type { SignalEvent, SignalEventType } from '@sovereign/types';
@@ -48,6 +49,7 @@ const KAFKA_TOPIC_MAP: Partial<Record<SignalEventType, string>> = {
   'dove.signal.tier1': 'dove.signals',
   'dove.signal.tier2': 'dove.signals',
   'dove.signal.tier3': 'dove.signals',
+  'gnosis.plurality.snapshot': 'gnosis.plurality',
   'data-rail.activated': 'data-rail.lifecycle',
   'emergence.claim.submitted': 'emergence.claims',
   'revenue.routed': 'revenue.router',
