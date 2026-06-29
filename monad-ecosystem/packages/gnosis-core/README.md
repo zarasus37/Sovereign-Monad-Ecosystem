@@ -44,6 +44,9 @@ PLURALITY_INTERVAL_MS=300000 PLURALITY_THRESHOLD=0.7 pnpm start
 
 # Load agent profiles from disk
 AGENT_PROFILES_PATH=./data/classified-agents.json pnpm start
+
+# Fetch from a live agent registry
+PLURALITY_PROVIDER=registry AGENT_REGISTRY_URL=https://registry.sovereign/agents pnpm start
 ```
 
 Environment variables:
@@ -53,9 +56,13 @@ Environment variables:
 | `PLURALITY_INTERVAL_MS` | `900000` (15 min) | Observation cadence in milliseconds |
 | `PLURALITY_THRESHOLD` | `0.6` | Plurality threshold for `isPlural` |
 | `PLURALITY_SOURCE` | `gnosis-core-plurality` | Source identifier on emitted events |
-| `AGENT_PROFILES_PATH` | — | Optional JSON file path containing `AgentProfile[]` |
+| `PLURALITY_PROVIDER` | `file` | Population source: `file` or `registry` |
+| `AGENT_PROFILES_PATH` | — | JSON file path containing `AgentProfile[]` (`file` provider) |
+| `AGENT_REGISTRY_URL` | — | Registry endpoint returning `AgentProfile[]` (`registry` provider) |
+| `AGENT_REGISTRY_TOKEN` | — | Optional bearer token for authenticated registry |
+| `AGENT_REGISTRY_TIMEOUT_MS` | `10000` | Registry request timeout (`registry` provider) |
 
-To integrate with a live agent registry, import `PluralityScheduler` and pass a custom `provider`:
+To integrate with a live agent registry programmatically, import `PluralityScheduler` and pass a custom `provider`:
 
 ```typescript
 import { PluralityScheduler } from '@sovereign/gnosis-core';

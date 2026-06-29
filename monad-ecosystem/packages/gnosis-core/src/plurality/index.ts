@@ -26,3 +26,8 @@ export {
   type PopulationProvider,
   type PluralitySchedulerConfig,
 } from './scheduler.js';
+
+export {
+  createAgentRegistryProvider,
+  type AgentRegistryProviderConfig,
+} from './registry-provider.js';

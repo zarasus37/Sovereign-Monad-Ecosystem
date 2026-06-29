@@ -8,8 +8,12 @@
  * Environment variables:
  * - `PLURALITY_INTERVAL_MS` — observation cadence in ms (default 900_000 = 15 min)
  * - `PLURALITY_THRESHOLD` — plurality threshold (default 0.6)
- * - `AGENT_PROFILES_PATH` — optional JSON file path containing AgentProfile[]
  * - `PLURALITY_SOURCE` — source identifier on emitted events
+ * - `PLURALITY_PROVIDER` — `file` (default) or `registry`
+ * - `AGENT_PROFILES_PATH` — JSON file path containing AgentProfile[] (file provider)
+ * - `AGENT_REGISTRY_URL` — registry endpoint returning AgentProfile[] (registry provider)
+ * - `AGENT_REGISTRY_TOKEN` — optional bearer token for the registry
+ * - `AGENT_REGISTRY_TIMEOUT_MS` — registry request timeout in ms (default 10_000)
  */
 
 import { readFileSync, existsSync } from 'node:fs';
@@ -18,6 +22,7 @@ import { sovereignBus } from '@sovereign/bus';
 import type { AgentProfile } from '@sovereign/types';
 
 import { PluralityScheduler } from './plurality/scheduler.js';
+import { createAgentRegistryProvider } from './plurality/registry-provider.js';
 
 const DEFAULT_INTERVAL_MS = 15 * 60 * 1000;
 const DEFAULT_THRESHOLD = 0.6;
@@ -40,30 +45,62 @@ function getEnvString(name: string, fallback: string): string {
   return process.env[name] ?? fallback;
 }
 
-function createPopulationProvider(): () => Promise<readonly AgentProfile[]> {
-  const profilesPath = process.env['AGENT_PROFILES_PATH'];
+function createFileProvider(profilesPath: string): () => Promise<readonly AgentProfile[]> {
+  const absolutePath = resolve(profilesPath);
+  if (!existsSync(absolutePath)) {
+    console.warn(
+      `[PluralityCLI] AGENT_PROFILES_PATH="${profilesPath}" not found. Scheduler will observe an empty population until the file appears.`
+    );
+  }
 
-  if (profilesPath) {
-    const absolutePath = resolve(profilesPath);
+  return async () => {
     if (!existsSync(absolutePath)) {
-      console.warn(
-        `[PluralityCLI] AGENT_PROFILES_PATH="${profilesPath}" not found. Scheduler will observe an empty population until the file appears.`
+      return [];
+    }
+    const raw = readFileSync(absolutePath, 'utf8');
+    const parsed = JSON.parse(raw) as unknown;
+    if (!Array.isArray(parsed)) {
+      throw new Error(
+        `Expected AgentProfile[] at ${absolutePath}, received ${typeof parsed}`
+      );
+    }
+    return parsed as readonly AgentProfile[];
+  };
+}
+
+function createPopulationProvider(): () => Promise<readonly AgentProfile[]> {
+  const providerType = process.env['PLURALITY_PROVIDER'] ?? 'file';
+
+  if (providerType === 'registry') {
+    const registryUrl = process.env['AGENT_REGISTRY_URL'];
+    if (!registryUrl) {
+      throw new Error(
+        'PLURALITY_PROVIDER=registry requires AGENT_REGISTRY_URL to be set.'
       );
     }
 
-    return async () => {
-      if (!existsSync(absolutePath)) {
-        return [];
-      }
-      const raw = readFileSync(absolutePath, 'utf8');
-      const parsed = JSON.parse(raw) as unknown;
-      if (!Array.isArray(parsed)) {
-        throw new Error(
-          `Expected AgentProfile[] at ${absolutePath}, received ${typeof parsed}`
-        );
-      }
-      return parsed as readonly AgentProfile[];
-    };
+    const timeoutMs = getEnvNumber('AGENT_REGISTRY_TIMEOUT_MS', 10_000);
+    console.log(
+      `[PluralityCLI] provider=registry url=${registryUrl} timeoutMs=${timeoutMs}`
+    );
+
+    return createAgentRegistryProvider({
+      url: registryUrl,
+      token: process.env['AGENT_REGISTRY_TOKEN'],
+      timeoutMs,
+    });
+  }
+
+  if (providerType !== 'file') {
+    console.warn(
+      `[PluralityCLI] Unknown PLURALITY_PROVIDER="${providerType}"; falling back to file provider.`
+    );
+  }
+
+  const profilesPath = process.env['AGENT_PROFILES_PATH'];
+  if (profilesPath) {
+    console.log(`[PluralityCLI] provider=file path=${profilesPath}`);
+    return createFileProvider(profilesPath);
   }
 
   console.warn(
