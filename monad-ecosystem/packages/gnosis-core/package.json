@@ -16,7 +16,9 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "dev:run": "ts-node src/cli.ts",
+    "dev:registry": "ts-node src/registry-server.ts",
     "start": "node dist/cli.js",
+    "start:registry": "node dist/registry-server.js",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "clean": "rm -rf dist"

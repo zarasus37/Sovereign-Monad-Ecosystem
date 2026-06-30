@@ -19,8 +19,23 @@ pnpm install
 pnpm run build
 pnpm run typecheck
 pnpm run test
-pnpm start           # run the production plurality scheduler
-pnpm run dev:run     # run scheduler in development (ts-node)
+pnpm start              # run the production plurality scheduler
+pnpm run dev:run        # run scheduler in development (ts-node)
+pnpm run start:registry # run the bundled agent registry server
+pnpm run dev:registry   # run the registry server in development (ts-node)
+```
+
+### Docker Compose (recommended)
+
+```bash
+cd monad-ecosystem/packages/gnosis-core
+
+# File provider (default)
+docker compose up -d
+
+# In-stack agent registry provider
+PLURALITY_PROVIDER=registry AGENT_REGISTRY_URL=http://agent-registry:8080/agents \
+  docker compose up -d
 ```
 
 ### Docker
@@ -29,6 +44,10 @@ pnpm run dev:run     # run scheduler in development (ts-node)
 # Build and run the scheduler container
 docker build -t sovereign-gnosis-core -f monad-ecosystem/packages/gnosis-core/Dockerfile .
 docker run -e AGENT_PROFILES_PATH=/data/classified-agents.json -v $(pwd)/data:/data sovereign-gnosis-core
+
+# Build and run the in-stack registry server
+docker build -t sovereign-agent-registry -f monad-ecosystem/packages/gnosis-core/Dockerfile.registry .
+docker run -p 8080:8080 -v $(pwd)/data:/data:ro sovereign-agent-registry
 ```
 
 ### Production scheduler CLI
@@ -47,6 +66,11 @@ AGENT_PROFILES_PATH=./data/classified-agents.json pnpm start
 
 # Fetch from a live agent registry
 PLURALITY_PROVIDER=registry AGENT_REGISTRY_URL=https://registry.sovereign/agents pnpm start
+
+# Run the bundled local registry server and scheduler together
+cd monad-ecosystem/packages/gnosis-core
+pnpm run start:registry &
+PLURALITY_PROVIDER=registry AGENT_REGISTRY_URL=http://localhost:8080/agents pnpm start
 ```
 
 Environment variables:
@@ -61,6 +85,9 @@ Environment variables:
 | `AGENT_REGISTRY_URL` | — | Registry endpoint returning `AgentProfile[]` (`registry` provider) |
 | `AGENT_REGISTRY_TOKEN` | — | Optional bearer token for authenticated registry |
 | `AGENT_REGISTRY_TIMEOUT_MS` | `10000` | Registry request timeout (`registry` provider) |
+| `REGISTRY_PORT` | `8080` | Port for the in-stack agent registry server |
+| `REGISTRY_DATA_PATH` | `/data/agents.json` | Path to `AgentProfile[]` JSON served by the registry |
+| `REGISTRY_AUTH_TOKEN` | — | Optional bearer token required by the registry |
 
 To integrate with a live agent registry programmatically, import `PluralityScheduler` and pass a custom `provider`:
 

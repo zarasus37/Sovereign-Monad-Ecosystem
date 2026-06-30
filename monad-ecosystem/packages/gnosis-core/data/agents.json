@@ -1,0 +1,62 @@
+[
+  {
+    "agentId": "agent-explorer-1",
+    "name": "Explorer One",
+    "role": "ecosystem-native",
+    "archetype": "explorer",
+    "bigFive": {
+      "conscientiousness": 0.5,
+      "neuroticism": 0.5,
+      "openness": 0.8,
+      "agreeableness": 0.5,
+      "extraversion": 0.5
+    },
+    "hexaco": { "honestyHumility": 0.6 },
+    "hoganRisk": {
+      "excitability": 0.3,
+      "skepticism": 0.5,
+      "cautious": 0.5,
+      "independent": 0.6,
+      "mischievous": 0.2
+    },
+    "validationTier": 1,
+    "riskEnvelope": {
+      "maxPositionFraction": 0.1,
+      "maxDrawdownThreshold": 0.03,
+      "minEdgeBps": 12,
+      "kellyFraction": 0.25,
+      "capitalAuthorized": false
+    },
+    "registeredAt": "2026-06-26T00:00:00.000Z"
+  },
+  {
+    "agentId": "agent-executor-1",
+    "name": "Executor One",
+    "role": "ecosystem-native",
+    "archetype": "executor",
+    "bigFive": {
+      "conscientiousness": 0.8,
+      "neuroticism": 0.3,
+      "openness": 0.4,
+      "agreeableness": 0.5,
+      "extraversion": 0.5
+    },
+    "hexaco": { "honestyHumility": 0.7 },
+    "hoganRisk": {
+      "excitability": 0.2,
+      "skepticism": 0.4,
+      "cautious": 0.7,
+      "independent": 0.4,
+      "mischievous": 0.1
+    },
+    "validationTier": 1,
+    "riskEnvelope": {
+      "maxPositionFraction": 0.1,
+      "maxDrawdownThreshold": 0.03,
+      "minEdgeBps": 12,
+      "kellyFraction": 0.25,
+      "capitalAuthorized": false
+    },
+    "registeredAt": "2026-06-26T00:00:00.000Z"
+  }
+]
