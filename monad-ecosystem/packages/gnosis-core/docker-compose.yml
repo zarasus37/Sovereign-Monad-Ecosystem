@@ -1,0 +1,51 @@
+# Gnosis Core Plurality Scheduler — Docker Compose deployment
+#
+# Usage:
+#   docker compose -f monad-ecosystem/packages/gnosis-core/docker-compose.yml up -d
+#
+# Override environment variables in a .env file next to this compose file or
+# pass them on the command line:
+#
+#   PLURALITY_PROVIDER=registry AGENT_REGISTRY_URL=https://registry.test/agents \
+#     docker compose -f monad-ecosystem/packages/gnosis-core/docker-compose.yml up -d
+
+services:
+  gnosis-core:
+    build:
+      context: ../../..
+      dockerfile: monad-ecosystem/packages/gnosis-core/Dockerfile
+    image: sovereign-gnosis-core:latest
+    container_name: sovereign-gnosis-core
+    restart: unless-stopped
+    environment:
+      # Scheduler cadence and thresholds
+      PLURALITY_INTERVAL_MS: ${PLURALITY_INTERVAL_MS:-900000}
+      PLURALITY_THRESHOLD: ${PLURALITY_THRESHOLD:-0.6}
+      PLURALITY_SOURCE: ${PLURALITY_SOURCE:-gnosis-core-plurality}
+
+      # Provider selection: file | registry
+      PLURALITY_PROVIDER: ${PLURALITY_PROVIDER:-file}
+
+      # File provider configuration
+      AGENT_PROFILES_PATH: ${AGENT_PROFILES_PATH:-/data/classified-agents.json}
+
+      # Registry provider configuration
+      AGENT_REGISTRY_URL: ${AGENT_REGISTRY_URL:-}
+      AGENT_REGISTRY_TOKEN: ${AGENT_REGISTRY_TOKEN:-}
+      AGENT_REGISTRY_TIMEOUT_MS: ${AGENT_REGISTRY_TIMEOUT_MS:-10000}
+
+      # Optional Kafka bridge activation
+      KAFKA_ENABLED: ${KAFKA_ENABLED:-false}
+      KAFKA_BROKERS: ${KAFKA_BROKERS:-}
+      KAFKA_CLIENT_ID: ${KAFKA_CLIENT_ID:-sovereign-gnosis-core}
+    volumes:
+      # Mount agent profiles when using the file provider.
+      # Leave empty when using PLURALITY_PROVIDER=registry.
+      - ${AGENT_PROFILES_HOST_PATH:-./data}:/data:ro
+    # Note: add a healthcheck once the scheduler exposes a /health endpoint
+    # or an operator pings the log/signal stream for recent activity.
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '3'
