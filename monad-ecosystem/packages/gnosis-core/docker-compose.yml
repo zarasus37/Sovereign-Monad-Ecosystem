@@ -6,10 +6,32 @@
 # Override environment variables in a .env file next to this compose file or
 # pass them on the command line:
 #
-#   PLURALITY_PROVIDER=registry AGENT_REGISTRY_URL=https://registry.test/agents \
+#   PLURALITY_PROVIDER=registry \
+#     AGENT_REGISTRY_URL=http://agent-registry:8080/agents \
 #     docker compose -f monad-ecosystem/packages/gnosis-core/docker-compose.yml up -d
 
 services:
+  agent-registry:
+    build:
+      context: ../../..
+      dockerfile: monad-ecosystem/packages/gnosis-core/Dockerfile.registry
+    image: sovereign-agent-registry:latest
+    container_name: sovereign-agent-registry
+    restart: unless-stopped
+    environment:
+      REGISTRY_PORT: 8080
+      REGISTRY_DATA_PATH: /data/agents.json
+      REGISTRY_AUTH_TOKEN: ${REGISTRY_AUTH_TOKEN:-}
+    volumes:
+      - ${AGENT_PROFILES_HOST_PATH:-./data}:/data:ro
+    ports:
+      - ${REGISTRY_HOST_PORT:-8080}:8080
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '3'
+
   gnosis-core:
     build:
       context: ../../..
@@ -17,6 +39,8 @@ services:
     image: sovereign-gnosis-core:latest
     container_name: sovereign-gnosis-core
     restart: unless-stopped
+    depends_on:
+      - agent-registry
     environment:
       # Scheduler cadence and thresholds
       PLURALITY_INTERVAL_MS: ${PLURALITY_INTERVAL_MS:-900000}
@@ -30,7 +54,8 @@ services:
       AGENT_PROFILES_PATH: ${AGENT_PROFILES_PATH:-/data/classified-agents.json}
 
       # Registry provider configuration
-      AGENT_REGISTRY_URL: ${AGENT_REGISTRY_URL:-}
+      # Default points at the in-compose agent-registry service.
+      AGENT_REGISTRY_URL: ${AGENT_REGISTRY_URL:-http://agent-registry:8080/agents}
       AGENT_REGISTRY_TOKEN: ${AGENT_REGISTRY_TOKEN:-}
       AGENT_REGISTRY_TIMEOUT_MS: ${AGENT_REGISTRY_TIMEOUT_MS:-10000}
 
@@ -40,10 +65,8 @@ services:
       KAFKA_CLIENT_ID: ${KAFKA_CLIENT_ID:-sovereign-gnosis-core}
     volumes:
       # Mount agent profiles when using the file provider.
-      # Leave empty when using PLURALITY_PROVIDER=registry.
+      # Unused when PLURALITY_PROVIDER=registry.
       - ${AGENT_PROFILES_HOST_PATH:-./data}:/data:ro
-    # Note: add a healthcheck once the scheduler exposes a /health endpoint
-    # or an operator pings the log/signal stream for recent activity.
     logging:
       driver: json-file
       options:
