@@ -138,6 +138,11 @@ async function main(): Promise<void> {
 
   process.on('SIGTERM', () => void shutdown('SIGTERM'));
   process.on('SIGINT', () => void shutdown('SIGINT'));
+
+  // Keep the process alive until an explicit shutdown signal. The scheduler
+  // interval is unref'd, so this timeout prevents the event loop from draining
+  // and exiting the container immediately.
+  setTimeout(() => undefined, 2 ** 31 - 1);
 }
 
 void main().catch((err) => {
