@@ -408,6 +408,9 @@ importers:
       '@sovereign/types':
         specifier: workspace:*
         version: link:../sovereign-types
+      kafkajs:
+        specifier: ^2.2.4
+        version: 2.2.4
     devDependencies:
       '@types/node':
         specifier: ^20.11.0

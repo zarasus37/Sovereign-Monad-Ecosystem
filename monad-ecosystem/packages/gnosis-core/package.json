@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "@sovereign/types": "workspace:*",
-    "@sovereign/bus": "workspace:*"
+    "@sovereign/bus": "workspace:*",
+    "kafkajs": "^2.2.4"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
