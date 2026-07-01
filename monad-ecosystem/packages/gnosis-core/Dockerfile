@@ -13,10 +13,19 @@ COPY monad-ecosystem/packages/gnosis-core/package.json ./monad-ecosystem/package
 COPY monad-ecosystem/packages/sovereign-bus/package.json ./monad-ecosystem/packages/sovereign-bus/package.json
 COPY monad-ecosystem/packages/sovereign-types/package.json ./monad-ecosystem/packages/sovereign-types/package.json
 RUN pnpm install --frozen-lockfile
+
+# Build workspace dependencies first so @sovereign/gnosis-core can resolve them.
+COPY monad-ecosystem/packages/sovereign-types/src ./monad-ecosystem/packages/sovereign-types/src
+COPY monad-ecosystem/packages/sovereign-types/tsconfig.json ./monad-ecosystem/packages/sovereign-types/tsconfig.json
+RUN pnpm --filter @sovereign/types run build
+
+COPY monad-ecosystem/packages/sovereign-bus/src ./monad-ecosystem/packages/sovereign-bus/src
+COPY monad-ecosystem/packages/sovereign-bus/tsconfig.json ./monad-ecosystem/packages/sovereign-bus/tsconfig.json
+RUN pnpm --filter @sovereign/bus run build
+
+# Build the target package.
 COPY monad-ecosystem/packages/gnosis-core/src ./monad-ecosystem/packages/gnosis-core/src
 COPY monad-ecosystem/packages/gnosis-core/tsconfig.json ./monad-ecosystem/packages/gnosis-core/tsconfig.json
-COPY monad-ecosystem/packages/sovereign-bus/src ./monad-ecosystem/packages/sovereign-bus/src
-COPY monad-ecosystem/packages/sovereign-types/src ./monad-ecosystem/packages/sovereign-types/src
 WORKDIR /app/monad-ecosystem/packages/gnosis-core
 RUN pnpm run build
 
@@ -25,8 +34,13 @@ WORKDIR /app/monad-ecosystem/packages/gnosis-core
 COPY --from=build /app/monad-ecosystem/packages/gnosis-core/dist ./dist
 COPY --from=build /app/monad-ecosystem/packages/gnosis-core/package.json ./
 COPY --from=build /app/node_modules /app/node_modules
-COPY --from=build /app/monad-ecosystem/packages/sovereign-bus /app/monad-ecosystem/packages/sovereign-bus
-COPY --from=build /app/monad-ecosystem/packages/sovereign-types /app/monad-ecosystem/packages/sovereign-types
+
+# Materialize workspace symlinks into the package's node_modules so the
+# production image resolves @sovereign/* without the full monorepo tree.
+COPY --from=build /app/monad-ecosystem/packages/sovereign-types/package.json ./node_modules/@sovereign/types/package.json
+COPY --from=build /app/monad-ecosystem/packages/sovereign-types/dist ./node_modules/@sovereign/types/dist
+COPY --from=build /app/monad-ecosystem/packages/sovereign-bus/package.json ./node_modules/@sovereign/bus/package.json
+COPY --from=build /app/monad-ecosystem/packages/sovereign-bus/dist ./node_modules/@sovereign/bus/dist
 ENV PLURALITY_INTERVAL_MS=900000
 ENV PLURALITY_THRESHOLD=0.6
 ENV PLURALITY_SOURCE=gnosis-core-plurality
