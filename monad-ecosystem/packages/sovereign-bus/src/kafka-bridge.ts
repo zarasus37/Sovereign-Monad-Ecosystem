@@ -122,9 +122,13 @@ async function buildDefaultProducer(cfg: KafkaBridgeConfig): Promise<KafkaProduc
   // Dynamic import so the package builds even when `kafkajs` is absent.
   // If KAFKA_ENABLED=true but the dep is missing, fail loudly here
   // instead of silently logging.
-  let kafkajs: typeof import('kafkajs');
+  let kafkajs: unknown;
   try {
-    kafkajs = (await import('kafkajs')) as typeof import('kafkajs');
+    // Use a variable module specifier so TypeScript does not require
+    // kafkajs at compile time. The dep is optional and only needed at
+    // runtime when KAFKA_ENABLED=true.
+    const moduleName = 'kafkajs';
+    kafkajs = await import(moduleName);
   } catch (err) {
     throw new BusError(
       'kafkajs is not installed. Run `pnpm add kafkajs` in the consuming package to enable Kafka forwarding.',
@@ -132,7 +136,8 @@ async function buildDefaultProducer(cfg: KafkaBridgeConfig): Promise<KafkaProduc
     );
   }
 
-  const kafka = new kafkajs.Kafka({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const kafka = new (kafkajs as any).Kafka({
     clientId: cfg.clientId,
     brokers: cfg.brokers.split(',').map((b) => b.trim()).filter(Boolean),
     retry: { retries: 8, initialRetryTime: 300 },
@@ -140,6 +145,7 @@ async function buildDefaultProducer(cfg: KafkaBridgeConfig): Promise<KafkaProduc
     requestTimeout: 30_000,
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const producer = kafka.producer({
     idempotent: true,
     maxInFlightRequests: 5,

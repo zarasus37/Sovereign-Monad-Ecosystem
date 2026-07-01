@@ -67,6 +67,8 @@ services:
       # Mount agent profiles when using the file provider.
       # Unused when PLURALITY_PROVIDER=registry.
       - ${AGENT_PROFILES_HOST_PATH:-./data}:/data:ro
+      # Persist emitted signal stream on the host for easy inspection.
+      - ${SIGNAL_LOG_HOST_PATH:-./logs}:/app/monad-ecosystem/packages/gnosis-core/logs
     logging:
       driver: json-file
       options:
