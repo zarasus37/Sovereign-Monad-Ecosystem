@@ -16,6 +16,7 @@
 import type { AgentProfile } from '@sovereign/types';
 import type { EventBus } from '@sovereign/bus';
 
+import type { SchedulerMetrics } from '../health-server.js';
 import { PluralityDoveEmitter } from './emitter.js';
 
 /** Function that returns the current classified agent population. */
@@ -66,6 +67,13 @@ export class PluralityScheduler {
   private timer: ReturnType<typeof setInterval> | null = null;
   private pendingObservation: Promise<unknown> | null = null;
   private _isRunning = false;
+  private metrics: SchedulerMetrics = {
+    observationsTotal: 0,
+    providerErrorsTotal: 0,
+    signalsEmittedTotal: 0,
+    lastObservationAt: null,
+    lastProviderErrorAt: null,
+  };
 
   constructor(config: PluralitySchedulerConfig) {
     this.bus = config.bus;
@@ -75,12 +83,20 @@ export class PluralityScheduler {
       bus: config.bus,
       threshold: config.threshold ?? DEFAULT_THRESHOLD,
       source: config.source ?? DEFAULT_SOURCE,
+      onSignalEmitted: () => {
+        this.metrics.signalsEmittedTotal += 1;
+      },
     });
   }
 
   /** Whether the scheduler is currently running. */
   get isRunning(): boolean {
     return this._isRunning;
+  }
+
+  /** Current runtime metrics snapshot. */
+  getMetrics(): SchedulerMetrics {
+    return { ...this.metrics };
   }
 
   /** Start the scheduler. Runs one observation immediately, then on interval. */
@@ -138,10 +154,14 @@ export class PluralityScheduler {
   private async observeSafely(): Promise<void> {
     try {
       const profiles = await this.provider();
+      this.metrics.observationsTotal += 1;
+      this.metrics.lastObservationAt = new Date().toISOString();
       this.emitter.observe(profiles);
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       this.log('error', `Population provider failed: ${message}`);
+      this.metrics.providerErrorsTotal += 1;
+      this.metrics.lastProviderErrorAt = new Date().toISOString();
 
       // Emit a system error so operators can observe provider failures.
       // system.error is not trace-required, so no trace metadata is needed.

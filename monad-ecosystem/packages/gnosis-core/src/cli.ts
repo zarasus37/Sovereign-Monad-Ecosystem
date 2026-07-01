@@ -14,6 +14,7 @@
  * - `AGENT_REGISTRY_URL` — registry endpoint returning AgentProfile[] (registry provider)
  * - `AGENT_REGISTRY_TOKEN` — optional bearer token for the registry
  * - `AGENT_REGISTRY_TIMEOUT_MS` — registry request timeout in ms (default 10_000)
+ * - `PLURALITY_HEALTH_PORT` — port for the /health and /metrics HTTP server (default 8080)
  */
 
 import { readFileSync, existsSync } from 'node:fs';
@@ -23,6 +24,7 @@ import type { AgentProfile } from '@sovereign/types';
 
 import { PluralityScheduler } from './plurality/scheduler.js';
 import { createAgentRegistryProvider } from './plurality/registry-provider.js';
+import { HealthServer } from './health-server.js';
 
 const DEFAULT_INTERVAL_MS = 15 * 60 * 1000;
 const DEFAULT_THRESHOLD = 0.6;
@@ -127,11 +129,19 @@ async function main(): Promise<void> {
     source,
   });
 
+  const healthPort = getEnvNumber('PLURALITY_HEALTH_PORT', 8080);
+  const healthServer = new HealthServer({
+    port: healthPort,
+    getMetrics: () => scheduler.getMetrics(),
+  });
+  healthServer.start();
+
   scheduler.start();
 
   const shutdown = async (signal: string) => {
     console.log(`[PluralityCLI] Received ${signal}; shutting down...`);
     await scheduler.stop();
+    await healthServer.stop();
     await sovereignBus.shutdown();
     process.exit(0);
   };

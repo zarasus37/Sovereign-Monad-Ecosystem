@@ -279,4 +279,58 @@ describe('PluralityScheduler', () => {
 
     await scheduler.stop();
   });
+
+  it('exposes runtime metrics via getMetrics()', async () => {
+    const monoculture = Array.from({ length: 10 }, () => makeProfile('executor'));
+    const provider = vi.fn(() => monoculture);
+
+    const scheduler = new PluralityScheduler({
+      bus,
+      provider,
+      intervalMs: 1000,
+    });
+
+    expect(scheduler.getMetrics()).toEqual({
+      observationsTotal: 0,
+      providerErrorsTotal: 0,
+      signalsEmittedTotal: 0,
+      lastObservationAt: null,
+      lastProviderErrorAt: null,
+    });
+
+    scheduler.start();
+    await vi.advanceTimersByTimeAsync(0);
+    await vi.advanceTimersByTimeAsync(1000);
+
+    const metrics = scheduler.getMetrics();
+    expect(metrics.observationsTotal).toBe(2);
+    expect(metrics.signalsEmittedTotal).toBeGreaterThanOrEqual(1);
+    expect(metrics.lastObservationAt).not.toBeNull();
+    expect(metrics.providerErrorsTotal).toBe(0);
+    expect(metrics.lastProviderErrorAt).toBeNull();
+
+    await scheduler.stop();
+  });
+
+  it('increments provider error metrics when the provider throws', async () => {
+    const provider = vi.fn(() => {
+      throw new Error('registry unavailable');
+    });
+
+    const scheduler = new PluralityScheduler({
+      bus,
+      provider,
+      intervalMs: 1000,
+    });
+
+    scheduler.start();
+    await vi.advanceTimersByTimeAsync(0);
+
+    const metrics = scheduler.getMetrics();
+    expect(metrics.providerErrorsTotal).toBe(1);
+    expect(metrics.observationsTotal).toBe(0);
+    expect(metrics.lastProviderErrorAt).not.toBeNull();
+
+    await scheduler.stop();
+  });
 });
