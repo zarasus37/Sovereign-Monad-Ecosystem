@@ -18,6 +18,7 @@ import type { EventBus } from '@sovereign/bus';
 
 import type { SchedulerMetrics } from '../health-server.js';
 import { PluralityDoveEmitter } from './emitter.js';
+import type { PluralityStateStore } from './state-store.js';
 
 /** Function that returns the current classified agent population. */
 export type PopulationProvider = () =>
@@ -40,6 +41,9 @@ export interface PluralitySchedulerConfig {
 
   /** Source identifier used in emitted events. Default: `gnosis-core-plurality`. */
   readonly source?: string;
+
+  /** Optional persistent store for rising-edge state across restarts. */
+  readonly stateStore?: PluralityStateStore;
 }
 
 const DEFAULT_INTERVAL_MS = 15 * 60 * 1000; // 15 minutes
@@ -86,6 +90,7 @@ export class PluralityScheduler {
       onSignalEmitted: () => {
         this.metrics.signalsEmittedTotal += 1;
       },
+      stateStore: config.stateStore,
     });
   }
 

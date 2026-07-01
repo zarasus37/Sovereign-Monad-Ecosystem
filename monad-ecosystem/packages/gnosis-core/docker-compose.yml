@@ -53,6 +53,7 @@ services:
       PLURALITY_THRESHOLD: ${PLURALITY_THRESHOLD:-0.6}
       PLURALITY_SOURCE: ${PLURALITY_SOURCE:-gnosis-core-plurality}
       PLURALITY_HEALTH_PORT: ${PLURALITY_HEALTH_PORT:-8080}
+      PLURALITY_STATE_PATH: ${PLURALITY_STATE_PATH:-/app/monad-ecosystem/packages/gnosis-core/state/plurality-state.json}
 
       # Provider selection: file | registry
       PLURALITY_PROVIDER: ${PLURALITY_PROVIDER:-file}
@@ -76,6 +77,8 @@ services:
       - ${AGENT_PROFILES_HOST_PATH:-./data}:/data:ro
       # Persist emitted signal stream on the host for easy inspection.
       - ${SIGNAL_LOG_HOST_PATH:-./logs}:/app/monad-ecosystem/packages/gnosis-core/logs
+      # Persist rising-edge state across container restarts.
+      - ${PLURALITY_STATE_HOST_PATH:-./state}:/app/monad-ecosystem/packages/gnosis-core/state
     expose:
       - ${PLURALITY_HEALTH_PORT:-8080}
     healthcheck:

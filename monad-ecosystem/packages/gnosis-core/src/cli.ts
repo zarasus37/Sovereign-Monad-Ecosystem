@@ -15,6 +15,7 @@
  * - `AGENT_REGISTRY_TOKEN` — optional bearer token for the registry
  * - `AGENT_REGISTRY_TIMEOUT_MS` — registry request timeout in ms (default 10_000)
  * - `PLURALITY_HEALTH_PORT` — port for the /health and /metrics HTTP server (default 8080)
+ * - `PLURALITY_STATE_PATH` — JSON file path to persist rising-edge state (default ./state/plurality-state.json)
  */
 
 import { readFileSync, existsSync } from 'node:fs';
@@ -25,6 +26,7 @@ import type { AgentProfile } from '@sovereign/types';
 import { PluralityScheduler } from './plurality/scheduler.js';
 import { createAgentRegistryProvider } from './plurality/registry-provider.js';
 import { HealthServer } from './health-server.js';
+import { PluralityStateStore } from './plurality/state-store.js';
 
 const DEFAULT_INTERVAL_MS = 15 * 60 * 1000;
 const DEFAULT_THRESHOLD = 0.6;
@@ -121,12 +123,17 @@ async function main(): Promise<void> {
   console.log(`[PluralityCLI] threshold=${threshold}`);
   console.log(`[PluralityCLI] source=${source}`);
 
+  const statePath = process.env['PLURALITY_STATE_PATH'] ?? './state/plurality-state.json';
+  const stateStore = new PluralityStateStore({ path: statePath });
+  console.log(`[PluralityCLI] statePath=${statePath}`);
+
   const scheduler = new PluralityScheduler({
     bus: sovereignBus,
     provider: createPopulationProvider(),
     intervalMs,
     threshold,
     source,
+    stateStore,
   });
 
   const healthPort = getEnvNumber('PLURALITY_HEALTH_PORT', 8080);
