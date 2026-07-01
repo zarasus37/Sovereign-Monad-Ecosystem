@@ -20,7 +20,7 @@
 
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { sovereignBus } from '@sovereign/bus';
+import { sovereignBus, initKafkaBridgeFromEnv } from '@sovereign/bus';
 import type { AgentProfile } from '@sovereign/types';
 
 import { PluralityScheduler } from './plurality/scheduler.js';
@@ -143,12 +143,22 @@ async function main(): Promise<void> {
   });
   healthServer.start();
 
+  const kafkaBridge = initKafkaBridgeFromEnv();
+  const detachKafka = kafkaBridge ? await kafkaBridge.attach(sovereignBus) : null;
+  if (detachKafka) {
+    console.log('[PluralityCLI] Kafka bridge attached');
+  }
+
   scheduler.start();
 
   const shutdown = async (signal: string) => {
     console.log(`[PluralityCLI] Received ${signal}; shutting down...`);
     await scheduler.stop();
     await healthServer.stop();
+    if (detachKafka) {
+      console.log('[PluralityCLI] Detaching Kafka bridge...');
+      await detachKafka();
+    }
     await sovereignBus.shutdown();
     process.exit(0);
   };
