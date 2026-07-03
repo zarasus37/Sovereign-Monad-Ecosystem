@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "functions": {
+    "api/agents.ts": {
+      "maxDuration": 10
+    },
+    "api/health.ts": {
+      "maxDuration": 5
+    }
+  },
+  "routes": [
+    { "src": "/health", "dest": "/api/health" },
+    { "src": "/agents", "dest": "/api/agents" }
+  ],
+  "env": {
+    "REGISTRY_DATA_PATH": "/tmp/agents.json",
+    "REGISTRY_AUTH_TOKEN": "@sovereign-registry-token"
+  }
+}

@@ -1,0 +1,12 @@
+name = "sovereign-agent-registry"
+main = "src/index.ts"
+compatibility_date = "2026-06-26"
+
+[vars]
+# REGISTRY_AUTH_TOKEN should be set via `wrangler secret put REGISTRY_AUTH_TOKEN`
+# REGISTRY_DATA_PATH is not used; read agents.json from the Workers KV or R2 binding below.
+
+# Example: store AgentProfile[] in Workers KV under key "agents"
+# [[kv_namespaces]]
+# binding = "REGISTRY_KV"
+# id = "your-kv-namespace-id"

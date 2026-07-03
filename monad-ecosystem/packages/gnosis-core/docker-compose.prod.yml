@@ -1,0 +1,40 @@
+# Gnosis Core Plurality Scheduler — Production Docker Compose override
+#
+# Use this alongside docker-compose.yml for a real external agent registry:
+#
+#   docker compose \
+#     -f monad-ecosystem/packages/gnosis-core/docker-compose.yml \
+#     -f monad-ecosystem/packages/gnosis-core/docker-compose.prod.yml \
+#     up -d
+#
+# Required environment variables in a .env file:
+#
+#   PLURALITY_PROVIDER=registry
+#   AGENT_REGISTRY_URL=https://your-external-registry.example.com/agents
+#   AGENT_REGISTRY_TOKEN=<bearer-token>
+#   AGENT_REGISTRY_TIMEOUT_MS=10000
+
+services:
+  # Override in-compose agent registry to remove the local build and use a public
+  # image path. If you are not self-hosting the registry, comment out or remove
+  # this override and the scheduler will hit AGENT_REGISTRY_URL directly.
+  agent-registry:
+    restart: always
+    logging:
+      driver: json-file
+      options:
+        max-size: '50m'
+        max-file: '5'
+
+  gnosis-core:
+    restart: always
+    environment:
+      PLURALITY_PROVIDER: ${PLURALITY_PROVIDER:-registry}
+      AGENT_REGISTRY_URL: ${AGENT_REGISTRY_URL}
+      AGENT_REGISTRY_TOKEN: ${AGENT_REGISTRY_TOKEN}
+      AGENT_REGISTRY_TIMEOUT_MS: ${AGENT_REGISTRY_TIMEOUT_MS:-10000}
+    logging:
+      driver: json-file
+      options:
+        max-size: '50m'
+        max-file: '5'

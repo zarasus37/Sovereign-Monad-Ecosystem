@@ -16,6 +16,8 @@
  * - `AGENT_REGISTRY_TIMEOUT_MS` — registry request timeout in ms (default 10_000)
  * - `PLURALITY_HEALTH_PORT` — port for the /health and /metrics HTTP server (default 8080)
  * - `PLURALITY_STATE_PATH` — JSON file path to persist rising-edge state (default ./state/plurality-state.json)
+ * - `AGENT_REGISTRY_ADAPTER` — adapter for external REST API shapes (default `direct`)
+ * - `AGENT_REGISTRY_ADAPTER_PATH` — JSON path to the agent array inside the response (e.g. `data.agents`)
  */
 
 import { readFileSync, existsSync } from 'node:fs';
@@ -24,7 +26,7 @@ import { sovereignBus, initKafkaBridgeFromEnv } from '@sovereign/bus';
 import type { AgentProfile } from '@sovereign/types';
 
 import { PluralityScheduler } from './plurality/scheduler.js';
-import { createAgentRegistryProvider } from './plurality/registry-provider.js';
+import { createAdapterRegistryProvider } from './plurality/registry-adapter.js';
 import { HealthServer } from './health-server.js';
 import { PluralityStateStore } from './plurality/state-store.js';
 
@@ -84,15 +86,24 @@ function createPopulationProvider(): () => Promise<readonly AgentProfile[]> {
     }
 
     const timeoutMs = getEnvNumber('AGENT_REGISTRY_TIMEOUT_MS', 10_000);
+    const adapterName = process.env['AGENT_REGISTRY_ADAPTER'] ?? 'direct';
+    const adapterPath = process.env['AGENT_REGISTRY_ADAPTER_PATH'];
+
     console.log(
-      `[PluralityCLI] provider=registry url=${registryUrl} timeoutMs=${timeoutMs}`
+      `[PluralityCLI] provider=registry url=${registryUrl} timeoutMs=${timeoutMs} adapter=${adapterName}${adapterPath ? ` adapterPath=${adapterPath}` : ''}`
     );
 
-    return createAgentRegistryProvider({
-      url: registryUrl,
-      token: process.env['AGENT_REGISTRY_TOKEN'],
-      timeoutMs,
-    });
+    return createAdapterRegistryProvider(
+      {
+        url: registryUrl,
+        token: process.env['AGENT_REGISTRY_TOKEN'],
+        timeoutMs,
+      },
+      {
+        name: adapterName,
+        path: adapterPath,
+      }
+    );
   }
 
   if (providerType !== 'file') {

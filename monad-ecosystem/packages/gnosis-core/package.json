@@ -24,12 +24,13 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@sovereign/types": "workspace:*",
     "@sovereign/bus": "workspace:*",
+    "@sovereign/types": "workspace:*",
     "kafkajs": "^2.2.4"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
+    "@vercel/node": "^5.8.22",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.0",
     "vitest": "^2.0.0"

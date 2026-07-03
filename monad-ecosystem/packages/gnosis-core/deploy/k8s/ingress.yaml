@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sovereign-agent-registry
+  namespace: sovereign
+  labels:
+    app.kubernetes.io/name: sovereign-agent-registry
+    app.kubernetes.io/component: agent-registry
+  annotations:
+    # Example annotations for ingress-nginx + cert-manager.
+    # Adjust for your cluster's ingress controller.
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - registry.sovereign.example.com
+      secretName: sovereign-agent-registry-tls
+  rules:
+    - host: registry.sovereign.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: sovereign-agent-registry
+                port:
+                  name: http
