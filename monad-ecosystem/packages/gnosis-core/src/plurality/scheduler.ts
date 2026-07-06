@@ -144,6 +144,7 @@ export class PluralityScheduler {
       this.log('error', `Population provider failed: ${message}`);
 
       // Emit a system error so operators can observe provider failures.
+      // system.error is not trace-required, so no trace metadata is needed.
       try {
         this.bus.emit(
           'system.error',

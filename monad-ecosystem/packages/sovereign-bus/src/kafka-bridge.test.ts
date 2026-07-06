@@ -117,7 +117,18 @@ describe('KafkaBridge', () => {
     const bridge = makeBridge(producer, { maxRetries: 2 });
     await bridge.attach(bus);
 
-    bus.emit('trade.approved', 'treasury', { id: 'p1' });
+    bus.emit(
+      'trade.approved',
+      'treasury',
+      { id: 'p1' },
+      {
+        trace: {
+          intentionId: 'intent-dlq-test',
+          source: 'KafkaBridgeTest',
+          createdAt: new Date().toISOString(),
+        },
+      }
+    );
     await new Promise((r) => setTimeout(r, 30));
 
     // 1 primary call + maxRetries (2) retries = 3 primary calls,

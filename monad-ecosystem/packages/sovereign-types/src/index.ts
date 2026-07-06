@@ -15,6 +15,7 @@ export type {
   SignalLayer,
   SignalEventType,
   EventSeverity,
+  EventTrace,
   SignalEvent,
   PayloadOf,
 } from './types/signal.js';

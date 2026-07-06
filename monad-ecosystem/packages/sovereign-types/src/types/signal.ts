@@ -78,6 +78,32 @@ export type SignalEventType =
 export type EventSeverity = 'info' | 'warning' | 'critical' | 'fatal';
 
 /**
+ * Intention traceability metadata for events that cross from observation into
+ * consequential flow. Optional for ambient telemetry; required by the bus for
+ * governance-relevant / action-bearing / economically meaningful event types
+ * (see `CHARTER.md` §4 — Intention traceability).
+ */
+export interface EventTrace {
+  /** Unique identifier for the intention chain that produced this event. */
+  readonly intentionId: string;
+
+  /** Emitting agent, service, or human contributor that originated the intention. */
+  readonly source: string;
+
+  /** Parent event in the intention chain, if any. */
+  readonly parentEventId?: string;
+
+  /** Constraint envelope governing the action that produced this event. */
+  readonly constraintEnvelopeId?: string;
+
+  /** Narrative purpose tag linking the event to a declared objective. */
+  readonly narrativePurposeId?: string;
+
+  /** ISO-8601 timestamp when the trace record was created. */
+  readonly createdAt?: string;
+}
+
+/**
  * The canonical event envelope. All bus emissions MUST conform to this shape.
  *
  * Typed payload is carried in `payload`; callers should narrow via the `type`
@@ -113,6 +139,12 @@ export interface SignalEvent<TPayload = unknown> {
 
   /** Optional severity override — defaults to 'info' if not set. */
   readonly severity?: EventSeverity;
+
+  /**
+   * Optional intention traceability metadata. Required by the bus for event types
+   * that participate in governance, economic action, or agent operations.
+   */
+  readonly trace?: EventTrace;
 }
 
 /** Helper type: extract the payload type for a given event type discriminant. */

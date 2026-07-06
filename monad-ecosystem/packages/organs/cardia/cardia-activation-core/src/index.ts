@@ -20,6 +20,7 @@ export type {
 };
 
 import { EventBus } from '@sovereign/bus';
+import type { EventTrace } from '@sovereign/types';
 
 // ESM-compatible __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -37,18 +38,25 @@ async function main() {
     snapshot.status === 'ready_for_guarded_live' ||
     snapshot.status === 'ready_for_funding'
   ) {
+    const activatedAt = new Date().toISOString();
+    const snapshotId = randomUUID();
+    const trace: EventTrace = {
+      intentionId: `cardia-activation-${snapshotId}`,
+      source: 'cardia-activation-core',
+      createdAt: activatedAt,
+    };
     bus.emit('cardia.activated', 'cardia', {
-      timestamp: new Date().toISOString(),
+      timestamp: activatedAt,
       source: 'cardia-activation-core',
       activationState: 'LIVE_FUNDED',
       validatedCapacityUsd: 4000,
       validatorVersion: '0.1.0',
-      snapshotId: randomUUID(),
+      snapshotId,
       correlationId: randomUUID(),
       snapshotStatus: snapshot.status,
       executionTruthStatus: snapshot.executionTruthStatus,
       reserveHealthy: snapshot.reserveHealthy,
-    });
+    }, { trace });
     process.stdout.write('[cardia-activation-core] cardia.activated emitted on sovereign bus\n');
   }
 }

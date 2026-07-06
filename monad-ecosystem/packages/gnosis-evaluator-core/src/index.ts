@@ -4,7 +4,7 @@
  */
 
 import { sovereignBus } from '@sovereign/bus';
-import type { GnosisScore, SignalEvent } from '@sovereign/types';
+import type { EventTrace, GnosisScore, SignalEvent } from '@sovereign/types';
 import { randomUUID } from 'node:crypto';
 
 export interface EvaluationOptions {
@@ -27,6 +27,14 @@ export async function evaluateAgent(
   // 5 minutes window
   const windowStart = new Date(Date.now() - 5 * 60 * 1000).toISOString();
   const correlationId = randomUUID();
+  const evaluationId = randomUUID();
+
+  // CHARTER §4 — integrity interventions are trace-required.
+  const trace: EventTrace = {
+    intentionId: `gnosis-eval-${evaluationId}`,
+    source: 'gnosis-evaluator-core',
+    createdAt: windowEnd,
+  };
 
   const depth = options.depth ?? 0.85;
   const truth = options.truth ?? 0.9;
@@ -76,7 +84,7 @@ export async function evaluateAgent(
       'gnosis.blink.triggered',
       'gnosis',
       { agentId, tiltMagnitude, threshold: tiltThreshold },
-      { correlationId, source: 'gnosis-evaluator-core', severity: 'warning' }
+      { correlationId, source: 'gnosis-evaluator-core', severity: 'warning', trace }
     );
   }
 
@@ -85,7 +93,7 @@ export async function evaluateAgent(
       'gnosis.quarantine.triggered',
       'gnosis',
       { agentId, rationale: `Lane C classification and temporal parallax blink triggered` },
-      { correlationId, source: 'gnosis-evaluator-core', severity: 'critical' }
+      { correlationId, source: 'gnosis-evaluator-core', severity: 'critical', trace }
     );
   }
 

@@ -4,7 +4,7 @@
  */
 
 import { sovereignBus } from '@sovereign/bus';
-import type { HeparAuditResult, SignalEvent } from '@sovereign/types';
+import type { EventTrace, HeparAuditResult, SignalEvent } from '@sovereign/types';
 import { randomUUID } from 'node:crypto';
 
 export interface AuditOptions {
@@ -24,7 +24,14 @@ export async function runDefiAudit(
   const auditId = randomUUID();
   const correlationId = randomUUID();
 
-  // Emit start event
+  // CHARTER §4 — audit completion is trace-required; build the intention chain now.
+  const trace: EventTrace = {
+    intentionId: `hepar-audit-${auditId}`,
+    source: 'hepar-defi-auditor',
+    createdAt: startedAt,
+  };
+
+  // Emit start event (observation, not trace-required)
   sovereignBus.emit(
     'hepar.audit.started',
     'intelligence',
@@ -95,10 +102,11 @@ export async function runDefiAudit(
   };
 
   // Emit completion event on the bus
+  // CHARTER §4 — audit completion is a trace-required governance event.
   return sovereignBus.emit(
     'hepar.audit.completed',
     'intelligence',
     auditResult,
-    { correlationId, source: 'hepar-defi-auditor' }
+    { correlationId, source: 'hepar-defi-auditor', trace: { ...trace, createdAt: completedAt } }
   );
 }

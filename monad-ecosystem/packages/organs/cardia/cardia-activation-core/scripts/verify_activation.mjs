@@ -12,6 +12,15 @@ import { randomUUID } from 'crypto';
 import { EventBus } from '@sovereign/bus';
 import { buildCardiaActivationSnapshot } from '../dist/snapshot.js';
 
+/** @type {import('@sovereign/types').EventTrace} */
+function buildCardiaTrace(snapshotId, createdAt) {
+  return {
+    intentionId: `cardia-activation-${snapshotId}`,
+    source: 'cardia-activation-core',
+    createdAt,
+  };
+}
+
 // ── Construct a funded Cardia snapshot directly ──────────────────────────────
 
 const policy = {
@@ -52,19 +61,21 @@ if (
   snapshot.status === 'ready_for_funding'
 ) {
   const bus = new EventBus({ source: 'cardia-activation-core' });
+  const activatedAt = new Date().toISOString();
+  const snapshotId = randomUUID();
 
   const event = bus.emit('cardia.activated', 'cardia', {
-    timestamp:            new Date().toISOString(),
+    timestamp:            activatedAt,
     source:               'cardia-activation-core',
     activationState:      'LIVE_FUNDED',
     validatedCapacityUsd: 4000,
     validatorVersion:     '0.1.0',
-    snapshotId:           randomUUID(),
+    snapshotId,
     correlationId:        randomUUID(),
     snapshotStatus:       snapshot.status,
     executionTruthStatus: snapshot.executionTruthStatus,
     reserveHealthy:       snapshot.reserveHealthy,
-  });
+  }, { trace: buildCardiaTrace(snapshotId, activatedAt) });
 
   console.log('✅  cardia.activated emitted on sovereign bus');
   console.log(`    type:             ${event.type}`);
