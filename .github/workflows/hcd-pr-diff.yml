@@ -1,0 +1,83 @@
+name: HCD PR Diff
+
+on:
+  pull_request:
+    branches: [main, master]
+    paths:
+      - 'monad-ecosystem/packages/hcd-monitor/**'
+      - 'logs/audit/**'
+      - 'logs/signal-stream.jsonl'
+      - '.github/workflows/hcd-pr-diff.yml'
+      - '.github/scripts/hcd-diff.mjs'
+
+jobs:
+  diff:
+    runs-on: windows-latest
+    permissions:
+      pull-requests: write
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.6.0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build HCD monitor
+        run: pnpm --filter=@sovereign/hcd-monitor build
+
+      - name: Generate PR drift report
+        shell: bash
+        run: |
+          node monad-ecosystem/packages/hcd-monitor/dist/cli.js \
+            --queue logs/audit/human_review_queue.md \
+            --correction-log logs/audit/correction_log_v5.10.json \
+            --bus-log logs/signal-stream.jsonl \
+            --out .github/hcd-report-pr.json
+
+      - name: Fetch base drift report
+        shell: bash
+        run: |
+          BASE_REF="origin/${{ github.base_ref }}"
+          BASE_REPORT=$(git ls-tree --name-only -r "$BASE_REF" | grep -E '^logs/audit/human_capability_drift_[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$' | sort | tail -n 1)
+          if [ -n "$BASE_REPORT" ]; then
+            git show "$BASE_REF:$BASE_REPORT" > .github/hcd-report-base.json
+            echo "base_report=$BASE_REPORT" >> "$GITHUB_ENV"
+          else
+            echo "base_report=" >> "$GITHUB_ENV"
+          fi
+
+      - name: Post diff comment
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          if [ -z "$base_report" ]; then
+            gh pr comment "$PR_NUMBER" --body "No baseline HCD report found on ${{ github.base_ref }}. PR report generated at \`.github/hcd-report-pr.json\`."
+            exit 0
+          fi
+
+          {
+            echo "## Human Capability Drift Report Diff"
+            echo ""
+            echo "Comparing PR report against \`$base_report\` from \`${{ github.base_ref }}\`."
+            echo ""
+            node .github/scripts/hcd-diff.mjs .github/hcd-report-base.json .github/hcd-report-pr.json
+          } > .github/hcd-diff.md
+
+          gh pr comment "$PR_NUMBER" --body-file .github/hcd-diff.md
