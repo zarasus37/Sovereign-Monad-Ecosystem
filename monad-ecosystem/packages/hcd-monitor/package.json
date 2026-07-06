@@ -17,7 +17,8 @@
     "dev": "tsc --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "monitor": "node dist/cli.js"
+    "monitor": "node dist/cli.js",
+    "generate-traced-window": "node scripts/generate-traced-window.mjs logs/audit/signal-stream-traced.jsonl"
   },
   "dependencies": {
     "@sovereign/bus": "workspace:*"

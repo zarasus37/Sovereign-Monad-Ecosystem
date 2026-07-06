@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-07-06T18:47:05.251Z",
+  "metrics": [
+    {
+      "id": "HCD-1",
+      "name": "Human Review Queue Burden Rate",
+      "value": 0.08011869436201781,
+      "unit": "ratio",
+      "sampleSize": 337,
+      "window": "2026-06-20T05:00:00.000Z",
+      "status": "green",
+      "notes": [
+        "Auto-accept rate in source: 92.0%"
+      ]
+    },
+    {
+      "id": "HCD-2",
+      "name": "Override Fidelity Index",
+      "value": 0.2857142857142857,
+      "unit": "ratio",
+      "sampleSize": 7,
+      "window": "2026-06-23T10:19:12.406560Z",
+      "status": "red",
+      "notes": [
+        "2 reclassifications, 5 kept-as-is, 0 removed.",
+        "Low value means most human decisions did not result in reclassification; this may indicate weak discernment or a well-calibrated ML boundary."
+      ]
+    },
+    {
+      "id": "HCD-3",
+      "name": "Human-Initiated Query Diversity",
+      "value": 0.979569764547061,
+      "unit": "normalized_entropy",
+      "sampleSize": 8,
+      "status": "green",
+      "notes": [
+        "7 distinct templates from 8 human-originated events.",
+        "Top-3 template share: 50.0%."
+      ]
+    },
+    {
+      "id": "HCD-4",
+      "name": "Reasoning Exposure Ratio",
+      "value": 1,
+      "unit": "ratio",
+      "sampleSize": 8,
+      "status": "green",
+      "notes": [
+        "8 trace-required events observed; 8 carry a valid trace.",
+        "  agent.action.taken: 2/2 traced",
+        "  dove.signal.tier1: 1/1 traced",
+        "  trade.approved: 1/1 traced",
+        "  hepar.audit.completed: 1/1 traced",
+        "  dove.signal.tier2: 1/1 traced",
+        "  gnosis.quarantine.triggered: 1/1 traced",
+        "  gnosis.blink.triggered: 1/1 traced"
+      ]
+    },
+    {
+      "id": "HCD-5",
+      "name": "Meaningful Correction Latency",
+      "value": 720406,
+      "unit": "ms",
+      "sampleSize": 4,
+      "status": "green",
+      "notes": [
+        "4 drift signals; 4 had parseable latency; 4 within plausible range.",
+        "0 signals occurred after the correction log timestamp (clock or data-order artifact).",
+        "Median latency: 720,406 ms (~0.2 hours, ~0.0 days)."
+      ]
+    }
+  ],
+  "inputs": {
+    "queuePath": "logs/audit/human_review_queue.md",
+    "correctionLogPath": "logs/audit/correction_log_v5.10.json",
+    "busLogPath": "logs/audit/signal-stream-traced.jsonl"
+  },
+  "warnings": []
+}

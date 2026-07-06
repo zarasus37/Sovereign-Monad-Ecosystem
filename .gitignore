@@ -99,6 +99,7 @@ desktop.ini
 *.csv
 *.jsonl
 !monad-ecosystem/packages/hcd-monitor/tests/fixtures/*.jsonl
+!logs/audit/signal-stream-traced.jsonl
 *.pdf
 *.png
 *.jpg

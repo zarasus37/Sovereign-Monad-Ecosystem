@@ -1,0 +1,58 @@
+name: HCD Snapshot
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC — weekly HCD snapshot.
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  snapshot:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.6.0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build HCD monitor
+        run: pnpm --filter=@sovereign/hcd-monitor build
+
+      - name: Generate dated drift report
+        shell: bash
+        run: |
+          REPORT="logs/audit/human_capability_drift_$(date +%Y-%m-%d).json"
+          node monad-ecosystem/packages/hcd-monitor/dist/cli.js \
+            --queue logs/audit/human_review_queue.md \
+            --correction-log logs/audit/correction_log_v5.10.json \
+            --bus-log logs/signal-stream.jsonl \
+            --out "$REPORT"
+          echo "report=$REPORT" >> "$GITHUB_ENV"
+
+      - name: Commit and push snapshot
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add logs/audit/
+          git diff --cached --quiet || (
+            git commit -m "chore(audit): weekly HCD snapshot $(date +%Y-%m-%d)" &&
+            git push origin main
+          )
