@@ -53,6 +53,8 @@ UX, tooling, and automation must be designed so that they:
 
 The ecosystem must include observable proxies for human capability change, such as decision‑quality trends in human‑review queues, frequency of meaningful overrides, and diversity of human‑initiated queries. Sustained negative drift triggers a charter review.
 
+A draft metric suite is maintained in [`docs/HUMAN_CAPABILITY_DRIFT_METRICS.md`](./HUMAN_CAPABILITY_DRIFT_METRICS.md).
+
 ---
 
 ## 3. Sovereignty as an architectural property

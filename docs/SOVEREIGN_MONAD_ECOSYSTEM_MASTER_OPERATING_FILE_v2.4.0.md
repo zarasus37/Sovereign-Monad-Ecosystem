@@ -162,6 +162,12 @@ See OPERATIONAL_AXIOMS_PHASE4.md for complete operational instantiation mapping.
 | Constraint Validation | Models updated when contradicted | Models defended after persistent contradiction | ? ACTIVE |
 | Resonant Convergence | Independent systems converge on same patterns | Isolated silos with no cross-system validation | ? MONITORED (Phase 5 formalization) |
 
+### 2.3.1 Human capability drift metrics
+
+Per CHARTER.md §2.1, the ecosystem must include observable proxies for human capability change. A draft metric suite is maintained in [`docs/HUMAN_CAPABILITY_DRIFT_METRICS.md`](./HUMAN_CAPABILITY_DRIFT_METRICS.md). It defines five initial metrics — HCD‑1 through HCD‑5 — tied to existing data sources: the LOGOC human review queue, the v5.10 correction log, the Control Center `HRDecision` store, and `@sovereign/bus` event traces.
+
+These metrics are currently **documentation-only / draft** and will move to automated monitoring as the Steward Council and signal infrastructure mature.
+
 ## 2.4 Data Revenue Doctrine
 
 - 100% behavioral data revenue returns to ecosystem — non-negotiable, contract-enforced at Phase 5 deployment
