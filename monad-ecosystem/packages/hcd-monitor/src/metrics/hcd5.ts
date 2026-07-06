@@ -7,6 +7,7 @@
  * signal's drift category or layer.
  */
 
+import { HCD_THRESHOLDS } from '../config/thresholds.js';
 import type { BusEvent, CorrectionLog, MetricResult } from '../types.js';
 
 /** Sanity ceiling: latencies above this look like timestamp/clock artifacts. */
@@ -96,9 +97,10 @@ export function computeHcd5(
   const median = computeMedian(plausibleLatencies);
   const hours = median / 3_600_000;
   const days = hours / 24;
+  const bands = HCD_THRESHOLDS.hcd5;
   let status: MetricResult['status'] = 'green';
-  if (hours > 72) status = 'red';
-  else if (hours > 24) status = 'yellow';
+  if (hours > bands.redHours) status = 'red';
+  else if (hours > bands.yellowHours) status = 'yellow';
 
   const notes: string[] = [
     `${signals.length} drift signals; ${latencies.length} had parseable latency; ${plausibleLatencies.length} within plausible range.`,

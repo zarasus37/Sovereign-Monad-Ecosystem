@@ -181,11 +181,13 @@ HCD-5 = median time from first drift signal
 
 | Metric | Primary source | Update cadence | Yellow threshold | Red threshold |
 |---|---|---|---|---|
-| HCD‑1 Burden Rate | `human_review_queue.md`, `pipeline_triage_status` | per corpus window | 3-window rise + flat auto-accept | above 95th percentile + rising correction rate |
-| HCD‑2 Override Fidelity | `correction_log_v5.10.json`, `HRDecision` export | per audit cycle | 2-cycle decline | < 0.6 with rising override volume |
-| HCD‑3 Query Diversity | Bus logs + UI telemetry | weekly | 3-window decline | < 0.4 + top-3 > 60% |
-| HCD‑4 Reasoning Exposure | `trace.intentionId` + UI session logs | per action window | 2-window decline | < 0.3 on `TRACE_REQUIRED_EVENT_TYPES` |
-| HCD‑5 Correction Latency | `dove.signal.tier*`, `HRDecision` timestamps | per signal window | > 50% latency increase | > 72h for Tier 2 signals |
+| HCD‑1 Burden Rate | `human_review_queue.md`, `pipeline_triage_status` | per corpus window | > 15% burden OR auto-accept < 85% | > 25% burden |
+| HCD‑2 Override Fidelity | `correction_log_v5.10.json`, `HRDecision` export | per audit cycle | < 0.8 | < 0.6 |
+| HCD‑3 Query Diversity | Bus logs + UI telemetry | weekly | < 0.5 normalized entropy | < 0.4 normalized entropy AND top-3 template share > 60% |
+| HCD‑4 Reasoning Exposure | `trace.intentionId` + UI session logs | per action window | < 0.8 traced on `TRACE_REQUIRED_EVENT_TYPES` | < 0.3 traced on `TRACE_REQUIRED_EVENT_TYPES` |
+| HCD‑5 Correction Latency | `dove.signal.tier*`, `HRDecision` timestamps | per signal window | median > 24 hours | median > 72 hours for Tier 2 signals |
+
+These thresholds are also encoded in `monad-ecosystem/packages/hcd-monitor/src/config/thresholds.ts`. They are versioned in source so that any change to what "healthy" drift looks like must go through review.
 
 ---
 

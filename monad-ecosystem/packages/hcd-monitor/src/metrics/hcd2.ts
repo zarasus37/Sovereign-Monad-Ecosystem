@@ -8,6 +8,7 @@
  * human judgments but are not overrides.
  */
 
+import { HCD_THRESHOLDS, ratioStatus } from '../config/thresholds.js';
 import type { CorrectionLog, MetricResult } from '../types.js';
 
 export function computeHcd2(log: CorrectionLog): MetricResult {
@@ -29,9 +30,7 @@ export function computeHcd2(log: CorrectionLog): MetricResult {
 
   let status: MetricResult['status'] = 'insufficient-data';
   if (totalHumanDecisions > 0) {
-    status = 'green';
-    if (value < 0.6) status = 'red';
-    else if (value < 0.8) status = 'yellow';
+    status = ratioStatus(value, HCD_THRESHOLDS.hcd2);
   }
 
   return {
