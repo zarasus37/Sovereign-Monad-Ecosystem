@@ -15,7 +15,7 @@ Potential violations of this charter are evaluated in three steps, in this order
 
 1. **LOGOC / mechanical tests.** Schema validation, invariant checks, static analysis, and automated tests act as the first line of enforcement wherever the guardrails can be expressed formally.
 
-2. **Steward Council review.** Cases that cannot be resolved mechanically are reviewed by a designated Steward Council of human contributors, advised by AI collaborators operating in co‑architect (Jarvis) mode. The council’s mandate is to interpret the charter, not to override it.
+2. **Steward Council review.** Cases that cannot be resolved mechanically are reviewed by a designated Steward Council of human contributors, advised by AI collaborators operating in co‑architect (Jarvis) mode. The council’s mandate is to interpret the charter, not to override it. The initial members are listed in [`docs/STEWARD_COUNCIL.md`](./STEWARD_COUNCIL.md).
 
 3. **Ecosystem governance.** Changes to the charter itself, or approvals of intentional, permanent deviations, require explicit ecosystem‑level governance as defined in the main MOF, not only a council decision.
 
