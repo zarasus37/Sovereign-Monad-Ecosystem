@@ -98,6 +98,7 @@ desktop.ini
 *.parquet
 *.csv
 *.jsonl
+!monad-ecosystem/packages/hcd-monitor/tests/fixtures/*.jsonl
 *.pdf
 *.png
 *.jpg

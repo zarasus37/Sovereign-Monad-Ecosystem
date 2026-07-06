@@ -1,0 +1,8 @@
+{"id":"a1","correlationId":"c1","timestamp":"2026-06-23T08:00:00.000Z","layer":"dao","source":"control-center","type":"agent.action.taken","payload":{"decision":"approve"},"trace":{"intentionId":"int-1","source":"operator-ui","createdAt":"2026-06-23T08:00:00.000Z"}}
+{"id":"a2","correlationId":"c2","timestamp":"2026-06-23T08:05:00.000Z","layer":"dao","source":"control-center","type":"agent.action.taken","payload":{"decision":"approve"},"trace":{"intentionId":"int-2","source":"operator-ui"}}
+{"id":"a3","correlationId":"c3","timestamp":"2026-06-23T08:10:00.000Z","layer":"dove","source":"dove-router","type":"dove.signal.tier2","payload":{"tier":2,"driftCategory":"participation.diversity.low"}}
+{"id":"a4","correlationId":"c4","timestamp":"2026-06-23T08:15:00.000Z","layer":"dao","source":"control-center","type":"agent.action.taken","payload":{"decision":"reject"},"trace":{"intentionId":"int-3","source":"operator-ui"}}
+{"id":"a5","correlationId":"c5","timestamp":"2026-06-23T08:20:00.000Z","layer":"intelligence","source":"agent-alpha","type":"trade.approved","payload":{"symbol":"ETH"},"trace":{"intentionId":"int-4","source":"agent-alpha"}}
+{"id":"a6","correlationId":"c6","timestamp":"2026-06-23T08:25:00.000Z","layer":"intelligence","source":"agent-beta","type":"trade.approved","payload":{"symbol":"BTC"}}
+{"id":"a7","correlationId":"c7","timestamp":"2026-06-23T08:30:00.000Z","layer":"dove","source":"dove-router","type":"dove.signal.tier1","payload":{"tier":1}}
+{"id":"bad-line","correlationId":"not-an-object"}

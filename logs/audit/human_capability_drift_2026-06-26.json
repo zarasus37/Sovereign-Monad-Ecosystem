@@ -1,0 +1,73 @@
+{
+  "generatedAt": "2026-07-06T16:37:41.407Z",
+  "metrics": [
+    {
+      "id": "HCD-1",
+      "name": "Human Review Queue Burden Rate",
+      "value": 0.08011869436201781,
+      "unit": "ratio",
+      "sampleSize": 337,
+      "window": "2026-06-20T05:00:00.000Z",
+      "status": "green",
+      "notes": [
+        "Auto-accept rate in source: 92.0%"
+      ]
+    },
+    {
+      "id": "HCD-2",
+      "name": "Override Fidelity Index",
+      "value": 0.2857142857142857,
+      "unit": "ratio",
+      "sampleSize": 7,
+      "window": "2026-06-23T10:19:12.406560Z",
+      "status": "red",
+      "notes": [
+        "2 reclassifications, 5 kept-as-is, 0 removed."
+      ]
+    },
+    {
+      "id": "HCD-3",
+      "name": "Human-Initiated Query Diversity",
+      "value": 0,
+      "unit": "normalized_entropy",
+      "sampleSize": 0,
+      "status": "insufficient-data",
+      "notes": [
+        "No human-originated events found in the provided bus window.",
+        "Human sources considered: control-center, operator-ui, human-review, manual-override, steward-council, founder."
+      ]
+    },
+    {
+      "id": "HCD-4",
+      "name": "Reasoning Exposure Ratio",
+      "value": 0,
+      "unit": "ratio",
+      "sampleSize": 9,
+      "status": "red",
+      "notes": [
+        "9 trace-required events observed; 0 carry a valid trace.",
+        "  gnosis.blink.triggered: 0/3 traced",
+        "  gnosis.quarantine.triggered: 0/3 traced",
+        "  hepar.audit.completed: 0/3 traced"
+      ]
+    },
+    {
+      "id": "HCD-5",
+      "name": "Meaningful Correction Latency",
+      "value": 352753457,
+      "unit": "ms",
+      "sampleSize": 6,
+      "status": "red",
+      "notes": [
+        "6 drift signals; 6 had parseable latency.",
+        "0 signals occurred after the correction log timestamp (clock or data-order artifact)."
+      ]
+    }
+  ],
+  "inputs": {
+    "queuePath": "../../../logs/audit/human_review_queue.md",
+    "correctionLogPath": "../../../logs/audit/correction_log_v5.10.json",
+    "busLogPath": "../../../logs/signal-stream.jsonl"
+  },
+  "warnings": []
+}
