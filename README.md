@@ -37,9 +37,13 @@ This is a large, intentionally multi-domain ecosystem. You do not need to read e
 1. **Start here** — this `README.md` for orientation and how to run it.
 2. **Master Operating File** — `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`  
    The authoritative backbone: philosophy, intention, system functions, architecture, layers, roadmap, and active blockers.
-3. **Layout map** — `docs/REPO_STRUCTURE_MAP.md`  
+3. **Guardrail Charter** — `docs/CHARTER.md`  
+   Non-negotiable constraints on architecture, code, governance, narratives, and human–AI collaboration. All contributors and AI collaborators are bound by it.
+4. **Shared AI Collaboration Charter** — `docs/SHARED_AI_COLLABORATION_CHARTER.md`  
+   Operational companion binding AI co-architects and code-authoring assistants to the guardrails.
+5. **Layout map** — `docs/REPO_STRUCTURE_MAP.md`  
    What is active, archived, or generated, and how the physical directories relate to the domains.
-4. **Build discipline** — `docs/ECOSYSTEM_BUILD_MAP.md`, `docs/BUILD_EXECUTION_FLOW.md`, `docs/CANONICAL_SYNC_DISCIPLINE.md`  
+5. **Build discipline** — `docs/ECOSYSTEM_BUILD_MAP.md`, `docs/BUILD_EXECUTION_FLOW.md`, `docs/CANONICAL_SYNC_DISCIPLINE.md`  
    Only when you are changing build order, architecture, or sync behavior.
 
 **Fastest resume path:**

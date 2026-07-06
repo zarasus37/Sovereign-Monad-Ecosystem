@@ -8,6 +8,7 @@ describe('Event Bus Flow', () => {
     sovereignBus.on('test.signal', mockHandler);
 
     const payload = { testPayload: true, score: 95 };
+    // test.signal is not a real SignalEventType and is not trace-required.
     sovereignBus.emit('test.signal', 'intelligence', payload);
 
     // Allow synchronous event to settle (EventEmitter is sync but we await just in case of future changes)

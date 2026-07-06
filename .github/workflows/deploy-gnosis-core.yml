@@ -56,6 +56,10 @@ jobs:
         run: pnpm install --frozen-lockfile
         working-directory: .
 
+      - name: Build workspace dependencies
+        run: pnpm --filter=@sovereign/gnosis-core... build
+        working-directory: .
+
       - name: Typecheck
         run: pnpm run typecheck
 

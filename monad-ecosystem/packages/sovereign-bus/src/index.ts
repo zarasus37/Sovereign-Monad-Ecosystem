@@ -34,3 +34,11 @@ export {
 } from './kafka-bridge.js';
 
 export type { KafkaBridgeConfig } from './kafka-bridge.js';
+
+export {
+  TRACE_REQUIRED_EVENT_TYPES,
+  requiresIntentionTraceability,
+  hasRequiredTraceFields,
+  isTraceStructurallyValid,
+  validateIntentionTraceability,
+} from './traceability.js';

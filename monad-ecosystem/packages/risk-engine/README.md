@@ -1,5 +1,7 @@
 # Risk Engine
 
+> **LEGACY_NON_SOVEREIGN** — This package pre‑dates the Sovereign Monad Guardrail Charter and does not currently satisfy `docs/CHARTER.md` §3 (sovereignty as an architectural property). See `docs/LEGACY_COMPONENTS.md` for the remediation plan and deadline.
+
 Monte Carlo-based risk evaluation for Base/Arbitrum cross-chain arbitrage opportunities.
 
 ## What It Does

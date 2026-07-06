@@ -15,7 +15,8 @@ import { createWriteStream, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { createHash } from 'node:crypto';
-import type { SignalEvent, SignalEventType, SignalLayer } from '@sovereign/types';
+import type { EventTrace, SignalEvent, SignalEventType, SignalLayer } from '@sovereign/types';
+import { validateIntentionTraceability } from './traceability.js';
 
 // ── Listener registry types ──────────────────────────────────────────────────
 
@@ -131,6 +132,7 @@ export class EventBus {
       readonly correlationId?: string;
       readonly source?: string;
       readonly severity?: SignalEvent['severity'];
+      readonly trace?: EventTrace;
     }
   ): SignalEvent<TPayload> {
     if (this.isShuttingDown) {
@@ -148,12 +150,17 @@ export class EventBus {
       type,
       payload,
       severity: options?.severity,
+      trace: options?.trace,
     };
 
     const event: SignalEvent<TPayload> = {
       ...partialEvent,
       hash: computeEventHash(partialEvent),
     };
+
+    // CHARTER §4 — intention traceability must be documented before propagation
+    // for governance-relevant / action-bearing / economically meaningful events.
+    validateIntentionTraceability(event as SignalEvent<unknown>);
 
     // Persist to log
     if (this.config.persistLogs && this.logStream) {

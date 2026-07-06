@@ -4,7 +4,7 @@
  */
 
 import { sovereignBus } from '@sovereign/bus';
-import type { OracleRegime, RegimeClass, OraclePosture, SignalEvent } from '@sovereign/types';
+import type { EventTrace, OracleRegime, RegimeClass, OraclePosture, SignalEvent } from '@sovereign/types';
 import { randomUUID } from 'node:crypto';
 
 export interface ClassificationOptions {
@@ -22,6 +22,14 @@ export async function classifyRegime(
   const classifiedAt = new Date().toISOString();
   const classificationId = randomUUID();
   const correlationId = randomUUID();
+
+  // oracle.regime.classified and oracle.posture.updated are observations,
+  // not governance actions, so trace is optional. Include it for auditability.
+  const trace: EventTrace = {
+    intentionId: `risk-classification-${classificationId}`,
+    source: 'risk-engine',
+    createdAt: classifiedAt,
+  };
 
   const regime: RegimeClass = options.regime ?? 'trending-bullish';
   const posture: OraclePosture = options.posture ?? 'full-deployment';
@@ -64,7 +72,7 @@ export async function classifyRegime(
     'oracle.regime.classified',
     'oracle',
     regimeData,
-    { correlationId, source: 'risk-engine' }
+    { correlationId, source: 'risk-engine', trace }
   );
 
   // If posture is halted or defensive, emit posture updated warning
@@ -73,7 +81,7 @@ export async function classifyRegime(
       'oracle.posture.updated',
       'oracle',
       { posture, rationale: regimeData.postureRationale },
-      { correlationId, source: 'risk-engine', severity: 'critical' }
+      { correlationId, source: 'risk-engine', severity: 'critical', trace }
     );
   }
 

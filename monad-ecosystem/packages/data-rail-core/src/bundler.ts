@@ -4,6 +4,7 @@
  */
 
 import { sovereignBus } from '@sovereign/bus';
+import type { EventTrace } from '@sovereign/types';
 import { randomUUID } from 'node:crypto';
 
 export interface DataBundle {
@@ -28,11 +29,17 @@ export function bundleSignals(windowIds: readonly string[]): DataBundle {
   };
 
   // Emit on bus
+  // data-rail.bundle.ready is not currently trace-required; include trace anyway for auditability.
+  const trace: EventTrace = {
+    intentionId: `data-rail-bundle-${bundleId}`,
+    source: 'data-rail-core',
+    createdAt,
+  };
   sovereignBus.emit(
     'data-rail.bundle.ready',
     'data-rail',
     bundle,
-    { correlationId: randomUUID(), source: 'data-rail-core' }
+    { correlationId: randomUUID(), source: 'data-rail-core', trace }
   );
 
   return bundle;

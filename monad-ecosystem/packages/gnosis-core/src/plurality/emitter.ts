@@ -15,6 +15,7 @@ import type {
   DoveSignal,
   DoveTier,
   DriftCategory,
+  EventTrace,
   PopulationDiversitySnapshot,
 } from '@sovereign/types';
 import { EventBus } from '@sovereign/bus';
@@ -242,15 +243,29 @@ export class PluralityDoveEmitter {
    * Computes a diversity snapshot, emits it as `gnosis.plurality.snapshot`,
    * evaluates Dove thresholds, and emits any new `dove.signal.tier*` events.
    */
+  private buildTrace(): EventTrace {
+    const now = new Date().toISOString();
+    return {
+      intentionId: `plurality-${this.source}-${now}`,
+      source: this.source,
+      parentEventId: this.previousSnapshot?.snapshotId,
+      createdAt: now,
+    };
+  }
+
   observe(profiles: readonly AgentProfile[]): PopulationDiversitySnapshot {
     const snapshot = calculatePopulationDiversitySnapshot(
       profiles,
       this.threshold
     );
+    const trace = this.buildTrace();
 
+    // gnosis.plurality.snapshot is an observation, not a governance action,
+    // so trace is not required; we include it anyway for auditability.
     this.bus.emit('gnosis.plurality.snapshot', 'gnosis', snapshot, {
       source: this.source,
       severity: 'info',
+      trace,
     });
 
     const evaluation = evaluatePluralitySignals(
@@ -267,11 +282,13 @@ export class PluralityDoveEmitter {
             ? 'dove.signal.tier2'
             : 'dove.signal.tier3';
 
+      // Dove signals are governance-relevant and require a documented intention trace.
       this.bus.emit(eventType, 'gnosis', signal, {
         source: this.source,
         severity:
           signal.tier === 3 ? 'critical' : signal.tier === 2 ? 'warning' : 'info',
         correlationId: snapshot.snapshotId,
+        trace,
       });
     }
 

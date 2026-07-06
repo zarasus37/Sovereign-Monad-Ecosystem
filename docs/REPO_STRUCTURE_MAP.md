@@ -45,7 +45,7 @@ These files define system-level truth and should be treated as primary reference
 
 ## Legacy And Archive
 
-These areas preserve older names, prior attempts, or completed work that should not be confused with the active shape of the repo:
+These areas preserve older names, prior attempts, or completed work that should not be confused with the active shape of the repo. **They are tagged `LEGACY_NON_SOVEREIGN` under `docs/CHARTER.md` §3.1.**
 
 - `archive/legacy-workspaces/` — prior workspace merges, including the old `monad-mev/` tree
 - `archive/generated/` — exported decks, manifests, and other build artifacts
@@ -55,6 +55,8 @@ These areas preserve older names, prior attempts, or completed work that should 
 - `monad-ecosystem/legacy/` — staged legacy code from the monad-mev rehome
 - older `Succor` naming that still appears in archived docs and manifests
 - earlier `v2.4.0` references inside historical reports and snapshots
+
+For the full inventory, remediation paths, and deadlines, see `docs/LEGACY_COMPONENTS.md`.
 
 ## Generated Or Local-Only
 

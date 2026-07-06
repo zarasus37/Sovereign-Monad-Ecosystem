@@ -4,7 +4,7 @@
  */
 
 import { sovereignBus } from '@sovereign/bus';
-import type { EmergencePattern, SignalEvent, PatternStatus } from '@sovereign/types';
+import type { EmergencePattern, EventTrace, SignalEvent, PatternStatus } from '@sovereign/types';
 import { randomUUID } from 'node:crypto';
 
 export interface DiscoverPatternOptions {
@@ -22,10 +22,20 @@ export async function discoverPattern(
   const now = new Date().toISOString();
   const patternId = randomUUID();
   const correlationId = randomUUID();
+  const status = options.status ?? 'candidate';
+
+  // CHARTER §4 — emergence claims are trace-required; candidates are not.
+  const claimTrace: EventTrace | undefined =
+    status === 'claimed'
+      ? {
+          intentionId: `emergence-claim-${patternId}`,
+          source: 'emergent-protocol-core',
+          createdAt: now,
+        }
+      : undefined;
 
   const title = options.title ?? 'Recurring Spread Arbitrage Convergence';
   const category = options.category ?? 'cross-agent-behavioral';
-  const status = options.status ?? 'candidate';
 
   const pattern: EmergencePattern = {
     patternId,
@@ -64,7 +74,7 @@ export async function discoverPattern(
     eventType,
     'emergence',
     pattern,
-    { correlationId, source: 'emergent-protocol-core' }
+    { correlationId, source: 'emergent-protocol-core', trace: claimTrace }
   );
 
   return event;

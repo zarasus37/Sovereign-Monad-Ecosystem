@@ -4,6 +4,7 @@
  */
 
 import { sovereignBus } from '@sovereign/bus';
+import type { EventTrace } from '@sovereign/types';
 import { randomUUID } from 'node:crypto';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -43,6 +44,12 @@ export function activateDataRail(readinessScore = 0.85): ActivationRecord {
   }
 
   // Emit on bus
+  // data-rail.activated is not currently trace-required; include trace anyway for auditability.
+  const trace: EventTrace = {
+    intentionId: `data-rail-activation-${activationId}`,
+    source: 'data-rail-core',
+    createdAt: activatedAt,
+  };
   sovereignBus.emit(
     'data-rail.activated',
     'data-rail',
@@ -51,7 +58,7 @@ export function activateDataRail(readinessScore = 0.85): ActivationRecord {
       timestamp: activatedAt,
       readinessScore,
     },
-    { correlationId: randomUUID(), source: 'data-rail-core' }
+    { correlationId: randomUUID(), source: 'data-rail-core', trace }
   );
 
   return record;
