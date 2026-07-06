@@ -71,5 +71,23 @@ describe('HCD-5', () => {
     expect(result.sampleSize).toBe(2); // tier2 + tier1
     expect(result.unit).toBe('ms');
     expect(result.value).toBeGreaterThan(0);
+    expect(result.notes?.join()).toMatch(/~[\d.]+ hours/);
+  });
+
+  it('rejects implausibly large latencies as insufficient data', () => {
+    const log = loadLog();
+    const events = loadBus().filter((e) => e.type !== 'dove.signal.tier1' && e.type !== 'dove.signal.tier2');
+    events.push({
+      id: 'old-signal',
+      correlationId: 'c-old',
+      timestamp: '2000-01-01T00:00:00.000Z',
+      layer: 'dove',
+      source: 'dove-router',
+      type: 'dove.signal.tier1',
+      payload: {},
+    });
+    const result = computeHcd5(events, log);
+    expect(result.status).toBe('insufficient-data');
+    expect(result.notes?.join()).toMatch(/plausible/i);
   });
 });

@@ -41,11 +41,30 @@ export function buildReport(inputs: ReportInputs): DriftReport {
   }
 
   const busEvents = inputs.busEvents ?? [];
-  metrics.push(computeHcd3(busEvents));
-  metrics.push(computeHcd4(busEvents));
+  const hcd3 = computeHcd3(busEvents);
+  metrics.push(hcd3);
+  if (hcd3.sampleSize === 0 && busEvents.length > 0) {
+    warnings.push(
+      'HCD‑3: no human-originated events found in the provided bus window; query diversity cannot be computed from this data.'
+    );
+  }
+
+  const hcd4 = computeHcd4(busEvents);
+  metrics.push(hcd4);
+  if (hcd4.sampleSize > 0 && hcd4.value === 0) {
+    warnings.push(
+      'HCD‑4: all trace-required events in the window lack valid traces. This likely means the window predates traceability enforcement rather than indicating a live CHARTER §4 violation.'
+    );
+  }
 
   if (inputs.correctionLog) {
-    metrics.push(computeHcd5(busEvents, inputs.correctionLog));
+    const hcd5 = computeHcd5(busEvents, inputs.correctionLog);
+    metrics.push(hcd5);
+    if (hcd5.status === 'insufficient-data' && hcd5.sampleSize > 0) {
+      warnings.push(
+        'HCD‑5: median correction latency could not be computed from a plausible sample; review signal/correction timestamps for clock or data-order issues.'
+      );
+    }
   } else {
     warnings.push('No correction log provided; HCD‑5 skipped.');
   }

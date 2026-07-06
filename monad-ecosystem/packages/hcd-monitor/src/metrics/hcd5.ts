@@ -9,6 +9,9 @@
 
 import type { BusEvent, CorrectionLog, MetricResult } from '../types.js';
 
+/** Sanity ceiling: latencies above this look like timestamp/clock artifacts. */
+const MAX_PLAUSIBLE_LATENCY_MS = 5 * 365 * 24 * 3_600_000; // ~5 years
+
 const DRIFT_EVENT_TYPES = new Set<string>([
   'dove.signal.tier1',
   'dove.signal.tier2',
@@ -69,31 +72,54 @@ export function computeHcd5(
     };
   }
 
-  latencies.sort((a, b) => a - b);
-  const median =
-    latencies.length % 2 === 1
-      ? latencies[Math.floor(latencies.length / 2)]
-      : (latencies[latencies.length / 2 - 1] + latencies[latencies.length / 2]) /
-        2;
-
   const negativeCount = latencies.filter((l) => l < 0).length;
-  const notes: string[] = [
-    `${signals.length} drift signals; ${latencies.length} had parseable latency.`,
-    `${negativeCount} signals occurred after the correction log timestamp (clock or data-order artifact).`,
-  ];
+  const plausibleLatencies = latencies.filter(
+    (l) => l >= 0 && l <= MAX_PLAUSIBLE_LATENCY_MS
+  );
 
+  if (plausibleLatencies.length === 0) {
+    return {
+      id: 'HCD-5',
+      name: 'Meaningful Correction Latency',
+      value: 0,
+      unit: 'ms',
+      sampleSize: signals.length,
+      status: 'insufficient-data',
+      notes: [
+        `${signals.length} drift signals; ${latencies.length} had parseable latency.`,
+        `${negativeCount} signals occurred after the correction log timestamp.`,
+        'No plausible latencies remain after filtering out negative or >5-year values; check clock/data ordering.',
+      ],
+    };
+  }
+
+  const median = computeMedian(plausibleLatencies);
   const hours = median / 3_600_000;
+  const days = hours / 24;
   let status: MetricResult['status'] = 'green';
   if (hours > 72) status = 'red';
   else if (hours > 24) status = 'yellow';
+
+  const notes: string[] = [
+    `${signals.length} drift signals; ${latencies.length} had parseable latency; ${plausibleLatencies.length} within plausible range.`,
+    `${negativeCount} signals occurred after the correction log timestamp (clock or data-order artifact).`,
+    `Median latency: ${Math.round(median).toLocaleString()} ms (~${hours.toFixed(1)} hours, ~${days.toFixed(1)} days).`,
+  ];
 
   return {
     id: 'HCD-5',
     name: 'Meaningful Correction Latency',
     value: Math.round(median),
     unit: 'ms',
-    sampleSize: latencies.length,
+    sampleSize: plausibleLatencies.length,
     status,
     notes,
   };
+}
+
+function computeMedian(values: number[]): number {
+  values.sort((a, b) => a - b);
+  return values.length % 2 === 1
+    ? values[Math.floor(values.length / 2)]
+    : (values[values.length / 2 - 1] + values[values.length / 2]) / 2;
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T16:37:41.407Z",
+  "generatedAt": "2026-07-06T18:16:43.339Z",
   "metrics": [
     {
       "id": "HCD-1",
@@ -22,7 +22,8 @@
       "window": "2026-06-23T10:19:12.406560Z",
       "status": "red",
       "notes": [
-        "2 reclassifications, 5 kept-as-is, 0 removed."
+        "2 reclassifications, 5 kept-as-is, 0 removed.",
+        "Low value means most human decisions did not result in reclassification; this may indicate weak discernment or a well-calibrated ML boundary."
       ]
     },
     {
@@ -59,8 +60,9 @@
       "sampleSize": 6,
       "status": "red",
       "notes": [
-        "6 drift signals; 6 had parseable latency.",
-        "0 signals occurred after the correction log timestamp (clock or data-order artifact)."
+        "6 drift signals; 6 had parseable latency; 6 within plausible range.",
+        "0 signals occurred after the correction log timestamp (clock or data-order artifact).",
+        "Median latency: 352,753,457 ms (~98.0 hours, ~4.1 days)."
       ]
     }
   ],
@@ -69,5 +71,8 @@
     "correctionLogPath": "../../../logs/audit/correction_log_v5.10.json",
     "busLogPath": "../../../logs/signal-stream.jsonl"
   },
-  "warnings": []
+  "warnings": [
+    "HCD‑3: no human-originated events found in the provided bus window; query diversity cannot be computed from this data.",
+    "HCD‑4: all trace-required events in the window lack valid traces. This likely means the window predates traceability enforcement rather than indicating a live CHARTER §4 violation."
+  ]
 }

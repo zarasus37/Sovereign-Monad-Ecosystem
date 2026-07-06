@@ -21,6 +21,11 @@ export function computeHcd2(log: CorrectionLog): MetricResult {
   notes.push(
     `${overrides} reclassifications, ${log.keptAsIs.length} kept-as-is, ${log.removed.length} removed.`
   );
+  if (totalHumanDecisions > 0) {
+    notes.push(
+      'Low value means most human decisions did not result in reclassification; this may indicate weak discernment or a well-calibrated ML boundary.'
+    );
+  }
 
   let status: MetricResult['status'] = 'insufficient-data';
   if (totalHumanDecisions > 0) {

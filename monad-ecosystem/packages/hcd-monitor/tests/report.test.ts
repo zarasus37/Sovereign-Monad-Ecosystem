@@ -43,4 +43,26 @@ describe('buildReport', () => {
     expect(report.metrics).toHaveLength(2); // HCD-3 and HCD-4 can still run
     expect(report.warnings.length).toBeGreaterThan(0);
   });
+
+  it('warns about human-event and trace gaps in bus data', () => {
+    const correctionLog = parseCorrectionLog(
+      JSON.parse(fixture('correction-log.json'))
+    );
+    const report = buildReport({
+      correctionLog,
+      busEvents: [
+        {
+          id: 'no-trace',
+          correlationId: 'c1',
+          timestamp: '2026-06-23T08:00:00.000Z',
+          layer: 'intelligence',
+          source: 'agent-alpha',
+          type: 'trade.approved',
+          payload: { symbol: 'ETH' },
+        },
+      ],
+    });
+    expect(report.warnings.some((w) => w.includes('HCD‑3'))).toBe(true);
+    expect(report.warnings.some((w) => w.includes('HCD‑4'))).toBe(true);
+  });
 });

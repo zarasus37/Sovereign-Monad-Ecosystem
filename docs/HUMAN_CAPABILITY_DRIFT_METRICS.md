@@ -70,6 +70,8 @@ HCD-2 = (human overrides later validated as correct) / (total human overrides in
 - **Yellow:** HCD‑2 declines for two consecutive audit cycles.
 - **Red:** HCD‑2 drops below 0.6 while the absolute number of overrides rises — humans are intervening more but understanding less.
 
+**Interpreting a low value:** A low HCD‑2 value can mean either (a) humans are second‑guessing the ML boundary and usually wrong, or (b) the ML boundary is already well‑calibrated, so most human review decisions correctly leave events unchanged. Do not treat the number alone as a performance score; compare it against the auto‑accept rate and the distribution of ML confidence for the reviewed events.
+
 **Charter linkage:** §2 — humans must grow in discernment; declining override fidelity is evidence of the opposite.
 
 ---
