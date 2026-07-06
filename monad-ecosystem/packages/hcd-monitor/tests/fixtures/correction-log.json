@@ -1,0 +1,39 @@
+{
+  "version": "v5.10",
+  "applied_at": "2026-06-23T10:19:12.406560Z",
+  "source_corpus": "master_corpus_v5.9.jsonl",
+  "target_corpus": "master_corpus_v5.10.jsonl",
+  "phase": "P8 (HR review)",
+  "corrections": [
+    {
+      "event_id": "gnosis_Gnostic Jesus (The Historical Figur_ev13",
+      "action": "reclassify",
+      "old_class": 42,
+      "new_class": 2,
+      "old_flags": {
+        "single_occurrence": true,
+        "rule_based": true,
+        "similarity": false,
+        "causality": true,
+        "convention": true,
+        "possibility": false,
+        "fact": true,
+        "reason": true
+      },
+      "rationale": "Class 42 → 2: single demonstrative recognition"
+    }
+  ],
+  "removed": [],
+  "kept_as_is": [
+    {
+      "event_id": "Spinoza_ev09",
+      "old_class": 42,
+      "rationale": "ML agrees with flagged; verified Class 42"
+    },
+    {
+      "event_id": "Akhenaten_ev06",
+      "old_class": 4,
+      "rationale": "Path-class gap; verified Class 4"
+    }
+  ]
+}
