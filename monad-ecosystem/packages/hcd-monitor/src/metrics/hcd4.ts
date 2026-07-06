@@ -6,6 +6,7 @@
  * expose reasoning before action.
  */
 
+import { HCD_THRESHOLDS, ratioStatus } from '../config/thresholds.js';
 import { TRACE_REQUIRED_EVENT_TYPES } from '@sovereign/bus';
 import type { BusEvent, MetricResult } from '../types.js';
 
@@ -46,9 +47,7 @@ export function computeHcd4(events: BusEvent[]): MetricResult {
     notes.push(`  ${type}: ${wt}/${total} traced`);
   }
 
-  let status: MetricResult['status'] = 'green';
-  if (value < 0.3) status = 'red';
-  else if (value < 0.8) status = 'yellow';
+  const status = ratioStatus(value, HCD_THRESHOLDS.hcd4);
 
   return {
     id: 'HCD-4',

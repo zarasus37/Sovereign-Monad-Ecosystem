@@ -5,6 +5,7 @@
  * log window. Higher entropy = more diverse human-initiated activity.
  */
 
+import { HCD_THRESHOLDS, ratioStatus } from '../config/thresholds.js';
 import type { BusEvent, MetricResult } from '../types.js';
 import { DEFAULT_HUMAN_SOURCES } from '../types.js';
 
@@ -76,9 +77,11 @@ export function computeHcd3(
     `Top-3 template share: ${(top3Share * 100).toFixed(1)}%.`,
   ];
 
-  let status: MetricResult['status'] = 'green';
-  if (normalizedEntropy < 0.4 && top3Share > 0.6) status = 'red';
-  else if (normalizedEntropy < 0.5) status = 'yellow';
+  const bands = HCD_THRESHOLDS.hcd3;
+  let status = ratioStatus(normalizedEntropy, bands);
+  if (status === 'red' && top3Share <= bands.top3Red) {
+    status = 'yellow';
+  }
 
   return {
     id: 'HCD-3',
