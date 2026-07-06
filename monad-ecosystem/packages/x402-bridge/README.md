@@ -1,5 +1,7 @@
 # x402 QuickNode Integration Guide
 
+> **LEGACY_NON_SOVEREIGN** — This package is a pre‑charter external bridge and does not currently satisfy `docs/CHARTER.md` §3 (sovereignty as an architectural property). Live smoke tests are blocked on funding, and cost accounting / failure boundaries are not yet validated. See `docs/LEGACY_COMPONENTS.md` for the remediation plan and deadline.
+
 ## Overview
 
 This guide covers integrating **x402 QuickNode** into the Monad MEV price fetcher. x402 is a wallet-authenticated, pay-per-request access layer that provides **1,000,000 free API credits per month** with no API key and no rate limits.

@@ -77,6 +77,8 @@ Certain legacy components may pre‑date this charter and not fully satisfy §3.
 
 Such components must be explicitly labeled as **Legacy / Non‑Compliant** in docs and code (e.g., `LEGACY_NON_SOVEREIGN` in README or package metadata).
 
+A central inventory is maintained in `docs/LEGACY_COMPONENTS.md`. It lists each non‑compliant component, why it fails §3, the chosen remediation path, and the deadline.
+
 For each non‑compliant component, maintainers must choose one of the following within **12 months** of the effective date:
 
 - **Remediation:** bring the component into compliance with §3 and remove the legacy label.

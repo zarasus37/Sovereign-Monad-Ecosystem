@@ -14,6 +14,7 @@ It contains:
 
 - the foundational axioms and theology of the project
 - the non-negotiable guardrails binding all contributors and AI collaborators: [`docs/CHARTER.md`](./CHARTER.md) and its operational companion [`docs/SHARED_AI_COLLABORATION_CHARTER.md`](./SHARED_AI_COLLABORATION_CHARTER.md)
+- the inventory of pre‑charter non‑sovereign components and their remediation deadlines: [`docs/LEGACY_COMPONENTS.md`](./LEGACY_COMPONENTS.md)
 - the current architecture in full
 - the current live state of every layer
 - the current phase roadmap
