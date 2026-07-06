@@ -3,7 +3,7 @@
 > This is the single canonical source of truth for the Sovereign Monad Ecosystem.
 > All participants — human or AI — synchronize to this file.
 > Do not act on subordinate documents if they conflict with this file.
-> Last updated 6/23/2026
+> Last updated 2026-06-26
 ---
 
 # SECTION 1 — WHAT THIS FILE IS
@@ -748,6 +748,8 @@ A defined percentage of treasury-held capital may later be reserved for investme
 - treasury-linked execution path
 - live delegate voting and enforcement
 - founder handoff encoding under live conditions
+
+**Steward Council:** The initial Steward Council members are documented in [`docs/STEWARD_COUNCIL.md`](./STEWARD_COUNCIL.md). The council interprets the Sovereign Monad Guardrail Charter when mechanical adjudication is insufficient.
 
 **Dependency:** later phase after infrastructure maturity
 
