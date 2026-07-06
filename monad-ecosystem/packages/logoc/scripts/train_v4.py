@@ -14,7 +14,7 @@ def load_corpus(path: Path) -> list:
                 events.append(json.loads(line))
     return events
 
-corpus_path = WORKSPACE / "logs/corpus/master_corpus_v5.2.jsonl"
+corpus_path = WORKSPACE / "logs/corpus/master_corpus_v5.10.jsonl"
 output_dir = WORKSPACE / "monad-ecosystem/packages/logoc/ml"
 
 print(f"Loading corpus from {corpus_path}")

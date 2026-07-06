@@ -64,7 +64,7 @@ def find_valid_path(vehicle, obj, interpretant):
         return path
     return None
 
-master_path = os.path.join(WORKSPACE, "logs/corpus/master_corpus_v5.2.jsonl")
+master_path = os.path.join(WORKSPACE, "logs/corpus/master_corpus_v5.10.jsonl")
 
 events = []
 with open(master_path, 'r') as f:

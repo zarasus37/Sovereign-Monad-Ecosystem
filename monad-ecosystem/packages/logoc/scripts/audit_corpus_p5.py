@@ -13,7 +13,7 @@ FEATURE_NAMES = [
 ]
 
 BASE_DIR = r"C:\Users\crisc\OneDrive - Southern Careers Institute\My Drive\The_Sovereign\monad-ecosystem\packages\logoc"
-MODEL_PATH = Path(BASE_DIR) / "ml" / "ml_classifier_v7.json"
+MODEL_PATH = Path(BASE_DIR) / "ml" / "ml_classifier_v13.json"
 SPEC_PATH = Path(BASE_DIR) / "spec" / "peirce_sign_classes.json"
 
 with SPEC_PATH.open("r", encoding="utf-8") as f:

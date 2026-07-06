@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Train ML Peirce classifier on LOGOC corpus v5.2.
+Train ML Peirce classifier on LOGOC corpus v5.10.
 Usage: python scripts/train_ml_classifier.py [--corpus PATH] [--output DIR]
 """
 from __future__ import annotations
@@ -30,7 +30,7 @@ def load_corpus(path: Path) -> list:
 
 def main():
     parser = argparse.ArgumentParser(description="Train ML Peirce classifier")
-    parser.add_argument("--corpus", type=Path, default=Path("logs/corpus/master_corpus_v5.2.jsonl"))
+    parser.add_argument("--corpus", type=Path, default=Path("logs/corpus/master_corpus_v5.10.jsonl"))
     parser.add_argument("--output", type=Path, default=Path("monad-ecosystem/packages/logoc/ml"))
     parser.add_argument("--test-size", type=float, default=0.2)
     parser.add_argument("--seed", type=int, default=42)
