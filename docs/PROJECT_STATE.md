@@ -36,7 +36,7 @@ If you are picking up work in a fresh session, read this file after `README.md` 
 - The control-center frontend typecheck and frontend build now pass on a clean rerun under pnpm.
 - The control-center workspace build approval is normalized in its `pnpm-workspace.yaml`, and the frontend build script now uses a Windows-safe Node copy step.
 - The control-center backend now exposes live ingestion methods for agent status updates and Kafka/event-bus signals.
-- Recent completions: P8 (LOGOC HR cleanup → v5.10 corpus + ML v13), P9 (Kafka bridge hardening), P10 (control-center interactive reclassify dialog + persistent decisions), P11 (theo-techno-cosmo misplaced-code archive cleanup), P11-follow-up (cardia-activation-core ESM test fix + execution-truth-core / organ-runtime stubs restored full `pnpm build` / `pnpm test` green), P4 (narrative-purpose detection wired into `ProductionPeirceClassifier`), Phase 2 (`monad-mev/` rehomed to `archive/legacy-workspaces/monad-mev-legacy-2026-06`, live x402 code extracted to `monad-ecosystem/packages/x402-bridge/`).
+- Recent completions: P8 (LOGOC HR cleanup → v5.10 corpus + ML v13), P9 (Kafka bridge hardening), P10 (control-center interactive reclassify dialog + persistent decisions), P11 (theo-techno-cosmo misplaced-code archive cleanup), P11-follow-up (cardia-activation-core ESM test fix + execution-truth-core / organ-runtime stubs restored full `pnpm build` / `pnpm test` green), P4 (narrative-purpose detection wired into `ProductionPeirceClassifier`), Phase 2 (`monad-mev/` rehomed to `archive/legacy-workspaces/monad-mev-legacy-2026-06`, live x402 code extracted to `monad-ecosystem/packages/x402-bridge/`), June-28→30 gnosis-core PluralityScheduler CLI + live agent registry + container runtime, **July-6 CHARTER v1.0 ratification + Steward Council + HCD-1..5 drift metrics + bus §4 intention-traceability (PRs #11/#12/#14)**, **July-7 TTCL/compiler axis: Layer-7 parity-enforced tripartite grammar (#18), Layer-3 Phase-A numerics codegen (#19), real `pnpm typecheck` gate (#20), CI restore + gitignore hygiene (#21), Phase-B Sign-event codegen + ajv validators (#22), signal-event enum catch-up (#23), Peirce manifold relocated logoc→types (#24), MLIR-style L3 Semiotic + L2 Sign-Graph compiler stack with graph-wide constitution gate (#25)**.
 - x402 live smoke preflight ran against the P2 settlement wallet `0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F` and reported **0 ETH / 0 USDC** on Base Sepolia; live enrollment remains blocked on external funding.
 - Fixed three latent `gnostic-engine` lint issues surfaced by `pnpm lint`: unused `dataclasses.field` import, unused `collections.defaultdict` import, and a duplicate rubric-path dictionary key in `logoc_pipeline.py` that shadowed class 7 with an invalid class 42 sentinel.
 
@@ -760,12 +760,62 @@ The following items are **complete** and should no longer be treated as in-progr
 
 **Preserved:** `THE COUNCILE/` provenance, `Wheel/` images, `plex/Manifest/`, `plex/Review/`, `plex/Research/`, `notes/`.
 
+### ✅ Completed: Guardrail Charter + Steward Council + HCD Drift Metrics (July 6, 2026)
+
+- **`docs/CHARTER.md` v1.0 ratified** (effective 2026-07-06) — 8 guardrail clauses (extension-not-replacement, mutual growth, sovereignty as architectural property, auditable intention, no fake otherness, real human roles, LOGOC arbiter, scope). Adjudication chain: LOGOC mechanical tests → Steward Council → ecosystem governance.
+- **`docs/STEWARD_COUNCIL.md`** — initial Steward Council members documented (PR #14).
+- **`docs/HUMAN_CAPABILITY_DRIFT_METRICS.md`** + `hcd-monitor` — HCD-1..HCD-5 drift metrics drafted for CHARTER §2.1, automated, thresholds centralized with explicit targets (PR #12 + follow-ups).
+- **Bus §4 intention-traceability** — `@sovereign/bus` now enforces CHARTER §4 intention traceability on consequential events (PR #11).
+
+### ✅ Completed: TTCL / Compiler Axis — Layers 2, 3, 5, 8 (July 7, 2026)
+
+This is the body of work that made the tripartite grammar the single source of truth every runtime derives behavior from, and landed the MLIR-style compiler stack (TTCL's fourth fundamental). PRs #18–#25, all squash-merged to `main`, CI green.
+
+**Layer 7 / 8 — parity-enforced tripartite grammar (PR #18):** TS↔Python parity now CI-enforced on three surfaces — scorer (19 tests), tier (71 tests), classifier (14 tests). L7.7 typed-path bridge retuned; L7.8 round4 tie-break substitute (tier spread 41/19/6).
+
+**Layer 3 — Phase A numerics codegen (PR #19):** `@sovereign/types` numerics generated from JSON source of truth. **Phase B Sign-event codegen + ajv validators (PR #22):** generated Sign-event validators + factories from `shared/ttcl-specs/sign-events.json`. **Real typecheck gate (PR #20)** + **CI restore + gitignore hygiene (PR #21)** + **signal-event enum catch-up (PR #23).**
+
+**Layer 2 — manifold relocation (PR #24):** Peirce 66-class manifold moved from `@sovereign/logoc` to `@sovereign/types` so the compiler stack has clean import paths across the three packages. `@sovereign/ttcl` owns `Modality`/`Domain`/`Sign`/`Wheel`/`makeSign`/`compose`/`scoreSign`/`combineWheelsBudgeted`; `@sovereign/types` owns manifold/numerics/`PeirceSignature`/`CONSTITUTION_PASS_THRESHOLD`.
+
+**Layer 5 — MLIR-style compiler stack (PR #25):** new `@sovereign/compiler` package — an SSA interpreter with passes (not a code emitter):
+- **L3 SemioticDialect** — ajv-validated loader (`shared/ttcl-specs/semiotic-program-schema.json`) builds an in-memory SSA `SignGraph`; wheel-binding pass resolves references, enforces acyclicity (tri-color DFS), validates the terminal output.
+- **L2 SignGraphDialect** — type/modality inference via the JOIN lattice (`compose`→HYBRID; PURE input = `LatticeAbortError` compile error, not a runtime `TriadicGateError`); budgeted expansion (`WheelBudgetExceededError` at compile time); **graph-wide constitution compliance — the keystone**.
+- **L0** — lowers by instantiating the existing `@sovereign/ttcl` runtime `Wheel`/`Sign` objects. No WASM/LLVM emission (existing runtime IS L0, by design).
+
+**The keystone guarantee is now real** (`theo-techno-cosmo/plex/Review/The Four Fundamentals TTCL Is Built.txt:85`): the 0.72 constitution threshold is a graph-wide compile gate, not an after-the-fact filter. A program whose output passes per-Sign `scoreSign` but lacks triadic closure FAILS the graph-wide pass — the case per-Sign scoring misses. A constitution-failing program raises `ConstitutionCompileError` at L2 and never reaches L0.
+
+**Architectural invariant:** `@sovereign/ttcl` never imports `@sovereign/compiler` (compiler → ttcl → types, no cycle). ajv is a runtime dep of `@sovereign/compiler` only (the types-only devDep rule untouched).
+
+**Verification:** `pnpm --filter @sovereign/compiler exec tsc --noEmit` green; `types/ttcl/bus/logoc` typecheck green; `pnpm test:integration` 155/155 (139 existing + 16 new `compiler-sign-graph.test.ts`); `pnpm check:layout` ✓.
+
+**Deferred (follow-up PRs):** L1 Provenance (`Token` threading, `KeyCap` capability, `encodeSign`/`decodeSign`); L2 rewrite/fusion pass; `attachModality` as a distinct SSA op; code-emission L0 target; Python parity (compiler is TS-only); schema drift guard.
+
+### 9-Layer Status (TTCL/compiler axis — the working progress model)
+
+The user's working 9-layer model = the TTCL v1.0 breakdown layers 1-7 extended to 9 (Layer 8 = parity/CI, Layer 9 = live activation). This is NOT the MOF's 15-layer Base Stack. Source: `theo-techno-cosmo/plex/archive/TTCL_v1_0_BREAKDOWN.md`.
+
+| # | Layer | Status | Done | Remaining |
+|---|---|---|---|---|
+| 1 | Epistemic Framework (TTCL) | ✅ | Tripartite grammar + 66-class Peirce manifold as machine-readable interface | — |
+| 2 | Type System | ✅ | `@sovereign/types` + `@sovereign/ttcl` types; manifold relocated (PR #24) | — |
+| 3 | Combinators | ✅ | `compose`/`map`/`fold`/`choose`; modal lattice; Triadic Minimal Gate; Phase B codegen | Full branch-join for map/fold/choose (deferred w/ Layer 5 fusion) |
+| 4 | Constitution | ✅ (runtime) | `scoreSign`, 0.72 threshold, triadic closure | — (compile gate is Layer 5) |
+| 5 | Compiler Stack (MLIR) | 🟡 | L3 Semiotic + L2 SignGraph + graph-wide constitution gate (PR #25); L0 = runtime | **L1 Provenance; L2 rewrite/fusion; `attachModality` op** |
+| 6 | Scheduler (Multi-Objective Opt.) | ⬜ | — (specified only) | Simulated-annealing wheel scheduler → `canonical_schedule.json` (`TTCL_v1_0_BREAKDOWN.md:228`) |
+| 7 | Training Pipeline (Full Stack) | ⬜ | Parity prerequisites only | SFT→Reward→PPO→Eval; LLaMA 3.1 8B + QLoRA + TRL |
+| 8 | Parity / CI | ✅ | Scorer/tier/classifier parity CI-enforced; 155 integration tests | Keep green as Layer 5 follow-ups land |
+| 9 | Live activation / production | 🟡 / 🔒 | Local ~82-85% complete; Phase 1a routing live on Monad mainnet; Agent 0 behavioral claim mined | Funded Cardia, live Keys, public Data Rail, public rollout — capital-gated |
+
+**Throughline:** Layers 1-4 + 8 done. Layer 5 is the active code frontier (L1 Provenance next). Layers 6-7 are the unbuilt core. Layer 9 is mostly external/capital.
+
 ## Next Actions
 
-1. Run the x402 live smoke test once the Base Sepolia wallet is funded (`X402_EVM_PRIVATE_KEY` + ≥0.5 USDC). This is the current active frontier.
-2. Continue normal development inside the approved active domains only.
-3. Update this file whenever the project state changes in a meaningful way.
-4. Run `pnpm check:layout` after structural changes (it now degrades gracefully when `ripgrep` is unavailable).
+1. **Code frontier — Layer 5 L1 Provenance** (`@sovereign/compiler`): `Token` threading, `KeyCap` capability check, `encodeSign`/`decodeSign` lowering. Closes the MLIR compiler stack so the prose's four-level guarantee is fully realized. The L2 rewrite/fusion pass is a parallel follow-up.
+2. **Unbuilt TTCL layers** — Layer 6 Scheduler (simulated-annealing wheel rotations → `canonical_schedule.json`, specified in `TTCL_v1_0_BREAKDOWN.md:228`, no implementation) and Layer 7 Training Pipeline (SFT→Reward→PPO→Eval; LLaMA 3.1 8B + QLoRA + TRL, specified only). These are the largest remaining pieces of the TTCL stack itself.
+3. Run the x402 live smoke test once the Base Sepolia wallet is funded (`X402_EVM_PRIVATE_KEY` + ≥0.5 USDC) — still the capital-gated live frontier.
+4. Continue normal development inside the approved active domains only.
+5. Update this file whenever the project state changes in a meaningful way.
+6. Run `pnpm check:layout` after structural changes (it now degrades gracefully when `ripgrep` is unavailable).
 
 ## Resume Rule
 
