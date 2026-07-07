@@ -1,0 +1,19 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/semiotic-program-schema.json",
+  "program": "raw-technology-packet",
+  "wheels": [],
+  "signs": [
+    {
+      "id": "sTech",
+      "class_id": 2,
+      "mode": "INDEX",
+      "domain": "TECHNOLOGY",
+      "modality": "INDEX",
+      "pps": 1.00,
+      "noRlhf": true
+    }
+  ],
+  "ops": [],
+  "budget": 1000,
+  "output": "sTech"
+}

@@ -10,6 +10,7 @@ export default defineConfig({
       '@sovereign/types': resolve(__dirname, './monad-ecosystem/packages/sovereign-types/src'),
       '@sovereign/logoc': resolve(__dirname, './monad-ecosystem/packages/logoc/src'),
       '@sovereign/ttcl': resolve(__dirname, './monad-ecosystem/packages/ttcl/src'),
+      '@sovereign/compiler': resolve(__dirname, './monad-ecosystem/packages/compiler/src'),
       '@sovereign/hepar-core': resolve(__dirname, './monad-ecosystem/packages/hepar-core/src'),
       '@sovereign/data-rail-core': resolve(__dirname, './monad-ecosystem/packages/data-rail-core/src'),
       '@sovereign/gnosis-evaluator-core': resolve(__dirname, './monad-ecosystem/packages/gnosis-evaluator-core/src'),
