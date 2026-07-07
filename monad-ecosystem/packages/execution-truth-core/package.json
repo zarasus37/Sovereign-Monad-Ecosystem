@@ -4,6 +4,7 @@
     "description":  "Local runtime execution-truth readiness surface",
     "main":  "dist/index.js",
   "scripts":  {
+                    "typecheck": "tsc --noEmit",
                     "build":  "node ../../../node_modules/typescript/bin/tsc -p tsconfig.json",
                     "start":  "node dist/index.js",
                     "dev":  "ts-node src/index.ts"

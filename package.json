@@ -14,7 +14,7 @@
     "build": "pnpm --filter=!public-activation-core --recursive build",
     "test": "pnpm --recursive test",
     "test:integration": "vitest run monad-ecosystem/tests/integration/",
-    "typecheck": "pnpm --recursive tsc --noEmit",
+    "typecheck": "pnpm --recursive run typecheck",
     "check:numerics": "node scripts/check-numeric-drift.mjs",
     "check:sign-types": "node scripts/check-sign-types-drift.mjs",
     "validate": "pnpm check:layout && pnpm check:numerics && pnpm check:sign-types && pnpm typecheck && pnpm test:integration",

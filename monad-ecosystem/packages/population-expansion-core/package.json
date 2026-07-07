@@ -4,6 +4,7 @@
     "description":  "Local population expansion targets beyond the threshold-clearing Data Rail sample",
     "main":  "dist/index.js",
     "scripts":  {
+                    "typecheck": "tsc --noEmit",
                     "start":  "node dist/index.js",
                     "dev":  "ts-node src/index.ts"
                 },
