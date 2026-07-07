@@ -1,0 +1,101 @@
+{
+  "$comment": "Layer 7.8 classifier-parity corpus. Each case feeds the SAME {narrative, semiotic_flags} to the TS heuristic classifier (logoc/src/peirce/classifier.ts) and the Python heuristic port (gnostic_engine/classification/heuristic.py). Both must produce the same class_id (or both flag ambiguous). Cases cover flag-driven decisions, narrative-keyword decisions, mixed, and ambiguous (no triad branch resolves). Flag names match SemioticFlags: single_occurrence, rule_based, similarity, causality, convention, possibility, fact, reason. Ambiguous cases expect BOTH runtimes to throw (class_id null).",
+  "cases": [
+    {
+      "id": "flag-legisign-symbol-argument",
+      "narrative": "",
+      "semiotic_flags": { "rule_based": true, "convention": true, "reason": true },
+      "expected_class_id": 42,
+      "expected_ambiguous": false,
+      "note": "flags alone → [Legisign, Symbol, Argument] (Formal-Argument class)."
+    },
+    {
+      "id": "flag-sinsign-index-rheme",
+      "narrative": "",
+      "semiotic_flags": { "single_occurrence": true, "causality": true, "possibility": true },
+      "expected_class_id": 1,
+      "expected_ambiguous": false,
+      "note": "flags alone → [Sinsign, Index, Rheme] (Rhematic-Indexical-Sinsign)."
+    },
+    {
+      "id": "flag-sinsign-index-dicent",
+      "narrative": "",
+      "semiotic_flags": { "single_occurrence": true, "causality": true, "fact": true },
+      "expected_class_id": 2,
+      "expected_ambiguous": false,
+      "note": "flags alone → [Sinsign, Index, Dicent] (Dicent-Indexical-Sinsign)."
+    },
+    {
+      "id": "flag-legisign-icon-rheme",
+      "narrative": "",
+      "semiotic_flags": { "rule_based": true, "similarity": true, "possibility": true },
+      "expected_class_id": 3,
+      "expected_ambiguous": false,
+      "note": "flags alone → [Legisign, Icon, Rheme] (Rhematic-Iconic-Legisign)."
+    },
+    {
+      "id": "narrative-qualisign-icon-rheme",
+      "narrative": "the pure feel of a sensation resembles an icon of a possibility",
+      "semiotic_flags": {},
+      "expected_class_id": 0,
+      "expected_ambiguous": false,
+      "note": "narrative keywords → Qualisign (pure/feel/sensation) + Icon (resemble/icon) + Rheme (possibility)."
+    },
+    {
+      "id": "narrative-sinsign-index-rheme",
+      "narrative": "this single token is a causal trace of a possibility",
+      "semiotic_flags": {},
+      "expected_class_id": 1,
+      "expected_ambiguous": false,
+      "note": "narrative keywords → Sinsign (this/single/token) + Index (causal/trace) + Rheme (possibility). Matches the orchestrator _COHERENT_NARRATIVE."
+    },
+    {
+      "id": "narrative-legisign-symbol-argument",
+      "narrative": "the law is an arbitrary symbol of a theorem",
+      "semiotic_flags": {},
+      "expected_class_id": 42,
+      "expected_ambiguous": false,
+      "note": "narrative keywords → Legisign (law) + Symbol (arbitrary/symbol) + Argument (theorem)."
+    },
+    {
+      "id": "narrative-sinsign-index-dicent",
+      "narrative": "this single event is a causal trace of a fact",
+      "semiotic_flags": {},
+      "expected_class_id": 2,
+      "expected_ambiguous": false,
+      "note": "narrative keywords → Sinsign (this/single/event) + Index (causal/trace) + Dicent (fact)."
+    },
+    {
+      "id": "ambiguous-no-keywords",
+      "narrative": "the cat sat on the mat",
+      "semiotic_flags": {},
+      "expected_class_id": null,
+      "expected_ambiguous": true,
+      "note": "no flag, no keyword in any branch → both runtimes throw AmbiguousClassificationError."
+    },
+    {
+      "id": "ambiguous-partial-flags-vehicle-only",
+      "narrative": "",
+      "semiotic_flags": { "rule_based": true },
+      "expected_class_id": null,
+      "expected_ambiguous": true,
+      "note": "vehicle resolves (Legisign) but object + interpretant have no flag and empty narrative → ambiguous."
+    },
+    {
+      "id": "ambiguous-partial-flags-object-only",
+      "narrative": "",
+      "semiotic_flags": { "causality": true },
+      "expected_class_id": null,
+      "expected_ambiguous": true,
+      "note": "object resolves (Index) but vehicle has no flag and empty narrative → ambiguous (vehicle branch first)."
+    },
+    {
+      "id": "narrative-legisign-index-argument",
+      "narrative": "the law is a causal pointer to a theorem",
+      "semiotic_flags": {},
+      "expected_class_id": 8,
+      "expected_ambiguous": false,
+      "note": "narrative keywords → Legisign (law) + Index (causal/pointer) + Argument (theorem)."
+    }
+  ]
+}

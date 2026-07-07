@@ -2,7 +2,8 @@ import requests
 import time
 
 MARKET_URL = "https://api.coinbase.com/v2/prices/BTC-USD/spot"
-SGE_URL = "http://127.0.0.1:8000/intake/forage"
+# Layer 7.7: migrated to the typed /api/v1/gnosis/process endpoint.
+SGE_URL = "http://127.0.0.1:8001/api/v1/gnosis/process"
 
 def forage_market_truth():
     print("--- SGE Market Forager Active (Public Data) ---")
@@ -16,7 +17,7 @@ def forage_market_truth():
                 last_price = price
 
             payload = {
-                "var_id": "MARKET_VOLATILITY_BTC",
+                "agent_id": "MARKET_VOLATILITY_BTC",
                 "lane_a": price / 70000,   # current price
                 "lane_b": last_price / 70000,  # simple bedrock
                 "lane_c": 0.02,
@@ -27,7 +28,7 @@ def forage_market_truth():
             }
 
             res = requests.post(SGE_URL, json=payload).json()
-            print(f"Price: ${price} | SR: {res['structural_read']} | Verdict: {res['verdict']}")
+            print(f"Price: ${price} | SR: {res['overall_score']} | Verdict: {res['verdict']}")
 
             last_price = price
 

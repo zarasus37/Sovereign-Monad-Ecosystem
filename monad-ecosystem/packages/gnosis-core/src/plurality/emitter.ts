@@ -18,6 +18,12 @@ import type {
   EventTrace,
   PopulationDiversitySnapshot,
 } from '@sovereign/types';
+import {
+  PLURALITY_THRESHOLD,
+  MIN_REPRESENTATION_GUARDRAIL,
+  DOMINANT_MAJORITY_GUARDRAIL,
+  HEALTHY_MIN_REPRESENTATION,
+} from '@sovereign/types';
 import { EventBus } from '@sovereign/bus';
 
 import { calculatePopulationDiversitySnapshot } from './distribution.js';
@@ -50,7 +56,10 @@ export interface PluralitySignalEvaluation {
   readonly nextActiveSignals: Map<DriftCategory, ActiveSignalState>;
 }
 
-const DEFAULT_PLURALITY_THRESHOLD = 0.6;
+// Plurality / monoculture guardrails come from the canonical numerics module
+// (Layer 4a — shared/schemas/ttcl-numerics.json). Do not redeclare these
+// thresholds here; edit the JSON and re-run the drift check.
+const DEFAULT_PLURALITY_THRESHOLD = PLURALITY_THRESHOLD;
 const DEFAULT_SOURCE = 'gnosis-core-plurality';
 
 /**
@@ -113,7 +122,8 @@ export function evaluatePluralitySignals(
   const minRatio = metrics.minRepresentationRatio;
   const wasZeroRatio =
     previous !== null && previous.metrics.minRepresentationRatio === 0;
-  const isDominantMajority = dominantArchetypeRatio > 0.6;
+  const isDominantMajority =
+    dominantArchetypeRatio > DOMINANT_MAJORITY_GUARDRAIL;
 
   if (minRatio === 0 && wasZeroRatio) {
     const signal = buildDoveSignal({
@@ -126,7 +136,7 @@ export function evaluatePluralitySignals(
         'One or more archetypes have been completely absent for two consecutive snapshots (minRepresentationRatio = 0).',
     });
     emitIfRisingEdge(signal, nextActiveSignals, signals);
-  } else if (minRatio < 0.1 || isDominantMajority) {
+  } else if (minRatio < MIN_REPRESENTATION_GUARDRAIL || isDominantMajority) {
     const signal = buildDoveSignal({
       tier: 2,
       driftCategory: 'monoculture.formation',
@@ -134,14 +144,18 @@ export function evaluatePluralitySignals(
       observedValue: isDominantMajority
         ? String(dominantArchetypeRatio)
         : String(minRatio),
-      threshold: isDominantMajority ? '0.6' : '0.1',
+      threshold: isDominantMajority
+        ? String(DOMINANT_MAJORITY_GUARDRAIL)
+        : String(MIN_REPRESENTATION_GUARDRAIL),
       description: isDominantMajority
         ? `Dominant archetype ${metrics.dominantArchetype} represents ${(
             dominantArchetypeRatio * 100
-          ).toFixed(1)}% of the classified population, exceeding the 60% monoculture guardrail.`
+          ).toFixed(1)}% of the classified population, exceeding the ${(
+            DOMINANT_MAJORITY_GUARDRAIL * 100
+          ).toFixed(0)}% monoculture guardrail.`
         : `Representation ratio ${minRatio.toFixed(
             3
-          )} is below the 0.1 monoculture guardrail (rarest archetype is >10× less common than the most common).`,
+          )} is below the ${MIN_REPRESENTATION_GUARDRAIL} monoculture guardrail (rarest archetype is >10× less common than the most common).`,
     });
     emitIfRisingEdge(signal, nextActiveSignals, signals);
   } else {
@@ -149,11 +163,11 @@ export function evaluatePluralitySignals(
   }
 
   // ── personality.diversity.healthy ────────────────────────────────────────
-  const isHealthy = metrics.isPlural && minRatio >= 0.2;
+  const isHealthy = metrics.isPlural && minRatio >= HEALTHY_MIN_REPRESENTATION;
   const wasHealthy =
     previous !== null &&
     previous.metrics.isPlural &&
-    previous.metrics.minRepresentationRatio >= 0.2;
+    previous.metrics.minRepresentationRatio >= HEALTHY_MIN_REPRESENTATION;
 
   if (isHealthy && wasHealthy) {
     const signal = buildDoveSignal({
@@ -161,12 +175,12 @@ export function evaluatePluralitySignals(
       driftCategory: 'personality.diversity.healthy',
       snapshot: current,
       observedValue: String(metrics.diversityIndex),
-      threshold: `${current.threshold}; minRepresentationRatio 0.2`,
+      threshold: `${current.threshold}; minRepresentationRatio ${HEALTHY_MIN_REPRESENTATION}`,
       description: `Axiom 9 plurality is healthy: diversityIndex ${metrics.diversityIndex.toFixed(
         3
       )} >= ${current.threshold} and minRepresentationRatio ${minRatio.toFixed(
         3
-      )} >= 0.2 for two consecutive snapshots.`,
+      )} >= ${HEALTHY_MIN_REPRESENTATION} for two consecutive snapshots.`,
     });
     emitIfRisingEdge(signal, nextActiveSignals, signals);
   } else {

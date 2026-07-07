@@ -8,7 +8,7 @@
  * Reference: MOF Section — Layer 11, Dove Per-Layer Observation Matrix
  */
 
-import type { SignalLayer } from './signal.js';
+import type { SignalLayer, EventTrace } from './signal.js';
 
 /** The three Dove signal tiers — ordered by severity. */
 export type DoveTier = 1 | 2 | 3;
@@ -107,6 +107,13 @@ export interface DoveSignal {
 
   /** ISO-8601 timestamp of resolution, if resolved. */
   readonly resolvedAt?: string;
+
+  /**
+   * Intention traceability metadata. All Dove signals are trace-required by the
+   * bus (`dove.signal.tier1..3`), so this is populated by emitters before
+   * propagation. See docs/CHARTER.md §4.
+   */
+  readonly trace?: EventTrace;
 }
 
 /**

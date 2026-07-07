@@ -5,6 +5,17 @@ from typing import Any
 import time
 import numpy as np
 
+from ..generated.numerics import (
+    FOCAL_LOCK_THRESHOLD,
+    LANE_B_BLEND_RAW_WEIGHT,
+    LANE_B_BLEND_VMASK_WEIGHT,
+    LANE_C_KILL_RHCP_SPIN,
+    LANE_C_KILL_HOST_RATIO,
+    LANE_C_KILL_USER_RATIO,
+    SPIN_EXPANDING_GATE,
+    MAX_BLINKS,
+)
+
 
 class SynapticWatcher:
     """
@@ -61,7 +72,11 @@ class GnosticEngine:
     - Blink / Quarantine logic
     """
 
-    def __init__(self, threshold: float = 0.85, max_blinks: int = 3) -> None:
+    def __init__(
+        self,
+        threshold: float = FOCAL_LOCK_THRESHOLD,
+        max_blinks: int = MAX_BLINKS,
+    ) -> None:
         self.threshold = threshold
         self.max_blinks = max_blinks
         self.history: dict[str, list[dict[str, float]]] = {}
@@ -127,15 +142,15 @@ class GnosticEngine:
         - user coverage > 50%.
         """
         # RHCP high spin + contagion active
-        if spin > 0.75 and not w_cong_active:
+        if spin > LANE_C_KILL_RHCP_SPIN and not w_cong_active:
             return True
 
         # Too wide on infra
-        if w_host_ratio is not None and w_host_ratio > 0.25:
+        if w_host_ratio is not None and w_host_ratio > LANE_C_KILL_HOST_RATIO:
             return True
 
         # Too wide on user base
-        if w_user_ratio is not None and w_user_ratio > 0.50:
+        if w_user_ratio is not None and w_user_ratio > LANE_C_KILL_USER_RATIO:
             return True
 
         return False
@@ -159,10 +174,18 @@ class GnosticEngine:
         lane_b_raw = float(data["lane_b"])
         lane_c = float(data["lane_c"])
 
-        # Lane B: integrate Bedrock V-mask if present
+        # Lane B: integrate Bedrock V-mask if present, then weight by the
+        # manifold-derived LOGOC tier (Layer 7). The tier weight attenuates
+        # Truth intensity for DIVERGENT / EMERGENT classifications; absent
+        # (1.0) preserves the legacy unweighted blend exactly.
         v_mask = data.get("v_mask", [])
         lane_b_vmask = self.compute_lane_b_intensity(v_mask)
-        lane_b = 0.5 * lane_b_raw + 0.5 * lane_b_vmask
+        lane_b_blend = (
+            LANE_B_BLEND_RAW_WEIGHT * lane_b_raw
+            + LANE_B_BLEND_VMASK_WEIGHT * lane_b_vmask
+        )
+        tier_weight = float(data.get("logoc_tier_weight", 1.0))
+        lane_b = lane_b_blend * tier_weight
 
         # Lane C: magnitude kill-switch
         w_cong_active = bool(data.get("w_cong", True))
@@ -202,11 +225,21 @@ class GnosticEngine:
         if sr < self.threshold:
             return self.trigger_blink(var_id, sr, tilt)
 
+        # Layer 7: a boundary-adjacent packet (structural read in the
+        # adjacent-convergent zone, flagged upstream) is forced to BLINK
+        # even when sr >= threshold, so the blink registry accumulates and
+        # repeated boundary incursions escalate to QUARANTINE. The scorer
+        # runs upstream in routes.py and never throws; this is the gate.
+        if data.get("boundary_adjacent"):
+            return self.trigger_blink(var_id, sr, tilt, reason="BOUNDARY_ADJACENT")
+
         return self.resolve_success(var_id, sr, tilt, stokes[3])
 
     # ---------- Blink / success ----------
 
-    def trigger_blink(self, var_id: str, sr: float, tilt: float) -> dict[str, Any]:
+    def trigger_blink(
+        self, var_id: str, sr: float, tilt: float, reason: str = "BLINK"
+    ) -> dict[str, Any]:
         count = self.blink_registry.get(var_id, 0)
         if count >= self.max_blinks:
             return {
@@ -221,12 +254,13 @@ class GnosticEngine:
             "verdict": "BLINK",
             "var": var_id,
             "attempt": self.blink_registry[var_id],
+            "reason": reason,
             "structural_read": sr,
             "phase_tilt": tilt,
         }
 
     def resolve_success(self, var_id: str, sr: float, tilt: float, spin: float) -> dict[str, Any]:
-        status = "EXPANDING" if spin > 0.5 else "STABLE"
+        status = "EXPANDING" if spin > SPIN_EXPANDING_GATE else "STABLE"
         return {
             "verdict": "FOCAL_LOCK",
             "var": var_id,

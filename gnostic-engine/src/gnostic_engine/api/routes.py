@@ -51,6 +51,13 @@ from .live_state import (
     PulfrichParallaxResult,
     DoveSignalRecord,
 )
+from ..orchestration import classify_and_tier, constitution_for_packet
+from ..persistence.replay import replay as build_replay_result
+from ..generated.numerics import (
+    FOCAL_LOCK_THRESHOLD,
+    BOUNDARY_THRESHOLD,
+    MAX_BLINKS,
+)
 import numpy as np
 
 # ── Routers ───────────────────────────────────────────────────────────────────
@@ -61,8 +68,9 @@ router = APIRouter(prefix="/gnostic", tags=["gnostic"])
 # Live state router — Phase C integration surface
 live_router = APIRouter(prefix="/api/v1", tags=["live-state"])
 
-# Shared engine instance for live packet processing
-_engine = GnosticEngine(threshold=0.85, max_blinks=3)
+# Shared engine instance for live packet processing.
+# Defaults come from the canonical numerics module (Layer 4a).
+_engine = GnosticEngine(threshold=FOCAL_LOCK_THRESHOLD, max_blinks=MAX_BLINKS)
 
 # ── Legacy computation models ─────────────────────────────────────────────────
 
@@ -142,6 +150,48 @@ class GnosticPacketRequest(BaseModel):
     w_cong: bool = Field(default=True, description="Contagion bit — True = isolated")
     w_host_ratio: Optional[float] = Field(None, description="Fraction of infra affected (0–1)")
     w_user_ratio: Optional[float] = Field(None, description="Fraction of users affected (0–1)")
+    # ── Layer 7 enrichment inputs (optional; absent → legacy unweighted path) ──
+    narrative: Optional[str] = Field(
+        None,
+        description=(
+            "Free-text narrative for the heuristic Peirce classifier. When "
+            "present (alone or with semiotic_flags), the packet is classified "
+            "and assigned a manifold-derived logoc_tier that weights Lane B."
+        ),
+    )
+    semiotic_flags: Optional[dict[str, Any]] = Field(
+        None,
+        description=(
+            "Explicit Peirce semiotic flags (single_occurrence / rule_based / "
+            "similarity / causality / convention / possibility / fact / reason). "
+            "Overrides the narrative keyword path when present."
+        ),
+    )
+    boundary_adjacent: bool = Field(
+        False,
+        description=(
+            "Force BLINK for an adjacent-convergent packet even when the "
+            "structural read would otherwise FOCAL_LOCK, so repeated boundary "
+            "incursions accumulate in the blink registry and escalate to "
+            "QUARANTINE. The score-then-branch gate (Layer 7.5)."
+        ),
+    )
+    tvl: Optional[float] = Field(
+        None,
+        description=(
+            "Total value locked, used to map the live Sign to a PPS band "
+            "(static / heap / volatile) for the constitution scorer. None / "
+            "non-positive defaults to the heap band."
+        ),
+    )
+    trace: Optional[dict[str, Any]] = Field(
+        None,
+        description=(
+            "CHARTER §4 intention trace. Optional on the request; propagated to "
+            "the resulting GnosisScore and any emitted Dove signals so the full "
+            "decision chain is reconstructable via GET /api/v1/audit/replay."
+        ),
+    )
 
 
 # ── Health endpoint ───────────────────────────────────────────────────────────
@@ -179,6 +229,12 @@ def process_packet(req: GnosticPacketRequest) -> dict[str, Any]:
     """
     window_start = datetime.now(timezone.utc).isoformat()
 
+    # Layer 7.6: classify + tier BEFORE process_packet. The tier weight
+    # threads into Lane B (Layer 7.5); classification is enrichment, not a
+    # gate — failures (no narrative/flags, ambiguity, unknown class) degrade
+    # to None and the packet still processes with the legacy unweighted path.
+    pre = classify_and_tier(req)
+
     packet_data: dict[str, Any] = {
         "lane_a": req.lane_a,
         "lane_b": req.lane_b,
@@ -187,10 +243,19 @@ def process_packet(req: GnosticPacketRequest) -> dict[str, Any]:
         "w_cong": req.w_cong,
         "w_host_ratio": req.w_host_ratio,
         "w_user_ratio": req.w_user_ratio,
+        # Thread the manifold-derived tier weight into Lane B (1.0 when absent
+        # preserves the legacy unweighted blend exactly).
+        "logoc_tier_weight": pre.logoc_tier_weight if pre else 1.0,
+        # boundary_adjacent diverts a FOCAL_LOCK-grade read to BLINK (Layer 7.5).
+        "boundary_adjacent": req.boundary_adjacent,
     }
 
     raw = _engine.process_packet(req.agent_id, packet_data)
     window_end = datetime.now(timezone.utc).isoformat()
+
+    # Layer 7.6: build + score the single-domain live Sign AFTER process_packet.
+    # Transparency metric, NOT a gate — never blocks the response.
+    constitution = constitution_for_packet(req, raw, pre.peirce if pre else None)
 
     # Derive Stokes coherence from engine internals
     sr: float = raw.get("structural_read", 0.0)
@@ -206,15 +271,15 @@ def process_packet(req: GnosticPacketRequest) -> dict[str, Any]:
     }
     doctrine_state = doctrine_map.get(verdict, "SELF_NAVIGATING")
 
-    # Map structural read to lane
-    if sr >= 0.85:
+    # Map structural read to lane (boundaries from canonical numerics — Layer 4a)
+    if sr >= FOCAL_LOCK_THRESHOLD:
         lane = "LANE_A"
-    elif sr >= 0.65:
+    elif sr >= BOUNDARY_THRESHOLD:
         lane = "LANE_B"
     else:
         lane = "LANE_C"
 
-    blink_threshold = 0.85
+    blink_threshold = FOCAL_LOCK_THRESHOLD
     blink_triggered = sr < blink_threshold
 
     coherence = StokesCoherence(
@@ -242,12 +307,20 @@ def process_packet(req: GnosticPacketRequest) -> dict[str, Any]:
         observation_count=len(_engine.history.get(req.agent_id, [])),
         sequence_number=seq,
         verdict=verdict,
+        trace=req.trace,
+        logoc_tier=pre.logoc_tier if pre else None,
+        constitution_score=constitution["constitution_score"] if constitution else None,
+        constitution_pass=constitution["constitution_pass"] if constitution else None,
+        domain_incomplete=constitution["domain_incomplete"] if constitution else None,
+        momentum=raw.get("momentum"),
     )
 
-    engine_state.record_score(score)
+    score_event = engine_state.record_score(score)
 
-    # Check for Dove signal conditions
-    _maybe_emit_dove_signal(score)
+    # Check for Dove signal conditions (inherits the score's trace so the
+    # quarantine/blink chain reconstructs as one intention chain; the dove's
+    # trace.parentEventId links it to the score event for chain reconstruction).
+    _maybe_emit_dove_signal(score, score_event.event_id)
 
     return score.to_dict()
 
@@ -347,6 +420,10 @@ class HeparAuditSubmission(BaseModel):
     completed_at: Optional[str] = None
     gnosis_verdict: Optional[str] = None
     gnosis_structural_read: Optional[float] = None
+    trace: Optional[dict[str, Any]] = Field(
+        None,
+        description="CHARTER §4 intention trace (hepar.audit.completed is trace-required).",
+    )
 
 
 # In-process Hepar audit relay buffer — holds last 50 audit results
@@ -371,6 +448,15 @@ def hepar_submit(submission: HeparAuditSubmission) -> dict[str, Any]:
     _hepar_results.append(record)
     if len(_hepar_results) > _MAX_HEPAR:
         _hepar_results.pop(0)
+
+    # Persist to the durable event log (hepar.audit.completed is trace-required).
+    engine_state._append_event(
+        event_type="hepar.audit.completed",
+        timestamp=record["received_at"],
+        sequence_number=engine_state.next_sequence(),
+        payload={k: v for k, v in record.items() if k != "trace"},
+        trace=submission.trace,
+    )
 
     return {"recorded": True, "audit_id": submission.audit_id}
 
@@ -437,15 +523,20 @@ def _compute_alignment_state(active_signals: list[dict[str, Any]]) -> str:
     return "monitoring"
 
 
-def _maybe_emit_dove_signal(score: GnosisScore) -> None:
+def _maybe_emit_dove_signal(score: GnosisScore, parent_event_id: str | None) -> None:
     """
     Check the GnosisScore for drift conditions and emit Dove signals
     to the session state if thresholds are crossed.
 
-    Tier 1: overall_score < 0.65 (adjacent-convergent zone)
+    Tier 1: overall_score < BOUNDARY_THRESHOLD (adjacent-convergent zone)
     Tier 2: quarantine_triggered (pattern-following + kill-switch)
+
+    The signal inherits the score's CHARTER §4 trace and links back to the score
+    event via `trace.parentEventId`, so the score→dove chain reconstructs as one
+    linked intention chain in the durable event log.
     """
     now = datetime.now(timezone.utc).isoformat()
+    trace = _with_parent(score.trace, parent_event_id)
 
     if score.quarantine_triggered:
         signal = DoveSignalRecord(
@@ -455,7 +546,7 @@ def _maybe_emit_dove_signal(score: GnosisScore) -> None:
             layer="gnosis",
             drift_category="agent.hollow.convergence",
             observed_value=str(score.overall_score),
-            threshold="0.85",
+            threshold=str(FOCAL_LOCK_THRESHOLD),
             description=(
                 f"Agent '{score.agent_id}' triggered quarantine after "
                 f"{_engine.max_blinks} consecutive blinks. "
@@ -464,10 +555,11 @@ def _maybe_emit_dove_signal(score: GnosisScore) -> None:
             ),
             governance_proposal_generated=True,
             resolved=False,
+            trace=trace,
         )
         engine_state.record_dove_signal(signal)
 
-    elif score.overall_score < 0.65:
+    elif score.overall_score < BOUNDARY_THRESHOLD:
         signal = DoveSignalRecord(
             signal_id=str(uuid.uuid4()),
             timestamp=now,
@@ -475,13 +567,58 @@ def _maybe_emit_dove_signal(score: GnosisScore) -> None:
             layer="gnosis",
             drift_category="agent.hollow.convergence",
             observed_value=str(score.overall_score),
-            threshold="0.65",
+            threshold=str(BOUNDARY_THRESHOLD),
             description=(
                 f"Agent '{score.agent_id}' structural read ({score.overall_score}) "
-                "is below adjacent-convergent threshold (0.65). "
+                f"is below adjacent-convergent threshold ({BOUNDARY_THRESHOLD}). "
                 "Monitoring for sustained drift."
             ),
             governance_proposal_generated=False,
             resolved=False,
+            trace=trace,
         )
         engine_state.record_dove_signal(signal)
+
+
+def _with_parent(
+    trace: dict[str, Any] | None, parent_event_id: str | None
+) -> dict[str, Any] | None:
+    """Return a copy of `trace` with `parentEventId` set, or None if trace is None."""
+    if trace is None:
+        return None
+    linked = dict(trace)
+    if parent_event_id is not None:
+        linked["parentEventId"] = parent_event_id
+    return linked
+
+
+# ── Audit / replay endpoint (Layer 5) ──────────────────────────────────────────
+
+
+@live_router.get(
+    "/audit/replay",
+    summary="Reconstruct the CHARTER §4 intention chain from the durable event log",
+)
+def audit_replay(
+    from_ts: Optional[str] = Query(
+        default=None,
+        alias="from",
+        description="ISO-8601 lower bound (inclusive). Defaults to the start of the log.",
+    ),
+    to_ts: Optional[str] = Query(
+        default=None,
+        alias="to",
+        description="ISO-8601 upper bound (inclusive). Defaults to the end of the log.",
+    ),
+) -> dict[str, Any]:
+    """
+    Returns the durable event log contents in the queried time window plus the
+    reconstructed intention chains (constraint envelope → inbound signals → gnosis
+    evaluation → narrative purpose → chosen action), threaded via
+    `trace.parentEventId` links.
+
+    The durable JSONL log is the source of truth; the in-memory ring buffers are a
+    read shortcut. Events without a trace appear in the flat `events` list but do
+    not participate in chain reconstruction (they are ambient telemetry).
+    """
+    return build_replay_result(engine_state.event_log, from_ts, to_ts)

@@ -1,13 +1,16 @@
 # api/gnostic_api.py
 
 from collections import Counter
+import logging
 import os
 import sys
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import numpy as np
+
+logger = logging.getLogger("gnostic_api.deprecation")
 
 # Make sure we can import from src/
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
@@ -64,8 +67,26 @@ class Packet(BaseModel):
     w_user_ratio: float | None = None
 
 
-@app.post("/intake/forage")
-async def forage(packet: Packet):
+@app.post("/intake/forage", deprecated=True)
+async def forage(packet: Packet, response: Response):
+    """DEPRECATED (Layer 7.7): use POST /api/v1/gnosis/process instead.
+
+    This legacy path uses VolumetricScanner (no Lane C kill-switch) and is
+    being retired in favor of the typed GnosticEngine path. It is KEPT for one
+    cycle — with a Deprecation header, a Sunset date, and a per-call warning —
+    so any caller still hitting it stays observable. It will be deleted in a
+    follow-up PR once traffic is confirmed at zero. Do not add new callers.
+    """
+    response.headers["Deprecation"] = "true"
+    response.headers["Sunset"] = "Sun, 01 Sep 2026 00:00:00 GMT"
+    response.headers["Link"] = '</api/v1/gnosis/process>; rel="successor-version"'
+    logger.warning(
+        "Deprecated /intake/forage hit (var_id=%s) — migrate to "
+        "/api/v1/gnosis/process; this endpoint will be removed on/after "
+        "2026-09-01.",
+        getattr(packet, "var_id", "<unknown>"),
+    )
+
     scanner = _scanner_registry.setdefault(packet.var_id, VolumetricScanner(packet.var_id))
     result = scanner.ingest(packet.lane_a, packet.lane_b)
 
