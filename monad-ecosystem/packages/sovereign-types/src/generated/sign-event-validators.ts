@@ -235,6 +235,7 @@ const SCHEMA_SIGNAL_EVENT: AnySchemaObject = {
         "revenue-router",
         "data-rail",
         "emergence",
+        "cardia",
         "system",
         "ttcl"
       ]
@@ -259,6 +260,7 @@ const SCHEMA_SIGNAL_EVENT: AnySchemaObject = {
         "gnosis.score.computed",
         "gnosis.blink.triggered",
         "gnosis.quarantine.triggered",
+        "gnosis.plurality.snapshot",
         "dove.signal.tier1",
         "dove.signal.tier2",
         "dove.signal.tier3",
@@ -277,6 +279,7 @@ const SCHEMA_SIGNAL_EVENT: AnySchemaObject = {
         "system.error",
         "system.startup",
         "system.shutdown",
+        "cardia.activated",
         "ttcl.observation.emitted"
       ]
     },
