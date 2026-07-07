@@ -70,14 +70,16 @@ export type {
   ReplayResult,
 } from './types/event.js';
 
-// ── Canonical Numerics (Layer 4a — single source of truth for thresholds) ──
-// Typed mirror of shared/schemas/ttcl-numerics.json; parity-tested against it.
+// ── Canonical Numerics (Layer 3 codegen — single source of truth for thresholds) ──
+// Generated from shared/schemas/ttcl-numerics.json by gen-sign-types.mjs;
+// drift-guarded by scripts/check-sign-types-drift.mjs; semantic invariants held
+// by monad-ecosystem/tests/integration/numerics-semantic.test.ts.
 export type {
   OwnerRuntime,
   NumericEntry,
   NumericSection,
   TTCLNumerics,
-} from './numerics.js';
+} from './generated/numerics.js';
 export {
   TTCL_NUMERICS,
   // gnostic_engine
@@ -119,7 +121,7 @@ export {
   MIN_REPRESENTATION_GUARDRAIL,
   DOMINANT_MAJORITY_GUARDRAIL,
   HEALTHY_MIN_REPRESENTATION,
-} from './numerics.js';
+} from './generated/numerics.js';
 
 // ── Oracle / Risk Gnosis Engine ──────────────────────────────────────────────
 export type {

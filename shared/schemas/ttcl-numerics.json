@@ -5,7 +5,7 @@
   "description": "The single canonical definition of every threshold, weight, and band the tripartite grammar depends on. Every runtime (Python Gnostic Engine, TypeScript LOGOC/TTCL/gnosis-core) derives its behavior from this file rather than redeclaring literals. Drift is caught by scripts/check-numeric-drift.mjs (generated Python files match this JSON) and the TS parity test (sovereign-types TTCL_NUMERICS equals this JSON).",
   "version": "1.1.0",
   "source_of_truth": "this file",
-  "drift_guard": "scripts/check-numeric-drift.mjs + monad-ecosystem/tests/integration/numerics-parity.test.ts",
+  "drift_guard": "scripts/check-numeric-drift.mjs (Python) + scripts/check-sign-types-drift.mjs (TS codegen) + monad-ecosystem/tests/integration/numerics-semantic.test.ts (semantic invariants)",
   "sections": {
     "gnostic_engine": {
       "description": "Volumetric 4D Gnostic Engine (Python). Focal-lock threshold, Lane B blend, Lane C magnitude kill-switch, expanding-spin gate, blink budget, and TVL normalization ceiling.",
