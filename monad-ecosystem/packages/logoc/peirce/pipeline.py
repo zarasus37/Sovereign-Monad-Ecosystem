@@ -39,8 +39,10 @@ FEATURE_NAMES = [
     "convention", "possibility", "fact", "reason",
 ]
 
-_DEFAULT_MODEL_PATH = Path(__file__).parent.parent / "ml" / "ml_classifier_v13.json"
-_DEFAULT_SPEC_PATH = Path(__file__).parent.parent / "spec" / "peirce_sign_classes.json"
+_DEFAULT_MODEL_PATH = Path(__file__).resolve().parents[1] / "ml" / "ml_classifier_v13.json"
+# Canonical 66-class table relocated to shared/peirce-spec/ (repo-root shared/).
+# parents[4]: peirce → logoc → packages → monad-ecosystem → repo root.
+_DEFAULT_SPEC_PATH = Path(__file__).resolve().parents[4] / "shared" / "peirce-spec" / "peirce_sign_classes.json"
 
 
 class LogocMLPipeline:

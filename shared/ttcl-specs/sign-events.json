@@ -13,7 +13,7 @@
         "$schema": "http://json-schema.org/draft-07/schema#",
         "$id": "https://the-sovereign/schemas/ttcl-observation-event.json",
         "title": "TTCLObservationEvent payload",
-        "description": "Payload of a ttcl.observation.emitted SignalEvent — a TTCL Sign observation. Matches Sign<M,T> at monad-ecosystem/packages/ttcl/src/types.ts:48 and PeirceSignature at monad-ecosystem/packages/logoc/src/peirce/models.ts:15.",
+        "description": "Payload of a ttcl.observation.emitted SignalEvent — a TTCL Sign observation. Matches Sign<M,T> at monad-ecosystem/packages/ttcl/src/types.ts:48 and PeirceSignature at monad-ecosystem/packages/sovereign-types/src/peirce/models.ts:25.",
         "type": "object",
         "properties": {
           "modality": {
@@ -34,7 +34,7 @@
           },
           "peirce": {
             "type": "object",
-            "description": "LOGOC PeirceSignature — the 66-class manifold classification. The manifold (monad-ecosystem/packages/logoc/spec/peirce_sign_classes.json) is the sole source of truth for label/path/weights; sign_class_id must be a valid manifold id in [0, 65].",
+            "description": "PeirceSignature — the 66-class manifold classification. The manifold (shared/peirce-spec/peirce_sign_classes.json, surfaced in @sovereign/types) is the sole source of truth for label/path/weights; sign_class_id must be a valid manifold id in [0, 65].",
             "additionalProperties": false,
             "required": ["mode", "sign_class_id", "sign_class_label", "path", "firstness_weight", "secondness_weight", "thirdness_weight", "pragmatism_band"],
             "properties": {
@@ -130,7 +130,7 @@
           "domains": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"],
           "noRlhf": true,
           "description": "The well-formed triadic HYBRID observation: compose(Theology, Technology, Cosmology) dominant peirce = class 8 (Delome-Symbol-Legisign, FORMAL_THOUGHT, thirdness 0.85 — the most argumentative class). Spans all three domains; would pass the constitution triadic gate. pps 0.30 places it in the volatile band (genuine sync tension, not a locked state).",
-          "source_doc": "monad-ecosystem/packages/ttcl/src/runtime/combinators.ts:140 (compose) + logoc/spec/peirce_sign_classes.json:122 (class 8)"
+          "source_doc": "monad-ecosystem/packages/ttcl/src/runtime/combinators.ts:140 (compose) + shared/peirce-spec/peirce_sign_classes.json:122 (class 8)"
         },
         "rawTechnologyPacket": {
           "modality": "INDEX",
@@ -141,7 +141,7 @@
           "domains": ["TECHNOLOGY"],
           "noRlhf": true,
           "description": "A raw single-domain TECHNOLOGY index — class 2 (Dicent-Indexical-Sinsign, EXPERIENCE, secondness 1.0). Single-domain by design, so it scores < 0.72 on the constitution C1 (tripartite) criterion and is structurally incapable of passing the Triadic Minimal Gate alone. pps 1.00 = fully synced raw packet. Used as the negative-shape counterpoint to triadicObservation.",
-          "source_doc": "monad-ecosystem/packages/ttcl/src/runtime/combinators.ts:148 (Triadic Minimal Gate) + logoc/spec/peirce_sign_classes.json:33 (class 2)"
+          "source_doc": "monad-ecosystem/packages/ttcl/src/runtime/combinators.ts:148 (Triadic Minimal Gate) + shared/peirce-spec/peirce_sign_classes.json:33 (class 2)"
         }
       },
       "source_doc": "monad-ecosystem/packages/ttcl/src/types.ts:48",

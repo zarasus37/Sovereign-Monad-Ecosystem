@@ -12,6 +12,7 @@
  *
  * Edit shared/schemas/ttcl-numerics.json, then re-run:
  *   node monad-ecosystem/packages/ttcl/scripts/gen-sign-types.mjs
+ * (numerics: no runtime hint — pure const, imported at module load.)
  */
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -120,33 +121,33 @@ export const TTCL_NUMERICS: TTCLNumerics = {
       },
     },
     "logoc_manifold": {
-      description: "LOGOC Peirce 66-class manifold geometry (shared by the TS runtime and the Python reference mirror). Composite distance metric weights and the neighbor radius.",
+      description: "Peirce 66-class manifold geometry (shared by the TS runtime — @sovereign/types since the manifold relocation — and the Python reference mirror in @sovereign/logoc). Composite distance metric weights and the neighbor radius.",
       constants: {
         "weight_ring": {
           value: 0.4,
           unit: "weight",
-          sourceDoc: "monad-ecosystem/packages/logoc/src/peirce/manifold.ts:18",
+          sourceDoc: "monad-ecosystem/packages/sovereign-types/src/peirce/manifold.ts:26",
           rationale: "Weight on the ring-radius delta in the composite sign-class distance metric. The three manifold weights sum to 1.0 (0.4 + 0.3 + 0.3).",
           ownerRuntime: ["ts", "python"],
         },
         "weight_angle": {
           value: 0.3,
           unit: "weight",
-          sourceDoc: "monad-ecosystem/packages/logoc/src/peirce/manifold.ts:19",
+          sourceDoc: "monad-ecosystem/packages/sovereign-types/src/peirce/manifold.ts:27",
           rationale: "Weight on the angular-arc delta (shorter arc / 180°) in the composite distance metric.",
           ownerRuntime: ["ts", "python"],
         },
         "weight_hamming": {
           value: 0.3,
           unit: "weight",
-          sourceDoc: "monad-ecosystem/packages/logoc/src/peirce/manifold.ts:20",
+          sourceDoc: "monad-ecosystem/packages/sovereign-types/src/peirce/manifold.ts:28",
           rationale: "Weight on the path Hamming distance in the composite distance metric.",
           ownerRuntime: ["ts", "python"],
         },
         "max_distance": {
           value: 0.5,
           unit: "ratio",
-          sourceDoc: "monad-ecosystem/packages/logoc/src/peirce/manifold.ts:83",
+          sourceDoc: "monad-ecosystem/packages/sovereign-types/src/peirce/manifold.ts:108",
           rationale: "Default neighbor radius: sign classes within this composite distance of a given class are considered neighbors.",
           ownerRuntime: ["ts", "python"],
         },

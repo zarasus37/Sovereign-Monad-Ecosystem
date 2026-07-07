@@ -11,7 +11,7 @@
  * data-integrity error rather than a gate outcome).
  */
 
-import { getManifold } from "@sovereign/logoc";
+import { getManifold } from "@sovereign/types";
 import { UnknownSignClassError } from "./errors.js";
 import type { Sign, Modality, Domain } from "../types.js";
 

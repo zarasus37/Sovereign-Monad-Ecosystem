@@ -2,21 +2,30 @@
 /**
  * gen-sign-types.mjs — Layer 3 code generator (Goal A).
  *
- * Reads the canonical `shared/schemas/ttcl-numerics.json` and emits the
- * TypeScript generated module the @sovereign/types runtime imports from:
+ * Reads canonical shared/ JSON sources of truth and emits the TypeScript
+ * generated modules the @sovereign/types runtime imports from:
  *
- *   - monad-ecosystem/packages/sovereign-types/src/generated/numerics.ts
+ *   - shared/schemas/ttcl-numerics.json
+ *     → monad-ecosystem/packages/sovereign-types/src/generated/numerics.ts
  *       consumed by every TS package that imports from `@sovereign/types`
  *       (logoc, ttcl, gnosis-core, sovereign-bus, …) via the barrel.
  *
+ *   - shared/peirce-spec/peirce_sign_classes.json
+ *     → monad-ecosystem/packages/sovereign-types/src/generated/peirce-sign-classes.ts
+ *       the canonical 66-class Peirce manifold table, consumed by the
+ *       @sovereign/types PeirceManifold (the runtime relocated from
+ *       @sovereign/logoc). Codegen-fed so the manifold is pure TS: no fs,
+ *       no path, no __dirname/import.meta.url at runtime (matches the
+ *       numerics pattern exactly).
+ *
  * This retires the hand-mirrored `sovereign-types/src/numerics.ts` (Layer 4a):
  * the TS side now uses codegen, symmetric with the Python side
- * (`gen-numerics.mjs`). One JSON source of truth → two code generators →
- * three runtimes, no hand-mirror to drift.
+ * (`gen-numerics.mjs`). One JSON source of truth → codegen → runtime, no
+ * hand-mirror to drift.
  *
  * Generated files carry a `@generated DO NOT EDIT` header + `@source` pointer
  * to the input spec. Drift is caught by `scripts/check-sign-types-drift.mjs`,
- * which regenerates this file into memory and diffs against the committed copy.
+ * which regenerates each target into memory and diffs against the committed copy.
  *
  * Usage:
  *   node monad-ecosystem/packages/ttcl/scripts/gen-sign-types.mjs           # write
@@ -30,14 +39,23 @@ import { dirname, resolve } from 'node:path';
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(here, '../../../..'); // scripts→ttcl→packages→monad-ecosystem→root
 const jsonPath = resolve(repoRoot, 'shared/schemas/ttcl-numerics.json');
+const peirceClassesPath = resolve(repoRoot, 'shared/peirce-spec/peirce_sign_classes.json');
 
 // ── Targets ────────────────────────────────────────────────────────────────
-// The TS side flattens EVERY section (consumers import flat UPPER constants
-// across all sections). There is a single TS target.
+// Each target carries its own JSON source + render fn. The numerics target
+// flattens EVERY section (consumers import flat UPPER constants across all
+// sections); the peirce-classes target emits one readonly const array. Both
+// share the `check()` / `writeAll()` / `isMain` scaffold below.
 const TARGETS = [
   {
     relPath: 'monad-ecosystem/packages/sovereign-types/src/generated/numerics.ts',
-    docName: 'TypeScript runtime (@sovereign/types)',
+    sourcePath: jsonPath,
+    render: (data) => renderNumerics(data),
+  },
+  {
+    relPath: 'monad-ecosystem/packages/sovereign-types/src/generated/peirce-sign-classes.ts',
+    sourcePath: peirceClassesPath,
+    render: (data) => renderPeirceSignClasses(data),
   },
 ];
 
@@ -110,22 +128,24 @@ function tsOwnerRuntime(arr) {
 
 // ── Rendering ──────────────────────────────────────────────────────────────
 
-function header(target) {
+function header(sourcePath, docName, editHint) {
+  const relSource = sourcePath.slice(repoRoot.length + 1).replace(/\\/g, '/');
   return [
     '/**',
-    ' * @generated DO NOT EDIT — generated from shared/schemas/ttcl-numerics.json',
-    ' * @source shared/schemas/ttcl-numerics.json',
+    ` * @generated DO NOT EDIT — generated from ${relSource}`,
+    ` * @source ${relSource}`,
     ' * by monad-ecosystem/packages/ttcl/scripts/gen-sign-types.mjs.',
     ' *',
-    ` * Canonical TTCL numerics for the ${target.docName} (Layer 3 — codegen).`,
+    ` * ${docName} (Layer 3 — codegen).`,
     ' *',
     ' * This file is generated wholesale from the JSON source of truth on every',
     ' * gen-sign-types.mjs run. Drift (a hand-edit, or the JSON changing without a',
     ' * re-run) is caught by `scripts/check-sign-types-drift.mjs`, which regenerates',
     ' * this file into memory and diffs it against the committed copy.',
     ' *',
-    ' * Edit shared/schemas/ttcl-numerics.json, then re-run:',
+    ` * Edit ${relSource}, then re-run:`,
     ' *   node monad-ecosystem/packages/ttcl/scripts/gen-sign-types.mjs',
+    ` * ${editHint}`,
     ' */',
   ].join('\n');
 }
@@ -212,31 +232,90 @@ function renderFlatExports(numerics) {
   return lines.join('\n');
 }
 
-function renderTarget(numerics, target) {
-  return [header(target), renderTypes(), '', renderConst(numerics), '', renderFlatExports(numerics), ''].join(
-    '\n'
-  );
+function renderNumerics(numerics) {
+  return [
+    header(
+      jsonPath,
+      'Canonical TTCL numerics for the TypeScript runtime (@sovereign/types)',
+      '(numerics: no runtime hint — pure const, imported at module load.)'
+    ),
+    renderTypes(),
+    '',
+    renderConst(numerics),
+    '',
+    renderFlatExports(numerics),
+    '',
+  ].join('\n');
+}
+
+// ── Peirce sign-classes target ──────────────────────────────────────────────
+// Emits `PEIRCE_SIGN_CLASSES: readonly PeirceSignClass[]` — the canonical
+// 66-class table, sourced from shared/peirce-spec/peirce_sign_classes.json.
+// The @sovereign/types PeirceManifold imports this const and builds its maps
+// from it (codegen-fed: no fs/path/__dirname at runtime). The `PeirceSignClass`
+// interface is a TYPE-ONLY import (no runtime cycle: the generated file has no
+// runtime dependency on the manifold module).
+
+function tsClassEntry(c) {
+  return [
+    '  {',
+    `    id: ${tsNumber(c.id)},`,
+    `    label: ${tsString(c.label)},`,
+    `    path: [${c.path.map((p) => tsString(p)).join(', ')}],`,
+    `    firstness_weight: ${tsNumber(c.firstness_weight)},`,
+    `    secondness_weight: ${tsNumber(c.secondness_weight)},`,
+    `    thirdness_weight: ${tsNumber(c.thirdness_weight)},`,
+    `    pragmatism_band: ${tsString(c.pragmatism_band)},`,
+    `    ring_radius: ${tsNumber(c.ring_radius)},`,
+    `    ring_angle_deg: ${tsNumber(c.ring_angle_deg)},`,
+    '  },',
+  ].join('\n');
+}
+
+function renderPeirceSignClasses(classes) {
+  return [
+    header(
+      peirceClassesPath,
+      'Canonical 66-class Peirce sign-class table for the TypeScript runtime (@sovereign/types)',
+      '(peirce-classes: consumed by PeirceManifold at module load — pure const, no fs/path.)'
+    ),
+    '// The PeirceSignClass interface lives in ../peirce/manifold.js (same package).',
+    '// TYPE-ONLY import so this generated const carries no runtime dependency on the',
+    '// manifold module (no cycle: manifold imports this const by value, this file',
+    '// imports the interface by type only).',
+    'import type { PeirceSignClass } from "../peirce/manifold.js";',
+    '',
+    'export const PEIRCE_SIGN_CLASSES: readonly PeirceSignClass[] = [',
+    classes.map(tsClassEntry).join('\n'),
+    '];',
+    '',
+  ].join('\n');
 }
 
 // ── Exports (for scripts/check-sign-types-drift.mjs) ───────────────────────
 
-export { repoRoot, jsonPath, TARGETS, renderTarget, loadNumerics };
+export { repoRoot, jsonPath, peirceClassesPath, TARGETS, loadNumerics };
+
+/** Load a target's JSON source. */
+function loadTarget(target) {
+  return JSON.parse(readFileSync(target.sourcePath, 'utf-8'));
+}
 
 /**
- * Regenerate every target from the JSON and compare against the committed
- * files. Returns true if everything is in sync (no drift), false otherwise.
- * Logs each mismatch. No filesystem writes.
+ * Regenerate every target from its JSON source and compare against the
+ * committed files. Returns true if everything is in sync (no drift), false
+ * otherwise. Logs each mismatch. No filesystem writes.
  */
 export function check() {
-  const numerics = loadNumerics();
   let clean = true;
   for (const target of TARGETS) {
+    const data = loadTarget(target);
     const absPath = resolve(repoRoot, target.relPath);
-    const generated = renderTarget(numerics, target);
+    const generated = target.render(data);
     const committed = existsSync(absPath) ? readFileSync(absPath, 'utf-8') : null;
     if (committed !== generated) {
       clean = false;
-      console.error(`✗ DRIFT: ${target.relPath} does not match the canonical JSON.`);
+      console.error(`✗ DRIFT: ${target.relPath} does not match its canonical JSON.`);
       console.error('  Re-run: node monad-ecosystem/packages/ttcl/scripts/gen-sign-types.mjs');
     } else {
       console.log(`✓ ${target.relPath} matches canonical JSON.`);
@@ -245,13 +324,13 @@ export function check() {
   return clean;
 }
 
-/** Regenerate + write every target from the JSON. */
+/** Regenerate + write every target from its JSON source. */
 export function writeAll() {
-  const numerics = loadNumerics();
   for (const target of TARGETS) {
+    const data = loadTarget(target);
     const absPath = resolve(repoRoot, target.relPath);
     mkdirSync(dirname(absPath), { recursive: true });
-    writeFileSync(absPath, renderTarget(numerics, target), 'utf-8');
+    writeFileSync(absPath, target.render(data), 'utf-8');
     console.log(`✓ wrote ${target.relPath}`);
   }
 }

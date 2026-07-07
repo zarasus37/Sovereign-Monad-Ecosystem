@@ -1,22 +1,24 @@
 /**
  * TTCL — Theo-Techno-Cosmological Language: core types.
  *
- * The Peirce semiotic signature (`PeirceSignature`) and the 66-class manifold
- * are owned by LOGOC (`@sovereign/logoc`), which holds the manifold data and the
- * classifier. TTCL re-exports the signature type and composes signs against the
- * manifold at runtime; it does NOT duplicate the manifold. One definition of
- * the Peirce primitives, shared by both packages.
+ * The Peirce semiotic signature (`PeirceSignature`), the 66-class manifold, and
+ * the semiotic primitives (`PragmatismBand` / `CoarseMode`) are owned by
+ * `@sovereign/types` — the contracts package — where the manifold was relocated
+ * from @sovereign/logoc. The manifold is the shared essence both TTCL and LOGOC
+ * derive from, so it lives in the contracts package, not inside either runtime.
+ * TTCL re-exports the signature type and composes signs against the manifold at
+ * runtime; it does NOT duplicate the manifold. One definition of the Peirce
+ * primitives, shared by both packages.
  */
 
 export type PeirceSignClassId = number;
 
-// Peirce semiotic primitives are canonical in LOGOC. Re-export so consumers of
-// @sovereign/ttcl receive the same PeirceSignature shape that LOGOC's classifier
-// produces — one definition, not two.
-export type { PeirceSignature, PragmatismBand, CoarseMode } from "@sovereign/logoc";
+// Peirce semiotic primitives are canonical in @sovereign/types. Re-export so
+// consumers of @sovereign/ttcl receive the same PeirceSignature shape the
+// manifold produces — one definition, not two.
+export type { PeirceSignature, PragmatismBand, CoarseMode } from "@sovereign/types";
 
-import type { EventTrace } from "@sovereign/types";
-import type { PeirceSignature } from "@sovereign/logoc";
+import type { EventTrace, PeirceSignature } from "@sovereign/types";
 
 /** The modal lattice: HYBRID ⊤ → ICON / INDEX / SYMBOL → PURE ⊥. */
 export type Modality = "PURE" | "ICON" | "INDEX" | "SYMBOL" | "HYBRID";

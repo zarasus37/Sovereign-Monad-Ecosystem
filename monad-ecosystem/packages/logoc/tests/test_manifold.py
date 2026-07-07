@@ -12,7 +12,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from peirce.manifold import PeirceManifold, PeirceSignClass
 
-SPEC_PATH = Path(__file__).parent.parent / "spec" / "peirce_sign_classes.json"
+# Canonical 66-class table relocated to shared/peirce-spec/ (repo-root shared/).
+# parents[4]: tests → logoc → packages → monad-ecosystem → repo root.
+SPEC_PATH = Path(__file__).resolve().parents[4] / "shared" / "peirce-spec" / "peirce_sign_classes.json"
 
 
 @pytest.fixture(scope="module")

@@ -81,10 +81,11 @@ def generate_peirce_classes():
             }
         classes.append(c)
 
-    # Ensure path exists
-    out_dir = Path("packages/logoc/spec")
+    # Ensure path exists — canonical 66-class table lives in shared/peirce-spec/
+    # (relocated from packages/logoc/spec/). parents[2]: scripts → monad-ecosystem → repo root.
+    out_dir = Path(__file__).resolve().parents[2] / "shared" / "peirce-spec"
     out_dir.mkdir(parents=True, exist_ok=True)
-    
+
     with open(out_dir / "peirce_sign_classes.json", "w") as f:
         json.dump(classes, f, indent=2)
 

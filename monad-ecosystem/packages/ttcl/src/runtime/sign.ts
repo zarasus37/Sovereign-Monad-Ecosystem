@@ -9,13 +9,14 @@
  * so callers never hand-assemble a `PeirceSignature`.
  */
 
-// Re-export the LOGOC manifold primitives so TTCL consumers can reach the
-// 66-class manifold (the canonical Peirce source of truth) through @sovereign/ttcl
-// without a second bare import. `PeirceSignature` / `CoarseMode` / `PragmatismBand`
-// are re-exported from ../types.js; here we expose the value-side manifold.
-export { getManifold, type PeirceManifold, type PeirceSignClass } from "@sovereign/logoc";
-import { getManifold, type PeirceSignClass, type PeirceSignature, type CoarseMode } from "@sovereign/logoc";
-import type { EventTrace } from "@sovereign/types";
+// Re-export the manifold primitives so TTCL consumers can reach the 66-class
+// manifold (the canonical Peirce source of truth) through @sovereign/ttcl
+// without a second bare import. The manifold lives in @sovereign/types now
+// (relocated from @sovereign/logoc — it is the shared essence both TTCL and
+// LOGOC derive from). `PeirceSignature` / `CoarseMode` / `PragmatismBand` are
+// re-exported from ../types.js; here we expose the value-side manifold.
+export { getManifold, type PeirceManifold, type PeirceSignClass } from "@sovereign/types";
+import { getManifold, type PeirceSignClass, type PeirceSignature, type CoarseMode, type EventTrace } from "@sovereign/types";
 import type { Sign, Modality, Domain } from "../types.js";
 
 /** Convert a manifold sign class into a per-event `PeirceSignature`. */

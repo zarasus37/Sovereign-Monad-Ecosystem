@@ -37,7 +37,7 @@ const SCHEMA_TTCL_OBSERVATION: AnySchemaObject = {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://the-sovereign/schemas/ttcl-observation-event.json",
   "title": "TTCLObservationEvent payload",
-  "description": "Payload of a ttcl.observation.emitted SignalEvent — a TTCL Sign observation. Matches Sign<M,T> at monad-ecosystem/packages/ttcl/src/types.ts:48 and PeirceSignature at monad-ecosystem/packages/logoc/src/peirce/models.ts:15.",
+  "description": "Payload of a ttcl.observation.emitted SignalEvent — a TTCL Sign observation. Matches Sign<M,T> at monad-ecosystem/packages/ttcl/src/types.ts:48 and PeirceSignature at monad-ecosystem/packages/sovereign-types/src/peirce/models.ts:25.",
   "type": "object",
   "properties": {
     "modality": {
@@ -68,7 +68,7 @@ const SCHEMA_TTCL_OBSERVATION: AnySchemaObject = {
     },
     "peirce": {
       "type": "object",
-      "description": "LOGOC PeirceSignature — the 66-class manifold classification. The manifold (monad-ecosystem/packages/logoc/spec/peirce_sign_classes.json) is the sole source of truth for label/path/weights; sign_class_id must be a valid manifold id in [0, 65].",
+      "description": "PeirceSignature — the 66-class manifold classification. The manifold (shared/peirce-spec/peirce_sign_classes.json, surfaced in @sovereign/types) is the sole source of truth for label/path/weights; sign_class_id must be a valid manifold id in [0, 65].",
       "additionalProperties": false,
       "required": [
         "mode",

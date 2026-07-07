@@ -10,10 +10,11 @@
  * so free will is reconstructable, not merely asserted.
  */
 
-import { getManifold, type PeirceSignClass } from "@sovereign/logoc";
+import { getManifold, type PeirceSignClass } from "@sovereign/types";
 import type { EventTrace } from "@sovereign/types";
 import type { Sign, Modality, Domain } from "../types.js";
 import { Wheel } from "./wheel.js";
+import { classToSignature } from "./sign.js";
 
 export class TriadicGateError extends Error {
   readonly present: Domain[];
@@ -253,24 +254,8 @@ export function encodeSign<M extends Modality, T extends Domain>(
   ];
 }
 
-function classToSignature(
-  cls: PeirceSignClass,
-  mode: "ICON" | "INDEX" | "SYMBOL",
-) {
-  return {
-    mode,
-    sign_class_id: cls.id,
-    sign_class_label: cls.label,
-    path: cls.path,
-    firstness_weight: cls.firstness_weight,
-    secondness_weight: cls.secondness_weight,
-    thirdness_weight: cls.thirdness_weight,
-    pragmatism_band: cls.pragmatism_band,
-  };
-}
-
 /**
- * `decodeSign` — inverse of `encodeSign`. Reconstructs `peirce` from the LOGOC
+ * `decodeSign` — inverse of `encodeSign`. Reconstructs `peirce` from the
  * manifold via `classId` (the manifold is the only source of truth for
  * weights/labels/path), verifies the encoded path checksum against the current
  * manifold (detects version drift), and restores `mode` from the stored code.

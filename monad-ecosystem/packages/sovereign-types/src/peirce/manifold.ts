@@ -1,14 +1,36 @@
-import { readFileSync } from "fs";
-import { join } from "path";
+/**
+ * PeirceManifold — the canonical 66-class Peirce sign taxonomy.
+ *
+ * This is the shared essence both TTCL (triadic unifying practice) and LOGOC
+ * (classifier) derive from, so it lives in @sovereign/types — the contracts
+ * package — not inside either runtime. Relocated from @sovereign/logoc.
+ *
+ * Codegen-fed: the class table comes from the generated `PEIRCE_SIGN_CLASSES`
+ * const (../generated/peirce-sign-classes.js, sourced from
+ * shared/peirce-spec/peirce_sign_classes.json). No `fs`, no `path`, no
+ * `__dirname`/`import.meta.url` at runtime — pure TS, matching the numerics
+ * pattern. This also retires the latent `__dirname`-in-ESM bug the old
+ * logoc/src/peirce/manifold.ts carried (it only worked under vitest because
+ * esbuild shims `__dirname` during its CJS transform; a real Node ESM
+ * `import` would have thrown `__dirname is not defined`).
+ *
+ * Distance-metric weights + the default neighbor radius come from the canonical
+ * numerics (../generated/numerics.js) — single source of truth shared with the
+ * Python mirror (logoc/peirce/manifold.py via the _numerics generated module).
+ */
+
 import { PragmatismBand } from "./models.js";
-// Manifold geometry weights + neighbor radius come from the canonical numerics
+// Manifold geometry weights + neighbor radius from the canonical numerics
 // (Layer 4a) — single source of truth shared with the Python mirror.
 import {
   MANIFOLD_WEIGHT_RING,
   MANIFOLD_WEIGHT_ANGLE,
   MANIFOLD_WEIGHT_HAMMING,
   MANIFOLD_MAX_DISTANCE,
-} from "@sovereign/types";
+} from "../generated/numerics.js";
+// The canonical 66-class table — generated from
+// shared/peirce-spec/peirce_sign_classes.json by gen-sign-types.mjs.
+import { PEIRCE_SIGN_CLASSES } from "../generated/peirce-sign-classes.js";
 
 export interface PeirceSignClass {
   id: number;
@@ -30,11 +52,7 @@ export class PeirceManifold {
   private byLabel = new Map<string, number>();
   private byPath = new Map<string, number>();
 
-  constructor(specPath?: string) {
-    const p = specPath || join(__dirname, "../../spec/peirce_sign_classes.json");
-    const raw = readFileSync(p, "utf-8");
-    const classes = JSON.parse(raw) as PeirceSignClass[];
-
+  constructor(classes: readonly PeirceSignClass[] = PEIRCE_SIGN_CLASSES) {
     for (const c of classes) {
       this.byId.set(c.id, c);
       this.byLabel.set(c.label, c.id);
