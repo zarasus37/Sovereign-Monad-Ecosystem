@@ -547,7 +547,9 @@ This means the architecture and local analysis stack are materially advanced. It
 | Six-Organ Institutional Depth | LIVE AT ADVISORY TIER (HEPAR UPGRADED) | `Hepar` has been vastly expanded into a full DeFi zero-day auditing protocol (Stages A-D) with privilege, arithmetic, reentrancy, economic, and state agents. `Cortex`, `Synapse`, `Pneuma`, and `Vox` remain LIVE at Advisory Tier. The dynamic `Cardia` allocation framework is active. |
 | Cardia / Organ Runtime Activation | LOCAL ANALYSIS / READY FOR FUNDING POSTURE | `cardia-activation-core` converted to ESM, `execution-truth-core` and `organ-runtime` stubs created under `packages/organs/`, local snapshot reports `ready_for_funding`; live wallet funding and execution-truth closure remain downstream gates. |
 | x402 QuickNode Payment Bridge | REHOMED / TESTABLE LOCALLY | Live client, JWT auth helper, price fetcher, and live smoke test moved to canonical Poetry package `monad-ecosystem/packages/x402-bridge/`. Unit auth tests pass. Live execution blocked on funded Base Sepolia wallet + `X402_EVM_PRIVATE_KEY`. |
-| Cross-Domain Contract Layer | DOCUMENTED | `shared/schemas/` holds portable JSON-schema contracts; `@sovereign/types` and `@sovereign/bus` provide the typed TypeScript contract and event backbone across all active domains. |
+| Cross-Domain Contract Layer | DOCUMENTED + CODEGEN | `shared/schemas/` + `shared/ttcl-specs/` hold the portable JSON-schema contracts; `@sovereign/types` (now owns the Peirce 66-class manifold, relocated from logoc per PR #24) and `@sovereign/bus` provide the typed TypeScript contract and event backbone. Layer-3 codegen (PRs #19/#22) generates types + Sign-event validators/factories from JSON source of truth. |
+| TTCL Compiler Stack (MLIR L3/L2) | LOCAL — KEYSTONE GATE ENFORCED | New `@sovereign/compiler` package (PR #25): L3 SemioticDialect (ajv-validated SSA loader + wheel-binding/acyclicity) + L2 SignGraphDialect (type/modality inference, budgeted expansion, **graph-wide constitution compliance**). The 0.72 constitution threshold is now a compile-time gate, not a runtime filter — a constitution-failing program raises `ConstitutionCompileError` at L2 and never reaches L0 (the existing `@sovereign/ttcl` runtime, instantiated in-memory — no WASM/LLVM emission by design). L1 Provenance + L2 rewrite/fusion deferred. 155 integration tests green. |
+| Guardrail Charter + Steward Council | RATIFIED | `docs/CHARTER.md` v1.0 in force (effective 2026-07-06) — 8 guardrail clauses + LOGOC→Steward Council→ecosystem governance adjudication. `docs/STEWARD_COUNCIL.md` seats the council. `hcd-monitor` automates HCD-1..5 drift metrics for §2.1. `@sovereign/bus` enforces §4 intention traceability on consequential events. |
 | Phase 4 Operational Documentation | 98% COMPLETE | OPERATIONAL_AXIOMS_PHASE4.md, AGENT_PERSONALITY_FRAMES_v5.md, DOVE_OPERATIONAL_SPECIFICATION_v1.md, ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md, INTEGRATION_MAP.md all created and verified. Axiom alignment audit: 11/12 fully aligned, 1 partial. All three pillars integrated and operational. Ready for Phase 5 launch. |
 
 ---
@@ -2001,6 +2003,44 @@ Every update should include: date, version, changed section(s), exact new status
 ---
 
 # SECTION 19 — CHANGE LOG
+
+## v2.6.0 — July 7, 2026
+
+**Change Type:** Major — Guardrail Charter ratified + TTCL compiler stack (MLIR L3/L2) landed; tripartite grammar now the single source of truth every runtime derives behavior from
+
+**Summary:**
+
+- **Guardrail Charter v1.0 ratified** (`docs/CHARTER.md`, effective 2026-07-06) — 8 non-negotiable guardrail clauses + three-step adjudication (LOGOC mechanical tests → Steward Council → ecosystem governance). `docs/STEWARD_COUNCIL.md` seats the initial council. `docs/HUMAN_CAPABILITY_DRIFT_METRICS.md` + `hcd-monitor` automate HCD-1..HCD-5 drift metrics for §2.1 with centralized thresholds and explicit targets. `@sovereign/bus` enforces §4 intention traceability on consequential events (PRs #11/#12/#14).
+- **TTCL ↔ Gnostic Engine parity-enforced tripartite grammar (PR #18):** TS↔Python parity now CI-enforced on three surfaces — scorer (19 tests), tier (71 tests), classifier (14 tests). L7.7 typed-path bridge retuned; L7.8 round4 tie-break substitute (tier spread 41/19/6).
+- **Layer-3 codegen (PRs #19/#22/#23):** `@sovereign/types` numerics generated from JSON source of truth (Phase A); Sign-event validators + factories generated from `shared/ttcl-specs/sign-events.json` (Phase B); signal-event enums caught up to TS source.
+- **Typecheck + CI gates made real (PRs #20/#21):** `pnpm typecheck` now actually runs `tsc --noEmit` across every TS package (previously a no-op); CI restored to green; gitignore hygiene settled for Phase B codegen.
+- **Peirce manifold relocated logoc → types (PR #24):** the 66-class manifold moves to `@sovereign/types` so the compiler stack has clean import paths. `@sovereign/ttcl` owns `Modality`/`Domain`/`Sign`/`Wheel`/`makeSign`/`compose`/`scoreSign`/`combineWheelsBudgeted`; `@sovereign/types` owns manifold/numerics/`PeirceSignature`/`CONSTITUTION_PASS_THRESHOLD`.
+- **MLIR-style TTCL compiler stack (PR #25):** new `@sovereign/compiler` package — an SSA interpreter with passes (not a code emitter):
+  - **L3 SemioticDialect** — ajv-validated loader (`shared/ttcl-specs/semiotic-program-schema.json`) builds an in-memory SSA `SignGraph`; wheel-binding pass resolves references, enforces acyclicity (tri-color DFS), validates the terminal output.
+  - **L2 SignGraphDialect** — type/modality inference via the JOIN lattice (`compose`→HYBRID; PURE input = `LatticeAbortError` compile error, not a runtime `TriadicGateError`); budgeted expansion (`WheelBudgetExceededError` at compile time); **graph-wide constitution compliance — the keystone**.
+  - **L0** — lowers by instantiating the existing `@sovereign/ttcl` runtime `Wheel`/`Sign` objects. No WASM/LLVM emission (the existing runtime IS L0, by design).
+- **The keystone guarantee is now real** (`theo-techno-cosmo/plex/Review/The Four Fundamentals TTCL Is Built.txt:85`): the 0.72 constitution threshold is a graph-wide compile gate, not an after-the-fact filter. A program whose output passes per-Sign `scoreSign` but lacks triadic closure FAILS the graph-wide pass — the case per-Sign scoring misses. A constitution-failing program raises `ConstitutionCompileError` at L2 and never reaches L0.
+
+**Axiom alignment:**
+
+- **Axiom 6 (Demiurge/Constraints):** the constitution 0.72 threshold is now a compile-time gate, not a runtime filter — constraints enforced before execution, not after.
+- **Axiom 11 (Constraint Validation):** a constitution-failing program is rejected at compile time with a typed `CompilerError` chain; no silent execution of invalid gnosis events.
+- **Axiom 12 (Resonant Convergence):** the MLIR four-level stack (L3 Semiotic → L2 SignGraph → L1 Provenance → L0 Target) independently mirrors the compiler architecture described in the TTCL founding prose, realized without inheritance.
+
+**Architectural invariant:**
+
+- `@sovereign/ttcl` never imports `@sovereign/compiler` — the compiler is strictly downstream (compiler → ttcl → types). No cycle. ajv is a runtime dep of `@sovereign/compiler` only (the types-only `ajv-as-devDep` rule is untouched).
+
+**State after update:**
+
+- Active master phase remains **Phase 1a**
+- **TTCL compiler stack:** L3 SemioticDialect + L2 SignGraphDialect landed (PR #25); L1 Provenance (`Token`/`KeyCap`/`encodeSign`/`decodeSign`) and the L2 rewrite/fusion pass **deferred** to follow-up PRs
+- **Parity / CI:** 155 integration tests green (139 existing + 16 new compiler-sign-graph); scorer/tier/classifier parity CI-enforced; `pnpm typecheck` now a real gate across all TS packages
+- **Governance:** CHARTER v1.0 in force; Steward Council seated; HCD-1..5 drift metrics automated
+- **TTCL layer model (working 9-layer axis, NOT the 15-layer Base Stack):** Layers 1-4 + 8 (parity/CI) complete; Layer 5 partial (L3/L2 done, L1/fusion deferred); Layers 6 (Scheduler) and 7 (Training Pipeline) specified but unbuilt; Layer 9 (live activation) locally ~82-85% complete, capital-gated for public rollout. Status table in `docs/PROJECT_STATE.md`.
+- **Note:** the Section 6.1.1 build-state rollup (62/73, 82/100) was last recomputed at v2.5.2 and is due for a refresh against the new compiler + governance completions; not restated here to avoid an unsubstantiated number.
+- No new blockers introduced; all tests pass without regression
+- **Next code priority:** Layer 5 L1 Provenance (closes the MLIR compiler stack)
 
 ## v2.5.0 — June 19, 2026
 
