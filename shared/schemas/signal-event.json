@@ -19,7 +19,7 @@
       "enum": [
         "funnel", "engine", "treasury", "dao", "intelligence", "oracle",
         "signal-layer", "platform", "keys", "narrative", "dove", "gnosis",
-        "revenue-router", "data-rail", "emergence", "system", "ttcl"
+        "revenue-router", "data-rail", "emergence", "cardia", "system", "ttcl"
       ]
     },
     "source": {
@@ -33,12 +33,14 @@
         "revenue.routed", "revenue.sink.received",
         "hepar.audit.started", "hepar.audit.completed", "hepar.audit.finding",
         "gnosis.score.computed", "gnosis.blink.triggered", "gnosis.quarantine.triggered",
+        "gnosis.plurality.snapshot",
         "dove.signal.tier1", "dove.signal.tier2", "dove.signal.tier3",
         "oracle.regime.classified", "oracle.posture.updated",
         "data-rail.event.captured", "data-rail.activated", "data-rail.bundle.ready",
         "emergence.window.opened", "emergence.pattern.candidate", "emergence.claim.submitted",
         "agent.action.taken", "agent.profile.registered", "agent.claim.mined",
         "system.health", "system.error", "system.startup", "system.shutdown",
+        "cardia.activated",
         "ttcl.observation.emitted"
       ]
     },
