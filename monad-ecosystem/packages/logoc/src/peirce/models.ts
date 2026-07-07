@@ -1,5 +1,15 @@
-export type PragmatismBand = "INSTINCT" | "EXPERIENCE" | "FORMAL_THOUGHT";
-export type CoarseMode = "ICON" | "INDEX" | "SYMBOL";
+/**
+ * LOGOC classifier-domain types.
+ *
+ * The semiotic primitives (`PragmatismBand` / `CoarseMode` / `PeirceSignature`)
+ * were relocated to @sovereign/types — they are the shared substrate both TTCL
+ * and LOGOC derive from, so they live in the contracts package now. What remains
+ * here is LOGOC-classifier-domain: the semiotic flags the classifier reads and
+ * the `LogocEvent` envelope it produces. `LogocEvent.peirce` references the
+ * relocated `PeirceSignature` via a type-only import (no runtime edge added —
+ * logoc already depended on @sovereign/types for the numerics).
+ */
+import type { PeirceSignature } from "@sovereign/types";
 
 export interface SemioticFlags {
   single_occurrence?: boolean;
@@ -10,17 +20,6 @@ export interface SemioticFlags {
   possibility?: boolean;
   fact?: boolean;
   reason?: boolean;
-}
-
-export interface PeirceSignature {
-  mode: CoarseMode;
-  sign_class_id: number;
-  sign_class_label: string;
-  path: string[];
-  firstness_weight: number;
-  secondness_weight: number;
-  thirdness_weight: number;
-  pragmatism_band: PragmatismBand;
 }
 
 export interface LogocEvent {

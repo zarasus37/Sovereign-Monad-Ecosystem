@@ -1,8 +1,9 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 import * as yaml from "yaml";
-import { PeirceManifold, getManifold } from "./manifold.js";
-import { LogocEvent, PeirceSignature, SemioticFlags, CoarseMode } from "./models.js";
+import { PeirceManifold, getManifold } from "@sovereign/types";
+import type { PeirceSignature, CoarseMode } from "@sovereign/types";
+import { LogocEvent, SemioticFlags } from "./models.js";
 
 export class AmbiguousClassificationError extends Error {
   constructor(message: string) {

@@ -83,33 +83,33 @@
       }
     },
     "logoc_manifold": {
-      "description": "LOGOC Peirce 66-class manifold geometry (shared by the TS runtime and the Python reference mirror). Composite distance metric weights and the neighbor radius.",
+      "description": "Peirce 66-class manifold geometry (shared by the TS runtime — @sovereign/types since the manifold relocation — and the Python reference mirror in @sovereign/logoc). Composite distance metric weights and the neighbor radius.",
       "constants": {
         "weight_ring": {
           "value": 0.4,
           "unit": "weight",
-          "source_doc": "monad-ecosystem/packages/logoc/src/peirce/manifold.ts:18",
+          "source_doc": "monad-ecosystem/packages/sovereign-types/src/peirce/manifold.ts:26",
           "rationale": "Weight on the ring-radius delta in the composite sign-class distance metric. The three manifold weights sum to 1.0 (0.4 + 0.3 + 0.3).",
           "owner_runtime": ["ts", "python"]
         },
         "weight_angle": {
           "value": 0.3,
           "unit": "weight",
-          "source_doc": "monad-ecosystem/packages/logoc/src/peirce/manifold.ts:19",
+          "source_doc": "monad-ecosystem/packages/sovereign-types/src/peirce/manifold.ts:27",
           "rationale": "Weight on the angular-arc delta (shorter arc / 180°) in the composite distance metric.",
           "owner_runtime": ["ts", "python"]
         },
         "weight_hamming": {
           "value": 0.3,
           "unit": "weight",
-          "source_doc": "monad-ecosystem/packages/logoc/src/peirce/manifold.ts:20",
+          "source_doc": "monad-ecosystem/packages/sovereign-types/src/peirce/manifold.ts:28",
           "rationale": "Weight on the path Hamming distance in the composite distance metric.",
           "owner_runtime": ["ts", "python"]
         },
         "max_distance": {
           "value": 0.5,
           "unit": "ratio",
-          "source_doc": "monad-ecosystem/packages/logoc/src/peirce/manifold.ts:83",
+          "source_doc": "monad-ecosystem/packages/sovereign-types/src/peirce/manifold.ts:108",
           "rationale": "Default neighbor radius: sign classes within this composite distance of a given class are considered neighbors.",
           "owner_runtime": ["ts", "python"]
         }

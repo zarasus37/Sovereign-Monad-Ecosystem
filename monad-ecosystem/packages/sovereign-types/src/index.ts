@@ -70,6 +70,16 @@ export type {
   ReplayResult,
 } from './types/event.js';
 
+// ── Peirce Manifold + semiotic primitives (Layer 3 — relocated from @sovereign/logoc) ──
+// The 66-class Peirce manifold is the shared essence both TTCL (triadic unifying
+// practice) and LOGOC (classifier) derive from, so it lives here in the contracts
+// package. Codegen-fed: the class table is generated from
+// shared/peirce-spec/peirce_sign_classes.json by gen-sign-types.mjs (no runtime
+// fs/path). Drift-guarded by scripts/check-sign-types-drift.mjs.
+export type { PragmatismBand, CoarseMode, PeirceSignature } from './peirce/models.js';
+export { PeirceManifold, getManifold } from './peirce/manifold.js';
+export type { PeirceSignClass } from './peirce/manifold.js';
+
 // ── Canonical Numerics (Layer 3 codegen — single source of truth for thresholds) ──
 // Generated from shared/schemas/ttcl-numerics.json by gen-sign-types.mjs;
 // drift-guarded by scripts/check-sign-types-drift.mjs; semantic invariants held

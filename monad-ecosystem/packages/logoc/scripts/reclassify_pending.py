@@ -5,7 +5,7 @@ from collections import Counter
 WORKSPACE = "C:/Users/crisc/OneDrive - Southern Careers Institute/My Drive/The_Sovereign"
 
 # Load spec
-with open(os.path.join(WORKSPACE, "monad-ecosystem/packages/logoc/spec/peirce_sign_classes.json"), 'r') as f:
+with open(os.path.join(WORKSPACE, "shared/peirce-spec/peirce_sign_classes.json"), 'r') as f:
     sign_classes = json.load(f)
 
 real_classes = {}

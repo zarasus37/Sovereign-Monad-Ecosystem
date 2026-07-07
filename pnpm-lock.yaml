@@ -672,9 +672,6 @@ importers:
 
   monad-ecosystem/packages/ttcl:
     dependencies:
-      '@sovereign/logoc':
-        specifier: workspace:*
-        version: link:../logoc
       '@sovereign/types':
         specifier: workspace:*
         version: link:../sovereign-types

@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
     corpus_path = WORKSPACE / "logs/corpus/master_corpus_v5.10.jsonl"
     model_path = WORKSPACE / "monad-ecosystem/packages/logoc/ml/ml_classifier_v13.json"
-    spec_path = WORKSPACE / "monad-ecosystem/packages/logoc/spec/peirce_sign_classes.json"
+    spec_path = WORKSPACE / "shared/peirce-spec/peirce_sign_classes.json"
 
     results = run_pipeline_simulation(
         str(corpus_path), str(model_path), str(spec_path)

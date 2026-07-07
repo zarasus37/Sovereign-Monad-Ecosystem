@@ -20,7 +20,7 @@
  * the tier in Python (`routes.py` → `produce_logoc_tier`). This mirror exists
  * so the cross-runtime parity CI can assert agreement rather than assume it.
  */
-import { getManifold } from "./manifold.js";
+import { getManifold } from "@sovereign/types";
 import {
   LOGOC_TIER_NEIGHBOR_RADIUS,
   LOGOC_TIER_COHERENT_DENSITY_THRESHOLD,

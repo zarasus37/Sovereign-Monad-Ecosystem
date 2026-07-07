@@ -16,7 +16,8 @@
  */
 
 import { describe, expect, it } from 'vitest';
-import { getManifold, produceLogocTier, neighborDensity } from '@sovereign/logoc';
+import { getManifold } from '@sovereign/types';
+import { produceLogocTier, neighborDensity } from '@sovereign/logoc';
 import { runParityShim } from './_parity.js';
 
 const manifold = getManifold();

@@ -24,12 +24,13 @@
  *
  * Architecture note: the scorer lives in `@sovereign/ttcl` because its inputs
  * (triadic ancestry, modality, the `noRlhf` flag) are TTCL `Sign` concepts that
- * LOGOC's `LogocEvent` does not carry. ttcl already depends on `@sovereign/logoc`
- * (manifold) and `@sovereign/types` (numerics); the scorer adds no new edge, so
- * the package graph stays acyclic (no ttcl↔logoc cycle).
+ * LOGOC's `LogocEvent` does not carry. ttcl depends on `@sovereign/types`
+ * (manifold + numerics); the scorer adds no new edge. The manifold was relocated
+ * to @sovereign/types so the Sign runtime no longer couples to the LOGOC
+ * classifier package (no ttcl→logoc edge, no ttcl↔logoc cycle).
  */
 
-import { getManifold } from "@sovereign/logoc";
+import { getManifold } from "@sovereign/types";
 import {
   CONSTITUTION_C1_TRIPARTITE_WEIGHT,
   CONSTITUTION_C2_LOGIC_COMPRESSION_WEIGHT,
@@ -38,7 +39,7 @@ import {
   CONSTITUTION_C5_NO_RLHF_SIGNAL_WEIGHT,
   CONSTITUTION_PASS_THRESHOLD,
 } from "@sovereign/types";
-import type { PragmatismBand } from "@sovereign/logoc";
+import type { PragmatismBand } from "@sovereign/types";
 import type { Sign, Domain, Modality } from "../types.js";
 
 /** The five constitution criteria, in canonical order. */

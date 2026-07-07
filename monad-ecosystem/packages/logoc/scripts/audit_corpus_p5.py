@@ -14,7 +14,8 @@ FEATURE_NAMES = [
 
 BASE_DIR = r"C:\Users\crisc\OneDrive - Southern Careers Institute\My Drive\The_Sovereign\monad-ecosystem\packages\logoc"
 MODEL_PATH = Path(BASE_DIR) / "ml" / "ml_classifier_v13.json"
-SPEC_PATH = Path(BASE_DIR) / "spec" / "peirce_sign_classes.json"
+# Canonical 66-class table relocated to shared/peirce-spec/ (repo-root shared/).
+SPEC_PATH = Path(BASE_DIR).parent.parent.parent / "shared" / "peirce-spec" / "peirce_sign_classes.json"
 
 with SPEC_PATH.open("r", encoding="utf-8") as f:
     sign_classes_data = {sc["id"]: sc for sc in json.load(f)}

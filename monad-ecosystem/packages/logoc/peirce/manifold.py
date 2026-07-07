@@ -1,7 +1,8 @@
 """
 LOGOC Peirce Manifold
-Loads canonical 66-class table from spec/peirce_sign_classes.json.
-Single source of truth shared with the TypeScript mirror.
+Loads canonical 66-class table from shared/peirce-spec/peirce_sign_classes.json.
+Single source of truth shared with the TypeScript mirror (now in @sovereign/types,
+codegen-fed from the same JSON).
 """
 from __future__ import annotations
 
@@ -20,7 +21,11 @@ from ._numerics import (
 
 PragmatismBand = Literal["INSTINCT", "EXPERIENCE", "FORMAL_THOUGHT"]
 
-_SPEC_PATH = Path(__file__).parent.parent / "spec" / "peirce_sign_classes.json"
+# Canonical 66-class table lives in shared/peirce-spec/ (relocated from
+# logoc/spec/). shared/ is the repo-root home for cross-runtime specs both TS
+# and Python depend on (matches shared/schemas/ + shared/ttcl-specs/).
+# parents[4]: peirce → logoc → packages → monad-ecosystem → repo root.
+_SPEC_PATH = Path(__file__).resolve().parents[4] / "shared" / "peirce-spec" / "peirce_sign_classes.json"
 
 
 @dataclass(frozen=True)
