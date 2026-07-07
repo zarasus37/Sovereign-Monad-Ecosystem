@@ -123,6 +123,20 @@ export {
   HEALTHY_MIN_REPRESENTATION,
 } from './generated/numerics.js';
 
+// ── Sign-Event validators (Layer 3 codegen — Phase B) ───────────────────────
+// Generated from shared/ttcl-specs/sign-events.json + shared/schemas/*.json by
+// gen-ttcl-artifacts.mjs; drift-guarded by scripts/check-ttcl-artifacts-drift.mjs;
+// positive + negative cases held by monad-ecosystem/tests/integration/schema-validators.test.ts.
+// Build/test-only — NOT imported by runtime code (the bus keeps its hand-rolled
+// validateIntentionTraceability; zero-runtime-deps invariant preserved).
+export {
+  validateTtclObservation,
+  validateSignalEvent,
+  validateGnosisScore,
+  validateDoveSignal,
+  validateHeparAuditResult,
+} from './generated/sign-event-validators.js';
+
 // ── Oracle / Risk Gnosis Engine ──────────────────────────────────────────────
 export type {
   RegimeClass,

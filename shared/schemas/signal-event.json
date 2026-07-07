@@ -19,7 +19,7 @@
       "enum": [
         "funnel", "engine", "treasury", "dao", "intelligence", "oracle",
         "signal-layer", "platform", "keys", "narrative", "dove", "gnosis",
-        "revenue-router", "data-rail", "emergence", "system"
+        "revenue-router", "data-rail", "emergence", "system", "ttcl"
       ]
     },
     "source": {
@@ -38,7 +38,8 @@
         "data-rail.event.captured", "data-rail.activated", "data-rail.bundle.ready",
         "emergence.window.opened", "emergence.pattern.candidate", "emergence.claim.submitted",
         "agent.action.taken", "agent.profile.registered", "agent.claim.mined",
-        "system.health", "system.error", "system.startup", "system.shutdown"
+        "system.health", "system.error", "system.startup", "system.shutdown",
+        "ttcl.observation.emitted"
       ]
     },
     "payload": {

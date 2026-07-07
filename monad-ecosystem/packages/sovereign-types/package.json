@@ -20,6 +20,8 @@
     "lint": "echo 'No lint configured for types-only package'"
   },
   "devDependencies": {
+    "ajv": "^8.17.0",
+    "ajv-formats": "^3.0.1",
     "typescript": "^5.6.0",
     "vitest": "^2.0.0"
   },

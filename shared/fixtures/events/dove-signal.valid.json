@@ -1,0 +1,12 @@
+{
+  "signalId": "dove-001",
+  "timestamp": "2026-07-07T12:00:00.000Z",
+  "tier": 1,
+  "layer": "dove",
+  "driftCategory": "experiential.drift",
+  "observedValue": "0.3",
+  "threshold": "0.5",
+  "description": "Test fixture: experiential drift below threshold.",
+  "governanceProposalGenerated": false,
+  "resolved": false
+}

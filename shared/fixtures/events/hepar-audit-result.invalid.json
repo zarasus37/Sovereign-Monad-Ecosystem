@@ -1,0 +1,29 @@
+{
+  "auditId": "audit-001",
+  "startedAt": "2026-07-07T10:00:00.000Z",
+  "completedAt": "2026-07-07T11:00:00.000Z",
+  "target": "0x1234567890abcdef1234567890abcdef12345678",
+  "chain": "ethereum",
+  "stages": [
+    {
+      "stage": "A",
+      "completed": true,
+      "elapsedMs": 500,
+      "findingCounts": { "info": 0, "low": 0, "medium": 0, "high": 0, "critical": 0 },
+      "findings": []
+    }
+  ],
+  "allFindings": [],
+  "score": {
+    "overall": 80,
+    "stageScores": { "A": 80, "B": 80, "C": 80, "D": 80 },
+    "tvlTier": "small",
+    "governanceScore": 75,
+    "heuristicConfidence": 0.85
+  },
+  "allocationRecommendation": "advisable",
+  "suggestedAllocationCapUsd": 10000,
+  "lightVerifyCertification": "certified",
+  "forensicReportGenerated": false,
+  "trace": { "source": "test-fixture" }
+}
