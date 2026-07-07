@@ -5,6 +5,17 @@ from typing import Any
 import time
 import numpy as np
 
+from ..generated.numerics import (
+    FOCAL_LOCK_THRESHOLD,
+    LANE_B_BLEND_RAW_WEIGHT,
+    LANE_B_BLEND_VMASK_WEIGHT,
+    LANE_C_KILL_RHCP_SPIN,
+    LANE_C_KILL_HOST_RATIO,
+    LANE_C_KILL_USER_RATIO,
+    SPIN_EXPANDING_GATE,
+    MAX_BLINKS,
+)
+
 
 class SynapticWatcher:
     """
@@ -61,7 +72,11 @@ class GnosticEngine:
     - Blink / Quarantine logic
     """
 
-    def __init__(self, threshold: float = 0.85, max_blinks: int = 3) -> None:
+    def __init__(
+        self,
+        threshold: float = FOCAL_LOCK_THRESHOLD,
+        max_blinks: int = MAX_BLINKS,
+    ) -> None:
         self.threshold = threshold
         self.max_blinks = max_blinks
         self.history: dict[str, list[dict[str, float]]] = {}
@@ -127,15 +142,15 @@ class GnosticEngine:
         - user coverage > 50%.
         """
         # RHCP high spin + contagion active
-        if spin > 0.75 and not w_cong_active:
+        if spin > LANE_C_KILL_RHCP_SPIN and not w_cong_active:
             return True
 
         # Too wide on infra
-        if w_host_ratio is not None and w_host_ratio > 0.25:
+        if w_host_ratio is not None and w_host_ratio > LANE_C_KILL_HOST_RATIO:
             return True
 
         # Too wide on user base
-        if w_user_ratio is not None and w_user_ratio > 0.50:
+        if w_user_ratio is not None and w_user_ratio > LANE_C_KILL_USER_RATIO:
             return True
 
         return False
@@ -162,7 +177,7 @@ class GnosticEngine:
         # Lane B: integrate Bedrock V-mask if present
         v_mask = data.get("v_mask", [])
         lane_b_vmask = self.compute_lane_b_intensity(v_mask)
-        lane_b = 0.5 * lane_b_raw + 0.5 * lane_b_vmask
+        lane_b = LANE_B_BLEND_RAW_WEIGHT * lane_b_raw + LANE_B_BLEND_VMASK_WEIGHT * lane_b_vmask
 
         # Lane C: magnitude kill-switch
         w_cong_active = bool(data.get("w_cong", True))
@@ -226,7 +241,7 @@ class GnosticEngine:
         }
 
     def resolve_success(self, var_id: str, sr: float, tilt: float, spin: float) -> dict[str, Any]:
-        status = "EXPANDING" if spin > 0.5 else "STABLE"
+        status = "EXPANDING" if spin > SPIN_EXPANDING_GATE else "STABLE"
         return {
             "verdict": "FOCAL_LOCK",
             "var": var_id,

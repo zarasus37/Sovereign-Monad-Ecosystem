@@ -58,6 +58,8 @@ export interface PulfrichParallax {
   readonly blinkTriggered: boolean;
 }
 
+import type { EventTrace } from './signal.js';
+
 /** The canonical doctrine state labels for a bootstrap-phase agent. */
 export type DoctrineState =
   | 'SELF_NAVIGATING'
@@ -111,4 +113,12 @@ export interface GnosisScore {
 
   /** Monotonically increasing engine sequence number. */
   readonly sequenceNumber: number;
+
+  /**
+   * Intention traceability metadata. Optional on the score object itself, but
+   * required by the bus when the score is the payload of a governance-relevant
+   * event (e.g. `gnosis.quarantine.triggered`, `gnosis.blink.triggered`).
+   * See docs/CHARTER.md §4.
+   */
+  readonly trace?: EventTrace;
 }

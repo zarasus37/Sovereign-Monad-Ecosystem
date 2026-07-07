@@ -11,6 +11,8 @@
  *            HEPAR_CORE_STATUS.md, SIX_ORGAN_UPGRADE_COMPLETION_SUMMARY
  */
 
+import type { EventTrace } from './signal.js';
+
 /** Severity classification for a single audit finding. */
 export type FindingSeverity = 'info' | 'low' | 'medium' | 'high' | 'critical';
 
@@ -172,4 +174,11 @@ export interface HeparAuditResult {
 
   /** URI to the forensic report artifact (if generated). */
   readonly forensicReportUri?: string;
+
+  /**
+   * Intention traceability metadata. Required by the bus when this result is the
+   * payload of `hepar.audit.completed` / `hepar.audit.finding` events.
+   * See docs/CHARTER.md §4.
+   */
+  readonly trace?: EventTrace;
 }

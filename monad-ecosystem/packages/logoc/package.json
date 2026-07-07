@@ -10,6 +10,7 @@
     "test": "npx vitest run tests/peirce.test.ts"
   },
   "dependencies": {
+    "@sovereign/types": "workspace:*",
     "yaml": "^2.9.0"
   },
   "devDependencies": {

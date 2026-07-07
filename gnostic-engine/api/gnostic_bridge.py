@@ -23,10 +23,19 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import sys
 import urllib.error
 import urllib.request
 from typing import Any, Dict, Optional, TypedDict
+
+# Make the gnostic_engine package (under src/) importable so we can pull the
+# canonical TVL ceiling from the generated numerics module (Layer 4a).
+_SRC = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+if _SRC not in sys.path:
+    sys.path.insert(0, _SRC)
+
+from gnostic_engine.generated.numerics import MAX_TVL_REFERENCE  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -34,7 +43,8 @@ from typing import Any, Dict, Optional, TypedDict
 
 SGE_BASE_URL = "http://localhost:8001"
 FORAGE_ENDPOINT = f"{SGE_BASE_URL}/intake/forage"
-MAX_TVL_REFERENCE = 500_000_000  # $500M — normalization ceiling
+# MAX_TVL_REFERENCE is imported from the canonical numerics module (Layer 4a)
+# — $500M TVL normalization ceiling. Do not redeclare here.
 
 
 # ---------------------------------------------------------------------------

@@ -87,7 +87,45 @@
     "suggestedAllocationCapUsd": { "type": ["number", "null"] },
     "lightVerifyCertification": { "type": "string", "enum": ["pending", "certified", "failed"] },
     "forensicReportGenerated": { "type": "boolean" },
-    "forensicReportUri": { "type": "string" }
+    "forensicReportUri": { "type": "string" },
+    "trace": {
+      "type": "object",
+      "description": "Intention traceability metadata. Required by the bus for hepar.audit.completed / hepar.audit.finding events. See docs/CHARTER.md §4.",
+      "required": ["intentionId", "source"],
+      "properties": {
+        "intentionId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Unique identifier for the intention chain that produced this event."
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Agent, service, or contributor that originated the intention."
+        },
+        "parentEventId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Parent event in the intention chain, if any."
+        },
+        "constraintEnvelopeId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Constraint envelope governing the action that produced this event."
+        },
+        "narrativePurposeId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Narrative purpose tag linking the event to a declared objective."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO-8601 timestamp when the trace record was created."
+        }
+      },
+      "additionalProperties": false
+    }
   },
   "required": [
     "auditId", "startedAt", "completedAt", "target", "chain", "stages",

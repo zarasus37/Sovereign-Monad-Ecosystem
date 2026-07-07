@@ -1,15 +1,21 @@
 {
   "name": "@sovereign/ttcl",
-  "version": "1.0.0",
-  "description": "Theo-Techno-Cosmological Language Types",
+  "version": "1.1.0",
+  "description": "Theo-Techno-Cosmological Language Runtime — Peirce-triadic combinator library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"no TS tests yet; run Python tests in monad-ecosystem/packages/logoc/tests/\" && exit 0"
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sovereign/logoc": "workspace:*",
+    "@sovereign/types": "workspace:*"
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
   }
 }

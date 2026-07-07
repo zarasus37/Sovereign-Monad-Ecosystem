@@ -1,63 +1,79 @@
-export type PeirceSignClassId = number; // 0–65
+/**
+ * TTCL — Theo-Techno-Cosmological Language: core types.
+ *
+ * The Peirce semiotic signature (`PeirceSignature`) and the 66-class manifold
+ * are owned by LOGOC (`@sovereign/logoc`), which holds the manifold data and the
+ * classifier. TTCL re-exports the signature type and composes signs against the
+ * manifold at runtime; it does NOT duplicate the manifold. One definition of
+ * the Peirce primitives, shared by both packages.
+ */
 
-export interface PeirceSignature {
-  id: PeirceSignClassId;
-  label: string;
-  path: string[];
-  firstness_weight: number;
-  secondness_weight: number;
-  thirdness_weight: number;
-  pragmatism_band: 'INSTINCT' | 'EXPERIENCE' | 'FORMAL_THOUGHT';
-}
+export type PeirceSignClassId = number;
 
-export type Sign<M, T> = {
-  modality: M;
-  domain: T;
-  pps: number;
-  peirce: PeirceSignature;
+// Peirce semiotic primitives are canonical in LOGOC. Re-export so consumers of
+// @sovereign/ttcl receive the same PeirceSignature shape that LOGOC's classifier
+// produces — one definition, not two.
+export type { PeirceSignature, PragmatismBand, CoarseMode } from "@sovereign/logoc";
+
+import type { EventTrace } from "@sovereign/types";
+import type { PeirceSignature } from "@sovereign/logoc";
+
+/** The modal lattice: HYBRID ⊤ → ICON / INDEX / SYMBOL → PURE ⊥. */
+export type Modality = "PURE" | "ICON" | "INDEX" | "SYMBOL" | "HYBRID";
+
+/** The three irreducible TTCL domains, unified by Logic (the JOIN operator). */
+export type Domain = "THEOLOGY" | "TECHNOLOGY" | "COSMOLOGY";
+
+/**
+ * `Sign<M, T>` — the core TTCL semiotic unit.
+ *
+ * - `modality` places the sign on the modal lattice.
+ * - `domain` is the TTCL domain (Theology / Technology / Cosmology).
+ * - `pps` is the Primary Parameter Schema sync score (a per-emission runtime
+ *   position on the manifold ring); its canonical values are owned by the
+ *   numeric-centralization layer (`shared/schemas/ttcl-numerics.json`).
+ * - `peirce` is the LOGOC `PeirceSignature` (the 66-class classification).
+ * - `trace` is the optional CHARTER §4 intention trace. Combinators that emit
+ *   bus-eligible gnosis events require it; enforcement lives at the bus
+ *   boundary (`validateIntentionTraceability`), not here — the TTCL runtime
+ *   stays side-effect-free.
+ * - `domains` is the optional triadic ancestry — the set of TTCL domains this
+ *   sign represents. A raw single-domain sign carries `[domain]`; a HYBRID
+ *   produced by `compose(theo, tech, cosmo)` carries all three. Consumed by
+ *   the constitution scorer's C1 (tripartite) criterion. Defaults to `[domain]`.
+ * - `noRlhf` is the optional caller-set flag (default `true`) asserting no
+ *   reinforcement-learning-from-human-feedback signal is present. Consumed by
+ *   the constitution scorer's C5 criterion.
+ */
+export type Sign<M extends Modality, T extends Domain> = {
+  readonly modality: M;
+  readonly domain: T;
+  readonly pps: number;
+  readonly peirce: PeirceSignature;
+  readonly trace?: EventTrace;
+  /** Triadic ancestry — domains this sign represents (defaults to `[domain]`). */
+  readonly domains?: readonly Domain[];
+  /** Caller-set flag (default `true`) that no RLHF signal is present. */
+  readonly noRlhf?: boolean;
 };
 
-// --- Type-gating Utility Types ---
+// --- Compile-time semiotic gates (Axiom 6 — Demiurge/Constraints) ---
+// These encode structural constraints at compile time so malformed signs are
+// rejected before runtime. The same constraints are re-checked at runtime in
+// `runtime/prove.ts` (TypeScript types erase at runtime, so the gate logic must
+// be reified as values to be trustworthy).
+
+/** Restricts a Sign to the FORMAL_THOUGHT pragmatism band. */
+export type RequireFormalThought<S extends Sign<any, any>> =
+  S["peirce"]["pragmatism_band"] extends "FORMAL_THOUGHT" ? S : never;
 
 /**
- * Ensures the given Sign operates within the FORMAL_THOUGHT pragmatism band.
- * Used to restrict functions (e.g. `prove()`) from accepting raw instinctual signs.
- *
- * @example
- *   function prove<S extends Sign<any, any>>(sign: RequireFormalThought<S>): Proof<S> { ... }
+ * Narrows to Signs whose Peirce path places them in a secondness-dominant
+ * triadic position (Index object-relation / Dicent interpretant).
  */
-export type RequireFormalThought<S extends Sign<any, any>> = S['peirce']['pragmatism_band'] extends 'FORMAL_THOUGHT' ? S : never;
+export type RequireStrongSecondness<S extends Sign<any, any>> =
+  S["peirce"]["path"][1] extends "Index" | "Dicent" ? S : never;
 
-/**
- * Ensures the given Sign has a strong element of secondness (secondness_weight >= 0.4).
- * Since TypeScript cannot compare floating point at the type level, this type
- * is a semantic contract enforced by the classifier at sign-creation time.
- * It narrows to the subset of Signs whose Peirce path places them in a
- * secondness-dominant triadic position (e.g. Index or Dicent interpretant).
- *
- * @example
- *   function emitObservation<S extends Sign<any, any>>(sign: RequireStrongSecondness<S>): Observation<S> { ... }
- */
-export type RequireStrongSecondness<S extends Sign<any, any>> = S['peirce']['path'][1] extends 'Index' | 'Dicent' ? S : never;
-
-/**
- * Ensures the sign is an argument (thirdness dominating, interpretant = Argument).
- * Used for inference and logical conclusion gates.
- *
- * @example
- *   function deriveConclusion<S extends Sign<any, any>>(sign: RequireArgument<S>): Conclusion<S> { ... }
- */
-export type RequireArgument<S extends Sign<any, any>> = S['peirce']['path'][2] extends 'Argument' ? S : never;
-
-// --- Compile-time gating demonstrations ---
-// These are type-level proof-of-concept signatures.  Runtime enforcement
-// lives in the classifier and the manifold weight invariants.
-
-/** prove() only accepts FORMAL_THOUGHT signs with Argument interpretant. */
-export declare function prove<S extends Sign<any, any>>(sign: RequireFormalThought<RequireArgument<S>>): { theorem: string; sign: S };
-
-/** emitObservation() only accepts signs with strong secondness (Index object-relation). */
-export declare function emitObservation<S extends Sign<any, any>>(sign: RequireStrongSecondness<S>): { observation: string; sign: S };
-
-/** distill() accepts any sign, but the return type is constrained by the input band. */
-export declare function distill<S extends Sign<any, any>>(sign: S): S extends { peirce: { pragmatism_band: 'FORMAL_THOUGHT' } } ? { refined: true; sign: S } : { refined: false; sign: S };
+/** Narrows to Signs whose interpretant is an Argument. */
+export type RequireArgument<S extends Sign<any, any>> =
+  S["peirce"]["path"][2] extends "Argument" ? S : never;

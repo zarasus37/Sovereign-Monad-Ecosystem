@@ -1,6 +1,14 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 import { PragmatismBand } from "./models.js";
+// Manifold geometry weights + neighbor radius come from the canonical numerics
+// (Layer 4a) — single source of truth shared with the Python mirror.
+import {
+  MANIFOLD_WEIGHT_RING,
+  MANIFOLD_WEIGHT_ANGLE,
+  MANIFOLD_WEIGHT_HAMMING,
+  MANIFOLD_MAX_DISTANCE,
+} from "@sovereign/types";
 
 export interface PeirceSignClass {
   id: number;
@@ -15,9 +23,8 @@ export interface PeirceSignClass {
 }
 
 export class PeirceManifold {
-  private static WEIGHT_RING = 0.4;
-  private static WEIGHT_ANGLE = 0.3;
-  private static WEIGHT_HAMMING = 0.3;
+  // Distance-metric weights + neighbor radius are imported from the canonical
+  // numerics module (@sovereign/types) — see shared/schemas/ttcl-numerics.json.
 
   private byId = new Map<number, PeirceSignClass>();
   private byLabel = new Map<string, number>();
@@ -74,13 +81,13 @@ export class PeirceManifold {
     }
 
     return (
-      PeirceManifold.WEIGHT_RING * ringDelta +
-      PeirceManifold.WEIGHT_ANGLE * angularDelta +
-      PeirceManifold.WEIGHT_HAMMING * hamming
+      MANIFOLD_WEIGHT_RING * ringDelta +
+      MANIFOLD_WEIGHT_ANGLE * angularDelta +
+      MANIFOLD_WEIGHT_HAMMING * hamming
     );
   }
 
-  neighbors(classId: number, maxDistance = 0.5): PeirceSignClass[] {
+  neighbors(classId: number, maxDistance = MANIFOLD_MAX_DISTANCE): PeirceSignClass[] {
     return Array.from(this.byId.values()).filter(c => {
       return c.id !== classId && this.distance(classId, c.id) <= maxDistance;
     });

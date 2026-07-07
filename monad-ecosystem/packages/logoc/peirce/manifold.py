@@ -11,6 +11,13 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Literal
 
+from ._numerics import (
+    WEIGHT_RING,
+    WEIGHT_ANGLE,
+    WEIGHT_HAMMING,
+    MAX_DISTANCE,
+)
+
 PragmatismBand = Literal["INSTINCT", "EXPERIENCE", "FORMAL_THOUGHT"]
 
 _SPEC_PATH = Path(__file__).parent.parent / "spec" / "peirce_sign_classes.json"
@@ -38,11 +45,11 @@ class PeirceManifold:
                + w_a * angular_delta(a, b) / 360.0
                + w_h * hamming(path_a, path_b)
     where angular_delta is the shorter arc distance in [0, 180].
-    """
 
-    _WEIGHT_RING: float = 0.4
-    _WEIGHT_ANGLE: float = 0.3
-    _WEIGHT_HAMMING: float = 0.3
+    The weights (w_r, w_a, w_h) and the default neighbor radius are imported
+    from `._numerics` (generated from shared/schemas/ttcl-numerics.json —
+    Layer 4a single source of truth).
+    """
 
     def __init__(self, spec_path: Path = _SPEC_PATH):
         raw = json.loads(spec_path.read_text(encoding="utf-8"))
@@ -96,12 +103,12 @@ class PeirceManifold:
         hamming = sum(1 for x, y in zip(a.path, b.path) if x != y)
 
         return (
-            self._WEIGHT_RING * ring_delta
-            + self._WEIGHT_ANGLE * angular_delta
-            + self._WEIGHT_HAMMING * hamming
+            WEIGHT_RING * ring_delta
+            + WEIGHT_ANGLE * angular_delta
+            + WEIGHT_HAMMING * hamming
         )
 
-    def neighbors(self, class_id: int, max_distance: float = 0.5) -> List[PeirceSignClass]:
+    def neighbors(self, class_id: int, max_distance: float = MAX_DISTANCE) -> List[PeirceSignClass]:
         """Return all sign classes within `max_distance` of the given class."""
         return [
             c for cid, c in self._by_id.items()
