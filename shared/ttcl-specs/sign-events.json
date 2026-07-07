@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/ttcl-specs/sign-events.json",
+  "title": "TTCL Sign-Event spec — canonical Sign→event bridge",
+  "description": "The single canonical definition of TTCL Sign observation event types: their wire-level JSON Schemas (payload shape) and the Sign factory inputs that produce conforming payloads. The first Sign→event bridge — ttcl.observation.emitted — is declared here. Every TS runtime derives from this file via codegen (gen-ttcl-artifacts.mjs); drift is caught by scripts/check-ttcl-artifacts-drift.mjs (regenerates + string-diffs the 3 generated artifacts) and monad-ecosystem/tests/integration/schema-validators.test.ts (positive + negative cases prove the validators check something).",
+  "version": "1.0.0",
+  "source_of_truth": "this file",
+  "drift_guard": "scripts/check-ttcl-artifacts-drift.mjs (TS codegen) + monad-ecosystem/tests/integration/schema-validators.test.ts (semantic + negative-case invariants)",
+  "event_types": {
+    "ttcl.observation.emitted": {
+      "description": "A TTCL Sign observation emitted on the signal bus — the first Sign→event bridge. The payload is a Sign (the core TTCL semiotic unit: modality + domain + pps + peirce classification + optional trace + optional triadic ancestry). The bus envelope (SignalEvent) is validated separately by shared/schemas/signal-event.json; this schema validates the payload only. Emitted by the TTCL runtime when a Sign is materialized for downstream gnosis/dove/hepar consumption.",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "https://the-sovereign/schemas/ttcl-observation-event.json",
+        "title": "TTCLObservationEvent payload",
+        "description": "Payload of a ttcl.observation.emitted SignalEvent — a TTCL Sign observation. Matches Sign<M,T> at monad-ecosystem/packages/ttcl/src/types.ts:48 and PeirceSignature at monad-ecosystem/packages/logoc/src/peirce/models.ts:15.",
+        "type": "object",
+        "properties": {
+          "modality": {
+            "type": "string",
+            "enum": ["PURE", "ICON", "INDEX", "SYMBOL", "HYBRID"],
+            "description": "Position on the modal lattice: HYBRID ⊤ → ICON / INDEX / SYMBOL → PURE ⊥."
+          },
+          "domain": {
+            "type": "string",
+            "enum": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"],
+            "description": "The TTCL domain this sign carries."
+          },
+          "pps": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "description": "Primary Parameter Schema sync score — a per-emission runtime position on the manifold ring."
+          },
+          "peirce": {
+            "type": "object",
+            "description": "LOGOC PeirceSignature — the 66-class manifold classification. The manifold (monad-ecosystem/packages/logoc/spec/peirce_sign_classes.json) is the sole source of truth for label/path/weights; sign_class_id must be a valid manifold id in [0, 65].",
+            "additionalProperties": false,
+            "required": ["mode", "sign_class_id", "sign_class_label", "path", "firstness_weight", "secondness_weight", "thirdness_weight", "pragmatism_band"],
+            "properties": {
+              "mode": {
+                "type": "string",
+                "enum": ["ICON", "INDEX", "SYMBOL"],
+                "description": "Coarse mode derived from the sign class path."
+              },
+              "sign_class_id": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 65,
+                "description": "Manifold class id. Unknown ids throw UnknownSignClassError at runtime."
+              },
+              "sign_class_label": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Human-readable class label from the manifold."
+              },
+              "path": {
+                "type": "array",
+                "items": { "type": "string" },
+                "minItems": 1,
+                "description": "Peirce semiotic path [vehicle, object, interpretant]."
+              },
+              "firstness_weight": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+              "secondness_weight": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+              "thirdness_weight": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+              "pragmatism_band": {
+                "type": "string",
+                "enum": ["INSTINCT", "EXPERIENCE", "FORMAL_THOUGHT"]
+              }
+            }
+          },
+          "trace": {
+            "type": "object",
+            "description": "Intention traceability metadata. Required by the bus for governance-relevant, action-bearing, or economically meaningful event types. See docs/CHARTER.md §4.",
+            "required": ["intentionId", "source"],
+            "properties": {
+              "intentionId": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Unique identifier for the intention chain that produced this event."
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Agent, service, or contributor that originated the intention."
+              },
+              "parentEventId": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Parent event in the intention chain, if any."
+              },
+              "constraintEnvelopeId": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Constraint envelope governing the action that produced this event."
+              },
+              "narrativePurposeId": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Narrative purpose tag linking the event to a declared objective."
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO-8601 timestamp when the trace record was created."
+              }
+            },
+            "additionalProperties": false
+          },
+          "domains": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"] },
+            "minItems": 1,
+            "description": "Triadic ancestry — domains this sign represents. A raw single-domain sign carries [domain]; a HYBRID from compose(theo, tech, cosmo) carries all three. Consumed by the constitution scorer C1."
+          },
+          "noRlhf": {
+            "type": "boolean",
+            "description": "Caller-set flag (default true) that no RLHF signal is present. Consumed by the constitution scorer C5."
+          }
+        },
+        "required": ["modality", "domain", "pps", "peirce"]
+      },
+      "factories": {
+        "triadicObservation": {
+          "modality": "HYBRID",
+          "domain": "COSMOLOGY",
+          "pps": 0.30,
+          "sign_class_id": 8,
+          "mode": "INDEX",
+          "domains": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"],
+          "noRlhf": true,
+          "description": "The well-formed triadic HYBRID observation: compose(Theology, Technology, Cosmology) dominant peirce = class 8 (Delome-Symbol-Legisign, FORMAL_THOUGHT, thirdness 0.85 — the most argumentative class). Spans all three domains; would pass the constitution triadic gate. pps 0.30 places it in the volatile band (genuine sync tension, not a locked state).",
+          "source_doc": "monad-ecosystem/packages/ttcl/src/runtime/combinators.ts:140 (compose) + logoc/spec/peirce_sign_classes.json:122 (class 8)"
+        },
+        "rawTechnologyPacket": {
+          "modality": "INDEX",
+          "domain": "TECHNOLOGY",
+          "pps": 1.00,
+          "sign_class_id": 2,
+          "mode": "INDEX",
+          "domains": ["TECHNOLOGY"],
+          "noRlhf": true,
+          "description": "A raw single-domain TECHNOLOGY index — class 2 (Dicent-Indexical-Sinsign, EXPERIENCE, secondness 1.0). Single-domain by design, so it scores < 0.72 on the constitution C1 (tripartite) criterion and is structurally incapable of passing the Triadic Minimal Gate alone. pps 1.00 = fully synced raw packet. Used as the negative-shape counterpoint to triadicObservation.",
+          "source_doc": "monad-ecosystem/packages/ttcl/src/runtime/combinators.ts:148 (Triadic Minimal Gate) + logoc/spec/peirce_sign_classes.json:33 (class 2)"
+        }
+      },
+      "source_doc": "monad-ecosystem/packages/ttcl/src/types.ts:48",
+      "rationale": "TTCL is side-effect-free today (ttcl/src/types.ts:38); the bus never references Sign. This event type is the first bridge: a Sign materialized as a bus event so downstream gnosis/dove/hepar consumers can observe semiotic state without coupling to the TTCL runtime. The payload schema is the wire contract; the factory inputs are the codegen source for makeSign(...) wrappers that produce manifold-consistent, schema-conforming payloads (the manifold stays the sole source of truth for the peirce block — factories call makeSign → getManifold().get(classId), never hand-assemble PeirceSignature).",
+      "owner_runtime": ["ts"]
+    }
+  }
+}

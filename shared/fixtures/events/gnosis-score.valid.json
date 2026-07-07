@@ -1,0 +1,13 @@
+{
+  "agentId": "agent-001",
+  "windowStart": "2026-07-07T11:00:00.000Z",
+  "windowEnd": "2026-07-07T12:00:00.000Z",
+  "coherence": { "depth": 0.8, "truth": 0.75, "width": 0.6 },
+  "overallScore": 0.72,
+  "parallax": { "tiltMagnitude": 0.1, "tiltThreshold": 0.5, "blinkTriggered": false },
+  "doctrineState": "SELF_NAVIGATING",
+  "lane": "LANE_A",
+  "quarantineTriggered": false,
+  "observationCount": 42,
+  "sequenceNumber": 7
+}

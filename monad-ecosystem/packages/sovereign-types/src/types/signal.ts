@@ -24,6 +24,7 @@ export type SignalLayer =
   | 'data-rail'
   | 'emergence'
   | 'cardia'
+  | 'ttcl'
   | 'system';
 
 /** All valid event types within the ecosystem. */
@@ -72,7 +73,9 @@ export type SignalEventType =
   | 'system.startup'
   | 'system.shutdown'
   // Cardia events
-  | 'cardia.activated';
+  | 'cardia.activated'
+  // TTCL events
+  | 'ttcl.observation.emitted';
 
 /** Severity levels for events that carry a severity. */
 export type EventSeverity = 'info' | 'warning' | 'critical' | 'fatal';

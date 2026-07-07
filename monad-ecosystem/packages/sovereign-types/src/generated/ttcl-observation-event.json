@@ -1,0 +1,167 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/schemas/ttcl-observation-event.json",
+  "title": "TTCLObservationEvent payload",
+  "description": "Payload of a ttcl.observation.emitted SignalEvent — a TTCL Sign observation. Matches Sign<M,T> at monad-ecosystem/packages/ttcl/src/types.ts:48 and PeirceSignature at monad-ecosystem/packages/logoc/src/peirce/models.ts:15.",
+  "type": "object",
+  "properties": {
+    "modality": {
+      "type": "string",
+      "enum": [
+        "PURE",
+        "ICON",
+        "INDEX",
+        "SYMBOL",
+        "HYBRID"
+      ],
+      "description": "Position on the modal lattice: HYBRID ⊤ → ICON / INDEX / SYMBOL → PURE ⊥."
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "description": "The TTCL domain this sign carries."
+    },
+    "pps": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Primary Parameter Schema sync score — a per-emission runtime position on the manifold ring."
+    },
+    "peirce": {
+      "type": "object",
+      "description": "LOGOC PeirceSignature — the 66-class manifold classification. The manifold (monad-ecosystem/packages/logoc/spec/peirce_sign_classes.json) is the sole source of truth for label/path/weights; sign_class_id must be a valid manifold id in [0, 65].",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "sign_class_id",
+        "sign_class_label",
+        "path",
+        "firstness_weight",
+        "secondness_weight",
+        "thirdness_weight",
+        "pragmatism_band"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "ICON",
+            "INDEX",
+            "SYMBOL"
+          ],
+          "description": "Coarse mode derived from the sign class path."
+        },
+        "sign_class_id": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65,
+          "description": "Manifold class id. Unknown ids throw UnknownSignClassError at runtime."
+        },
+        "sign_class_label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable class label from the manifold."
+        },
+        "path": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "Peirce semiotic path [vehicle, object, interpretant]."
+        },
+        "firstness_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "secondness_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "thirdness_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "pragmatism_band": {
+          "type": "string",
+          "enum": [
+            "INSTINCT",
+            "EXPERIENCE",
+            "FORMAL_THOUGHT"
+          ]
+        }
+      }
+    },
+    "trace": {
+      "type": "object",
+      "description": "Intention traceability metadata. Required by the bus for governance-relevant, action-bearing, or economically meaningful event types. See docs/CHARTER.md §4.",
+      "required": [
+        "intentionId",
+        "source"
+      ],
+      "properties": {
+        "intentionId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Unique identifier for the intention chain that produced this event."
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Agent, service, or contributor that originated the intention."
+        },
+        "parentEventId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Parent event in the intention chain, if any."
+        },
+        "constraintEnvelopeId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Constraint envelope governing the action that produced this event."
+        },
+        "narrativePurposeId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Narrative purpose tag linking the event to a declared objective."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO-8601 timestamp when the trace record was created."
+        }
+      },
+      "additionalProperties": false
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "THEOLOGY",
+          "TECHNOLOGY",
+          "COSMOLOGY"
+        ]
+      },
+      "minItems": 1,
+      "description": "Triadic ancestry — domains this sign represents. A raw single-domain sign carries [domain]; a HYBRID from compose(theo, tech, cosmo) carries all three. Consumed by the constitution scorer C1."
+    },
+    "noRlhf": {
+      "type": "boolean",
+      "description": "Caller-set flag (default true) that no RLHF signal is present. Consumed by the constitution scorer C5."
+    }
+  },
+  "required": [
+    "modality",
+    "domain",
+    "pps",
+    "peirce"
+  ]
+}

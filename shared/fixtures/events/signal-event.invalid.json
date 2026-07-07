@@ -1,0 +1,9 @@
+{
+  "id": "not-a-uuid",
+  "correlationId": "corr-001",
+  "timestamp": "2026-07-07T12:00:00.000Z",
+  "layer": "system",
+  "source": "test-fixture",
+  "type": "system.health",
+  "payload": { "status": "ok" }
+}
