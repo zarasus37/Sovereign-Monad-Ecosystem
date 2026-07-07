@@ -1,0 +1,36 @@
+{
+  "name": "@sovereign/compiler",
+  "version": "0.1.0",
+  "description": "TTCL MLIR-style compiler stack — Semiotic loader (L3) + Sign Graph SSA passes (L2); lowers to the @sovereign/ttcl runtime (L0)",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "echo 'No lint step for compiler package'"
+  },
+  "dependencies": {
+    "@sovereign/types": "workspace:*",
+    "@sovereign/ttcl": "workspace:*",
+    "ajv": "^8.17.0",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}
