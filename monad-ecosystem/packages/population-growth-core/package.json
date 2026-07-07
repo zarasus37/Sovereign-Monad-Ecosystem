@@ -4,6 +4,7 @@
     "description":  "Local population growth planning against Data Rail diversity thresholds",
     "main":  "dist/index.js",
     "scripts":  {
+                    "typecheck": "tsc --noEmit",
                     "start":  "node dist/index.js",
                     "dev":  "ts-node src/index.ts"
                 },
