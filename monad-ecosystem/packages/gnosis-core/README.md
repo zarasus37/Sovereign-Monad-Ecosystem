@@ -64,8 +64,14 @@ PLURALITY_INTERVAL_MS=300000 PLURALITY_THRESHOLD=0.7 pnpm start
 # Load agent profiles from disk
 AGENT_PROFILES_PATH=./data/classified-agents.json pnpm start
 
-# Fetch from a live agent registry
+# Fetch from a live agent registry (native AgentProfile[] shape)
 PLURALITY_PROVIDER=registry AGENT_REGISTRY_URL=https://registry.sovereign/agents pnpm start
+
+# Fetch from an external API with a different JSON shape
+PLURALITY_PROVIDER=registry \
+  AGENT_REGISTRY_URL=https://registry.sovereign/api/v1/agents \
+  AGENT_REGISTRY_ADAPTER=agents-field \
+  pnpm start
 
 # Run the bundled local registry server and scheduler together
 cd monad-ecosystem/packages/gnosis-core
@@ -82,12 +88,39 @@ Environment variables:
 | `PLURALITY_SOURCE` | `gnosis-core-plurality` | Source identifier on emitted events |
 | `PLURALITY_PROVIDER` | `file` | Population source: `file` or `registry` |
 | `AGENT_PROFILES_PATH` | — | JSON file path containing `AgentProfile[]` (`file` provider) |
-| `AGENT_REGISTRY_URL` | — | Registry endpoint returning `AgentProfile[]` (`registry` provider) |
+| `AGENT_REGISTRY_URL` | — | Registry endpoint (`registry` provider) |
 | `AGENT_REGISTRY_TOKEN` | — | Optional bearer token for authenticated registry |
 | `AGENT_REGISTRY_TIMEOUT_MS` | `10000` | Registry request timeout (`registry` provider) |
+| `AGENT_REGISTRY_ADAPTER` | `direct` | Adapter for external REST shapes (`direct`, `generic-array`, `agents-field`, `wrapped-agent`) |
+| `AGENT_REGISTRY_ADAPTER_PATH` | — | JSON path to the agent array inside the response (e.g. `data.agents`) |
 | `REGISTRY_PORT` | `8080` | Port for the in-stack agent registry server |
 | `REGISTRY_DATA_PATH` | `/data/agents.json` | Path to `AgentProfile[]` JSON served by the registry |
 | `REGISTRY_AUTH_TOKEN` | — | Optional bearer token required by the registry |
+
+### External REST API adapters
+
+The registry provider can consume arbitrary REST API shapes and map them into `AgentProfile[]`.
+
+Built-in adapters:
+
+| Adapter | Input shape | Use case |
+|---|---|---|
+| `direct` | `AgentProfile[]` | Native Sovereign registry |
+| `generic-array` | array of loosely-typed objects | Generic external API |
+| `agents-field` | `{ agents: [...] }` | APIs that wrap the list in an `agents` key |
+| `wrapped-agent` | `{ agents: [{ agent: { ... } }] }` | APIs that wrap each record in an `agent` object |
+
+Use `AGENT_REGISTRY_ADAPTER_PATH` to point any adapter at a nested array, e.g. `data.agents` or `results[0]`.
+
+Example:
+
+```bash
+PLURALITY_PROVIDER=registry \
+  AGENT_REGISTRY_URL=https://registry.sovereign/api/agents \
+  AGENT_REGISTRY_ADAPTER=generic-array \
+  AGENT_REGISTRY_ADAPTER_PATH=data.results \
+  pnpm start
+```
 
 To integrate with a live agent registry programmatically, import `PluralityScheduler` and pass a custom `provider`:
 

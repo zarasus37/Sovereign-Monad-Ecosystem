@@ -26,6 +26,12 @@ services:
       - ${AGENT_PROFILES_HOST_PATH:-./data}:/data:ro
     ports:
       - ${REGISTRY_HOST_PORT:-8080}:8080
+    healthcheck:
+      test: ['CMD', 'node', '-e', "require('http').get('http://localhost:8080/health', (r) => process.exit(r.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
     logging:
       driver: json-file
       options:
@@ -46,6 +52,8 @@ services:
       PLURALITY_INTERVAL_MS: ${PLURALITY_INTERVAL_MS:-900000}
       PLURALITY_THRESHOLD: ${PLURALITY_THRESHOLD:-0.6}
       PLURALITY_SOURCE: ${PLURALITY_SOURCE:-gnosis-core-plurality}
+      PLURALITY_HEALTH_PORT: ${PLURALITY_HEALTH_PORT:-8080}
+      PLURALITY_STATE_PATH: ${PLURALITY_STATE_PATH:-/app/monad-ecosystem/packages/gnosis-core/state/plurality-state.json}
 
       # Provider selection: file | registry
       PLURALITY_PROVIDER: ${PLURALITY_PROVIDER:-file}
@@ -67,6 +75,18 @@ services:
       # Mount agent profiles when using the file provider.
       # Unused when PLURALITY_PROVIDER=registry.
       - ${AGENT_PROFILES_HOST_PATH:-./data}:/data:ro
+      # Persist emitted signal stream on the host for easy inspection.
+      - ${SIGNAL_LOG_HOST_PATH:-./logs}:/app/monad-ecosystem/packages/gnosis-core/logs
+      # Persist rising-edge state across container restarts.
+      - ${PLURALITY_STATE_HOST_PATH:-./state}:/app/monad-ecosystem/packages/gnosis-core/state
+    expose:
+      - ${PLURALITY_HEALTH_PORT:-8080}
+    healthcheck:
+      test: ['CMD', 'node', '-e', "require('http').get('http://localhost:${PLURALITY_HEALTH_PORT:-8080}/health', (r) => process.exit(r.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
     logging:
       driver: json-file
       options:

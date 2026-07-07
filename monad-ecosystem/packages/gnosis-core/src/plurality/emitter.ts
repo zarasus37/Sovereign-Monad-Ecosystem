@@ -27,6 +27,7 @@ import {
 import { EventBus } from '@sovereign/bus';
 
 import { calculatePopulationDiversitySnapshot } from './distribution.js';
+import type { PluralityStateStore } from './state-store.js';
 
 /** Configuration for the stateful emitter. */
 export interface PluralityDoveEmitterConfig {
@@ -38,6 +39,12 @@ export interface PluralityDoveEmitterConfig {
 
   /** Source identifier used in emitted events (default `gnosis-core-plurality`). */
   readonly source?: string;
+
+  /** Optional callback invoked each time a Dove signal is emitted. */
+  readonly onSignalEmitted?: (signal: DoveSignal) => void;
+
+  /** Optional persistent store for rising-edge state across restarts. */
+  readonly stateStore?: PluralityStateStore;
 }
 
 /** Internal state of an active Dove signal to suppress duplicate emissions. */
@@ -242,13 +249,23 @@ export class PluralityDoveEmitter {
   private readonly bus: EventBus;
   private readonly threshold: number;
   private readonly source: string;
+  private readonly onSignalEmitted?: (signal: DoveSignal) => void;
   private previousSnapshot: PopulationDiversitySnapshot | null = null;
   private activeSignals = new Map<DriftCategory, ActiveSignalState>();
+  private readonly stateStore?: PluralityStateStore;
 
   constructor(config: PluralityDoveEmitterConfig) {
     this.bus = config.bus;
     this.threshold = config.threshold ?? DEFAULT_PLURALITY_THRESHOLD;
     this.source = config.source ?? DEFAULT_SOURCE;
+    this.onSignalEmitted = config.onSignalEmitted;
+    this.stateStore = config.stateStore;
+
+    if (this.stateStore) {
+      const persisted = this.stateStore.load();
+      this.previousSnapshot = persisted.previousSnapshot;
+      this.activeSignals = new Map(persisted.activeSignals);
+    }
   }
 
   /**
@@ -304,10 +321,18 @@ export class PluralityDoveEmitter {
         correlationId: snapshot.snapshotId,
         trace,
       });
+
+      this.onSignalEmitted?.(signal);
     }
 
     this.activeSignals = evaluation.nextActiveSignals;
     this.previousSnapshot = snapshot;
+
+    this.stateStore?.save({
+      previousSnapshot: this.previousSnapshot,
+      activeSignals: this.activeSignals,
+    });
+
     return snapshot;
   }
 }

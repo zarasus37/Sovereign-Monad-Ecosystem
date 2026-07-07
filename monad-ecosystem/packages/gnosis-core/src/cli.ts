@@ -14,15 +14,21 @@
  * - `AGENT_REGISTRY_URL` — registry endpoint returning AgentProfile[] (registry provider)
  * - `AGENT_REGISTRY_TOKEN` — optional bearer token for the registry
  * - `AGENT_REGISTRY_TIMEOUT_MS` — registry request timeout in ms (default 10_000)
+ * - `PLURALITY_HEALTH_PORT` — port for the /health and /metrics HTTP server (default 8080)
+ * - `PLURALITY_STATE_PATH` — JSON file path to persist rising-edge state (default ./state/plurality-state.json)
+ * - `AGENT_REGISTRY_ADAPTER` — adapter for external REST API shapes (default `direct`)
+ * - `AGENT_REGISTRY_ADAPTER_PATH` — JSON path to the agent array inside the response (e.g. `data.agents`)
  */
 
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { sovereignBus } from '@sovereign/bus';
+import { sovereignBus, initKafkaBridgeFromEnv } from '@sovereign/bus';
 import type { AgentProfile } from '@sovereign/types';
 
 import { PluralityScheduler } from './plurality/scheduler.js';
-import { createAgentRegistryProvider } from './plurality/registry-provider.js';
+import { createAdapterRegistryProvider } from './plurality/registry-adapter.js';
+import { HealthServer } from './health-server.js';
+import { PluralityStateStore } from './plurality/state-store.js';
 
 const DEFAULT_INTERVAL_MS = 15 * 60 * 1000;
 const DEFAULT_THRESHOLD = 0.6;
@@ -80,15 +86,24 @@ function createPopulationProvider(): () => Promise<readonly AgentProfile[]> {
     }
 
     const timeoutMs = getEnvNumber('AGENT_REGISTRY_TIMEOUT_MS', 10_000);
+    const adapterName = process.env['AGENT_REGISTRY_ADAPTER'] ?? 'direct';
+    const adapterPath = process.env['AGENT_REGISTRY_ADAPTER_PATH'];
+
     console.log(
-      `[PluralityCLI] provider=registry url=${registryUrl} timeoutMs=${timeoutMs}`
+      `[PluralityCLI] provider=registry url=${registryUrl} timeoutMs=${timeoutMs} adapter=${adapterName}${adapterPath ? ` adapterPath=${adapterPath}` : ''}`
     );
 
-    return createAgentRegistryProvider({
-      url: registryUrl,
-      token: process.env['AGENT_REGISTRY_TOKEN'],
-      timeoutMs,
-    });
+    return createAdapterRegistryProvider(
+      {
+        url: registryUrl,
+        token: process.env['AGENT_REGISTRY_TOKEN'],
+        timeoutMs,
+      },
+      {
+        name: adapterName,
+        path: adapterPath,
+      }
+    );
   }
 
   if (providerType !== 'file') {
@@ -119,25 +134,53 @@ async function main(): Promise<void> {
   console.log(`[PluralityCLI] threshold=${threshold}`);
   console.log(`[PluralityCLI] source=${source}`);
 
+  const statePath = process.env['PLURALITY_STATE_PATH'] ?? './state/plurality-state.json';
+  const stateStore = new PluralityStateStore({ path: statePath });
+  console.log(`[PluralityCLI] statePath=${statePath}`);
+
   const scheduler = new PluralityScheduler({
     bus: sovereignBus,
     provider: createPopulationProvider(),
     intervalMs,
     threshold,
     source,
+    stateStore,
   });
+
+  const healthPort = getEnvNumber('PLURALITY_HEALTH_PORT', 8080);
+  const healthServer = new HealthServer({
+    port: healthPort,
+    getMetrics: () => scheduler.getMetrics(),
+  });
+  healthServer.start();
+
+  const kafkaBridge = initKafkaBridgeFromEnv();
+  const detachKafka = kafkaBridge ? await kafkaBridge.attach(sovereignBus) : null;
+  if (detachKafka) {
+    console.log('[PluralityCLI] Kafka bridge attached');
+  }
 
   scheduler.start();
 
   const shutdown = async (signal: string) => {
     console.log(`[PluralityCLI] Received ${signal}; shutting down...`);
     await scheduler.stop();
+    await healthServer.stop();
+    if (detachKafka) {
+      console.log('[PluralityCLI] Detaching Kafka bridge...');
+      await detachKafka();
+    }
     await sovereignBus.shutdown();
     process.exit(0);
   };
 
   process.on('SIGTERM', () => void shutdown('SIGTERM'));
   process.on('SIGINT', () => void shutdown('SIGINT'));
+
+  // Keep the process alive until an explicit shutdown signal. The scheduler
+  // interval is unref'd, so this timeout prevents the event loop from draining
+  // and exiting the container immediately.
+  setTimeout(() => undefined, 2 ** 31 - 1);
 }
 
 void main().catch((err) => {

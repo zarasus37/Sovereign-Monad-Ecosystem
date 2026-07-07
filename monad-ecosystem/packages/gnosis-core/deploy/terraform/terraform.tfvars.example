@@ -1,0 +1,23 @@
+# Copy to terraform.tfvars and fill in real values.
+
+region = "us-east-1"
+name   = "sovereign-agent-registry"
+
+# Container image published to ECR or Docker Hub.
+registry_image = "123456789012.dkr.ecr.us-east-1.amazonaws.com/sovereign-agent-registry:latest"
+
+# S3 source of truth for AgentProfile[].
+agents_s3_bucket = "sovereign-agent-registry-data"
+agents_s3_key     = "agents.json"
+
+# HTTPS certificate from ACM (must be in the same region).
+acm_certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/xxxx"
+
+# Optional: Secrets Manager ARN for bearer token.
+# auth_token_secret_arn = "arn:aws:secretsmanager:us-east-1:123456789012:secret:sovereign-registry-token-xxxx"
+
+# Optional scaling and sizing.
+desired_count      = 2
+enable_autoscaling = true
+autoscaling_min    = 2
+autoscaling_max    = 10

@@ -69,8 +69,8 @@ def run_pipeline_simulation(
 if __name__ == "__main__":
     WORKSPACE = Path("C:/Users/crisc/OneDrive - Southern Careers Institute/My Drive/The_Sovereign")
 
-    corpus_path = WORKSPACE / "logs/corpus/master_corpus_v5.2.jsonl"
-    model_path = WORKSPACE / "monad-ecosystem/packages/logoc/ml/ml_classifier_v7.json"
+    corpus_path = WORKSPACE / "logs/corpus/master_corpus_v5.10.jsonl"
+    model_path = WORKSPACE / "monad-ecosystem/packages/logoc/ml/ml_classifier_v13.json"
     spec_path = WORKSPACE / "monad-ecosystem/packages/logoc/spec/peirce_sign_classes.json"
 
     results = run_pipeline_simulation(

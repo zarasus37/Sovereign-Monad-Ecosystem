@@ -39,7 +39,7 @@ FEATURE_NAMES = [
     "convention", "possibility", "fact", "reason",
 ]
 
-_DEFAULT_MODEL_PATH = Path(__file__).parent.parent / "ml" / "ml_classifier_v7.json"
+_DEFAULT_MODEL_PATH = Path(__file__).parent.parent / "ml" / "ml_classifier_v13.json"
 _DEFAULT_SPEC_PATH = Path(__file__).parent.parent / "spec" / "peirce_sign_classes.json"
 
 
@@ -49,7 +49,7 @@ class LogocMLPipeline:
     Combines rubric classification with Naive Bayes ensemble confidence.
 
     Args:
-        model_path: Path to serialized NB model JSON (e.g. ml_classifier_v7.json)
+        model_path: Path to serialized NB model JSON (e.g. ml_classifier_v13.json)
         spec_path: Path to Peirce sign classes JSON (e.g. peirce_sign_classes.json)
     """
 
@@ -78,6 +78,7 @@ class LogocMLPipeline:
         with self.model_path.open("r", encoding="utf-8") as f:
             self.model_data = json.load(f)
 
+        self._normalize_model_data()
         self.class_map = self.model_data["class_map"]
         self.feature_names = self.model_data.get("feature_names", FEATURE_NAMES)
         self._load_nb_model()
@@ -86,6 +87,39 @@ class LogocMLPipeline:
     # ------------------------------------------------------------------
     # Model loading
     # ------------------------------------------------------------------
+
+    def _normalize_model_data(self) -> None:
+        """
+        Support both the legacy v7/v8 model format and the compact v13 format.
+
+        Legacy format: { version, class_map, feature_names, models: [lr, nb, stumps] }
+        v13 format:     { version, classes, feature_names, priors, feature_probs, ... }
+        """
+        if "models" in self.model_data:
+            return  # legacy format already normalized
+
+        if "feature_probs" not in self.model_data:
+            raise ValueError(
+                "Model file is missing both 'models' (legacy) and 'feature_probs' (v13) fields"
+            )
+
+        class_map = [int(c) for c in self.model_data["classes"]]
+        n_classes = len(class_map)
+        raw_to_idx = {raw: idx for idx, raw in enumerate(class_map)}
+        nb_model = {
+            "name": "naive_bayes",
+            "classes": list(range(n_classes)),
+            "priors": {
+                str(raw_to_idx[int(k)]): v
+                for k, v in self.model_data["priors"].items()
+            },
+            "probs": {
+                str(raw_to_idx[int(k)]): v
+                for k, v in self.model_data["feature_probs"].items()
+            },
+        }
+        self.model_data["class_map"] = class_map
+        self.model_data["models"] = [None, nb_model, None]
 
     def _load_nb_model(self) -> None:
         """Load Naive Bayes parameters from serialized model."""

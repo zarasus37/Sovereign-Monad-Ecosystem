@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sovereign-agent-registry
+  namespace: sovereign
+  labels:
+    app.kubernetes.io/name: sovereign-agent-registry
+    app.kubernetes.io/component: agent-registry
+data:
+  # URL where the init container downloads agents.json on each pod start.
+  # Replace with your real hosted agents.json URL (S3 presigned URL, raw GitHub, etc.).
+  agents-source-url: "https://example.com/agents.json"

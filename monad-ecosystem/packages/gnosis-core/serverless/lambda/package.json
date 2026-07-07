@@ -1,0 +1,21 @@
+{
+  "name": "sovereign-agent-registry-lambda",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sovereign/gnosis-core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.131",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}

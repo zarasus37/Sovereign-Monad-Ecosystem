@@ -3,7 +3,7 @@
 drift_cron.py — Standalone semiotic drift detection for LOGOC corpus.
 
 Runs periodically to:
-1. Load current corpus from master_corpus_v5.2.jsonl
+1. Load current corpus from master_corpus_v5.10.jsonl
 2. Compute distribution snapshot
 3. Compare against previous snapshot (if exists)
 4. Log drift observation if drift score > threshold
@@ -23,7 +23,7 @@ from datetime import datetime
 # ── Configuration ──────────────────────────────────────────────────────────────
 
 WORKSPACE = Path("C:/Users/crisc/OneDrive - Southern Careers Institute/My Drive/The_Sovereign")
-CORPUS_PATH = WORKSPACE / "logs/corpus/master_corpus_v5.2.jsonl"
+CORPUS_PATH = WORKSPACE / "logs/corpus/master_corpus_v5.10.jsonl"
 DRIFT_DIR = WORKSPACE / "logs/semiotic_drift"
 SNAPSHOT_DIR = DRIFT_DIR / "snapshots"
 ALERT_THRESHOLD = 0.28  # SYSTEMATIC_DRIFT

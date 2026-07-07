@@ -1,5 +1,6 @@
 # Package-local runtime artifacts
 logs/
+state/
 .smoke/
 .env
 .env.*
