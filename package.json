@@ -16,7 +16,8 @@
     "test:integration": "vitest run monad-ecosystem/tests/integration/",
     "typecheck": "pnpm --recursive tsc --noEmit",
     "check:numerics": "node scripts/check-numeric-drift.mjs",
-    "validate": "pnpm check:layout && pnpm check:numerics && pnpm typecheck && pnpm test:integration",
+    "check:sign-types": "node scripts/check-sign-types-drift.mjs",
+    "validate": "pnpm check:layout && pnpm check:numerics && pnpm check:sign-types && pnpm typecheck && pnpm test:integration",
     "lint": "pnpm --recursive lint",
     "clean": "pnpm --recursive clean && Remove-Item -Recurse -Force node_modules, .pnpm-store -ErrorAction SilentlyContinue",
     "prepare": "husky install || true"
