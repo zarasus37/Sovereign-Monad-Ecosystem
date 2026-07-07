@@ -467,7 +467,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^2.0.0
-        version: 2.1.9(@types/node@20.19.43)
+        version: 2.1.9(@edge-runtime/vm@3.2.0)(@types/node@20.19.43)
 
   monad-ecosystem/packages/hepar-core:
     dependencies:
@@ -678,7 +678,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: ^2.0.0
-        version: 2.1.9(@types/node@22.7.5)
+        version: 2.1.9(@edge-runtime/vm@3.2.0)(@types/node@22.7.5)
 
 packages:
 

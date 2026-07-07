@@ -120,3 +120,14 @@ gh.exe
 
 # Semiotic drift artifacts (post-cron, regenerated each cycle)
 logs/semiotic_drift/
+
+# Local Claude Code session data (plans, worktrees, settings) — never commit
+.claude/
+
+# Runtime test output written by the data-rail activator (regenerated each
+# run with a fresh activationId + timestamp). The activator writes to
+# cwd/logs/; the untracked monad-ecosystem/logs/ dir is the same output when
+# cwd is the monad-ecosystem workspace root. Other logs/ content (analytics,
+# audit reports, corpus) is committed source — do NOT ignore logs/ wholesale.
+logs/data-rail-activation.json
+monad-ecosystem/logs/
