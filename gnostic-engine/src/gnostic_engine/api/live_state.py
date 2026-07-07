@@ -78,6 +78,18 @@ class GnosisScore:
     # None on ambient scores; populated when the score is the payload of a
     # trace-required event (gnosis.quarantine.triggered / gnosis.blink.triggered).
     trace: dict[str, Any] | None = None
+    # ── Layer 7 enrichment (transparency metrics, NOT gates) ──────────────────
+    # Manifold-derived LOGOC tier + its Lane B weight, the TTCL constitution
+    # verdict for the single-domain live sign, and the engine momentum label.
+    # All None when the packet carried no narrative/flags to classify from.
+    logoc_tier: str | None = None
+    constitution_score: float | None = None
+    constitution_pass: bool | None = None
+    # True when the scored Sign is single-domain by design — a raw engine
+    # packet is constitutionally incomplete until composed upstream in TTCL,
+    # so a sub-0.72 score is the correct C1 penalty, not a scorer fault.
+    domain_incomplete: bool | None = None
+    momentum: str | None = None
 
     def to_dict(self, *, include_trace: bool = True) -> dict[str, Any]:
         d = asdict(self)

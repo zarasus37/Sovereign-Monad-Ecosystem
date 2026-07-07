@@ -79,7 +79,14 @@ export interface ConstitutionResult {
 
 const ALL_DOMAINS: readonly Domain[] = ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"];
 
-function round4(n: number): number {
+/**
+ * Round to 4 decimal places, round-half-up (NOT banker's round-half-to-even).
+ * Mirrors the Python `_round4 = floor(n * 10000 + 0.5) / 10000` exactly for the
+ * non-negative totals the scorer produces. Exported so the Layer 7.8
+ * cross-runtime parity CI can prove the rounding primitive agrees bit-for-bit
+ * and diverges from Python's default banker's `round()` on tie values.
+ */
+export function round4(n: number): number {
   return Math.round(n * 10000) / 10000;
 }
 

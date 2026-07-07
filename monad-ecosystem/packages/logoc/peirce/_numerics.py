@@ -18,7 +18,7 @@ MAX_DISTANCE: float = 0.5
 
 # ── Structured mirror (drift-check anchor; full canonical set) ───────────────
 TTCL_NUMERICS = {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "sections": {
     "gnostic_engine": {
       "description": "Volumetric 4D Gnostic Engine (Python). Focal-lock threshold, Lane B blend, Lane C magnitude kill-switch, expanding-spin gate, blink budget, and TVL normalization ceiling.",
@@ -129,49 +129,96 @@ TTCL_NUMERICS = {
       },
     },
     "ttcl_constitution": {
-      "description": "TTCL constitution scorer (Layer 6) — the single scoring path. Five weighted criteria; total >= threshold passes.",
+      "description": "TTCL constitution scorer (Layer 6) — the single scoring path. Five weighted criteria; total >= threshold passes. Canonical TS scorer in @sovereign/ttcl; Python mirror in gnostic_engine.constitution (Layer 7), parity-tested.",
       "constants": {
         "c1_tripartite_weight": {
           "value": 0.3,
           "unit": "weight",
           "source_doc": "theo-techno-cosmo/plex/CODE/preference_pair_generator_reference.py:13-44",
           "rationale": "Weight for the tripartite criterion: does the sign's compose ancestry include all three domains (Theology/Technology/Cosmology)? The heaviest weight — triadic completeness is the core axiom.",
-          "owner_runtime": ["ts"],
+          "owner_runtime": ["ts","python"],
         },
         "c2_logic_compression_weight": {
           "value": 0.25,
           "unit": "weight",
           "source_doc": "theo-techno-cosmo/plex/CODE/preference_pair_generator_reference.py:13-44",
           "rationale": "Weight for the logic-compression criterion: does the sign sit at HYBRID modality (compose output) vs a single mode? HYBRID=1.0, single-mode=0.5, PURE=0.0.",
-          "owner_runtime": ["ts"],
+          "owner_runtime": ["ts","python"],
         },
         "c3_source_aligned_weight": {
           "value": 0.25,
           "unit": "weight",
           "source_doc": "theo-techno-cosmo/plex/CODE/preference_pair_generator_reference.py:13-44",
           "rationale": "Weight for the source-aligned criterion: trace.source present AND peirce validates against the LOGOC manifold.",
-          "owner_runtime": ["ts"],
+          "owner_runtime": ["ts","python"],
         },
         "c4_epistemic_humility_weight": {
           "value": 0.1,
           "unit": "weight",
           "source_doc": "theo-techno-cosmo/plex/CODE/preference_pair_generator_reference.py:13-44",
           "rationale": "Weight for the epistemic-humility criterion: non-instinctual pragmatism band (FORMAL_THOUGHT=1.0, EXPERIENCE=0.5, INSTINCT=0.0).",
-          "owner_runtime": ["ts"],
+          "owner_runtime": ["ts","python"],
         },
         "c5_no_rlhf_signal_weight": {
           "value": 0.1,
           "unit": "weight",
           "source_doc": "theo-techno-cosmo/plex/CODE/preference_pair_generator_reference.py:13-44",
           "rationale": "Weight for the no-RLHF-signal criterion: caller-set flag (default true) that no reinforcement-learning-from-human-feedback signal is present.",
-          "owner_runtime": ["ts"],
+          "owner_runtime": ["ts","python"],
         },
         "pass_threshold": {
           "value": 0.72,
           "unit": "ratio",
           "source_doc": "theo-techno-cosmo/plex/CODE/preference_pair_generator_reference.py:44",
           "rationale": "Constitution pass threshold: weighted total at or above this passes. NOTE: docs/LOGOC_ASSESSMENT_HANDOFF.md:118 references a conflicting '25/25/25/15/10' weighting; the spec code (canonical) uses 30/25/25/10/10 at 0.72.",
-          "owner_runtime": ["ts"],
+          "owner_runtime": ["ts","python"],
+        },
+      },
+    },
+    "ttcl_logoc_tier": {
+      "description": "Layer 7 — manifold-derived LOGOC tier. Produced by neighbors() density around the classified sign_class_id (COHERENT/EMERGENT/DIVERGENT), then mapped to a Lane B intensity weight so the Stokes-Mueller Truth lane weights itself by the TTCL tier instead of treating it as a passthrough annotation. The tier density uses its own radius (tier_neighbor_radius), broader than the LOGOC classifier's tight local MAX_DISTANCE (0.5) — embeddedness is measured over a wider neighborhood than local sign adjacency.",
+      "constants": {
+        "tier_neighbor_radius": {
+          "value": 1,
+          "unit": "ratio",
+          "source_doc": "gnostic-engine/src/gnostic_engine/logoc_tier.py",
+          "rationale": "Composite-distance radius used to count neighbors for tier density. Deliberately broader than the logoc_manifold.max_distance (0.5, the classifier's tight local radius): at 0.5 every class is an island (≤3 neighbors), so the 0.20/0.08 density thresholds are unreachable and the tier is degenerate. At 1.0 the neighbor-count spread (3..23 → density 0.046..0.354) lands the thresholds cleanly: ~6 DIVERGENT / ~19 EMERGENT / ~41 COHERENT across the 66 classes. Calibration verified on the canonical manifold.",
+          "owner_runtime": ["python","ts"],
+        },
+        "coherent_density_threshold": {
+          "value": 0.2,
+          "unit": "ratio",
+          "source_doc": "gnostic-engine/src/gnostic_engine/logoc_tier.py",
+          "rationale": "Neighbor density (neighbors / 65) at or above this marks the class COHERENT — tightly embedded on the manifold, well-anchored, full Lane B weight. Density is measured via manifold.neighbors(class_id, tier_neighbor_radius).",
+          "owner_runtime": ["python","ts"],
+        },
+        "emergent_density_threshold": {
+          "value": 0.08,
+          "unit": "ratio",
+          "source_doc": "gnostic-engine/src/gnostic_engine/logoc_tier.py",
+          "rationale": "Neighbor density at or above this (but below coherent) marks the class EMERGENT — partially anchored, attenuated Lane B weight. Below this the class is DIVERGENT.",
+          "owner_runtime": ["python","ts"],
+        },
+        "coherent_lane_b_weight": {
+          "value": 1,
+          "unit": "weight",
+          "source_doc": "gnostic-engine/src/gnostic_engine/core/gnostic_engine.py",
+          "rationale": "Lane B intensity multiplier for a COHERENT classification. 1.0 preserves the full 0.5*raw + 0.5*vmask blend — a well-anchored sign may pin a high truth score.",
+          "owner_runtime": ["python"],
+        },
+        "emergent_lane_b_weight": {
+          "value": 0.7,
+          "unit": "weight",
+          "source_doc": "gnostic-engine/src/gnostic_engine/core/gnostic_engine.py",
+          "rationale": "Lane B intensity multiplier for an EMERGENT classification. Attenuates Truth intensity — a partially-anchored sign should not lock focus as strongly.",
+          "owner_runtime": ["python"],
+        },
+        "divergent_lane_b_weight": {
+          "value": 0.4,
+          "unit": "weight",
+          "source_doc": "gnostic-engine/src/gnostic_engine/core/gnostic_engine.py",
+          "rationale": "Lane B intensity multiplier for a DIVERGENT classification. Hard attenuation — an isolated/island classification should not drive a high truth score even if raw inputs look strong.",
+          "owner_runtime": ["python"],
         },
       },
     },

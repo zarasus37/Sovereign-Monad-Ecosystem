@@ -40,7 +40,15 @@ const TARGETS = [
   {
     relPath: 'gnostic-engine/src/gnostic_engine/generated/numerics.py',
     docName: 'Python Gnostic Engine',
-    flattenSections: ['gnostic_engine'],
+    // Layer 7: the Python constitution scorer (`gnostic_engine.constitution.scorer`)
+    // imports C1..C5 + the pass threshold as flat UPPER constants, and the
+    // logoc_tier producer imports the density thresholds + Lane B weights —
+    // so these two sections must be flattened into generated/numerics.py
+    // alongside the engine constants. (gnostic_engine is the engine's own set.)
+    // `ttcl_pps` is flattened so the orchestrator's TVL→PPS band mapping
+    // (sign_builder.build_sign_from_packet) reads the band values from the
+    // canonical numerics rather than hardcoding them.
+    flattenSections: ['gnostic_engine', 'ttcl_constitution', 'ttcl_logoc_tier', 'ttcl_pps'],
   },
   {
     relPath: 'monad-ecosystem/packages/logoc/peirce/_numerics.py',

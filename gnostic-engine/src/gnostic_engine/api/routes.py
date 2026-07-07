@@ -51,6 +51,7 @@ from .live_state import (
     PulfrichParallaxResult,
     DoveSignalRecord,
 )
+from ..orchestration import classify_and_tier, constitution_for_packet
 from ..persistence.replay import replay as build_replay_result
 from ..generated.numerics import (
     FOCAL_LOCK_THRESHOLD,
@@ -149,6 +150,40 @@ class GnosticPacketRequest(BaseModel):
     w_cong: bool = Field(default=True, description="Contagion bit — True = isolated")
     w_host_ratio: Optional[float] = Field(None, description="Fraction of infra affected (0–1)")
     w_user_ratio: Optional[float] = Field(None, description="Fraction of users affected (0–1)")
+    # ── Layer 7 enrichment inputs (optional; absent → legacy unweighted path) ──
+    narrative: Optional[str] = Field(
+        None,
+        description=(
+            "Free-text narrative for the heuristic Peirce classifier. When "
+            "present (alone or with semiotic_flags), the packet is classified "
+            "and assigned a manifold-derived logoc_tier that weights Lane B."
+        ),
+    )
+    semiotic_flags: Optional[dict[str, Any]] = Field(
+        None,
+        description=(
+            "Explicit Peirce semiotic flags (single_occurrence / rule_based / "
+            "similarity / causality / convention / possibility / fact / reason). "
+            "Overrides the narrative keyword path when present."
+        ),
+    )
+    boundary_adjacent: bool = Field(
+        False,
+        description=(
+            "Force BLINK for an adjacent-convergent packet even when the "
+            "structural read would otherwise FOCAL_LOCK, so repeated boundary "
+            "incursions accumulate in the blink registry and escalate to "
+            "QUARANTINE. The score-then-branch gate (Layer 7.5)."
+        ),
+    )
+    tvl: Optional[float] = Field(
+        None,
+        description=(
+            "Total value locked, used to map the live Sign to a PPS band "
+            "(static / heap / volatile) for the constitution scorer. None / "
+            "non-positive defaults to the heap band."
+        ),
+    )
     trace: Optional[dict[str, Any]] = Field(
         None,
         description=(
@@ -194,6 +229,12 @@ def process_packet(req: GnosticPacketRequest) -> dict[str, Any]:
     """
     window_start = datetime.now(timezone.utc).isoformat()
 
+    # Layer 7.6: classify + tier BEFORE process_packet. The tier weight
+    # threads into Lane B (Layer 7.5); classification is enrichment, not a
+    # gate — failures (no narrative/flags, ambiguity, unknown class) degrade
+    # to None and the packet still processes with the legacy unweighted path.
+    pre = classify_and_tier(req)
+
     packet_data: dict[str, Any] = {
         "lane_a": req.lane_a,
         "lane_b": req.lane_b,
@@ -202,10 +243,19 @@ def process_packet(req: GnosticPacketRequest) -> dict[str, Any]:
         "w_cong": req.w_cong,
         "w_host_ratio": req.w_host_ratio,
         "w_user_ratio": req.w_user_ratio,
+        # Thread the manifold-derived tier weight into Lane B (1.0 when absent
+        # preserves the legacy unweighted blend exactly).
+        "logoc_tier_weight": pre.logoc_tier_weight if pre else 1.0,
+        # boundary_adjacent diverts a FOCAL_LOCK-grade read to BLINK (Layer 7.5).
+        "boundary_adjacent": req.boundary_adjacent,
     }
 
     raw = _engine.process_packet(req.agent_id, packet_data)
     window_end = datetime.now(timezone.utc).isoformat()
+
+    # Layer 7.6: build + score the single-domain live Sign AFTER process_packet.
+    # Transparency metric, NOT a gate — never blocks the response.
+    constitution = constitution_for_packet(req, raw, pre.peirce if pre else None)
 
     # Derive Stokes coherence from engine internals
     sr: float = raw.get("structural_read", 0.0)
@@ -258,6 +308,11 @@ def process_packet(req: GnosticPacketRequest) -> dict[str, Any]:
         sequence_number=seq,
         verdict=verdict,
         trace=req.trace,
+        logoc_tier=pre.logoc_tier if pre else None,
+        constitution_score=constitution["constitution_score"] if constitution else None,
+        constitution_pass=constitution["constitution_pass"] if constitution else None,
+        domain_incomplete=constitution["domain_incomplete"] if constitution else None,
+        momentum=raw.get("momentum"),
     )
 
     score_event = engine_state.record_score(score)
