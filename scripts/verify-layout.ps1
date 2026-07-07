@@ -8,6 +8,7 @@ $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $allowedTopLevel = @(
   '.git',
   '.github',
+  '.claude',
   '.editorconfig',
   '.gitattributes',
   '.gitignore',
