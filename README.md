@@ -4,7 +4,6 @@
 
 > An economic system in which AI agents exist as genuine participants — not tools, not features, not labor — operating authentically within compressed constraint envelopes, decompressing into live, contextual, self-consistent action, and being compensated for that authentic operation.
 
-> **Phase 1 Complete** — Root foundation established (2026-06-01).  
 > This repository is the canonical working copy for one unified ecosystem. Any mirrored copies are downstream sync targets only.
 
 ---
@@ -178,6 +177,7 @@ New to the Sovereign Monad? Begin with the [Theo-Techno-Cosmo quick start guide]
 ## Next Phases (Roadmap)
 
 ### Structural cleanup — complete
+- Phase 1 Complete — Root foundation established (2026-06-01).✅
 - Phase 2: Rehome & prune `monad-ecosystem/agents/monad-mev/` ✅ (legacy archived; live x402 code moved to `monad-ecosystem/packages/x402-bridge/`)
 - Phase 3: Convert `gnostic-engine/` to a proper Python package and remove "Succor" references ✅
 - Phase 4: Polish `theo-techno-cosmo/` onboarding + wire P4 narrative-purpose detection into LOGOC ✅
@@ -185,9 +185,9 @@ New to the Sovereign Monad? Begin with the [Theo-Techno-Cosmo quick start guide]
 - Phase 6: Update MOF header + sync discipline ✅
 
 ### Recently completed (2026-07)
-- **Guardrail Charter v1.0** (effective 2026-07-06) — sovereignty-as-architectural-property criteria + legacy remediation discipline (PR #26)
+- **Guardrail Charter v1.0** (effective 2026-07-06) — sovereignty-as-architectural-property criteria + legacy remediation discipline (PR #26) 
 - **TTCL / compiler axis** — Layers 1–4 + Layer 8 (parity/CI) landed; Layer 5 MLIR compiler stack (`@sovereign/compiler`, L3 Semiotic + L2 Sign-Graph) merged (PR #25)
-- **x402 live smoke test — GREEN** (2026-07-10) — `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK (PR #30). The package remains `LEGACY_NON_SOVEREIGN`; sovereignty remediation is still open.
+- **x402 live smoke test — GREEN** (2026-07-10) — `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK (PR #30). The package remains `LEGACY_NON_SOVEREIGN`; sovereignty remediation is still open. 
 - **Steward Council corpus** — Christine de Pizan + Sor Juana Inés de la Cruz added (PR #31)
 
 ### Active frontier
