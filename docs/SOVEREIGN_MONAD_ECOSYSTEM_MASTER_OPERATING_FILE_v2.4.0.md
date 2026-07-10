@@ -2004,6 +2004,28 @@ Every update should include: date, version, changed section(s), exact new status
 
 # SECTION 19 — CHANGE LOG
 
+## v2.6.1 — July 10, 2026
+
+**Change Type:** Patch — x402 live smoke test GREEN; "blocked on funding" claims de-staled across the living docs
+
+**Summary:**
+
+- **x402 live smoke test GREEN (2026-07-10, PR #30):** end-to-end `eth_blockNumber` against `monad-mainnet` via the official `@quicknode/x402` SDK (block ~86.78M). The P2 settlement wallet `0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F` is funded with Base Sepolia ETH + USDC. The broken hand-rolled SIWX (EIP-4361) path and the dead `auth_jwt.js` helper were replaced by `auth_sdk.cjs`, which drives the official SDK; `live_smoke.py` stages 2/3 now delegate to it. This clears the funding blocker named as the "Next priority" in the v2.5.0 / v2.5.1 entries below.
+- **Steward Council / corpus (PR #31):** `docs/CHARTER.md` wording ("as co-architects") and `docs/STEWARD_COUNCIL.md` member #12 role refined; Christine de Pizan + Sor Juana Inés de la Cruz corpus added under `theo-techno-cosmo/THE COUNCILE/`.
+- **Docs de-staled (PR #32):** the "blocked on funding / 0 ETH / 0 USDC / capital-gated live frontier" language — now factually wrong — was corrected across `docs/PROJECT_STATE.md` (×3), `docs/PROJECT_STATE.json` (`known_follow_ups` + `last_validated` 2026-07-10), `docs/REPO_STRUCTURE_MAP.md`, the MOF status table row (§ x402 QuickNode Payment Bridge), `docs/LEGACY_COMPONENTS.md` §6, and the `x402-bridge/README.md` marker. The dated `docs/PROJECT_STATUS_2026-06-23.md` snapshot got a frozen-snapshot banner; its body is preserved as history.
+
+**Axiom alignment:**
+
+- **Axiom 11 (Constraint Validation):** documentation corrected to match actual repo state rather than retaining a stale "blocked" story. The `LEGACY_NON_SOVEREIGN` marker is **kept** (softened to name the real open items) and the `LEGACY_COMPONENTS.md` §6 status is `remediate (in progress)` — **not** flipped to `remediated` — because cost accounting, the failure/retry envelope, and agent-wiring are still genuinely unmet. Claiming otherwise would be the false sovereignty the charter's §3 exists to prevent.
+
+**State after update:**
+
+- Active master phase remains **Phase 1a**
+- **x402 live smoke test:** GREEN (2026-07-10, PR #30) — **supersedes the June "Next priority: run funded x402 live smoke test"** in the v2.5.0 / v2.5.1 entries below
+- **x402-bridge sovereignty:** remains `LEGACY_NON_SOVEREIGN`; real remediation (cost-accounting ledger, documented failure/retry envelope incl. the dead `X402_MAX_CONCURRENT` knob + `User-Agent` gap, and wiring to a sovereign-agent consumer — or an archive decision) tracked in `docs/LEGACY_COMPONENTS.md` §6 and `docs/PROJECT_STATE.json` `known_follow_ups`
+- **Next code priority:** Layer 5 L1 Provenance (unchanged from v2.6.0) — closes the MLIR compiler stack
+- No new blockers introduced; `pnpm check:layout` green; CI green on PRs #30/#31/#32
+
 ## v2.6.0 — July 7, 2026
 
 **Change Type:** Major — Guardrail Charter ratified + TTCL compiler stack (MLIR L3/L2) landed; tripartite grammar now the single source of truth every runtime derives behavior from
