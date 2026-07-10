@@ -177,14 +177,25 @@ New to the Sovereign Monad? Begin with the [Theo-Techno-Cosmo quick start guide]
 
 ## Next Phases (Roadmap)
 
+### Structural cleanup — complete
 - Phase 2: Rehome & prune `monad-ecosystem/agents/monad-mev/` ✅ (legacy archived; live x402 code moved to `monad-ecosystem/packages/x402-bridge/`)
 - Phase 3: Convert `gnostic-engine/` to a proper Python package and remove "Succor" references ✅
 - Phase 4: Polish `theo-techno-cosmo/` onboarding + wire P4 narrative-purpose detection into LOGOC ✅
 - Phase 5: Cross-layer integration & shared types ✅
 - Phase 6: Update MOF header + sync discipline ✅
-- **Active frontier:** Funded x402 live smoke test on Base Sepolia (blocked on wallet funding). Final structural cleanup of stale/duplicate artifacts is complete.
 
-See the Master Operating File in `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` for the full axioms, architecture, and execution instructions.
+### Recently completed (2026-07)
+- **Guardrail Charter v1.0** (effective 2026-07-06) — sovereignty-as-architectural-property criteria + legacy remediation discipline (PR #26)
+- **TTCL / compiler axis** — Layers 1–4 + Layer 8 (parity/CI) landed; Layer 5 MLIR compiler stack (`@sovereign/compiler`, L3 Semiotic + L2 Sign-Graph) merged (PR #25)
+- **x402 live smoke test — GREEN** (2026-07-10) — `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK (PR #30). The package remains `LEGACY_NON_SOVEREIGN`; sovereignty remediation is still open.
+- **Steward Council corpus** — Christine de Pizan + Sor Juana Inés de la Cruz added (PR #31)
+
+### Active frontier
+- **Code — Layer 5, L1 Provenance** (`@sovereign/compiler`): `Token` threading, `KeyCap` capability check, `encodeSign`/`decodeSign` lowering. Layers 6 (Scheduler) and 7 (Training Pipeline) are the unbuilt core after that.
+- **Sovereignty remediation (open):** `x402-bridge` stays `LEGACY_NON_SOVEREIGN` until the Charter §3 criteria are met — cost-accounting ledger, failure/retry envelope, sovereign-agent consumer. See `docs/LEGACY_COMPONENTS.md` §6 (deadline 2027-07-06).
+- **Capital-gated live frontiers (Layer 9):** funded Cardia activation, live Keys, public Data Rail — standing live work that awaits external capital/keys, not code.
+
+See the Master Operating File in `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` for the full axioms, architecture, and execution instructions, and `docs/PROJECT_STATE.md` for the live 9-layer status table.
 
 ---
 
