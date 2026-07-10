@@ -9,27 +9,29 @@ unblocked.
 Stages:
   1. Pre-flight (no creds required):
      - Check wallet ETH + USDC balance on Base Sepolia via public RPC
-     - Validate SIWX message construction
+     - Verify Node + the @quicknode/x402 SDK + .env key are available for 2/3
   2. SIWX enrollment (requires X402_EVM_PRIVATE_KEY):
-     - Sign SIWX message with EIP-191 personal_sign
-     - POST to /auth to obtain JWT
-     - Cache JWT to X402_JWT_TOKEN env
-  3. Live RPC (requires JWT or pay-per-request key):
-     - Send eth_blockNumber via credit-drawdown
-     - Send eth_blockNumber via pay-per-request (EIP-712 sign)
-     - Print block number + credit remaining if exposed
-  4. Cleanup:
-     - Re-export JWT for monad_price_fetcher.py pickup
+     - Delegate to auth_sdk.cjs, which SIWX-enrolls via the official
+       @quicknode/x402 SDK and caches the JWT to .env as X402_JWT_TOKEN.
+     - (The hand-rolled SIWX message this stage used to build was out of
+       EIP-4361 spec — Chain ID carried the CAIP-2 form 'eip155:84532'
+       instead of the bare integer 84532 — so /auth rejected it. The SDK
+       builds the message correctly.)
+  3. Live RPC (requires the wallet + SDK):
+     - One live eth_blockNumber on monad-mainnet via the SDK's client.fetch,
+       which handles the credit-drawdown PAYMENT-SIGNATURE header that a bare
+       'Authorization: Bearer' request does not.
+     - Print block number + credit remaining if exposed.
 
 Run modes:
-  python x402_live_smoke.py --preflight
-      Just check wallet balance + SIWX message validity (no signing).
+  python x402_live_smoke.py --stage preflight
+      Just check wallet balance + SDK readiness (no signing).
 
   python x402_live_smoke.py --stage siwx
-      Sign SIWX, exchange for JWT, save to .env.
+      SIWX-enroll via the SDK, cache JWT to .env.
 
   python x402_live_smoke.py --stage live
-      Use existing JWT to make one live RPC call (the actual smoke test).
+      One live RPC call (the actual smoke test).
 
   python x402_live_smoke.py
       All stages in sequence (skips stages whose creds are missing).
@@ -39,8 +41,8 @@ import argparse
 import asyncio
 import json
 import os
+import subprocess
 import sys
-import time
 from pathlib import Path
 from urllib import request as urlrequest, error as urlerror
 
@@ -50,6 +52,55 @@ if SCRIPTS_DIR.name == "x402_bridge":
     sys.path.insert(0, str(SCRIPTS_DIR.parent))  # src/
 else:
     sys.path.insert(0, str(SCRIPTS_DIR))
+
+# Load secrets (X402_EVM_PRIVATE_KEY, etc.) from a gitignored .env sitting
+# next to this script, so the private key never has to be passed on the
+# command line or pasted into a transcript. .env is covered by the root
+# .gitignore (.env / .env.*) and is never committed.
+try:
+    from dotenv import load_dotenv
+    load_dotenv(SCRIPTS_DIR / ".env")
+except ImportError:
+    pass
+
+# auth_sdk.cjs is the Node helper that drives the official @quicknode/x402 SDK
+# (SIWX enrollment + live credit-drawdown RPC). Stages 2/3 delegate to it.
+AUTH_SDK_HELPER = SCRIPTS_DIR / "auth_sdk.cjs"
+
+
+def _run_sdk(mode: str) -> dict:
+    """Run `node auth_sdk.cjs <mode>` with cwd = SCRIPTS_DIR (so the helper's
+    dotenv loads the gitignored .env sitting next to it) and return the parsed
+    JSON object it prints. Returns {"success": False, "error": ...} on failure.
+    """
+    if not AUTH_SDK_HELPER.exists():
+        return {"success": False, "error": f"helper missing: {AUTH_SDK_HELPER.name}"}
+    try:
+        proc = subprocess.run(
+            ["node", str(AUTH_SDK_HELPER), mode],
+            cwd=str(SCRIPTS_DIR),
+            capture_output=True, text=True, timeout=120,
+            env=os.environ.copy(),
+        )
+    except FileNotFoundError:
+        return {"success": False, "error": "node not found on PATH (install Node.js 18+)"}
+    except subprocess.TimeoutExpired:
+        return {"success": False, "error": "node helper timed out (>120s)"}
+    # The helper prints one JSON line on stdout; dotenv/SDK may print other
+    # lines, so parse the last stdout line that is valid JSON.
+    parsed = None
+    for line in reversed(proc.stdout.splitlines()):
+        line = line.strip()
+        if line.startswith("{"):
+            try:
+                parsed = json.loads(line)
+                break
+            except json.JSONDecodeError:
+                continue
+    if parsed is None:
+        tail = (proc.stdout or proc.stderr or "").strip().splitlines()[-3:]
+        return {"success": False, "error": "no JSON from helper", "stderr": "\n".join(tail)}
+    return parsed
 
 # Public Base Sepolia RPC for pre-flight balance checks
 BASE_SEPOLIA_PUBLIC_RPCS = [
@@ -155,27 +206,19 @@ async def stage_preflight() -> dict:
     if usdc_balance is None:
         print(f"  ⚠️  Could not fetch USDC balance")
 
-    # SIWX message construction
-    try:
-        from x402_bridge.quicknode import X402_BASE_URL, X402_PAYMENT_NETWORK
-        base_url = X402_BASE_URL
-        payment_network = X402_PAYMENT_NETWORK
-        nonce = f"{int(time.time() * 1000)}"
-        issued_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-        message = (
-            f"{base_url} wants you to sign in with your Ethereum account:\n"
-            f"{addr}\n\n"
-            f"Sign in to QuickNode x402.\n\n"
-            f"URI: {base_url}\n"
-            f"Version: 1\n"
-            f"Chain ID: {payment_network}\n"
-            f"Nonce: {nonce}\n"
-            f"Issued At: {issued_at}"
-        )
-        print(f"  ✅ SIWX message constructible ({len(message)} chars)")
-    except Exception as e:
-        print(f"  ❌ SIWX construction failed: {e}")
-        return {"valid": False}
+    # SDK availability — the real prerequisite for stages 2/3 (the hand-rolled
+    # SIWX path was out of spec; auth_sdk.cjs + the @quicknode/x402 SDK is the
+    # only working auth path).
+    if not AUTH_SDK_HELPER.exists():
+        print(f"  ⚠️  auth_sdk.cjs missing at {AUTH_SDK_HELPER} — stages 2/3 will fail")
+    else:
+        probe = _run_sdk("probe")
+        if probe.get("success"):
+            key = "set" if probe.get("private_key_in_env") else "NOT set"
+            print(f"  ✅ Node + @quicknode/x402 SDK available (stages 2/3 ready); private key in env: {key}")
+        else:
+            print(f"  ⚠️  SDK not resolvable: {probe.get('error', '')}")
+            print(f"     See README 'One-time SDK install' / set X402_SDK_NODE_PATH")
 
     # Funding gate
     if usdc_balance is not None and usdc_balance < 0.5:
@@ -186,144 +229,63 @@ async def stage_preflight() -> dict:
         "valid": True,
         "eth_balance": eth_balance,
         "usdc_balance": usdc_balance,
-        "siwx_message": message,
     }
 
 
 # ── Stage 2: SIWX enrollment ────────────────────────────────────────────────
 
 async def stage_siwx() -> dict:
-    """Sign SIWX message, POST to /auth, save JWT to .env."""
-    pk = os.environ.get("X402_EVM_PRIVATE_KEY")
-    addr = os.environ.get("X402_EVM_PRIVATE_KEY_ADDRESS")
-    if not pk:
-        print("\n[siwx] X402_EVM_PRIVATE_KEY not set — skipping")
+    """SIWX-enroll via the @quicknode/x402 SDK (auth_sdk.cjs) and cache the JWT.
+
+    The SDK builds the EIP-4361 SIWX message correctly. The hand-rolled message
+    this stage used to build was out of spec — the Chain ID field carried the
+    CAIP-2 form 'eip155:84532' instead of the bare integer 84532, and the domain
+    line carried the 'https://' scheme — so /auth rejected it with 'Failed to
+    parse SIWE message'. Delegating to the SDK is the only working path.
+    """
+    if not os.environ.get("X402_EVM_PRIVATE_KEY") and not (SCRIPTS_DIR / ".env").exists():
+        print("\n[siwx] No X402_EVM_PRIVATE_KEY in env and no .env — skipping")
         return {"skipped": True}
 
-    print(f"\n[siwx] Signing SIWX message for {addr}...")
-
-    try:
-        from eth_account import Account
-        from eth_account.messages import encode_defunct
-    except ImportError:
-        print("  ❌ eth-account not installed. Run: pip install eth-account")
-        return {"error": "eth-account missing"}
-
-    try:
-        import httpx
-    except ImportError:
-        print("  ❌ httpx not installed. Run: pip install httpx")
-        return {"error": "httpx missing"}
-
-    from x402_bridge.quicknode import X402_BASE_URL, X402_PAYMENT_NETWORK
-    base_url = X402_BASE_URL
-    payment_network = X402_PAYMENT_NETWORK
-
-    nonce = f"{int(time.time() * 1000)}"
-    issued_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-    message_text = (
-        f"{base_url} wants you to sign in with your Ethereum account:\n"
-        f"{addr}\n\n"
-        f"Sign in to QuickNode x402.\n\n"
-        f"URI: {base_url}\n"
-        f"Version: 1\n"
-        f"Chain ID: {payment_network}\n"
-        f"Nonce: {nonce}\n"
-        f"Issued At: {issued_at}"
-    )
-
-    # Sign with EIP-191 personal_sign
-    signable = encode_defunct(text=message_text)
-    signed = Account.sign_message(signable, pk)
-    signature = signed.signature.hex()
-    if not signature.startswith("0x"):
-        signature = "0x" + signature
-
-    # POST to /auth
-    print(f"  POST {base_url}/auth ...")
-    async with httpx.AsyncClient(timeout=30.0) as c:
-        r = await c.post(
-            f"{base_url}/auth",
-            json={
-                "address": addr,
-                "signature": signature,
-                "message": message_text,
-                "network": payment_network,
-            }
-        )
-        print(f"  Status: {r.status_code}")
-        body = r.text
-        if r.status_code == 200:
-            data = r.json()
-            jwt = data.get("jwt") or data.get("token")
-            if jwt:
-                print(f"  ✅ JWT obtained ({len(jwt)} chars)")
-                # Save to .env
-                env_path = SCRIPTS_DIR / ".env"
-                env_line = f"X402_JWT_TOKEN={jwt}\n"
-                if env_path.exists():
-                    content = env_path.read_text()
-                    if "X402_JWT_TOKEN=" in content:
-                        content = "\n".join(
-                            line for line in content.splitlines()
-                            if not line.startswith("X402_JWT_TOKEN=")
-                        )
-                    content += env_line
-                    env_path.write_text(content)
-                    print(f"  ✅ JWT cached in {env_path.name}")
-                else:
-                    env_path.write_text(f"X402_JWT_TOKEN={jwt}\n")
-                    print(f"  ✅ JWT cached in new {env_path.name}")
-                os.environ["X402_JWT_TOKEN"] = jwt
-                return {"jwt": jwt[:30] + "...", "status": 200}
-            else:
-                print(f"  ⚠️  200 OK but no jwt field in body")
-                print(f"  body: {body[:500]}")
-                return {"status": 200, "body": body[:500]}
-        else:
-            print(f"  ❌ Auth failed: {r.status_code}")
-            print(f"  body: {body[:500]}")
-            return {"status": r.status_code, "body": body[:500]}
+    print("\n[siwx] SIWX-enrolling via @quicknode/x402 SDK (auth_sdk.cjs)...")
+    result = _run_sdk("auth")
+    if not result or not result.get("success"):
+        print(f"  ❌ SIWX failed: {result.get('error') if result else 'no output'}")
+        return {"error": result.get("error") if result else "no output"}
+    auth = result.get("auth", {})
+    print(f"  ✅ JWT acquired ({auth.get('jwt_chars')} chars), accountId={auth.get('accountId')}")
+    if auth.get("jwt_cached"):
+        print("  ✅ JWT cached to .env as X402_JWT_TOKEN")
+    return {"jwt_acquired": True, "accountId": auth.get("accountId")}
 
 
 # ── Stage 3: Live RPC ───────────────────────────────────────────────────────
 
 async def stage_live() -> dict:
-    """Make one live eth_blockNumber call via credit-drawdown."""
-    import httpx
-    from x402_bridge import quicknode as x402
+    """One live eth_blockNumber on monad-mainnet via the SDK's client.fetch.
 
-    jwt = os.environ.get("X402_JWT_TOKEN")
-    if not jwt:
-        print("\n[live] X402_JWT_TOKEN not set — skipping live RPC")
-        return {"skipped": True}
-
-    print(f"\n[live] Sending eth_blockNumber via credit-drawdown...")
-    url = f"{x402.X402_BASE_URL}/{x402.X402_TARGET_NETWORK}"
-    payload = {"jsonrpc": "2.0", "id": 1, "method": "eth_blockNumber", "params": []}
-
-    async with httpx.AsyncClient(timeout=30.0) as c:
-        r = await c.post(
-            url,
-            json=payload,
-            headers={
-                "Authorization": f"Bearer {jwt}",
-                "Content-Type": "application/json",
-            }
-        )
-        print(f"  Status: {r.status_code}")
-        if r.status_code == 200:
-            data = r.json()
-            block = int(data.get("result", "0x0"), 16)
-            print(f"  ✅ eth_blockNumber: {block}")
-            # Look for credit header
-            credits = r.headers.get("X-Credits-Remaining") or r.headers.get("X-RateLimit-Remaining")
-            if credits:
-                print(f"  Credits remaining: {credits}")
-            return {"status": 200, "block": block, "credits": credits}
-        else:
-            print(f"  body: {r.text[:500]}")
-            return {"status": r.status_code, "body": r.text[:500]}
+    The SDK adds the credit-drawdown PAYMENT-SIGNATURE header that a bare
+    'Authorization: Bearer' request does not, and runs the 402 -> sign ->
+    retry cycle internally. With the wallet funded with Base Sepolia USDC the
+    server verifies the payment and returns the block.
+    """
+    print("\n[live] Sending eth_blockNumber via credit-drawdown (SDK client.fetch)...")
+    result = _run_sdk("live")
+    if not result or not result.get("success"):
+        err = result.get("error") if result else "no output"
+        print(f"  ❌ Live RPC failed: {err}")
+        live = (result or {}).get("live", {})
+        if live.get("raw"):
+            print(f"  body: {live['raw'][:300]}")
+        return {"error": err}
+    live = result.get("live", {})
+    block = live.get("block_number")
+    block_hex = live.get("block_hex") or ""
+    print(f"  ✅ eth_blockNumber: {block}  ({block_hex})")
+    credits = live.get("credits_remaining")
+    if credits:
+        print(f"  Credits remaining: {credits}")
+    return {"block": block, "credits": credits}
 
 
 # ── Main ────────────────────────────────────────────────────────────────────

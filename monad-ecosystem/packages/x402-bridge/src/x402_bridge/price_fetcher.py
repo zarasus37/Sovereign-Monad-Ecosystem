@@ -13,9 +13,10 @@
 #   Set X402_JWT_TOKEN to use x402 as the primary provider.
 #
 #   To get a JWT token:
-#     1. Install Node.js + npm:  npm install -g @quicknode/x402
-#     2. Run:  node src/x402_bridge/auth_jwt.js   (in this package)
-#     3. Copy the printed JWT to your .env:  X402_JWT_TOKEN=eyJ...
+#     1. Install the SDK (outside the repo):  npm install @quicknode/x402 dotenv
+#        then set X402_SDK_NODE_PATH to that node_modules dir (npm can't install
+#        inside this pnpm workspace — see README "One-time SDK install").
+#     2. Run:  node src/x402_bridge/auth_sdk.cjs auth   (caches JWT to .env)
 #
 # Resolves ADR-001 (ISSUE-003): rotate on 429, no single point of failure.
 
@@ -257,7 +258,7 @@ async def _smoke_test():
         logger.info("x402: ENABLED (X402_JWT_TOKEN detected)")
     else:
         logger.info("x402: NOT configured. Set X402_JWT_TOKEN to enable QuickNode x402.")
-        logger.info("  To get a JWT:  npm install -g @quicknode/x402  &&  node src/x402_bridge/auth_jwt.js")
+        logger.info("  To get a JWT:  node src/x402_bridge/auth_sdk.cjs auth  (uses the @quicknode/x402 SDK; see README)")
 
     providers = _active_providers()
     logger.info(f"Provider pool: {len(providers)} active")
