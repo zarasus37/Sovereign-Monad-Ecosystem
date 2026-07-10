@@ -86,7 +86,9 @@ Your wallet needs USDC on the **payment network** (Base Sepolia for dev), not on
 **Option B: Bridge from Base Mainnet**
 - Use the official Base bridge
 
-**Active settlement wallet (P2):** `0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F` (Base Sepolia, EIP-55 valid). This address currently has **0 ETH / 0 USDC** as of the latest preflight check, so live enrollment is blocked until it is funded with ≥0.5 USDC + 0.01 ETH for gas.
+**Active settlement wallet (P2):** `0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F` (Base Sepolia, EIP-55 valid). Fund it with **Base Sepolia USDC** (the credit-drawdown server verifies each per-request payment against USDC — see "Verified Live (2026-07-10)" below) plus a little Base Sepolia ETH for gas. Get both from the Coinbase faucet: https://faucet.coinbase.com/.
+
+**Chain trap — read before funding.** "Ethereum Sepolia" (chain `11155111`), "Base Sepolia" (chain `84532` — the one x402 charges on), and "Base mainnet" (chain `8453`) are three *different* ledgers. The wallet address is identical on all three, but balances are per-chain. Funding the wrong one (e.g. a generic Sepolia faucet that dispenses Ethereum Sepolia ETH) will **not** show up on Base Sepolia and will **not** unblock the smoke test. At the faucet, select **Base Sepolia** as the destination network.
 
 ### 5. Run the Test
 
@@ -248,9 +250,8 @@ python -c "from x402_bridge.quicknode import is_configured; print(is_configured(
 # Install signing library for auto-refresh
 pip install eth-account
 
-# Or manually refresh JWT
-node auth_jwt.js --json
-export X402_JWT_TOKEN=<output>
+# Or manually refresh JWT (caches it to .env as X402_JWT_TOKEN)
+node auth_sdk.cjs auth
 ```
 
 ### "402 Payment Required" with credit-drawdown
@@ -301,7 +302,7 @@ export MONAD_RPC_PRIMARY=https://rpc1.monad.xyz
 |------|---------|
 | `src/x402_bridge/quicknode.py` | Python x402 client (credit-drawdown + pay-per-request) |
 | `src/x402_bridge/price_fetcher.py` | Price fetcher with x402 as primary provider |
-| `src/x402_bridge/auth_jwt.js` | Node.js helper for JWT (optional, fallback only) |
+| `src/x402_bridge/auth_sdk.cjs` | Node.js helper (official `@quicknode/x402` SDK) for SIWX auth + live credit-drawdown RPC; used by `live_smoke.py` stages 2/3 |
 | `tests/test_x402_auth.py` | Test suite for x402 module validation (offline) |
 | `src/x402_bridge/live_smoke.py` | End-to-end live verification (3 staged commands) |
 | `.env.example` | Environment variable template |
@@ -339,28 +340,35 @@ Output:
 
 ### Stage 2: SIWX enrollment (requires X402_EVM_PRIVATE_KEY)
 
+Put the key in the gitignored `.env` next to `auth_sdk.cjs` (never commit, never paste in chat):
+
+```
+X402_EVM_PRIVATE_KEY_ADDRESS=0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F
+X402_EVM_PRIVATE_KEY=0x...
+X402_PAYMENT_NETWORK=eip155:84532
+X402_PAYMENT_MODEL=credit-drawdown
+```
+
+Then (one-time: install the SDK — see "One-time SDK install" below; set `X402_SDK_NODE_PATH` if you installed it outside the repo):
+
 ```bash
-# Set the key in your shell only — never commit, never paste in chat
-export X402_EVM_PRIVATE_KEY=0x...
-export X402_EVM_PRIVATE_KEY_ADDRESS=0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F
 python x402_bridge.live_smoke --stage siwx
 ```
 
 Output:
-- EIP-191 personal_sign over the SIWX message
-- POST to `https://x402.quicknode.com/auth` with signed message
+- SIWX-enroll via the official `@quicknode/x402` SDK. The hand-rolled SIWX message this script used to build was out of EIP-4361 spec (`Chain ID: eip155:84532` instead of the integer `84532`; domain `https://x402.quicknode.com` instead of `x402.quicknode.com`), so `/auth` rejected it with `"Failed to parse SIWE message"`. The SDK builds the message correctly.
 - JWT cached to `.env` as `X402_JWT_TOKEN`
 
-### Stage 3: Live RPC (requires JWT)
+### Stage 3: Live RPC (requires the wallet + SDK)
 
 ```bash
 python x402_bridge.live_smoke --stage live
 ```
 
 Output:
-- One `eth_blockNumber` call via credit-drawdown
+- One `eth_blockNumber` on `monad-mainnet` via the SDK's `client.fetch`, which adds the credit-drawdown `PAYMENT-SIGNATURE` header and runs the 402 → sign → retry cycle. A bare `Authorization: Bearer` request is insufficient (returns `402 "PAYMENT-SIGNATURE header is required"`).
 - Block height reported
-- `X-Credits-Remaining` header captured if exposed
+- `X-Credits-Remaining` header captured if exposed (often not — the server does not always return it)
 
 ### Verified Live (2026-06-22)
 
@@ -393,6 +401,36 @@ The endpoint `https://x402.quicknode.com/monad-mainnet` returns HTTP 402 with th
 - **credit-drawdown**: SIWX auth required (not exposed in 402 body); 1M credits/month free tier
 
 Cloudflare 1010 WAF blocks bare `urllib` requests — must use `httpx` with proper `User-Agent: x402-bridge/1.0` header (already handled by `x402_bridge.quicknode.py`).
+
+### Verified Live (2026-07-10) — end-to-end green
+
+With the wallet funded on **Base Sepolia** (0.0005 ETH + 3.00 USDC), `python x402_bridge.live_smoke --stage all` runs all three stages green through the Python entrypoint:
+
+```
+[preflight] ✅ ETH 0.000500  ✅ USDC 3.00  ✅ Node + @quicknode/x402 SDK ready
+[siwx]      ✅ JWT acquired, cached to .env
+[live]      ✅ eth_blockNumber: 86,779,988   (monad-mainnet)
+```
+
+Corrections to the original (2026-06-22) write-up above:
+
+- **credit-drawdown is NOT signature-only.** Despite the "1M free credits, no USDC" pitch, the SDK's `client.fetch` sends `Bearer` → receives 402 → signs a per-request payment authorization → retries, and the server verifies that payment against **Base Sepolia USDC**. With 0 USDC the retry returns `402 "Unexpected error verifying payment"`. **USDC on Base Sepolia is required.**
+- **The hand-rolled SIWX message (`live_smoke.py` / `quicknode.py`) is out of EIP-4361 spec** and is rejected by `/auth`. Stages 2/3 now delegate to the official `@quicknode/x402` SDK via `auth_sdk.cjs`.
+- **`auth_jwt.js` was removed.** It used shell-style `#` comment lines in a `.js` (a `SyntaxError`) and CommonJS `require()` under a root `"type":"module"` `package.json`, so it never executed. `auth_sdk.cjs` (`.cjs` forces CommonJS) replaces it.
+
+### One-time SDK install
+
+`npm install` inside this repo fails with `EUNSUPPORTEDPROTOCOL "workspace:*"` (npm walks up to the pnpm root `package.json`). Install the SDK outside the repo and point the helper at it:
+
+```bash
+mkdir -p "$LOCALAPPDATA/Temp/x402sdk"
+cd "$LOCALAPPDATA/Temp/x402sdk"
+npm install @quicknode/x402 dotenv
+export X402_SDK_NODE_PATH="$LOCALAPPDATA/Temp/x402sdk/node_modules"
+python x402_bridge.live_smoke --stage all
+```
+
+The wallet private key is read from the gitignored `.env` next to `auth_sdk.cjs`; it is never passed on the command line or pasted into a transcript.
 
 ---
 

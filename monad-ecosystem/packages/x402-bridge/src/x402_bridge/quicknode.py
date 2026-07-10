@@ -253,9 +253,17 @@ async def _refresh_jwt(max_attempts: int = 2) -> bool:
 async def _auth_via_http() -> bool:
     """
     Authenticate with x402 /auth endpoint using SIWX signature.
-    
+
     This is the native Python equivalent of the Node.js createQuicknodeX402Client
     preAuth flow. Requires eth-account for message signing.
+
+    KNOWN-BROKEN: the SIWX message built below is out of EIP-4361 spec (the Chain
+    ID field carries the CAIP-2 form 'eip155:84532' instead of the bare integer
+    84532, and the domain line carries the 'https://' scheme), so /auth rejects
+    it with 'Failed to parse SIWE message'. The working auth path is
+    _refresh_jwt_via_node (auth_sdk.cjs + the official @quicknode/x402 SDK),
+    which _authenticate falls back to. Left in place to minimize churn; rebuild
+    the message to spec or remove this if the Python-only auth path is revived.
     """
     if not _eth_account or not X402_EVM_PRIVATE_KEY:
         return False
@@ -312,29 +320,43 @@ async def _auth_via_http() -> bool:
 
 
 async def _refresh_jwt_via_node(max_attempts: int = 2) -> bool:
-    """Fallback: spawn Node.js get_x402_jwt.js helper to refresh JWT."""
+    """Fallback: spawn the Node.js auth_sdk.cjs helper (official @quicknode/x402
+    SDK) to refresh the JWT. The hand-rolled _auth_via_http SIWX above is out of
+    EIP-4361 spec, so this SDK path is the working one. auth_sdk.cjs is run with
+    cwd = this dir so its dotenv loads the gitignored .env with the private key.
+    """
     import asyncio
     from pathlib import Path
 
     this_dir = Path(__file__).parent
-    script_path = this_dir / "auth_jwt.js"
+    script_path = this_dir / "auth_sdk.cjs"
     if not script_path.exists():
         return False
 
     for attempt in range(1, max_attempts + 1):
         try:
             proc = await asyncio.create_subprocess_exec(
-                "node", str(script_path), "--json",
+                "node", str(script_path), "auth",
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE,
+                cwd=str(this_dir),
                 env=os.environ.copy(),
             )
-            stdout, _ = await asyncio.wait_for(proc.communicate(), timeout=30)
-            data = _json.loads(stdout.decode("utf-8", errors="replace"))
-            if data.get("success") and data.get("token"):
+            stdout, _ = await asyncio.wait_for(proc.communicate(), timeout=60)
+            data = None
+            for line in reversed(stdout.decode("utf-8", errors="replace").splitlines()):
+                line = line.strip()
+                if line.startswith("{"):
+                    try:
+                        data = _json.loads(line)
+                        break
+                    except Exception:
+                        continue
+            jwt = (data.get("auth") or {}).get("jwt") if isinstance(data, dict) else None
+            if data and data.get("success") and jwt:
                 global X402_JWT_TOKEN
-                X402_JWT_TOKEN = data["token"]
-                logger.info("x402 JWT refreshed via Node.js helper.")
+                X402_JWT_TOKEN = jwt
+                logger.info("x402 JWT refreshed via @quicknode/x402 SDK (auth_sdk.cjs).")
                 return True
         except Exception:
             pass
