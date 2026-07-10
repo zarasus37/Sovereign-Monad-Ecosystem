@@ -26,8 +26,7 @@ The following members constitute the initial Steward Council:
 | 9 | **Cyrus the Great** | Tolerant plural governance, layered sovereignty, founder-as-steward model |
 | 10 | **King Solomon** | Judgment under ambiguity, wisdom as a structural resource |
 | 11 | **Niccolò Machiavelli** | Power-as-it-is, institutional realism, anti-romantic governance analysis |
-| 12 | **Cristobal Colon** | Founder / live human contributor. Distinct from the historical explorer; participates as the originating builder with the same charter-bound constraints as all other council members |
-
+| 12 | **Cristobal Colon** | Unified perspective, universal consistency at all layers of reality, architect
 ---
 
 ## Membership Principles
