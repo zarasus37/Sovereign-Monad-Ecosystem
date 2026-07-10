@@ -23,7 +23,7 @@
     "frontend_build": "passing"
   },
   "known_follow_ups": [
-    "Run funded x402 live smoke test on Base Sepolia (active next; preflight confirmed 0 ETH / 0 USDC on P2 settlement wallet)"
+    "x402-bridge sovereignty remediation: cost-accounting ledger, documented failure/retry envelope (fix dead X402_MAX_CONCURRENT knob + User-Agent gap), and wiring to a sovereign-agent consumer (or archive). Smoke test GREEN 2026-07-10 (PR #30, eth_blockNumber on monad-mainnet); package remains LEGACY_NON_SOVEREIGN per docs/LEGACY_COMPONENTS.md §6."
   ],
-  "last_validated": "2026-06-23"
+  "last_validated": "2026-07-10"
 }

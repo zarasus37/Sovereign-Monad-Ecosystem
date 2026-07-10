@@ -1,5 +1,7 @@
 # Project Status Report — 2026-06-23
 
+> **Historical snapshot — frozen as of 2026-06-23.** The x402 claims below ("0 ETH / 0 USDC", "blocked on funding") were true on this date and have since been cleared: the live smoke test went GREEN on 2026-07-10 (PR #30, `eth_blockNumber` on `monad-mainnet`). For the current state, read `docs/PROJECT_STATE.md` (the living state file) and `docs/LEGACY_COMPONENTS.md` §6 (sovereignty remediation status). Do not edit the body of this snapshot.
+
 **Date:** 2026-06-23  
 **Branch:** main  
 **Last Commit:** `953a472` — chore(theo-techno-cosmo): archive misplaced research code (P11)  

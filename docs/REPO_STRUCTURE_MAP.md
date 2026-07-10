@@ -17,7 +17,7 @@ These are the canonical working surfaces for the ecosystem:
     - `hepar-core`, `gnosis-evaluator`, `risk-engine`, `data-rail-core` — organ packages
     - **`ttcl`** — Theo-Techno-Cosmological Language types (Peirce-aware `Sign<M,T>` with compile-time type gates)
     - **`logoc`** — LOGOC (Logico-Ontological Gnostic Operations Corpus): Peirce 66-class manifold + deterministic classifier v1
-    - `x402-bridge` — QuickNode payment-protocol client (live smoke test blocked on funding)
+    - `x402-bridge` — QuickNode payment-protocol client (live smoke test GREEN 2026-07-10; `LEGACY_NON_SOVEREIGN` — sovereignty remediation open, see `docs/LEGACY_COMPONENTS.md` §6)
   - contracts
   - scripts
   - tests
