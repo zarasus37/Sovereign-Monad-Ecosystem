@@ -139,8 +139,12 @@ If no owner takes this on by the deadline, archive the MEV‑specific artifacts 
 **Why it is non‑sovereign:**
 
 - External dependency bridge, not a sovereign agent.
-- Smoke test is blocked on funding, so operational cost accounting and failure boundaries are not yet validated.
-- No documented constraint envelope or on‑chain identity for the bridge itself.
+- No operational cost accounting: there is no drawdown ledger or per-call cost metering — the only credit capture is a single best-effort `X-Credits-Remaining` header read in the Node helper, surfaced once to stdout and discarded.
+- Failure/retry envelope is undocumented and partially absent: the x402 path does not retry on 429/503/timeout (it returns `None` and hands off to the provider-pool fallback); the `X402_MAX_CONCURRENT` env knob is read but unused (real limits are hard-coded httpx 20/40); no `User-Agent` is sent on the RPC path (contradicting the package's own Cloudflare-1010 guidance).
+- Orphaned: no package outside `x402-bridge` imports it — only its own `price_fetcher.py` consumes it, so no sovereign agent's constraint envelope is tied to the bridge.
+- No on-chain identity or constraint envelope for the bridge itself.
+
+**Status:** `remediate` (in progress) — the live smoke test is GREEN (2026-07-10, PR #30, `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK), so the funding blocker named in earlier versions of this entry is cleared. The §3 criteria above remain unmet, so the `LEGACY_NON_SOVEREIGN` marker stays until cost accounting, the failure envelope, and a sovereign-agent consumer are delivered (or the package is archived).
 
 **Chosen path:** **Remediate or archive**
 

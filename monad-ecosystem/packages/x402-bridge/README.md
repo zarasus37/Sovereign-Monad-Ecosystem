@@ -1,6 +1,6 @@
 # x402 QuickNode Integration Guide
 
-> **LEGACY_NON_SOVEREIGN** — This package is a pre‑charter external bridge and does not currently satisfy `docs/CHARTER.md` §3 (sovereignty as an architectural property). Live smoke tests are blocked on funding, and cost accounting / failure boundaries are not yet validated. See `docs/LEGACY_COMPONENTS.md` for the remediation plan and deadline.
+> **LEGACY_NON_SOVEREIGN** — This package is a pre‑charter external bridge and does not currently satisfy `docs/CHARTER.md` §3 (sovereignty as an architectural property). The live smoke test is GREEN (2026‑07‑10, `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK, PR #30) — but sovereignty remediation is still open: no cost-accounting ledger, an undocumented failure/retry envelope (the `X402_MAX_CONCURRENT` knob is read but unused; no `User-Agent` on the RPC path), and no sovereign-agent consumer (the package is currently an orphan — only its own `price_fetcher.py` imports it). See `docs/LEGACY_COMPONENTS.md` §6 for the remediation plan and deadline.
 
 ## Overview
 
