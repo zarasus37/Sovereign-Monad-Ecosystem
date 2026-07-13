@@ -8,8 +8,12 @@
  *   - L3 SemioticDialect   — loads wheels, signs, constitutions; resolves all
  *                            asset references (the loader + wheel-binding pass
  *                            + provenance-binding pass).
- *   - L2 SignGraphDialect  — SSA; type/modality inference, constitution
- *                            compliance (graph-wide), budgeted expansion.
+ *   - L2 SignGraphDialect  — SSA; the four passes: type/modality inference
+ *                            (compose JOIN + fold/choose branch-join +
+ *                            attachModality override), rewrite (fusion /
+ *                            simplification — map identity-elimination),
+ *                            constitution compliance (graph-wide), budgeted
+ *                            expansion.
  *   - L1 ProvenanceDialect — linear token threading, encodeSign/decodeSign
  *                            encoding lowering, KeyCap capability check (a
  *                            no-op when the program has no `provenance` section).
@@ -48,6 +52,7 @@ export type {
 
 // L2 — SignGraphDialect (the passes).
 export { inferTypes } from "./sign-graph/inference.js";
+export { rewriteGraph, canonical, eliminatedNodes, type ResolveMap } from "./sign-graph/rewrite.js";
 export { buildValues, collectWheels, isSign, type SsaValue } from "./sign-graph/materialize.js";
 export { checkConstitution, toCompileError, type GraphConstitutionResult } from "./sign-graph/constitution.js";
 export { checkBudget, type BudgetResult } from "./sign-graph/budget.js";

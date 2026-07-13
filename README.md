@@ -188,11 +188,12 @@ New to the Sovereign Monad? Begin with the [Theo-Techno-Cosmo quick start guide]
 - **Guardrail Charter v1.0** (effective 2026-07-06) — sovereignty-as-architectural-property criteria + legacy remediation discipline (PR #26) 
 - **TTCL / compiler axis** — Layers 1–4 + Layer 8 (parity/CI) landed; Layer 5 MLIR compiler stack (`@sovereign/compiler`, L3 Semiotic + L2 Sign-Graph) merged (PR #25)
 - **Layer 5, L1 Provenance** (`@sovereign/compiler`) — the fourth and final MLIR lowering level: linear `Token` threading, `KeyCap` capability check, `encodeSign`/`decodeSign` Trithemius-cipher lowering. The full L3→L2→L1→L0 stack is now realized (PR #35)
-- **x402 live smoke test — GREEN** (2026-07-10) — `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK (PR #30). The package remains `LEGACY_NON_SOVEREIGN`; sovereignty remediation is still open. 
+- **Layer 5, L2 rewrite/fusion + `attachModality`** (`@sovereign/compiler`) — the named Layer 5 follow-ups. New `rewrite.ts` pass collapses map passthrough chains (`map∘map≡map`, identity-elimination) via an id-stable `ResolveMap` the graph stays immutable and provenance refs survive; `fold`/`choose` now infer the lattice JOIN of all branches (PURE = join identity); the new `attachModality` op overrides a carrier's modality (e.g. promote a declared-INDEX sign to SYMBOL for the L1 `encodeSign` path) without mutating the immutable `SignDecl`. Facade reordered to the spec's four passes (infer → rewrite → constitution → budget) (PR #37)
+- **x402 live smoke test — GREEN** (2026-07-10) — `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK (PR #30). The package remains `LEGACY_NON_SOVEREIGN`; sovereignty remediation is still open.
 - **Steward Council corpus** — Christine de Pizan + Sor Juana Inés de la Cruz added (PR #31)
 
 ### Active frontier
-- **Code — Layer 5 follow-ups + Layers 6/7:** the L2 rewrite/fusion pass + `attachModality` op remain on Layer 5; Layer 6 (simulated-annealing wheel Scheduler → `canonical_schedule.json`) and Layer 7 (Training Pipeline: SFT→Reward→PPO→Eval) are the unbuilt core after that.
+- **Code — Layers 6/7 (the unbuilt core):** the named Layer 5 follow-ups (L2 rewrite/fusion + `attachModality`) landed in PR #37; the compiler stack's spec-defined work is complete. Layer 6 (simulated-annealing wheel Scheduler → `canonical_schedule.json`) and Layer 7 (Training Pipeline: SFT→Reward→PPO→Eval) are the unbuilt core after that.
 - **Sovereignty remediation (open):** `x402-bridge` stays `LEGACY_NON_SOVEREIGN` until the Charter §3 criteria are met — cost-accounting ledger, failure/retry envelope, sovereign-agent consumer. See `docs/LEGACY_COMPONENTS.md` §6 (deadline 2027-07-06).
 - **Capital-gated live frontiers (Layer 9):** funded Cardia activation, live Keys, public Data Rail — standing live work that awaits external capital/keys, not code.
 
