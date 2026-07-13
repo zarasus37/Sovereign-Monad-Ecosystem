@@ -788,7 +788,16 @@ This is the body of work that made the tripartite grammar the single source of t
 
 **Verification:** `pnpm --filter @sovereign/compiler exec tsc --noEmit` green; `types/ttcl/bus/logoc` typecheck green; `pnpm test:integration` 155/155 (139 existing + 16 new `compiler-sign-graph.test.ts`); `pnpm check:layout` ✓.
 
-**Deferred (follow-up PRs):** L1 Provenance (`Token` threading, `KeyCap` capability, `encodeSign`/`decodeSign`); L2 rewrite/fusion pass; `attachModality` as a distinct SSA op; code-emission L0 target; Python parity (compiler is TS-only); schema drift guard.
+**Deferred (follow-up PRs):** L2 rewrite/fusion pass; `attachModality` as a distinct SSA op; code-emission L0 target; Python parity (compiler is TS-only); schema drift guard. (L1 Provenance — previously deferred — landed in PR #35; see below.)
+
+**Layer 5 — L1 ProvenanceDialect (PR #35):** the fourth and final MLIR lowering level (the Linear-types fundamental, TTCL §II.6), closing the L3→L2→L1→L0 stack. Runs after L2, before L0; a no-op when the program has no `provenance` section.
+- **Runtime reconciliation** — `encodeSign(s,w,k)` / `decodeSign(t,w,k)` now faithful to the §II.3/§II.6 signature: take a Wheel + KeyCap, **consume the KeyCap** (single-use capability), produce/recover an opaque `EncToken` (Trithemius ciphertext over JSON+UTF-8 bytes). Old numeric codec renamed `serializeSign`/`deserializeSign`. `KeyCap` gains `consumed`/`consume()` (mirrors `Token`) + `KeyCapAlreadyConsumedError`; `EncSignModalityError` on a non-SYMBOL sign.
+- **Schema** — optional `provenance: { keyCaps, tokens, ops }` section; the L2 `ops` enum is unchanged (encodeSign/decodeSign live in `provenance.ops`, so the existing `op:"encodeSign"` rejection test still holds).
+- **IR + L3** — `KeyCapDecl`/`TokenDecl`/`ProvenanceOpDecl` added to the `SsaNode` union (distinct `kind` tags), in the shared `nodes` map for uniform ref resolution + program-wide id uniqueness, but not pushed to `order` (L2 passes never see them). `bindProvenance` resolves provenance refs + enforces acyclicity (tri-color DFS).
+- **L1 pass** (`sign-graph/provenance.ts`) — three §II.6 checks: linear token threading (every token consumed ≤ once; exactly one unconsumed terminal = the provenance root), SYMBOL-modality check on `encodeSign` (compile-time mirror of `EncSignModalityError`), KeyCap capability check (each key consumed exactly once; unconsumed = declared-but-unspent = error). Throws `ProvenanceCompileError`.
+- **L0** — `buildProvenanceValues` lowers encodeSign/decodeSign via the reconciled runtime cipher (fresh KeyCap per decl, consumed once); exposes EncTokens + recovered Signs as `CompiledProgram.provenance`. Program `output` stays a Sign (provenance is the attestation layer, not the semantic output) → constitution gate + existing output tests unchanged.
+
+**Verification (PR #35):** `pnpm --filter @sovereign/compiler exec tsc --noEmit` green; recursive typecheck green across all TS packages; `pnpm test:integration` 166/166 (155 existing + 11 new L1 `compiler-sign-graph.test.ts` cases); `@sovereign/ttcl` 43/43 (+6 cipher tests); L7.8 parity (classifier/tier/scorer) unaffected; no numerics/sign-types/ttcl-artifacts drift; `pnpm check:layout` ✓; CI green.
 
 ### 9-Layer Status (TTCL/compiler axis — the working progress model)
 
@@ -800,17 +809,17 @@ The user's working 9-layer model = the TTCL v1.0 breakdown layers 1-7 extended t
 | 2 | Type System | ✅ | `@sovereign/types` + `@sovereign/ttcl` types; manifold relocated (PR #24) | — |
 | 3 | Combinators | ✅ | `compose`/`map`/`fold`/`choose`; modal lattice; Triadic Minimal Gate; Phase B codegen | Full branch-join for map/fold/choose (deferred w/ Layer 5 fusion) |
 | 4 | Constitution | ✅ (runtime) | `scoreSign`, 0.72 threshold, triadic closure | — (compile gate is Layer 5) |
-| 5 | Compiler Stack (MLIR) | 🟡 | L3 Semiotic + L2 SignGraph + graph-wide constitution gate (PR #25); L0 = runtime | **L1 Provenance; L2 rewrite/fusion; `attachModality` op** |
+| 5 | Compiler Stack (MLIR) | 🟡 | L3 Semiotic + L2 SignGraph + graph-wide constitution gate (PR #25); L1 Provenance — linear threading + capability + cipher lowering (PR #35); L0 = runtime | **L2 rewrite/fusion; `attachModality` op** |
 | 6 | Scheduler (Multi-Objective Opt.) | ⬜ | — (specified only) | Simulated-annealing wheel scheduler → `canonical_schedule.json` (`TTCL_v1_0_BREAKDOWN.md:228`) |
 | 7 | Training Pipeline (Full Stack) | ⬜ | Parity prerequisites only | SFT→Reward→PPO→Eval; LLaMA 3.1 8B + QLoRA + TRL |
-| 8 | Parity / CI | ✅ | Scorer/tier/classifier parity CI-enforced; 155 integration tests | Keep green as Layer 5 follow-ups land |
+| 8 | Parity / CI | ✅ | Scorer/tier/classifier parity CI-enforced; 166 integration tests | Keep green as Layer 5 follow-ups land |
 | 9 | Live activation / production | 🟡 / 🔒 | Local ~82-85% complete; Phase 1a routing live on Monad mainnet; Agent 0 behavioral claim mined | Funded Cardia, live Keys, public Data Rail, public rollout — capital-gated |
 
-**Throughline:** Layers 1-4 + 8 done. Layer 5 is the active code frontier (L1 Provenance next). Layers 6-7 are the unbuilt core. Layer 9 is mostly external/capital.
+**Throughline:** Layers 1-4 + 8 done. Layer 5 L1 Provenance done (PR #35); the L2 rewrite/fusion pass + `attachModality` op are the remaining Layer 5 work and the active code frontier. Layers 6-7 are the unbuilt core. Layer 9 is mostly external/capital.
 
 ## Next Actions
 
-1. **Code frontier — Layer 5 L1 Provenance** (`@sovereign/compiler`): `Token` threading, `KeyCap` capability check, `encodeSign`/`decodeSign` lowering. Closes the MLIR compiler stack so the prose's four-level guarantee is fully realized. The L2 rewrite/fusion pass is a parallel follow-up.
+1. **Code frontier — Layer 5 follow-ups** (`@sovereign/compiler`): the L2 rewrite/fusion pass (full branch-join semantics for `map`/`fold`/`choose`, currently modality-preserving passthroughs) and `attachModality` as a distinct SSA op. L1 Provenance (previously listed here) landed in PR #35; the full L3→L2→L1→L0 stack is realized.
 2. **Unbuilt TTCL layers** — Layer 6 Scheduler (simulated-annealing wheel rotations → `canonical_schedule.json`, specified in `TTCL_v1_0_BREAKDOWN.md:228`, no implementation) and Layer 7 Training Pipeline (SFT→Reward→PPO→Eval; LLaMA 3.1 8B + QLoRA + TRL, specified only). These are the largest remaining pieces of the TTCL stack itself.
 3. **x402-bridge sovereignty remediation** — the smoke test is green (2026-07-10, PR #30); the remaining work is the real remediation in `docs/LEGACY_COMPONENTS.md` §6 (cost-accounting ledger, documented failure/retry envelope, wiring to a sovereign-agent consumer — or an archive decision). Capital-gated live frontiers that still stand: funded Cardia, live Keys, public Data Rail.
 4. Continue normal development inside the approved active domains only.

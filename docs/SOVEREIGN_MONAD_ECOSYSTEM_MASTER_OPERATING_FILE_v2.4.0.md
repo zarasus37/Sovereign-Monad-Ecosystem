@@ -548,7 +548,7 @@ This means the architecture and local analysis stack are materially advanced. It
 | Cardia / Organ Runtime Activation | LOCAL ANALYSIS / READY FOR FUNDING POSTURE | `cardia-activation-core` converted to ESM, `execution-truth-core` and `organ-runtime` stubs created under `packages/organs/`, local snapshot reports `ready_for_funding`; live wallet funding and execution-truth closure remain downstream gates. |
 | x402 QuickNode Payment Bridge | REHOMED / LIVE SMOKE GREEN / LEGACY | Live client, JWT auth helper (`auth_sdk.cjs` via the official `@quicknode/x402` SDK), price fetcher, and live smoke test moved to canonical Poetry package `monad-ecosystem/packages/x402-bridge/`. Unit auth tests pass. Live smoke test GREEN 2026-07-10 (`eth_blockNumber` on `monad-mainnet`, PR #30). Remains `LEGACY_NON_SOVEREIGN` — cost accounting, failure envelope, and agent wiring still open (`docs/LEGACY_COMPONENTS.md` §6). |
 | Cross-Domain Contract Layer | DOCUMENTED + CODEGEN | `shared/schemas/` + `shared/ttcl-specs/` hold the portable JSON-schema contracts; `@sovereign/types` (now owns the Peirce 66-class manifold, relocated from logoc per PR #24) and `@sovereign/bus` provide the typed TypeScript contract and event backbone. Layer-3 codegen (PRs #19/#22) generates types + Sign-event validators/factories from JSON source of truth. |
-| TTCL Compiler Stack (MLIR L3/L2) | LOCAL — KEYSTONE GATE ENFORCED | New `@sovereign/compiler` package (PR #25): L3 SemioticDialect (ajv-validated SSA loader + wheel-binding/acyclicity) + L2 SignGraphDialect (type/modality inference, budgeted expansion, **graph-wide constitution compliance**). The 0.72 constitution threshold is now a compile-time gate, not a runtime filter — a constitution-failing program raises `ConstitutionCompileError` at L2 and never reaches L0 (the existing `@sovereign/ttcl` runtime, instantiated in-memory — no WASM/LLVM emission by design). L1 Provenance + L2 rewrite/fusion deferred. 155 integration tests green. |
+| TTCL Compiler Stack (MLIR L3/L2/L1) | LOCAL — KEYSTONE GATE ENFORCED | New `@sovereign/compiler` package (PR #25): L3 SemioticDialect (ajv-validated SSA loader + wheel-binding/acyclicity) + L2 SignGraphDialect (type/modality inference, budgeted expansion, **graph-wide constitution compliance**). The 0.72 constitution threshold is now a compile-time gate, not a runtime filter — a constitution-failing program raises `ConstitutionCompileError` at L2 and never reaches L0 (the existing `@sovereign/ttcl` runtime, instantiated in-memory — no WASM/LLVM emission by design). L1 ProvenanceDialect (PR #35) — the fourth and final lowering level: linear `Token` threading, `KeyCap` capability check, `encodeSign`/`decodeSign` Trithemius-cipher lowering via a runtime-reconciled `encodeSign(s,w,k)` that consumes the KeyCap and emits an opaque `EncToken`; a no-op when the program has no `provenance` section. L2 rewrite/fusion + `attachModality` op remain the Layer 5 follow-ups. 166 integration tests green; L7.8 parity unaffected. |
 | Guardrail Charter + Steward Council | RATIFIED | `docs/CHARTER.md` v1.0 in force (effective 2026-07-06) — 8 guardrail clauses + LOGOC→Steward Council→ecosystem governance adjudication. `docs/STEWARD_COUNCIL.md` seats the council. `hcd-monitor` automates HCD-1..5 drift metrics for §2.1. `@sovereign/bus` enforces §4 intention traceability on consequential events. |
 | Phase 4 Operational Documentation | 98% COMPLETE | OPERATIONAL_AXIOMS_PHASE4.md, AGENT_PERSONALITY_FRAMES_v5.md, DOVE_OPERATIONAL_SPECIFICATION_v1.md, ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md, INTEGRATION_MAP.md all created and verified. Axiom alignment audit: 11/12 fully aligned, 1 partial. All three pillars integrated and operational. Ready for Phase 5 launch. |
 
@@ -2003,6 +2003,35 @@ Every update should include: date, version, changed section(s), exact new status
 ---
 
 # SECTION 19 — CHANGE LOG
+
+## v2.6.2 — July 13, 2026
+
+**Change Type:** Major — Layer 5 L1 ProvenanceDialect landed; the MLIR compiler stack's fourth and final lowering level is realized (L3→L2→L1→L0 complete)
+
+**Summary:**
+
+- **L1 ProvenanceDialect (PR #35):** the Linear-types fundamental (TTCL §II.6) — the last deferred lowering level named in v2.6.0 — is now real. The L1 pass runs after L2 and before L0 (matching the spec ordering); it is a no-op when a program has no `provenance` section, so every existing program lowers unchanged.
+  - **Runtime reconciliation** — `encodeSign(s,w,k)` / `decodeSign(t,w,k)` are now faithful to the §II.3/§II.6 L1 signature: they take a Wheel + KeyCap, **consume the KeyCap** (single-use capability), and produce/recover an opaque `EncToken` (Trithemius ciphertext over JSON+UTF-8 bytes) rather than a numeric array. The previous numeric codec is renamed `serializeSign`/`deserializeSign` (internal). `KeyCap` gains `consumed`/`consume()` (mirroring `Token`) + `KeyCapAlreadyConsumedError`; `EncSignModalityError` rejects a non-SYMBOL sign.
+  - **Schema** — optional `provenance: { keyCaps, tokens, ops }` section in `shared/ttcl-specs/semiotic-program-schema.json`. The L2 `ops` enum is unchanged — `encodeSign`/`decodeSign` live in `provenance.ops`, so the existing schema-rejection test for `op:"encodeSign"` in `ops` still holds.
+  - **IR + L3** — `KeyCapDecl`/`TokenDecl`/`ProvenanceOpDecl` added to the `SsaNode` union (distinct `kind` tags), held in the shared `nodes` map for uniform ref resolution + program-wide id uniqueness, but not pushed to `order` (the four L2 passes never see them). `bindProvenance` resolves provenance refs + enforces acyclicity via a tri-color DFS over the provenance-internal edges (refs flow FROM provenance TO main, never reverse → no cycle through the main graph).
+  - **L1 pass** (`sign-graph/provenance.ts`, new) — three §II.6 checks: (1) linear token threading — every token consumed ≤ once, exactly one unconsumed terminal (the provenance root); (2) encoding lowering — every `encodeSign` `sign` ref must infer to SYMBOL (compile-time mirror of `EncSignModalityError`); (3) KeyCap capability — each key consumed exactly once (unconsumed = declared-but-unspent = error; double-consumed = reuse). Throws `ProvenanceCompileError`.
+  - **L0** — `buildProvenanceValues` lowers `encodeSign`/`decodeSign` via the reconciled runtime cipher (a fresh KeyCap per decl, consumed once — the runtime `KeyCapAlreadyConsumedError` is the backstop for the linearity the L1 pass already proved). Exposes EncTokens + recovered Signs as `CompiledProgram.provenance`. The program `output` stays a Sign (provenance is the attestation layer, not the semantic output), so the constitution gate + existing output tests are unchanged.
+
+**Axiom alignment:**
+
+- **Axiom 11 (Constraint Validation):** a provenance-failing program (double-consumed key/token, ambiguous root, non-SYMBOL encodeSign) is rejected at compile time with a typed `ProvenanceCompileError`; no silent execution of an ill-formed provenance graph.
+- **Axiom 12 (Resonant Convergence):** the MLIR four-level stack — L3 Semiotic → L2 SignGraph → L1 Provenance → L0 Target — is now fully realized (previously L1 was the deferred gap noted in v2.6.0).
+
+**Architectural invariant (unchanged):** `@sovereign/ttcl` never imports `@sovereign/compiler` (compiler → ttcl → types, no cycle). The L1 pass imports `KeyCap`/`encodeSign`/`decodeSign`/`EncToken` from `@sovereign/ttcl` (downstream only). ajv remains a runtime dep of `@sovereign/compiler` only.
+
+**State after update:**
+
+- Active master phase remains **Phase 1a**
+- **TTCL compiler stack:** L3 SemioticDialect + L2 SignGraphDialect (PR #25) + L1 ProvenanceDialect (PR #35) all landed. The L2 rewrite/fusion pass + `attachModality` op remain the Layer 5 follow-ups. The full L3→L2→L1→L0 stack is realized.
+- **Parity / CI:** 166 integration tests green (155 + 11 new L1 `compiler-sign-graph.test.ts` cases); `@sovereign/ttcl` 43/43 (+6 cipher tests); scorer/tier/classifier parity CI-enforced and unaffected by the L1 addition; recursive `tsc --noEmit` green across all TS packages; no numerics/sign-types/ttcl-artifacts drift.
+- **TTCL layer model (working 9-layer axis, NOT the 15-layer Base Stack):** Layers 1-4 + 8 (parity/CI) complete; Layer 5 now L3+L2+L1 done (L2 rewrite/fusion + `attachModality` remaining); Layers 6 (Scheduler) and 7 (Training Pipeline) specified but unbuilt; Layer 9 (live activation) locally ~82-85% complete, capital-gated for public rollout. Status table in `docs/PROJECT_STATE.md`.
+- No new blockers introduced; all tests pass without regression; CI green on PR #35.
+- **Next code priority:** Layer 5 follow-ups — L2 rewrite/fusion pass (full branch-join for `map`/`fold`/`choose`) + `attachModality` as a distinct SSA op; then Layer 6 Scheduler (simulated-annealing wheel rotations → `canonical_schedule.json`).
 
 ## v2.6.1 — July 10, 2026
 
