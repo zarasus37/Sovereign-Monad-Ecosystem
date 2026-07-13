@@ -475,6 +475,28 @@ importers:
         specifier: ^5.0.0
         version: 5.9.3
 
+  monad-ecosystem/packages/gnosis-training-data:
+    dependencies:
+      '@sovereign/scheduler':
+        specifier: workspace:*
+        version: link:../scheduler
+      '@sovereign/ttcl':
+        specifier: workspace:*
+        version: link:../ttcl
+      '@sovereign/types':
+        specifier: workspace:*
+        version: link:../sovereign-types
+      ajv:
+        specifier: ^8.17.0
+        version: 8.20.0
+    devDependencies:
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+      vitest:
+        specifier: ^2.0.0
+        version: 2.1.9(@edge-runtime/vm@3.2.0)(@types/node@22.7.5)
+
   monad-ecosystem/packages/hcd-monitor:
     dependencies:
       '@sovereign/bus':

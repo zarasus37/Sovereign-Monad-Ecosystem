@@ -1,0 +1,30 @@
+{
+  "name": "@sovereign/gnosis-training-data",
+  "version": "0.1.0",
+  "description": "TTCL Layer 7 data-generation consumer — turns a Layer 6 CanonicalSchedule into Gnosis training events (JSONL) for the future SFT stage",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "import": "./dist/index.js", "types": "./dist/index.d.ts" }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "echo 'No lint step for gnosis-training-data package'"
+  },
+  "dependencies": {
+    "@sovereign/scheduler": "workspace:*",
+    "@sovereign/ttcl": "workspace:*",
+    "@sovereign/types": "workspace:*",
+    "ajv": "^8.17.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  },
+  "files": ["dist", "src"]
+}
