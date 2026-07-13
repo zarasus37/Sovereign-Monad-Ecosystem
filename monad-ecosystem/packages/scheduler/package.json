@@ -1,0 +1,28 @@
+{
+  "name": "@sovereign/scheduler",
+  "version": "0.1.0",
+  "description": "TTCL Layer 6 Scheduler — simulated-annealing wheel-rotation optimizer producing canonical_schedule.json",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "import": "./dist/index.js", "types": "./dist/index.d.ts" }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "echo 'No lint step for scheduler package'"
+  },
+  "dependencies": {
+    "@sovereign/ttcl": "workspace:*",
+    "ajv": "^8.17.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  },
+  "files": ["dist", "src"]
+}

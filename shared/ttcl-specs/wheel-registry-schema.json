@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/ttcl-specs/wheel-registry-schema.json",
+  "title": "TTCL Wheel Registry — Layer 6 Scheduler input contract",
+  "description": "The wheel + pair-table registry consumed by the @sovereign/scheduler Layer 6 optimizer. Declares the rotating wheels (the Llull Figurae, each with a size and its TTCL domain binding), the default facet-to-wheel assignment (which wheel covers each of the 3 tripartite facets — THEOLOGY/TECHNOLOGY/COSMOLOGY), and the pair table (the set of allowed wheel-pairs the scheduler's `pattern` state field ranges over). Validated at load time with ajv. Cross-reference integrity (facet wheels + pair wheels must reference declared wheels; no duplicate wheel names) is enforced in the loader, not the schema. Default registry: shared/fixtures/layer6/wheel-registry.json. Honesty note: the spec's 'PairTable (45 pairs, from a triangular grid image)' and the Theologia wheel are assets not present in the repo; the default registry uses the combinatorial pair set over the explicit 5-wheel state space (A/T/V/X/S). The real 45-pair Llull table drops in as a data change — the scheduler reads `pairs`, never hardcodes them.",
+  "type": "object",
+  "required": ["registry", "wheels", "facets", "pairs"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Optional JSON Schema reference (the schema's own $id). Permitted but not required."
+    },
+    "registry": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Registry identifier."
+    },
+    "wheels": {
+      "type": "array",
+      "minItems": 1,
+      "description": "The rotating wheels (Llull Figurae). Each wheel is materialized as a @sovereign/ttcl Wheel<N>; the scheduler rotates its offset (mod size). `domains` is the TTCL domain binding — a wheel may bind one or more domains (e.g. Figura T binds THEOLOGY + COSMOLOGY).",
+      "items": {
+        "type": "object",
+        "required": ["name", "size", "domains"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 1, "description": "Wheel name (e.g. A, T, V, X, S)." },
+          "size": { "type": "integer", "minimum": 1, "description": "Slot count; the wheel offset ranges over [0, size)." },
+          "domains": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "enum": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"] },
+            "description": "TTCL domain(s) this wheel can cover."
+          }
+        }
+      }
+    },
+    "facets": {
+      "type": "object",
+      "required": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"],
+      "additionalProperties": false,
+      "description": "The default facet-to-wheel assignment: which wheel covers each of the 3 tripartite facets at schedule start. The WheelSwap move reassigns this during annealing (the spec's 'change which wheel covers a facet'). Each value must be a declared wheel name; enforced in the loader.",
+      "properties": {
+        "THEOLOGY": { "type": "string", "minLength": 1 },
+        "TECHNOLOGY": { "type": "string", "minLength": 1 },
+        "COSMOLOGY": { "type": "string", "minLength": 1 }
+      }
+    },
+    "pairs": {
+      "type": "array",
+      "minItems": 1,
+      "description": "The pair table — the set of allowed wheel-pairs the scheduler's `pattern` state field ranges over. PatternSwitch picks a different pair from this list. Each pair is two distinct declared wheel names.",
+      "items": {
+        "type": "object",
+        "required": ["id", "wheels"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "minLength": 1, "description": "Pair identifier (e.g. 'A·X')." },
+          "wheels": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1 },
+            "description": "The two wheel names forming the pair. Must be declared wheels; enforced in the loader."
+          }
+        }
+      }
+    }
+  }
+}

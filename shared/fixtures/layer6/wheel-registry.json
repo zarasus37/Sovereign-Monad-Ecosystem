@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/wheel-registry-schema.json",
+  "registry": "llull-default",
+  "wheels": [
+    { "name": "A", "size": 16, "domains": ["THEOLOGY"] },
+    { "name": "T", "size": 20, "domains": ["THEOLOGY", "COSMOLOGY"] },
+    { "name": "V", "size": 14, "domains": ["TECHNOLOGY"] },
+    { "name": "X", "size": 16, "domains": ["COSMOLOGY"] },
+    { "name": "S", "size": 18, "domains": ["TECHNOLOGY"] }
+  ],
+  "facets": {
+    "THEOLOGY": "A",
+    "TECHNOLOGY": "S",
+    "COSMOLOGY": "X"
+  },
+  "pairs": [
+    { "id": "A·T", "wheels": ["A", "T"] },
+    { "id": "A·V", "wheels": ["A", "V"] },
+    { "id": "A·X", "wheels": ["A", "X"] },
+    { "id": "A·S", "wheels": ["A", "S"] },
+    { "id": "T·V", "wheels": ["T", "V"] },
+    { "id": "T·X", "wheels": ["T", "X"] },
+    { "id": "T·S", "wheels": ["T", "S"] },
+    { "id": "V·X", "wheels": ["V", "X"] },
+    { "id": "V·S", "wheels": ["V", "S"] },
+    { "id": "X·S", "wheels": ["X", "S"] }
+  ]
+}
