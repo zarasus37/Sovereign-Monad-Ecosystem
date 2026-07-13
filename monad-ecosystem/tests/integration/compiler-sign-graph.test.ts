@@ -27,6 +27,7 @@ import {
   InvalidOutputError,
   LatticeAbortError,
   ConstitutionCompileError,
+  ProvenanceCompileError,
 } from '@sovereign/compiler';
 import { makeTriadicObservation, scoreSign } from '@sovereign/ttcl';
 import { WheelBudgetExceededError } from '@sovereign/ttcl';
@@ -252,5 +253,249 @@ describe('L0 — lowering to the @sovereign/ttcl runtime (end-to-end coherence)'
     const result = compileProgram(await loadFixture('semiotic-program-triadic.json'));
     expect(result.output.wheels).toHaveLength(1);
     expect(result.output.wheels[0].size).toBe(9);
+  });
+});
+
+// A minimal valid triadic program carrying a provenance section. The keycaps
+// reuse the main-graph wheel `wTheo` (size 9) with a 256-alphabet — the wheel
+// budget stays at 9 (within 1000), and the shared-wheel round-trip works because
+// `decodeSign` resets the wheel to the EncToken's `keyOffset` before decrypt.
+function provenanceProgram(overrides: Record<string, unknown> = {}): unknown {
+  return {
+    program: "test-provenance",
+    wheels: [{ id: "wTheo", size: 9, initial: 0 }],
+    signs: [
+      { id: "sTheo", class_id: 8, mode: "INDEX", domain: "THEOLOGY", modality: "SYMBOL", pps: 0.30, noRlhf: true },
+      { id: "sTech", class_id: 2, mode: "INDEX", domain: "TECHNOLOGY", modality: "INDEX", pps: 0.50, noRlhf: true },
+      { id: "sCosmo", class_id: 42, mode: "SYMBOL", domain: "COSMOLOGY", modality: "SYMBOL", pps: 0.40, noRlhf: true },
+    ],
+    ops: [{ id: "oCompose", op: "compose", inputs: ["sTheo", "sTech", "sCosmo"] }],
+    constitution: { threshold: 0.72 },
+    budget: 1000,
+    output: "oCompose",
+    provenance: {
+      keyCaps: [
+        { id: "kEnc", wheel: "wTheo", alphabetSize: 256 },
+        { id: "kDec", wheel: "wTheo", alphabetSize: 256 },
+      ],
+      tokens: [
+        { id: "t1", op: "emitToken", index: 0 },
+        { id: "t2", op: "emitToken", index: 1 },
+        { id: "tRoot", op: "mergeProvenance", inputs: ["t1", "t2"] },
+      ],
+      ops: [
+        { id: "enc1", op: "encodeSign", sign: "sCosmo", wheel: "wTheo", keyCap: "kEnc" },
+        { id: "dec1", op: "decodeSign", token: "enc1", wheel: "wTheo", keyCap: "kDec" },
+      ],
+    },
+    ...overrides,
+  };
+}
+
+/** Distinguish an EncToken (has `cipher`) from a Sign (has `modality`). */
+function isEncToken(v: unknown): boolean {
+  return typeof v === "object" && v !== null && "cipher" in v && !("modality" in v);
+}
+
+describe('L1 ProvenanceDialect — linear threading + capability + lowering', () => {
+  it('compiles a provenance program: output stays a Sign; L0 lowers EncToken + recovered Sign', async () => {
+    const result = compileProgram(await loadFixture('semiotic-provenance.json'));
+    // The semantic output is unchanged — still the HYBRID triadic Sign.
+    expect(result.output.sign.modality).toBe('HYBRID');
+    expect(result.constitution.pass).toBe(true);
+    // L1 verdict passes; one terminal token (the provenance root).
+    expect(result.provenance.verdict.pass).toBe(true);
+    expect(result.provenance.verdict.rootToken).toBe('tRoot');
+
+    // L0 lowering: enc1 → an opaque EncToken; dec1 → the recovered Sign.
+    const enc1 = result.provenance.values.get('enc1');
+    const dec1 = result.provenance.values.get('dec1');
+    expect(isEncToken(enc1)).toBe(true);
+    expect(isEncToken(dec1)).toBe(false);
+
+    const enc = enc1 as { cipher: number[]; keyOffset: number };
+    // The cipher is byte-range (the Trithemius ciphertext), not the plaintext.
+    expect(enc.cipher.length).toBeGreaterThan(0);
+    expect(enc.cipher.some((n) => n >= 256)).toBe(false);
+    expect(typeof enc.keyOffset).toBe('number');
+
+    // The recovered Sign matches sCosmo modulo trace (lossy, like the codec).
+    const recovered = dec1 as { modality: string; domain: string; pps: number; peirce: { sign_class_id: number }; trace?: unknown };
+    expect(recovered.modality).toBe('SYMBOL');
+    expect(recovered.domain).toBe('COSMOLOGY');
+    expect(recovered.pps).toBeCloseTo(0.40, 6);
+    expect(recovered.peirce.sign_class_id).toBe(42);
+    expect(recovered.trace).toBeUndefined();
+  });
+
+  it('encode/decode round-trips the sign through the L0-lowered EncToken', async () => {
+    const result = compileProgram(await loadFixture('semiotic-provenance.json'));
+    const dec1 = result.provenance.values.get('dec1') as { modality: string; domain: string; pps: number; peirce: { sign_class_id: number; path: readonly string[] } };
+    // The decoded sign's semantically-significant fields match the encoded
+    // sCosmo (class_id 42, SYMBOL, COSMOLOGY, pps 0.40) — the round-trip holds.
+    expect(dec1.peirce.sign_class_id).toBe(42);
+    expect(dec1.modality).toBe('SYMBOL');
+    expect(dec1.domain).toBe('COSMOLOGY');
+  });
+
+  it('rejects a double-consumed KeyCap with ProvenanceCompileError (L1, before L0)', () => {
+    const prog = provenanceProgram({
+      provenance: {
+        keyCaps: [{ id: "kShared", wheel: "wTheo", alphabetSize: 256 }],
+        tokens: [{ id: "t1", op: "emitToken", index: 0 }],
+        ops: [
+          { id: "enc1", op: "encodeSign", sign: "sCosmo", wheel: "wTheo", keyCap: "kShared" },
+          { id: "dec1", op: "decodeSign", token: "enc1", wheel: "wTheo", keyCap: "kShared" },
+        ],
+      },
+    });
+    expect(() => compileProgram(prog)).toThrow(ProvenanceCompileError);
+    expect(() => compileProgram(prog)).toThrow(/kShared.*2/);
+    expect(() => compileProgram(prog)).toThrow(CompilerError);
+  });
+
+  it('rejects an unconsumed KeyCap with ProvenanceCompileError (every capability must be spent)', () => {
+    const prog = provenanceProgram({
+      provenance: {
+        keyCaps: [
+          { id: "kEnc", wheel: "wTheo", alphabetSize: 256 },
+          { id: "kDec", wheel: "wTheo", alphabetSize: 256 },
+          { id: "kUnused", wheel: "wTheo", alphabetSize: 256 },
+        ],
+        tokens: [{ id: "t1", op: "emitToken", index: 0 }],
+        ops: [
+          { id: "enc1", op: "encodeSign", sign: "sCosmo", wheel: "wTheo", keyCap: "kEnc" },
+          { id: "dec1", op: "decodeSign", token: "enc1", wheel: "wTheo", keyCap: "kDec" },
+        ],
+      },
+    });
+    expect(() => compileProgram(prog)).toThrow(ProvenanceCompileError);
+    expect(() => compileProgram(prog)).toThrow(/kUnused.*never consumed/);
+  });
+
+  it('rejects an ambiguous provenance root (>1 unconsumed token)', () => {
+    // Two emitTokens, no merge → two unconsumed terminals → ambiguous root.
+    const prog = provenanceProgram({
+      provenance: {
+        keyCaps: [
+          { id: "kEnc", wheel: "wTheo", alphabetSize: 256 },
+          { id: "kDec", wheel: "wTheo", alphabetSize: 256 },
+        ],
+        tokens: [
+          { id: "t1", op: "emitToken", index: 0 },
+          { id: "t2", op: "emitToken", index: 1 },
+        ],
+        ops: [
+          { id: "enc1", op: "encodeSign", sign: "sCosmo", wheel: "wTheo", keyCap: "kEnc" },
+          { id: "dec1", op: "decodeSign", token: "enc1", wheel: "wTheo", keyCap: "kDec" },
+        ],
+      },
+    });
+    expect(() => compileProgram(prog)).toThrow(ProvenanceCompileError);
+    expect(() => compileProgram(prog)).toThrow(/ambiguous provenance root/);
+  });
+
+  it('a multi-level mergeProvenance chain compiles with the final merge as root', () => {
+    // t1, t2 (emit) → m1 = merge(t1) → m2 = merge(t2, m1) → m3 = merge(m2).
+    // t1, t2, m1, m2 are each consumed exactly once; m3 is the single root.
+    const prog = provenanceProgram({
+      provenance: {
+        keyCaps: [
+          { id: "kEnc", wheel: "wTheo", alphabetSize: 256 },
+          { id: "kDec", wheel: "wTheo", alphabetSize: 256 },
+        ],
+        tokens: [
+          { id: "t1", op: "emitToken", index: 0 },
+          { id: "t2", op: "emitToken", index: 1 },
+          { id: "m1", op: "mergeProvenance", inputs: ["t1"] },
+          { id: "m2", op: "mergeProvenance", inputs: ["t2", "m1"] },
+          { id: "m3", op: "mergeProvenance", inputs: ["m2"] },
+        ],
+        ops: [
+          { id: "enc1", op: "encodeSign", sign: "sCosmo", wheel: "wTheo", keyCap: "kEnc" },
+          { id: "dec1", op: "decodeSign", token: "enc1", wheel: "wTheo", keyCap: "kDec" },
+        ],
+      },
+    });
+    const result = compileProgram(prog);
+    expect(result.provenance.verdict.pass).toBe(true);
+    expect(result.provenance.verdict.rootToken).toBe('m3');
+  });
+
+  it('rejects a double-consumed token (linear single-use)', () => {
+    const prog = provenanceProgram({
+      provenance: {
+        keyCaps: [
+          { id: "kEnc", wheel: "wTheo", alphabetSize: 256 },
+          { id: "kDec", wheel: "wTheo", alphabetSize: 256 },
+        ],
+        tokens: [
+          { id: "t1", op: "emitToken", index: 0 },
+          { id: "t2", op: "emitToken", index: 1 },
+          { id: "m1", op: "mergeProvenance", inputs: ["t1"] },
+          { id: "m2", op: "mergeProvenance", inputs: ["t1", "t2"] },
+        ],
+        ops: [
+          { id: "enc1", op: "encodeSign", sign: "sCosmo", wheel: "wTheo", keyCap: "kEnc" },
+          { id: "dec1", op: "decodeSign", token: "enc1", wheel: "wTheo", keyCap: "kDec" },
+        ],
+      },
+    });
+    // t1 consumed by both m1 and m2 → double-consume. m1 and m2 unconsumed →
+    // ambiguous root too; the double-consume reasoning is surfaced.
+    expect(() => compileProgram(prog)).toThrow(ProvenanceCompileError);
+    expect(() => compileProgram(prog)).toThrow(/t1.*consumed 2/);
+  });
+
+  it('rejects an encodeSign over a non-SYMBOL sign (compile-time modality gate)', () => {
+    // sTech is INDEX-modality — encodeSign requires SYMBOL.
+    const prog = provenanceProgram({
+      provenance: {
+        keyCaps: [
+          { id: "kEnc", wheel: "wTheo", alphabetSize: 256 },
+          { id: "kDec", wheel: "wTheo", alphabetSize: 256 },
+        ],
+        tokens: [{ id: "t1", op: "emitToken", index: 0 }],
+        ops: [
+          { id: "enc1", op: "encodeSign", sign: "sTech", wheel: "wTheo", keyCap: "kEnc" },
+          { id: "dec1", op: "decodeSign", token: "enc1", wheel: "wTheo", keyCap: "kDec" },
+        ],
+      },
+    });
+    expect(() => compileProgram(prog)).toThrow(ProvenanceCompileError);
+    expect(() => compileProgram(prog)).toThrow(/SYMBOL-modality sign, got INDEX/);
+  });
+
+  it('rejects a dangling provenance ref with UnresolvedReferenceError (L3)', () => {
+    const prog = provenanceProgram({
+      provenance: {
+        keyCaps: [{ id: "kEnc", wheel: "wTheo", alphabetSize: 256 }],
+        tokens: [{ id: "t1", op: "emitToken", index: 0 }],
+        ops: [
+          { id: "enc1", op: "encodeSign", sign: "sGhost", wheel: "wTheo", keyCap: "kEnc" },
+        ],
+      },
+    });
+    expect(() => loadProgram(prog)).toThrow(UnresolvedReferenceError);
+    expect(() => loadProgram(prog)).toThrow(/sGhost/);
+  });
+
+  it('a program with no provenance section compiles unchanged (L1 is a no-op)', () => {
+    const result = compileProgram(provenanceProgram({ provenance: undefined }));
+    expect(result.provenance.verdict.pass).toBe(true);
+    expect(result.provenance.values.size).toBe(0);
+    expect(result.output.sign.modality).toBe('HYBRID');
+  });
+
+  it('encodeSign/decodeSign in the L2 `ops` array is still a schema error (not provenance)', () => {
+    // The L2 `ops` enum is unchanged — encodeSign belongs in provenance.ops.
+    const prog = provenanceProgram({
+      ops: [
+        { id: "oCompose", op: "compose", inputs: ["sTheo", "sTech", "sCosmo"] },
+        { id: "oBad", op: "encodeSign", inputs: ["sCosmo"] },
+      ],
+      output: "oCompose",
+    });
+    expect(() => loadProgram(prog)).toThrow(ProgramSchemaError);
   });
 });

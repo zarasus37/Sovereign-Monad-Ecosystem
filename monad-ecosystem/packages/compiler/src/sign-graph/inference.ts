@@ -48,8 +48,13 @@ export function inferTypes(graph: SignGraph): Map<NodeId, InferredType> {
       });
       continue;
     }
-    // node.kind === "op"
-    cache.set(id, inferOp(graph, node, cache));
+    if (node.kind === "op") {
+      cache.set(id, inferOp(graph, node, cache));
+      continue;
+    }
+    // Provenance nodes (keycap/token/provop) are never pushed to `order` by
+    // the loader, so this is unreachable — guard in depth.
+    throw new Error(`inference: unexpected node kind '${node.kind}' in order`);
   }
   return cache;
 }

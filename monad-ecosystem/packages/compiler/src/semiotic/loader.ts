@@ -30,9 +30,9 @@ import addFormats from "ajv-formats";
 import type { CoarseMode, EventTrace } from "@sovereign/types";
 import type { Domain, Modality } from "@sovereign/ttcl";
 
-import type { NodeId, SignGraph, SsaNode, WheelDecl, SignDecl, OpDecl, CombinatorOp } from "./graph.js";
+import type { NodeId, SignGraph, SsaNode, WheelDecl, SignDecl, OpDecl, CombinatorOp, KeyCapDecl, TokenDecl, ProvenanceOpDecl, ProvenanceSection } from "./graph.js";
 import { ProgramSchemaError } from "../errors.js";
-import { bindGraph } from "./binding.js";
+import { bindGraph, bindProvenance } from "./binding.js";
 
 // Resolve the canonical schema from the repo root. From this file (src or
 // dist, both at monad-ecosystem/packages/compiler/{src,dist}/semiotic/), five
@@ -80,6 +80,23 @@ interface ProgramJson {
   constitution?: { threshold?: number };
   budget: number;
   output: NodeId;
+  provenance?: {
+    keyCaps: { id: NodeId; wheel: NodeId; alphabetSize: number }[];
+    tokens: {
+      id: NodeId;
+      op: "emitToken" | "mergeProvenance";
+      index?: number;
+      inputs?: NodeId[];
+    }[];
+    ops: {
+      id: NodeId;
+      op: "encodeSign" | "decodeSign";
+      sign?: NodeId;
+      token?: NodeId;
+      wheel: NodeId;
+      keyCap: NodeId;
+    }[];
+  };
 }
 
 /**
@@ -153,13 +170,76 @@ export function loadProgram(json: unknown): SignGraph {
     budget: program.budget,
     constitutionThreshold: program.constitution?.threshold,
     program: program.program,
+    provenance: buildProvenance(program, nodes),
   };
 
   // L3 wheel-binding pass: resolve references + enforce acyclicity + validate
   // the output node. Throws CompilerError subtypes on failure.
   bindGraph(graph);
 
+  // L3 provenance-binding pass: resolve provenance refs (to main-graph nodes
+  // + within the provenance sub-graph) + enforce acyclicity. No-op when there
+  // is no provenance section. Throws UnresolvedReferenceError / CyclicSsaError.
+  bindProvenance(graph);
+
   return graph;
+}
+
+/**
+ * Build the optional `ProvenanceSection` from the validated program JSON.
+ * Returns `undefined` when the program has no `provenance` block (the L1 pass
+ * is then a no-op). Enforces program-wide id uniqueness — provenance node ids
+ * must not collide with main-graph ids (or each other) — via `assertUniqueId`
+ * against the shared `nodes` map.
+ */
+function buildProvenance(
+  program: ProgramJson,
+  nodes: Map<NodeId, SsaNode>,
+): ProvenanceSection | undefined {
+  if (!program.provenance) return undefined;
+  const { keyCaps, tokens, ops } = program.provenance;
+
+  const keyCapDecls: KeyCapDecl[] = keyCaps.map((k) => {
+    const decl: KeyCapDecl = {
+      kind: "keycap",
+      id: k.id,
+      wheel: k.wheel,
+      alphabetSize: k.alphabetSize,
+    };
+    assertUniqueId(nodes, k.id);
+    nodes.set(k.id, decl);
+    return decl;
+  });
+
+  const tokenDecls: TokenDecl[] = tokens.map((t) => {
+    const decl: TokenDecl = {
+      kind: "token",
+      id: t.id,
+      op: t.op,
+      index: t.index,
+      inputs: t.inputs ?? [],
+    };
+    assertUniqueId(nodes, t.id);
+    nodes.set(t.id, decl);
+    return decl;
+  });
+
+  const opDecls: ProvenanceOpDecl[] = ops.map((o) => {
+    const decl: ProvenanceOpDecl = {
+      kind: "provop",
+      id: o.id,
+      op: o.op,
+      sign: o.sign,
+      token: o.token,
+      wheel: o.wheel,
+      keyCap: o.keyCap,
+    };
+    assertUniqueId(nodes, o.id);
+    nodes.set(o.id, decl);
+    return decl;
+  });
+
+  return { keyCaps: keyCapDecls, tokens: tokenDecls, ops: opDecls };
 }
 
 function assertUniqueId(nodes: ReadonlyMap<NodeId, SsaNode>, id: NodeId): void {

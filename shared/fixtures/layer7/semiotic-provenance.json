@@ -1,0 +1,57 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/semiotic-program-schema.json",
+  "program": "provenance-attestation",
+  "wheels": [
+    { "id": "wTheo", "size": 9, "initial": 0 }
+  ],
+  "signs": [
+    {
+      "id": "sTheo",
+      "class_id": 8,
+      "mode": "INDEX",
+      "domain": "THEOLOGY",
+      "modality": "SYMBOL",
+      "pps": 0.30,
+      "noRlhf": true
+    },
+    {
+      "id": "sTech",
+      "class_id": 2,
+      "mode": "INDEX",
+      "domain": "TECHNOLOGY",
+      "modality": "INDEX",
+      "pps": 0.50,
+      "noRlhf": true
+    },
+    {
+      "id": "sCosmo",
+      "class_id": 42,
+      "mode": "SYMBOL",
+      "domain": "COSMOLOGY",
+      "modality": "SYMBOL",
+      "pps": 0.40,
+      "noRlhf": true
+    }
+  ],
+  "ops": [
+    { "id": "oCompose", "op": "compose", "inputs": ["sTheo", "sTech", "sCosmo"] }
+  ],
+  "constitution": { "threshold": 0.72 },
+  "budget": 1000,
+  "output": "oCompose",
+  "provenance": {
+    "keyCaps": [
+      { "id": "kEnc", "wheel": "wTheo", "alphabetSize": 256 },
+      { "id": "kDec", "wheel": "wTheo", "alphabetSize": 256 }
+    ],
+    "tokens": [
+      { "id": "t1", "op": "emitToken", "index": 0 },
+      { "id": "t2", "op": "emitToken", "index": 1 },
+      { "id": "tRoot", "op": "mergeProvenance", "inputs": ["t1", "t2"] }
+    ],
+    "ops": [
+      { "id": "enc1", "op": "encodeSign", "sign": "sCosmo", "wheel": "wTheo", "keyCap": "kEnc" },
+      { "id": "dec1", "op": "decodeSign", "token": "enc1", "wheel": "wTheo", "keyCap": "kDec" }
+    ]
+  }
+}
