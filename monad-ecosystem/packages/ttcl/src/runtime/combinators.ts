@@ -14,6 +14,7 @@ import { getManifold, type PeirceSignClass } from "@sovereign/types";
 import type { EventTrace } from "@sovereign/types";
 import type { Sign, Modality, Domain } from "../types.js";
 import { Wheel } from "./wheel.js";
+import { KeyCap } from "./keycap.js";
 import { classToSignature } from "./sign.js";
 
 export class TriadicGateError extends Error {
@@ -229,8 +230,9 @@ export function rotateWheel<W extends Wheel<any>>(wheel: W, steps: number): W {
 export { keyRotate } from "./keycap.js";
 
 /**
- * `encodeSign` — deterministic numeric encoding of a `Sign` for storage and
- * transport.
+ * `serializeSign` — deterministic numeric encoding of a `Sign` for storage and
+ * transport (the plaintext payload used by the L1 `encodeSign` cipher op, and
+ * by the durable event bus).
  *
  * Layout: `[modalityCode, domainCode, pps, classId, modeCode, ...pathHashes, traceHash]`.
  * `peirce` is recoverable from the LOGOC manifold (the sole source of truth for
@@ -238,8 +240,11 @@ export { keyRotate } from "./keycap.js";
  * does not depend on path-position assumptions; `pathHashes` act as an
  * integrity checksum against the current manifold; `trace` is intentionally
  * lossy (only a hash) — the full trace lives in the durable event store.
+ *
+ * (Renamed from `encodeSign`; the public `encodeSign` name now denotes the L1
+ * Trithemius cipher op per the TTCL §II.3 signature `encodeSign(s, w, k)`.)
  */
-export function encodeSign<M extends Modality, T extends Domain>(
+export function serializeSign<M extends Modality, T extends Domain>(
   sign: Sign<M, T>,
 ): number[] {
   const pathHashes = sign.peirce.path.map((p) => fnv1a32(p));
@@ -255,29 +260,32 @@ export function encodeSign<M extends Modality, T extends Domain>(
 }
 
 /**
- * `decodeSign` — inverse of `encodeSign`. Reconstructs `peirce` from the
- * manifold via `classId` (the manifold is the only source of truth for
+ * `deserializeSign` — inverse of `serializeSign`. Reconstructs `peirce` from
+ * the manifold via `classId` (the manifold is the only source of truth for
  * weights/labels/path), verifies the encoded path checksum against the current
  * manifold (detects version drift), and restores `mode` from the stored code.
  * `trace` is NOT recoverable (returns `undefined`) — it must be rejoined from
  * the durable event store.
+ *
+ * (Renamed from `decodeSign`; the public `decodeSign` name now denotes the L1
+ * Trithemius cipher op.)
  */
-export function decodeSign(encoded: number[]): Sign<Modality, Domain> {
+export function deserializeSign(encoded: number[]): Sign<Modality, Domain> {
   if (encoded.length < 6) {
-    throw new Error(`decodeSign: payload too short (${encoded.length})`);
+    throw new Error(`deserializeSign: payload too short (${encoded.length})`);
   }
   const [mCode, dCode, pps, classId, modeCode, ...rest] = encoded;
   const modality = MODALITY_FROM_CODE[mCode];
   const domain = DOMAIN_FROM_CODE[dCode];
   const mode = COARSEMODE_FROM_CODE[modeCode];
   if (!modality) {
-    throw new Error(`decodeSign: invalid modality code ${mCode}`);
+    throw new Error(`deserializeSign: invalid modality code ${mCode}`);
   }
   if (!domain) {
-    throw new Error(`decodeSign: invalid domain code ${dCode}`);
+    throw new Error(`deserializeSign: invalid domain code ${dCode}`);
   }
   if (!mode) {
-    throw new Error(`decodeSign: invalid coarse-mode code ${modeCode}`);
+    throw new Error(`deserializeSign: invalid coarse-mode code ${modeCode}`);
   }
   let cls: PeirceSignClass;
   try {
@@ -291,7 +299,7 @@ export function decodeSign(encoded: number[]): Sign<Modality, Domain> {
   for (let i = 0; i < pathLen; i++) {
     if (fnv1a32(cls.path[i]) !== pathHashes[i]) {
       throw new Error(
-        `decodeSign: path checksum mismatch at index ${i} — manifold drift detected`,
+        `deserializeSign: path checksum mismatch at index ${i} — manifold drift detected`,
       );
     }
   }
@@ -302,4 +310,90 @@ export function decodeSign(encoded: number[]): Sign<Modality, Domain> {
     peirce: classToSignature(cls, mode),
     trace: undefined,
   };
+}
+
+/**
+ * `EncToken` — the opaque output of `encodeSign`, recoverable only by
+ * `decodeSign` with a matching wheel + key. The Trithemius ciphertext plus the
+ * wheel offset the cipher started from (the polyalphabetic key state required
+ * to reset for decrypt).
+ */
+export interface EncToken {
+  /** Ciphertext symbols in `[0, keyCap.alphabetSize)`. */
+  readonly cipher: number[];
+  /** Wheel position the cipher started from; required to reset for decrypt. */
+  readonly keyOffset: number;
+}
+
+/**
+ * `EncSignModalityError` — raised by `encodeSign` when the input sign is not
+ * SYMBOL-modality. The TTCL §II.3 signature is `encodeSign(s: Sign<Symbol,T>, …)`
+ * — only Symbol-modality signs are encodable (the argument/legisign level).
+ */
+export class EncSignModalityError extends Error {
+  readonly modality: Modality;
+  constructor(modality: Modality) {
+    super(`encodeSign requires a SYMBOL-modality sign, got ${modality}`);
+    this.name = "EncSignModalityError";
+    this.modality = modality;
+  }
+}
+
+/** Byte alphabet used by the L1 cipher over serialized signs. */
+const ENC_ALPHABET = 256;
+
+/**
+ * `encodeSign` — the TTCL §II.3 / §II.6 L1 encoding op.
+ *
+ * Serializes a `Sign<Symbol,T>` to a deterministic numeric payload
+ * (`serializeSign`), projects it to UTF-8 bytes, and encrypts it under the
+ * Trithemius polyalphabetic cipher keyed by `keyCap`'s wheel. Consumes the
+ * `KeyCap` (single-use capability — a second `encodeSign`/`decodeSign` on the
+ * same KeyCap throws `KeyCapAlreadyConsumedError`). The result is an opaque
+ * `EncToken` recoverable only by `decodeSign` with a matching wheel + key.
+ *
+ * The `keyCap` alphabet must cover the byte range (use 256); a smaller alphabet
+ * re-throws the KeyCap's `RangeError` on out-of-range bytes. The `wheel`
+ * argument is accepted for signature fidelity to the spec; the cipher key
+ * state lives in `keyCap.wheel` (the KeyCap owns its wheel).
+ *
+ * Effects (§II.4): `KeyAccess`, `ProvenanceMutation`. Consumes `KeyCap` (linear).
+ */
+export function encodeSign<T extends Domain>(
+  sign: Sign<"SYMBOL", T>,
+  _wheel: Wheel<any>,
+  keyCap: KeyCap<Wheel<any>, number>,
+): EncToken {
+  if (sign.modality !== "SYMBOL") {
+    throw new EncSignModalityError(sign.modality);
+  }
+  const payload = serializeSign(sign);
+  const bytes = new TextEncoder().encode(JSON.stringify(payload));
+  const { cipher, keyOffset } = keyCap.encrypt(Array.from(bytes));
+  keyCap.consume();
+  return { cipher, keyOffset };
+}
+
+/**
+ * `decodeSign` — inverse of `encodeSign` (TTCL §II.3 / §II.6 L1).
+ *
+ * Decrypts the `EncToken` under a matching `keyCap` (consumes it), reconstructs
+ * the numeric payload, and runs `deserializeSign` to rebuild the `Sign`.
+ * `trace` is not recoverable (same lossy constraint as the numeric codec). A
+ * wrong key (mismatched wheel size / alphabet) yields a ciphertext that does
+ * not parse back to a valid payload — surfaced as a JSON or `deserializeSign`
+ * error. Consumes the `KeyCap` (linear).
+ *
+ * Effects (§II.4): `KeyAccess`, `ProvenanceMutation`. Consumes `KeyCap` (linear).
+ */
+export function decodeSign<T extends Domain>(
+  token: EncToken,
+  _wheel: Wheel<any>,
+  keyCap: KeyCap<Wheel<any>, number>,
+): Sign<"SYMBOL", T> {
+  const bytes = keyCap.decrypt(token.cipher, token.keyOffset);
+  keyCap.consume();
+  const json = new TextDecoder().decode(Uint8Array.from(bytes));
+  const payload = JSON.parse(json) as number[];
+  return deserializeSign(payload) as Sign<"SYMBOL", T>;
 }
