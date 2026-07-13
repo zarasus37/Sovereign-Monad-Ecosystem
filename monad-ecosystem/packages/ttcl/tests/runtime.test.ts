@@ -17,6 +17,7 @@ import {
   combineWheels,
   combineWheelsBudgeted,
   KeyCap,
+  KeyCapAlreadyConsumedError,
   keyRotate,
   makeSign,
   compose,
@@ -25,14 +26,17 @@ import {
   choose,
   fold,
   rotateWheel,
+  serializeSign,
+  deserializeSign,
   encodeSign,
   decodeSign,
+  EncSignModalityError,
   prove,
   emitObservation,
   distill,
   getManifold,
 } from "../src/runtime/index.js";
-import type { CoarseMode, Domain, Sign, Modality } from "../src/runtime/index.js";
+import type { CoarseMode, Domain, Sign, Modality, EncToken } from "../src/runtime/index.js";
 
 const manifold = getManifold();
 
@@ -248,7 +252,7 @@ describe("prove / emitObservation / distill (runtime gates)", () => {
   });
 });
 
-describe("encodeSign / decodeSign (round-trip)", () => {
+describe("serializeSign / deserializeSign (numeric round-trip)", () => {
   const cases: Array<{ modality: Modality; domain: Domain; pps: number }> = [
     { modality: "ICON", domain: "THEOLOGY", pps: 0.3 },
     { modality: "INDEX", domain: "TECHNOLOGY", pps: 0.65 },
@@ -268,7 +272,7 @@ describe("encodeSign / decodeSign (round-trip)", () => {
         // trace is intentionally lossy in the encoded payload.
         { intentionId: "i-1", source: "srcA" },
       );
-      const decoded = decodeSign(encodeSign(original));
+      const decoded = deserializeSign(serializeSign(original));
       expect(decoded.modality).toBe(c.modality);
       expect(decoded.domain).toBe(c.domain);
       expect(decoded.pps).toBeCloseTo(c.pps, 6);
@@ -292,12 +296,12 @@ describe("encodeSign / decodeSign (round-trip)", () => {
       formalSign("TECHNOLOGY", "INDEX", 0.8),
       formalSign("COSMOLOGY", "ICON", 0.7),
     );
-    const decoded = decodeSign(encodeSign(joined));
+    const decoded = deserializeSign(serializeSign(joined));
     expect(decoded.modality).toBe("HYBRID");
     expect(decoded.peirce.sign_class_id).toBe(joined.peirce.sign_class_id);
   });
 
-  it("decodeSign throws on an unknown class id", () => {
+  it("deserializeSign throws on an unknown class id", () => {
     const sign = makeSign(
       formalArgumentClassId(),
       "SYMBOL",
@@ -306,7 +310,73 @@ describe("encodeSign / decodeSign (round-trip)", () => {
       0.5,
     ) as Sign<any, any>;
     (sign.peirce as any).sign_class_id = 999_999;
-    expect(() => decodeSign(encodeSign(sign))).toThrow(UnknownSignClassError);
+    expect(() => deserializeSign(serializeSign(sign))).toThrow(
+      UnknownSignClassError,
+    );
+  });
+});
+
+describe("encodeSign / decodeSign (Trithemius cipher, L1)", () => {
+  /** A fresh byte-alphabet (256) KeyCap over a wheel of the given size. */
+  function freshKey(size: number) {
+    return new KeyCap(new Wheel(size), 256);
+  }
+
+  it("round-trips a SYMBOL sign through an EncToken (modulo trace)", () => {
+    const original = formalSign("THEOLOGY", "SYMBOL", 0.84);
+    const encKey = freshKey(256);
+    const token = encodeSign(original, encKey.wheel, encKey);
+    expect(encKey.consumed).toBe(true);
+    // EncToken cipher is byte-range (opaque, not the plaintext payload).
+    expect(token.cipher.some((n) => n >= 256)).toBe(false);
+
+    const decKey = freshKey(256);
+    const decoded = decodeSign(token, decKey.wheel, decKey);
+    expect(decKey.consumed).toBe(true);
+    expect(decoded.modality).toBe("SYMBOL");
+    expect(decoded.domain).toBe("THEOLOGY");
+    expect(decoded.pps).toBeCloseTo(0.84, 6);
+    expect(decoded.peirce.sign_class_id).toBe(original.peirce.sign_class_id);
+    expect(decoded.peirce.path).toEqual(original.peirce.path);
+    expect(decoded.trace).toBeUndefined();
+  });
+
+  it("encodeSign rejects a non-SYMBOL sign", () => {
+    const icon = formalSign("TECHNOLOGY", "ICON", 0.5);
+    const key = freshKey(256);
+    expect(() => encodeSign(icon, key.wheel, key)).toThrow(EncSignModalityError);
+  });
+
+  it("encodeSign consumes the KeyCap (single-use capability)", () => {
+    const sym = formalSign("COSMOLOGY", "SYMBOL", 0.6);
+    const key = freshKey(256);
+    encodeSign(sym, key.wheel, key);
+    expect(key.consumed).toBe(true);
+    expect(() => encodeSign(sym, key.wheel, key)).toThrow(
+      KeyCapAlreadyConsumedError,
+    );
+  });
+
+  it("decodeSign consumes the KeyCap (single-use capability)", () => {
+    const sym = formalSign("COSMOLOGY", "SYMBOL", 0.6);
+    const encKey = freshKey(256);
+    const token = encodeSign(sym, encKey.wheel, encKey);
+    const decKey = freshKey(256);
+    decodeSign(token, decKey.wheel, decKey);
+    expect(decKey.consumed).toBe(true);
+    expect(() => decodeSign(token, decKey.wheel, decKey)).toThrow(
+      KeyCapAlreadyConsumedError,
+    );
+  });
+
+  it("decodeSign with a mismatched key fails to recover the sign", () => {
+    const original = formalSign("THEOLOGY", "SYMBOL", 0.7);
+    const encKey = freshKey(256);
+    const token = encodeSign(original, encKey.wheel, encKey);
+    // A key over a different wheel size yields a different shift sequence, so
+    // the decrypted bytes do not parse back to a valid sign payload.
+    const wrongKey = new KeyCap(new Wheel(7), 256);
+    expect(() => decodeSign(token, wrongKey.wheel, wrongKey)).toThrow();
   });
 });
 

@@ -22,12 +22,16 @@ import { getManifold } from "@sovereign/types";
 import type { EventTrace } from "@sovereign/types";
 import {
   Wheel,
+  KeyCap,
   makeSign,
   mergeTraces,
+  encodeSign,
+  decodeSign,
 } from "@sovereign/ttcl";
-import type { Sign, Modality, Domain } from "@sovereign/ttcl";
+import type { Sign, Modality, Domain, EncToken } from "@sovereign/ttcl";
 
-import type { SignGraph, NodeId, OpDecl, SignDecl } from "../semiotic/graph.js";
+import type { SignGraph, NodeId, OpDecl, SignDecl, ProvenanceOpDecl, KeyCapDecl } from "../semiotic/graph.js";
+import { provenanceOpsInOrder, provenanceKeyCapsInOrder } from "../semiotic/binding.js";
 import { LatticeAbortError } from "../errors.js";
 
 /** A materialized node value: a Wheel or a Sign. */
@@ -51,8 +55,13 @@ export function buildValues(graph: SignGraph): Map<NodeId, SsaValue> {
       values.set(id, materializeSign(node));
       continue;
     }
-    // op
-    values.set(id, materializeOp(graph, node, values));
+    if (node.kind === "op") {
+      values.set(id, materializeOp(graph, node, values));
+      continue;
+    }
+    // Provenance nodes (keycap/token/provop) are never pushed to `order` by
+    // the loader, so this is unreachable — guard in depth.
+    throw new Error(`materialize: unexpected node kind '${node.kind}' in order`);
   }
   return values;
 }
@@ -156,4 +165,123 @@ export function collectWheels(
 /** Type guard: is this value a Sign (not a Wheel)? */
 export function isSign(v: SsaValue): v is Sign<Modality, Domain> {
   return !(v instanceof Wheel) && typeof v === "object" && "modality" in v;
+}
+
+// --- L0 — provenance lowering (encodeSign / decodeSign → runtime cipher) ---
+//
+// The L1 pass has already validated linear threading, the SYMBOL-modality
+// requirement, and the KeyCap capability discipline. L0 lowers each provenance
+// encoding op to the runtime Trithemius cipher: encodeSign produces an opaque
+// `EncToken`; decodeSign consumes an EncToken + KeyCap to recover a Sign. Each
+// KeyCap is materialized fresh from its `KeyCapDecl` (wheel ref → the
+// materialized Wheel, + alphabetSize) and is consumed exactly once — the
+// runtime `KeyCapAlreadyConsumedError` is the backstop for the linear-use
+// invariant the L1 pass already proved.
+//
+// Order: encodeSign ops have no provenance-internal dependencies (they read a
+// main-graph sign); decodeSign ops depend on an encodeSign's EncToken. The
+// binding pass guarantees decodeSign.token resolves to an encodeSign op, so
+// processing all encodeSign ops before decodeSign ops is a valid topological
+// order for the provenance-internal dependency graph.
+
+/** A materialized provenance value: an EncToken (encodeSign) or a Sign (decodeSign). */
+export type ProvenanceValue = EncToken | Sign<Modality, Domain>;
+
+/** Per-op outcome of the L0 provenance lowering, keyed by provop id. */
+export type ProvenanceValues = ReadonlyMap<NodeId, ProvenanceValue>;
+
+/**
+ * Lower the provenance encoding ops to runtime values. Returns an empty map
+ * when the program has no `provenance` section (the L1 pass was a no-op).
+ *
+ * Throws the runtime `EncSignModalityError` / `KeyCapAlreadyConsumedError` only
+ * if the L1 pass was bypassed — under the facade they are unreachable (the L1
+ * pass proved linearity + modality). Kept as defense-in-depth backstops.
+ */
+export function buildProvenanceValues(
+  graph: SignGraph,
+  values: ReadonlyMap<NodeId, SsaValue>,
+): ProvenanceValues {
+  const section = graph.provenance;
+  if (!section) return new Map();
+
+  // Materialize a fresh KeyCap for each declaration (the wheel comes from the
+  // main-graph materialization; alphabetSize from the decl).
+  const keyCaps = new Map<NodeId, KeyCap<Wheel<any>, number>>();
+  for (const decl of provenanceKeyCapsInOrder(graph)) {
+    const wheel = wheelFor(graph, decl, values);
+    keyCaps.set(decl.id, new KeyCap<Wheel<any>, number>(wheel, decl.alphabetSize));
+  }
+
+  const out = new Map<NodeId, ProvenanceValue>();
+
+  // Pass 1: encodeSign (no provenance-internal deps).
+  for (const o of provenanceOpsInOrder(graph)) {
+    if (o.op !== "encodeSign") continue;
+    out.set(o.id, lowerEncodeSign(graph, o, values, keyCaps));
+  }
+  // Pass 2: decodeSign (depends on an encodeSign EncToken, now in `out`).
+  for (const o of provenanceOpsInOrder(graph)) {
+    if (o.op !== "decodeSign") continue;
+    out.set(o.id, lowerDecodeSign(graph, o, values, keyCaps, out));
+  }
+
+  return out;
+}
+
+function wheelFor(
+  graph: SignGraph,
+  decl: KeyCapDecl,
+  values: ReadonlyMap<NodeId, SsaValue>,
+): Wheel<any> {
+  const w = values.get(decl.wheel);
+  if (!(w instanceof Wheel)) {
+    // Defensive: bindProvenance resolved decl.wheel to a wheel node, which
+    // buildValues materialized. Unreachable under the facade.
+    throw new Error(
+      `provenance: KeyCap '${decl.id}' references wheel '${decl.wheel}' that did not materialize`,
+    );
+  }
+  return w;
+}
+
+function lowerEncodeSign(
+  graph: SignGraph,
+  o: ProvenanceOpDecl,
+  values: ReadonlyMap<NodeId, SsaValue>,
+  keyCaps: ReadonlyMap<NodeId, KeyCap<Wheel<any>, number>>,
+): EncToken {
+  const sign = values.get(o.sign!);
+  if (!sign || !isSign(sign)) {
+    throw new Error(
+      `provenance: encodeSign '${o.id}' references sign '${o.sign}' that did not materialize`,
+    );
+  }
+  const wheel = wheelFor(graph, { kind: "keycap", id: o.id, wheel: o.wheel, alphabetSize: 0 }, values);
+  const keyCap = keyCaps.get(o.keyCap)!;
+  // L1 proved the sign is SYMBOL-modality; the cast satisfies the runtime
+  // signature `encodeSign(sign: Sign<"SYMBOL", T>, …)`.
+  return encodeSign(sign as Sign<"SYMBOL", Domain>, wheel, keyCap);
+}
+
+function lowerDecodeSign(
+  graph: SignGraph,
+  o: ProvenanceOpDecl,
+  values: ReadonlyMap<NodeId, SsaValue>,
+  keyCaps: ReadonlyMap<NodeId, KeyCap<Wheel<any>, number>>,
+  out: ReadonlyMap<NodeId, ProvenanceValue>,
+): Sign<Modality, Domain> {
+  const enc = out.get(o.token!);
+  if (!enc || "modality" in enc) {
+    // `enc` must be an EncToken from an encodeSign op (binding guaranteed the
+    // ref resolves to an encodeSign; the encodeSign pass above populated it).
+    // A Sign has `modality`; an EncToken does not — so `modality in enc` means
+    // the referenced op produced a Sign, not an EncToken.
+    throw new Error(
+      `provenance: decodeSign '${o.id}' references token '${o.token}' that is not an EncToken`,
+    );
+  }
+  const wheel = wheelFor(graph, { kind: "keycap", id: o.id, wheel: o.wheel, alphabetSize: 0 }, values);
+  const keyCap = keyCaps.get(o.keyCap)!;
+  return decodeSign(enc, wheel, keyCap);
 }

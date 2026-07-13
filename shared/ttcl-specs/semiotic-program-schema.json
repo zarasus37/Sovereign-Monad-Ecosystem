@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://the-sovereign/ttcl-specs/semiotic-program-schema.json",
   "title": "TTCL Semiotic Program — compiler L3 (SemioticDialect) input contract",
-  "description": "A declarative TTCL program consumed by the @sovereign/compiler L3 SemioticDialect loader. Declares wheels, signs, and combinator ops; the compiler builds an SSA SignGraph, runs L2 passes (type/modality inference, constitution compliance, budgeted expansion), and — on success — lowers to the @sovereign/ttcl runtime (L0) by instantiating Wheel/Sign objects. Validated at load time with ajv. The op set for v1: compose (the TTCL JOIN), map / fold / choose (modality-preserving passthroughs in v1 — full branch-join semantics deferred). encodeSign/decodeSign (L1 Provenance) are not accepted. Sample programs: shared/fixtures/layer7/semiotic-program-{triadic,raw-technology}.json.",
+  "description": "A declarative TTCL program consumed by the @sovereign/compiler L3 SemioticDialect loader. Declares wheels, signs, and combinator ops; the compiler builds an SSA SignGraph, runs L2 passes (type/modality inference, constitution compliance, budgeted expansion), then the L1 Provenance pass (linear token threading, encodeSign/decodeSign lowering, KeyCap capability check) over the optional `provenance` section, and — on success — lowers to the @sovereign/ttcl runtime (L0) by instantiating Wheel/Sign objects. Validated at load time with ajv. The L2 combinator op set: compose (the TTCL JOIN), map / fold / choose (modality-preserving passthroughs in v1 — full branch-join semantics deferred). The L1 encoding ops (encodeSign / decodeSign) live in the optional `provenance.ops` array, NOT in `ops`. Sample programs: shared/fixtures/layer7/semiotic-program-{triadic,raw-technology}.json.",
   "type": "object",
   "required": ["program", "wheels", "signs", "ops", "budget", "output"],
   "additionalProperties": false,
@@ -109,6 +109,76 @@
       "type": "string",
       "minLength": 1,
       "description": "Terminal SSA node id (the program's output). Triadic closure is enforced on this node's inferred domains."
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Optional L1 Provenance section (the Linear-types fundamental). Declares single-use Trithemius key capabilities (KeyCaps), linear provenance tokens (emitToken / mergeProvenance), and encoding ops (encodeSign / decodeSign) that lower to the runtime cipher. The L2 `ops` enum is unchanged — encodeSign/decodeSign are NOT accepted in `ops` (they live here). The compiler's L1 pass enforces linear token threading (one terminal token = the provenance root), a SYMBOL-modality check on encodeSign, and the KeyCap capability check (each key consumed exactly once). When absent, L1 is a no-op and the program lowers as before.",
+      "additionalProperties": false,
+      "required": ["keyCaps", "tokens", "ops"],
+      "properties": {
+        "keyCaps": {
+          "type": "array",
+          "description": "Trithemius key capability declarations. Each is single-use (consumed exactly once by one encodeSign/decodeSign op). `wheel` references a declared wheel; `alphabetSize` is the cipher alphabet (use 256 for byte-range signs).",
+          "items": {
+            "type": "object",
+            "required": ["id", "wheel", "alphabetSize"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "wheel": { "type": "string", "minLength": 1, "description": "Referenced wheel node id." },
+              "alphabetSize": { "type": "integer", "minimum": 1 }
+            }
+          }
+        },
+        "tokens": {
+          "type": "array",
+          "description": "Linear provenance tokens. `emitToken` anchors a token at an index; `mergeProvenance` joins input tokens into one merged lineage. Each token is consumed at most once (by a mergeProvenance input); exactly one token is the unconsumed terminal (the provenance root). Double-consumed or ambiguous-root tokens are L1 compile errors.",
+          "items": {
+            "type": "object",
+            "required": ["id", "op"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "op": { "type": "string", "enum": ["emitToken", "mergeProvenance"] },
+              "index": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "emitToken anchor index (required for emitToken)."
+              },
+              "inputs": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string", "minLength": 1 },
+                "description": "mergeProvenance referenced token ids (required for mergeProvenance)."
+              }
+            }
+          }
+        },
+        "ops": {
+          "type": "array",
+          "description": "Encoding lowering ops. `encodeSign` reads a SYMBOL-modality sign + consumes a KeyCap, producing an opaque EncToken (the Trithemius ciphertext). `decodeSign` reads an EncToken + consumes a KeyCap, producing a recovered Sign. `wheel` is accepted for signature fidelity to encodeSign(s,w,k); the cipher key state lives in the KeyCap's wheel. These are the L1 dialect ops — distinct from the L2 combinator `ops` array.",
+          "items": {
+            "type": "object",
+            "required": ["id", "op", "wheel", "keyCap"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "op": { "type": "string", "enum": ["encodeSign", "decodeSign"] },
+              "sign": {
+                "type": "string",
+                "minLength": 1,
+                "description": "encodeSign: the sign node id to encode (must be SYMBOL-modality)."
+              },
+              "token": {
+                "type": "string", "minLength": 1,
+                "description": "decodeSign: the EncToken-producing op id to decode (an encodeSign op)."
+              },
+              "wheel": { "type": "string", "minLength": 1, "description": "Referenced wheel node id." },
+              "keyCap": { "type": "string", "minLength": 1, "description": "Referenced KeyCap id (consumed)." }
+            }
+          }
+        }
+      }
     }
   }
 }
