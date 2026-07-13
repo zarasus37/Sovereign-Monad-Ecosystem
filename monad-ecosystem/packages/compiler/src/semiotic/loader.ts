@@ -76,7 +76,7 @@ interface ProgramJson {
     noRlhf?: boolean;
     trace?: EventTrace;
   }[];
-  ops: { id: NodeId; op: CombinatorOp; inputs: NodeId[] }[];
+  ops: { id: NodeId; op: CombinatorOp; inputs: NodeId[]; modality?: Modality }[];
   constitution?: { threshold?: number };
   budget: number;
   output: NodeId;
@@ -157,6 +157,7 @@ export function loadProgram(json: unknown): SignGraph {
       id: o.id,
       op: o.op,
       inputs: o.inputs,
+      modality: o.modality,
     };
     assertUniqueId(nodes, o.id);
     nodes.set(o.id, decl);

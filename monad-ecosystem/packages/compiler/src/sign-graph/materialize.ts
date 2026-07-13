@@ -14,8 +14,15 @@
  * / domain-union / merged-trace logic mirrors the runtime `compose`
  * (`ttcl/src/runtime/combinators.ts:141-170`) exactly, minus the gate.
  *
- * v1: `map`/`fold`/`choose` materialize as a passthrough of `inputs[0]`'s sign
- * (the carrier), matching the inference pass's passthrough semantics.
+ * `map` is eliminated by the rewrite pass (a structural identity at the IR
+ * level) — `buildValues` materializes an eliminated `map` as its carrier's
+ * value via the resolve map. `fold`/`choose` materialize as `inputs[0]`'s sign
+ * (the first branch — a concrete representative), while their *inferred type*
+ * is the lattice JOIN of all branches (inference); the lowered value is one
+ * real branch, the type is the upper bound. `attachModality` lowers to a fresh
+ * Sign equal to its carrier with `.modality` overridden — the override lives
+ * only in this runtime Sign (+ the inference cache), not in the immutable
+ * `SignDecl`.
  */
 
 import { getManifold } from "@sovereign/types";
@@ -32,6 +39,7 @@ import type { Sign, Modality, Domain, EncToken } from "@sovereign/ttcl";
 
 import type { SignGraph, NodeId, OpDecl, SignDecl, ProvenanceOpDecl, KeyCapDecl } from "../semiotic/graph.js";
 import { provenanceOpsInOrder, provenanceKeyCapsInOrder } from "../semiotic/binding.js";
+import { canonical, type ResolveMap } from "./rewrite.js";
 import { LatticeAbortError } from "../errors.js";
 
 /** A materialized node value: a Wheel or a Sign. */
@@ -42,10 +50,25 @@ export type SsaValue = Wheel<any> | Sign<Modality, Domain>;
  * `LatticeAbortError` for an op over a wheel, and `UnknownSignClassError` (via
  * `makeSign`/the manifold) for an unknown class id. Does NOT throw on a
  * sub-triadic compose (the constitution pass handles that).
+ *
+ * `resolve` is the rewrite pass's resolve map (id → canonicalId). An eliminated
+ * `map` node is materialized as its canonical carrier's value (already built,
+ * since the carrier precedes it in topological order). Defaults to an empty map
+ * (no rewrite) so direct callers of the exported `buildValues` are unaffected.
  */
-export function buildValues(graph: SignGraph): Map<NodeId, SsaValue> {
+export function buildValues(
+  graph: SignGraph,
+  resolve: ResolveMap = new Map(),
+): Map<NodeId, SsaValue> {
   const values = new Map<NodeId, SsaValue>();
   for (const id of graph.order) {
+    // The rewrite pass may have eliminated this node (a `map` fused to its
+    // carrier). Its value is its canonical carrier's value.
+    const canon = canonical(resolve, id);
+    if (canon !== id) {
+      values.set(id, values.get(canon)!);
+      continue;
+    }
     const node = graph.nodes.get(id)!;
     if (node.kind === "wheel") {
       values.set(id, new Wheel<any>(node.size, node.initial));
@@ -87,12 +110,39 @@ function materializeOp(
   if (op.op === "compose") {
     return composeSigns(graph, op, values);
   }
-  // map / fold / choose — passthrough of inputs[0] (the carrier sign).
+  if (op.op === "attachModality") {
+    return materializeAttachModality(graph, op, values);
+  }
+  // map / fold / choose — passthrough of inputs[0] (the carrier / first branch).
+  // (`map` nodes are normally eliminated by the rewrite pass before reaching
+  // here; this branch is the fallback when no rewrite was run.)
   const carrier = values.get(op.inputs[0])!;
   if (!(carrier instanceof Wheel) && typeof carrier === "object" && "modality" in carrier) {
     return carrier;
   }
   throw new LatticeAbortError(op.id, `op '${op.op}' cannot operate on a wheel ('${op.inputs[0]}')`);
+}
+
+/**
+ * `attachModality` — lower to a fresh Sign equal to the carrier with its
+ * `modality` overridden. The carrier is read through the values map (an
+ * eliminated `map` carrier would already be its canonical's value). Domains,
+ * peirce, pps, and trace are inherited unchanged.
+ */
+function materializeAttachModality(
+  graph: SignGraph,
+  op: OpDecl,
+  values: ReadonlyMap<NodeId, SsaValue>,
+): Sign<Modality, Domain> {
+  if (op.modality === undefined) {
+    // Defensive: inference already threw; unreachable under the facade.
+    throw new LatticeAbortError(op.id, "attachModality requires a `modality` field");
+  }
+  const carrier = values.get(op.inputs[0])!;
+  if (!isSign(carrier)) {
+    throw new LatticeAbortError(op.id, `attachModality cannot operate on a wheel ('${op.inputs[0]}')`);
+  }
+  return { ...carrier, modality: op.modality };
 }
 
 /**

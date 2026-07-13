@@ -25,5 +25,5 @@
   "known_follow_ups": [
     "x402-bridge sovereignty remediation: cost-accounting ledger, documented failure/retry envelope (fix dead X402_MAX_CONCURRENT knob + User-Agent gap), and wiring to a sovereign-agent consumer (or archive). Smoke test GREEN 2026-07-10 (PR #30, eth_blockNumber on monad-mainnet); package remains LEGACY_NON_SOVEREIGN per docs/LEGACY_COMPONENTS.md §6."
   ],
-  "last_validated": "2026-07-10"
+  "last_validated": "2026-07-13"
 }

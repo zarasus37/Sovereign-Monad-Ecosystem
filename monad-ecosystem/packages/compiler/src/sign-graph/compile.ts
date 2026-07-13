@@ -7,17 +7,21 @@
  *   L3 load      → loadProgram(json)        : ajv-validate + build SSA SignGraph
  *                  bindGraph(graph)         : resolve refs + acyclicity + output
  *                  bindProvenance(graph)    : resolve provenance refs + acyclicity
- *   L2 analyze   → inferTypes(graph)       : modality/domains (lattice abort)
- *                  buildValues(graph)      : materialize runtime Wheels/Signs
- *                  checkConstitution(...)  : graph-wide scoreSign + triadic closure
- *                  checkBudget(...)        : combineWheelsBudgeted
+ *   L2 analyze   → inferTypes(graph)       : pass 1 — modality/domains (lattice abort)
+ *                  rewriteGraph(graph)     : pass 2 — fusion/simplification (map elimination)
+ *                  buildValues(graph, res) : materialize runtime Wheels/Signs (L2→L0 bridge)
+ *                  checkConstitution(...)  : pass 3 — graph-wide scoreSign + triadic closure
+ *                  checkBudget(...)        : pass 4 — combineWheelsBudgeted
  *   L1 provenance→ checkProvenance(...)    : linear threading + SYMBOL modality
  *                                             + KeyCap capability (no-op if absent)
  *   L0 lower     → return the terminal Sign + wheels + provenance artifacts
  *
- * Each L3/L2/L1 step throws a `CompilerError` subtype (or the runtime
- * `WheelBudgetExceededError`) on failure. On constitution/budget failure the
- * facade throws `ConstitutionCompileError`; on provenance failure
+ * The four L2 passes run in the spec's order (inference → rewrite → constitution
+ * → budget); `buildValues` is the L2→L0 bridge that constitution peeks into to
+ * score the materialized output Sign, so it runs after rewrite and before
+ * constitution. Each L3/L2/L1 step throws a `CompilerError` subtype (or the
+ * runtime `WheelBudgetExceededError`) on failure. On constitution/budget failure
+ * the facade throws `ConstitutionCompileError`; on provenance failure
  * `ProvenanceCompileError` — aggregating every failure's reasoning — and the
  * materialized output is NOT returned. That is the prose's "compile error, not
  * a runtime surprise" guarantee: a constitution- or provenance-failing program
@@ -29,6 +33,7 @@ import type { Modality, Domain, Sign, Wheel } from "@sovereign/ttcl";
 import type { SignGraph, NodeId, InferredType } from "../semiotic/graph.js";
 import { loadProgram } from "../semiotic/loader.js";
 import { inferTypes } from "./inference.js";
+import { rewriteGraph, type ResolveMap } from "./rewrite.js";
 import {
   buildValues,
   buildProvenanceValues,
@@ -68,6 +73,8 @@ export interface CompiledProvenance {
 export interface CompiledProgram {
   readonly graph: SignGraph;
   readonly types: ReadonlyMap<NodeId, InferredType>;
+  /** The rewrite pass's resolve map (id → canonicalId); eliminated `map` ids map to their carrier. */
+  readonly resolve: ResolveMap;
   readonly constitution: GraphConstitutionResult;
   readonly provenance: CompiledProvenance;
   readonly output: CompiledOutput;
@@ -76,31 +83,36 @@ export interface CompiledProgram {
 /**
  * Compile a semiotic program: load → analyze → lower. Throws a `CompilerError`
  * subtype on any L3/L2 failure, or `WheelBudgetExceededError` on a budget
- * overflow that the constitution pass did not catch first. On success returns
- * the materialized terminal Sign + the full graph-wide constitution verdict.
+ * overflow. On success returns the materialized terminal Sign + the full
+ * graph-wide constitution verdict.
  */
 export function compileProgram(json: unknown): CompiledProgram {
   // L3 — load + bind.
   const graph = loadProgram(json);
 
-  // L2 — inference (may throw LatticeAbortError).
+  // L2 pass 1 — inference (may throw LatticeAbortError).
   const types = inferTypes(graph);
 
+  // L2 pass 2 — rewrite (fusion / simplification). Produces the resolve map
+  // (id → canonicalId); eliminates `map` passthroughs. Never throws.
+  const resolve = rewriteGraph(graph);
+
   // L2 → L0 — materialize runtime values (may throw UnknownSignClassError).
-  const values = buildValues(graph);
+  // Eliminated `map` nodes materialize as their carrier's value via `resolve`.
+  const values = buildValues(graph, resolve);
 
-  // L2 — budgeted expansion (may throw WheelBudgetExceededError — a typed
-  // compile error). Run before constitution so a state-space overflow is the
-  // first failure surfaced; the program cannot be valid with an unbounded
-  // state space.
-  checkBudget(graph, values);
-
-  // L2 — constitution compliance (graph-wide). Never throws on a failing
+  // L2 pass 3 — constitution compliance (graph-wide). Never throws on a failing
   // verdict; returns the verdict so we aggregate reasoning.
   const constitution = checkConstitution(graph, types, values);
   if (!constitution.pass) {
     throw toCompileError(constitution);
   }
+
+  // L2 pass 4 — budgeted expansion (may throw WheelBudgetExceededError). Runs
+  // after constitution per the spec's four-pass order (inference → rewrite →
+  // constitution → budget); a program failing both surfaces the constitution
+  // error first.
+  checkBudget(graph, values);
 
   // L1 — provenance compliance (linear token threading + SYMBOL-modality on
   // encodeSign + KeyCap capability). No-op when the program has no `provenance`
@@ -129,6 +141,7 @@ export function compileProgram(json: unknown): CompiledProgram {
   return {
     graph,
     types,
+    resolve,
     constitution,
     provenance: { verdict: provenanceVerdict, values: provenanceValues },
     output: {

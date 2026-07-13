@@ -158,8 +158,13 @@ export function bindProvenance(graph: SignGraph): void {
       if (!o.sign) {
         throw new UnresolvedReferenceError("<encodeSign sign>", o.id);
       }
-      const signNode = resolveRef(graph, o.sign, o.id, "sign");
-      if (signNode.kind !== "sign") {
+      // encodeSign.sign must be a sign-PRODUCING node: a `sign` declaration OR
+      // an `op` output (e.g. an `attachModality` that promotes a non-SYMBOL
+      // sign to SYMBOL so it becomes encodable). Wheels / provenance nodes are
+      // not sign-producing and are rejected. The SYMBOL-modality requirement is
+      // enforced later by the L1 pass (`checkEncodingModality`), not here.
+      const signNode = graph.nodes.get(o.sign);
+      if (!signNode || (signNode.kind !== "sign" && signNode.kind !== "op")) {
         throw new UnresolvedReferenceError(o.sign, o.id);
       }
     } else {

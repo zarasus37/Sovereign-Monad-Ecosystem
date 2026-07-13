@@ -15,8 +15,18 @@ import type { Modality, Domain } from "@sovereign/ttcl";
 /** SSA node id (declared `id` from the program JSON). */
 export type NodeId = string;
 
-/** The four combinator ops the L2 dialect accepts in v1. */
-export type CombinatorOp = "compose" | "map" | "fold" | "choose";
+/**
+ * The combinator ops the L2 dialect accepts.
+ *
+ * `compose` is the TTCL JOIN (output HYBRID). `map` is a unary carrier
+ * passthrough (the IR carries no function payload, so it is structural identity
+ * — the rewrite pass eliminates it). `fold` / `choose` are the branching
+ * combinators: their inferred type is the lattice JOIN of all inputs (full
+ * branch-join semantics). `attachModality` overrides its carrier's modality
+ * (the L3 op the spec names but does not define — realized here as a distinct
+ * SSA op per PROJECT_STATE; see `OpDecl.modality`).
+ */
+export type CombinatorOp = "compose" | "map" | "fold" | "choose" | "attachModality";
 
 /** A wheel declaration node (Llull rotating wheel). */
 export interface WheelDecl {
@@ -40,12 +50,17 @@ export interface SignDecl {
   readonly noRlhf?: boolean;
 }
 
-/** A combinator op node; references prior SSA nodes by id. */
+/**
+ * A combinator op node; references prior SSA nodes by id. `modality` is the
+ * target modality for `attachModality` (required for that op, absent otherwise
+ * — enforced by the schema's `if`/`then` and defended in inference).
+ */
 export interface OpDecl {
   readonly kind: "op";
   readonly id: NodeId;
   readonly op: CombinatorOp;
   readonly inputs: readonly NodeId[];
+  readonly modality?: Modality;
 }
 
 /** Any SSA node (main graph + provenance sub-graph, discriminated by `kind`). */

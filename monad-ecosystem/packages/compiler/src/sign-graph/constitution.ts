@@ -1,5 +1,5 @@
 /**
- * L2 SignGraphDialect — pass 2: constitution compliance (graph-wide).
+ * L2 SignGraphDialect — pass 3: constitution compliance (graph-wide).
  *
  * This is the keystone of the compiler stack — the prose's central guarantee
  * (`theo-techno-cosmo/plex/Review/The Four Fundamentals TTCL Is Built.txt:85`):
@@ -62,8 +62,9 @@ const ALL_DOMAINS: readonly ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"] = [
 /**
  * Run the graph-wide constitution pass. Does NOT throw on a failing graph —
  * returns the verdict so the facade can decide (the facade throws
- * `ConstitutionCompileError` when `pass === false`, after also running the
- * budget pass so the reasoning aggregates every failure).
+ * `ConstitutionCompileError` when `pass === false`). Per the spec's four-pass
+ * order, constitution (pass 3) runs before budget (pass 4); a program failing
+ * both surfaces the constitution error first.
  *
  * Throws `InvalidOutputError` only if the output node is not sign-producing
  * (a structural error caught at L3 binding, but defended here too).

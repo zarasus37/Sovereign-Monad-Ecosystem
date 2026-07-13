@@ -70,21 +70,41 @@
     },
     "ops": {
       "type": "array",
-      "description": "Combinator ops (the L2 SignGraphDialect). Each op references prior SSA nodes by id. `compose` is the TTCL JOIN (output HYBRID); `map`/`fold`/`choose` are modality-preserving passthroughs in v1.",
+      "description": "Combinator ops (the L2 SignGraphDialect). Each op references prior SSA nodes by id. `compose` is the TTCL JOIN (output HYBRID); `map` is a unary carrier passthrough (structural identity at the IR level — the rewrite pass eliminates it); `fold`/`choose` are branching combinators whose inferred type is the lattice JOIN of all inputs (full branch-join semantics); `attachModality` overrides its single carrier's modality (requires `modality` + exactly one input — enforced by the `if`/`then` below).",
       "items": {
         "type": "object",
         "required": ["id", "op", "inputs"],
         "additionalProperties": false,
         "properties": {
           "id": { "type": "string", "minLength": 1 },
-          "op": { "type": "string", "enum": ["compose", "map", "fold", "choose"] },
+          "op": { "type": "string", "enum": ["compose", "map", "fold", "choose", "attachModality"] },
           "inputs": {
             "type": "array",
             "minItems": 1,
             "items": { "type": "string", "minLength": 1 },
             "description": "Referenced SSA node ids (signs or prior ops)."
+          },
+          "modality": {
+            "type": "string",
+            "enum": ["PURE", "ICON", "INDEX", "SYMBOL", "HYBRID"],
+            "description": "attachModality: the target modality to attach to the carrier (required for attachModality, ignored otherwise)."
           }
-        }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": { "op": { "const": "attachModality" } },
+              "required": ["op"]
+            },
+            "then": {
+              "required": ["modality"],
+              "properties": {
+                "modality": true,
+                "inputs": { "type": "array", "maxItems": 1 }
+              }
+            }
+          }
+        ]
       }
     },
     "constitution": {
@@ -167,7 +187,7 @@
               "sign": {
                 "type": "string",
                 "minLength": 1,
-                "description": "encodeSign: the sign node id to encode (must be SYMBOL-modality)."
+                "description": "encodeSign: the sign-producing node id to encode — a `sign` declaration or an `op` output (e.g. an `attachModality` that promotes a non-SYMBOL sign to SYMBOL). Must infer to SYMBOL-modality (enforced by the L1 pass)."
               },
               "token": {
                 "type": "string", "minLength": 1,
