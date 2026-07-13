@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/ttcl-specs/gnosis-event.json",
+  "title": "Gnosis Training Event",
+  "description": "The data contract for a single Gnosis training event — one sample in the JSONL feedstock the future Layer 7 SFT stage consumes. Source of truth for the field set + semantics: theo-techno-cosmo/plex/archive/TTCL_v1_0_BREAKDOWN.md:314-359 (Part 2: THE GNOSIS EVENT FORMAT). The spec gives the event *format* but no JSON Schema; this schema is the concretized contract (field names mirror the spec verbatim; types are the nearest faithful interpretation), documented here rather than presented as spec-mandated beyond the spec's own field list. The data-generation consumer (@sovereign/gnosis-training-data) emits events that validate against this schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "constitution_version",
+    "wheel_state",
+    "active_slots",
+    "provenance_tokens",
+    "messages",
+    "constitution_score"
+  ],
+  "properties": {
+    "event_id": {
+      "description": "Deterministic v5-style UUID (SHA-1 of namespace + seed:stepIndex:compositeKey). NOT random — required for byte-reproducible JSONL. The spec names the field 'uuid'; the deterministic derivation is a concretization.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "constitution_version": {
+      "description": "Constitution version tag (e.g. 'v1').",
+      "type": "string",
+      "minLength": 1
+    },
+    "wheel_state": {
+      "description": "Per-wheel rotation snapshot when this sample was generated. Keys are wheel names from the registry (A/T/V/X/S for llull-default); values are {offset, key_hash}.",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["offset", "key_hash"],
+        "properties": {
+          "offset": { "type": "integer", "minimum": 0 },
+          "key_hash": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "active_slots": {
+      "description": "The theological/technological/cosmological attributes in play, materialized from the step's facet→wheel binding + offsets.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["theology", "technology", "cosmology"],
+      "properties": {
+        "theology": { "$ref": "#/definitions/activeSlot" },
+        "technology": { "$ref": "#/definitions/activeSlot" },
+        "cosmology": { "$ref": "#/definitions/activeSlot" }
+      }
+    },
+    "provenance_tokens": {
+      "description": "Tokens linking this sample to the wheel slots that generated it. Concretization: one '<registry>:<wheel>:<offset>' per active facet.",
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "messages": {
+      "description": "System / user / assistant message scaffold. The assistant message is the SFT training target — the deterministic consumer leaves it empty; the response is produced downstream.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "content"],
+        "properties": {
+          "role": { "enum": ["system", "user", "assistant"] },
+          "content": { "type": "string" }
+        }
+      }
+    },
+    "constitution_score": {
+      "description": "The 5-criterion constitution verdict for this sample, computed by reusing @sovereign/ttcl scoreSign on a Sign materialized from the step's composite. The 5 criteria + total + passes mirror the spec's field names (tripartite/logic_compress/source_aligned/epistemic/no_rlhf_signal).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tripartite",
+        "logic_compress",
+        "source_aligned",
+        "epistemic",
+        "no_rlhf_signal",
+        "total",
+        "passes"
+      ],
+      "properties": {
+        "tripartite": { "type": "number", "minimum": 0, "maximum": 1 },
+        "logic_compress": { "type": "number", "minimum": 0, "maximum": 1 },
+        "source_aligned": { "type": "number", "minimum": 0, "maximum": 1 },
+        "epistemic": { "type": "number", "minimum": 0, "maximum": 1 },
+        "no_rlhf_signal": { "type": "number", "minimum": 0, "maximum": 1 },
+        "total": { "type": "number", "minimum": 0, "maximum": 1 },
+        "passes": { "type": "boolean" }
+      }
+    }
+  },
+  "definitions": {
+    "activeSlot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["wheel", "slot", "label"],
+      "properties": {
+        "wheel": { "type": "string", "minLength": 1 },
+        "slot": { "type": "string", "minLength": 1, "maxLength": 1 },
+        "label": {
+          "description": "Catalan slot label. ABSENT from the repo today (the Catalan slot-labels + Theologia-wheel data asset is not yet landed — see PROJECT_STATE). Emitted as null until that asset drops in. Never fabricated.",
+          "type": ["string", "null"]
+        }
+      }
+    }
+  }
+}

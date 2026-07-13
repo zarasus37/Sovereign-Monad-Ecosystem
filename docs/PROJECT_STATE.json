@@ -24,7 +24,7 @@
   },
   "known_follow_ups": [
     "x402-bridge sovereignty remediation: cost-accounting ledger, documented failure/retry envelope (fix dead X402_MAX_CONCURRENT knob + User-Agent gap), and wiring to a sovereign-agent consumer (or archive). Smoke test GREEN 2026-07-10 (PR #30, eth_blockNumber on monad-mainnet); package remains LEGACY_NON_SOVEREIGN per docs/LEGACY_COMPONENTS.md §6.",
-    "Layer 6 follow-ups (PR #38 landed the core optimizer): the data-generation consumer that turns a canonical_schedule into Gnosis training events is Layer 7 territory; the real 45-pair Llull PairTable + Catalan slot labels + the Theologia wheel are assets not in the repo (the scheduler is data-driven via shared/fixtures/layer6/wheel-registry.json, so they drop in as a data change); a scheduler CLI / W&B tracking is out of spec scope. Layer 7 Training Pipeline (SFT→Reward→PPO→Eval) is the unbuilt core."
+    "Layer 7 data-generation consumer LANDED (this PR): new @sovereign/gnosis-training-data package turns a Layer 6 canonical_schedule into Gnosis training events (JSONL) by reusing @sovereign/ttcl scoreSign — deterministic + byte-reproducible, one event per accepted step, Catalan slot labels emitted as null pending the data asset. Still unbuilt: the full Layer 7 Training Pipeline (SFT→Reward→PPO→Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL) — a real GPU job, deliberately not stubbed. Still open as DATA (not code): the real 45-pair Llull PairTable + Catalan slot labels + the Theologia wheel (the scheduler + consumer are data-driven via shared/fixtures/layer6/wheel-registry.json, so they drop in as a data change). Out of spec scope: a scheduler CLI / W&B tracking."
   ],
   "last_validated": "2026-07-13"
 }
