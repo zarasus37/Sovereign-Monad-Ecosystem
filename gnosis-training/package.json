@@ -1,0 +1,39 @@
+{
+  "name": "@sovereign/gnosis-training",
+  "version": "0.1.0",
+  "description": "TTCL Layer 7 Training Pipeline (SFT→Reward→PPO→Eval) — real TRL wiring, CPU-verified, GPU run pending. Sovereign Monad Ecosystem.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "powershell -Command \"if (Test-Path .venv/Scripts/python.exe) { .venv/Scripts/python.exe -m pytest tests/ -v } else { uv run pytest tests/ -v }\"",
+    "smoke-imports": "uv run python -m gnosis_training --smoke-imports",
+    "lint": "uv run ruff check src/",
+    "type-check": "uv run mypy src/",
+    "format": "uv run ruff format src/",
+    "clean": "rm -rf build/ dist/ .eggs/ *.egg-info .pytest_cache .mypy_cache .ruff_cache"
+  },
+  "keywords": [
+    "ttcl",
+    "layer-7",
+    "training-pipeline",
+    "trl",
+    "qllora",
+    "gnosis",
+    "sovereign-monad"
+  ],
+  "author": "Cris Colon",
+  "license": "Proprietary",
+  "engines": {
+    "node": ">=20.0.0",
+    "python": ">=3.11.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "private"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crisc-sovereign/the-sovereign",
+    "directory": "gnosis-training"
+  }
+}
