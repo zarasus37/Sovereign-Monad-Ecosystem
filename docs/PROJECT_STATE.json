@@ -23,7 +23,8 @@
     "frontend_build": "passing"
   },
   "known_follow_ups": [
-    "x402-bridge sovereignty remediation: cost-accounting ledger, documented failure/retry envelope (fix dead X402_MAX_CONCURRENT knob + User-Agent gap), and wiring to a sovereign-agent consumer (or archive). Smoke test GREEN 2026-07-10 (PR #30, eth_blockNumber on monad-mainnet); package remains LEGACY_NON_SOVEREIGN per docs/LEGACY_COMPONENTS.md §6."
+    "x402-bridge sovereignty remediation: cost-accounting ledger, documented failure/retry envelope (fix dead X402_MAX_CONCURRENT knob + User-Agent gap), and wiring to a sovereign-agent consumer (or archive). Smoke test GREEN 2026-07-10 (PR #30, eth_blockNumber on monad-mainnet); package remains LEGACY_NON_SOVEREIGN per docs/LEGACY_COMPONENTS.md §6.",
+    "Layer 6 follow-ups (PR #38 landed the core optimizer): the data-generation consumer that turns a canonical_schedule into Gnosis training events is Layer 7 territory; the real 45-pair Llull PairTable + Catalan slot labels + the Theologia wheel are assets not in the repo (the scheduler is data-driven via shared/fixtures/layer6/wheel-registry.json, so they drop in as a data change); a scheduler CLI / W&B tracking is out of spec scope. Layer 7 Training Pipeline (SFT→Reward→PPO→Eval) is the unbuilt core."
   ],
   "last_validated": "2026-07-13"
 }

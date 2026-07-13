@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/ttcl-specs/canonical-schedule-schema.json",
+  "title": "TTCL Canonical Schedule — Layer 6 Scheduler output contract",
+  "description": "The `canonical_schedule.json` artifact produced by the @sovereign/scheduler Layer 6 optimizer — the default rotation sequence for data generation (the prose's 'canonical_schedule.json that tells you the default rotation sequence for data generation', TTCL_v1_0_BREAKDOWN.md:271). Records the annealing config, the wheel/pair registry snapshot the run was generated against, the initial state, every step (state + objective terms + temperature + move + accepted flag + ΔJ), the best state by J, and coverage statistics (distinct composites visited, accepted-step count, per-domain visit balance). Validated by the facade at generation time with ajv. Default artifact: shared/fixtures/layer6/canonical-schedule.json. The artifact is reproducible byte-for-byte from a fixed seed (the spec's 'run multiple seeds' mitigation requires seedability).",
+  "type": "object",
+  "required": ["version", "generator", "config", "registry", "initial", "steps", "best", "coverage"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string", "description": "Optional JSON Schema reference (the schema's own $id)." },
+    "version": { "type": "string", "minLength": 1, "description": "Artifact version (e.g. '1.0.0')." },
+    "generator": { "type": "string", "minLength": 1, "description": "Generator identifier (e.g. 'ttcl-scheduler-v1')." },
+    "config": {
+      "type": "object",
+      "required": ["weights", "T_init", "T_min", "cooling", "steps", "seed", "windowN"],
+      "additionalProperties": false,
+      "properties": {
+        "weights": {
+          "type": "object",
+          "required": ["alpha", "beta", "gamma", "delta"],
+          "additionalProperties": false,
+          "properties": {
+            "alpha": { "type": "number" },
+            "beta": { "type": "number" },
+            "gamma": { "type": "number" },
+            "delta": { "type": "number" }
+          }
+        },
+        "T_init": { "type": "number" },
+        "T_min": { "type": "number" },
+        "cooling": { "type": "number" },
+        "steps": { "type": "integer", "minimum": 1 },
+        "seed": { "type": "integer" },
+        "windowN": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "registry": {
+      "type": "object",
+      "required": ["registry", "wheels", "facets", "pairs"],
+      "additionalProperties": false,
+      "properties": {
+        "registry": { "type": "string" },
+        "wheels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "size", "domains"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "size": { "type": "integer", "minimum": 1 },
+              "domains": { "type": "array", "items": { "enum": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"] }, "uniqueItems": true }
+            }
+          }
+        },
+        "facets": {
+          "type": "object",
+          "required": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"],
+          "additionalProperties": false,
+          "properties": {
+            "THEOLOGY": { "type": "string" },
+            "TECHNOLOGY": { "type": "string" },
+            "COSMOLOGY": { "type": "string" }
+          }
+        },
+        "pairs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "wheels"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "wheels": { "type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "initial": { "$ref": "#/definitions/state" },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["t", "state", "terms", "temperature", "move", "accepted", "deltaJ"],
+        "additionalProperties": false,
+        "properties": {
+          "t": { "type": "integer", "minimum": 0 },
+          "state": { "$ref": "#/definitions/state" },
+          "terms": {
+            "type": "object",
+            "required": ["C", "L", "T", "S", "J"],
+            "additionalProperties": false,
+            "properties": {
+              "C": { "type": "number" },
+              "L": { "type": "number" },
+              "T": { "type": "number" },
+              "S": { "type": "number" },
+              "J": { "type": "number" }
+            }
+          },
+          "temperature": { "type": "number" },
+          "move": { "enum": ["initial", "LocalRotate", "PatternSwitch", "WheelSwap"] },
+          "accepted": { "type": "boolean" },
+          "deltaJ": { "type": "number" }
+        }
+      }
+    },
+    "best": {
+      "type": "object",
+      "required": ["step", "state", "J"],
+      "additionalProperties": false,
+      "properties": {
+        "step": { "type": "integer", "minimum": 0 },
+        "state": { "$ref": "#/definitions/state" },
+        "J": { "type": "number" }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": ["distinctComposites", "totalSteps", "acceptedSteps", "domainVisits"],
+      "additionalProperties": false,
+      "properties": {
+        "distinctComposites": { "type": "integer", "minimum": 1 },
+        "totalSteps": { "type": "integer", "minimum": 1 },
+        "acceptedSteps": { "type": "integer", "minimum": 0 },
+        "domainVisits": {
+          "type": "object",
+          "required": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"],
+          "additionalProperties": false,
+          "properties": {
+            "THEOLOGY": { "type": "integer", "minimum": 0 },
+            "TECHNOLOGY": { "type": "integer", "minimum": 0 },
+            "COSMOLOGY": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "state": {
+      "type": "object",
+      "required": ["offsets", "pattern", "facets"],
+      "additionalProperties": false,
+      "properties": {
+        "offsets": {
+          "type": "object",
+          "description": "Wheel name → offset in [0, size).",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "pattern": { "type": "string", "minLength": 1 },
+        "facets": {
+          "type": "object",
+          "required": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"],
+          "additionalProperties": false,
+          "properties": {
+            "THEOLOGY": { "type": "string" },
+            "TECHNOLOGY": { "type": "string" },
+            "COSMOLOGY": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
