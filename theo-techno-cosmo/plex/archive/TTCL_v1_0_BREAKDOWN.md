@@ -472,6 +472,28 @@ PairTable (ALL, Hybrid, 45 pairs)
 
 These aren't abstract. They're grounded in Llull's actual wheels. The slots have Catalan labels. The pairing table is from a triangular grid image.
 
+> **NOTE — Layer 6 register reconciliation (surfaced 2026-07-14, not a silent swap).**
+> The "45 pairs" in the line above is the **letter-level Tabula Generalis** — the master
+> combination table over the 9 Prima-Figura letters (B–K, J skipped): the **36 distinct
+> Third-Figure cameras** C(9,2) **plus the 9 self-pairs** (BB, CC, … KK) = the triangular
+> number T₉ = 45. It is **letter-level**, *not* a wheel-level pair count, so it does not
+> fit the Layer 6 registry's wheel-level `pairs` field and is **deferred** to a follow-up
+> PR (a letter-level composite-validity filter wired into the consumer) pending
+> doctrinal confirmation of the 36+9 reconstruction.
+>
+> The registry's wheel-level `pairs` is the math-honest **C(8,2) = 28** unordered pairs
+> over the **8 generative wheels** (the 3 domain wheels are facets, excluded from the
+> pair table). The landed register (sourced from `theo-techno-cosmo/Wheel/8 wheels and
+> 3 domains.docx`) is the **8 generative wheels** (A/P/E/T/V/Q/F/S) **+ 3 structurally-
+> identical domain wheels** (Teologia/Kosmologia/Technologia, the 16-segment Catalan
+> B–R vocabulary) — 11 wheels total, replacing the earlier 5-wheel (A/T/V/X/S) placeholder.
+> The Catalan slot labels (sourced) now populate `active_slots.*.label` for A + the 3
+> domain wheels + F + S (the structured-label wheels P/T/V/Q/E carry `labels: null`
+> pending a richer shape). See `shared/fixtures/layer6/wheel-registry.json` +
+> `shared/ttcl-specs/wheel-registry-schema.json`. The 45 ≠ the 72 Shem↔Goetia name-pairs
+> of the 144 Names (the *locate* layer, separate from Llull's *generate* layer) — that
+> was a conflation; the real 144-Names↔scheduler link is the PPS triad score.
+
 **Strength:** Traceability. You can audit exactly which wheel slot generated which training sample.
 
 ---
@@ -502,6 +524,13 @@ Simulated annealing doesn't guarantee finding the global optimum. It's possible 
 
 #### 3. **Wheel Slot Cardinality Limits Combinatorial Explosion**
 With 6 wheels and 45 valid pairs, you have:
+
+> **NOTE (reconciled 2026-07-14):** the "6 wheels / 45 valid pairs" here is the
+> *placeholder* state space the earlier draft assumed (A/T/V/X/S + Theologia). The
+> landed register is 11 wheels — the 8 generative + 3 domain — and the wheel-level
+> pair table is the **C(8,2) = 28** generative pairs. The "45" is the **letter-level**
+> Tabula Generalis (36 cameras + 9 self-pairs = T₉), a deferred follow-up, not the
+> wheel-pair count. See the NOTE above §"The Wheel Assets are Concrete".
 ```
 A: 16 slots
 T: 20 slots

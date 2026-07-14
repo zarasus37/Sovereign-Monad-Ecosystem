@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://the-sovereign/ttcl-specs/wheel-registry-schema.json",
   "title": "TTCL Wheel Registry — Layer 6 Scheduler input contract",
-  "description": "The wheel + pair-table registry consumed by the @sovereign/scheduler Layer 6 optimizer. Declares the rotating wheels (the Llull Figurae, each with a size and its TTCL domain binding), the default facet-to-wheel assignment (which wheel covers each of the 3 tripartite facets — THEOLOGY/TECHNOLOGY/COSMOLOGY), and the pair table (the set of allowed wheel-pairs the scheduler's `pattern` state field ranges over). Validated at load time with ajv. Cross-reference integrity (facet wheels + pair wheels must reference declared wheels; no duplicate wheel names) is enforced in the loader, not the schema. Default registry: shared/fixtures/layer6/wheel-registry.json. Honesty note: the spec's 'PairTable (45 pairs, from a triangular grid image)' and the Theologia wheel are assets not present in the repo; the default registry uses the combinatorial pair set over the explicit 5-wheel state space (A/T/V/X/S). The real 45-pair Llull table drops in as a data change — the scheduler reads `pairs`, never hardcodes them.",
+  "description": "The wheel + pair-table registry consumed by the @sovereign/scheduler Layer 6 optimizer. Declares the rotating wheels (the Llull Figurae, each with a size, an optional per-slot letter alphabet, optional per-slot Catalan labels, and its TTCL domain binding), the default facet-to-wheel assignment (which wheel covers each of the 3 tripartite facets — THEOLOGY/TECHNOLOGY/COSMOLOGY), and the pair table (the set of allowed wheel-pairs the scheduler's `pattern` state field ranges over). Validated at load time with ajv. Cross-reference integrity (facet wheels + pair wheels must reference declared wheels; no duplicate wheel names; alphabet/labels length === size; alphabet single-char-per-slot) is enforced in the loader, not the schema. Default registry: shared/fixtures/layer6/wheel-registry.json — the real 8-generative Llull register (A=Blue Dignities, P=Prima Figura, E=Elements, T=Secunda Figura relations, V=Virtues&Vices, Q=Questions, F=Faculties, S=Secunda Figura Triangles) + the 3 structurally-identical domain wheels (Teologia/Kosmologia/Technologia, each 16 slots B–R with the shared Catalan vocabulary), sourced from theo-techno-cosmo/Wheel/8 wheels and 3 domains.docx. Catalan slot labels are populated for the wheels whose labels are one-per-slot (A + the 3 domain wheels + F + S); the structured-label wheels (P/T/V/Q/E) carry labels:null pending a richer label shape. Spec-correction note (surfaced per spec-open-to-higher-standard, not a silent swap): the spec's 'PairTable (45 pairs, from a triangular grid image)' is the LETTER-level Tabula Generalis table — Llull's Third Figure = 36 distinct cameras C(9,2) + 9 self-pairs = 45 = triangular number T9 — NOT a wheel-pair count. It does not fit this registry's wheel-level `pairs` field (the 8 generative wheels yield C(8,2)=28 wheel-pairs) and is deferred to a follow-up PR as a letter-level composite-validity filter until the 36+9 reconstruction is doctrinally confirmed. The scheduler reads `pairs`, never hardcodes them.",
   "type": "object",
   "required": ["registry", "wheels", "facets", "pairs"],
   "additionalProperties": false,
@@ -25,7 +25,7 @@
         "required": ["name", "size", "domains"],
         "additionalProperties": false,
         "properties": {
-          "name": { "type": "string", "minLength": 1, "description": "Wheel name (e.g. A, T, V, X, S)." },
+          "name": { "type": "string", "minLength": 1, "description": "Wheel name (e.g. A, P, E, T, V, Q, F, S, Teologia)." },
           "size": { "type": "integer", "minimum": 1, "description": "Slot count; the wheel offset ranges over [0, size)." },
           "domains": {
             "type": "array",
@@ -33,6 +33,15 @@
             "uniqueItems": true,
             "items": { "enum": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"] },
             "description": "TTCL domain(s) this wheel can cover."
+          },
+          "alphabet": {
+            "type": ["string", "null"],
+            "description": "Explicit per-slot letter sequence, length === size (enforced in the loader). Llull's 16-letter alphabet skips J (B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R); a baseLetter+offset formula cannot represent the J-gap and the gnosis-event schema constrains `slot` to one char, so the per-wheel letter sequence is carried explicitly. null → the consumer falls back to A.. (legacy) for wheels whose letters are not sourced."
+          },
+          "labels": {
+            "type": ["array", "null"],
+            "items": { "type": ["string", "null"] },
+            "description": "Per-slot Catalan labels, length === size (enforced in the loader); null entries within the array are allowed (label not sourced for that slot). null array → the wheel has no flat one-label-per-slot labels (structured-label wheels — two-ring / virtue+vice / 4-part relational — defer to a richer label shape)."
           }
         }
       }

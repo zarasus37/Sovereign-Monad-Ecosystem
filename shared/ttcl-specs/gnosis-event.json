@@ -103,7 +103,7 @@
         "wheel": { "type": "string", "minLength": 1 },
         "slot": { "type": "string", "minLength": 1, "maxLength": 1 },
         "label": {
-          "description": "Catalan slot label. ABSENT from the repo today (the Catalan slot-labels + Theologia-wheel data asset is not yet landed — see PROJECT_STATE). Emitted as null until that asset drops in. Never fabricated.",
+          "description": "Catalan slot label, sourced from the wheel registry's per-slot `labels[offset]` (the Llull register, theo-techno-cosmo/Wheel/8 wheels and 3 domains.docx) for wheels that carry one (A + the 3 domain wheels Teologia/Kosmologia/Technologia + F + S); null for structured-label wheels (P/T/V/Q/E) pending a richer label shape. Never fabricated.",
           "type": ["string", "null"]
         }
       }

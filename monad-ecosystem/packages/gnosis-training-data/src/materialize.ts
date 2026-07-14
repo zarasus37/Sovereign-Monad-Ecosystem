@@ -14,11 +14,14 @@
  *                      seed:stepIndex:compositeKey). The spec says "uuid"; the
  *                      deterministic derivation is a concretization (random
  *                      uuids would break byte-reproducibility).
- *   slot             — Latin letter `String.fromCharCode(65 + offset % 26)`. The
- *                      registry has no alphabet (wheels are {name,size,domains});
- *                      the modulo keeps larger future wheels honest.
- *   label (Catalan)  — `null`. The Catalan slot-labels + Theologia-wheel asset is
- *                      not yet in the repo (PROJECT_STATE). Never fabricated.
+ *   slot             — the wheel's explicit per-slot `alphabet[offset]` (Llull's
+ *                      B..R alphabet skips J, so it is carried explicitly, not
+ *                      derived from a baseLetter+offset formula); the A.. fallback
+ *                      only for wheels whose alphabet is not yet sourced.
+ *   label (Catalan)  — the wheel's per-slot `labels[offset]` when the registry
+ *                      carries one (sourced from the Llull register for A + the 3
+ *                      domain wheels + F + S), else null for structured-label
+ *                      wheels (P/T/V/Q/E) pending a richer label shape.
  *   provenance_tokens — one `<registry>:<wheel>:<offset>` per active facet.
  *   wheel_state.key_hash — FNV-1a32(seed:wheel:offset) hex. A deterministic
  *                      content tag, not a cryptographic hash.
@@ -91,8 +94,17 @@ export function deterministicUuid(name: string): string {
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20, 32)}`;
 }
 
-/** Offset → single Latin letter (A..Z, modulo 26). */
-export function slotLetter(offset: number): string {
+/**
+ * Offset → single slot letter. If the wheel carries an explicit per-slot
+ * `alphabet` (the Llull 16-letter alphabet skips J, so a baseLetter+offset
+ * formula cannot represent the gap), index into it directly; otherwise fall
+ * back to A.. (legacy, for wheels whose letters are not yet sourced). The
+ * modulo guards against a size mismatch defensively.
+ */
+export function slotLetter(alphabet: string | null, offset: number): string {
+  if (alphabet) {
+    return alphabet[offset % alphabet.length]!;
+  }
   return String.fromCharCode(65 + (offset % 26));
 }
 
@@ -122,12 +134,20 @@ export function wheelState(seed: number, state: ScheduleState, registry: WheelRe
   return out;
 }
 
-/** The three active facet slots (label always null until the Catalan asset lands). */
+/**
+ * The three active facet slots. The `slot` letter comes from the wheel's
+ * explicit `alphabet` (Llull's B..R, J skipped) when sourced, else the A..
+ * fallback. The `label` is the wheel's per-slot Catalan label when sourced,
+ * else null (wheels whose labels are structured — two-ring / virtue+vice /
+ * 4-part relational — carry labels:null pending a richer shape).
+ */
 export function activeSlots(state: ScheduleState, registry: WheelRegistry): GnosisEvent["active_slots"] {
   const slot = (domain: Domain): GnosisActiveSlot => {
     const wheel = state.facets[domain];
     const offset = state.offsets[wheel] ?? 0;
-    return { wheel, slot: slotLetter(offset), label: null };
+    const asset = registry.wheels.get(wheel)!;
+    const label = asset.labels ? (asset.labels[offset] ?? null) : null;
+    return { wheel, slot: slotLetter(asset.alphabet, offset), label };
   };
   return {
     theology: slot("THEOLOGY"),
