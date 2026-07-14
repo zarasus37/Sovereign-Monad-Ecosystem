@@ -286,6 +286,22 @@ It DOES mean:
   Theologia  Figure Theology   Theology        Symbol    16
   PairTable  Pairing Grid      ALL             Hybrid    45 pairs
 
+> **NOTE — "45 pairs" reconciliation (surfaced 2026-07-14, not a silent swap).** The
+> "45 pairs" row above is a **secondary interpretation, not a statement of the primary
+> Llull source**. The primary source (`Raymond-Lull-Ars-Magna-Ars-Generalis-Ultima.txt`,
+> Chapter 3) states the **Third Figure has 36 cameras** — distinct 2-letter pairs
+> (BC…IK, J skipped, C(9,2)=36), **no self-pairs**. The "45" is a reconstruction = 36 +
+> 9 self-pairs = T₉ which the source does **not** state. Llull's actual **Tabula Generalis
+> / "The Table"** is the **Fourth Figure** (Chapter 4, 3-letter cameras BCD, BCE…) — a
+> separate structure, not 45; the earlier wording that equated the 45 with the
+> "Tabula Generalis" was a **misattribution and is withdrawn**. The landed Layer 6
+> register (`shared/fixtures/layer6/wheel-registry.json`, PR #46) uses the
+> math-honest wheel-level **C(8,2)=28** generative pairs; the 45 is letter-level and
+> does not fit the wheel-level `pairs` field — it is **deferred** to a follow-up PR as
+> a letter-level composite-validity filter. See the NOTE in
+> `TTCL_v1_0_BREAKDOWN.md` §"The Wheel Assets are Concrete" + §"Cardinality" for the
+> full reconciliation (propagated to README, PROJECT_STATE.md/json, and the MOF).
+
 ---
 
 # SECTION III: GNOSIS EVENT FORMAT

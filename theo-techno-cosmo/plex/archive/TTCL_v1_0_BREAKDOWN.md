@@ -472,14 +472,22 @@ PairTable (ALL, Hybrid, 45 pairs)
 
 These aren't abstract. They're grounded in Llull's actual wheels. The slots have Catalan labels. The pairing table is from a triangular grid image.
 
-> **NOTE — Layer 6 register reconciliation (surfaced 2026-07-14, not a silent swap).**
-> The "45 pairs" in the line above is the **letter-level Tabula Generalis** — the master
-> combination table over the 9 Prima-Figura letters (B–K, J skipped): the **36 distinct
-> Third-Figure cameras** C(9,2) **plus the 9 self-pairs** (BB, CC, … KK) = the triangular
-> number T₉ = 45. It is **letter-level**, *not* a wheel-level pair count, so it does not
-> fit the Layer 6 registry's wheel-level `pairs` field and is **deferred** to a follow-up
-> PR (a letter-level composite-validity filter wired into the consumer) pending
-> doctrinal confirmation of the 36+9 reconstruction.
+> **NOTE — Layer 6 register reconciliation (surfaced 2026-07-14, corrected 2026-07-14, not a silent swap).**
+> The "45 pairs" / "triangular grid image" in the lines above is a **secondary
+> interpretation**, not a statement from the primary Llull source. The primary source
+> (`theo-techno-cosmo/Wheel/Raymond-Lull-Ars-Magna-Ars-Generalis-Ultima.txt`, Chapter 3)
+> states the **Third Figure "has thirty-six cameras"**, each a **2-letter pair** (BC, BD,
+> … IK = C(9,2) = **36**, J skipped), enumerated as distinct pairs with **no self-pairs**.
+> The "45" is a reconstruction = 36 distinct cameras + 9 self-pairs (BB, CC, … KK) = the
+> triangular number T₉ = 45, which the source does **not** state. (The bare "36"/"45"
+> that appear in the source text are page numbers, not counts.)
+>
+> **The Tabula Generalis is a different structure.** Llull's actual **"Tabula Generalis"
+> / "The Table"** is the **Fourth Figure** (Chapter 4), built from **3-letter cameras**
+> (BCD, BCE, …) — "camera BCD is used for constructing column BCD of the Table." It is a
+> separate, larger combinatorial structure, **not** the 2-letter Third Figure and
+> **not 45**. The earlier wording here that called the 45 "the letter-level Tabula
+> Generalis" was a **misattribution** and is withdrawn.
 >
 > The registry's wheel-level `pairs` is the math-honest **C(8,2) = 28** unordered pairs
 > over the **8 generative wheels** (the 3 domain wheels are facets, excluded from the
@@ -528,9 +536,12 @@ With 6 wheels and 45 valid pairs, you have:
 > **NOTE (reconciled 2026-07-14):** the "6 wheels / 45 valid pairs" here is the
 > *placeholder* state space the earlier draft assumed (A/T/V/X/S + Theologia). The
 > landed register is 11 wheels — the 8 generative + 3 domain — and the wheel-level
-> pair table is the **C(8,2) = 28** generative pairs. The "45" is the **letter-level**
-> Tabula Generalis (36 cameras + 9 self-pairs = T₉), a deferred follow-up, not the
-> wheel-pair count. See the NOTE above §"The Wheel Assets are Concrete".
+> pair table is the **C(8,2) = 28** generative pairs. The "45" is a secondary
+> reconstruction (36 Third-Figure cameras + 9 self-pairs = T₉) the primary Llull
+> source does **not** state — and Llull's actual Tabula Generalis is the Fourth Figure
+> (3-letter cameras BCD, BCE…), a separate structure, not this 2-letter table. Both
+> are deferred follow-ups, not the wheel-pair count. See the NOTE above §"The Wheel
+> Assets are Concrete".
 ```
 A: 16 slots
 T: 20 slots
