@@ -5,3 +5,9 @@ checkpoints/
 eval/results/
 data/gnosis-events-*.jsonl
 data/dry-run-pairs.jsonl
+# The bootstrap WORKSHEET is a transient scaffold the human fills in — the
+# empty/uncommitted-in-progress file is NOT committed. The fully human-authored
+# preference-pair set IS committed (as data/preference_pairs_ALL.jsonl, the
+# canonical reward-training input — not gitignored here) once authoring + the
+# `validate-worksheet` gate pass.
+data/preference_pairs_worksheet.jsonl

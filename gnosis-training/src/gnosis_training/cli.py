@@ -15,6 +15,9 @@ Modes:
     preference pairs (CPU-pure; NOT a training path, NOT human judgments).
   - ``bootstrap-worksheet <events_jsonl> <out_jsonl>`` — emit the preference-pair
     worksheet (CPU-pure; NOT a training path).
+  - ``validate-worksheet <pairs_jsonl>`` — validate an in-progress worksheet:
+    report ok / pending-authoring / invalid per pair so the human author can fix
+    gaps before reward training (CPU-pure). Exits non-zero if any invalid.
   - ``--smoke-imports``                — the honest "wiring resolves" proof:
     lazy-import each heavy module, print versions, exit non-zero with an
     install hint on failure. Does NOT load a model or touch CUDA.
@@ -125,6 +128,59 @@ def _flag(args: list[str], flag: str) -> tuple[list[str], bool]:
     return args, False
 
 
+def validate_worksheet(pairs_jsonl: str) -> int:
+    """Validate an in-progress preference-pair worksheet and report per-pair
+    status so the human author can fix gaps BEFORE reward training. CPU-pure.
+
+    A worksheet is a mix of:
+      - ``bootstrap=True`` pairs — the scaffold (responses still empty). These
+        are "pending authoring" — counted, NOT treated as invalid (the human
+        hasn't filled them in yet). ``validate_pair`` would reject them; the
+        validator treats them as expected in-progress rows.
+      - ``bootstrap=False`` pairs — the human-authored rows. These are validated
+        against the real quality-control rules (RULES 1, 2, 6: score gap ≥
+        PREFERENCE_MIN_SCORE_GAP, chosen passes ≥4/5 criteria at 0.70, apeiron
+        band). Any problem → invalid, printed with the pair_id.
+
+    Exit 0 if no invalid pairs; non-zero if any invalid (so it gates a training
+    run). Use this iteratively while authoring — see
+    ``theo-techno-cosmo/plex/Review/REWARD_MODEL_PREFERENCE_PAIRS_GUIDE.md`` for
+    the judging rubric + the 250-pair target distribution.
+    """
+    from pathlib import Path
+
+    from .preference import iter_pairs_jsonl, validate_pair
+
+    path = Path(pairs_jsonl)
+    ok = 0
+    pending = 0
+    invalid = 0
+    for pair in iter_pairs_jsonl(path):
+        if pair.bootstrap:
+            pending += 1
+            continue
+        problems = validate_pair(pair)
+        if problems:
+            invalid += 1
+            print(f"INVALID  {pair.pair_id}: {problems}")
+        else:
+            ok += 1
+
+    total = ok + pending + invalid
+    print(
+        f"worksheet {path}: {total} pairs — {ok} ok, {pending} pending authoring, "
+        f"{invalid} invalid"
+    )
+    if invalid:
+        print(f"fix the {invalid} invalid pair(s) before reward training.")
+        return 1
+    if ok == 0 and pending > 0:
+        print("no authored (bootstrap=false) pairs yet — author some to begin.")
+    elif ok > 0:
+        print(f"{ok} pair(s) pass validate_pair — ready for reward training.")
+    return 0
+
+
 def _run_sft_dry(train_jsonl: str) -> int:
     from .config import dry_run_sft
     from .sft import run_sft
@@ -203,6 +259,12 @@ def main(argv: list[str] | None = None) -> int:
             print("usage: python -m gnosis_training bootstrap-worksheet <events_jsonl> <out_jsonl>")
             return 2
         return bootstrap_worksheet(rest[0], rest[1])
+
+    if mode == "validate-worksheet":
+        if len(rest) < 1:
+            print("usage: python -m gnosis_training validate-worksheet <pairs_jsonl>")
+            return 2
+        return validate_worksheet(rest[0])
 
     if mode == "synth-pairs":
         if len(rest) < 2:
