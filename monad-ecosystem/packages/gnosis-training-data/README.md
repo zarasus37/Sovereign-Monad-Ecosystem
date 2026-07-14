@@ -30,9 +30,15 @@ pipeline will consume.
   a `Sign` materialized from the step's composite — not a reimplementation. The
   wheel-state→`Sign` mapping is a **concretization** (the spec gives the event
   *format* but not how a rotation maps to a `Sign`); see `src/materialize.ts`.
-- **Catalan slot labels are `null`.** The Catalan slot-labels + Theologia-wheel
-  data asset is not yet in the repo (PROJECT_STATE). `active_slots.*.label` is
-  emitted as `null` until that asset drops in. **Never fabricated.**
+- **Catalan slot labels are sourced from the registry.** The wheel registry
+  (`shared/fixtures/layer6/wheel-registry.json`) now carries the sourced Llull
+  register (8 generative + 3 domain wheels, from
+  `theo-techno-cosmo/Wheel/8 wheels and 3 domains.docx`). `active_slots.*.label`
+  is a real Catalan string for wheels that carry one (A + the 3 domain wheels
+  Teologia/Kosmologia/Technologia + F + S), and `null` for the structured-label
+  wheels (P/T/V/Q/E) pending a richer label shape. **Never fabricated** — every
+  non-null label is a real entry present in some wheel's `labels` array. (At the
+  PR #39 landing these were `null` pending the asset; the asset landed in PR #46.)
 - **The `assistant` message is empty.** The deterministic consumer emits the
   prompt scaffold (`system` + `user`); the assistant response is the SFT training
   **target**, produced downstream — not synthesized here. The `constitution_score`

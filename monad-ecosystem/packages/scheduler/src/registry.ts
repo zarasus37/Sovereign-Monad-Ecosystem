@@ -47,11 +47,15 @@ const schemaJson: unknown = JSON.parse(readFileSync(SCHEMA_PATH, "utf8"));
 const ajv = new Ajv({ allErrors: true, strict: true });
 const validate: ValidateFunction = ajv.compile(schemaJson as AnySchema);
 
-/** A declared wheel (Llull Figura): a name, a slot count, and its domain binding. */
+/** A declared wheel (Llull Figura): a name, a slot count, its domain binding, and the optional per-slot letter alphabet + Catalan labels (sourced from the Llull register; null when not yet transcribed). */
 export interface WheelAsset {
   readonly name: string;
   readonly size: number;
   readonly domains: readonly Domain[];
+  /** Per-slot letter sequence (length === size), or null → consumer falls back to A.. */
+  readonly alphabet: string | null;
+  /** Per-slot Catalan labels (length === size; entries may be null), or null → no flat labels. */
+  readonly labels: readonly (string | null)[] | null;
 }
 
 /** A pair-table entry: an id and the two distinct wheel names that form the pair. */
@@ -86,7 +90,13 @@ export interface WheelRegistry {
 /** The raw JSON shape (post-ajv, pre-integrity). */
 interface RegistryJson {
   registry: string;
-  wheels: { name: string; size: number; domains: Domain[] }[];
+  wheels: {
+    name: string;
+    size: number;
+    domains: Domain[];
+    alphabet?: string | null;
+    labels?: (string | null)[] | null;
+  }[];
   facets: { THEOLOGY: string; TECHNOLOGY: string; COSMOLOGY: string };
   pairs: { id: string; wheels: [string, string] }[];
 }
@@ -108,14 +118,41 @@ export function buildRegistry(raw: unknown): WheelRegistry {
   }
   const json = raw as RegistryJson;
 
-  // Integrity 1: no duplicate wheel names; build the wheel map.
+  // Integrity 1: no duplicate wheel names; build the wheel map. Also enforce the
+  // per-wheel alphabet/labels invariants the schema cannot express: alphabet and
+  // labels, when present, must each have exactly `size` entries, and every
+  // alphabet character must be a single UTF-16 code unit (the gnosis-event schema
+  // constrains `slot` to one char).
   const wheels = new Map<string, WheelAsset>();
   const wheelNames: string[] = [];
   for (const w of json.wheels) {
     if (wheels.has(w.name)) {
       throw new RegistryIntegrityError(`duplicate wheel name '${w.name}'`);
     }
-    wheels.set(w.name, { name: w.name, size: w.size, domains: w.domains });
+    const alphabet = w.alphabet ?? null;
+    const labels = w.labels ?? null;
+    if (alphabet !== null) {
+      if (alphabet.length !== w.size) {
+        throw new RegistryIntegrityError(
+          `wheel '${w.name}' alphabet length ${alphabet.length} !== size ${w.size}`,
+        );
+      }
+      // Each slot letter must be a single UTF-16 code unit (the gnosis-event
+      // schema constrains `slot` to maxLength 1): reject any supplementary-plane
+      // letter (surrogate pair) whose code-point count would be less than its
+      // code-unit count.
+      if ([...alphabet].length !== alphabet.length) {
+        throw new RegistryIntegrityError(
+          `wheel '${w.name}' alphabet contains a multi-code-unit (surrogate-pair) letter; each slot letter must be one char`,
+        );
+      }
+    }
+    if (labels !== null && labels.length !== w.size) {
+      throw new RegistryIntegrityError(
+        `wheel '${w.name}' labels length ${labels.length} !== size ${w.size}`,
+      );
+    }
+    wheels.set(w.name, { name: w.name, size: w.size, domains: w.domains, alphabet, labels });
     wheelNames.push(w.name);
   }
 

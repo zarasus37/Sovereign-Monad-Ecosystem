@@ -89,11 +89,17 @@ describe('Layer 6 — registry', () => {
   it('loads + validates the llull-default fixture', () => {
     const reg = loadRegistry(REGISTRY_PATH);
     expect(reg.registry).toBe('llull-default');
-    expect(reg.wheelNames).toEqual(['A', 'T', 'V', 'X', 'S']);
+    // The real Llull register: 8 generative wheels (A/P/E/T/V/Q/F/S) + 3
+    // structurally-identical domain wheels (Teologia/Kosmologia/Technologia).
+    expect(reg.wheelNames).toEqual([
+      'A', 'P', 'E', 'T', 'V', 'Q', 'F', 'S',
+      'Teologia', 'Kosmologia', 'Technologia',
+    ]);
     expect(reg.wheels.get('A')!.size).toBe(16);
     expect(reg.wheels.get('T')!.domains).toEqual(['THEOLOGY', 'COSMOLOGY']);
-    // The 5-wheel state space produces C(5,2) = 10 unordered pairs.
-    expect(reg.pairs).toHaveLength(10);
+    // The 8 generative wheels produce C(8,2) = 28 unordered pairs (the 3 domain
+    // wheels are facets, excluded from the pair table).
+    expect(reg.pairs).toHaveLength(28);
     expect(reg.pairById.get('A·T')!.wheels).toEqual(['A', 'T']);
     // Live wheels are real @sovereign/ttcl Wheel<N> instances, initial position 0.
     expect(reg.liveWheels.get('A')!.position).toBe(0);
@@ -193,16 +199,16 @@ describe('Layer 6 — moves + constraint', () => {
 
   it('PatternSwitch changes the active pair to a real pair id in the table', () => {
     const s0 = initialState(reg);
-    const move: Move = { kind: 'PatternSwitch', toPair: 'V·X' };
+    const move: Move = { kind: 'PatternSwitch', toPair: 'V·Q' };
     const s1 = applyMove(s0, move, reg);
-    expect(s1.pattern).toBe('V·X');
+    expect(s1.pattern).toBe('V·Q');
     expect(reg.pairIds).toContain(s1.pattern);
     expect(s0.pattern).toBe(reg.pairIds[0]); // initial is first pair
   });
 
   it('WheelSwap reassigns a facet to another wheel covering that domain', () => {
     const s0 = initialState(reg);
-    // COSMOLOGY is covered by both X and T — swap it to T.
+    // COSMOLOGY is covered by several wheels (Kosmologia/E/T/S) — swap it to T.
     const move: Move = { kind: 'WheelSwap', facet: 'COSMOLOGY', toWheel: 'T' };
     const s1 = applyMove(s0, move, reg);
     expect(s1.facets.COSMOLOGY).toBe('T');
@@ -255,7 +261,7 @@ describe('Layer 6 — objective J = αC + βL + γT − δS', () => {
   it('term normalizers: L and S are each in [0, 1] for every move kind', () => {
     const moves: Move[] = [
       { kind: 'LocalRotate', wheel: 'A', delta: 1 },
-      { kind: 'PatternSwitch', toPair: 'V·X' },
+      { kind: 'PatternSwitch', toPair: 'V·Q' },
       { kind: 'WheelSwap', facet: 'COSMOLOGY', toWheel: 'T' },
     ];
     for (const m of moves) {
@@ -272,19 +278,19 @@ describe('Layer 6 — objective J = αC + βL + γT − δS', () => {
 
   it('moveMagnitude matches the documented magnitudes (LR=1, PS=2, WS=2)', () => {
     expect(moveMagnitude({ kind: 'LocalRotate', wheel: 'A', delta: 1 })).toBe(1);
-    expect(moveMagnitude({ kind: 'PatternSwitch', toPair: 'V·X' })).toBe(2);
+    expect(moveMagnitude({ kind: 'PatternSwitch', toPair: 'V·Q' })).toBe(2);
     expect(moveMagnitude({ kind: 'WheelSwap', facet: 'COSMOLOGY', toWheel: 'T' })).toBe(2);
   });
 
   it('roughness ranks LocalRotate(1) < WheelSwap(2) < PatternSwitch(3)', () => {
     expect(roughness({ kind: 'LocalRotate', wheel: 'A', delta: 1 })).toBe(1);
     expect(roughness({ kind: 'WheelSwap', facet: 'COSMOLOGY', toWheel: 'T' })).toBe(2);
-    expect(roughness({ kind: 'PatternSwitch', toPair: 'V·X' })).toBe(3);
+    expect(roughness({ kind: 'PatternSwitch', toPair: 'V·Q' })).toBe(3);
   });
 
   it('materializationCost: LocalRotate 1, PatternSwitch 2, WheelSwap 2', () => {
     expect(materializationCost({ kind: 'LocalRotate', wheel: 'A', delta: 1 })).toBe(1);
-    expect(materializationCost({ kind: 'PatternSwitch', toPair: 'V·X' })).toBe(2);
+    expect(materializationCost({ kind: 'PatternSwitch', toPair: 'V·Q' })).toBe(2);
     expect(materializationCost({ kind: 'WheelSwap', facet: 'COSMOLOGY', toWheel: 'T' })).toBe(2);
   });
 
@@ -405,8 +411,8 @@ describe('Layer 6 — facade + output schema + reproducibility', () => {
     expect(schedule.version).toBe('1.0.0');
     expect(schedule.generator).toBe('ttcl-scheduler-v1');
     expect(schedule.registry.registry).toBe('llull-default');
-    expect(schedule.registry.wheels).toHaveLength(5);
-    expect(schedule.registry.pairs).toHaveLength(10);
+    expect(schedule.registry.wheels).toHaveLength(11);
+    expect(schedule.registry.pairs).toHaveLength(28);
     expect(schedule.steps.length).toBeGreaterThan(0);
   });
 
