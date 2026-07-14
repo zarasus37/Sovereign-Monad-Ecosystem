@@ -6,7 +6,7 @@ Modes:
     ``--dry-run`` it executes the REAL QLoRA SFT path on a tiny model
     (Qwen2.5-0.5B) to verify the pipeline.
   - ``reward <preference_pairs_jsonl> [--dry-run]`` — Stage 2 reward model.
-  - ``grpo [--dry-run]``               — Stage 3 GRPO (GPU-only).
+  - ``grpo <train_jsonl> [--dry-run]`` — Stage 3 GRPO (GPU-only).
   - ``eval [--dry-run]``               — Stage 4 eval battery (GPU-only).
   - ``dry-run``                        — run the FULL chain (sft → reward → grpo
     → eval) on the dry-run preset + prepped feedstock. GPU-only. One command.
@@ -145,12 +145,12 @@ def _run_reward_dry(pairs_jsonl: str) -> int:
     return 0
 
 
-def _run_grpo_dry() -> int:
+def _run_grpo_dry(train_jsonl: str) -> int:
     from .config import dry_run_grpo
     from .grpo import run_grpo
 
     cfg = dry_run_grpo()
-    out = run_grpo(cfg)
+    out = run_grpo(cfg, train_jsonl)
     print(f"[dry-run] GRPO done — checkpoint: {out}")
     return 0
 
@@ -179,7 +179,7 @@ def run_dry_run_chain(train_jsonl: str, pairs_jsonl: str) -> int:
     rc = _run_reward_dry(pairs_jsonl)
     if rc:
         return rc
-    rc = _run_grpo_dry()
+    rc = _run_grpo_dry(train_jsonl)
     if rc:
         return rc
     return _run_eval_dry()
@@ -238,7 +238,10 @@ def main(argv: list[str] | None = None) -> int:
                 return 2
             return _run_reward_dry(rest[0])
         if mode == "grpo":
-            return _run_grpo_dry()
+            if len(rest) < 1:
+                print("usage: python -m gnosis_training grpo <train_jsonl> --dry-run")
+                return 2
+            return _run_grpo_dry(rest[0])
         if mode == "eval":
             return _run_eval_dry()
 

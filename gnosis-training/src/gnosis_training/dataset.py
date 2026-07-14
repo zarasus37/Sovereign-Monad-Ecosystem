@@ -121,6 +121,46 @@ def load_gnosis_dataset(
     return Dataset.from_list(rows)
 
 
+def to_grpo_prompt_rows(events: list[GnosisEvent]) -> list[dict[str, Any]]:
+    """Project (already passes-gated) events into the row shape TRL's
+    ``GRPOTrainer`` expects: ``{prompt, event_id, total}`` where ``prompt`` is the
+    conversational prefix (system + user messages only — GRPO GENERATES the
+    assistant turn and scores it against the reward model).
+
+    Pure; no ``datasets``. The assistant turn is deliberately dropped: GRPO is the
+    stage that learns to produce it. Mirror of ``to_hf_rows`` for the SFT path,
+    minus the assistant target.
+    """
+    rows: list[dict[str, Any]] = []
+    for e in events:
+        prompt = [m for m in to_chat_messages(e) if m["role"] in ("system", "user")]
+        rows.append(
+            {
+                "prompt": prompt,
+                "event_id": e.event_id,
+                "total": e.constitution_score.total,
+            }
+        )
+    return rows
+
+
+def load_grpo_prompt_dataset(
+    path: str | Path,
+    apply_passes_gate: bool = True,
+) -> Any:
+    """Read a Gnosis-event JSONL into an HF ``datasets.Dataset`` in GRPO prompt
+    format (``prompt`` = system+user messages; GRPO generates + scores the
+    assistant). ``apply_passes_gate`` (default True) drops events failing
+    ``constitution_score.passes``. Lazy ``datasets`` import."""
+    from datasets import Dataset
+
+    events = read_events_jsonl(path)
+    if apply_passes_gate:
+        events = filter_passed(events)
+    rows = to_grpo_prompt_rows(events)
+    return Dataset.from_list(rows)
+
+
 def build_completion_only_labels(
     input_ids: list[int],
     prompt_len: int,

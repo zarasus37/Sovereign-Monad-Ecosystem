@@ -173,6 +173,21 @@ def _export_merged_model(cfg: SFTConfig, trainer: Any) -> None:
     merged.save_pretrained(str(cfg.output_dir))
     trainer.processing_class.save_pretrained(str(cfg.output_dir))
 
+    # Remove the leftover adapter files written by ``trainer.save_model``. The
+    # dir now holds the merged full model (config.json + model.safetensors); the
+    # adapter_config.json + adapter_model.safetensors are stale and confuse the
+    # downstream GRPO load — TRL/PEFT see adapter_config.json and load the SFT
+    # dir as a PeftModel, then the fresh GRPO LoRA is applied on top ("PEFT for a
+    # second time" → double-LoRA). Surfaced by the dry run (PR #50 first GPU
+    # execution). Cleaning them makes the SFT dir a plain full-model dir.
+    out_dir = Path(str(cfg.output_dir))
+    for stale in out_dir.glob("adapter_config.json"):
+        stale.unlink()
+    for stale in out_dir.glob("adapter_model*.safetensors*"):
+        stale.unlink()
+    for stale in out_dir.glob("initial_peft_weight*.safetensors*"):
+        stale.unlink()
+
 
 def run_sft(cfg: SFTConfig, train_jsonl: str | Path, eval_jsonl: str | Path | None = None) -> str:
     """Build the trainer, train, save the adapter, then export the merged full

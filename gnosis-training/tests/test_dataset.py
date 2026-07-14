@@ -11,6 +11,7 @@ from gnosis_training.dataset import (
     passes_gate,
     read_events_jsonl,
     to_chat_messages,
+    to_grpo_prompt_rows,
     to_hf_rows,
 )
 
@@ -89,6 +90,28 @@ def test_to_hf_rows_shape_for_sft_trainer():
     events = read_events_jsonl_via_wires([_event_wire(True)])
     rows = to_hf_rows(events)
     assert rows[0].keys() == {"messages", "event_id", "total"}
+
+
+def test_to_grpo_prompt_rows_drops_assistant_and_keeps_system_user():
+    """GRPO generates + scores the assistant turn, so the prompt is system+user
+    only. The row shape is {prompt, event_id, total}; the assistant turn is
+    absent. CPU-pure (no datasets)."""
+    events = read_events_jsonl_via_wires([_event_wire(True)])
+    rows = to_grpo_prompt_rows(events)
+    assert rows[0].keys() == {"prompt", "event_id", "total"}
+    roles = [m["role"] for m in rows[0]["prompt"]]
+    assert roles == ["system", "user"]
+    # the assistant turn (empty in feedstock) must NOT be in the GRPO prompt
+    assert "assistant" not in roles
+    assert rows[0]["prompt"][1]["content"] == "What is entropy?"
+
+
+def test_to_grpo_prompt_rows_preserves_event_order():
+    """One prompt row per event, in order (GRPO groups N completions per row)."""
+    wires = [_event_wire(True, total=0.90 + i * 0.01) for i in range(3)]
+    events = read_events_jsonl_via_wires(wires)
+    rows = to_grpo_prompt_rows(events)
+    assert [r["event_id"] for r in rows] == [e.event_id for e in events]
 
 
 def test_build_completion_only_labels_masks_prompt():
