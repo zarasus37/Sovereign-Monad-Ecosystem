@@ -1,0 +1,194 @@
+Mary Magdalene in these three texts is not a biographical record but a literary-theological figure — the Gnostic tradition's chosen exemplar of the perfected knower. The Gospel of Mary, Pistis Sophia, and the Sophia of Jesus Christ do not narrate a continuous life; they present discrete scenes in which she functions as the site where gnosis becomes visible for a community. So the "events" below are not psychobiography — they are documented moments in the textual tradition where recognition occurs, either in her, through her, or around her position in the assembly. I'll flag where the event is her own interior recognition versus where she is the occasion for someone else's (e.g., Peter's, Levi's) — this distinction matters for the "self-implication" criterion you specified.
+
+I. From the Gospel of Mary
+1. The Turning Toward the Grieving Assembly
+Passage/trigger: After the Savior's final departure, the disciples weep in fear: "How shall we go to the Gentiles and preach the gospel of the Kingdom of the Son of Man? If they did not spare him, how will they spare us?" Mary rises, comforts them, and says: "Do not weep and do not grieve nor be irresolute, for his grace will be entirely with you and will protect you. But rather let us praise his greatness, for he has prepared us and made us into Men."
+
+Why it qualifies: This is not an argument that calms the room — it's a recognition performed in real time, under the pressure of the group's terror, that reorganizes what "his absence" means. The category "abandonment" collapses into "preparation." No syllogism produces this; it's a shift in the felt structure of the moment, visible in her act of turning the group's grief into address.
+
+Theology: Absence stops meaning abandonment and starts meaning completion — the theological register of parousia-as-departure opens.
+Technology: The mechanism revealed is pedagogical transmission itself — "he has prepared us" implies a training already completed and only now recognized as such, retroactively.
+Cosmology: The structural pattern: the teacher's disappearance is the precondition for the students becoming the thing they were being made into — completion arrives as withdrawal, not presence.
+Compressed insight: She knew, in that moment, that the teaching had already finished being given — the absence itself was the last lesson.
+
+Confidence: 0.72 (textually direct, but the "gnosis" reading is an interpretive layer on a comfort-speech)
+
+2. The Disclosure of the Private Vision
+Passage/trigger: Peter asks her directly: "Sister, we know that the Savior loved you more than the rest of of women. Tell us the words of the Savior which you remember — which you know but we do not, nor have we heard them." Mary answers: "What is hidden from you I will proclaim to you," then: "I saw the Lord in a vision and I said to him, 'Lord I saw you today in a vision.' He answered and said to me, 'Blessed are you, that you did not waver at the sight of me...'"
+
+Why it qualifies: This is the event before the narrated content — the moment the group discovers that revelation has already happened outside their knowledge, in a channel none of them had access to. The boundary "what we all received together" versus "what one of us received alone" dissolves the moment Peter asks the question and she answers. It also retroactively recontextualizes the entire preceding narrative: the group realizes only now that a second transmission occurred alongside the public one they thought was complete.
+
+Theology: Revelation is shown to be non-simultaneous and non-uniform — grace does not arrive evenly across a community, which destabilizes any theology built on collective, witnessed transmission.
+Technology: The vision itself is revealed as a technology of address — dialogue continues after physical departure ("I saw you today in a vision... he answered and said to me"), showing that the channel between teacher and disciple does not require bodily co-presence.
+Cosmology: The universal pattern: presence is layered — there is a visible transmission and an invisible one running concurrently, and the visible group only discovers the invisible one after the fact.
+Compressed insight: She had already spoken with him after he was gone, and only in disclosing it did she — and the others — recognize that "gone" had never meant "unreachable."
+
+Confidence: 0.8
+
+3. The Ascent Through the Four Powers (four nested recognitions)
+Passage/trigger: In her narrated vision, the soul ascends past four Powers — Darkness, Desire, Ignorance, and the seven-formed Wrath — each of which interrogates it ("Whence comest thou, slayer of men, or whither goest thou, conqueror of space?"). The soul answers each in turn: "What binds me has been slain, and what surrounds me has been destroyed, and my desire has been ended, and ignorance has died."
+
+Why it qualifies: Each confrontation is a separate collapse of a boundary the soul had previously mistaken as external and binding. The soul does not defeat the powers by argument — it recognizes, power by power, that what it took as a wall around it was never a wall, only unrecognized ignorance already dissolving. This is retroactive: the soul discovers, at each gate, that the binding force had already ended before the gate was reached, and only becomes visible as ended in the act of passing.
+
+**Theology: **Salvation is reframed as sequential unmasking rather than single atonement — each Power is a discrete theological category (bondage, craving, unknowing, judgment) that must be seen through individually.
+Technology: The mechanism made transparent is that cosmic "guardians" operate by demanding self-report — they have no independent power, only the power the soul grants them by answering wrong. The moment the soul answers correctly, their authority is exposed as contingent on the soul's prior ignorance.
+Cosmology: The pattern: the universe is structured as a series of checkpoints that are not obstacles but diagnostics — each level tests whether a particular ignorance has already ended, rather than causing it to end.
+Compressed insight: At each gate the soul learned that the thing guarding it had no power except the power of being mistaken for real.
+
+Confidence: 0.7 (strong textual anchor, but this is Mary narrating a visionary experience, so the gnosis event is doubly mediated — hers in receiving it, ours in reading her report of it)
+
+4. Peter's Rupture — the Assumption Made Visible
+Passage/trigger: Andrew and then Peter object: "Did the Savior really speak with a woman without our knowledge and not openly? Are we to turn about and all listen to her? Did he prefer her to us?"
+
+Why it qualifies: This is not Mary's gnosis event, but it is a gnosis event about the structure Mary is embedded in — and you asked me to prioritize moments where the observer becomes visible inside the structure they were observing. Here Peter's objection makes visible, for the first time in the text, an assumption that had been invisible until contradicted: that legitimate revelation must travel through a specific, visible, male channel. The contradiction — a woman speaking words none of the apostles heard — does not resolve; it exposes the boundary itself as constructed rather than given.
+
+Theology: The unspoken doctrine of apostolic exclusivity becomes an object of scrutiny rather than a silent premise.
+Technology: What's revealed is the actual mechanism of religious authority in the early community — authority tracked visibility and gender, not proximity to the source.
+Cosmology: The universal pattern: hierarchies built on who is thought to be closer to the center are destabilized the instant someone at the presumed periphery demonstrates direct access.
+Compressed insight: The community discovered that its rule for who could speak had never been given by the teacher — it had been assumed by the students.
+
+Confidence: 0.78
+
+5. Levi's Recognition
+Passage/trigger: Levi answers Peter: "Peter, you have always been hot tempered... If the Savior made her worthy, who are you to reject her? Surely the Savior knew her very well. That is why he loved her more than us. Rather we should be ashamed and put on the perfect man and acquire him for ourselves as he commanded us, and preach the gospel."
+
+Why it qualifies: Levi's statement is a genuine recognition, not a rebuttal by argument — he sees, suddenly, that the criterion for worthiness was never apostolic seniority but the Savior's own act of knowing. The self-implication is Levi's: he includes himself in the failure ("let us be ashamed"), recognizing that Peter's objection was also his own unexamined premise until this instant.
+
+Theology: Worthiness is relocated from institutional office to being-known — a theology of election rather than ordination.
+Technology: The revealed mechanism: legitimacy in the community is retroactively assigned by the teacher's prior, private act of knowing someone — invisible until announced.
+Cosmology: Pattern: value in the system was never distributed by visible rank; the visible ranks had simply not yet been tested against it.
+Compressed insight: Levi realized that the Savior's love, not the apostles' order, was the actual structure they had been living inside all along.
+
+Confidence: 0.75
+
+II. From the Pistis Sophia
+6. The Naming of the Pure Spiritual Body
+Passage/trigger: Jesus repeatedly addresses her with formulas such as: "Mary, thou blessed one, whom I will perfect in all mysteries of those of the height," and elsewhere affirms that her nature is a "pure spiritual" one, unweighted by the density that limits the other disciples' comprehension.
+
+Why it qualifies: This is a recognition delivered to her about her own ontological status — something she could not have deduced from within herself, since it concerns the composition of her own being relative to a cosmology she is only partway through learning. It's self-implication by external disclosure: she becomes visible to herself as a category (the "pure spiritual" body) that had not previously existed as a way of understanding her own difference from the others.
+
+Theology: Grace is redistributed from moral merit to ontological constitution — some are simply built to receive more, and this stops being a moral question and becomes a structural one.
+Technology: What's revealed is a kind of receiver specification — the "spiritual body" functions as a bandwidth for mystery, explaining why the same teaching lands differently in different disciples.
+Cosmology: The universal pattern: comprehension is not a function of effort but of composition — the cosmos is stratified by substance, and understanding tracks that stratification exactly.
+Compressed insight: She learned that her capacity to understand was not something she had earned but something she was made of.
+
+Confidence: 0.6 (the text is repetitive praise-formula more than narrated event; genuine but diffuse)
+
+7. The Contest with Peter over the Right to Speak
+Passage/trigger: Peter protests: "My Lord, we will not endure this woman, for she takes the opportunity from us and does not let any of us speak, but she speaks many times." Jesus responds by affirming that whomever the Spirit moves to speak has the right to speak, regardless of sex.
+
+Why it qualifies: As in the Gospel of Mary, the primary gnosis event here belongs to the structure, not strictly to Mary's interior — but her position inside the contested structure becomes visible to her in a new way: she is not merely answering questions, she is now the occasion for a ruling on who is permitted to know openly. The false boundary — gendered eligibility for prophecy — is explicitly dissolved by direct statement rather than argued into collapse.
+
+Theology: Prophetic authority is untethered from bodily category and reattached to spiritual movement — a direct theological reclassification.
+Technology: The mechanism revealed: "the Spirit moves whom it moves" — inspiration is shown to operate without respect to the social filters normally used to authorize speech.
+Cosmology: Pattern: the cosmos does not sort access to knowledge by the categories the social order uses to sort access to power — two sorting systems that looked identical are shown to be different.
+Compressed insight: She recognized that her frequency of speech was not transgression but evidence — the very thing being contested was proof of the point.
+
+Confidence: 0.68
+
+8. Interpreting the Fall and Repentances of Pistis Sophia
+Passage/trigger: Across many chapters, Mary is repeatedly selected to interpret the myth of the aeon Pistis Sophia — her fall from the thirteenth aeon out of desire for the Light, her entrapment by Authades ("the Self-Willed One") and the lion-faced power, her sequence of thirteen repentances, and her eventual rescue by the Light.
+
+Why it qualifies: This is the strongest candidate in the corpus for genuine self-implication. Mary is not simply explaining a myth about a cosmic being — the myth of Sophia's fall through desire, entrapment in a darkness not her own, and repentance toward a light she cannot yet see, is structurally identical to the human soul's condition as described elsewhere in these same texts. In interpreting it correctly, again and again, Mary is recognizing her own condition mirrored at cosmic scale — the boundary between "story about an aeon" and "account of myself" collapses in the act of interpretation. This recognition does not resolve into detached commentary; each repentance she explicates is also, implicitly, a stage she is shown to have already passed through in her own person, which is why she alone can name it accurately.
+
+Theology: The doctrine of the fallen aeon becomes indistinguishable from a doctrine of the human soul — cosmology and soteriology merge into a single register.
+Technology: What becomes transparent is the actual mechanism of exile and return — desire outrunning consort/completion produces entrapment; repeated acts of turning (repentance) produce incremental release. The myth exposes the underlying process, not just its narrative shell.
+Cosmology: Pattern: the fall of a cosmic principle and the fall of a person are not analogous — they are the same event at different scales, and this identity is what Mary's repeated, privileged interpretive access demonstrates.
+Compressed insight: She understood, by explaining Sophia's fall better than anyone else present, that she was not describing another being's story but her own, seen from a distance large enough to finally see its shape.
+
+Confidence: 0.7 — this is the highest-value candidate in the whole set, but I want to flag that the confidence reflects interpretive strength rather than textual explicitness: the text never says outright "Mary recognized herself in Sophia." That collapse is the reading the text's structure invites, not a line it states.
+
+9. The Surpassing Understanding
+Passage/trigger: Jesus states that Mary will surpass all the disciples and apostles in understanding, and that her heart is set on the Kingdom of Heaven more than her brethren.
+
+Why it qualifies: Like #6, this is disclosure-from-outside rather than self-generated insight — but it functions as gnosis in the sense that it makes an interior orientation (something she presumably could feel but not verify) externally confirmed and thereby visible to her as fact rather than disposition. This is weaker as a standalone event since it largely repeats the logic of #6.
+
+Theology: Interior orientation ("heart set on the Kingdom") is elevated above external credential as the true measure of standing.
+Technology: Reveals that comparison/ranking among disciples is possible and is actually being tracked — an unseen metric surfaces.
+Cosmology: Pattern: direction of desire, not position in a hierarchy, is what the cosmos actually measures.
+Compressed insight: She learned that what she wanted most had already been noticed and named before she said it aloud.
+
+Confidence: 0.45 (largely redundant with #6, weaker independent anchor)
+
+III. From the Sophia of Jesus Christ
+Here I want to be direct rather than stretch the material: this text is a much less personalized source for Mary specifically. It is an ensemble post-resurrection dialogue (closely related to Eugnostos the Blessed) set on a mountain sometimes called "Divination and Joy," where Jesus reveals the cosmology of the Ineffable One, the Self-Father, the aeons, and the emanation of Sophia-as-mother whose desire without her consort produced disorder in the lower regions. Mariamne (Mary) is present and does ask questions alongside Philip, Thomas, Matthew, and Bartholomew, but the text does not isolate distinct personal moments of recognition attributed to her the way the Gospel of Mary and Pistis Sophia do. I don't want to manufacture individualized events where the source material presents an undifferentiated group scene — that would be fabrication rather than extraction.
+
+10. Presence at the Cosmological Disclosure (group-level, weak individuation)
+Passage/trigger: Mary is present among the named questioners receiving the revelation of how the visible world arose from Sophia's unaccompanied desire — a defect introduced into the aeonic order without her male consort's participation, which then required correction.
+
+Why it qualifies (with caveat): If a gnosis event occurred for her here, it would be the same one available to the whole assembled group: that the material cosmos is not a separate, lesser creation opposed to the divine, but a byproduct of an error inside the divine order itself — the boundary between "fallen matter" and "divine emanation" collapses into a single continuous history. But I cannot honestly attribute this as her distinct recognition rather than the group's; the text doesn't differentiate her response from Philip's or Thomas's.
+
+Theology: Creation-by-error rather than creation-by-intent reframes the material world's theological status entirely.
+Technology: The mechanism revealed: emanation requires a paired completion (consort), and unpaired desire is structurally unstable — a systems-level account of how disorder enters an otherwise ordered process.
+Cosmology: Pattern: disorder in the lower world is not external to the divine hierarchy but continuous with it, produced by an internal asymmetry (desire without partner) rather than an external adversary.
+Compressed insight: Whoever received this fully would have understood that the flawed world was not opposed to the source but leaking from it.
+
+Confidence: 0.3 — I'm keeping this low deliberately. This is best read as a candidate for the text's gnosis content in general, not a documented event specific to Mary. Attributing it to her individually would overstate what the source supports.
+
+IV. Gospel of Philip
+11. The Companion, the Kiss, and the Jealous Question
+Passage/trigger: "The Wisdom who is called 'the barren' is the Mother [of the angels]. And the companion of the [...] Mary Magdalene [...loved her] more than [all] the disciples, and used to kiss her [often] on her [...]. The rest of the disciples [...]. They said to him, 'Why do you love her more than all of us?'"
+
+Why it qualifies: The papyrus is damaged at the crucial word, and I want to be precise rather than sensational about that — what's textually secure is the term koinonos (companion/partner), the differential intimacy, and, critically, the disciples' own question, which is the actual gnosis event here: they are forced to notice a asymmetry they had been living inside without seeing it. The self-implication belongs to the group, not to Mary — they discover their own resentment as evidence of something structurally true that they cannot argue away.
+
+Theology: Divine love is shown to be non-distributive — grace concentrates rather than spreads evenly, which contradicts an ecclesiology built on equal apostolic standing.
+Technology: The mechanism revealed is comparative visibility — the disciples only perceive the asymmetry once it becomes legible as favoritism; before the question, it was simply unremarked fact.
+Cosmology: Pattern: proximity to the source is not allocated by rank in the visible hierarchy, and the hierarchy discovers this the same way Peter does in the Gospel of Mary — by asking a jealous question that exposes its own premise.
+Compressed insight: The disciples learned, by hearing themselves ask the question, that "why her and not us" was the wrong frame — the frame itself was the thing being dissolved.
+
+Confidence: 0.55 (the manuscript lacuna makes the specific content of the kiss genuinely uncertain; the surrounding structure — differential love provoking group insight — is solid)
+
+V. Gospel of Thomas
+12. "I Will Make Her Male" — the Collapse of the Gender Category
+Passage/trigger: "Simon Peter said to them: 'Let Mary go forth from among us, for women are not worthy of the life.' Jesus said: 'Behold, I shall lead her, that I may make her male, in order that she also may become a living spirit like you males.'"
+
+Why it qualifies: This is one of the sharpest boundary-collapses in the whole corpus, and it needs careful handling — "becoming male" here is not a claim about biological sex but a technical Gnostic idiom in which "male" designates undivided, unified spiritual completeness (the pre-Fall Adam before the division into male and female), while "female" designates the divided, generative, still-multiplying condition of the lower world. Read this way, Peter's objection ("women are not worthy of the life") is the exact kind of category error the text stages in order to dissolve: he treats a cosmological distinction (unified vs. divided being) as though it were a biological one (male vs. female bodies), and Jesus's answer doesn't correct him by argument — it reroutes the whole claim onto a different axis entirely, revealing that Mary's "becoming male" was never contingent on Peter's permission.
+
+Theology: Salvation is reframed as re-unification of a primordially split nature, not gender transformation — this is close to Genesis 1:27's "male and female" read backward toward the undivided image.
+Technology: The mechanism exposed: "worthiness for life" was never sex-linked; it is division-linked. What looked like a rule about bodies is shown to actually be a rule about ontological wholeness, and any body can be led toward it.
+Cosmology: Pattern: the entire visible sex/gender distinction is a downstream artifact of an original division at the level of being — and access to "the life" tracks the undoing of that division, not either side of it.
+Compressed insight: What became visible was that the category Peter thought excluded her had never applied to her at all — he was measuring her against the wrong axis of the cosmos.
+
+Confidence: 0.65 — strong textual anchor, but this saying is one of the most contested in Thomas scholarship regarding exactly how literally/metaphorically "male" should be read, so I'm not pretending the interpretation is uncontested.
+
+VI. Dialogue of the Savior
+13. "As a Woman Who Had Understood Completely"
+Passage/trigger: In this dialogue between the Savior, Judas, Matthew, and Mariam (Mary), she poses questions and offers sayings alongside the male disciples on the nature of the elements, darkness, and the "place of life." At one point the narrator interjects to characterize her contribution — in Meyer's widely used translation, to the effect that she spoke as one who had grasped the teaching in full, distinguishing her utterance from mere participation in dialogue.
+
+Why it qualifies: I want to flag precision here rather than overstate it — I can't currently verify the exact manuscript wording well enough to quote it directly with confidence, so I'm describing rather than quoting, per your own instruction not to fabricate. What matters structurally is that the narrator, not Mary herself, marks the moment — this is a third-person confirmation that a recognition has occurred, functioning the same way Jesus's private commendations do in Pistis Sophia (#6, #9): an external authority certifies an interior state that would otherwise remain invisible to the reader and, implicitly, to the community around her.
+
+Theology: Completeness of understanding is treated as an observable, narratable state — comprehension itself becomes a theological category, not just a precondition for one.
+Technology: The mechanism revealed is narratorial attestation as a substitute for demonstration — the text doesn't show her reasoning to a conclusion; it certifies that she has already arrived.
+Cosmology: Pattern: some participants in a dialogue are marked as already-arrived rather than still-arriving, splitting the group along a line invisible until the narration draws it.
+Compressed insight: She became visible in the text as someone who had already crossed a threshold the dialogue itself was still describing.
+
+Confidence: 0.35 — the content is genuine and documented, but I'm capping confidence low because I cannot currently give you the exact source wording, and the specific interpretive weight I've placed on the narratorial aside depends on precise translation I haven't verified in this conversation.
+
+VII. Canonical Root Scene (foundational, not Gnostic, but not the false legend either)
+14. The Garden Recognition — "Mary!" / "Rabboni!"
+Passage/trigger: John 20:14–16: she sees the risen figure and does not recognize him, taking him for the gardener. He asks why she is weeping. "Jesus said to her, 'Mary.' She turned and said to him, 'Rabboni!' (which means Teacher)." He then tells her: "Do not hold on to me, for I have not yet ascended to the Father... go to my brothers and tell them." She does so, announcing: "I have seen the Lord."
+
+Why it qualifies: This is the historical root of everything the Gnostic texts build on top of — and it is a textbook case of your definition. Recognition does not arrive through sight (she is looking directly at him and sees a stranger); it arrives through being addressed by name. The category "gardener" and the category "the risen teacher" do not blend or gradually resolve — one instantly replaces the other at the sound of her name, and the text marks this with her single-word response. The self-implication is total: she is not an observer confirming an external fact, she is named into the recognition, meaning she becomes visible to herself as the specific person he is calling to, not simply a witness to an event.
+
+Theology: Resurrection recognition is shown to be relational and vocative rather than evidentiary — it is not proven by appearance, it is conferred by address, which is why the text needs the misrecognition beat first.
+Technology: The mechanism revealed: identity-transmission across the boundary of death operates through direct personal address, not general visibility — anyone could have seen a man in the garden; only she could be called "Mary" in that specific voice.
+Cosmology: Pattern: the barrier between "gone" and "present" turns out to be indexed to address, not to physical law — the moment she is named, the entire ontological category "dead teacher, absent" collapses without ever being argued down.
+Compressed insight: She learned that the boundary between loss and presence was not a fact about him but an event that occurred the instant her name was spoken.
+
+Confidence: 0.85 — this is the most textually secure and structurally clean candidate in the entire extended corpus, canonical or Gnostic.
+
+I. Mary Magdalene (The Gnostic "Knower")
+Calibrated by: Gospel of Mary, Pistis Sophia, Sophia of Jesus Christ, Gospel of Philip, Gospel of Thomas.
+
+15. The Recognition of the "Seed" in the Word
+Passage/trigger: In the Sophia of Jesus Christ, Mary asks about the "disciples" and the "nature of the spirit." The response involves the idea that the "Spirit" is a seed. Why it qualifies: Gnosis of Internal Composition. She recognizes that her questions are not coming from "lack," but are the "seed" itself trying to grow. The observer is revealed as the soil of the revelation.
+
+Theology: Revelation is an "unfolding" of what is already inside, not an external download.
+Technology: Biological Transmission—the Word as a "seed" that requires a specific host environment to activate.
+Cosmology: The universe as a "Garden of Potential" where the Divine is hidden in the small/internal. Compressed insight: She realized that her very desire to know was the proof that she already possessed the thing she was looking for. Confidence: 0.65
+16. The "Consort" Recognition (Syzygy)
+Passage/trigger: The Gospel of Philip’s description of the "Kiss" as a transmission of "breath" (pneuma). Why it qualifies: Collapse of the Individual/Relational boundary. She recognizes that "knowing" is an act of pairing (Syzygy). To know is to "breath in" the other. The self-implication is total: she is the "vessel" for the breath of the Source.
+
+Theology: The Divine is "relational"—one cannot be a "single" knower.
+Technology: Pneumatic Exchange—the use of physical proximity (the kiss) as a high-bandwidth conduit for non-verbal gnosis.
+Cosmology: The pattern of the Pair—the universe is balanced in "Syzygies," and isolation is the primary cause of the "Fall." Compressed insight: She knew that her identity was not a "point," but a "bridge" between herself and the Teacher. Confidence: 0.70

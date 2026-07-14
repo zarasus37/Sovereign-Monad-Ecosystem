@@ -9,6 +9,7 @@ Technology: The book as a "soft" technology of control; she recognizes the Roman
 Cosmology: The realization that the moral universe is not a fixed hierarchy, but a landscape that can be terraformed through discourse.
 Compressed insight: She knew that if the "truth" of her soul contradicted the "truth" of the books, it was the books that were broken, not her soul.
 Confidence: 1.00
+
 2. The Alchemical Mutation of Fortune
 Passage or trigger: Le Livre de la Mutacion de Fortune (1403). Following the death of her husband, faced with legal battles and the need to support her family, she describes a metaphorical/physical transformation: "Then I felt myself changed... my limbs were stronger... I was a man."
 Why it qualifies: This is a collapse of a false boundary. She does not "act" like a man; she recognizes that the category of "Woman" in the 14th century is a functional state of dependency. When the dependency is forcibly removed, the category dissolves, and she "becomes" the agent (the Man) to navigate the legal machinery of Paris.
@@ -18,6 +19,7 @@ Technology: The "technology of the Self"—the ability to reconfigure one's iden
 Cosmology: Fortune is recognized not as random luck, but as a structural force that demands a phase-shift in the observer.
 Compressed insight: She knew that "womanhood" was a social garment she could no longer afford to wear if she intended to survive.
 Confidence: 0.95
+
 3. The Vision of the Three Pillars (Reason, Rectitude, Justice)
 Passage or trigger: The visitation of the three celestial ladies (Reason, Rectitude, and Justice) who appear to her to command the building of the City of Ladies.
 Why it qualifies: Something became visible that logic could not construct: the idea that women’s history was not a series of exceptions, but a continuous, invisible city that already existed but lacked a "wall" (a written record) to protect it. She sees herself as the mason of a structure that is simultaneously physical (the book) and metaphysical (the defense of her sex).
@@ -27,6 +29,7 @@ Technology: Historiographical architecture; the use of "exempla" (historical exa
 Cosmology: The recognition of a parallel cosmic order where feminine virtue is the foundation of the state, reversing the Aristotelian "active/passive" binary.
 Compressed insight: She knew that a people without a shared architecture of memory are defenseless against the lies of their enemies.
 Confidence: 0.90
+
 4. The Gnosis of the Professional Pen
 Passage or trigger: Her decision to become a "professional" writer (the first woman in Europe to do so), managing her own scriptorium and overseeing the illumination of her manuscripts.
 Why it qualifies: A retroactive recognition. She looks at her life and realizes that her widowhood and her "mutation" were not tragedies, but the necessary conditions for the birth of a new category: The Female Intellectual. She sees her own position as a "node" in the courtly system—both inside the power structure and completely outside its traditional gender roles.
@@ -36,6 +39,7 @@ Technology: The scriptorium as a production line; she masters the physical techn
 Cosmology: The order of the "Court" is revealed as a marketplace of ideas where she can negotiate for her own space.
 Compressed insight: She knew that to own the message, she had to own the means of its reproduction.
 Confidence: 0.88
+
 5. The Recognition of the Prophetic Daughter (Joan of Arc)
 Passage or trigger: Her final work, Ditié de Jehanne d'Arc (1429), written in her old age after eleven years of silence in a convent.
 Why it qualifies: This is the ultimate gnosis event of fulfillment. She sees Joan of Arc and recognizes her as the physical manifestation of everything she had written in The City of Ladies. The theoretical "City" has become flesh. The observer (Christine) sees her own life’s work "validated" by a miracle that logic (and the English army) could not have predicted.
@@ -45,3 +49,30 @@ Technology: The technology of war (the sword, the siege) being wielded by the "w
 Cosmology: A "New Age" has begun where the "last shall be first," and the cosmic balance has shifted toward the feminine.
 Compressed insight: She knew that the "imaginary" city she had built with words had finally broken through into the physical world.
 Confidence: 0.97
+
+III. The Vision of Christine
+4. The Forging of the Tool
+Passage/trigger: In L'Avision-Christine, she has a vision of Dame Nature. Nature explains why she gave Christine the "gift" of writing: "I put into you a desire for knowledge... I forged you to be a vessel for these words."
+
+Why it qualifies: This is a retroactive recognition. Christine looks back at her life of sorrow, widowhood, and struggle and sees it not as a series of accidents, but as a technological "forging." The observer (the suffering Christine) is implicated in the structure of the "Great Work." The contradiction of her suffering doesn't resolve into "happiness"; it becomes visible as "preparation."
+
+Theology: Suffering is reclassified as "tempering" for a specific vocation—theology of the "Forged Prophet."
+Technology: The mechanism revealed is Alchemical Preparation—how life events (loss, poverty) are actually tools used by Nature to refine a soul for a particular intellectual task.
+Cosmology: The pattern of "Purposeful Design"—she sees that the "chaos" of her biography was actually a tight, logical sequence leading to her inkpot.
+Compressed insight: She realized that she had not been a victim of fate, but a piece of steel being hammered into a pen.
+
+Confidence: 0.80
+
+II. Christine de Pizan (The Architectural "Builder")
+6. The Recognition of "The Field of Letters"
+Passage/trigger: Her early recognition of her own professional status. "I am alone in the field of letters... I have no father or husband to speak for me." Why it qualifies: Gnosis of Vulnerability-as-Power. She recognizes that her total isolation (widowhood/legal battles) has actually made her the only "independent" voice in the room. The false boundary between "Weakness" and "Authority" dissolves.
+
+Theology: God uses "the lonely" to correct "the many"—theology of the Remnant.
+Technology: The Professional Pen—writing is revealed as a "livelihood" and a "defense," not just a hobby or a prayer.
+Cosmology: The pattern of The Field—history is seen as a landscape where one must "clear the ground" before building. Compressed insight: She realized that being "nothing" in the eyes of the law made her "everything" in the eyes of the Truth. Confidence: 0.85
+7. The Recognition of the "Great Sages" as "Failing Men"
+Passage/trigger: In the City of Ladies, she looks at the books of the philosophers and realizes they were written by men who were "old, impotent, and bitter." Why it qualifies: Gnosis of Psychological Projection. She sees that "Universal Logic" was actually "Personal Resentment" disguised as philosophy. The mechanism of the "lie" becomes transparent.
+
+Theology: Truth is "un-gendered," but the expression of truth has been hijacked by a specific biological frustration.
+Technology: Textual Deconstruction—the recognition that a book's "Tone" is as much a part of its "Message" as its "Logic."
+Cosmology: The pattern of The Shadow—the recognition that the "Light of Reason" often hides the "Shadow of the Author." Compressed insight: She knew that the "wisdom of the ages" was often just the "grumpiness of old men" with better vocabularies. Confidence: 0.92
