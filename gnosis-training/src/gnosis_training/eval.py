@@ -75,21 +75,35 @@ def generate_responses(
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
     tokenizer = AutoTokenizer.from_pretrained(str(model_dir))
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
     model: Any = AutoModelForCausalLM.from_pretrained(str(model_dir), device_map="auto")
     model.eval()
 
     responses: list[str] = []
     for e in events:
-        prefix = [m for m in e.messages if m.role in ("system", "user")]
-        inputs: Any = tokenizer.apply_chat_template(
-            [{"role": m.role, "content": m.content} for m in prefix],
-            tokenize=True,
-            add_generation_prompt=True,
-            return_tensors="pt",
+        prefix = [{"role": m.role, "content": m.content}
+                  for m in e.messages if m.role in ("system", "user")]
+        # Render to a string, then tokenize via the standard ``tokenizer(...)``
+        # call → a BatchEncoding with ``input_ids`` + ``attention_mask``. Passing
+        # ``**inputs`` to ``generate`` is the canonical pattern; the earlier
+        # ``model.generate(apply_chat_template(...))`` form passed a BatchEncoding
+        # positionally, which in this transformers version made
+        # ``inputs_tensor.shape[0]`` hit ``BatchEncoding.__getattr__`` →
+        # AttributeError. Surfaced by the dry run (PR #53 re-run, first Eval
+        # execution).
+        prompt_text: Any = tokenizer.apply_chat_template(
+            prefix, tokenize=False, add_generation_prompt=True
         )
-        inputs = inputs.to(model.device)
-        out: Any = model.generate(inputs, max_new_tokens=max_new_tokens)
-        gen_ids = out[0][inputs.shape[-1]:]
+        inputs: Any = tokenizer(prompt_text, return_tensors="pt").to(model.device)
+        prompt_len: int = inputs["input_ids"].shape[-1]
+        out: Any = model.generate(
+            **inputs,
+            max_new_tokens=max_new_tokens,
+            do_sample=False,
+            pad_token_id=tokenizer.eos_token_id,
+        )
+        gen_ids = out[0][prompt_len:]
         responses.append(str(tokenizer.decode(gen_ids, skip_special_tokens=True)))
     return responses
 
