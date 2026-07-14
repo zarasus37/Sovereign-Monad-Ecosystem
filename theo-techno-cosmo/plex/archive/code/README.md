@@ -27,7 +27,6 @@ were moved here as part of **P11 (theo-techno-cosmo deep cleanup)** because:
 | `environment_setup_utils.txt` | Python env setup notes (venv + pip) | Reference |
 | `OFFICIAL v5 RELEASE — save all artifacts.txt` | v5 release checklist | Done; no further action |
 | `Codesh Script from a Gnosis Event.txt` | Codesh tool draft | Reference |
-| `Dodecatemoria Index (Full 144).txt` | Dodecatemoria table | Reference |
 | `enriched corpus.txt` | Enriched corpus notes | Reference |
 | `desktop.ini` | Windows folder metadata | Tracked per repo convention |
 
@@ -57,3 +56,10 @@ removed at that point with a note in the cleanup CHANGELOG.
 - Corpus event provenance unchanged — gnosis source files in
   `THE COUNCILE/` are referenced by `source_file` in the v5.10 corpus
   and must not be moved or renamed
+
+### 2026-07-13 — remove incomplete Dodecatemoria stub
+- Removed `Dodecatemoria Index (Full 144).txt` (was a 9-line schema stub
+  of `celestial_addressing` with one example slot — an incomplete version,
+  not the 144 names). Inventory row above dropped to match. The canonical
+  144-fold material lives in `plex/Research/` and the legacy
+  `04_THE_144_NAMES.md`.
