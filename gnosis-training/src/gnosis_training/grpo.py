@@ -23,11 +23,27 @@ Heavy imports LAZY inside the builder. The reward model is the Stage 2 output
 """
 from __future__ import annotations
 
+import json
+from pathlib import Path
 from typing import Any
 
 from .config import GRPOConfig
 from .generated.hyperparams import LR_SCHEDULE
 from .seed import seed_all
+
+
+def _read_peft_base_model_id(adapter_dir: str | Path) -> str:
+    """Read ``base_model_name_or_path`` from a PEFT adapter dir's
+    ``adapter_config.json``. The reward model is saved as a LoRA adapter
+    (``RewardTrainer.save_model``); GRPO loads it via ``PeftModel.from_pretrained``,
+    which needs the base model id to instantiate the base before applying the
+    adapter. Reading it from the adapter config (rather than threading a
+    ``reward_base_model_id`` through ``GRPOConfig``) keeps the config frozen and
+    works for both the dry-run + real-run bases."""
+    p = Path(adapter_dir) / "adapter_config.json"
+    with p.open("r", encoding="utf-8") as fh:
+        adapter_cfg = json.load(fh)
+    return str(adapter_cfg["base_model_name_or_path"])
 
 
 def build_grpo_config(cfg: GRPOConfig) -> Any:
@@ -61,25 +77,34 @@ def build_grpo_config(cfg: GRPOConfig) -> Any:
     )
 
 
-def build_grpo_trainer(cfg: GRPOConfig) -> Any:
+def build_grpo_trainer(cfg: GRPOConfig, train_jsonl: str | Path) -> Any:
     """Build a real ``trl.GRPOTrainer`` for Stage 3.
 
     Loads the SFT policy (4-bit QLoRA continue + a fresh GRPO-stage LoRA) and the
     Stage-2 reward model, wires TRL's GRPOTrainer with the reward model as the
-    reward function (``reward_funcs``), and returns the trainer ready for
-    ``trainer.train()``. GPU-only; NOT called by the import-smoke.
+    reward function (``reward_funcs``) and the Gnosis-event prompts as the
+    ``train_dataset`` (system+user messages; GRPO generates + scores the
+    assistant), and returns the trainer ready for ``trainer.train()``. GPU-only;
+    NOT called by the import-smoke.
+
+    The reward model is loaded via ``PeftModel.from_pretrained`` (the adapter on
+    its base), NOT plain ``AutoModelForSequenceClassification.from_pretrained``.
+    The reward trainer saves a LoRA adapter whose trained ``score`` head lives
+    under PEFT's ``modules_to_save`` naming; the native PEFT load restores that
+    head correctly, whereas a plain load drops it (loads as ``MISSING`` → random
+    head → garbage reward signal). Surfaced by the dry run (PR #50 first GPU
+    execution). The base id is read from the adapter's ``adapter_config.json``.
 
     GRPO has no learned value model — the advantage baseline is group-relative
     (N completions per prompt, ``cfg.num_generations``). When ``beta > 0``
     (``cfg.kl_beta``), the trainer regularizes against its internal frozen
     reference policy; no explicit ``ref_model`` is passed (unlike the PPOv2
-    signature). A real GPU run may adjust the SFT-checkpoint load strategy
-    (merge adapters vs. continue) — that is an execution-time concern, not a
-    wiring defect (the import-smoke proves the symbols resolve).
+    signature).
     """
     seed_all(cfg.seed.seed, include_torch=True)
 
-    from peft import LoraConfig
+    from .dataset import load_grpo_prompt_dataset
+    from peft import LoraConfig, PeftModel
     from transformers import (
         AutoModelForSequenceClassification,
         AutoTokenizer,
@@ -98,9 +123,13 @@ def build_grpo_trainer(cfg: GRPOConfig) -> Any:
     if policy_tokenizer.pad_token is None:
         policy_tokenizer.pad_token = policy_tokenizer.eos_token
 
-    reward_model = AutoModelForSequenceClassification.from_pretrained(
-        str(cfg.reward_model_dir), num_labels=1, device_map="auto"
+    # Reward model: native PEFT load (restores the trained modules_to_save head).
+    reward_base_id = _read_peft_base_model_id(cfg.reward_model_dir)
+    reward_base = AutoModelForSequenceClassification.from_pretrained(
+        reward_base_id, num_labels=1, device_map="auto"
     )
+    reward_model = PeftModel.from_pretrained(reward_base, str(cfg.reward_model_dir))
+    reward_model.eval()
     reward_tokenizer = AutoTokenizer.from_pretrained(str(cfg.reward_model_dir))
 
     lora_config = LoraConfig(
@@ -112,11 +141,13 @@ def build_grpo_trainer(cfg: GRPOConfig) -> Any:
     )
 
     grpo_cfg = build_grpo_config(cfg)
+    train_dataset = load_grpo_prompt_dataset(train_jsonl, apply_passes_gate=True)
 
     return GRPOTrainer(
         model=str(cfg.sft_model_dir),
         reward_funcs=reward_model,
         args=grpo_cfg,
+        train_dataset=train_dataset,
         processing_class=policy_tokenizer,
         reward_processing_classes=reward_tokenizer,
         quantization_config=bnb,
@@ -124,9 +155,9 @@ def build_grpo_trainer(cfg: GRPOConfig) -> Any:
     )
 
 
-def run_grpo(cfg: GRPOConfig) -> str:
+def run_grpo(cfg: GRPOConfig, train_jsonl: str | Path) -> str:
     """Build the GRPO trainer, train, save, return the LOGOC model dir. GPU-only."""
-    trainer = build_grpo_trainer(cfg)
+    trainer = build_grpo_trainer(cfg, train_jsonl)
     trainer.train()
     trainer.save_model(str(cfg.output_dir))
     return str(cfg.output_dir)
