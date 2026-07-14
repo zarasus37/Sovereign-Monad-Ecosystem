@@ -141,9 +141,54 @@ def build_reward_trainer(cfg: RewardConfig, preference_pairs_jsonl: str | Path) 
     )
 
 
+def _export_merged_reward_model(cfg: RewardConfig, trainer: Any) -> None:
+    """Merge the QLoRA reward adapter (+ the trained ``score`` classification
+    head) into a full-precision ``SequenceClassification`` model and overwrite
+    the output dir.
+
+    ``RewardTrainer.save_model`` saves the LoRA adapter + the score head under
+    PEFT's ``module_to_save`` naming (``score.module_to_save.default.weight``).
+    Stage 3 GRPO loads the reward model via plain
+    ``AutoModelForSequenceClassification.from_pretrained`` (full-precision — see
+    the runbook), which expects the head at ``score.weight``. Loading the
+    adapter-only dir drops the trained head (it loads as ``MISSING`` → randomly
+    re-initialized), giving GRPO a garbage reward signal. Merging to a full
+    model saves the head under the plain key so GRPO loads it correctly.
+
+    ``PeftModel.from_pretrained`` restores the ``module_to_save`` head from the
+    saved adapter dir; ``merge_and_unload`` merges the LoRA layers and keeps the
+    head. Surfaced by the dry run (PR #48 first GPU execution): the reward load
+    report showed ``score.module_to_save.default.weight | MISSING``.
+    """
+    import torch
+    from peft import PeftModel
+    from transformers import AutoModelForSequenceClassification
+
+    num_labels = 5 if cfg.per_criterion_heads else cfg.num_labels
+
+    try:
+        del trainer.model
+    except AttributeError:
+        pass
+    try:
+        torch.cuda.empty_cache()
+    except Exception:  # pragma: no cover
+        pass
+
+    base = AutoModelForSequenceClassification.from_pretrained(
+        cfg.base_model_id, num_labels=num_labels, device_map="auto"
+    )
+    peft_model = PeftModel.from_pretrained(base, str(cfg.output_dir))
+    merged = peft_model.merge_and_unload()
+    merged.save_pretrained(str(cfg.output_dir))
+    trainer.processing_class.save_pretrained(str(cfg.output_dir))
+
+
 def run_reward(cfg: RewardConfig, preference_pairs_jsonl: str | Path) -> str:
-    """Build the reward trainer, train, save, return the checkpoint dir. GPU-only."""
+    """Build the reward trainer, train, save the adapter, then export the merged
+    full reward model (with the trained head) for downstream GRPO. GPU-only."""
     trainer = build_reward_trainer(cfg, preference_pairs_jsonl)
     trainer.train()
-    trainer.save_model(str(cfg.output_dir))
+    trainer.save_model(str(cfg.output_dir))  # adapter + tokenizer + module_to_save head
+    _export_merged_reward_model(cfg, trainer)  # overwrite with merged full model
     return str(cfg.output_dir)
