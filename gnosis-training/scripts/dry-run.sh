@@ -15,9 +15,13 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$REPO_ROOT"
 
-echo "==> 1/4  Building TS dist (scheduler + gnosis-training-data)..."
-pnpm --filter @sovereign/scheduler build
-pnpm --filter @sovereign/gnosis-training-data build
+echo "==> 1/4  Building TS dist (gnosis-training-data + its dependency closure)..."
+# Build the whole dependency closure in topological order: types → ttcl →
+# scheduler → gnosis-training-data. The `...` suffix means "this package and
+# all its workspace deps". Building only scheduler+gtd fails on a fresh clone
+# because scheduler imports @sovereign/ttcl, whose dist does not exist yet
+# (workspace packages resolve each other via built dist/, not src).
+pnpm --filter @sovereign/gnosis-training-data... build
 
 echo "==> 2/4  Preparing dry-run feedstock (16 train + 8 test gnosis events)..."
 node gnosis-training/scripts/prepare-feedstock.mjs
