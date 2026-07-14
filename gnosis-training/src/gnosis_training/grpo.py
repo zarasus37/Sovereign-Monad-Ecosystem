@@ -131,6 +131,15 @@ def build_grpo_trainer(cfg: GRPOConfig, train_jsonl: str | Path) -> Any:
     reward_model = PeftModel.from_pretrained(reward_base, str(cfg.reward_model_dir))
     reward_model.eval()
     reward_tokenizer = AutoTokenizer.from_pretrained(str(cfg.reward_model_dir))
+    # Qwen tokenizers ship without a native pad token; the reward *trainer* sets
+    # pad_token = eos_token at runtime, but that alias is NOT persisted to the
+    # saved tokenizer files, so the GRPO-side load comes back pad-less. TRL scores
+    # the (prompt+completion) reward rows as a batch (B*G), which pads → crashes
+    # with "Cannot handle batch sizes > 1 if no padding token is defined" when
+    # pad_token is None. Same fix the policy tokenizer + the reward trainer apply.
+    # Surfaced by the dry run (PR #51 first GRPO execution).
+    if reward_tokenizer.pad_token is None:
+        reward_tokenizer.pad_token = reward_tokenizer.eos_token
 
     lora_config = LoraConfig(
         r=cfg.lora_rank,
