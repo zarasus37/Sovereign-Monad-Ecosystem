@@ -140,6 +140,12 @@ def build_grpo_trainer(cfg: GRPOConfig, train_jsonl: str | Path) -> Any:
     # Surfaced by the dry run (PR #51 first GRPO execution).
     if reward_tokenizer.pad_token is None:
         reward_tokenizer.pad_token = reward_tokenizer.eos_token
+    # The tokenizer alias alone is not enough: Qwen2ForSequenceClassification
+    # pools the score at the last NON-pad token, so the MODEL config also needs
+    # ``pad_token_id`` to locate the real last token under batched padding. The
+    # PR #52 tokenizer-only fix did not reach the model config → same crash.
+    # Surfaced by the dry run (PR #52 re-run).
+    reward_base.config.pad_token_id = reward_tokenizer.pad_token_id
 
     lora_config = LoraConfig(
         r=cfg.lora_rank,
