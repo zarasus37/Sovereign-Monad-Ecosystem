@@ -144,7 +144,7 @@ If no owner takes this on by the deadline, archive the MEV‑specific artifacts 
 - Orphaned: no package outside `x402-bridge` imported it — only its own `price_fetcher.py` consumed it, so no sovereign agent's constraint envelope was tied to the bridge.
 - No on-chain identity or constraint envelope for the bridge itself.
 
-**Status:** `remediated` (PR #<n>, 2026-07-13) — the three §6 deliverables are landed:
+**Status:** `remediated` (PR #45, 2026-07-13) — the three §6 deliverables are landed:
 
 - **Cost-accounting ledger:** `src/x402_bridge/ledger.py` — `DrawdownLedger` (append-only JSONL) + `LedgerEntry` (one per paid call) + a `to_signal_event()` emission contract mirroring `@sovereign/types` `SignalEvent`/`RevenueEvent` (bus transport deferred — no Python→Kafka client exists; not faked).
 - **Failure/retry envelope:** `src/x402_bridge/envelope.py` — `RetryEnvelope` (bounded exponential backoff, mirrors `sovereign-bus` `KafkaBridgeConfig`), `request_with_retry` (retries 429/503/timeout, DLQ on exhaustion), `envelope_headers` (the single source of truth for RPC headers, always injecting `User-Agent: x402-bridge/1.0` on the RPC path — closing the §6 UA gap and the false README claim). `X402_MAX_CONCURRENT` is now actually consumed by `quicknode._get_client` (was hard-coded 20/40).
