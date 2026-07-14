@@ -137,3 +137,35 @@ CONSTITUTION_PASS_TOTAL = 0.72
 # Wire-format version tag the data-gen consumer emits (mirrors
 # @sovereign/gnosis-training-data EVENT_FORMAT_VERSION).
 GNOSIS_EVENT_FORMAT_VERSION = "gnosis-event-v1"
+
+# ── Dry-run preset (NOT spec-mandated — a concretization of the spec's silent
+# "verify the pipeline before the real GPU run" step; see
+# docs/gnosis-training/DRY_RUN_RUNBOOK.md). The dry run exercises the REAL
+# QLoRA + GRPO code path end-to-end on a cheap GPU for ~$0-2 to catch
+# config/data/wiring bugs before the 8B run. It is NOT a claim that the model
+# learns the constitution — the synth preference pairs (synth_pairs.py) are
+# clearly-labelled synthetic labels, NOT human judgments (spec line 478 still
+# governs the real reward-model training).
+#
+# Qwen2.5-0.5B-Instruct is a real model that supports 4-bit QLoRA + a chat
+# template + AutoModelForSequenceClassification (~1 GB download; fast on a 24
+# GB GPU). It is a SIZE concretization only — the dry run uses the same
+# BitsAndBytesConfig(load_in_4bit=True) + LoraConfig + SFTTrainer/RewardTrainer/
+# GRPOTrainer code the 8B run uses.
+DRY_RUN_BASE_MODEL_ID = "Qwen/Qwen2.5-0.5B-Instruct"
+
+# Tiny sequence/generation lengths keep the dry run in minutes, not hours.
+DRY_RUN_SFT_MAX_SEQ_LENGTH = 512
+DRY_RUN_REWARD_MAX_LENGTH = 512
+DRY_RUN_GRPO_MAX_COMPLETION_LENGTH = 64
+
+# GRPO group size 2 (not 8) — the heavy memory driver on the real run; 2 is
+# the smallest legal GRPO group (TRL requires num_generations divides the
+# per-device batch) and proves the generation+group-relative-advantage path.
+DRY_RUN_GRPO_NUM_GENERATIONS = 2
+DRY_RUN_GRPO_PER_DEVICE_BATCH = 2  # divisible by num_generations (2 → 1 prompt/step)
+
+# Tiny feedstock slices (prepare-feedstock.mjs emits these) — enough to exercise
+# every stage's data path with real gradients in a few steps.
+DRY_RUN_TRAIN_EVENTS = 16
+DRY_RUN_TEST_EVENTS = 8

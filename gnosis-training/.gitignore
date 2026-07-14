@@ -1,0 +1,7 @@
+# Dry-run + real-run training outputs — never committed.
+# (see docs/gnosis-training/DRY_RUN_RUNBOOK.md)
+dryrun/
+checkpoints/
+eval/results/
+data/gnosis-events-*.jsonl
+data/dry-run-pairs.jsonl

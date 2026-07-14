@@ -12,7 +12,7 @@ pydantic (no HTTP boundary here). CPU-pure — no heavy imports.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 
 from .generated.hyperparams import (
@@ -23,6 +23,12 @@ from .generated.hyperparams import (
     BNB_4BIT_QUANT_TYPE,
     BNB_4BIT_USE_DOUBLE_QUANT,
     DEFAULT_SEED,
+    DRY_RUN_BASE_MODEL_ID,
+    DRY_RUN_GRPO_MAX_COMPLETION_LENGTH,
+    DRY_RUN_GRPO_NUM_GENERATIONS,
+    DRY_RUN_GRPO_PER_DEVICE_BATCH,
+    DRY_RUN_REWARD_MAX_LENGTH,
+    DRY_RUN_SFT_MAX_SEQ_LENGTH,
     EVAL_PER_CRITERION_AGREEMENT_MIN,
     EVAL_TOTAL_MAE_MAX,
     EVAL_TOTAL_R2_MIN,
@@ -190,3 +196,72 @@ class EvalConfig:
     apeiron_score_min: float = APEIRON_SCORE_MIN
     apeiron_score_max: float = APEIRON_SCORE_MAX
     seed: TrainingSeed = TrainingSeed()
+
+
+# ── Dry-run preset ──────────────────────────────────────────────────────────
+# Factories (not dataclass defaults) — the frozen dataclasses stay the
+# spec-contract for the real 8B run; the dry run is a concretization that swaps
+# the base model + sizes via ``dataclasses.replace`` so the real config never
+# silently drifts. See ``generated/hyperparams.py`` §Dry-run preset +
+# ``docs/gnosis-training/DRY_RUN_RUNBOOK.md``.
+#
+# All four stages write under ``dryrun/`` (not ``checkpoints/``) so a dry run
+# never collides with a future real-run checkpoint, and the GRPO stage's
+# sft/reward dirs point at the dryrun outputs. CPU-pure (no heavy imports).
+
+_DRYRUN_DIR = Path("dryrun")
+
+
+def dry_run_sft() -> SFTConfig:
+    """Stage-1 dry-run config: Qwen2.5-0.5B + tiny seq length, 1 epoch, batch 1."""
+    return replace(
+        SFTConfig(),
+        base_model_id=DRY_RUN_BASE_MODEL_ID,
+        output_dir=_DRYRUN_DIR / "sft",
+        max_seq_length=DRY_RUN_SFT_MAX_SEQ_LENGTH,
+        num_epochs=1,
+        per_device_train_batch_size=1,
+        gradient_accumulation_steps=1,
+    )
+
+
+def dry_run_reward() -> RewardConfig:
+    """Stage-2 dry-run config: same tiny base, tiny max_length, 1 epoch, batch 1."""
+    return replace(
+        RewardConfig(),
+        base_model_id=DRY_RUN_BASE_MODEL_ID,
+        output_dir=_DRYRUN_DIR / "reward",
+        max_length=DRY_RUN_REWARD_MAX_LENGTH,
+        num_epochs=1,
+        per_device_train_batch_size=1,
+        gradient_accumulation_steps=1,
+    )
+
+
+def dry_run_grpo() -> GRPOConfig:
+    """Stage-3 dry-run config: tiny base, num_generations=2, tiny completion
+    length, SFT+reward dirs from the dryrun outputs."""
+    return replace(
+        GRPOConfig(),
+        sft_model_dir=_DRYRUN_DIR / "sft",
+        reward_model_dir=_DRYRUN_DIR / "reward",
+        output_dir=_DRYRUN_DIR / "grpo",
+        num_generations=DRY_RUN_GRPO_NUM_GENERATIONS,
+        max_completion_length=DRY_RUN_GRPO_MAX_COMPLETION_LENGTH,
+        per_device_train_batch_size=DRY_RUN_GRPO_PER_DEVICE_BATCH,
+        gradient_accumulation_steps=1,
+        num_train_epochs=1,
+    )
+
+
+def dry_run_eval() -> EvalConfig:
+    """Stage-4 dry-run config: model dirs from the dryrun outputs, tiny held-out
+    test slice (``data/gnosis-events-test.jsonl`` from prepare-feedstock.mjs)."""
+    return replace(
+        EvalConfig(),
+        sft_model_dir=_DRYRUN_DIR / "sft",
+        reward_model_dir=_DRYRUN_DIR / "reward",
+        grpo_model_dir=_DRYRUN_DIR / "grpo",
+        test_jsonl=Path("data/gnosis-events-test.jsonl"),
+        output_dir=_DRYRUN_DIR / "eval",
+    )
