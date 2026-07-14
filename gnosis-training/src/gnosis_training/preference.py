@@ -22,7 +22,7 @@ HONEST CONCRETIZATION (load-bearing — do NOT regress):
   WORKSHEET, not ground truth: a human opens the file, writes / flips the
   responses, and saves — upgrading a scaffold pair into a human-judged pair
   without reformatting.
-- ``constitution_score`` is NOT the reward model's label and NOT a PPO reward.
+- ``constitution_score`` is NOT the reward model's label and NOT a GRPO reward.
   It seeds the worksheet's rubric scores (to be confirmed/edited by humans) and
   gates SFT inclusion via ``passes`` (see ``dataset.py``).
 

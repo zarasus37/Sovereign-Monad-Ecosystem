@@ -93,8 +93,8 @@ def build_reward_trainer(cfg: RewardConfig, preference_pairs_jsonl: str | Path) 
 
     from .preference import load_human_pairs
     from peft import LoraConfig 
-    from transformers import AutoTokenizer 
-    from trl import RewardConfig, RewardTrainer 
+    from transformers import AutoTokenizer
+    from trl import RewardConfig, RewardTrainer  # type: ignore[attr-defined]
 
     pairs = load_human_pairs(preference_pairs_jsonl)
     if not pairs:

@@ -106,7 +106,7 @@ def run_eval_battery(cfg: EvalConfig) -> dict[str, Any]:
     events = read_events_jsonl(cfg.test_jsonl)
     targets = held_out_targets(events)
 
-    responses = generate_responses(cfg.ppo_model_dir, events)
+    responses = generate_responses(cfg.grpo_model_dir, events)
     coherence = consistency_check(responses)
 
     # ``predicted`` here would come from re-scoring the generated responses

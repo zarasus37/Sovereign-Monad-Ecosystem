@@ -19,7 +19,7 @@
  *   - honesty: `active_slots.*.label === null` for every event (the Catalan
  *     slot-labels data asset is not yet in the repo — never fabricated).
  *
- * The full SFT→Reward→PPO→Eval pipeline (TTCL_v1_0_BREAKDOWN.md:275-311) is NOT
+ * The full SFT→Reward→GRPO→Eval pipeline (TTCL_v1_0_BREAKDOWN.md:275-311) is NOT
  * exercised here — it is a real GPU/TRL job and remains unbuilt. This suite
  * covers only the deterministic local data-generation consumer.
  */

@@ -281,7 +281,7 @@ FINE-TUNE:      QLoRA (4-bit quantization, LoRA rank=64)
 ALIGNMENT:      Custom Constitutional AI — NO standard RLHF
 REWARD MODEL:   Constitutional scorer (5-criterion, trained separately)
 OPTIMIZER:      AdamW, lr=2e-4, cosine schedule, warmup 3%
-FRAMEWORK:      Hugging Face TRL (SFTTrainer, RewardTrainer, PPOTrainer)
+FRAMEWORK:      Hugging Face TRL (SFTTrainer, RewardTrainer, GRPOTrainer)
 TRACKING:       Weights & Biases
 REGISTRY:       MLflow
 VERSIONING:     DVC for datasets, Git for code
@@ -299,10 +299,23 @@ SERVING:        Ollama (local) / HF Inference Endpoints (cloud)
    - Task: Learn the 5-criterion constitution scorer
    - Output: Separate reward model
 
-3. **PPO Alignment**
+3. **GRPO Alignment** (Group Relative Policy Optimization)
    - Input: Trained SFT model + reward model
    - Task: Optimize SFT model using constitutional reward signal
    - Output: LOGOC model
+   - NOTE: GRPO supersedes the PPO stage named in earlier drafts of this spec.
+     It is a PPO-family optimizer (same importance-ratio + KL-to-reference
+     discipline) that drops the learned value model in favor of a group-
+     relative baseline computed from N completions per prompt. It is the
+     higher-standard choice here because (a) it consumes a reward FUNCTION —
+     the Stage-2 constitutional scorer slots in directly as the reward signal,
+     preserving the "Custom Constitutional AI, NOT standard RLHF" framing; (b)
+     no value model means less memory + no value-function reward hacking on an
+     8B QLoRA footprint; (c) it is the optimizer DeepSeek-R1 / Qwen use and is
+     the maintained path in modern TRL (PPOTrainer was removed upstream after
+     the 0.12–0.13 PPOv2 window). The reward is still the constitutional
+     scorer — only the optimizer changed. This is a doctrinal upgrade, not a
+     silent substitution.
 
 4. **Evaluation Battery**
    - Constitution score regression tests
@@ -524,14 +537,14 @@ If you move it to 0.75 or 0.70, you change the selectivity significantly.
 **Mitigation:** Start with 0.72. After generating 1000+ Gnosis events, analyze the distribution of scores. If you see a natural gap or cliff, adjust the threshold accordingly.
 
 #### 5. **The Reward Model Trained Separately Can Diverge**
-You train the reward model on preference pairs, then use it to train LOGOC via PPO. If the reward model has any errors, they propagate to LOGOC.
+You train the reward model on preference pairs, then use it to train LOGOC via GRPO. If the reward model has any errors, they propagate to LOGOC.
 
 **Risk:** Reward hacking. LOGOC learns to game the reward model rather than genuinely improve.
 
 **Mitigation:** 
-- Evaluate the reward model on held-out test set before using it for PPO
+- Evaluate the reward model on held-out test set before using it for GRPO
 - Regularize the reward model to avoid extreme values
-- Sample-check PPO-generated samples for constitution score manually
+- Sample-check GRPO-generated samples for constitution score manually
 - Use a second independent reward model as a sanity check
 
 ---
@@ -597,7 +610,7 @@ If I were executing on this:
 
 ### Phase 2: Alignment (Weeks 5-8)
 1. Train a full reward model on 10,000 preference pairs
-2. Run PPO on the SFT model using the reward model
+2. Run GRPO on the SFT model using the reward model
 3. Evaluate LOGOC model vs. baseline LLaMA on constitution criteria
 4. Generate additional Gnosis events with the improved model (curriculum refinement)
 
@@ -662,7 +675,7 @@ This is not marketing-speak or research theater. This is a system you can actual
 1. **Formal specification** (sealed, hashed)
 2. **Type safety** (enforced at compile time)
 3. **Constitutional enforcement** (built into data generation)
-4. **Clear training pipeline** (SFT → Reward → PPO → Eval)
+4. **Clear training pipeline** (SFT → Reward → GRPO → Eval)
 5. **Integration points** (Gnosis events as training substrate)
 
 The philosophical vision is sound:

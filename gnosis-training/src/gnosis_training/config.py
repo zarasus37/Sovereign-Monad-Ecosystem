@@ -26,6 +26,18 @@ from .generated.hyperparams import (
     EVAL_PER_CRITERION_AGREEMENT_MIN,
     EVAL_TOTAL_MAE_MAX,
     EVAL_TOTAL_R2_MIN,
+    GRPO_BETA,
+    GRPO_EPSILON,
+    GRPO_GRAD_ACCUM_STEPS,
+    GRPO_LEARNING_RATE,
+    GRPO_LOSS_TYPE,
+    GRPO_MAX_COMPLETION_LENGTH,
+    GRPO_NUM_GENERATIONS,
+    GRPO_NUM_ITERATIONS,
+    GRPO_NUM_EPOCHS,
+    GRPO_PER_DEVICE_BATCH,
+    GRPO_SCALE_REWARDS,
+    GRPO_TEMPERATURE,
     LORA_ALPHA,
     LORA_DROPOUT,
     LORA_RANK,
@@ -33,13 +45,6 @@ from .generated.hyperparams import (
     LR_SCHEDULE,
     OPTIMIZER_LR,
     LR_WARMUP_RATIO,
-    PPO_CLIP_RANGE,
-    PPO_INIT_KL_COEF,
-    PPO_KL_BETA,
-    PPO_LEARNING_RATE,
-    PPO_MINI_BATCH,
-    PPO_PPO_EPOCHS,
-    PPO_ROLLOUT_BATCH,
     REWARD_BASE_MODEL_ID,
     REWARD_GRAD_ACCUM_STEPS,
     REWARD_MAX_LENGTH,
@@ -125,26 +130,43 @@ class RewardConfig:
 
 
 @dataclass(frozen=True)
-class PPOConfig:
-    """Stage 3 — PPO alignment of the SFT model against the reward model (spec
-    line 302-305). Output: the LOGOC model.
+class GRPOConfig:
+    """Stage 3 — GRPO Alignment of the SFT model against the reward model (spec
+    line 302-305; doctrinal upgrade from PPO — see the NOTE at
+    ``TTCL_v1_0_BREAKDOWN.md:302``). Output: the LOGOC model.
 
-    All PPO hyperparameters are concretizations (TRL PPOConfig defaults, lightly
-    tightened). The spec names PPO + the optimizer (AdamW lr=2e-4 cosine warmup
-    3%) but no PPO-specific numerics.
+    GRPO (Group Relative Policy Optimization) is the PPO-family optimizer that
+    drops the learned value model in favor of a group-relative baseline from N
+    completions per prompt. The reward signal is still the Stage-2 constitutional
+    scorer (slotted in as ``reward_funcs``) — Custom Constitutional AI, NOT
+    standard RLHF (spec line 281). All GRPO hyperparameters are concretizations
+    (TRL ``GRPOConfig`` defaults + DeepSeek-R1 practice); the spec names the
+    optimizer + AdamW lr but no GRPO-specific numerics.
     """
 
     sft_model_dir: Path = Path("checkpoints/sft")
     reward_model_dir: Path = Path("checkpoints/reward")
-    output_dir: Path = Path("checkpoints/ppo")
-    learning_rate: float = PPO_LEARNING_RATE
-    kl_beta: float = PPO_KL_BETA
-    init_kl_coef: float = PPO_INIT_KL_COEF
-    clip_range: float = PPO_CLIP_RANGE
-    rollout_batch_size: int = PPO_ROLLOUT_BATCH
-    mini_batch_size: int = PPO_MINI_BATCH
-    ppo_epochs: int = PPO_PPO_EPOCHS
+    output_dir: Path = Path("checkpoints/grpo")
+    learning_rate: float = GRPO_LEARNING_RATE
+    kl_beta: float = GRPO_BETA  # KL-to-reference coef (the PPO kl_coef analog)
+    clip_epsilon: float = GRPO_EPSILON  # importance-ratio clip (the PPO clip_range analog)
+    num_generations: int = GRPO_NUM_GENERATIONS  # group size G (N completions/prompt)
+    num_iterations: int = GRPO_NUM_ITERATIONS  # optimization passes per generation batch
+    max_completion_length: int = GRPO_MAX_COMPLETION_LENGTH
+    temperature: float = GRPO_TEMPERATURE
+    loss_type: str = GRPO_LOSS_TYPE
+    scale_rewards: str = GRPO_SCALE_REWARDS
+    per_device_train_batch_size: int = GRPO_PER_DEVICE_BATCH
+    gradient_accumulation_steps: int = GRPO_GRAD_ACCUM_STEPS
+    num_train_epochs: int = GRPO_NUM_EPOCHS
     warmup_ratio: float = LR_WARMUP_RATIO
+    lora_rank: int = LORA_RANK
+    lora_alpha: int = LORA_ALPHA
+    lora_dropout: float = LORA_DROPOUT
+    lora_target_modules: tuple[str, ...] = LORA_TARGET_MODULES
+    bnb_4bit_quant_type: str = BNB_4BIT_QUANT_TYPE
+    bnb_4bit_use_double_quant: bool = BNB_4BIT_USE_DOUBLE_QUANT
+    bnb_4bit_compute_dtype: str = BNB_4BIT_COMPUTE_DTYPE
     seed: TrainingSeed = TrainingSeed()
 
 
@@ -159,7 +181,7 @@ class EvalConfig:
 
     sft_model_dir: Path = Path("checkpoints/sft")
     reward_model_dir: Path = Path("checkpoints/reward")
-    ppo_model_dir: Path = Path("checkpoints/ppo")
+    grpo_model_dir: Path = Path("checkpoints/grpo")
     test_jsonl: Path = Path("data/gnosis-events-test.jsonl")
     output_dir: Path = Path("eval/results")
     total_mae_max: float = EVAL_TOTAL_MAE_MAX

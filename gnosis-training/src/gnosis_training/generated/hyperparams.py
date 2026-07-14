@@ -2,10 +2,11 @@
 
 The spec (`theo-techno-cosmo/plex/archive/TTCL_v1_0_BREAKDOWN.md:275-311`) fixes
 only a handful of values: LLaMA 3.1 8B, QLoRA 4-bit rank=64, AdamW lr=2e-4 cosine
-warmup 3%, TRL (SFT/Reward/PPO trainers). Every other hyperparameter named in
-the TRL configs (batch size, context length, epochs, grad accumulation, LoRA
-alpha / dropout / target modules, all PPO KL/clip/rollout params, eval
-thresholds, seed) is a CONCRETIZATION — grounded in the nearest written
+warmup 3%, TRL (SFT/Reward/GRPO trainers — GRPO is the doctrinal Stage-3
+optimizer; see the NOTE at TTCL_v1_0_BREAKDOWN.md:302). Every other hyperparameter
+named in the TRL configs (batch size, context length, epochs, grad accumulation,
+LoRA alpha / dropout / target modules, all GRPO beta/epsilon/generation params,
+eval thresholds, seed) is a CONCRETIZATION — grounded in the nearest written
 evidence (the reference preference-pair guide, TRL defaults, the repo's
 determinism discipline) and documented here, NOT presented as spec-mandated.
 
@@ -61,20 +62,36 @@ REWARD_PER_DEVICE_BATCH = 8
 REWARD_GRAD_ACCUM_STEPS = 2
 REWARD_NUM_EPOCHS = 1
 
-# PPO (concretization — TRL PPOConfig defaults, lightly tightened). KL beta 0.05
-# keeps the policy near the SFT ref; clip 0.2 is the PPO norm; rollout batch 128
-# × mini-batch 32 is a single-GPU PPO footprint.
-PPO_KL_BETA = 0.05
-PPO_CLIP_RANGE = 0.2
-PPO_ROLLOUT_BATCH = 128
-PPO_MINI_BATCH = 32
-PPO_PPO_EPOCHS = 4
-PPO_LEARNING_RATE = 1.5e-5
-PPO_INIT_KL_COEF = 0.2
+# GRPO (concretization — TRL GRPOConfig defaults + DeepSeek-R1 practice). Group
+# size (num_generations) 8 is the TRL default and a single-GPU 8B QLoRA footprint
+# (DeepSeek-R1 uses 64 on a large cluster — too large for one consumer GPU); KL
+# beta 0.04 keeps the policy near the SFT reference (DeepSeek-R1 GRPO beta); the
+# importance-ratio clip epsilon 0.2 is the PPO-norm value (the clip_range analog);
+# loss_type 'grpo' is the canonical GRPO objective (DAPO / 'dapo' is trl 1.8's
+# default and a documented future refinement, not adopted here — one doctrinal
+# change at a time); lr 1e-6 is the DeepSeek-R1 / DeepSeekMath GRPO learning rate
+# (alignment moves less than SFT's 2e-4); max_completion_length 512 leaves room
+# for LOGOC's logic-compression reasoning (the constitution values visible
+# reasoning chains); temperature 1.0 is the GRPO exploration default; num_iterations
+# 1 is the DeepSeek-R1 single-pass-per-generation default. per_device batch 8 must
+# be divisible by num_generations (8 → 1 prompt/device/step); grad-accum 4 →
+# effective 4 prompts × 8 generations = 32 completions/step on one GPU.
+GRPO_NUM_GENERATIONS = 8
+GRPO_BETA = 0.04
+GRPO_EPSILON = 0.2
+GRPO_LEARNING_RATE = 1e-6
+GRPO_MAX_COMPLETION_LENGTH = 512
+GRPO_TEMPERATURE = 1.0
+GRPO_NUM_ITERATIONS = 1
+GRPO_LOSS_TYPE = "grpo"
+GRPO_SCALE_REWARDS = "group"
+GRPO_PER_DEVICE_BATCH = 8
+GRPO_GRAD_ACCUM_STEPS = 4
+GRPO_NUM_EPOCHS = 1
 
 # Eval thresholds (concretization — spec Part 4 lists the batteries, gives no
 # numeric gates). total MAE <= 0.08 and R² >= 0.6 are "reward model tracks the
-# constitution scorer closely enough to trust as a PPO signal."
+# constitution scorer closely enough to trust as a GRPO reward signal."
 EVAL_TOTAL_MAE_MAX = 0.08
 EVAL_TOTAL_R2_MIN = 0.60
 EVAL_PER_CRITERION_AGREEMENT_MIN = 0.70
@@ -114,7 +131,7 @@ APEIRON_SCORE_MIN = 0.55
 APEIRON_SCORE_MAX = 0.71
 
 # Constitution threshold (spec line 148 / reference): gates DATA generation,
-# NOT the PPO loop and NOT the SFT inclusion (SFT uses ``passes``).
+# NOT the GRPO loop and NOT the SFT inclusion (SFT uses ``passes``).
 CONSTITUTION_PASS_TOTAL = 0.72
 
 # Wire-format version tag the data-gen consumer emits (mirrors

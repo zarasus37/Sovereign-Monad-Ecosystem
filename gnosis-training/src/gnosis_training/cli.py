@@ -3,7 +3,7 @@
 Modes:
   - ``sft <train_jsonl>``            — run Stage 1 SFT (GPU-only; future job).
   - ``reward <preference_pairs_jsonl>`` — run Stage 2 reward model (GPU-only).
-  - ``ppo``                          — run Stage 3 PPO (GPU-only).
+  - ``grpo``                         — run Stage 3 GRPO (GPU-only).
   - ``eval``                         — run Stage 4 eval battery (GPU-only).
   - ``bootstrap-worksheet <events_jsonl> <out_jsonl>`` — emit the preference-pair
     worksheet (CPU-pure; NOT a training path).
@@ -104,7 +104,7 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         return bootstrap_worksheet(args[1], args[2])
 
-    if mode in ("sft", "reward", "ppo", "eval"):
+    if mode in ("sft", "reward", "grpo", "eval"):
         print(
             f"mode '{mode}' is real TRL wiring but is a future GPU job — not executed "
             "in this PR (no model load, no training). Run it on a GPU box with "

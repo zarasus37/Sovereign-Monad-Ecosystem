@@ -84,9 +84,9 @@ def build_sft_trainer(
     """
     seed_all(cfg.seed.seed, include_torch=True)
 
-    from transformers import AutoModelForCausalLM, AutoTokenizer 
-    from trl import SFTConfig as TrlSFTConfig 
-    from trl import SFTTrainer 
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from trl import SFTConfig as TrlSFTConfig  # type: ignore[attr-defined]
+    from trl import SFTTrainer  # type: ignore[attr-defined]
 
     tokenizer = AutoTokenizer.from_pretrained(cfg.base_model_id)
     if tokenizer.pad_token is None:

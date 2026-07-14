@@ -52,7 +52,7 @@ def test_cli_main_unknown_mode_returns_nonzero():
 
 
 def test_cli_gpu_modes_advertise_future_job_not_execution():
-    """sft/reward/ppo/eval modes honestly report they are future GPU jobs
+    """sft/reward/grpo/eval modes honestly report they are future GPU jobs
     (no training executed in this PR)."""
     from gnosis_training.cli import main
 

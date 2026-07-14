@@ -25,7 +25,7 @@ These are the canonical working surfaces for the ecosystem:
   - volumetric 4D processing engine work
   - API / dashboard surfaces
 - `gnosis-training/`
-  - TTCL Layer 7 Training Pipeline (SFT→Reward→PPO→Eval; real TRL wiring, CPU-verified, GPU run pending)
+  - TTCL Layer 7 Training Pipeline (SFT→Reward→GRPO→Eval; real TRL wiring, CPU-verified, GPU run pending; Stage-3 = GRPO, doctrinal upgrade from PPO)
   - uv-managed Python package (`@sovereign/gnosis-training`)
 - `theo-techno-cosmo/`
   - TTCL / LOGOC / philosophical and doctrinal materials

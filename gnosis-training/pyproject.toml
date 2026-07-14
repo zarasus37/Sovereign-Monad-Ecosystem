@@ -1,7 +1,7 @@
 [project]
 name = "gnosis-training"
 version = "0.1.0"
-description = "TTCL Layer 7 Training Pipeline (SFT→Reward→PPO→Eval) — real TRL wiring, CPU-verified, GPU run pending. Sovereign Monad Ecosystem."
+description = "TTCL Layer 7 Training Pipeline (SFT→Reward→GRPO→Eval) — real TRL wiring, CPU-verified, GPU run pending. Sovereign Monad Ecosystem."
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "Proprietary"}
@@ -11,13 +11,16 @@ authors = [
 dependencies = [
     "torch>=2.2.0",
     "transformers>=4.43.0",
-    # PPO is spec-named (TTCL_v1_0_BREAKDOWN.md:305). TRL removed the PPO stack
-    # (PPOConfig/PPOTrainer) after the 0.12–0.13 PPOv2 window (gone by 0.14+ and
-    # all 1.x). This package's ppo.py targets the PPOv2-era constructor signature,
-    # so it pins to that exact window — PPO is then genuinely runnable (spec-
-    # faithful, NOT silently substituted with GRPO/DPO). SFT + Reward run on this
-    # line too. See src/gnosis_training/ppo.py for the version constraint.
-    "trl>=0.12.0,<0.14",
+    # GRPO (Group Relative Policy Optimization) is the Stage-3 optimizer
+    # (TTCL_v1_0_BREAKDOWN.md:302 — doctrinal upgrade from PPO; see the spec's
+    # NOTE there + src/gnosis_training/grpo.py). GRPO is the maintained
+    # PPO-family path in modern TRL — PPOTrainer/PPOConfig were removed upstream
+    # after the 0.12–0.13 PPOv2 window (gone by 0.14+ and all 1.x, where
+    # SFT/Reward/GRPO/DPO/KTO remain). So this package targets modern TRL with
+    # NO upper cap: GRPOTrainer/GRPOConfig + SFTTrainer/SFTConfig +
+    # RewardTrainer/RewardConfig all resolve on the latest line. SFT + Reward
+    # run on this line too. See src/gnosis_training/grpo.py for the wiring.
+    "trl>=0.15.0",
     "peft>=0.11.0",
     "datasets>=2.20.0",
     "accelerate>=0.30.0",

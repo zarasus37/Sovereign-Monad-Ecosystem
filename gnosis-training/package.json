@@ -1,7 +1,7 @@
 {
   "name": "@sovereign/gnosis-training",
   "version": "0.1.0",
-  "description": "TTCL Layer 7 Training Pipeline (SFT→Reward→PPO→Eval) — real TRL wiring, CPU-verified, GPU run pending. Sovereign Monad Ecosystem.",
+  "description": "TTCL Layer 7 Training Pipeline (SFT→Reward→GRPO→Eval) — real TRL wiring, CPU-verified, GPU run pending. Sovereign Monad Ecosystem.",
   "type": "module",
   "private": true,
   "scripts": {

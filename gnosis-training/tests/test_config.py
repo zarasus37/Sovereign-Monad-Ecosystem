@@ -7,7 +7,7 @@ import pytest
 
 from gnosis_training.config import (
     EvalConfig,
-    PPOConfig,
+    GRPOConfig,
     RewardConfig,
     SFTConfig,
     TrainingSeed,
@@ -53,12 +53,25 @@ def test_reward_base_same_as_sft_base_trained_separately():
     assert RewardConfig().base_model_id == SFTConfig().base_model_id == H.BASE_MODEL_ID
 
 
-def test_ppo_config_concretized_kl_and_clip():
-    """Spec names PPO + AdamW lr but no PPO numerics; these are concretizations."""
-    cfg = PPOConfig()
+def test_grpo_config_concretized_kl_clip_and_group_size():
+    """Spec names the Stage-3 optimizer + AdamW lr but no GRPO numerics; these
+    are concretizations (TRL GRPOConfig defaults + DeepSeek-R1 practice)."""
+    cfg = GRPOConfig()
     assert cfg.kl_beta > 0
-    assert 0 < cfg.clip_range <= 0.3
-    assert cfg.rollout_batch_size >= cfg.mini_batch_size
+    assert 0 < cfg.clip_epsilon <= 0.3
+    assert cfg.num_generations >= 1
+    # GRPO constraint: per_device batch must be divisible by num_generations
+    # (the group size) so each device step holds whole groups.
+    assert cfg.per_device_train_batch_size % cfg.num_generations == 0
+
+
+def test_grpo_output_dir_is_grpo_not_legacy_ppo():
+    """The Stage-3 checkpoint dir follows the optimizer rename (checkpoints/grpo),
+    not the superseded PPO name (compared as Path, not str, for cross-platform)."""
+    from pathlib import Path
+
+    assert GRPOConfig().output_dir == Path("checkpoints/grpo")
+    assert EvalConfig().grpo_model_dir == Path("checkpoints/grpo")
 
 
 def test_eval_thresholds_are_concretizations():
