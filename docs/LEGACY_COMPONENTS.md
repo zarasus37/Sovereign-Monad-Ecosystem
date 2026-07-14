@@ -136,24 +136,27 @@ If no owner takes this on by the deadline, archive the MEV‑specific artifacts 
 
 **What it is:** QuickNode X402 payment‑protocol client wrapper (`pyproject.toml`, Python source, tests). Bridges external payment infrastructure.
 
-**Why it is non‑sovereign:**
+**Why it was non‑sovereign (now remediated):**
 
 - External dependency bridge, not a sovereign agent.
-- No operational cost accounting: there is no drawdown ledger or per-call cost metering — the only credit capture is a single best-effort `X-Credits-Remaining` header read in the Node helper, surfaced once to stdout and discarded.
-- Failure/retry envelope is undocumented and partially absent: the x402 path does not retry on 429/503/timeout (it returns `None` and hands off to the provider-pool fallback); the `X402_MAX_CONCURRENT` env knob is read but unused (real limits are hard-coded httpx 20/40); no `User-Agent` is sent on the RPC path (contradicting the package's own Cloudflare-1010 guidance).
-- Orphaned: no package outside `x402-bridge` imports it — only its own `price_fetcher.py` consumes it, so no sovereign agent's constraint envelope is tied to the bridge.
+- No operational cost accounting: there was no drawdown ledger or per-call cost metering — the only credit capture was a single best-effort `X-Credits-Remaining` header read in the Node helper, surfaced once to stdout and discarded.
+- Failure/retry envelope was undocumented and partially absent: the x402 path did not retry on 429/503/timeout (it returned `None` and handed off to the provider-pool fallback); the `X402_MAX_CONCURRENT` env knob was read but unused (real limits were hard-coded httpx 20/40); no `User-Agent` was sent on the RPC path (contradicting the package's own Cloudflare-1010 guidance).
+- Orphaned: no package outside `x402-bridge` imported it — only its own `price_fetcher.py` consumed it, so no sovereign agent's constraint envelope was tied to the bridge.
 - No on-chain identity or constraint envelope for the bridge itself.
 
-**Status:** `remediate` (in progress) — the live smoke test is GREEN (2026-07-10, PR #30, `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK), so the funding blocker named in earlier versions of this entry is cleared. The §3 criteria above remain unmet, so the `LEGACY_NON_SOVEREIGN` marker stays until cost accounting, the failure envelope, and a sovereign-agent consumer are delivered (or the package is archived).
+**Status:** `remediated` (PR #<n>, 2026-07-13) — the three §6 deliverables are landed:
 
-**Chosen path:** **Remediate or archive**
+- **Cost-accounting ledger:** `src/x402_bridge/ledger.py` — `DrawdownLedger` (append-only JSONL) + `LedgerEntry` (one per paid call) + a `to_signal_event()` emission contract mirroring `@sovereign/types` `SignalEvent`/`RevenueEvent` (bus transport deferred — no Python→Kafka client exists; not faked).
+- **Failure/retry envelope:** `src/x402_bridge/envelope.py` — `RetryEnvelope` (bounded exponential backoff, mirrors `sovereign-bus` `KafkaBridgeConfig`), `request_with_retry` (retries 429/503/timeout, DLQ on exhaustion), `envelope_headers` (the single source of truth for RPC headers, always injecting `User-Agent: x402-bridge/1.0` on the RPC path — closing the §6 UA gap and the false README claim). `X402_MAX_CONCURRENT` is now actually consumed by `quicknode._get_client` (was hard-coded 20/40).
+- **Sovereign-agent consumer:** `src/x402_bridge/agent.py` — `X402Agent` wraps the bridge as a sovereign agent per CHARTER §3: the settlement wallet **address** is the managed resource (never the key), the drawdown ledger is the cost-bearing flow, the `RetryEnvelope` is the constraint envelope, and the env knobs (`X402_AGENT_KILL_SWITCH`, `X402_MAX_CONCURRENT`, `X402_MAX_RETRIES`, `X402_INITIAL_BACKOFF_MS`, `X402_MAX_BACKOFF_MS`, `X402_TIMEOUT`) are the explicit/narrow/justified control surfaces (`X402Agent.control_surfaces()`). The bridge is no longer an orphan — `X402Agent` is the importable sovereign-agent consumer; the interface is designed to migrate into `@sovereign/organ-runtime` when that package graduates.
 
-**Action:** Either:
+The live smoke test remains GREEN (2026-07-10, PR #30, `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK). The `LEGACY_NON_SOVEREIGN` marker is removed (per the update discipline below). Verified offline by 24/24 tests (`tests/test_x402_envelope.py`, `test_x402_ledger.py`, `test_x402_agent.py`, and the existing `test_x402_auth.py`); the funded live smoke is re-run by a maintainer when ready (no funded wallet required for the offline gate).
 
-- a) remediate to expose explicit cost accounting, retry/failure policy, and a bounded operational envelope tied to a sovereign agent, or
-- b) archive if the integration cannot be made sovereignty‑compliant.
+**Chosen path:** **Remediate** (delivered).
 
-**Deadline:** 2027‑07‑06
+**Action:** Complete — the package is remediated to sovereignty compliance. A future step is the sovereign-bus transport for the ledger emission (deferred pending a Python bus client; the `to_signal_event()` contract is in place) and migration of the `X402Agent` surface into `@sovereign/organ-runtime` when that package graduates.
+
+**Deadline:** 2027‑07‑06 (met).
 
 ---
 
@@ -195,6 +198,7 @@ This inventory does not enumerate every empty package individually because their
 | `archive` | Historical material kept for reference; not part of active architecture. |
 | `isolate` | Kept in tree but fenced off from active builds, docs, and governance flows. |
 | `remediate` | Actively being redesigned to satisfy §3; deadline applies. |
+| `remediated` | Redesigned to satisfy §3; `LEGACY_NON_SOVEREIGN` markers removed; PR linked. |
 | `pending-review` | No owner or path chosen; must be resolved before deadline. |
 
 ---

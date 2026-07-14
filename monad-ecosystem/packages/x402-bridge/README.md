@@ -1,6 +1,28 @@
 # x402 QuickNode Integration Guide
 
-> **LEGACY_NON_SOVEREIGN** — This package is a pre‑charter external bridge and does not currently satisfy `docs/CHARTER.md` §3 (sovereignty as an architectural property). The live smoke test is GREEN (2026‑07‑10, `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK, PR #30) — but sovereignty remediation is still open: no cost-accounting ledger, an undocumented failure/retry envelope (the `X402_MAX_CONCURRENT` knob is read but unused; no `User-Agent` on the RPC path), and no sovereign-agent consumer (the package is currently an orphan — only its own `price_fetcher.py` imports it). See `docs/LEGACY_COMPONENTS.md` §6 for the remediation plan and deadline.
+> **Sovereign (remediated 2026‑07‑13, PR #<n>)** — This package satisfies `docs/CHARTER.md` §3 (sovereignty as an architectural property). The bridge is wrapped as a self-contained sovereign agent (`X402Agent`) whose managed resource is the settlement wallet **address** (never the key), whose cost-bearing flow is the append-only `DrawdownLedger`, whose constraint envelope is the `RetryEnvelope` (bounded retry, `X402_MAX_CONCURRENT` actually used, `User-Agent` on the RPC path), and whose control surfaces are the documented `X402_*` env knobs + an `X402_AGENT_KILL_SWITCH`. The `LEGACY_NON_SOVEREIGN` flag is cleared — see `docs/LEGACY_COMPONENTS.md` §6. The live smoke test is GREEN (2026‑07‑10, `eth_blockNumber` on `monad-mainnet` via the official `@quicknode/x402` SDK, PR #30); the funded live smoke is re-run by a maintainer when ready (no funded wallet required for the offline gate — 24/24 offline tests green).
+
+## Sovereignty surface (new)
+
+| Module | Role | CHARTER §3 property |
+|---|---|---|
+| `src/x402_bridge/agent.py` | `X402Agent` — the sovereign-agent consumer | hold/manage own resources; constraint envelope; control surfaces |
+| `src/x402_bridge/ledger.py` | `DrawdownLedger` + `LedgerEntry` — append-only JSONL cost metering (one entry per paid call); `to_signal_event()` emission contract mirroring `@sovereign/types` `SignalEvent`/`RevenueEvent` (bus transport deferred — no Python→Kafka client; not faked) | bear operational costs via own flows |
+| `src/x402_bridge/envelope.py` | `RetryEnvelope` + `request_with_retry` — bounded exponential backoff (mirrors `sovereign-bus` `KafkaBridgeConfig`); `envelope_headers` is the single source of truth for RPC headers and always injects `User-Agent: x402-bridge/1.0` | constraint envelope |
+
+```python
+from x402_bridge import X402Agent, X402AgentConfig
+
+agent = X402Agent(X402AgentConfig.from_env())
+agent.managed_resource()       # {"settlement_address": "0x...", "configured": True}
+agent.constraint_envelope()    # RetryEnvelope(max_retries=3, max_concurrent=20, ...)
+agent.control_surfaces()       # every X402_* knob: default / scope / justification
+result = await agent.fetch({"jsonrpc": "2.0", "id": 1, "method": "eth_blockNumber", "params": []})
+```
+
+**Kill switch:** set `X402_AGENT_KILL_SWITCH=true` to halt all paid RPC spend without a code change (refused calls are still recorded in the ledger as `status="kill_switch"` for auditability). Narrow by design — it halts spend only, not read-only config inspection.
+
+**Env knobs (control surfaces):** `X402_AGENT_ID`, `X402_EVM_SETTLEMENT_ADDRESS` (address only), `X402_AGENT_KILL_SWITCH`, `X402_MAX_CONCURRENT`, `X402_MAX_RETRIES`, `X402_INITIAL_BACKOFF_MS`, `X402_MAX_BACKOFF_MS`, `X402_TIMEOUT`, `X402_LEDGER_PATH` (default `.x402_ledger.jsonl`, gitignored). See `X402Agent.control_surfaces()` for the default/scope/justification of each.
 
 ## Overview
 
@@ -300,12 +322,17 @@ export MONAD_RPC_PRIMARY=https://rpc1.monad.xyz
 
 | File | Purpose |
 |------|---------|
-| `src/x402_bridge/quicknode.py` | Python x402 client (credit-drawdown + pay-per-request) |
+| `src/x402_bridge/quicknode.py` | Python x402 client (credit-drawdown + pay-per-request); wired through the envelope + ledger |
+| `src/x402_bridge/agent.py` | **Sovereign-agent consumer** — `X402Agent` (managed resource, cost flow, constraint envelope, control surfaces, kill switch) |
+| `src/x402_bridge/ledger.py` | **Cost-accounting ledger** — `DrawdownLedger` (append-only JSONL) + `LedgerEntry` |
+| `src/x402_bridge/envelope.py` | **Failure/retry envelope** — `RetryEnvelope` + `request_with_retry` + `envelope_headers` (UA on the RPC path) |
 | `src/x402_bridge/price_fetcher.py` | Price fetcher with x402 as primary provider |
 | `src/x402_bridge/auth_sdk.cjs` | Node.js helper (official `@quicknode/x402` SDK) for SIWX auth + live credit-drawdown RPC; used by `live_smoke.py` stages 2/3 |
 | `tests/test_x402_auth.py` | Test suite for x402 module validation (offline) |
-| `src/x402_bridge/live_smoke.py` | End-to-end live verification (3 staged commands) |
-| `.env.example` | Environment variable template |
+| `tests/test_x402_envelope.py` | Envelope tests — retry/backoff/UA (offline) |
+| `tests/test_x402_ledger.py` | Ledger tests — JSONL round-trip, signal-event shape, determinism (offline) |
+| `tests/test_x402_agent.py` | Agent tests — config, kill switch, delegation (offline) |
+| `src/x402_bridge/live_smoke.py` | End-to-end live verification (3 staged commands; funded wallet) |
 
 ---
 
@@ -317,7 +344,7 @@ export MONAD_RPC_PRIMARY=https://rpc1.monad.xyz
 
 3. **Network scope:** The private key signs on the **payment network** (Base Sepolia/Base Mainnet), not on Monad. The target network (Monad) is queried, not signed.
 
-4. **JWT caching:** The JWT is stored in-memory only. It is not written to disk. Each process instance authenticates independently.
+4. **JWT caching:** `auth_sdk.cjs` caches the JWT to the gitignored `.env` as `X402_JWT_TOKEN` (the JWT, not the private key) so stages 2/3 of the live smoke can reuse it. The private key is never written by code.
 
 ---
 
@@ -400,7 +427,7 @@ The endpoint `https://x402.quicknode.com/monad-mainnet` returns HTTP 402 with th
 - **nanopayment**: 100 base units per batched call ($0.0001), 7-day timeout, Circle Gateway contract `0x0077777d7EBA4688BDeF3E311b846F25870A19B9`
 - **credit-drawdown**: SIWX auth required (not exposed in 402 body); 1M credits/month free tier
 
-Cloudflare 1010 WAF blocks bare `urllib` requests — must use `httpx` with proper `User-Agent: x402-bridge/1.0` header (already handled by `x402_bridge.quicknode.py`).
+Cloudflare 1010 WAF blocks bare `urllib` requests — must use `httpx` with a proper `User-Agent: x402-bridge/1.0` header. The RPC path now sets this via `x402_bridge.envelope.envelope_headers()` (the single source of truth for x402 RPC headers), injected on every attempt of `request_with_retry`. (An earlier version of this README claimed `quicknode.py` "already handled" the UA — it did not; the UA lived only in `live_smoke.py`'s preflight. Fixed in the sovereignty remediation.)
 
 ### Verified Live (2026-07-10) — end-to-end green
 

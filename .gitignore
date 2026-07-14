@@ -10,6 +10,10 @@ credentials.json
 secrets/
 keys/
 
+# x402-bridge cost ledger (per-call drawdown accounting; gitignored, never committed)
+.x402_ledger.jsonl
+*.x402_ledger.jsonl
+
 # Python
 __pycache__/
 *.py[cod]

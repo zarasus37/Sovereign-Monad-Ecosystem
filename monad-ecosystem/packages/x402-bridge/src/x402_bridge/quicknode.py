@@ -22,6 +22,8 @@ import os
 import time
 import logging
 import json as _json
+from datetime import datetime, timezone
+from decimal import Decimal
 from typing import Optional, Dict, Any, Tuple
 from dataclasses import dataclass
 from pathlib import Path
@@ -41,6 +43,97 @@ def _get_httpx():
         _httpx = httpx
     return _httpx
 
+
+# ---------------------------------------------------------------------------
+# Sovereign-agent envelope + cost ledger (see envelope.py / ledger.py)
+# ---------------------------------------------------------------------------
+
+from x402_bridge.envelope import (  # noqa: E402  (after lazy-httpx setup)
+    RetryEnvelope,
+    envelope_headers,
+    request_with_retry,
+    REASON_EXHAUSTED,
+    REASON_AUTH_FAILED,
+    REASON_TERMINAL_HTTP,
+    REASON_ERROR,
+)
+from x402_bridge.ledger import DrawdownLedger, LedgerEntry  # noqa: E402
+
+# Module-level envelope + ledger are instantiated AFTER the config block below
+# (they read X402_LEDGER_PATH / X402_MAX_CONCURRENT, which are defined there).
+# Functions accept optional overrides so the sovereign-agent wrapper (agent.py)
+# and tests can inject their own envelope/ledger without touching the process env.
+_default_envelope: Optional[RetryEnvelope] = None
+_default_ledger: Optional[DrawdownLedger] = None
+
+
+def _now_iso() -> str:
+    """UTC timestamp for a ledger entry (call-site wall-clock; see ledger.py)."""
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%fZ")
+
+
+def _credits_from_response(resp: Any) -> Optional[int]:
+    """Read the x402 credit balance from a response, if the server sent it."""
+    if resp is None:
+        return None
+    try:
+        raw = resp.headers.get("x-credits-remaining") or resp.headers.get(
+            "x-ratelimit-remaining"
+        )
+    except AttributeError:
+        return None
+    if raw is None:
+        return None
+    try:
+        return int(raw)
+    except (ValueError, TypeError):
+        return None
+
+
+def _reason_to_status(reason: Optional[str]) -> str:
+    """Map an envelope terminal reason to a ledger status string."""
+    if reason is None:
+        return "paid"
+    if reason == REASON_EXHAUSTED:
+        return "exhausted"
+    if reason == REASON_AUTH_FAILED:
+        return "auth_failed"
+    return "failed"
+
+
+def _record_ledger(
+    ledger: Optional[DrawdownLedger],
+    *,
+    agent_id: str,
+    payment_model: str,
+    attempts: int,
+    reason: Optional[str],
+    credits_after: Optional[int] = None,
+    usd_notional: Optional[Any] = None,
+    tx_hash: Optional[str] = None,
+    block_number: Optional[int] = None,
+    endpoint: Optional[str] = None,
+) -> Optional[str]:
+    """Append one LedgerEntry; return its id, or None if no ledger is wired."""
+    if ledger is None:
+        return None
+    status = _reason_to_status(reason)
+    dlq_reason = "max-retries-exhausted" if reason == REASON_EXHAUSTED else None
+    entry = LedgerEntry(
+        timestamp=_now_iso(),
+        agent_id=agent_id,
+        endpoint=endpoint or X402_TARGET_NETWORK,
+        payment_model=payment_model,
+        attempts=attempts,
+        status=status,
+        credits_after=credits_after,
+        usd_notional=usd_notional,
+        tx_hash=tx_hash,
+        block_number=block_number,
+        dlq_reason=dlq_reason,
+    )
+    return ledger.append(entry)
+
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
@@ -56,6 +149,22 @@ X402_JWT_TOKEN = os.getenv("X402_JWT_TOKEN", "")
 
 X402_TIMEOUT = float(os.getenv("X402_TIMEOUT", "30.0"))
 X402_MAX_CONCURRENT = int(os.getenv("X402_MAX_CONCURRENT", "20"))
+
+# Sovereign-agent identity + control surfaces (CHARTER §3 control surfaces).
+# X402_EVM_SETTLEMENT_ADDRESS is the wallet ADDRESS only — never the private key.
+X402_AGENT_ID = os.getenv("X402_AGENT_ID", "x402-bridge-agent")
+X402_EVM_SETTLEMENT_ADDRESS = os.getenv("X402_EVM_SETTLEMENT_ADDRESS", "")
+X402_AGENT_KILL_SWITCH = os.getenv("X402_AGENT_KILL_SWITCH", "").lower() in (
+    "1", "true", "yes",
+)
+
+# Cost-accounting ledger path (gitignored JSONL; see repo root .gitignore).
+X402_LEDGER_PATH = os.getenv("X402_LEDGER_PATH", ".x402_ledger.jsonl")
+
+# Now that X402_LEDGER_PATH / X402_MAX_CONCURRENT are defined, build the
+# module-level envelope + ledger from env (mirrors the X402_* config pattern).
+_default_envelope = RetryEnvelope.from_env()
+_default_ledger = DrawdownLedger(X402_LEDGER_PATH)
 
 # ---------------------------------------------------------------------------
 # Optional crypto dependency — only needed for pay-per-request
@@ -101,15 +210,17 @@ class PaymentRequirement:
 
 _http_client: Optional[Any] = None
 
-def _get_client() -> Any:
+def _get_client(envelope: Optional[RetryEnvelope] = None) -> Any:
     global _http_client
+    env = envelope or _default_envelope
     if _http_client is None:
         httpx = _get_httpx()
+        # X402_MAX_CONCURRENT is now actually used (was hard-coded 20/40).
         limits = httpx.Limits(
-            max_keepalive_connections=20,
-            max_connections=40,
+            max_keepalive_connections=env.max_concurrent,
+            max_connections=env.max_concurrent * 2,
         )
-        _http_client = httpx.AsyncClient(limits=limits, timeout=X402_TIMEOUT)
+        _http_client = httpx.AsyncClient(limits=limits, timeout=env.timeout_s)
     return _http_client
 
 
@@ -146,35 +257,54 @@ def can_credit_drawdown() -> bool:
 # Core x402 fetch — handles BOTH payment models transparently
 # ---------------------------------------------------------------------------
 
-async def fetch(jsonrpc_payload: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+async def fetch(
+    jsonrpc_payload: Dict[str, Any],
+    *,
+    envelope: Optional[RetryEnvelope] = None,
+    ledger: Optional[DrawdownLedger] = None,
+    agent_id: Optional[str] = None,
+) -> Optional[Dict[str, Any]]:
     """
     Make an x402-enabled JSON-RPC request.
-    
+
     Payment model selection (auto-detected):
       1. credit-drawdown (JWT) — if X402_JWT_TOKEN is set
       2. pay-per-request (EIP-712 signing) — if eth-account + private key
       3. Falls back to None if neither is available
-    
+
     Auto-refresh:
       - credit-drawdown: JWT expiry triggers _refresh_jwt() (re-auth via Node.js or re-request)
       - pay-per-request: no refresh needed, each request is signed independently
+
+    The optional ``envelope``/``ledger``/``agent_id`` kwargs let a sovereign-agent
+    wrapper (see ``x402_bridge.agent``) inject its own constraint envelope and
+    cost ledger without touching the process env. Defaults are the module-level
+    ``_default_envelope``/``_default_ledger``/``X402_AGENT_ID``.
     """
     if not is_configured():
         return None
 
     # Credit-drawdown is preferred if available (faster, no per-request signing)
     if can_credit_drawdown() and X402_PAYMENT_MODEL in ("credit-drawdown", "nanopayment"):
-        return await _fetch_credit_drawdown(jsonrpc_payload)
+        return await _fetch_credit_drawdown(
+            jsonrpc_payload, envelope=envelope, ledger=ledger, agent_id=agent_id,
+        )
 
     # Pay-per-request requires eth-account + private key
     if can_pay_per_request() and X402_PAYMENT_MODEL == "pay-per-request":
-        return await _fetch_pay_per_request(jsonrpc_payload)
+        return await _fetch_pay_per_request(
+            jsonrpc_payload, envelope=envelope, ledger=ledger, agent_id=agent_id,
+        )
 
     # Fallback: try credit-drawdown even if model mismatch, then pay-per-request
     if can_credit_drawdown():
-        return await _fetch_credit_drawdown(jsonrpc_payload)
+        return await _fetch_credit_drawdown(
+            jsonrpc_payload, envelope=envelope, ledger=ledger, agent_id=agent_id,
+        )
     if can_pay_per_request():
-        return await _fetch_pay_per_request(jsonrpc_payload)
+        return await _fetch_pay_per_request(
+            jsonrpc_payload, envelope=envelope, ledger=ledger, agent_id=agent_id,
+        )
 
     logger.warning("x402 configured but no usable payment model. Check dependencies.")
     return None
@@ -184,49 +314,71 @@ async def fetch(jsonrpc_payload: Dict[str, Any]) -> Optional[Dict[str, Any]]:
 # Credit-drawdown model (JWT session)
 # ---------------------------------------------------------------------------
 
-async def _fetch_credit_drawdown(payload: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-    """JWT-based credit drawdown. JWT refreshed on expiry automatically."""
+async def _fetch_credit_drawdown(
+    payload: Dict[str, Any],
+    *,
+    envelope: Optional[RetryEnvelope] = None,
+    ledger: Optional[DrawdownLedger] = None,
+    agent_id: Optional[str] = None,
+) -> Optional[Dict[str, Any]]:
+    """JWT-based credit drawdown. JWT refreshed on expiry automatically.
+
+    Operates within the sovereign-agent constraint envelope (bounded retry on
+    429/503/timeout, User-Agent on the RPC path) and records one cost-ledger
+    entry per call (paid or dead-letter).
+    """
     global X402_JWT_TOKEN
 
     if not X402_JWT_TOKEN:
         return None
 
+    env = envelope or _default_envelope
+    lg = ledger if ledger is not None else _default_ledger
+    aid = agent_id or X402_AGENT_ID
+
     url = f"{X402_BASE_URL}/{X402_TARGET_NETWORK}"
-    client = _get_client()
+    client = _get_client(env)
 
-    for attempt in range(2):
-        headers = {
-            "Authorization": f"Bearer {X402_JWT_TOKEN}",
-            "Content-Type": "application/json",
-        }
-        try:
-            resp = await client.post(url, headers=headers, json=payload)
+    # Refresh the JWT at most once on an auth-status response (preserves the
+    # original "refresh once, then give up" semantics).
+    refreshed = {"done": False}
 
-            if resp.status_code in (401, 402, 403):
-                if attempt == 0:
-                    logger.warning(
-                        f"x402 JWT expired (HTTP {resp.status_code}). "
-                        f"Attempting re-authentication..."
-                    )
-                    refreshed = await _refresh_jwt()
-                    if refreshed:
-                        continue
-                    logger.warning("x402 JWT re-auth failed. Will try pay-per-request fallback.")
-                else:
-                    logger.warning("x402 JWT still invalid after re-auth.")
-                return None
+    async def on_auth_status(resp: Any, attempt: int) -> bool:
+        if not refreshed["done"]:
+            refreshed["done"] = True
+            logger.warning(
+                f"x402 JWT expired (HTTP {resp.status_code}). Re-authenticating..."
+            )
+            if await _refresh_jwt():
+                return True
+            logger.warning("x402 JWT re-auth failed. Will try pay-per-request fallback.")
+        else:
+            logger.warning("x402 JWT still invalid after re-auth.")
+        return False
 
-            resp.raise_for_status()
-            return resp.json()
+    headers = envelope_headers({"Authorization": f"Bearer {X402_JWT_TOKEN}"})
+    resp, attempts, reason = await request_with_retry(
+        client,
+        url,
+        headers=headers,
+        json_payload=payload,
+        envelope=env,
+        on_auth_status=on_auth_status,
+    )
 
-        except _get_httpx().TimeoutException:
-            logger.warning("x402 credit-drawdown timed out.")
-            return None
-        except Exception as e:
-            logger.warning(f"x402 credit-drawdown error: {e}")
-            return None
+    if resp is None:
+        _record_ledger(
+            lg, agent_id=aid, payment_model="credit-drawdown",
+            attempts=attempts, reason=reason,
+        )
+        return None
 
-    return None
+    credits_after = _credits_from_response(resp)
+    _record_ledger(
+        lg, agent_id=aid, payment_model="credit-drawdown",
+        attempts=attempts, reason=None, credits_after=credits_after,
+    )
+    return resp.json()
 
 
 async def _refresh_jwt(max_attempts: int = 2) -> bool:
@@ -368,7 +520,13 @@ async def _refresh_jwt_via_node(max_attempts: int = 2) -> bool:
 # Pay-per-request model (EIP-712 signing per request)
 # ---------------------------------------------------------------------------
 
-async def _fetch_pay_per_request(payload: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+async def _fetch_pay_per_request(
+    payload: Dict[str, Any],
+    *,
+    envelope: Optional[RetryEnvelope] = None,
+    ledger: Optional[DrawdownLedger] = None,
+    agent_id: Optional[str] = None,
+) -> Optional[Dict[str, Any]]:
     """
     Full x402 pay-per-request protocol:
       1. POST without payment header
@@ -380,46 +538,66 @@ async def _fetch_pay_per_request(payload: Dict[str, Any]) -> Optional[Dict[str, 
         logger.warning("pay-per-request requires eth-account + X402_EVM_PRIVATE_KEY")
         return None
 
+    env = envelope or _default_envelope
+    lg = ledger if ledger is not None else _default_ledger
+    aid = agent_id or X402_AGENT_ID
+
     url = f"{X402_BASE_URL}/{X402_TARGET_NETWORK}"
-    client = _get_client()
-    headers = {"Content-Type": "application/json"}
+    client = _get_client(env)
+    headers = envelope_headers()
 
-    try:
-        # Step 1: First request without payment
-        resp = await client.post(url, headers=headers, json=payload)
+    # Captured across the negotiation hook for the ledger entry.
+    ctx: Dict[str, Any] = {"usd_notional": None, "tx_hash": None, "block_number": None}
 
-        # Step 2: If payment required, negotiate
-        if resp.status_code == 402:
-            payment_req = _parse_payment_required(resp)
-            if payment_req is None:
-                logger.warning("x402 402 response but no X-PAYMENT-REQUIRED header.")
-                return None
+    async def on_auth_status(resp: Any, attempt: int) -> bool:
+        # 402 is the x402 payment-required protocol signal — negotiate + retry.
+        if resp.status_code != 402:
+            logger.warning("x402 pay-per-request auth/status %d not recoverable.",
+                           resp.status_code)
+            return False
+        payment_req = _parse_payment_required(resp)
+        if payment_req is None:
+            logger.warning("x402 402 response but no X-PAYMENT-REQUIRED header.")
+            return False
+        logger.info(
+            f"x402 payment required: {payment_req.max_amount_required} "
+            f"for {payment_req.resource}"
+        )
+        try:
+            ctx["usd_notional"] = Decimal(payment_req.max_amount_required) / Decimal(10 ** 6)
+        except Exception:  # noqa: BLE001
+            ctx["usd_notional"] = None
+        payment_header = _sign_payment(payment_req)
+        if payment_header is None:
+            logger.error("Failed to sign x402 payment authorization.")
+            return False
+        # Mutate the shared headers dict so the retry carries the payment.
+        headers["X-Payment"] = payment_header
+        return True
 
-            logger.info(
-                f"x402 payment required: {payment_req.max_amount_required} "
-                f"for {payment_req.resource}"
-            )
+    resp, attempts, reason = await request_with_retry(
+        client,
+        url,
+        headers=headers,
+        json_payload=payload,
+        envelope=env,
+        on_auth_status=on_auth_status,
+    )
 
-            # Step 3: Sign payment
-            payment_header = _sign_payment(payment_req)
-            if payment_header is None:
-                logger.error("Failed to sign x402 payment authorization.")
-                return None
-
-            headers["X-Payment"] = payment_header
-
-            # Step 4: Retry with payment
-            resp = await client.post(url, headers=headers, json=payload)
-
-        resp.raise_for_status()
-        return resp.json()
-
-    except _get_httpx().TimeoutException:
-        logger.warning("x402 pay-per-request timed out.")
+    if resp is None:
+        _record_ledger(
+            lg, agent_id=aid, payment_model="pay-per-request",
+            attempts=attempts, reason=reason,
+        )
         return None
-    except Exception as e:
-        logger.warning(f"x402 pay-per-request error: {e}")
-        return None
+
+    credits_after = _credits_from_response(resp)
+    _record_ledger(
+        lg, agent_id=aid, payment_model="pay-per-request",
+        attempts=attempts, reason=None, credits_after=credits_after,
+        usd_notional=ctx["usd_notional"],
+    )
+    return resp.json()
 
 
 def _parse_payment_required(resp: Any) -> Optional[PaymentRequirement]:
