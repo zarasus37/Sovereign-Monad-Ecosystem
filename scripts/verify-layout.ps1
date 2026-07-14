@@ -30,6 +30,7 @@ $allowedTopLevel = @(
   'archive',
   'docs',
   'gnostic-engine',
+  'gnosis-training',
   'infrastructure',
   'monad-ecosystem',
   'node_modules',

@@ -22,5 +22,8 @@ packages:
   # ── Gnostic Engine (Python — uv managed; npm-aware for root scripts) ──────
   - 'gnostic-engine'
 
+  # ── Gnosis Training (Python — uv managed; TTCL Layer 7 training pipeline) ─
+  - 'gnosis-training'
+
 # Note: theo-techno-cosmo is documentation/philosophy only — not a package.
 # gnostic-engine uses uv/pyproject.toml for Python deps, but has package.json for npm awareness.

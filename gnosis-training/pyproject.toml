@@ -1,0 +1,84 @@
+[project]
+name = "gnosis-training"
+version = "0.1.0"
+description = "TTCL Layer 7 Training Pipeline (SFT→Reward→GRPO→Eval) — real TRL wiring, CPU-verified, GPU run pending. Sovereign Monad Ecosystem."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Proprietary"}
+authors = [
+    {name = "Cris Colon"}
+]
+dependencies = [
+    "torch>=2.2.0",
+    "transformers>=4.43.0",
+    # GRPO (Group Relative Policy Optimization) is the Stage-3 optimizer
+    # (TTCL_v1_0_BREAKDOWN.md:302 — doctrinal upgrade from PPO; see the spec's
+    # NOTE there + src/gnosis_training/grpo.py). GRPO is the maintained
+    # PPO-family path in modern TRL — PPOTrainer/PPOConfig were removed upstream
+    # after the 0.12–0.13 PPOv2 window (gone by 0.14+ and all 1.x, where
+    # SFT/Reward/GRPO/DPO/KTO remain). So this package targets modern TRL with
+    # NO upper cap: GRPOTrainer/GRPOConfig + SFTTrainer/SFTConfig +
+    # RewardTrainer/RewardConfig all resolve on the latest line. SFT + Reward
+    # run on this line too. See src/gnosis_training/grpo.py for the wiring.
+    "trl>=0.15.0",
+    "peft>=0.11.0",
+    "datasets>=2.20.0",
+    "accelerate>=0.30.0",
+    "numpy>=1.26.0",
+]
+
+[project.optional-dependencies]
+# Spec-named tracking/registry/versioning surfaces. WIRED BUT DEFERRED — opt-in
+# extras so a CPU import-smoke / local pytest run does NOT pull wandb/mlflow/dvc.
+# See src/gnosis_training/tracking.py + registry.py for the deferred-integration guards.
+tracking = [
+    "wandb>=0.17.0",
+    "mlflow>=2.14.0",
+]
+dvc = [
+    "dvc>=3.50.0",
+]
+# The 4-bit QLoRA kernel (spec mandates 4-bit QLoRA). bitsandbytes is notoriously
+# hard to build on native Windows, so it is an opt-in extra: the import-smoke
+# and CPU-pure tests do NOT require it (the builder lazy-imports it and raises a
+# documented "install --extra qlora" error when absent). The actual GPU run
+# needs `uv sync --extra qlora`.
+qlora = [
+    "bitsandbytes>=0.43.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gnosis_training"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+# Type-check against the actual runtime (Python 3.13). requires-python stays
+# >=3.11 as the SUPPORT floor; the mypy target is higher because modern numpy
+# stubs use PEP 695 `type` aliases (Python 3.12+), which mypy cannot parse when
+# targeted at 3.11. This mirrors gnostic-engine's strictness, adjusted for the
+# numpy-stub floor.
+python_version = "3.13"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+# TRL/peft/transformers/bitsandbytes do not ship complete type stubs. With
+# `ignore_missing_imports = true` the lazy imports resolve as Any without
+# error; the inline `# type: ignore[import-untyped]` markers document intent
+# for a future stubs-installed run and are no-ops here (warn_unused_ignores is
+# left at the strict default — they are only present where the import WOULD
+# error without ignore_missing_imports, so they are not flagged).
+ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.4.0",
+    "mypy>=1.10.0",
+]

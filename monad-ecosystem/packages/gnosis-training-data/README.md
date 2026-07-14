@@ -13,7 +13,7 @@ into a TTCL `Sign`, scores it with the **existing** `@sovereign/ttcl` `scoreSign
 constitution scorer (the L7.8 parity surface — reused, not reimplemented), and
 emits **Gnosis training events** in the spec format
 (`theo-techno-cosmo/plex/archive/TTCL_v1_0_BREAKDOWN.md:314-359`) as deterministic
-NDJSON (JSONL). The output is the feedstock the future SFT→Reward→PPO→Eval
+NDJSON (JSONL). The output is the feedstock the future SFT→Reward→GRPO→Eval
 pipeline will consume.
 
 ## Honesty posture (read this)
