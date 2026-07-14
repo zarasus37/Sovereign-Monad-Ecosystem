@@ -132,9 +132,53 @@ def build_sft_trainer(
     )
 
 
+def _export_merged_model(cfg: SFTConfig, trainer: Any) -> None:
+    """Merge the QLoRA SFT adapter into a full-precision base and overwrite the
+    output dir with the merged model + tokenizer.
+
+    ``SFTTrainer.save_model`` saves ONLY the LoRA adapter
+    (``adapter_config.json`` + adapter weights) for a 4-bit QLoRA model — NOT a
+    loadable full model (no ``config.json`` with ``model_type``). Stage 3 GRPO
+    loads the SFT output as a base model under a fresh QLoRA adapter (the
+    documented "QLoRA continue" design in ``grpo.py``), so it needs a full-model
+    dir. The 4-bit base cannot be merged in place (quantized weights), so we
+    reload the base in full precision, apply the just-saved adapter, merge, and
+    save — producing ``config.json`` + ``model.safetensors`` + tokenizer.
+
+    Transient full-precision footprint: ~1 GB at 0.5B, ~16 GB at 8B (fits a 24
+    GB card; the in-memory 4-bit model is freed first). This is the standard
+    "export merged model" step in a QLoRA workflow. Surfaced by the dry run (PR
+    #48 first GPU execution) — without it GRPO crashes with
+    ``AutoConfig.from_pretrained: Should have a model_type key in its
+    config.json``.
+    """
+    from peft import PeftModel
+    from transformers import AutoModelForCausalLM
+
+    # Free the in-memory 4-bit model before reloading full-precision (matters at 8B).
+    try:
+        del trainer.model
+    except AttributeError:
+        pass
+    try:
+        import torch
+
+        torch.cuda.empty_cache()
+    except Exception:  # pragma: no cover — CUDA not always present at import time
+        pass
+
+    base = AutoModelForCausalLM.from_pretrained(cfg.base_model_id, device_map="auto")
+    peft_model = PeftModel.from_pretrained(base, str(cfg.output_dir))
+    merged = peft_model.merge_and_unload()
+    merged.save_pretrained(str(cfg.output_dir))
+    trainer.processing_class.save_pretrained(str(cfg.output_dir))
+
+
 def run_sft(cfg: SFTConfig, train_jsonl: str | Path, eval_jsonl: str | Path | None = None) -> str:
-    """Build the trainer, train, save, return the checkpoint dir. GPU-only."""
+    """Build the trainer, train, save the adapter, then export the merged full
+    model for downstream GRPO. GPU-only."""
     trainer = build_sft_trainer(cfg, train_jsonl, eval_jsonl)
     trainer.train()
-    trainer.save_model(str(cfg.output_dir))
+    trainer.save_model(str(cfg.output_dir))  # adapter + tokenizer
+    _export_merged_model(cfg, trainer)  # overwrite with merged full model
     return str(cfg.output_dir)
