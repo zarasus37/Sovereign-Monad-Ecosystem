@@ -104,6 +104,10 @@ desktop.ini
 *.jsonl
 !monad-ecosystem/packages/hcd-monitor/tests/fixtures/*.jsonl
 !logs/audit/signal-stream-traced.jsonl
+# Canonical human-authored reward-model preference pairs (spec line 478) — the
+# gating training artifact, authored + validate-worksheet-gated before commit.
+# See gnosis-training/.gitignore + theo-techno-cosmo/plex/Review/REWARD_MODEL_PREFERENCE_PAIRS_GUIDE.md.
+!gnosis-training/data/preference_pairs_ALL.jsonl
 *.pdf
 *.png
 *.jpg
