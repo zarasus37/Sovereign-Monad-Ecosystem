@@ -38,6 +38,7 @@ def _human_pair_wire(pair_id="PP-001", gap=0.30, chosen_total=0.95):
         "apeiron": False,
         "bootstrap": False,
         "constitution_version": "v2.0",
+        "synthetic": False,
     }
 
 
@@ -65,6 +66,7 @@ def _bootstrap_pair_wire(pair_id="BOOT-0001"):
         "apeiron": False,
         "bootstrap": True,
         "constitution_version": "v1",
+        "synthetic": False,
     }
 
 

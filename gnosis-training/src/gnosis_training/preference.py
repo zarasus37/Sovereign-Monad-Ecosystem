@@ -42,8 +42,10 @@ from .generated.hyperparams import (
     CONSTITUTION_PASS_TOTAL,
     PREFERENCE_CATEGORY_COUNTS,
     PREFERENCE_CHOSEN_MIN_CRITERIA_PASSING,
+    PREFERENCE_CONTENT_MIN_PAIRS_FOR_DIVERSITY,
     PREFERENCE_CRITERION_PASS_THRESHOLD,
     PREFERENCE_MIN_SCORE_GAP,
+    PREFERENCE_MIN_UNIQUE_RESPONSE_RATIO,
 )
 from .metrics import deterministic_shuffle
 
@@ -74,7 +76,11 @@ class PreferencePair:
     """One preference pair in the reference's exact JSON schema
     (``preference_pair_generator_reference.py``). ``bootstrap=True`` marks a
     scaffold pair (empty responses, rubric pre-filled) that needs human authoring
-    before it is trainable."""
+    before it is trainable. ``synthetic=True`` marks a dry-run stand-in (the
+    canned templates in ``synth_pairs.py``) that is honestly NOT a human judgment
+    — the worksheet-level templating guard (RULES 4/5) skips synthetic pairs so
+    the dry-run reward stage can exercise the trainer on a single canned
+    template without tripping the diversity check."""
 
     pair_id: str
     category: str
@@ -85,6 +91,7 @@ class PreferencePair:
     apeiron: bool
     bootstrap: bool
     constitution_version: str
+    synthetic: bool = False
 
 
 # ── Wire (JSON) ↔ domain ─────────────────────────────────────────────────────
@@ -119,6 +126,7 @@ def pair_from_wire(wire: dict[str, Any]) -> PreferencePair:
         apeiron=bool(wire.get("apeiron", False)),
         bootstrap=bool(wire.get("bootstrap", False)),
         constitution_version=str(wire.get("constitution_version", "v2.0")),
+        synthetic=bool(wire.get("synthetic", False)),
     )
 
 
@@ -150,6 +158,7 @@ def pair_to_wire(pair: PreferencePair) -> dict[str, Any]:
         "apeiron": pair.apeiron,
         "bootstrap": pair.bootstrap,
         "constitution_version": pair.constitution_version,
+        "synthetic": pair.synthetic,
     }
 
 
@@ -168,10 +177,98 @@ def _criteria_passing_count(scores: PreferenceScores) -> int:
     )
 
 
+# ── Content-level templating guards (RULES 3/4/5) ─────────────────────────────
+def _normalize_text(s: str) -> str:
+    """Collapse all whitespace + lowercase for echo / diversity comparison."""
+    return " ".join(s.lower().split())
+
+
+def _is_prompt_echo(prompt: str, response: str) -> bool:
+    """True if the response is the prompt echoed back (RULE 3: canned). Catches
+    the PR #56 CAT7 mode — "answers" that were the prompt repeated four times.
+    Fires on exact match (case/whitespace-insensitive) or on the normalized
+    prompt appearing ≥ 2 times inside the response (a repeated echo). A genuine
+    response that quotes the prompt once is NOT flagged (threshold ≥ 2)."""
+    p = _normalize_text(prompt)
+    r = _normalize_text(response)
+    if not p or not r:
+        return False
+    if r == p:
+        return True
+    if r.count(p) >= 2:
+        return True
+    return False
+
+
+def validate_pair_content(pair: PreferencePair) -> list[str]:
+    """RULE 3 (per-pair content): read the response TEXT, not just the scores.
+    A non-bootstrap pair with an empty response or a prompt-echo response is
+    canned, not human-judged. Bootstrap pairs have empty responses by design
+    (validate_pair flags them separately), so this skips them."""
+    problems: list[str] = []
+    if pair.bootstrap:
+        return problems
+    for label, resp in (("chosen", pair.chosen), ("rejected", pair.rejected)):
+        if not resp.response.strip():
+            problems.append(f"{label} response is empty (RULE 3: human authoring required)")
+            continue
+        if _is_prompt_echo(pair.prompt, resp.response):
+            problems.append(f"{label} response echoes the prompt (RULE 3: canned)")
+    return problems
+
+
+def detect_worksheet_templating(pairs: list[PreferencePair]) -> list[str]:
+    """RULES 4/5 (worksheet-level): detect templating signals that only appear
+    across the whole authored set — low response diversity (canned templates
+    reused across many pairs, the PR #56 "156 unique chosen / 36 unique
+    rejected across 240" signature) and a constant chosen total (a generator
+    that scored every response identically, the PR #56 constant 0.927).
+    Returns a list of templating problems (empty == clean).
+
+    Skips ``synthetic=True`` pairs (the dry-run stand-ins in ``synth_pairs.py``
+    are intentionally a single canned template — they exercise the trainer, they
+    do not claim human judgment) and skips ``bootstrap=True`` pairs (empty
+    responses by design). Below ``PREFERENCE_CONTENT_MIN_PAIRS_FOR_DIVERSITY``
+    authored rows the set is too small to judge diversity, so all checks skip.
+    """
+    authored = [p for p in pairs if not p.bootstrap and not p.synthetic]
+    problems: list[str] = []
+    n = len(authored)
+    if n < PREFERENCE_CONTENT_MIN_PAIRS_FOR_DIVERSITY:
+        return problems
+    chosen_responses = {_normalize_text(p.chosen.response) for p in authored}
+    rejected_responses = {_normalize_text(p.rejected.response) for p in authored}
+    chosen_totals = {p.chosen.scores.total for p in authored}
+    if len(chosen_responses) / n < PREFERENCE_MIN_UNIQUE_RESPONSE_RATIO:
+        problems.append(
+            f"low chosen-response diversity: {len(chosen_responses)}/{n} unique "
+            f"< {PREFERENCE_MIN_UNIQUE_RESPONSE_RATIO:.2f} (RULE 4: canned templates "
+            f"reused across pairs — not human-judged)"
+        )
+    if len(rejected_responses) / n < PREFERENCE_MIN_UNIQUE_RESPONSE_RATIO:
+        problems.append(
+            f"low rejected-response diversity: {len(rejected_responses)}/{n} unique "
+            f"< {PREFERENCE_MIN_UNIQUE_RESPONSE_RATIO:.2f} (RULE 4: canned anti-templates "
+            f"reused across pairs — not human-judged)"
+        )
+    if len(chosen_totals) == 1:
+        problems.append(
+            f"constant chosen total = {next(iter(chosen_totals)):.3f} across all {n} "
+            f"authored pairs (RULE 5: a generator scored every response identically — "
+            f"not human-judged)"
+        )
+    return problems
+
+
 def validate_pair(pair: PreferencePair) -> list[str]:
     """Validate a pair against the reference's quality-control rules (RULES 1,
-    2, 6). Returns a list of problems (empty == valid). The reward model trains
-    only on valid pairs (garbage-in-garbage-out, spec line 476)."""
+    2, 3, 6). Returns a list of problems (empty == valid). The reward model trains
+    only on valid pairs (garbage-in-garbage-out, spec line 476).
+
+    RULES 1/2/6 inspect the SCORES (gap, chosen criteria-passing, apeiron band).
+    RULE 3 (``validate_pair_content``) inspects the response TEXT — the structural
+    fix for the PR #56 overclaim, where a templated file scored a constant 0.927
+    passed the score-only rules because the validator never read the responses."""
     problems: list[str] = []
     gap = pair.chosen.scores.total - pair.rejected.scores.total
     if gap < PREFERENCE_MIN_SCORE_GAP:
@@ -195,13 +292,16 @@ def validate_pair(pair: PreferencePair) -> list[str]:
             "bootstrap worksheet pair (empty responses) is NOT trainable — "
             "human authoring required before RM training (spec line 478)"
         )
+    problems.extend(validate_pair_content(pair))
     return problems
 
 
 def load_human_pairs(path: str | Path) -> list[PreferencePair]:
     """Load a human-authored ``preference_pairs_ALL.jsonl`` (reference schema)
     and return ONLY the valid, non-bootstrap pairs. Invalid pairs raise with a
-    precise message (garbage-in-garbage-out)."""
+    precise message (garbage-in-garbage-out). The worksheet-level templating
+    guard (RULES 4/5) runs over the whole loaded set so a canned file cannot
+    slip through on per-pair score consistency alone (the PR #56 failure mode)."""
     p = Path(path)
     pairs: list[PreferencePair] = []
     with p.open("r", encoding="utf-8") as fh:
@@ -215,6 +315,11 @@ def load_human_pairs(path: str | Path) -> list[PreferencePair]:
             if problems:
                 raise ValueError(f"{p}:{lineno} pair {pair.pair_id}: {problems}")
             pairs.append(pair)
+    templating = detect_worksheet_templating(pairs)
+    if templating:
+        raise ValueError(
+            f"{p}: worksheet-level templating guard failed (RULES 4/5): {templating}"
+        )
     return pairs
 
 

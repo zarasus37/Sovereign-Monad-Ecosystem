@@ -147,6 +147,10 @@ def build_dry_run_pairs(events: list[GnosisEvent], seed: int = 42) -> list[Prefe
             apeiron=False,
             bootstrap=False,
             constitution_version=event.constitution_version,
+            # Honestly mark these as synthetic stand-ins (NOT human judgments) so
+            # the worksheet-level templating guard (RULES 4/5) skips them — the
+            # dry run INTENTIONALLY uses one canned template across all pairs.
+            synthetic=True,
         )
         # Defense-in-depth: a bug here would crash the dry-run reward stage
         # with a confusing load_human_pairs error, so assert validity up front.
