@@ -130,6 +130,26 @@ PREFERENCE_CRITERION_PASS_THRESHOLD = 0.70
 APEIRON_SCORE_MIN = 0.55
 APEIRON_SCORE_MAX = 0.71
 
+# Content-level templating guards (RULES 3/4/5) — the structural fix for the
+# PR #56 overclaim: a 240-pair file of canned templates scored a constant 0.927
+# passed ``validate_pair`` (RULES 1/2/6 only inspect SCORES) because the validator
+# never read the response TEXT. The reward trainer consumes the verbatim text, so
+# a templated file is garbage-in-garbage-out even when its scores are consistent.
+#   RULE 3 (per-pair)    : a non-bootstrap response must be non-empty and must not
+#                         echo the prompt back (the #56 CAT7 mode: prompt × 4).
+#   RULE 4 (worksheet)   : across the authored set, response diversity must stay
+#                         above ``PREFERENCE_MIN_UNIQUE_RESPONSE_RATIO`` — canned
+#                         templates reused across many pairs fail this.
+#   RULE 5 (worksheet)   : every chosen response scored to the SAME total is a
+#                         generator fingerprint, not a human judgment.
+# Worksheet-level checks skip pairs marked ``synthetic=True`` (the dry-run stand-
+# ins in ``synth_pairs.py`` are INTENTIONALLY a single canned template, honestly
+# labelled — they exercise the trainer, they do not claim to be human-judged) and
+# skip pairs with fewer than ``PREFERENCE_CONTENT_MIN_PAIRS_FOR_DIVERSITY`` authored
+# rows (too few to judge diversity).
+PREFERENCE_CONTENT_MIN_PAIRS_FOR_DIVERSITY = 6
+PREFERENCE_MIN_UNIQUE_RESPONSE_RATIO = 0.40
+
 # Constitution threshold (spec line 148 / reference): gates DATA generation,
 # NOT the GRPO loop and NOT the SFT inclusion (SFT uses ``passes``).
 CONSTITUTION_PASS_TOTAL = 0.72

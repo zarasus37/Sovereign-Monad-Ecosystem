@@ -63,6 +63,7 @@ def _human_pair_wire(gap: float = 0.30, chosen_total: float = 0.95) -> dict:
         "apeiron": False,
         "bootstrap": False,
         "constitution_version": "v2.0",
+        "synthetic": False,
     }
 
 
@@ -186,3 +187,230 @@ def test_load_human_pairs_loads_valid_pairs(tmp_path):
     pairs = load_human_pairs(p)
     assert len(pairs) == 1
     assert pairs[0].pair_id == "PP-001"
+
+
+# ── Content-level templating guards (RULES 3/4/5) — the PR #56 fix ──────────
+
+from gnosis_training.preference import (  # noqa: E402  (kept local for grouping)
+    detect_worksheet_templating,
+    validate_pair_content,
+)
+from gnosis_training.synth_pairs import build_dry_run_pairs  # noqa: E402
+
+
+def _pair_wire(
+    pair_id="PP-001",
+    prompt="What is entropy?",
+    chosen_response="THEOLOGICAL LENS: a real tripartite traversal. "
+                    "TECHNOLOGICAL LENS: ... COSMOLOGICAL LENS: ... LOGIC COMPRESSION: ...",
+    rejected_response="entropy is disorder, full stop.",
+    chosen_total=0.95,
+    rejected_total=0.60,
+    synthetic=False,
+    bootstrap=False,
+):
+    return {
+        "pair_id": pair_id,
+        "category": "CAT1",
+        "prompt": prompt,
+        "chosen": {
+            "response": chosen_response,
+            "scores": {"tripartite": 1.0, "logic_compress": 0.9,
+                       "source_aligned": 1.0, "epistemic": 0.8,
+                       "no_rlhf_signal": 1.0, "total": chosen_total},
+            "notes": "ok",
+        },
+        "rejected": {
+            "response": rejected_response,
+            "scores": {"tripartite": 0.3, "logic_compress": 0.5,
+                       "source_aligned": 0.8, "epistemic": 0.8,
+                       "no_rlhf_signal": 1.0, "total": rejected_total},
+            "notes": "missing cosmology",
+        },
+        "failing_criteria": ["C1"],
+        "apeiron": False,
+        "bootstrap": bootstrap,
+        "constitution_version": "v2.0",
+        "synthetic": synthetic,
+    }
+
+
+def _diverse_pairs(n=8):
+    """n pairs with DISTINCT chosen + rejected responses + varied chosen totals
+    (the genuine-human-judgment shape — passes RULES 3/4/5)."""
+    return [
+        pair_from_wire(_pair_wire(
+            pair_id=f"PP-{i:03d}",
+            chosen_response=f"chosen response number {i} with full tripartite "
+                            f"traversal and logic compression unique to pair {i}.",
+            rejected_response=f"rejected response number {i}: a single-domain "
+                              f"conclusion-only failure unique to pair {i}.",
+            chosen_total=0.90 + (i % 6) * 0.01,  # 6 distinct totals 0.90–0.95
+            rejected_total=0.60,
+        ))
+        for i in range(n)
+    ]
+
+
+def test_validate_pair_content_accepts_real_pair():
+    """RULE 3: a non-empty, non-echo response is clean."""
+    pair = pair_from_wire(_pair_wire())
+    assert validate_pair_content(pair) == []
+    assert validate_pair(pair) == []  # full validate_pair includes RULE 3
+
+
+def test_validate_pair_content_rejects_empty_response():
+    """RULE 3: a non-bootstrap pair with an empty chosen response is canned."""
+    wire = _pair_wire(chosen_response="   ")
+    problems = validate_pair_content(pair_from_wire(wire))
+    assert any("chosen response is empty" in p for p in problems)
+
+
+def test_validate_pair_content_rejects_prompt_echo():
+    """RULE 3: the response must not be the prompt echoed back (the PR #56 CAT7
+    mode — 'answers' that were the prompt repeated)."""
+    # exact echo
+    wire = _pair_wire(prompt="What is entropy?", chosen_response="What is entropy?")
+    problems = validate_pair_content(pair_from_wire(wire))
+    assert any("echoes the prompt" in p for p in problems)
+    # prompt repeated 4× (the actual #56 CAT7 signature)
+    wire = _pair_wire(
+        prompt="Define justice in one paragraph.",
+        chosen_response="Define justice in one paragraph. "
+                        "Define justice in one paragraph. "
+                        "Define justice in one paragraph. "
+                        "Define justice in one paragraph.",
+    )
+    problems = validate_pair_content(pair_from_wire(wire))
+    assert any("echoes the prompt" in p for p in problems)
+
+
+def test_validate_pair_content_skips_bootstrap():
+    """RULE 3 does not fire on bootstrap pairs (empty responses by design —
+    validate_pair flags them separately)."""
+    wire = _pair_wire(bootstrap=True, chosen_response="", rejected_response="")
+    assert validate_pair_content(pair_from_wire(wire)) == []
+
+
+def test_detect_worksheet_templating_clean_on_diverse_set():
+    """RULES 4/5: a genuine human-judged set (distinct responses + varied totals)
+    is clean — does not false-positive on real authoring."""
+    assert detect_worksheet_templating(_diverse_pairs(8)) == []
+
+
+def test_detect_worksheet_templating_flags_canned_templates():
+    """RULE 4: the PR #56 signature — many pairs sharing a handful of canned
+    responses. 16 pairs, 2 unique chosen / 2 unique rejected → flagged."""
+    canned = [
+        pair_from_wire(_pair_wire(
+            pair_id=f"PP-{i:03d}",
+            chosen_response="canned chosen template A" if i % 2 == 0
+                             else "canned chosen template B",
+            rejected_response="canned rejected template A" if i % 2 == 0
+                              else "canned rejected template B",
+            chosen_total=0.90 + (i % 6) * 0.01,
+            rejected_total=0.55,
+        ))
+        for i in range(16)
+    ]
+    problems = detect_worksheet_templating(canned)
+    assert any("chosen-response diversity" in p for p in problems)
+    assert any("rejected-response diversity" in p for p in problems)
+
+
+def test_detect_worksheet_templating_flags_constant_chosen_total():
+    """RULE 5: every chosen response scored to the SAME total = a generator
+    fingerprint. Diverse responses but one chosen total → flagged."""
+    constant = [
+        pair_from_wire(_pair_wire(
+            pair_id=f"PP-{i:03d}",
+            chosen_response=f"distinct chosen response {i}",
+            rejected_response=f"distinct rejected response {i}",
+            chosen_total=0.92,  # constant
+            rejected_total=0.60,
+        ))
+        for i in range(10)
+    ]
+    problems = detect_worksheet_templating(constant)
+    assert any("constant chosen total" in p for p in problems)
+    # but response diversity is fine (10/10 unique) — RULE 4 does not fire
+    assert not any("diversity" in p for p in problems)
+
+
+def test_detect_worksheet_templating_skips_synthetic_pairs():
+    """The dry-run synth pairs are INTENTIONALLY one canned template; marking
+    them ``synthetic=True`` skips the worksheet guard so the dry run is not
+    broken (the GPU-verified reward stage loads them via load_human_pairs)."""
+    synth = [
+        pair_from_wire(_pair_wire(
+            pair_id=f"DRY-{i:04d}",
+            chosen_response="single canned chosen template",
+            rejected_response="single canned rejected template",
+            chosen_total=0.80,  # constant
+            rejected_total=0.30,
+            synthetic=True,
+        ))
+        for i in range(16)
+    ]
+    assert detect_worksheet_templating(synth) == []
+
+
+def test_detect_worksheet_templating_skips_small_sets():
+    """Below PREFERENCE_CONTENT_MIN_PAIRS_FOR_DIVERSITY the set is too small to
+    judge diversity, so a tiny canned set is not flagged (avoid blocking small
+    legitimate worksheets)."""
+    small = [
+        pair_from_wire(_pair_wire(
+            pair_id=f"PP-{i:03d}",
+            chosen_response="same chosen",
+            rejected_response="same rejected",
+            chosen_total=0.92,
+        ))
+        for i in range(5)  # < 6
+    ]
+    assert detect_worksheet_templating(small) == []
+
+
+def test_load_human_pairs_raises_on_templated_file(tmp_path):
+    """The reward-trainer loader gates a templated file (the PR #56 recurrence):
+    per-pair scores are consistent, but the worksheet-level guard catches the
+    canned responses + constant chosen total."""
+    canned = [
+        pair_from_wire(_pair_wire(
+            pair_id=f"PP-{i:03d}",
+            chosen_response="canned chosen template",
+            rejected_response="canned rejected template",
+            chosen_total=0.927,  # the exact #56 constant
+            rejected_total=0.50,
+        ))
+        for i in range(12)
+    ]
+    p = tmp_path / "templated.jsonl"
+    p.write_text(serialize_pairs_jsonl(canned), encoding="utf-8")
+    with pytest.raises(ValueError, match="templating guard"):
+        load_human_pairs(p)
+
+
+def test_load_human_pairs_loads_synthetic_pairs_without_templating_raise(tmp_path):
+    """The dry-run path: synth pairs (synthetic=True) load via the same loader
+    without tripping the worksheet guard, preserving the GPU-verified dry run."""
+    # build_dry_run_pairs needs events; reuse a minimal event via the builder's
+    # own test helper shape. Construct 8 pairs directly marked synthetic.
+    synth = [
+        pair_from_wire(_pair_wire(
+            pair_id=f"DRY-{i:04d}",
+            chosen_response="single canned chosen template",
+            rejected_response="single canned rejected template",
+            chosen_total=0.80,
+            rejected_total=0.30,
+            synthetic=True,
+        ))
+        for i in range(8)
+    ]
+    p = tmp_path / "synth.jsonl"
+    p.write_text(serialize_pairs_jsonl(synth), encoding="utf-8")
+    loaded = load_human_pairs(p)
+    assert len(loaded) == 8
+    # build_dry_run_pairs (the real dry-run builder) now marks pairs synthetic=True
+    synth_built = build_dry_run_pairs([_sample_event() for _ in range(5)])
+    assert all(p.synthetic for p in synth_built)

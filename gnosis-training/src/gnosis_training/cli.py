@@ -138,24 +138,29 @@ def validate_worksheet(pairs_jsonl: str) -> int:
         hasn't filled them in yet). ``validate_pair`` would reject them; the
         validator treats them as expected in-progress rows.
       - ``bootstrap=False`` pairs — the human-authored rows. These are validated
-        against the real quality-control rules (RULES 1, 2, 6: score gap ≥
+        against the real quality-control rules: RULES 1/2/6 (score gap ≥
         PREFERENCE_MIN_SCORE_GAP, chosen passes ≥4/5 criteria at 0.70, apeiron
-        band). Any problem → invalid, printed with the pair_id.
-
-    Exit 0 if no invalid pairs; non-zero if any invalid (so it gates a training
+        band) + RULE 3 (the response TEXT is non-empty and not a prompt echo). Any
+        per-pair problem → invalid, printed with the pair_id.
+      - The whole authored set is then run through the worksheet-level templating
+        guard (RULES 4/5: response diversity + non-constant chosen total) so a
+        canned file (e.g. the PR #56 240-pair template) cannot pass on per-pair
+        score consistency alone. ``synthetic=True`` dry-run stand-ins are skipped.
     run). Use this iteratively while authoring — see
     ``theo-techno-cosmo/plex/Review/REWARD_MODEL_PREFERENCE_PAIRS_GUIDE.md`` for
     the judging rubric + the 250-pair target distribution.
     """
     from pathlib import Path
 
-    from .preference import iter_pairs_jsonl, validate_pair
+    from .preference import detect_worksheet_templating, iter_pairs_jsonl, validate_pair
 
     path = Path(pairs_jsonl)
     ok = 0
     pending = 0
     invalid = 0
+    all_pairs: list[Any] = []
     for pair in iter_pairs_jsonl(path):
+        all_pairs.append(pair)
         if pair.bootstrap:
             pending += 1
             continue
@@ -166,13 +171,29 @@ def validate_worksheet(pairs_jsonl: str) -> int:
         else:
             ok += 1
 
+    # Worksheet-level templating guard (RULES 4/5): runs over the whole authored
+    # set so a canned file (e.g. the PR #56 240-pair template scored a constant
+    # 0.927) cannot pass on per-pair score consistency alone. ``synthetic=True``
+    # dry-run stand-ins are skipped (they are honestly not human judgments).
+    templating = detect_worksheet_templating(all_pairs)
+    templating_invalid = 0
+    if templating:
+        templating_invalid = 1
+        print(f"TEMPLATING  worksheet {path}: {templating}")
+
     total = ok + pending + invalid
     print(
         f"worksheet {path}: {total} pairs — {ok} ok, {pending} pending authoring, "
         f"{invalid} invalid"
     )
-    if invalid:
-        print(f"fix the {invalid} invalid pair(s) before reward training.")
+    if invalid or templating_invalid:
+        if invalid:
+            print(f"fix the {invalid} invalid pair(s) before reward training.")
+        if templating_invalid:
+            print(
+                "fix the worksheet-level templating signal before reward training "
+                "(author distinct responses per pair, not canned templates)."
+            )
         return 1
     if ok == 0 and pending > 0:
         print("no authored (bootstrap=false) pairs yet — author some to begin.")
