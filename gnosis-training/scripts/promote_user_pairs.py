@@ -74,6 +74,14 @@ def parse_user_pairs() -> list[PreferencePair]:
     text = GUIDE.read_text(encoding="utf-8")
     after = text.split("END CANDIDATE PAIRS", 1)[1]
 
+    # Stop before any later candidate batch (e.g. "CANDIDATE PAIRS —
+    # CLAUDE-DRAFTED, PENDING USER REVIEW (BATCH 2)") appended after the
+    # user-authored corpus. Those are Claude-drafted candidates, NOT the
+    # user's human-judged pairs, and must never be parsed by this script.
+    batch2_marker = "CANDIDATE PAIRS — CLAUDE-DRAFTED, PENDING USER REVIEW (BATCH 2)"
+    if batch2_marker in after:
+        after = after.split(batch2_marker, 1)[0]
+
     # split into (num, body) pairs at each "PROMPT <n>" line
     chunks = re.split(r"(?m)^PROMPT (\d+)\s*$", after)
     # chunks == [pre, num1, body1, num2, body2, ...]
