@@ -21,6 +21,7 @@
     "closed-loop:interactive": "tsx src/closedLoop.ts --interactive",
     "paper:demo": "tsx src/paperCli.ts demo",
     "paper:session": "tsx src/paperCli.ts session",
+    "paper:interactive": "tsx src/paperCli.ts interactive",
     "start": "tsx src/main.ts"
   },
   "dependencies": {

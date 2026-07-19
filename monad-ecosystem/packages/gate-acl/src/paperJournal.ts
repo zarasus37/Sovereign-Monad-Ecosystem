@@ -34,6 +34,11 @@ function defaultSessionPath(): string {
   return resolve(here, '../../../../logs/paper-trading/session-state.json');
 }
 
+function defaultPlEventsPath(): string {
+  const here = dirname(fileURLToPath(import.meta.url));
+  return resolve(here, '../../../../logs/paper-trading/pl-events.jsonl');
+}
+
 export interface PaperSessionState {
   principal_id: string;
   agent_id: string;
@@ -74,6 +79,7 @@ export interface DailyReviewRecord {
 export class PaperTradingJournal {
   readonly journalPath: string;
   readonly sessionPath: string;
+  readonly plEventsPath: string;
   private session: PaperSessionState;
   private openTrades = new Map<string, LOGOCTradeEvent>();
 
@@ -83,13 +89,143 @@ export class PaperTradingJournal {
     opts?: {
       journalPath?: string;
       sessionPath?: string;
+      plEventsPath?: string;
       principalId?: string;
       agentId?: string;
+      /** Skip rehydrate (tests that seed PL explicitly). Default false. */
+      skipRehydrate?: boolean;
     },
   ) {
     this.journalPath = opts?.journalPath ?? defaultJournalPath();
-    this.sessionPath = opts?.sessionPath ?? defaultSessionPath();
+    this.sessionPath =
+      opts?.sessionPath ??
+      (opts?.journalPath
+        ? resolve(dirname(opts.journalPath), 'session-state.json')
+        : defaultSessionPath());
+    this.plEventsPath =
+      opts?.plEventsPath ??
+      (opts?.journalPath
+        ? resolve(dirname(opts.journalPath), 'pl-events.jsonl')
+        : defaultPlEventsPath());
     this.session = this.loadSession(opts);
+    this.restoreOpenTradeFromJournal();
+    if (!opts?.skipRehydrate) {
+      this.rehydrateLedgerFromDisk();
+    }
+  }
+
+  /** Current open trade if any (restored across process restarts). */
+  getOpenTrade(): LOGOCTradeEvent | null {
+    const id = this.session.open_trade_id;
+    if (!id) return null;
+    return this.openTrades.get(id) ?? null;
+  }
+
+  private persistPlEvent(event: LogocPaperTradePLEvent | DailyReviewPLEvent): void {
+    const dir = dirname(this.plEventsPath);
+    if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
+    appendFileSync(this.plEventsPath, `${JSON.stringify(event)}\n`, 'utf8');
+  }
+
+  /** Load append-only PL events so interactive sessions keep tier progress. */
+  rehydrateLedgerFromDisk(now: number = Date.now()): void {
+    if (!existsSync(this.plEventsPath)) {
+      // Fallback: rebuild from process-valid journal closes + reviews
+      this.rehydrateLedgerFromJournal(now);
+      return;
+    }
+    const lines = readFileSync(this.plEventsPath, 'utf8').split(/\r?\n/).filter(Boolean);
+    for (const line of lines) {
+      try {
+        const e = JSON.parse(line) as LogocPaperTradePLEvent | DailyReviewPLEvent;
+        if (e.kind === 'logoc_paper_trade' || e.kind === 'daily_review') {
+          this.ledger.append(e, now);
+        }
+      } catch {
+        /* skip bad lines */
+      }
+    }
+  }
+
+  /** Derive PL credits from journal if pl-events file missing. */
+  rehydrateLedgerFromJournal(now: number = Date.now()): void {
+    if (!existsSync(this.journalPath)) return;
+    const lines = readFileSync(this.journalPath, 'utf8').split(/\r?\n/).filter(Boolean);
+    for (const line of lines) {
+      try {
+        const row = JSON.parse(line) as {
+          kind?: string;
+          event_id?: string;
+          protocol_valid?: boolean;
+          pl_score_delta?: number | null;
+          timestamp?: string;
+          review_date?: string;
+          trade_count?: number;
+          principal_id?: string;
+          at?: number;
+        };
+        if (row.kind === 'trade_close' && row.protocol_valid && row.event_id) {
+          const at = row.timestamp ? Date.parse(row.timestamp) : now;
+          const plEvent: LogocPaperTradePLEvent = {
+            kind: 'logoc_paper_trade',
+            eventId: `rehydrate-trade-${row.event_id}`,
+            principalId: this.session.principal_id,
+            domain: 'trading',
+            tradeEventId: row.event_id,
+            points: row.pl_score_delta && row.pl_score_delta > 0 ? row.pl_score_delta : 3,
+            processScore: 1,
+            verifiedBy: 'task-verifier',
+            at: Number.isFinite(at) ? at : now,
+          };
+          this.ledger.append(plEvent, now);
+          this.persistPlEvent(plEvent);
+        } else if (row.kind === 'daily_review' && row.review_date) {
+          const plEvent: DailyReviewPLEvent = {
+            kind: 'daily_review',
+            eventId: `rehydrate-review-${row.review_date}-${row.at ?? 'x'}`,
+            principalId: row.principal_id ?? this.session.principal_id,
+            domain: 'trading',
+            reviewDate: row.review_date,
+            tradeCount: row.trade_count ?? 0,
+            points: 5,
+            verifiedBy: 'task-verifier',
+            at: row.at ?? now,
+          };
+          this.ledger.append(plEvent, now);
+          this.persistPlEvent(plEvent);
+        }
+      } catch {
+        /* skip */
+      }
+    }
+  }
+
+  private restoreOpenTradeFromJournal(): void {
+    const openId = this.session.open_trade_id;
+    if (!openId || !existsSync(this.journalPath)) return;
+    const lines = readFileSync(this.journalPath, 'utf8').split(/\r?\n/).filter(Boolean);
+    let open: LOGOCTradeEvent | null = null;
+    let closed = false;
+    for (const line of lines) {
+      try {
+        const row = JSON.parse(line) as { kind?: string; event_id?: string } & LOGOCTradeEvent;
+        if (row.kind === 'trade_open' && row.event_id === openId) {
+          open = row as LOGOCTradeEvent;
+          closed = false;
+        } else if (row.kind === 'trade_close' && row.event_id === openId) {
+          closed = true;
+          open = null;
+        }
+      } catch {
+        /* skip */
+      }
+    }
+    if (open && !closed) {
+      this.openTrades.set(openId, open);
+    } else if (closed || !open) {
+      this.session.open_trade_id = null;
+      this.saveSession();
+    }
   }
 
   private loadSession(opts?: {
@@ -293,6 +429,7 @@ export class PaperTradingJournal {
       at: now,
     };
     const pl = this.ledger.append(plEvent, now);
+    this.persistPlEvent(plEvent);
     this.session.pl_events_count += 1;
     this.saveSession();
     const mandate = this.issuer.issueFromPL(pl, now);
@@ -367,6 +504,7 @@ export class PaperTradingJournal {
       at: now,
     };
     const pl = this.ledger.append(plEvent, now);
+    this.persistPlEvent(plEvent);
     const mandate = this.issuer.issueFromPL(pl, now);
     return { review, pl, mandate };
   }

@@ -457,5 +457,25 @@ describe('Tier-2 live risk envelope', () => {
     );
     assert.equal(gl.status, 'rejected');
     assert.ok(gl.reasons.includes('max_trades_per_day_reached'));
+
+    // Fail-closed: missing envelope fields must reject (no bare capital-only live)
+    const bare = gate.gate(
+      {
+        intentId: randomUUID(),
+        principalId: pid,
+        domain: 'trading',
+        action: 'live_execute',
+        tool: 'live_execute',
+        capitalUSD: 100,
+        raisedAt: now,
+        claimedMandate: mandate,
+      },
+      now,
+    );
+    assert.equal(bare.status, 'rejected');
+    if (bare.status === 'rejected') {
+      assert.ok(bare.event.reasons.includes('live_envelope_per_trade_risk_required'));
+      assert.ok(bare.event.reasons.includes('live_envelope_daily_stats_required'));
+    }
   });
 });

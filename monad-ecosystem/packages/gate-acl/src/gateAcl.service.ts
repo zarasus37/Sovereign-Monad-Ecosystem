@@ -95,48 +95,52 @@ export class GateAclService {
       reasons.push('capital_ceiling_zero');
     }
 
-    // 6. Tier-2 live risk envelope (Theo/Techno/Cosmo bounds — non-negotiable by tilt)
+    // 6. Tier-2 live risk envelope — FAIL CLOSED (missing fields = reject)
     if (intent.action === 'live_execute' && m.tier >= 2 && m.mode === 'live') {
-      // When risk fields omitted, only basic capital checks apply (backward compatible).
-      // When provided, full envelope is hard-gated.
-      if (intent.perTradeRiskUSD != null || intent.liveDailyStats != null || intent.tradeEvent) {
-        const capitalUSD = intent.capitalUSD ?? m.capitalCeilingUSD;
-        const perTrade =
-          intent.perTradeRiskUSD ??
-          // fail closed if tradeEvent has risk but no perTradeRiskUSD
-          (intent.tradeEvent &&
-          typeof intent.tradeEvent === 'object' &&
-          intent.tradeEvent !== null &&
-          'account_risk_amount' in intent.tradeEvent
-            ? Number((intent.tradeEvent as LOGOCTradeEvent).account_risk_amount)
-            : -1);
-        const daily = intent.liveDailyStats ?? {
-          live_pnl_today: 0,
-          live_trades_today: 0,
-        };
-        const liveGate = gateLiveExecute(
-          {
-            capitalUSD,
-            perTradeRiskUSD: perTrade,
-            tradeEvent: (intent.tradeEvent as LOGOCTradeEvent | undefined) ?? null,
-          },
-          {
-            tier: m.tier,
-            mode: m.mode,
-            capitalCeilingUSD: Math.min(
-              m.capitalCeilingUSD,
-              m.riskEnvelope.liveCapitalCeilingUSD ?? TIER2_LIVE_MAX_CAPITAL_USD,
-            ),
-          },
-          daily,
-        );
-        if (liveGate.status === 'rejected') {
-          // Avoid duplicating capital_ceiling_exceeded already added above
-          for (const r of liveGate.reasons) {
-            if (r === 'capital_ceiling_exceeded' && reasons.includes(r)) continue;
-            if (r === 'tier_or_mode_invalid' && reasons.includes('tier_insufficient')) continue;
-            reasons.push(r);
+      if (intent.perTradeRiskUSD == null || !(intent.perTradeRiskUSD > 0)) {
+        reasons.push('live_envelope_per_trade_risk_required');
+      }
+      if (intent.liveDailyStats == null) {
+        reasons.push('live_envelope_daily_stats_required');
+      }
+      // tradeEvent optional but if absent we still gate risk numbers; setup not checked
+      const capitalUSD = intent.capitalUSD ?? m.capitalCeilingUSD;
+      const perTradeFromEvent =
+        intent.tradeEvent &&
+        typeof intent.tradeEvent === 'object' &&
+        intent.tradeEvent !== null &&
+        'account_risk_amount' in intent.tradeEvent
+          ? Number((intent.tradeEvent as LOGOCTradeEvent).account_risk_amount)
+          : undefined;
+      const perTrade = intent.perTradeRiskUSD ?? perTradeFromEvent ?? -1;
+      const daily = intent.liveDailyStats ?? {
+        live_pnl_today: 0,
+        live_trades_today: 0,
+      };
+      const liveGate = gateLiveExecute(
+        {
+          capitalUSD,
+          perTradeRiskUSD: perTrade,
+          tradeEvent: (intent.tradeEvent as LOGOCTradeEvent | undefined) ?? null,
+        },
+        {
+          tier: m.tier,
+          mode: m.mode,
+          capitalCeilingUSD: Math.min(
+            m.capitalCeilingUSD,
+            m.riskEnvelope.liveCapitalCeilingUSD ?? TIER2_LIVE_MAX_CAPITAL_USD,
+          ),
+        },
+        daily,
+      );
+      if (liveGate.status === 'rejected') {
+        for (const r of liveGate.reasons) {
+          if (r === 'capital_ceiling_exceeded' && reasons.includes(r)) continue;
+          if (r === 'tier_or_mode_invalid' && reasons.includes('tier_insufficient')) continue;
+          if (r === 'per_trade_risk_required' && reasons.includes('live_envelope_per_trade_risk_required')) {
+            continue;
           }
+          reasons.push(r);
         }
       }
     }

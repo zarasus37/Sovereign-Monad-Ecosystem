@@ -32,6 +32,7 @@ pnpm closed-loop                # Agent 0 (NEO-300+SD3) × principal:cris-colon 
 pnpm closed-loop:interactive    # YOU answer the three gates (server verifies)
 pnpm paper:demo                 # tier-1 LOGOC paper protocol → PL toward tier 2
 pnpm paper:session              # journal session + PL/mandate snapshot
+pnpm paper:interactive          # open / close / review (real journaling)
 pnpm test
 pnpm build
 ```
@@ -62,10 +63,12 @@ Same EMA/liquidity setups as tier 1, plus non-negotiable capital bounds:
 | Max live trades / day | **5** |
 
 Gate rejects `live_execute` when daily loss or trade count is hit — same hardness as setup validity.  
+**Fail-closed:** missing `perTradeRiskUSD` or `liveDailyStats` on tier-2 `live_execute` is an automatic reject (no capital-only bypass).  
 Journal `risk_envelope` + daily_review `live_daily_stats` make adherence auditable (TTCL covenant).
 
 ```powershell
 pnpm paper:demo
+pnpm paper:interactive   # status | open | close | review | seed | live-check | quit
 ```
 
 ### Closed loop with Agent 0 (you)

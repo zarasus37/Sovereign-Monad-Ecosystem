@@ -906,6 +906,12 @@ Philosophy → enforceable system validity (orthogonal to constitution C1–C5):
 - Journal: `risk_envelope` on LOGOC; `live_daily_stats` on daily_review; `realized_pnl_live` for live closes
 - Same EMA/liquidity setup lock as tier 1; limits close the path for the day (TTCL Cosmo bound)
 
+### Completed: Interactive paper CLI + fail-closed live envelope (2026-07-19)
+
+- `pnpm paper:interactive` — open / close / review / seed / live-check; protocol validation before journal write
+- PL rehydrate from `logs/paper-trading/pl-events.jsonl` (fallback from journal closes); open trade restored across restarts
+- Gate fail-closed: tier-2 `live_execute` without `perTradeRiskUSD` + `liveDailyStats` → reject
+
 ### Completed: Agent 0 closed-loop PL→ACL (2026-07-19)
 
 - Fixture: `gate-acl/fixtures/agent-0-profile.json` — Cristobal Colon / xkryptic genesis with IPIP-NEO-300 + SD3 from `emergence-claim-core` registration; bound to `principal:cris-colon`, PL domain `trading`
