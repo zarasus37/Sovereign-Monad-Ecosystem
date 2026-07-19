@@ -899,6 +899,13 @@ Philosophy → enforceable system validity (orthogonal to constitution C1–C5):
 - Schema: `shared/schemas/logoc-trade-event.json` · Pydantic: `gnostic_engine/logoc_trade.py`
 - `pnpm paper:demo` exercises multi-trade path + review; journal under `logs/paper-trading/`
 
+### Completed: Tier-2 live risk envelope hard gate (2026-07-19)
+
+- Constants: $500 ceiling, ≤0.5%/trade ($2.50), daily loss 3× ($7.50), max 5 live trades/day
+- `validateTier2LiveRisk` / `gateLiveExecute` + `GateAclService` live path when `perTradeRiskUSD` / `liveDailyStats` / `tradeEvent` present
+- Journal: `risk_envelope` on LOGOC; `live_daily_stats` on daily_review; `realized_pnl_live` for live closes
+- Same EMA/liquidity setup lock as tier 1; limits close the path for the day (TTCL Cosmo bound)
+
 ### Completed: Agent 0 closed-loop PL→ACL (2026-07-19)
 
 - Fixture: `gate-acl/fixtures/agent-0-profile.json` — Cristobal Colon / xkryptic genesis with IPIP-NEO-300 + SD3 from `emergence-claim-core` registration; bound to `principal:cris-colon`, PL domain `trading`

@@ -294,7 +294,15 @@ function main(): void {
       );
     }
 
-    // Live still requires tier 2+
+    // Live still requires tier 2+; with envelope fields the daily risk path is hard-gated
+    const liveStats = journal.getLiveDailyStats(new Date().toISOString().slice(0, 10));
+    console.log(
+      `[live envelope] capital≤$${review.mandate.capitalCeilingUSD} ` +
+        `risk≤0.5%/trade daily_loss≤$${liveStats.daily_loss_limit_usd} ` +
+        `max_trades=${liveStats.max_trades_per_day} ` +
+        `today: pnl=${liveStats.live_pnl_today} trades=${liveStats.live_trades_today} limit_hit=${liveStats.limit_hit}`,
+    );
+
     const live = gate.gate(
       {
         intentId: randomUUID(),
@@ -303,6 +311,11 @@ function main(): void {
         action: 'live_execute',
         tool: 'live_execute',
         capitalUSD: 100,
+        perTradeRiskUSD: 2.5, // $500 × 0.5%
+        liveDailyStats: {
+          live_pnl_today: liveStats.live_pnl_today,
+          live_trades_today: liveStats.live_trades_today,
+        },
         raisedAt: now + 2000,
         claimedMandate: review.mandate,
       },
@@ -310,8 +323,33 @@ function main(): void {
     );
     console.log(
       `[live check] tier=${review.mandate.tier} → ${live.status}` +
-        (live.status === 'rejected' ? ` (${live.event.reasons.slice(0, 2).join(',')})` : ''),
+        (live.status === 'rejected' ? ` (${live.event.reasons.slice(0, 3).join(',')})` : ''),
     );
+
+    // Demonstrate hard stop when daily loss already at limit
+    if (review.mandate.tier >= 2 && review.mandate.mode === 'live') {
+      const blocked = gate.gate(
+        {
+          intentId: randomUUID(),
+          principalId: pid,
+          domain: 'trading',
+          action: 'live_execute',
+          tool: 'live_execute',
+          capitalUSD: 100,
+          perTradeRiskUSD: 2.5,
+          liveDailyStats: { live_pnl_today: -7.5, live_trades_today: 3 },
+          raisedAt: now + 2001,
+          claimedMandate: review.mandate,
+        },
+        now + 2001,
+      );
+      console.log(
+        `[live blocked] daily loss limit → ${blocked.status}` +
+          (blocked.status === 'rejected'
+            ? ` (${blocked.event.reasons.filter((r) => r.includes('daily') || r.includes('max_')).join(',')})`
+            : ''),
+      );
+    }
 
     console.log('\nPaper protocol demo complete. Journal:', journal.journalPath);
     return;

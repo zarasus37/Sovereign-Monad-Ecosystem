@@ -2,10 +2,17 @@
  * Gate ACL service — hard enforcement on the bus path.
  *
  * Checks: signature, TTL, tier, domain, mode, capital ceiling, tool allowlist.
+ * Tier-2 live_execute also enforces risk envelope (per-trade, daily loss, trade count)
+ * and optional EMA/liquidity setup on tradeEvent.
  * compile_constraints (self-modification) requires tier 3 — agent cannot self-upgrade ACL.
  */
 
 import { MandateIssuer } from './mandateIssuer.js';
+import {
+  TIER2_LIVE_MAX_CAPITAL_USD,
+  gateLiveExecute,
+  type LOGOCTradeEvent,
+} from './logocTrade.js';
 import type {
   ExecutionApproved,
   ExecutionRejected,
@@ -86,6 +93,52 @@ export class GateAclService {
       m.capitalCeilingUSD <= 0
     ) {
       reasons.push('capital_ceiling_zero');
+    }
+
+    // 6. Tier-2 live risk envelope (Theo/Techno/Cosmo bounds — non-negotiable by tilt)
+    if (intent.action === 'live_execute' && m.tier >= 2 && m.mode === 'live') {
+      // When risk fields omitted, only basic capital checks apply (backward compatible).
+      // When provided, full envelope is hard-gated.
+      if (intent.perTradeRiskUSD != null || intent.liveDailyStats != null || intent.tradeEvent) {
+        const capitalUSD = intent.capitalUSD ?? m.capitalCeilingUSD;
+        const perTrade =
+          intent.perTradeRiskUSD ??
+          // fail closed if tradeEvent has risk but no perTradeRiskUSD
+          (intent.tradeEvent &&
+          typeof intent.tradeEvent === 'object' &&
+          intent.tradeEvent !== null &&
+          'account_risk_amount' in intent.tradeEvent
+            ? Number((intent.tradeEvent as LOGOCTradeEvent).account_risk_amount)
+            : -1);
+        const daily = intent.liveDailyStats ?? {
+          live_pnl_today: 0,
+          live_trades_today: 0,
+        };
+        const liveGate = gateLiveExecute(
+          {
+            capitalUSD,
+            perTradeRiskUSD: perTrade,
+            tradeEvent: (intent.tradeEvent as LOGOCTradeEvent | undefined) ?? null,
+          },
+          {
+            tier: m.tier,
+            mode: m.mode,
+            capitalCeilingUSD: Math.min(
+              m.capitalCeilingUSD,
+              m.riskEnvelope.liveCapitalCeilingUSD ?? TIER2_LIVE_MAX_CAPITAL_USD,
+            ),
+          },
+          daily,
+        );
+        if (liveGate.status === 'rejected') {
+          // Avoid duplicating capital_ceiling_exceeded already added above
+          for (const r of liveGate.reasons) {
+            if (r === 'capital_ceiling_exceeded' && reasons.includes(r)) continue;
+            if (r === 'tier_or_mode_invalid' && reasons.includes('tier_insufficient')) continue;
+            reasons.push(r);
+          }
+        }
+      }
     }
 
     if (reasons.length > 0) {

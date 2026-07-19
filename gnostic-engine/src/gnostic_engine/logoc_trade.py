@@ -44,6 +44,24 @@ TIER1_ALLOWED_SETUPS = frozenset(
 )
 
 
+class LiveRiskEnvelope(BaseModel):
+    tier: int
+    mode: Literal["paper", "live"]
+    live_capital_ceiling_usd: float = Field(..., gt=0)
+    max_risk_pct_per_trade: float = Field(..., gt=0, le=0.01)
+    daily_loss_limit_usd: float = Field(..., gt=0)
+    max_trades_per_day: int = Field(..., ge=1)
+
+
+class LiveDailyStats(BaseModel):
+    date: str
+    live_pnl_today: float
+    live_trades_today: int = Field(..., ge=0)
+    limit_hit: bool
+    daily_loss_limit_usd: float
+    max_trades_per_day: int
+
+
 class LOGOCTradeEvent(BaseModel):
     event_id: str = Field(..., description="UUID or hash for the event")
     timestamp: datetime
@@ -87,25 +105,33 @@ class LOGOCTradeEvent(BaseModel):
     exit_reason: Optional[str] = None
     realized_R: Optional[float] = None
     realized_pnl_synthetic: Optional[float] = None
+    realized_pnl_live: Optional[float] = None
 
     logoc_note: Optional[str] = None
     lesson: Optional[str] = None
 
     pl_score_delta: Optional[float] = None
+    risk_envelope: Optional[LiveRiskEnvelope] = None
     protocol_valid: Optional[bool] = None
     protocol_violations: Optional[list[str]] = None
 
     @model_validator(mode="after")
-    def tier1_paper_risk(self) -> LOGOCTradeEvent:
+    def tier_risk_envelope(self) -> LOGOCTradeEvent:
         if self.tier == 1 and self.mode != "paper":
             raise ValueError("tier 1 requires mode=paper")
-        if self.risk_per_trade_pct < 0.01 or self.risk_per_trade_pct > 0.02:
-            raise ValueError("risk_per_trade_pct must be in [0.01, 0.02]")
-        if self.tier >= 1 and self.mode == "paper":
-            if self.setup_tag not in TIER1_ALLOWED_SETUPS and self.setup_tag != "other":
-                raise ValueError(f"setup_tag not allowed at tier 1: {self.setup_tag}")
-            if self.setup_tag in TIER1_ALLOWED_SETUPS and abs(self.risk_per_trade_pct - 0.01) > 1e-9:
-                raise ValueError("tier-1 allowed setups require risk_per_trade_pct=0.01")
+        if self.mode == "paper":
+            if self.risk_per_trade_pct < 0.01 or self.risk_per_trade_pct > 0.02:
+                raise ValueError("paper risk_per_trade_pct must be in [0.01, 0.02]")
+            if self.tier >= 1:
+                if self.setup_tag not in TIER1_ALLOWED_SETUPS and self.setup_tag != "other":
+                    raise ValueError(f"setup_tag not allowed at tier 1: {self.setup_tag}")
+                if self.setup_tag in TIER1_ALLOWED_SETUPS and abs(self.risk_per_trade_pct - 0.01) > 1e-9:
+                    raise ValueError("tier-1 allowed setups require risk_per_trade_pct=0.01")
+        if self.mode == "live" and self.tier >= 2:
+            if self.risk_per_trade_pct > 0.005 + 1e-12:
+                raise ValueError("tier-2 live risk_per_trade_pct must be ≤ 0.005")
+            if self.synthetic_account_size > 500 + 1e-9:
+                raise ValueError("tier-2 live capital must be ≤ 500")
         return self
 
 

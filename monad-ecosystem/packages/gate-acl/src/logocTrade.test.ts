@@ -6,14 +6,26 @@ import {
   computePositionSizing,
   stampProtocol,
   validatePaperProtocol,
+  validateTier2LiveRisk,
+  gateLiveExecute,
+  computeLiveDailyStats,
+  buildLiveRiskEnvelope,
+  tier2MaxPerTradeRiskUSD,
+  tier2DailyLossLimitUSD,
+  TIER2_LIVE_MAX_CAPITAL_USD,
+  TIER2_LIVE_MAX_RISK_PCT_PER_TRADE,
+  TIER2_LIVE_MAX_TRADES_PER_DAY,
   SYNTHETIC_ACCOUNT_DEFAULT,
+  type LOGOCTradeEvent,
 } from './logocTrade.js';
 import { PLLedger } from './plLedger.js';
 import { MandateIssuer } from './mandateIssuer.js';
+import { GateAclService } from './gateAcl.service.js';
 import { PaperTradingJournal } from './paperJournal.js';
 import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { randomUUID } from 'node:crypto';
 
 describe('LOGOC paper risk math', () => {
   it('sizes position so stop loss = 1% of $10k', () => {
@@ -201,5 +213,249 @@ describe('LOGOC paper risk math', () => {
     assert.equal(closed.ok, true);
     assert.ok((closed.pl?.score ?? 0) > 37 - 1); // at least seed + trade credit
     assert.ok(closed.event?.realized_R != null);
+  });
+});
+
+describe('Tier-2 live risk envelope', () => {
+  it('computes $2.50 max risk and $7.50 daily loss on $500', () => {
+    assert.equal(tier2MaxPerTradeRiskUSD(), 2.5);
+    assert.equal(tier2DailyLossLimitUSD(), 7.5);
+    const env = buildLiveRiskEnvelope(2, 'live');
+    assert.equal(env.live_capital_ceiling_usd, 500);
+    assert.equal(env.max_risk_pct_per_trade, 0.005);
+    assert.equal(env.daily_loss_limit_usd, 7.5);
+    assert.equal(env.max_trades_per_day, 5);
+  });
+
+  it('rejects oversize per-trade risk and daily loss / trade caps', () => {
+    const ok = validateTier2LiveRisk(
+      { capitalUSD: 100, perTradeRiskUSD: 2.5 },
+      { live_pnl_today: 0, live_trades_today: 0 },
+    );
+    assert.equal(ok.ok, true);
+
+    const riskHi = validateTier2LiveRisk(
+      { capitalUSD: 100, perTradeRiskUSD: 5 },
+      { live_pnl_today: 0, live_trades_today: 0 },
+    );
+    assert.equal(riskHi.ok, false);
+    assert.ok(riskHi.reasons.includes('per_trade_risk_exceeded'));
+
+    const daily = validateTier2LiveRisk(
+      { capitalUSD: 100, perTradeRiskUSD: 2.5 },
+      { live_pnl_today: -7.5, live_trades_today: 2 },
+    );
+    assert.equal(daily.ok, false);
+    assert.ok(daily.reasons.includes('daily_loss_limit_reached'));
+
+    const trades = validateTier2LiveRisk(
+      { capitalUSD: 100, perTradeRiskUSD: 2.5 },
+      { live_pnl_today: 0, live_trades_today: TIER2_LIVE_MAX_TRADES_PER_DAY },
+    );
+    assert.equal(trades.ok, false);
+    assert.ok(trades.reasons.includes('max_trades_per_day_reached'));
+  });
+
+  it('builds valid live LOGOC event at 0.5% of $500', () => {
+    const e = buildEntryEvent({
+      principal_id: 'principal:cris-colon',
+      agent_id: '0xagent',
+      tier: 2,
+      mode: 'live',
+      instrument: 'MON/USDC',
+      side: 'buy',
+      entry_price: 1.2345,
+      stop_price: 1.228,
+      target_price: 1.25,
+      risk_per_trade_pct: TIER2_LIVE_MAX_RISK_PCT_PER_TRADE,
+      synthetic_account_size: TIER2_LIVE_MAX_CAPITAL_USD,
+      setup_tag: 'liq_sweep_ema_reversal',
+      entry_thesis: 'Live: PDL swept then retested at EMA stack with plan adherence.',
+      trend_context: 'up_trend_ema_stack',
+      liquidity_zone_type: 'prior_day_low',
+      liquidity_zone_price: 1.233,
+      liquidity_event: 'sweep',
+      mm_behavior_hypothesis: 'stop_hunt_then_reversal',
+      structure_notes: 'Sweep reclaim; stop beyond sweep low.',
+    });
+    assert.ok(e.risk_envelope != null);
+    assert.equal(e.account_risk_amount, 2.5);
+    const v = validatePaperProtocol(e);
+    assert.deepEqual(v, [], `unexpected violations: ${v.join(',')}`);
+  });
+
+  it('derives live daily stats from journal-shaped closes', () => {
+    const day = '2026-07-19';
+    const base = buildEntryEvent({
+      principal_id: 'p',
+      agent_id: 'a',
+      tier: 2,
+      mode: 'live',
+      instrument: 'X',
+      side: 'buy',
+      entry_price: 100,
+      stop_price: 99,
+      target_price: 103,
+      risk_per_trade_pct: 0.005,
+      synthetic_account_size: 500,
+      setup_tag: 'liq_sweep_ema_reversal',
+      entry_thesis: 'Live retest after sweep of prior day low for long bias.',
+      trend_context: 'up_trend_ema_stack',
+      liquidity_zone_type: 'prior_day_low',
+      liquidity_zone_price: 99.9,
+      liquidity_event: 'sweep',
+    });
+    const closed: LOGOCTradeEvent = {
+      ...closeTrade(base, {
+        exit_price: 98.5,
+        exit_reason: 'stop',
+        logoc_note: 'TheoTechnoCosmoLogic: stop honored under pressure.',
+        lesson: 'Respected envelope; no size up after loss.',
+      }),
+      timestamp: `${day}T12:00:00.000Z`,
+    };
+    // force live pnl
+    closed.realized_pnl_live = -2.5;
+    closed.mode = 'live';
+    const stats = computeLiveDailyStats([closed], day);
+    assert.equal(stats.live_trades_today, 1);
+    assert.equal(stats.live_pnl_today, -2.5);
+    assert.equal(stats.limit_hit, false);
+  });
+
+  it('gates live_execute via GateAclService with envelope fields', () => {
+    const now = Date.now();
+    const ledger = new PLLedger();
+    const issuer = new MandateIssuer({ secret: 'tier2-live' });
+    const gate = new GateAclService(issuer);
+    // Seed enough PL for tier 2 (55): 15+12+10 + several paper credits
+    const pid = 'principal:cris-colon';
+    ledger.append(
+      {
+        kind: 'comprehension_gate',
+        eventId: 'c',
+        principalId: pid,
+        domain: 'trading',
+        passed: true,
+        gateId: 'g',
+        verifiedBy: 'comprehension-gate',
+        at: now - 10,
+      },
+      now,
+    );
+    ledger.append(
+      {
+        kind: 'valid_override',
+        eventId: 'o',
+        principalId: pid,
+        domain: 'trading',
+        agentErrorId: 'e',
+        validated: true,
+        verifiedBy: 'override-verifier',
+        at: now - 9,
+      },
+      now,
+    );
+    ledger.append(
+      {
+        kind: 'domain_task',
+        eventId: 't',
+        principalId: pid,
+        domain: 'trading',
+        taskId: 'task',
+        outcome: 'passed',
+        verifiedBy: 'task-verifier',
+        at: now - 8,
+      },
+      now,
+    );
+    for (let i = 0; i < 8; i++) {
+      ledger.append(
+        {
+          kind: 'logoc_paper_trade',
+          eventId: `tr-${i}`,
+          principalId: pid,
+          domain: 'trading',
+          tradeEventId: `te-${i}`,
+          points: 3,
+          processScore: 1,
+          verifiedBy: 'task-verifier',
+          at: now - i,
+        },
+        now,
+      );
+    }
+    const pl = ledger.compute(pid, 'trading', now);
+    assert.ok(pl.score >= 55, `PL=${pl.score}`);
+    const mandate = issuer.issueFromPL(pl, now);
+    assert.equal(mandate.tier, 2);
+    assert.equal(mandate.mode, 'live');
+    assert.equal(mandate.capitalCeilingUSD, 500);
+
+    const tradeEvent = buildEntryEvent({
+      principal_id: pid,
+      agent_id: '0x',
+      tier: 2,
+      mode: 'live',
+      instrument: 'MON/USDC',
+      side: 'buy',
+      entry_price: 1.2345,
+      stop_price: 1.228,
+      target_price: 1.25,
+      risk_per_trade_pct: 0.005,
+      synthetic_account_size: 500,
+      setup_tag: 'liq_sweep_ema_reversal',
+      entry_thesis: 'Live sweep retest with EMA stack and fixed envelope risk.',
+      trend_context: 'up_trend_ema_stack',
+      liquidity_zone_type: 'prior_day_low',
+      liquidity_zone_price: 1.233,
+      liquidity_event: 'sweep',
+    });
+
+    const approved = gate.gate(
+      {
+        intentId: randomUUID(),
+        principalId: pid,
+        domain: 'trading',
+        action: 'live_execute',
+        tool: 'live_execute',
+        capitalUSD: 100,
+        perTradeRiskUSD: tradeEvent.account_risk_amount,
+        liveDailyStats: { live_pnl_today: 0, live_trades_today: 0 },
+        tradeEvent,
+        raisedAt: now,
+        claimedMandate: mandate,
+      },
+      now,
+    );
+    assert.equal(approved.status, 'approved', JSON.stringify(approved));
+
+    const rejectedLoss = gate.gate(
+      {
+        intentId: randomUUID(),
+        principalId: pid,
+        domain: 'trading',
+        action: 'live_execute',
+        tool: 'live_execute',
+        capitalUSD: 100,
+        perTradeRiskUSD: 2.5,
+        liveDailyStats: { live_pnl_today: -8, live_trades_today: 1 },
+        raisedAt: now,
+        claimedMandate: mandate,
+      },
+      now,
+    );
+    assert.equal(rejectedLoss.status, 'rejected');
+    if (rejectedLoss.status === 'rejected') {
+      assert.ok(rejectedLoss.event.reasons.includes('daily_loss_limit_reached'));
+    }
+
+    const gl = gateLiveExecute(
+      { capitalUSD: 100, perTradeRiskUSD: 2.5 },
+      mandate,
+      { live_pnl_today: 0, live_trades_today: 5 },
+    );
+    assert.equal(gl.status, 'rejected');
+    assert.ok(gl.reasons.includes('max_trades_per_day_reached'));
   });
 });

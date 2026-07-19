@@ -111,6 +111,11 @@ export type ACLMode = 'observe' | 'paper' | 'live';
 export interface RiskEnvelope {
   maxDrawdownPct: number;
   maxConcurrentActions: number;
+  /** Tier-2+ live trading bounds (optional; signed into mandate). */
+  maxRiskPctPerTrade?: number;
+  dailyLossMultiplier?: number;
+  maxTradesPerDay?: number;
+  liveCapitalCeilingUSD?: number;
 }
 
 export interface ACLMandate {
@@ -146,6 +151,21 @@ export interface IntentRaised {
   action: IntentAction;
   tool?: string;
   capitalUSD?: number;
+  /**
+   * Planned stop risk in USD for live_execute (required for tier-2 envelope check).
+   * Derived from stop distance × size upstream.
+   */
+  perTradeRiskUSD?: number;
+  /** Live daily aggregates (journal-derived) for loss/trade caps. */
+  liveDailyStats?: {
+    live_pnl_today: number;
+    live_trades_today: number;
+  };
+  /**
+   * Optional LOGOC trade event payload for setup validation on live_execute.
+   * Kept as unknown structurally to avoid circular imports; gate casts via logocTrade.
+   */
+  tradeEvent?: unknown;
   raisedAt: number;
   /** Mandate the agent claims to be operating under */
   claimedMandate: ACLMandate;

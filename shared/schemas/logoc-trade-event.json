@@ -96,10 +96,56 @@
     "exit_reason": { "type": ["string", "null"] },
     "realized_R": { "type": ["number", "null"] },
     "realized_pnl_synthetic": { "type": ["number", "null"] },
+    "realized_pnl_live": {
+      "type": ["number", "null"],
+      "description": "Live realized P&L in USD when mode=live"
+    },
     "logoc_note": { "type": ["string", "null"] },
     "lesson": { "type": ["string", "null"] },
     "pl_score_delta": { "type": ["number", "null"] },
+    "risk_envelope": {
+      "type": ["object", "null"],
+      "description": "Tier-2 live risk covenant snapshot at entry",
+      "properties": {
+        "tier": { "type": "integer" },
+        "mode": { "enum": ["paper", "live"] },
+        "live_capital_ceiling_usd": { "type": "number" },
+        "max_risk_pct_per_trade": { "type": "number" },
+        "daily_loss_limit_usd": { "type": "number" },
+        "max_trades_per_day": { "type": "integer" }
+      },
+      "required": [
+        "tier",
+        "mode",
+        "live_capital_ceiling_usd",
+        "max_risk_pct_per_trade",
+        "daily_loss_limit_usd",
+        "max_trades_per_day"
+      ]
+    },
     "protocol_valid": { "type": "boolean" },
     "protocol_violations": { "type": "array", "items": { "type": "string" } }
+  },
+  "definitions": {
+    "live_daily_stats": {
+      "type": "object",
+      "description": "Attached to daily_review journal rows for envelope adherence audit",
+      "properties": {
+        "date": { "type": "string", "format": "date" },
+        "live_pnl_today": { "type": "number" },
+        "live_trades_today": { "type": "integer", "minimum": 0 },
+        "limit_hit": { "type": "boolean" },
+        "daily_loss_limit_usd": { "type": "number" },
+        "max_trades_per_day": { "type": "integer" }
+      },
+      "required": [
+        "date",
+        "live_pnl_today",
+        "live_trades_today",
+        "limit_hit",
+        "daily_loss_limit_usd",
+        "max_trades_per_day"
+      ]
+    }
   }
 }

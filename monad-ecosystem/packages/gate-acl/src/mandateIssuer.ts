@@ -5,7 +5,14 @@
 
 import { createHmac, timingSafeEqual } from 'node:crypto';
 import { scoreToTier, TIER_THRESHOLDS } from './plLedger.js';
-import type { ACLMandate, ACLMode, ACLTier, PLDomain, PLState } from './types.js';
+import type {
+  ACLMandate,
+  ACLMode,
+  ACLTier,
+  PLDomain,
+  PLState,
+  RiskEnvelope,
+} from './types.js';
 
 /** Default mandate TTL: 15 minutes — forces re-derivation from live PL. */
 export const MANDATE_TTL_MS = 15 * 60 * 1000;
@@ -30,7 +37,7 @@ export interface TierSpec {
   capitalCeilingUSD: number;
   gasCeilingPerTx: number;
   toolsAllowlist: string[];
-  riskEnvelope: { maxDrawdownPct: number; maxConcurrentActions: number };
+  riskEnvelope: RiskEnvelope;
 }
 
 /** Placeholder ceilings — calibrate before live capital. */
@@ -57,7 +64,15 @@ export const TIER_SPECS: Record<ACLTier, TierSpec> = {
     capitalCeilingUSD: 500,
     gasCeilingPerTx: 50,
     toolsAllowlist: ['read_only_rpc', 'paper_execute', 'live_execute'],
-    riskEnvelope: { maxDrawdownPct: 10, maxConcurrentActions: 2 },
+    // Daily loss ≈ 1.5% of $500 ($7.50 = 3 × 0.5% per-trade); max 5 live trades/day
+    riskEnvelope: {
+      maxDrawdownPct: 1.5,
+      maxConcurrentActions: 2,
+      maxRiskPctPerTrade: 0.005,
+      dailyLossMultiplier: 3,
+      maxTradesPerDay: 5,
+      liveCapitalCeilingUSD: 500,
+    },
   },
   3: {
     tier: 3,

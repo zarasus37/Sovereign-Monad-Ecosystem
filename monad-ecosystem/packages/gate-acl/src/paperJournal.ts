@@ -7,12 +7,15 @@ import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } fr
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
-import type { LOGOCTradeEvent } from './logocTrade.js';
+import type { LOGOCTradeEvent, LiveDailyStats } from './logocTrade.js';
 import {
   SYNTHETIC_ACCOUNT_DEFAULT,
+  TIER2_LIVE_MAX_CAPITAL_USD,
   stampProtocol,
   closeTrade,
   buildEntryEvent,
+  computeLiveDailyStats,
+  calendarDateUTC,
   type TradePlanInput,
 } from './logocTrade.js';
 import type { DailyReviewPLEvent, LogocPaperTradePLEvent, PLState } from './types.js';
@@ -63,6 +66,8 @@ export interface DailyReviewRecord {
   behavioral_pattern: string;
   micro_rule_upgrade: string;
   notes: string | null;
+  /** Live risk envelope adherence for the review day. */
+  live_daily_stats: LiveDailyStats | null;
   at: number;
 }
 
@@ -140,6 +145,14 @@ export class PaperTradingJournal {
       }
     }
     return out;
+  }
+
+  /** Live closes for a calendar day — used by gate + daily review. */
+  getLiveDailyStats(
+    date: string = calendarDateUTC(),
+    capitalCeiling: number = TIER2_LIVE_MAX_CAPITAL_USD,
+  ): LiveDailyStats {
+    return computeLiveDailyStats(this.listTrades(), date, capitalCeiling);
   }
 
   /**
@@ -317,6 +330,12 @@ export class PaperTradingJournal {
       throw new Error('daily_review: micro_rule_upgrade too thin');
     }
 
+    const live_daily_stats = computeLiveDailyStats(
+      trades,
+      input.review_date,
+      TIER2_LIVE_MAX_CAPITAL_USD,
+    );
+
     const review: DailyReviewRecord = {
       kind: 'daily_review',
       review_date: input.review_date,
@@ -331,6 +350,7 @@ export class PaperTradingJournal {
       behavioral_pattern: input.behavioral_pattern,
       micro_rule_upgrade: input.micro_rule_upgrade,
       notes: input.notes ?? null,
+      live_daily_stats,
       at: now,
     };
     this.appendJournal(review);

@@ -48,8 +48,21 @@ Fixed **$10k** synthetic capital · **1% risk** on allowed setups · Rules: defi
 **Price-logic fields:** `trend_context`, `liquidity_zone_type`, `liquidity_zone_price`, `liquidity_event`, `mm_behavior_hypothesis`, `structure_notes`  
 (e.g. sweep + retest near zone, stop beyond sweep extreme, EMA stack bias).
 
-Each closed process-valid trade emits a **LOGOC_trade_event** (+~3 PL). Daily review (+5 PL).  
-Tier 2 live hint: same setups, risk ≤ 1% of live ceiling (prefer 0.5%).
+Each closed process-valid trade emits a **LOGOC_trade_event** (+~3 PL). Daily review (+5 PL).
+
+### Tier-2 live risk envelope (hard gate)
+
+Same EMA/liquidity setups as tier 1, plus non-negotiable capital bounds:
+
+| Bound | Value (on $500 ceiling) |
+|--------|-------------------------|
+| Capital ceiling | **$500** |
+| Per-trade risk | **≤ 0.5%** ($2.50) preferred & enforced |
+| Daily loss limit | **3×** per-trade max (**$7.50**) |
+| Max live trades / day | **5** |
+
+Gate rejects `live_execute` when daily loss or trade count is hit — same hardness as setup validity.  
+Journal `risk_envelope` + daily_review `live_daily_stats` make adherence auditable (TTCL covenant).
 
 ```powershell
 pnpm paper:demo
