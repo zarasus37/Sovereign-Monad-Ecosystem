@@ -891,6 +891,16 @@ Philosophy → enforceable system validity (orthogonal to constitution C1–C5):
 - CLI: `python -m gnosis_training ttc-metrics <pairs_jsonl>`
 - Tests: `gnosis-training/tests/test_ttc_signals.py`
 
+### Completed: PL → ACL hard gate vertical slice (2026-07-19)
+
+- Package `@sovereign/gate-acl` (`monad-ecosystem/packages/gate-acl/`): Shaliah load-bearing **PL caps ACL**
+  - `PLLedger` — domain-scoped score re-derived from append-only events + decay; rejects `verifiedBy: client`
+  - `MandateIssuer` — HMAC-signed short-TTL (15m) ACL mandates; tier 0–3 observe/paper/live
+  - `GateAclService` — bus-side gate (signature, TTL, tier, domain, capital, tools); `compile_constraints` requires tier 3
+  - `Executor` — re-verifies at consume time (TOCTOU close)
+  - Demo + 5 tests green; Kafka topic design in `schemas/topics.md`
+- Thresholds 25/55/80 are **placeholders** (demo-crossing only). Not wired to live Kafka/Redis yet.
+
 ### Completed: Hepar TTC window metrics auto-log (2026-07-18)
 
 - TS: `hepar-defi-auditor/src/ttc-window-metrics.ts` — every `score()` with `record=true` appends JSONL + in-memory window (refusal rate, mean debt, density, reject rate, debt_forced_risk, exploration_pressure)

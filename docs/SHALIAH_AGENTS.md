@@ -305,9 +305,10 @@ When a human walks away, their agent is "still embodied with this human personal
 
 ## 16. Relationship to existing ecosystem structures (additive, non-disruptive)
 
-### 16.1 What exists today (thin)
+### 16.1 What exists today (thin → first hard slice)
 - **MOF v2.4.0, Layer 9 — "Shaliah Delegate System"** (§6/§9): Canonical Name `Shaliah Delegate System`; Role: user-linked agent deployment layer; Status: **LOCAL ANALYSIS SURFACE COMPLETE / LIVE PENDING**. Done: local key activation scaffold, delegation boundary system, NFT metadata/collection policy scaffold. Remains: onboarding pipeline, assessment integration, trait-vector normalization, live contract/reward/mint-deploy, Personality System instruments (NEO-PI-R / HEXACO / Hogan / Financial Risk Tolerance), Tiered Psychometric Validation (Tier 0/1/2).
-- **Code enums** (`monad-ecosystem/packages/sovereign-types/`): `agent.ts` — `AgentRole` includes `| 'delegate' // Human-linked Shaliah delegate` and `| 'ecosystem-native' // No human delegate`; `revenue.ts` — `| 'delegate.inflow'` and `| 'delegate.pool'`. Shaliah appears **only in comments** today — no implementation package, no runtime.
+- **Code enums** (`monad-ecosystem/packages/sovereign-types/`): `agent.ts` — `AgentRole` includes `| 'delegate' // Human-linked Shaliah delegate` and `| 'ecosystem-native' // No human delegate`; `revenue.ts` — `| 'delegate.inflow'` and `| 'delegate.pool'`.
+- **PL → ACL hard gate (2026-07-19)** — package `@sovereign/gate-acl` (`monad-ecosystem/packages/gate-acl/`): server-derived domain-scoped PL ledger (rejects client events, exponential decay), HMAC-signed short-TTL ACL mandates, bus-side `gateAcl` (tier/mode/capital/tools; `compile_constraints` requires tier 3), executor re-verify at consume time (TOCTOU close). In-memory vertical slice verified: tier 0 → earn PL → tier 1 paper pass / live reject. Kafka topic design in `gate-acl/schemas/topics.md`. **Not yet** wired to live Kafka/Redis or real capital.
 
 ### 16.2 Bridges the vision calls for, NOT yet wired
 Charter (covenant terms → sovereignty criteria) · Steward Council (12-member + Cryptographic Veto Gate) · TTCL compiler axis (ECS physical block on the Shaliah path) · 72/144 Names (0.72 threshold / governor-pair indexing on the autonomous side) · Dove (tiered intervention → Shaliah behavioral/progression + autonomous governance) · Scheduler / Layer 6 (canonical curriculum → onboarding/assessment + cross-concept field expansion).
