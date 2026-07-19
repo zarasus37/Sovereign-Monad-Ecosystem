@@ -935,6 +935,13 @@ Philosophy → enforceable system validity (orthogonal to constitution C1–C5):
 - Blend API: `blendNodeExpectation` (0.70 fingerprint / 0.30 prior); score soft-anchor via `useFingerprintBaseline`
 - `pnpm check:temple-grid` validates grid + fingerprints + priors schema
 
+### Completed: THE COUNCILE registry — 9 new reflection members (2026-07-19)
+
+- Machine index: `theo-techno-cosmo/THE COUNCILE/council-registry.json` + `shared/ttcl-specs/council-registry.schema.json`
+- **Recently added:** Enheduanna, Basilides, Hatshepsut, Hildegard, Catherine de' Medici, Laura Bassi, Mirabai, Queen of Sheba, Zenobia
+- Enheduanna bound to TempleGrid fixture; `pnpm check:council` enforces every source file is claimed
+- Distinct from Steward Council (charter votes) — documented in STEWARD_COUNCIL.md cross-link
+
 ### Completed: Agent 0 closed-loop PL→ACL (2026-07-19)
 
 - Fixture: `gate-acl/fixtures/agent-0-profile.json` — Cristobal Colon / xkryptic genesis with IPIP-NEO-300 + SD3 from `emergence-claim-core` registration; bound to `principal:cris-colon`, PL domain `trading`

@@ -19,7 +19,8 @@
     "check:sign-types": "node scripts/check-sign-types-drift.mjs",
     "check:ttcl-artifacts": "node scripts/check-ttcl-artifacts-drift.mjs",
     "check:temple-grid": "node scripts/check-temple-grid.mjs",
-    "validate": "pnpm check:layout && pnpm check:numerics && pnpm check:sign-types && pnpm check:ttcl-artifacts && pnpm check:temple-grid && pnpm typecheck && pnpm test:integration",
+    "check:council": "node scripts/check-council-registry.mjs",
+    "validate": "pnpm check:layout && pnpm check:numerics && pnpm check:sign-types && pnpm check:ttcl-artifacts && pnpm check:temple-grid && pnpm check:council && pnpm typecheck && pnpm test:integration",
     "lint": "pnpm --recursive lint",
     "clean": "pnpm --recursive clean && Remove-Item -Recurse -Force node_modules, .pnpm-store -ErrorAction SilentlyContinue",
     "prepare": "husky install || true"

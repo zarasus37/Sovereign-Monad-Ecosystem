@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/ttcl-specs/council-registry.schema.json",
+  "title": "THE COUNCILE — Historical Reflection Registry",
+  "description": "Machine-readable index of theo-techno-cosmo/THE COUNCILE/ gnosis source members (Council of Reflection). Distinct from docs/STEWARD_COUNCIL.md (charter governance).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["registry_id", "schema_version", "kind", "source_dir", "members", "stats"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "registry_id": { "type": "string", "minLength": 1 },
+    "schema_version": { "type": "string" },
+    "kind": {
+      "type": "string",
+      "const": "council-of-reflection"
+    },
+    "source_dir": { "type": "string" },
+    "description": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "members": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/CouncilMember" }
+    },
+    "stats": {
+      "type": "object",
+      "required": ["member_count", "source_file_count", "recently_added_count"],
+      "properties": {
+        "member_count": { "type": "integer", "minimum": 0 },
+        "source_file_count": { "type": "integer", "minimum": 0 },
+        "recently_added_count": { "type": "integer", "minimum": 0 }
+      }
+    }
+  },
+  "definitions": {
+    "CouncilMember": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "member_id",
+        "display_name",
+        "era",
+        "status",
+        "ttc_emphasis",
+        "source_files",
+        "contribution",
+        "key_insight"
+      ],
+      "properties": {
+        "member_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "display_name": { "type": "string", "minLength": 1 },
+        "era": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["active", "extraction", "stub", "duplicate-source"]
+        },
+        "recently_added": { "type": "boolean" },
+        "ttc_emphasis": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"]
+          }
+        },
+        "contribution": { "type": "string" },
+        "key_insight": { "type": "string" },
+        "source_files": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "system_bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["kind", "ref"],
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "temple-grid",
+                  "steward-council",
+                  "logoc-corpus",
+                  "wheel-registry",
+                  "preference-pairs"
+                ]
+              },
+              "ref": { "type": "string" }
+            }
+          }
+        },
+        "notes": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

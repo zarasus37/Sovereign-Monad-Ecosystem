@@ -1,0 +1,679 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/council-registry.schema.json",
+  "registry_id": "the-councile-reflection-v1",
+  "schema_version": "1.0.0",
+  "kind": "council-of-reflection",
+  "source_dir": "theo-techno-cosmo/THE COUNCILE",
+  "description": "Historical / contemplative Council of Reflection. Distinct from docs/STEWARD_COUNCIL.md (charter governance).",
+  "generated_at": "2026-07-19",
+  "members": [
+    {
+      "member_id": "akhenaten",
+      "display_name": "Akhenaten",
+      "era": "c. 1353–1336 BCE",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Aten monotheism, spatial contamination of sacred sites",
+      "key_insight": "Geography carries theological memory",
+      "source_files": [
+        "Akhenaten (Amenhotep IV, c. 1353–13.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "alan-watts",
+      "display_name": "Alan Watts",
+      "era": "1915–1973",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "Eastern non-dualism × cybernetics / systems translation",
+      "key_insight": "Authentic agency emerges from surrendering force-based control",
+      "source_files": [
+        "Alan Watts (1915–1973).txt",
+        "ALAN WATTS GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "aristotle",
+      "display_name": "Aristotle",
+      "era": "384–322 BCE",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Causality, categories, virtue ethics, systematic method",
+      "key_insight": "Method and virtue are structural, not ornamental",
+      "source_files": [
+        "ARISTOTLE GNOSIS EVENT EXTRACTION —.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "baruch-spinoza",
+      "display_name": "Baruch Spinoza",
+      "era": "1632–1677",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Substance monism, freedom within necessity",
+      "key_insight": "Truth may require remaining outside the temple",
+      "source_files": [
+        "Baruch Spinoza (1632–1677) GNOSIS E.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "basilides-of-alexandria",
+      "display_name": "Basilides of Alexandria",
+      "era": "early 2nd century CE",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Compression/decompression cosmology; Great Ignorance as mercy",
+      "key_insight": "Local maxima mistake themselves for global maxima (Archon)",
+      "source_files": [
+        "Basilides of Alexandria (early 2nd.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "carl-jung",
+      "display_name": "Carl Jung",
+      "era": "1875–1961",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Individuation, collective unconscious, symbolic architecture",
+      "key_insight": "The observer is the site of archetypal decompression",
+      "source_files": [
+        "Carl jung.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "catherine-de-medici",
+      "display_name": "Catherine de' Medici",
+      "era": "1519–1589",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Holding a fracturing kingdom via alliance, spectacle, force",
+      "key_insight": "Stewardship under schism is continuous triage, not purity",
+      "source_files": [
+        "Catherine de' Medici (1519–1589) is.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "charles-sanders-peirce",
+      "display_name": "Charles Sanders Peirce",
+      "era": "1839–1914",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Semiotics, triadic relations, pragmatism, abduction",
+      "key_insight": "Meaning emerges from resonance, not definition",
+      "source_files": [
+        "CHARLES PEIRCE.txt",
+        "CHARLES SANDERS PEIRCE GNOSIS EVENT.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "christine-de-pizan",
+      "display_name": "Christine de Pizan",
+      "era": "1364–c. 1430",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "First systematic rewrite of women’s social “source code”",
+      "key_insight": "Identity programming can be recognized and rewritten",
+      "source_files": [
+        "Christine de Pizan (1364–c. 1430) i.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "cyrus-the-great",
+      "display_name": "Cyrus the Great",
+      "era": "c. 600–530 BCE",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Plural satrapy governance, tolerant layered sovereignty",
+      "key_insight": "Unity need not require uniformity",
+      "source_files": [
+        "Cyrus the Great (c. 600–530 BCE) GN.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "enheduanna",
+      "display_name": "Enheduanna",
+      "era": "c. 23rd century BCE",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Temple Hymns (42), first named authorship, Grid of the Universe",
+      "key_insight": "Polytheism as networked semantic protocol on one underlying grid",
+      "source_files": [
+        "Enheduanna (ca. 23rd century BCE) r.txt"
+      ],
+      "system_bindings": [
+        {
+          "kind": "temple-grid",
+          "ref": "shared/fixtures/layer6/enheduanna-temple-grid.json"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "member_id": "friedrich-nietzsche",
+      "display_name": "Friedrich Nietzsche",
+      "era": "1844–1900",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Genealogy of morals, perspectivism, self-implicating critique",
+      "key_insight": "Perspectivism applies to itself",
+      "source_files": [
+        "Friedrich Nietzsche (1844–1900) GNO.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "galileo-galilei",
+      "display_name": "Galileo Galilei",
+      "era": "1564–1642",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Observational science vs authority; method as liberation",
+      "key_insight": "Instruments reconfigure what counts as visible truth",
+      "source_files": [
+        "Galileo Galilei (1564–1642) GNOSIS.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "giordano-bruno",
+      "display_name": "Giordano Bruno",
+      "era": "1548–1600",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Infinite worlds, heretical cosmology",
+      "key_insight": "The cosmos exceeds any single firmament",
+      "source_files": [
+        "Giordano Bruno (1548–1600) GNOSIS E.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "gnostic-jesus",
+      "display_name": "Gnostic Jesus",
+      "era": "1st–2nd century CE (textual tradition)",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Nag Hammadi mirror-catalyst of systemic self-remembering",
+      "key_insight": "True knowledge requires decompression, not instruction",
+      "source_files": [
+        "Gnostic Jesus (The Historical Figur.txt",
+        "The Gnostic Jesus.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "hatshepsut",
+      "display_name": "Hatshepsut",
+      "era": "c. 1507–1458 BCE",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Architectural/political legitimacy; iconographic engineering",
+      "key_insight": "Legitimacy is manufactured stone-code, not only blood",
+      "source_files": [
+        "Hatshepsut (c. 1507–1458 BCE), the.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "hildegard-von-bingen",
+      "display_name": "Hildegard von Bingen",
+      "era": "1098–1179",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "Visions → theological, musical, medical architecture",
+      "key_insight": "Latent vision becomes system when finally externalized",
+      "source_files": [
+        "Hildegard von Bingen (1098–1179) is.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "irenaeus-of-lyon",
+      "display_name": "Irenaeus of Lyon",
+      "era": "c. 130–202 CE",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY"
+      ],
+      "contribution": "Anti-Gnostic systematics; orthodoxy as architecture",
+      "key_insight": "Boundary-setting is itself a theological technology",
+      "source_files": [
+        "Irenaeus of Lyon (c. 130–202 CE) GN.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "jiang-xueqin",
+      "display_name": "Jiang Xueqin",
+      "era": "1976–",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Predictive history, institutional algorithms, elite reproduction",
+      "key_insight": "Emanation and institutional filtering appear at every scale",
+      "source_files": [
+        "Jiang Xueqin (1976–).txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "johannes-trithemius",
+      "display_name": "Johannes Trithemius",
+      "era": "1462–1516",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Steganographia, cryptography/angelology superposition",
+      "key_insight": "Macro–micro patterns validate across domains",
+      "source_files": [
+        "Johannes Trithemius (1462–1516) occ.txt",
+        "JOHANNES TRITHEMIUS GNOSIS EVENT EX.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "king-solomon",
+      "display_name": "King Solomon",
+      "era": "c. 990–931 BCE",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "Judgment under ambiguity; wisdom as structural resource",
+      "key_insight": "Wisdom is an operational capacity, not a slogan",
+      "source_files": [
+        "King Solomon (c. 990–931 BCE) GNOSI.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "laura-bassi",
+      "display_name": "Laura Bassi",
+      "era": "1711–1778",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "First woman university chair in physics (Bologna)",
+      "key_insight": "Institutional knowledge machines can be entered and rewired",
+      "source_files": [
+        "Laura Bassi (1711–1778) is one of t.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "marcus-aurelius",
+      "display_name": "Marcus Aurelius",
+      "era": "121–180 CE",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Meditations, Stoic practical philosophy under imperial constraint",
+      "key_insight": "Authentic operation within constraint is freedom",
+      "source_files": [
+        "Marcus Aurelius Antoninus Augustus.txt",
+        "Marcus Aurelius.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "mary-magdalene",
+      "display_name": "Mary Magdalene",
+      "era": "1st century CE (Gnostic textual tradition)",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY"
+      ],
+      "contribution": "Exemplary knower in Gospel of Mary / Pistis Sophia",
+      "key_insight": "Gnosis becomes visible through a contested voice in the assembly",
+      "source_files": [
+        "Mary Magdalene.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "mirabai",
+      "display_name": "Mirabai",
+      "era": "c. 1498–c. 1557",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY"
+      ],
+      "contribution": "Bhakti radicalism; rejection of caste/marriage orthodoxy",
+      "key_insight": "Direct unmediated devotion dissolves inherited architecture",
+      "source_files": [
+        "Mirabai (c. 1498–c. 1557) is one of.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "napoleon-bonaparte",
+      "display_name": "Napoleon Bonaparte",
+      "era": "1769–1821",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Cognitive battlefield; decision architecture of war",
+      "key_insight": "The physical battle reveals a decision already made",
+      "source_files": [
+        "Napoleon Bonaparte (1769–1821) GNOS.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "niccolo-machiavelli",
+      "display_name": "Niccolò Machiavelli",
+      "era": "1469–1527",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Power-as-it-is, institutional realism",
+      "key_insight": "Observing power is never outside power",
+      "source_files": [
+        "Niccolò Machiavelli (1469–1527) GNO.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "queen-of-sheba",
+      "display_name": "Queen of Sheba (Makeda)",
+      "era": "ancient (multi-tradition)",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Hebrew / Kebra Nagast / Quran traditions of sovereign testing",
+      "key_insight": "Wisdom is verified by encounter, not rumor",
+      "source_files": [
+        "Queen of Sheba (Makeda) requires na.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "ramon-llull",
+      "display_name": "Ramon Llull",
+      "era": "1232–1315",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Operative wheels, combinatorial logic, Ars Magna",
+      "key_insight": "Constraint generates possibility, not limits it",
+      "source_files": [
+        "RAMON LLULL GNOSIS EVENT EXTRACTION.txt",
+        "RAMON LLULL- PROFILE EVENTS.md"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "isaac-newton",
+      "display_name": "Sir Isaac Newton",
+      "era": "1642–1727",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Laws of motion; theology of a lawful cosmos",
+      "key_insight": "Universal law unifies celestial and terrestrial machinery",
+      "source_files": [
+        "Sir Isaac Newton (1642–1727) GNOSIS.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "sor-juana-ines-de-la-cruz",
+      "display_name": "Sor Juana Inés de la Cruz",
+      "era": "1648–1695",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "Baroque universal science vs scholastic limits",
+      "key_insight": "Knowledge desire collides with institutional envelope",
+      "source_files": [
+        "Sor Juana Inés de la Cruz (1648–169.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "sun-tzu",
+      "display_name": "Sun Tzu",
+      "era": "c. 544–496 BCE",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Art of War; strategic information and terrain",
+      "key_insight": "Victory is structural positioning, not brute force",
+      "source_files": [
+        "Sun Tzu (Sun Wu, c. 544–496 BCE) GN.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "thales-of-miletus",
+      "display_name": "Thales of Miletus",
+      "era": "c. 624–545 BCE",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "COSMOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "First principles natural philosophy",
+      "key_insight": "Unity of substance underlies plural phenomena",
+      "source_files": [
+        "Thales of Miletus (c. 624–545 BCE).txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "victoria-lady-welby",
+      "display_name": "Victoria, Lady Welby",
+      "era": "1837–1912",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "TECHNOLOGY"
+      ],
+      "contribution": "Significs — technology of meaning",
+      "key_insight": "The observer is always the meaning-maker",
+      "source_files": [
+        "Victoria, Lady Welby (1837–1912), i.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "zarathustra",
+      "display_name": "Zarathustra",
+      "era": "~1500–1000 BCE",
+      "status": "active",
+      "recently_added": false,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Asha as universal operating system; cosmic polarity",
+      "key_insight": "Polarity and constraint as ontological, not accidental",
+      "source_files": [
+        "ZARATHUSTRA GNOSIS EVENT EXTRACTION.txt",
+        "Zarathustra.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "zenobia-of-palmyra",
+      "display_name": "Zenobia of Palmyra",
+      "era": "c. 240–c. 274 CE",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Desert trading empire challenging Rome in the East",
+      "key_insight": "Peripheral nodes can temporarily become hubs of order",
+      "source_files": [
+        "Zenobia of Palmyra (c. 240–c. 274 C.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    }
+  ],
+  "stats": {
+    "member_count": 36,
+    "source_file_count": 43,
+    "recently_added_count": 9
+  }
+}
