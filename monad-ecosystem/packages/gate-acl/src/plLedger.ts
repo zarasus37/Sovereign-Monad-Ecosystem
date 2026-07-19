@@ -4,7 +4,9 @@
  */
 
 import type {
+  DailyReviewPLEvent,
   GateEvent,
+  LogocPaperTradePLEvent,
   OverrideEvent,
   PLDomain,
   PLEvent,
@@ -20,6 +22,10 @@ const POINTS = {
   comprehension_gate_pass: 15,
   valid_override: 12,
   domain_task_pass: 10,
+  /** Per process-valid closed LOGOC paper trade (tier-1 protocol) */
+  logoc_paper_trade: 3,
+  /** Per structured daily review ritual */
+  daily_review: 5,
 } as const;
 
 /** Placeholder tier thresholds (not calibrated to production competence). */
@@ -73,6 +79,8 @@ export class PLLedger {
     const comprehensionGates: GateEvent[] = [];
     const validOverrides: OverrideEvent[] = [];
     const domainTasksCompleted: TaskEvent[] = [];
+    const logocPaperTrades: LogocPaperTradePLEvent[] = [];
+    const dailyReviews: DailyReviewPLEvent[] = [];
 
     let raw = 0;
     for (const e of list) {
@@ -90,6 +98,14 @@ export class PLLedger {
           domainTasksCompleted.push(e);
           raw += POINTS.domain_task_pass * w;
         }
+      } else if (e.kind === 'logoc_paper_trade') {
+        logocPaperTrades.push(e);
+        const pts = e.points > 0 ? e.points : POINTS.logoc_paper_trade;
+        raw += pts * Math.max(0, Math.min(1, e.processScore)) * w;
+      } else if (e.kind === 'daily_review') {
+        dailyReviews.push(e);
+        const pts = e.points > 0 ? e.points : POINTS.daily_review;
+        raw += pts * w;
       }
     }
 
@@ -103,6 +119,8 @@ export class PLLedger {
         comprehensionGates,
         validOverrides,
         domainTasksCompleted,
+        logocPaperTrades,
+        dailyReviews,
       },
     };
   }

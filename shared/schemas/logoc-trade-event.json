@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/schemas/logoc-trade-event.json",
+  "title": "LOGOCTradeEvent",
+  "description": "Canonical payload for tier-1 paper_execute / LOGOC journal. EMA/liquidity price-logic fields + risk frame. See @sovereign/gate-acl logocTrade.ts.",
+  "type": "object",
+  "required": [
+    "event_id",
+    "timestamp",
+    "principal_id",
+    "agent_id",
+    "domain",
+    "tier",
+    "mode",
+    "instrument",
+    "side",
+    "entry_price",
+    "stop_price",
+    "synthetic_account_size",
+    "risk_per_trade_pct",
+    "account_risk_amount",
+    "position_size",
+    "setup_tag",
+    "entry_thesis",
+    "trend_context"
+  ],
+  "properties": {
+    "event_id": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "principal_id": { "type": "string" },
+    "agent_id": { "type": "string" },
+    "domain": { "const": "trading" },
+    "tier": { "type": "integer", "minimum": 0 },
+    "mode": { "enum": ["paper", "live"] },
+    "instrument": { "type": "string" },
+    "side": { "enum": ["buy", "sell"] },
+    "order_type": { "enum": ["market", "limit", "stop"] },
+    "entry_price": { "type": "number", "exclusiveMinimum": 0 },
+    "stop_price": { "type": "number", "exclusiveMinimum": 0 },
+    "target_price": { "type": ["number", "null"] },
+    "synthetic_account_size": { "type": "number", "exclusiveMinimum": 0 },
+    "risk_per_trade_pct": { "type": "number", "minimum": 0.01, "maximum": 0.02 },
+    "account_risk_amount": { "type": "number", "exclusiveMinimum": 0 },
+    "position_size": { "type": "number", "exclusiveMinimum": 0 },
+    "position_notional": { "type": "number" },
+    "setup_tag": {
+      "type": "string",
+      "enum": [
+        "liq_sweep_ema_reversal",
+        "failed_break_trendline_fade",
+        "session_liquidity_zone_fade",
+        "other"
+      ]
+    },
+    "entry_thesis": { "type": "string", "minLength": 20 },
+    "session_context": { "type": ["string", "null"] },
+    "timeframe": { "type": ["string", "null"] },
+    "trend_context": {
+      "type": "string",
+      "enum": [
+        "up_trend_ema_stack",
+        "down_trend_ema_stack",
+        "range",
+        "unknown"
+      ],
+      "description": "up_trend_ema_stack = fast EMA above slow, both sloping up; down = inverse; range = flat EMAs"
+    },
+    "liquidity_zone_type": {
+      "type": ["string", "null"],
+      "enum": [
+        "prior_day_high",
+        "prior_day_low",
+        "session_high",
+        "session_low",
+        "equal_highs",
+        "equal_lows",
+        "round_number",
+        "trendline_cluster",
+        "none",
+        null
+      ]
+    },
+    "liquidity_zone_price": { "type": ["number", "null"] },
+    "liquidity_event": {
+      "type": ["string", "null"],
+      "enum": ["sweep", "failed_break", "acceptance", "none", null]
+    },
+    "mm_behavior_hypothesis": {
+      "type": ["string", "null"],
+      "description": "e.g. stop_hunt_then_reversal, inducement_then_trend_continuation"
+    },
+    "structure_notes": { "type": ["string", "null"] },
+    "emotional_state": { "type": ["string", "null"] },
+    "cognitive_state": { "type": ["string", "null"] },
+    "exit_price": { "type": ["number", "null"] },
+    "exit_reason": { "type": ["string", "null"] },
+    "realized_R": { "type": ["number", "null"] },
+    "realized_pnl_synthetic": { "type": ["number", "null"] },
+    "logoc_note": { "type": ["string", "null"] },
+    "lesson": { "type": ["string", "null"] },
+    "pl_score_delta": { "type": ["number", "null"] },
+    "protocol_valid": { "type": "boolean" },
+    "protocol_violations": { "type": "array", "items": { "type": "string" } }
+  }
+}

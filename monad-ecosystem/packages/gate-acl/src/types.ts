@@ -53,7 +53,40 @@ export interface TaskEvent {
   at: number;
 }
 
-export type PLEvent = GateEvent | OverrideEvent | TaskEvent;
+/** Closed LOGOC paper trade (process-valid) — small PL credit toward tier 2. */
+export interface LogocPaperTradePLEvent {
+  kind: 'logoc_paper_trade';
+  eventId: string;
+  principalId: string;
+  domain: PLDomain;
+  tradeEventId: string;
+  /** Points before decay (default 3.0) */
+  points: number;
+  /** Process quality 0–1 (win rate not required) */
+  processScore: number;
+  verifiedBy: VerifiedBy;
+  at: number;
+}
+
+/** Daily review ritual completed with structured output. */
+export interface DailyReviewPLEvent {
+  kind: 'daily_review';
+  eventId: string;
+  principalId: string;
+  domain: PLDomain;
+  reviewDate: string;
+  tradeCount: number;
+  points: number;
+  verifiedBy: VerifiedBy;
+  at: number;
+}
+
+export type PLEvent =
+  | GateEvent
+  | OverrideEvent
+  | TaskEvent
+  | LogocPaperTradePLEvent
+  | DailyReviewPLEvent;
 
 export interface PLState {
   principalId: string;
@@ -65,6 +98,8 @@ export interface PLState {
     comprehensionGates: GateEvent[];
     validOverrides: OverrideEvent[];
     domainTasksCompleted: TaskEvent[];
+    logocPaperTrades: LogocPaperTradePLEvent[];
+    dailyReviews: DailyReviewPLEvent[];
   };
 }
 

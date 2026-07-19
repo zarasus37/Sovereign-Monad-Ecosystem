@@ -15,8 +15,12 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "test": "tsx --test src/gateAcl.test.ts src/runtime.adapters.test.ts",
+    "test": "tsx --test src/gateAcl.test.ts src/runtime.adapters.test.ts src/closedLoop.test.ts src/logocTrade.test.ts",
     "demo": "tsx src/demo.ts",
+    "closed-loop": "tsx src/closedLoop.ts",
+    "closed-loop:interactive": "tsx src/closedLoop.ts --interactive",
+    "paper:demo": "tsx src/paperCli.ts demo",
+    "paper:session": "tsx src/paperCli.ts session",
     "start": "tsx src/main.ts"
   },
   "dependencies": {

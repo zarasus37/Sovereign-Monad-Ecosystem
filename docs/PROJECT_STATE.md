@@ -891,6 +891,21 @@ Philosophy → enforceable system validity (orthogonal to constitution C1–C5):
 - CLI: `python -m gnosis_training ttc-metrics <pairs_jsonl>`
 - Tests: `gnosis-training/tests/test_ttc_signals.py`
 
+### Completed: Tier-1 LOGOC paper-trading protocol → PL toward tier 2 (2026-07-19)
+
+- `gate-acl/src/logocTrade.ts` — LOGOC_trade_event, risk math (1–2% of $10k), Rules 1–3 validation
+- `paperJournal.ts` + `paperCli.ts` — open/close journal, anti-tilt session state, daily review ritual
+- PL event kinds: `logoc_paper_trade` (+3 process points), `daily_review` (+5)
+- Schema: `shared/schemas/logoc-trade-event.json` · Pydantic: `gnostic_engine/logoc_trade.py`
+- `pnpm paper:demo` exercises multi-trade path + review; journal under `logs/paper-trading/`
+
+### Completed: Agent 0 closed-loop PL→ACL (2026-07-19)
+
+- Fixture: `gate-acl/fixtures/agent-0-profile.json` — Cristobal Colon / xkryptic genesis with IPIP-NEO-300 + SD3 from `emergence-claim-core` registration; bound to `principal:cris-colon`, PL domain `trading`
+- Verifiers: `verifiers.ts` — server-side comprehension / override / task (rejects client slogans)
+- `pnpm closed-loop` (scripted CI) + `pnpm closed-loop:interactive` (principal types answers)
+- Closes the loop: impartation prior → earn PL → reissue ACL → live blocked / paper executed
+
 ### Completed: PL → ACL hard gate vertical slice (2026-07-19)
 
 - Package `@sovereign/gate-acl` (`monad-ecosystem/packages/gate-acl/`): Shaliah load-bearing **PL caps ACL**

@@ -45,3 +45,29 @@ export { PlLedgerService } from './plLedgerService.js';
 export { MandateService } from './mandateService.js';
 export { GateIntentService } from './gateIntentService.js';
 export { ShaliahIntentEmitter, PlEventEmitter } from './shaliahAgentPath.js';
+
+export {
+  SYNTHETIC_ACCOUNT_DEFAULT,
+  RISK_PCT_MIN,
+  RISK_PCT_MAX,
+  TIER1_FIXED_RISK_PCT,
+  TIER1_ALLOWED_SETUPS,
+  TIER2_LIVE_RISK_PCT_MAX,
+  computePositionSizing,
+  buildEntryEvent,
+  closeTrade,
+  validatePaperProtocol,
+  validateTier1SetupLogic,
+  isValidEMALiquidityLongSetup,
+  isValidEMALiquidityShortSetup,
+  stampProtocol,
+  realizedR,
+  stopDistance,
+  type LOGOCTradeEvent,
+  type TradePlanInput,
+  type SetupTag,
+  type TrendContext,
+  type LiquidityZoneType,
+  type LiquidityEvent,
+} from './logocTrade.js';
+export { PaperTradingJournal } from './paperJournal.js';

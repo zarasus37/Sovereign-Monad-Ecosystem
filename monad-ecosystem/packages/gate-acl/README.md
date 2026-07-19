@@ -27,10 +27,45 @@ Same spirit as Hepar `gateTtc`: **gate on the bus / executor path, not in the UI
 ```powershell
 cd monad-ecosystem/packages/gate-acl
 pnpm install
-pnpm demo          # in-memory vertical slice (no Kafka)
+pnpm demo                       # generic in-memory slice
+pnpm closed-loop                # Agent 0 (NEO-300+SD3) × principal:cris-colon (scripted)
+pnpm closed-loop:interactive    # YOU answer the three gates (server verifies)
+pnpm paper:demo                 # tier-1 LOGOC paper protocol → PL toward tier 2
+pnpm paper:session              # journal session + PL/mandate snapshot
 pnpm test
 pnpm build
 ```
+
+### Tier-1 paper protocol (toward tier 2)
+
+Fixed **$10k** synthetic capital · **1% risk** on allowed setups · Rules: defined setup, pre-set stop/target, no revenge size.
+
+**Allowed `setup_tag` only:**
+- `liq_sweep_ema_reversal`
+- `failed_break_trendline_fade`
+- `session_liquidity_zone_fade`
+
+**Price-logic fields:** `trend_context`, `liquidity_zone_type`, `liquidity_zone_price`, `liquidity_event`, `mm_behavior_hypothesis`, `structure_notes`  
+(e.g. sweep + retest near zone, stop beyond sweep extreme, EMA stack bias).
+
+Each closed process-valid trade emits a **LOGOC_trade_event** (+~3 PL). Daily review (+5 PL).  
+Tier 2 live hint: same setups, risk ≤ 1% of live ceiling (prefer 0.5%).
+
+```powershell
+pnpm paper:demo
+```
+
+### Closed loop with Agent 0 (you)
+
+Agent 0 = **Cristobal Colon** (`xkryptic-agent-0-genesis`) with full **IPIP-NEO-300 + SD3**
+encoding from `emergence-claim-core` registration. Bound to **principal:cris-colon**.
+
+1. Impartation prior loads (psychometrics do **not** raise PL by themselves).
+2. You (or scripted CI) pass: comprehension → override → domain task (server-verified).
+3. Mandate reissues to **tier 1 paper**.
+4. Live execute → **rejected**; paper execute → **approved** + executor runs.
+
+Fixture: `fixtures/agent-0-profile.json`
 
 ### Kafka + Redis runtime
 

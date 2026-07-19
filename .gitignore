@@ -140,4 +140,6 @@ logs/semiotic_drift/
 logs/data-rail-activation.json
 # TTC gate window metrics (append-only runtime pain logs; README stays tracked)
 logs/ttc-window/*.jsonl
+# Paper-trading journal (Agent 0 / principal sessions)
+logs/paper-trading/
 monad-ecosystem/logs/
