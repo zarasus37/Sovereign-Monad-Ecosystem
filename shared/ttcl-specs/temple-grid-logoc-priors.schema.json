@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/ttcl-specs/temple-grid-logoc-priors.schema.json",
+  "title": "TempleGrid LOGOC Priors",
+  "description": "Runtime overlay for logoc.temple-grid.v1. Sparse node_priors override embedded TempleNode.logoc_fingerprint; absent nodes inherit fingerprint + global defaults. Blend: effective = fingerprint_weight·fp + runtime_prior_weight·prior.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "priors_id",
+    "grid_id",
+    "profile_id",
+    "global",
+    "node_priors"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "type": "string", "minLength": 1 },
+    "priors_id": { "type": "string", "minLength": 1 },
+    "grid_id": { "type": "string", "minLength": 1 },
+    "profile_id": { "type": "string", "const": "logoc.temple-grid.v1" },
+    "global": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["weights", "penalty_bias", "thresholds", "blend"],
+      "properties": {
+        "weights": { "$ref": "#/definitions/weights" },
+        "penalty_bias": { "$ref": "#/definitions/penaltyBias" },
+        "thresholds": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["accept", "review", "reject_below"],
+          "properties": {
+            "accept": { "type": "number", "minimum": 0, "maximum": 1 },
+            "review": { "type": "number", "minimum": 0, "maximum": 1 },
+            "reject_below": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "blend": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["fingerprint_weight", "runtime_prior_weight"],
+          "properties": {
+            "fingerprint_weight": { "type": "number", "minimum": 0, "maximum": 1 },
+            "runtime_prior_weight": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        }
+      }
+    },
+    "node_priors": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/nodePrior" }
+    },
+    "scenarios": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["scenario_id"],
+        "properties": {
+          "scenario_id": { "type": "string", "minLength": 1 },
+          "weights_override": { "$ref": "#/definitions/weights" },
+          "node_overrides": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["temple_id"],
+              "properties": {
+                "temple_id": { "type": "string", "minLength": 1 },
+                "exploration_bias": {
+                  "type": "number",
+                  "minimum": -1,
+                  "maximum": 1
+                },
+                "scheduler_bias": {
+                  "type": "number",
+                  "minimum": -1,
+                  "maximum": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "unitScoreSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["theo", "tech", "cosmo", "coherence", "sovereignty"],
+      "properties": {
+        "theo": { "type": "number", "minimum": 0, "maximum": 1 },
+        "tech": { "type": "number", "minimum": 0, "maximum": 1 },
+        "cosmo": { "type": "number", "minimum": 0, "maximum": 1 },
+        "coherence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "sovereignty": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "penaltyBias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "unknownNode",
+        "weakConnectivity",
+        "protocolDrift",
+        "domainImbalance"
+      ],
+      "properties": {
+        "unknownNode": { "type": "number", "minimum": 0, "maximum": 1 },
+        "weakConnectivity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "protocolDrift": { "type": "number", "minimum": 0, "maximum": 1 },
+        "domainImbalance": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "weights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["theo", "tech", "cosmo", "coherence", "sovereignty"],
+      "description": "Default TEMPLE_GRID_LOGOC_V1: 0.26/0.18/0.24/0.18/0.14",
+      "properties": {
+        "theo": { "type": "number", "minimum": 0, "maximum": 1 },
+        "tech": { "type": "number", "minimum": 0, "maximum": 1 },
+        "cosmo": { "type": "number", "minimum": 0, "maximum": 1 },
+        "coherence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "sovereignty": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "nodePrior": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["temple_id", "channels", "penalty_bias", "confidence"],
+      "properties": {
+        "temple_id": { "type": "string", "minLength": 1 },
+        "channels": { "$ref": "#/definitions/unitScoreSet" },
+        "penalty_bias": { "$ref": "#/definitions/penaltyBias" },
+        "exploration_bias": { "type": "number", "minimum": -1, "maximum": 1 },
+        "scheduler_bias": { "type": "number", "minimum": -1, "maximum": 1 },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "updated_from": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "timestamp"],
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": [
+                "manual",
+                "training-observation",
+                "scheduler-observation",
+                "hepar-search"
+              ]
+            },
+            "run_id": { "type": "string" },
+            "timestamp": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

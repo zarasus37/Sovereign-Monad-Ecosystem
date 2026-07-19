@@ -32,6 +32,7 @@
 
 import { describe, expect, it } from 'vitest';
 import { resolve } from 'node:path';
+import { readFileSync } from 'node:fs';
 import {
   generateSchedule,
   loadRegistry,
@@ -40,7 +41,7 @@ import {
   type WheelRegistry,
   type ScheduleStep,
 } from '@sovereign/scheduler';
-import { scoreSign } from '@sovereign/ttcl';
+import { scoreSign, type TempleGrid } from '@sovereign/ttcl';
 import {
   generateGnosisEvents,
   serializeEventsJsonl,
@@ -51,6 +52,17 @@ import {
 
 const repoRoot = resolve(__dirname, '..', '..', '..');
 const REGISTRY_PATH = resolve(repoRoot, 'shared', 'fixtures', 'layer6', 'wheel-registry.json');
+const TEMPLE_GRID_PATH = resolve(
+  repoRoot,
+  'shared',
+  'fixtures',
+  'layer6',
+  'enheduanna-temple-grid.json',
+);
+
+function loadTempleGrid(): TempleGrid {
+  return JSON.parse(readFileSync(TEMPLE_GRID_PATH, 'utf8')) as TempleGrid;
+}
 
 const SEED = DEFAULT_CONFIG.seed; // 42 — the consumer's default seed derivation.
 
@@ -249,6 +261,65 @@ describe('Layer 7 — gnosis training events: Catalan labels are sourced from th
       for (const tok of e.provenance_tokens) {
         expect(tok.startsWith(`${regName}:`)).toBe(true);
       }
+    }
+  });
+});
+
+// ----------------------------------------------------------------------------------
+// TempleGrid (Enheduanna) — nodeToEventPayload on schedule steps
+// ----------------------------------------------------------------------------------
+
+describe('Layer 7 — gnosis training events: TempleGrid binding', () => {
+  it('without templeGrid, events omit temple_grid (byte-stable legacy path)', () => {
+    const { events } = buildEvents();
+    for (const e of events) {
+      expect(e.temple_grid).toBeUndefined();
+    }
+  });
+
+  it('with templeGrid, accepted steps attach nodeToEventPayload fields', () => {
+    const templeGrid = loadTempleGrid();
+    const schedule = generateSchedule(REGISTRY_PATH, DEFAULT_CONFIG);
+    const registry = loadRegistry(REGISTRY_PATH);
+    const events = generateGnosisEvents(schedule, registry, { templeGrid });
+    expect(events.length).toBeGreaterThan(0);
+    const withGrid = events.filter((e) => e.temple_grid != null);
+    expect(withGrid.length).toBeGreaterThan(0);
+    for (const e of withGrid) {
+      expect(e.temple_grid!.grid_id).toBe('enheduanna-temple-grid');
+      expect(e.temple_grid!.ttc_domain).toBe('THEO_TECHNO_COSMO');
+      expect(typeof e.temple_grid!.temple_id).toBe('string');
+      expect(typeof e.temple_grid!.hymn_index).toBe('number');
+      expect(validateGnosisEvent(e)).toBe(true);
+    }
+  });
+
+  it('templeGrid path remains deterministic', () => {
+    const templeGrid = loadTempleGrid();
+    const schedule = generateSchedule(REGISTRY_PATH, DEFAULT_CONFIG);
+    const registry = loadRegistry(REGISTRY_PATH);
+    const a = serializeEventsJsonl(generateGnosisEvents(schedule, registry, { templeGrid }));
+    const b = serializeEventsJsonl(generateGnosisEvents(schedule, registry, { templeGrid }));
+    expect(a).toBe(b);
+  });
+});
+
+
+describe('Layer 7 — gnosis training events: TempleGrid LOGOC profile', () => {
+  it('attaches temple_grid_logoc with profile_id logoc.temple-grid.v1', () => {
+    const templeGrid = loadTempleGrid();
+    const schedule = generateSchedule(REGISTRY_PATH, DEFAULT_CONFIG);
+    const registry = loadRegistry(REGISTRY_PATH);
+    const events = generateGnosisEvents(schedule, registry, { templeGrid });
+    const scored = events.filter((e) => e.temple_grid_logoc != null);
+    expect(scored.length).toBeGreaterThan(0);
+    for (const e of scored) {
+      const L = e.temple_grid_logoc!;
+      expect(L.profile_id).toBe('logoc.temple-grid.v1');
+      expect(L.total).toBeGreaterThanOrEqual(0);
+      expect(L.total).toBeLessThanOrEqual(1);
+      expect(['accept', 'review', 'reject']).toContain(L.verdict);
+      expect(validateGnosisEvent(e)).toBe(true);
     }
   });
 });

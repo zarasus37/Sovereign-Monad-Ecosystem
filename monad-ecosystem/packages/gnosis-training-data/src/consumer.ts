@@ -15,21 +15,43 @@
  */
 
 import { compositeKey, type CanonicalSchedule, type WheelRegistry } from "@sovereign/scheduler";
+import {
+  TEMPLE_GRID_LOGOC_V1,
+  scoreTempleGridSign,
+  type TempleGridLogocBreakdown,
+} from "@sovereign/ttcl";
 
-import type { GnosisEvent, GnosisEventConfig } from "./event.js";
+import type { GnosisEvent, GnosisEventConfig, GnosisTempleGridLogoc } from "./event.js";
 import {
   deterministicUuid,
   wheelState,
   activeSlots,
   provenanceTokens,
   userPrompt,
-  materializeSign,
+  materializeSignWithGrid,
   constitutionScore,
+  templePayloadForStep,
+  resolveTempleIdForStep,
   LOGOC_SYSTEM_PROMPT,
 } from "./materialize.js";
 
 /** Event-format version tag (recorded in the JSONL header, not per-event). */
 export const EVENT_FORMAT_VERSION = "gnosis-event-v1";
+
+function toLogocPayload(b: TempleGridLogocBreakdown): GnosisTempleGridLogoc {
+  return {
+    profile_id: b.profile_id,
+    total: b.total,
+    theo_score: b.theo_score,
+    tech_score: b.tech_score,
+    cosmo_score: b.cosmo_score,
+    coherence_score: b.coherence_score,
+    sovereignty_score: b.sovereignty_score,
+    penalties: b.penalties,
+    penalty_sum: b.penalty_sum,
+    verdict: b.verdict,
+  };
+}
 
 /**
  * Turn a `CanonicalSchedule` into Gnosis training events.
@@ -38,7 +60,8 @@ export const EVENT_FORMAT_VERSION = "gnosis-event-v1";
  * @param registry  the wheel registry the schedule ran against (from `loadRegistry`).
  * @param config    optional: `constitutionVersion` (default "v1"), `seed`
  *                  (default `schedule.config.seed`), `includeInitial`
- *                  (default true).
+ *                  (default true), `templeGrid` (optional Enheduanna grid —
+ *                  attaches `temple_grid` + `temple_grid_logoc` per step).
  */
 export function generateGnosisEvents(
   schedule: CanonicalSchedule,
@@ -48,6 +71,8 @@ export function generateGnosisEvents(
   const seed = config.seed ?? schedule.config.seed;
   const constitutionVersion = config.constitutionVersion ?? "v1";
   const includeInitial = config.includeInitial ?? true;
+  const templeGrid = config.templeGrid;
+  const logocProfile = config.templeGridLogocProfile ?? TEMPLE_GRID_LOGOC_V1;
 
   const events: GnosisEvent[] = [];
   for (let i = 0; i < schedule.steps.length; i++) {
@@ -56,9 +81,34 @@ export function generateGnosisEvents(
     if (!includeInitial && step.move === "initial") continue;
 
     const composite = compositeKey(step.state, registry);
-    const sign = materializeSign(seed, step, registry);
+    const sign = materializeSignWithGrid(seed, step, registry, templeGrid);
 
-    events.push({
+    const templePayload = templeGrid
+      ? templePayloadForStep(templeGrid, step.state, registry)
+      : null;
+
+    let temple_grid_logoc: GnosisTempleGridLogoc | undefined;
+    if (templeGrid && templePayload) {
+      const templeId = resolveTempleIdForStep(templeGrid, step.state, registry);
+      const node = templeId
+        ? templeGrid.nodes.find((n) => n.temple_id === templeId)
+        : undefined;
+      if (node) {
+        const slots = activeSlots(step.state, registry);
+        const breakdown = scoreTempleGridSign(sign, node, logocProfile, {
+          derivedFromGrid: true,
+          wheelId: slots.theology.wheel,
+          slotId: slots.theology.slot,
+          eventType: "scheduled_slot",
+          evidence: {
+            uncertainty_tagged: node.status === "unknown",
+          },
+        });
+        temple_grid_logoc = toLogocPayload(breakdown);
+      }
+    }
+
+    const event: GnosisEvent = {
       event_id: deterministicUuid(`${seed}:${i}:${composite}`),
       constitution_version: constitutionVersion,
       wheel_state: wheelState(seed, step.state, registry),
@@ -70,7 +120,11 @@ export function generateGnosisEvents(
         { role: "assistant", content: "" },
       ],
       constitution_score: constitutionScore(sign),
-    });
+      ...(templePayload ? { temple_grid: templePayload } : {}),
+      ...(temple_grid_logoc ? { temple_grid_logoc } : {}),
+    };
+
+    events.push(event);
   }
   return events;
 }

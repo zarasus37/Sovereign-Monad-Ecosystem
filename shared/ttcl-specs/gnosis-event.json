@@ -92,6 +92,66 @@
         "total": { "type": "number", "minimum": 0, "maximum": 1 },
         "passes": { "type": "boolean" }
       }
+    },
+    "temple_grid": {
+      "description": "Optional Enheduanna TempleGrid attachment when generateGnosisEvents is called with a TempleGrid. Derived via wheel slot_mapping → TempleNode → nodeToEventPayload. Absent when no grid is bound (backward compatible).",
+      "type": ["object", "null"],
+      "additionalProperties": true,
+      "properties": {
+        "grid_id": { "type": "string" },
+        "temple_id": { "type": "string" },
+        "hymn_index": { "type": "integer", "minimum": 1, "maximum": 42 },
+        "deity_id": { "type": "string" },
+        "deity_name": { "type": "string" },
+        "city_id": { "type": "string" },
+        "city_name": { "type": "string" },
+        "status": { "type": "string" },
+        "ttc_domain": { "type": "string" }
+      }
+    },
+    "temple_grid_logoc": {
+      "description": "Optional TempleGrid LOGOC three-channel score (logoc.temple-grid.v1). Present only when templeGrid is bound and a temple resolves for the step.",
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": [
+        "profile_id",
+        "total",
+        "theo_score",
+        "tech_score",
+        "cosmo_score",
+        "coherence_score",
+        "sovereignty_score",
+        "penalties",
+        "penalty_sum",
+        "verdict"
+      ],
+      "properties": {
+        "profile_id": { "type": "string", "const": "logoc.temple-grid.v1" },
+        "total": { "type": "number", "minimum": 0, "maximum": 1 },
+        "theo_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "tech_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "cosmo_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "coherence_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "sovereignty_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "penalties": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unknownNode",
+            "weakConnectivity",
+            "protocolDrift",
+            "domainImbalance"
+          ],
+          "properties": {
+            "unknownNode": { "type": "number", "minimum": 0 },
+            "weakConnectivity": { "type": "number", "minimum": 0 },
+            "protocolDrift": { "type": "number", "minimum": 0 },
+            "domainImbalance": { "type": "number", "minimum": 0 }
+          }
+        },
+        "penalty_sum": { "type": "number", "minimum": 0 },
+        "verdict": { "type": "string", "enum": ["accept", "review", "reject"] }
+      }
     }
   },
   "definitions": {

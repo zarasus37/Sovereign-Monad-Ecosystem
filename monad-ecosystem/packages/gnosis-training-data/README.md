@@ -56,4 +56,12 @@ const schedule = generateSchedule("shared/fixtures/layer6/wheel-registry.json");
 const events = generateGnosisEvents(schedule, registry);
 if (!events.every(validateGnosisEvent)) throw new Error("schema violation");
 const jsonl = serializeEventsJsonl(events); // NDJSON
+
+// Optional: Enheduanna TempleGrid → temple_grid via nodeToEventPayload
+import type { TempleGrid } from "@sovereign/ttcl";
+import { readFileSync } from "node:fs";
+const templeGrid = JSON.parse(
+  readFileSync("shared/fixtures/layer6/enheduanna-temple-grid.json", "utf8"),
+) as TempleGrid;
+const withGrid = generateGnosisEvents(schedule, registry, { templeGrid });
 ```

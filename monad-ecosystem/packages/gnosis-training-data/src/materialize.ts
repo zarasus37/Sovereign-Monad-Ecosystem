@@ -50,10 +50,14 @@ import {
   makeSign,
   scoreSign,
   getManifold,
+  gridSign,
+  nodeToEventPayload,
   type Sign,
   type Modality,
   type Domain,
   type ConstitutionResult,
+  type TempleGrid,
+  type TempleId,
 } from "@sovereign/ttcl";
 import type { EventTrace } from "@sovereign/types";
 import {
@@ -69,6 +73,7 @@ import type {
   GnosisConstitutionScore,
   GnosisWheelState,
   GnosisActiveSlot,
+  GnosisTempleGridPayload,
 } from "./event.js";
 
 /** The standard DNS-namespace UUID (6ba2b810-9dad-11d1-80b4-00c04fd430c8) as 16 bytes. */
@@ -205,4 +210,90 @@ export function constitutionScore(sign: Sign<Modality, Domain>): GnosisConstitut
     total: r.total,
     passes: r.pass,
   };
+}
+
+/**
+ * Resolve a temple_id from the schedule step's active facet slots via the
+ * grid's WheelBinding.slot_mapping. Prefer theology → technology → cosmology.
+ * Returns null when no mapping hits (grid incomplete or facet not bound).
+ */
+export function resolveTempleIdForStep(
+  grid: TempleGrid,
+  state: ScheduleState,
+  registry: WheelRegistry,
+): TempleId | null {
+  const slots = activeSlots(state, registry);
+  const candidates: Array<{ wheel: string; slot: string }> = [
+    { wheel: slots.theology.wheel, slot: slots.theology.slot },
+    { wheel: slots.technology.wheel, slot: slots.technology.slot },
+    { wheel: slots.cosmology.wheel, slot: slots.cosmology.slot },
+  ];
+  const map = grid.semantics.wheel_binding.slot_mapping;
+  for (const c of candidates) {
+    const hit = map.find((m) => m.wheel_id === c.wheel && m.slot_id === c.slot);
+    if (hit) return hit.temple_id;
+  }
+  // Fallback: map by hymn_index from theology slot letter position in B–R
+  const alph = "BCDEFGHIKLMNOPQR";
+  const idx = alph.indexOf(slots.theology.slot);
+  if (idx >= 0) {
+    const node = grid.nodes.find((n) => n.hymn_index === idx + 1);
+    if (node) return node.temple_id;
+  }
+  return null;
+}
+
+/**
+ * Attach nodeToEventPayload for the step, or null if unresolved.
+ */
+export function templePayloadForStep(
+  grid: TempleGrid,
+  state: ScheduleState,
+  registry: WheelRegistry,
+): GnosisTempleGridPayload | null {
+  const templeId = resolveTempleIdForStep(grid, state, registry);
+  if (!templeId) return null;
+  const node = grid.nodes.find((n) => n.temple_id === templeId);
+  if (!node) return null;
+  return nodeToEventPayload(grid, node);
+}
+
+/**
+ * Materialize a Sign preferentially via gridSign when a TempleGrid binds the
+ * step; otherwise fall back to the standard wheel composite materializeSign.
+ * Deterministic: pure function of (seed, step, registry, grid?).
+ */
+export function materializeSignWithGrid(
+  seed: number,
+  step: ScheduleStep,
+  registry: WheelRegistry,
+  grid?: TempleGrid,
+): Sign<Modality, Domain> {
+  if (grid) {
+    const templeId = resolveTempleIdForStep(grid, step.state, registry);
+    if (templeId) {
+      const domains = Array.from(compositeDomains(step.state, registry)) as Domain[];
+      const modality: Modality = domains.length === 3 ? "HYBRID" : "INDEX";
+      const classCount = getManifold().allClasses().length;
+      const classId = fnv1a32(`${seed}:${compositeKey(step.state, registry)}`) % classCount;
+      const trace: EventTrace = {
+        intentionId: "gnosis-training-data",
+        source: "gnosis-training-data",
+      };
+      try {
+        return gridSign(grid, templeId, {
+          domain: domains[0] ?? "THEOLOGY",
+          modality,
+          peirceClassId: classId,
+          mode: "INDEX",
+          pps: step.terms.T,
+          trace,
+          domains,
+        });
+      } catch {
+        // fall through to composite materialize
+      }
+    }
+  }
+  return materializeSign(seed, step, registry);
 }

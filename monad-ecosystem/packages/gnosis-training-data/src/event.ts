@@ -43,6 +43,28 @@ export interface GnosisConstitutionScore {
   readonly passes: boolean;
 }
 
+/** TempleGrid payload (subset) attached when a TempleGrid is bound. */
+export type GnosisTempleGridPayload = Readonly<Record<string, unknown>>;
+
+/** Transparent TempleGrid LOGOC breakdown (logoc.temple-grid.v1). */
+export type GnosisTempleGridLogoc = Readonly<{
+  profile_id: string;
+  total: number;
+  theo_score: number;
+  tech_score: number;
+  cosmo_score: number;
+  coherence_score: number;
+  sovereignty_score: number;
+  penalties: Readonly<{
+    unknownNode: number;
+    weakConnectivity: number;
+    protocolDrift: number;
+    domainImbalance: number;
+  }>;
+  penalty_sum: number;
+  verdict: string;
+}>;
+
 /** One Gnosis training event. */
 export interface GnosisEvent {
   readonly event_id: string;
@@ -56,6 +78,17 @@ export interface GnosisEvent {
   readonly provenance_tokens: readonly string[];
   readonly messages: readonly GnosisMessage[];
   readonly constitution_score: GnosisConstitutionScore;
+  /**
+   * Optional Enheduanna TempleGrid node payload when `config.templeGrid` is set.
+   * Produced by `@sovereign/ttcl` `nodeToEventPayload`. Omitted (not null) when
+   * no grid is bound so legacy JSONL stays byte-stable.
+   */
+  readonly temple_grid?: GnosisTempleGridPayload;
+  /**
+   * Optional TempleGrid LOGOC three-channel score (only when templeGrid bound
+   * and a temple resolves for the step).
+   */
+  readonly temple_grid_logoc?: GnosisTempleGridLogoc;
 }
 
 /** Options for `generateGnosisEvents`. */
@@ -66,4 +99,15 @@ export interface GnosisEventConfig {
   readonly seed?: number;
   /** Include the initial seed step (move === "initial"). Default `true`. */
   readonly includeInitial?: boolean;
+  /**
+   * Optional Enheduanna TempleGrid. When set, each accepted step resolves a
+   * temple via wheel `slot_mapping` and attaches `temple_grid` via
+   * `nodeToEventPayload` plus `temple_grid_logoc` via scoreTempleGridSign.
+   * Prefer theology facet; fall back to technology then cosmology.
+   */
+  readonly templeGrid?: import("@sovereign/ttcl").TempleGrid;
+  /**
+   * Optional LOGOC profile override (default TEMPLE_GRID_LOGOC_V1 when grid set).
+   */
+  readonly templeGridLogocProfile?: import("@sovereign/ttcl").TempleGridLogocProfile;
 }

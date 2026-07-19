@@ -1,0 +1,182 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/temple-grid-logoc-priors.schema.json",
+  "schema_version": "1.0.0",
+  "priors_id": "temple-grid-logoc-priors.v1",
+  "grid_id": "enheduanna-temple-grid",
+  "profile_id": "logoc.temple-grid.v1",
+  "global": {
+    "weights": {
+      "theo": 0.26,
+      "tech": 0.18,
+      "cosmo": 0.24,
+      "coherence": 0.18,
+      "sovereignty": 0.14
+    },
+    "penalty_bias": {
+      "unknownNode": 0.1,
+      "weakConnectivity": 0.08,
+      "protocolDrift": 0.1,
+      "domainImbalance": 0.07
+    },
+    "thresholds": {
+      "accept": 0.78,
+      "review": 0.58,
+      "reject_below": 0.58
+    },
+    "blend": {
+      "fingerprint_weight": 0.7,
+      "runtime_prior_weight": 0.3
+    }
+  },
+  "node_priors": [
+    {
+      "temple_id": "temple-eridu-e-engura",
+      "channels": {
+        "theo": 0.9,
+        "tech": 0.78,
+        "cosmo": 0.92,
+        "coherence": 0.91,
+        "sovereignty": 0.88
+      },
+      "penalty_bias": {
+        "unknownNode": 0,
+        "weakConnectivity": 0.03,
+        "protocolDrift": 0.02,
+        "domainImbalance": 0.01
+      },
+      "exploration_bias": 0.15,
+      "scheduler_bias": 0.14,
+      "confidence": 0.9,
+      "updated_from": {
+        "mode": "manual",
+        "run_id": "seed-priors-v1",
+        "timestamp": "2026-07-19T14:00:00Z"
+      }
+    },
+    {
+      "temple_id": "temple-nippur-e-kur",
+      "channels": {
+        "theo": 0.96,
+        "tech": 0.74,
+        "cosmo": 0.93,
+        "coherence": 0.92,
+        "sovereignty": 0.94
+      },
+      "penalty_bias": {
+        "unknownNode": 0,
+        "weakConnectivity": 0.02,
+        "protocolDrift": 0.02,
+        "domainImbalance": 0.01
+      },
+      "exploration_bias": 0.12,
+      "scheduler_bias": 0.18,
+      "confidence": 0.93,
+      "updated_from": {
+        "mode": "manual",
+        "run_id": "seed-priors-v1",
+        "timestamp": "2026-07-19T14:00:00Z"
+      }
+    },
+    {
+      "temple_id": "temple-uruk-e-ana",
+      "channels": {
+        "theo": 0.95,
+        "tech": 0.76,
+        "cosmo": 0.9,
+        "coherence": 0.92,
+        "sovereignty": 0.86
+      },
+      "penalty_bias": {
+        "unknownNode": 0,
+        "weakConnectivity": 0.04,
+        "protocolDrift": 0.02,
+        "domainImbalance": 0.01
+      },
+      "exploration_bias": 0.18,
+      "scheduler_bias": 0.12,
+      "confidence": 0.92,
+      "updated_from": {
+        "mode": "manual",
+        "run_id": "seed-priors-v1",
+        "timestamp": "2026-07-19T14:00:00Z"
+      }
+    },
+    {
+      "temple_id": "temple-lagash-e-ninnu",
+      "channels": {
+        "theo": 0.88,
+        "tech": 0.72,
+        "cosmo": 0.86,
+        "coherence": 0.87,
+        "sovereignty": 0.84
+      },
+      "penalty_bias": {
+        "unknownNode": 0,
+        "weakConnectivity": 0.05,
+        "protocolDrift": 0.03,
+        "domainImbalance": 0.02
+      },
+      "exploration_bias": 0.1,
+      "scheduler_bias": 0.1,
+      "confidence": 0.87,
+      "updated_from": {
+        "mode": "manual",
+        "run_id": "seed-priors-v1",
+        "timestamp": "2026-07-19T14:00:00Z"
+      }
+    },
+    {
+      "temple_id": "temple-eresh-e-zagin",
+      "channels": {
+        "theo": 0.9,
+        "tech": 0.88,
+        "cosmo": 0.8,
+        "coherence": 0.9,
+        "sovereignty": 0.92
+      },
+      "penalty_bias": {
+        "unknownNode": 0,
+        "weakConnectivity": 0.04,
+        "protocolDrift": 0.02,
+        "domainImbalance": 0.01
+      },
+      "exploration_bias": 0.2,
+      "scheduler_bias": 0.15,
+      "confidence": 0.94,
+      "updated_from": {
+        "mode": "manual",
+        "run_id": "seed-priors-v1",
+        "timestamp": "2026-07-19T14:00:00Z"
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "theology-heavy",
+      "weights_override": {
+        "theo": 0.32,
+        "tech": 0.14,
+        "cosmo": 0.22,
+        "coherence": 0.18,
+        "sovereignty": 0.14
+      },
+      "node_overrides": [
+        {
+          "temple_id": "temple-uruk-e-ana",
+          "exploration_bias": 0.24,
+          "scheduler_bias": 0.16
+        }
+      ]
+    },
+    {
+      "scenario_id": "protocol-guard",
+      "weights_override": {
+        "theo": 0.22,
+        "tech": 0.28,
+        "cosmo": 0.2,
+        "coherence": 0.18,
+        "sovereignty": 0.12
+      }
+    }
+  ]
+}

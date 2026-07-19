@@ -1,0 +1,446 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/ttcl-specs/temple-grid-schema.json",
+  "title": "TempleGrid — Enheduanna Grid of the Universe",
+  "description": "TTCL schema for Enheduanna's structural gnosis artifact: 42 Temple Hymns as nodes on an underlying grid (theology / technology / cosmology slots). Consumed by wheel scheduler, scoreSign, LOGOC, and gnosis-training-data. See shared/fixtures/layer6/enheduanna-temple-grid.json.",
+  "type": "object",
+  "required": ["grid_id", "provenance", "nodes", "schema_version", "semantics"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "grid_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable grid identifier, e.g. enheduanna-temple-grid"
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semver of this grid instance"
+    },
+    "provenance": { "$ref": "#/definitions/GridProvenance" },
+    "semantics": { "$ref": "#/definitions/GridSemantics" },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 128,
+      "items": { "$ref": "#/definitions/TempleNode" },
+      "description": "Temple nodes (canonical Enheduanna collection = 42)"
+    },
+    "binding": {
+      "description": "Optional TTCL/LOGOC/event integration surface",
+      "$ref": "#/definitions/TempleGridBinding"
+    }
+  },
+  "definitions": {
+    "GridProvenance": {
+      "type": "object",
+      "required": ["author", "era", "corpus", "source_refs", "ttc_domain"],
+      "additionalProperties": false,
+      "properties": {
+        "author": { "type": "string", "minLength": 1 },
+        "era": { "type": "string", "minLength": 1 },
+        "corpus": { "type": "string", "minLength": 1 },
+        "source_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "ttc_domain": {
+          "type": "string",
+          "const": "THEO_TECHNO_COSMO",
+          "description": "Hard-wired TTC substrate tag for LOGOC/TTCL"
+        }
+      }
+    },
+    "GridSemantics": {
+      "type": "object",
+      "required": [
+        "theology_mode",
+        "technology_mode",
+        "cosmology_mode",
+        "wheel_binding",
+        "ttcl_sign_profile"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "theology_mode": {
+          "type": "string",
+          "enum": ["polytheism-networked-system"],
+          "description": "Networked polytheism as system, not isolated cults"
+        },
+        "technology_mode": {
+          "type": "string",
+          "enum": ["semantic-protocol"],
+          "description": "Hymn as standardized semantic packet"
+        },
+        "cosmology_mode": {
+          "type": "string",
+          "enum": ["underlying-grid"],
+          "description": "Temples as nodes on the firmament grid"
+        },
+        "wheel_binding": { "$ref": "#/definitions/WheelBinding" },
+        "ttcl_sign_profile": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Sign profile id (TTCL / sign-events config)"
+        }
+      }
+    },
+    "WheelBinding": {
+      "type": "object",
+      "required": ["bound_wheels", "rotation_policy", "slot_mapping"],
+      "additionalProperties": false,
+      "properties": {
+        "bound_wheels": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Wheel registry names (e.g. Teologia, Kosmologia, Technologia)"
+        },
+        "rotation_policy": { "$ref": "#/definitions/RotationPolicy" },
+        "slot_mapping": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/SlotMapping" }
+        }
+      }
+    },
+    "RotationPolicy": {
+      "type": "object",
+      "required": ["policy_id", "mode", "constraints"],
+      "additionalProperties": false,
+      "properties": {
+        "policy_id": { "type": "string", "minLength": 1 },
+        "mode": {
+          "type": "string",
+          "enum": ["include-all", "sample-42", "weighted-by-city"]
+        },
+        "constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "SlotMapping": {
+      "type": "object",
+      "required": ["temple_id", "wheel_id", "slot_id", "weight"],
+      "additionalProperties": false,
+      "properties": {
+        "temple_id": { "type": "string", "minLength": 1 },
+        "wheel_id": { "type": "string", "minLength": 1 },
+        "slot_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Wheel slot letter or index string (e.g. B, C, or 0)"
+        },
+        "weight": { "type": "number", "minimum": 0 }
+      }
+    },
+    "TempleNode": {
+      "type": "object",
+      "required": [
+        "temple_id",
+        "name",
+        "deity",
+        "city",
+        "hymn_index",
+        "theo_slots",
+        "tech_slots",
+        "cosmo_slots",
+        "status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "temple_id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "deity": { "$ref": "#/definitions/DeityRef" },
+        "city": { "$ref": "#/definitions/CityRef" },
+        "hymn_index": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 42,
+          "description": "Position in Enheduanna Temple Hymns (1..42)"
+        },
+        "theo_slots": { "$ref": "#/definitions/TheoSlots" },
+        "tech_slots": { "$ref": "#/definitions/TechSlots" },
+        "cosmo_slots": { "$ref": "#/definitions/CosmoSlots" },
+        "status": {
+          "type": "string",
+          "enum": ["active", "deprecated", "unknown"]
+        },
+        "logoc_fingerprint": {
+          "description": "Optional static curated LOGOC channel fingerprint (logoc.temple-grid.v1). Optional until full curation; promote to required once all 42 filled.",
+          "$ref": "#/definitions/TempleNodeLogocFingerprint"
+        }
+      }
+    },
+    "TempleNodeLogocFingerprint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile_id",
+        "version",
+        "channels",
+        "penalty_priors",
+        "weights",
+        "baseline_total",
+        "confidence",
+        "provenance"
+      ],
+      "properties": {
+        "profile_id": {
+          "type": "string",
+          "const": "logoc.temple-grid.v1"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "channels": { "$ref": "#/definitions/UnitScoreSet" },
+        "penalty_priors": { "$ref": "#/definitions/PenaltyPriors" },
+        "weights": { "$ref": "#/definitions/LogocWeights" },
+        "baseline_total": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Static expected L under neutral conditions (auditable against weights·channels − sum(penalty_priors))"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "source_refs", "last_reviewed_at"],
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": ["curated-static", "promoted-from-priors", "derived-historical"]
+            },
+            "source_refs": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 },
+              "minItems": 1
+            },
+            "last_reviewed_at": {
+              "type": "string",
+              "description": "ISO date or date-time of last human review"
+            }
+          }
+        }
+      }
+    },
+    "UnitScoreSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["theo", "tech", "cosmo", "coherence", "sovereignty"],
+      "properties": {
+        "theo": { "type": "number", "minimum": 0, "maximum": 1 },
+        "tech": { "type": "number", "minimum": 0, "maximum": 1 },
+        "cosmo": { "type": "number", "minimum": 0, "maximum": 1 },
+        "coherence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "sovereignty": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "PenaltyPriors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "unknownNode",
+        "weakConnectivity",
+        "protocolDrift",
+        "domainImbalance"
+      ],
+      "properties": {
+        "unknownNode": { "type": "number", "minimum": 0, "maximum": 1 },
+        "weakConnectivity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "protocolDrift": { "type": "number", "minimum": 0, "maximum": 1 },
+        "domainImbalance": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "LogocWeights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["theo", "tech", "cosmo", "coherence", "sovereignty"],
+      "description": "Default TEMPLE_GRID_LOGOC_V1 weights: 0.26 / 0.18 / 0.24 / 0.18 / 0.14",
+      "properties": {
+        "theo": { "type": "number", "minimum": 0, "maximum": 1 },
+        "tech": { "type": "number", "minimum": 0, "maximum": 1 },
+        "cosmo": { "type": "number", "minimum": 0, "maximum": 1 },
+        "coherence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "sovereignty": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "DeityRef": {
+      "type": "object",
+      "required": ["deity_id", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "deity_id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "epithet": { "type": ["string", "null"] },
+        "domain": { "type": ["string", "null"] }
+      }
+    },
+    "CityRef": {
+      "type": "object",
+      "required": ["city_id", "name", "region"],
+      "additionalProperties": false,
+      "properties": {
+        "city_id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "region": { "type": "string", "minLength": 1 },
+        "coordinates": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "required": ["lat", "lon"],
+              "additionalProperties": false,
+              "properties": {
+                "lat": { "type": "number" },
+                "lon": { "type": "number" }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "TheoSlots": {
+      "type": "object",
+      "required": ["rank", "function", "relationships", "hymn_signature"],
+      "additionalProperties": false,
+      "properties": {
+        "rank": {
+          "type": "string",
+          "enum": ["major", "minor", "city-patron"]
+        },
+        "function": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "relationships": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/TheoRelation" }
+        },
+        "hymn_signature": {
+          "type": "string",
+          "description": "Short canonical summary from / of the hymn"
+        }
+      }
+    },
+    "TheoRelation": {
+      "type": "object",
+      "required": ["relation_type"],
+      "additionalProperties": false,
+      "properties": {
+        "relation_type": {
+          "type": "string",
+          "enum": ["ally", "subordinate", "rival", "consort", "patron"]
+        },
+        "target_temple": { "type": ["string", "null"] },
+        "target_deity": { "type": ["string", "null"] }
+      }
+    },
+    "TechSlots": {
+      "type": "object",
+      "required": [
+        "protocol_version",
+        "packet_form",
+        "naming_profile",
+        "interoperability_tags"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "protocol_version": { "type": "string", "minLength": 1 },
+        "packet_form": { "type": "string", "minLength": 1 },
+        "naming_profile": { "$ref": "#/definitions/NamingProfile" },
+        "interoperability_tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "NamingProfile": {
+      "type": "object",
+      "required": ["canonical_name", "variants", "language"],
+      "additionalProperties": false,
+      "properties": {
+        "canonical_name": { "type": "string", "minLength": 1 },
+        "variants": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "language": {
+          "type": "string",
+          "enum": ["Sumerian", "Akkadian", "mixed", "unknown"]
+        }
+      }
+    },
+    "CosmoSlots": {
+      "type": "object",
+      "required": ["grid_layer", "connectivity", "role_in_grid"],
+      "additionalProperties": false,
+      "properties": {
+        "grid_layer": {
+          "type": "string",
+          "enum": ["surface", "underlying-grid"]
+        },
+        "connectivity": { "$ref": "#/definitions/Connectivity" },
+        "energy_profile": { "type": ["string", "null"] },
+        "role_in_grid": {
+          "type": "string",
+          "enum": ["gateway", "junction", "terminus", "hub", "satellite"]
+        }
+      }
+    },
+    "Connectivity": {
+      "type": "object",
+      "required": ["degree", "edges"],
+      "additionalProperties": false,
+      "properties": {
+        "degree": { "type": "integer", "minimum": 0 },
+        "edges": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/GridEdge" }
+        }
+      }
+    },
+    "GridEdge": {
+      "type": "object",
+      "required": ["target_temple", "edge_type", "weight"],
+      "additionalProperties": false,
+      "properties": {
+        "target_temple": { "type": "string", "minLength": 1 },
+        "edge_type": {
+          "type": "string",
+          "enum": ["theological", "political", "ritual", "economic"]
+        },
+        "weight": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "TempleGridBinding": {
+      "type": "object",
+      "required": ["sign_profile", "logoc_profile", "event_profile"],
+      "additionalProperties": false,
+      "properties": {
+        "sign_profile": {
+          "type": "string",
+          "minLength": 1,
+          "description": "TTCL sign profile id"
+        },
+        "logoc_profile": {
+          "type": "string",
+          "minLength": 1,
+          "description": "LOGOC scoring profile id"
+        },
+        "event_profile": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Gnosis / SignalEvent profile id"
+        }
+      }
+    }
+  }
+}

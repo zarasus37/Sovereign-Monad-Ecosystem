@@ -912,6 +912,29 @@ Philosophy → enforceable system validity (orthogonal to constitution C1–C5):
 - PL rehydrate from `logs/paper-trading/pl-events.jsonl` (fallback from journal closes); open trade restored across restarts
 - Gate fail-closed: tier-2 `live_execute` without `perTradeRiskUSD` + `liveDailyStats` → reject
 
+### Completed: Enheduanna TempleGrid schema + TTCL API (2026-07-19)
+
+- IV. Grid of the Universe as types/slots: `shared/ttcl-specs/temple-grid-schema.json`
+- Fixture v1.1.0: `shared/fixtures/layer6/enheduanna-temple-grid.json` — **42 nodes from ETCSL t.4.80.1 / TCS 3** (40 active; hymns 28 & 39 unknown/fragmentary)
+- Runtime: `@sovereign/ttcl` `templeGrid.ts` — `resolveTemple`, `gridSign`, `wheelGridSign`, `nodeToEventPayload`, `validateTempleGrid`
+- **gnosis-training-data:** `generateGnosisEvents(..., { templeGrid })` attaches `temple_grid` via `nodeToEventPayload`; optional `materializeSignWithGrid`
+- **CI:** `pnpm check:temple-grid` (ajv vs schema); included in `pnpm validate`
+- Docs: `shared/fixtures/layer6/TEMPLE_GRID.md` · `node scripts/gen-enheduanna-temple-grid.mjs`
+
+### Completed: TempleGrid LOGOC profile logoc.temple-grid.v1 (2026-07-19)
+
+- Three-channel scorer: theo / tech / cosmo + coherence + sovereignty − penalties
+- Formula: `L = w_t·T + w_x·X + w_c·C + w_h·H + w_s·S − P` (`TEMPLE_GRID_LOGOC_V1` defaults)
+- Runtime: `@sovereign/ttcl` `templeGridLogoc.ts` — `scoreTempleGridSign`, `scoreTempleGridNode`
+- Consumer attaches `temple_grid_logoc` breakdown on grid-bound steps (schema + integration tests)
+
+### Completed: TempleNode logoc_fingerprint + runtime priors overlay (2026-07-19)
+
+- Embedded `logoc_fingerprint` on all 42 nodes (channels T/X/C/H/S, penalty_priors, weights, baseline_total, confidence)
+- Priors overlay: `shared/fixtures/layer6/temple-grid-logoc-priors.json` + schema (sparse 5 seeded nodes, scenarios)
+- Blend API: `blendNodeExpectation` (0.70 fingerprint / 0.30 prior); score soft-anchor via `useFingerprintBaseline`
+- `pnpm check:temple-grid` validates grid + fingerprints + priors schema
+
 ### Completed: Agent 0 closed-loop PL→ACL (2026-07-19)
 
 - Fixture: `gate-acl/fixtures/agent-0-profile.json` — Cristobal Colon / xkryptic genesis with IPIP-NEO-300 + SD3 from `emergence-claim-core` registration; bound to `principal:cris-colon`, PL domain `trading`

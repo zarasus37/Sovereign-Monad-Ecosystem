@@ -1,0 +1,4416 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/temple-grid-schema.json",
+  "grid_id": "enheduanna-temple-grid",
+  "schema_version": "1.2.0",
+  "provenance": {
+    "author": "Enheduanna",
+    "era": "c. 2300 BCE",
+    "corpus": "Temple Hymns (42)",
+    "source_refs": [
+      "ETCSL t.4.80.1 The temple hymns (Oxford)",
+      "Sjöberg, Å.W. & Bergmann, E. The Collection of the Sumerian Temple Hymns (TCS 3)",
+      "theo-techno-cosmo/Wheel/8 wheels and 3 domains.docx",
+      "docs:IV-Grid-of-the-Universe"
+    ],
+    "ttc_domain": "THEO_TECHNO_COSMO"
+  },
+  "semantics": {
+    "theology_mode": "polytheism-networked-system",
+    "technology_mode": "semantic-protocol",
+    "cosmology_mode": "underlying-grid",
+    "wheel_binding": {
+      "bound_wheels": [
+        "Teologia",
+        "Kosmologia",
+        "Technologia"
+      ],
+      "rotation_policy": {
+        "policy_id": "enheduanna-grid-rotation",
+        "mode": "include-all",
+        "constraints": [
+          "all-42-hymns-present",
+          "prefer-active-over-unknown",
+          "weight-major-hubs-higher",
+          "at-least-one-node-per-known-city"
+        ]
+      },
+      "slot_mapping": [
+        {
+          "temple_id": "temple-eridu-e-engura",
+          "wheel_id": "Teologia",
+          "slot_id": "B",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-kur",
+          "wheel_id": "Teologia",
+          "slot_id": "C",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-tummal",
+          "wheel_id": "Teologia",
+          "slot_id": "D",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-melem-hush",
+          "wheel_id": "Teologia",
+          "slot_id": "E",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-shu-me-sha",
+          "wheel_id": "Teologia",
+          "slot_id": "F",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ga-gi-mah-e-ga-duda",
+          "wheel_id": "Teologia",
+          "slot_id": "G",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-kesh-e-kesh",
+          "wheel_id": "Teologia",
+          "slot_id": "H",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ur-e-kish-nu-gal",
+          "wheel_id": "Teologia",
+          "slot_id": "I",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ur-e-hursag-shulgi",
+          "wheel_id": "Teologia",
+          "slot_id": "K",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-kuara-e-kuara",
+          "wheel_id": "Teologia",
+          "slot_id": "L",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ki-abrig-e-gud-du-shar",
+          "wheel_id": "Teologia",
+          "slot_id": "M",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-gaesh-kar-zida",
+          "wheel_id": "Teologia",
+          "slot_id": "N",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-larsam-e-babbar-larsam",
+          "wheel_id": "Teologia",
+          "slot_id": "O",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-enegir-e-gida",
+          "wheel_id": "Teologia",
+          "slot_id": "P",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-gishbanda-e-gishbanda",
+          "wheel_id": "Teologia",
+          "slot_id": "Q",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-uruk-e-ana",
+          "wheel_id": "Teologia",
+          "slot_id": "R",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-eridu-e-engura",
+          "wheel_id": "Kosmologia",
+          "slot_id": "B",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-kur",
+          "wheel_id": "Kosmologia",
+          "slot_id": "C",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-tummal",
+          "wheel_id": "Kosmologia",
+          "slot_id": "D",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-melem-hush",
+          "wheel_id": "Kosmologia",
+          "slot_id": "E",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-shu-me-sha",
+          "wheel_id": "Kosmologia",
+          "slot_id": "F",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ga-gi-mah-e-ga-duda",
+          "wheel_id": "Kosmologia",
+          "slot_id": "G",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-kesh-e-kesh",
+          "wheel_id": "Kosmologia",
+          "slot_id": "H",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ur-e-kish-nu-gal",
+          "wheel_id": "Kosmologia",
+          "slot_id": "I",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ur-e-hursag-shulgi",
+          "wheel_id": "Kosmologia",
+          "slot_id": "K",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-kuara-e-kuara",
+          "wheel_id": "Kosmologia",
+          "slot_id": "L",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ki-abrig-e-gud-du-shar",
+          "wheel_id": "Kosmologia",
+          "slot_id": "M",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-gaesh-kar-zida",
+          "wheel_id": "Kosmologia",
+          "slot_id": "N",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-larsam-e-babbar-larsam",
+          "wheel_id": "Kosmologia",
+          "slot_id": "O",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-enegir-e-gida",
+          "wheel_id": "Kosmologia",
+          "slot_id": "P",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-gishbanda-e-gishbanda",
+          "wheel_id": "Kosmologia",
+          "slot_id": "Q",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-uruk-e-ana",
+          "wheel_id": "Kosmologia",
+          "slot_id": "R",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-eridu-e-engura",
+          "wheel_id": "Technologia",
+          "slot_id": "B",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-kur",
+          "wheel_id": "Technologia",
+          "slot_id": "C",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-tummal",
+          "wheel_id": "Technologia",
+          "slot_id": "D",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-melem-hush",
+          "wheel_id": "Technologia",
+          "slot_id": "E",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-nippur-e-shu-me-sha",
+          "wheel_id": "Technologia",
+          "slot_id": "F",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ga-gi-mah-e-ga-duda",
+          "wheel_id": "Technologia",
+          "slot_id": "G",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-kesh-e-kesh",
+          "wheel_id": "Technologia",
+          "slot_id": "H",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ur-e-kish-nu-gal",
+          "wheel_id": "Technologia",
+          "slot_id": "I",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ur-e-hursag-shulgi",
+          "wheel_id": "Technologia",
+          "slot_id": "K",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-kuara-e-kuara",
+          "wheel_id": "Technologia",
+          "slot_id": "L",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-ki-abrig-e-gud-du-shar",
+          "wheel_id": "Technologia",
+          "slot_id": "M",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-gaesh-kar-zida",
+          "wheel_id": "Technologia",
+          "slot_id": "N",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-larsam-e-babbar-larsam",
+          "wheel_id": "Technologia",
+          "slot_id": "O",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-enegir-e-gida",
+          "wheel_id": "Technologia",
+          "slot_id": "P",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-gishbanda-e-gishbanda",
+          "wheel_id": "Technologia",
+          "slot_id": "Q",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-uruk-e-ana",
+          "wheel_id": "Technologia",
+          "slot_id": "R",
+          "weight": 1
+        },
+        {
+          "temple_id": "temple-bad-tibira-e-mush",
+          "wheel_id": "Kosmologia",
+          "slot_id": "B",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-akkil-e-akkil",
+          "wheel_id": "Technologia",
+          "slot_id": "C",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-murum-e-murum",
+          "wheel_id": "Teologia",
+          "slot_id": "D",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-lagash-e-ninnu",
+          "wheel_id": "Kosmologia",
+          "slot_id": "E",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-iri-kug-e-iri-kug",
+          "wheel_id": "Technologia",
+          "slot_id": "F",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-sirara-e-sirara",
+          "wheel_id": "Teologia",
+          "slot_id": "G",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-gu-aba-e-ab-shaga-la",
+          "wheel_id": "Kosmologia",
+          "slot_id": "H",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-kinirsha-e-kinirsha",
+          "wheel_id": "Technologia",
+          "slot_id": "I",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-umma-e-mah-umma",
+          "wheel_id": "Teologia",
+          "slot_id": "K",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-zabalam-e-sherzi-guru",
+          "wheel_id": "Kosmologia",
+          "slot_id": "L",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-karkara-e-ishkur",
+          "wheel_id": "Technologia",
+          "slot_id": "M",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-hymn-28",
+          "wheel_id": "Teologia",
+          "slot_id": "N",
+          "weight": 0.2
+        },
+        {
+          "temple_id": "temple-adab-e-mah-adab",
+          "wheel_id": "Kosmologia",
+          "slot_id": "O",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-isin-e-isin",
+          "wheel_id": "Technologia",
+          "slot_id": "P",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-kazallu-kun-satu",
+          "wheel_id": "Teologia",
+          "slot_id": "Q",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-marda-e-igi-kalama",
+          "wheel_id": "Kosmologia",
+          "slot_id": "R",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-der-e-dim-gal-kalama",
+          "wheel_id": "Technologia",
+          "slot_id": "B",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-eshnunna-e-sikil",
+          "wheel_id": "Teologia",
+          "slot_id": "C",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-kish-e-dub",
+          "wheel_id": "Kosmologia",
+          "slot_id": "D",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-gudua-e-gishkeshda-kalama",
+          "wheel_id": "Technologia",
+          "slot_id": "E",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-urum-e-ab-lua",
+          "wheel_id": "Teologia",
+          "slot_id": "F",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-sippar-e-babbar-zimbir",
+          "wheel_id": "Kosmologia",
+          "slot_id": "G",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-hymn-39",
+          "wheel_id": "Technologia",
+          "slot_id": "H",
+          "weight": 0.2
+        },
+        {
+          "temple_id": "temple-ulmas-e-ulmas",
+          "wheel_id": "Teologia",
+          "slot_id": "I",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-agade-e-agade",
+          "wheel_id": "Kosmologia",
+          "slot_id": "K",
+          "weight": 0.6
+        },
+        {
+          "temple_id": "temple-eresh-e-zagin",
+          "wheel_id": "Technologia",
+          "slot_id": "L",
+          "weight": 0.6
+        }
+      ]
+    },
+    "ttcl_sign_profile": "enheduanna-grid-sign-v1"
+  },
+  "binding": {
+    "sign_profile": "enheduanna-grid-sign-v1",
+    "logoc_profile": "enheduanna-grid-logoc-v1",
+    "event_profile": "enheduanna-grid-event-v1"
+  },
+  "nodes": [
+    {
+      "temple_id": "temple-eridu-e-engura",
+      "name": "E-engura",
+      "deity": {
+        "deity_id": "deity-enki",
+        "name": "Enki",
+        "epithet": "Lord Nudimmud",
+        "domain": "wisdom-waters"
+      },
+      "city": {
+        "city_id": "city-eridu",
+        "name": "Eridu",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 1,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "wisdom",
+          "abzu",
+          "craft"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 1: E-engura of Enki at Eridu (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-engura",
+          "variants": [
+            "E engura"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Eridu",
+          "Enki"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 1,
+          "edges": [
+            {
+              "target_temple": "temple-nippur-e-kur",
+              "edge_type": "theological",
+              "weight": 0.9
+            }
+          ]
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "gateway"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.86,
+          "tech": 0.68,
+          "cosmo": 0.86,
+          "coherence": 0.93,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.02,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.7702,
+        "confidence": 0.93,
+        "provenance": {
+          "mode": "curated-static",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-nippur-e-kur",
+      "name": "E-kur",
+      "deity": {
+        "deity_id": "deity-enlil",
+        "name": "Enlil",
+        "epithet": "Great Mountain",
+        "domain": "sovereignty"
+      },
+      "city": {
+        "city_id": "city-nippur",
+        "name": "Nippur",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 2,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "kingship",
+          "destiny",
+          "storm"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 2: E-kur of Enlil at Nippur (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-kur",
+          "variants": [
+            "E kur"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Nippur",
+          "Enlil"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 3,
+          "edges": [
+            {
+              "target_temple": "temple-eridu-e-engura",
+              "edge_type": "theological",
+              "weight": 0.9
+            },
+            {
+              "target_temple": "temple-nippur-e-tummal",
+              "edge_type": "ritual",
+              "weight": 0.85
+            },
+            {
+              "target_temple": "temple-uruk-e-ana",
+              "edge_type": "political",
+              "weight": 0.7
+            }
+          ]
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "hub"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.9,
+          "tech": 0.68,
+          "cosmo": 0.96,
+          "coherence": 0.88,
+          "sovereignty": 0.94
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.02,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.8068,
+        "confidence": 0.95,
+        "provenance": {
+          "mode": "curated-static",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-nippur-e-tummal",
+      "name": "E-Tummal",
+      "deity": {
+        "deity_id": "deity-ninlil",
+        "name": "Ninlil",
+        "epithet": "Mother Ninlil",
+        "domain": "consort-sovereignty"
+      },
+      "city": {
+        "city_id": "city-nippur",
+        "name": "Nippur",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 3,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "consort",
+          "new-year",
+          "mediation"
+        ],
+        "relationships": [
+          {
+            "relation_type": "consort",
+            "target_temple": null,
+            "target_deity": "deity-enlil"
+          }
+        ],
+        "hymn_signature": "Temple Hymn 3: E-Tummal of Ninlil at Nippur (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Tummal",
+          "variants": [
+            "E Tummal"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Nippur",
+          "Ninlil"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.8,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.78,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6496,
+        "confidence": 0.88,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-nippur-e-melem-hush",
+      "name": "E-melem-hush",
+      "deity": {
+        "deity_id": "deity-nuska",
+        "name": "Nuska",
+        "epithet": "Counsellor of E-kur",
+        "domain": "fire-light"
+      },
+      "city": {
+        "city_id": "city-nippur",
+        "name": "Nippur",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 4,
+      "theo_slots": {
+        "rank": "minor",
+        "function": [
+          "counsel",
+          "ordeal",
+          "messenger"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 4: E-melem-hush of Nuska at Nippur (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-melem-hush",
+          "variants": [
+            "E melem hush"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Nippur",
+          "Nuska"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "satellite"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.6,
+          "tech": 0.68,
+          "cosmo": 0.56,
+          "coherence": 0.72,
+          "sovereignty": 0.78
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.03,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.04
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.5516,
+        "confidence": 0.75,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-nippur-e-shu-me-sha",
+      "name": "E-shu-me-sha",
+      "deity": {
+        "deity_id": "deity-ninurta",
+        "name": "Ninurta",
+        "epithet": "Warrior of Enlil",
+        "domain": "war-agriculture"
+      },
+      "city": {
+        "city_id": "city-nippur",
+        "name": "Nippur",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 5,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "war",
+          "plow",
+          "protection"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 5: E-shu-me-sha of Ninurta at Nippur (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-shu-me-sha",
+          "variants": [
+            "E shu me sha"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Nippur",
+          "Ninurta"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.8,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.78,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6496,
+        "confidence": 0.88,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-ga-gi-mah-e-ga-duda",
+      "name": "E-ga-duda",
+      "deity": {
+        "deity_id": "deity-shu-zi-ana",
+        "name": "Shu-zi-ana",
+        "epithet": "Junior wife of Enlil",
+        "domain": "consort"
+      },
+      "city": {
+        "city_id": "city-ga-gi-mah",
+        "name": "Ga-gi-mah",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 6,
+      "theo_slots": {
+        "rank": "minor",
+        "function": [
+          "chamber",
+          "consort"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 6: E-ga-duda of Shu-zi-ana at Ga-gi-mah (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-ga-duda",
+          "variants": [
+            "E ga duda"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Ga-gi-mah",
+          "Shu-zi-ana"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "satellite"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.6,
+          "tech": 0.68,
+          "cosmo": 0.56,
+          "coherence": 0.72,
+          "sovereignty": 0.78
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.03,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.04
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.5516,
+        "confidence": 0.75,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-kesh-e-kesh",
+      "name": "E-Kesh",
+      "deity": {
+        "deity_id": "deity-ninhursag",
+        "name": "Ninhursag",
+        "epithet": "Aruru, sister of Enlil",
+        "domain": "fertility"
+      },
+      "city": {
+        "city_id": "city-kesh",
+        "name": "Kesh",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 7,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "birth",
+          "earth",
+          "form"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 7: E-Kesh of Ninhursag at Kesh (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Kesh",
+          "variants": [
+            "E Kesh"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Kesh",
+          "Ninhursag"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "hub"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.8,
+          "tech": 0.68,
+          "cosmo": 0.78,
+          "coherence": 0.88,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.08,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6664,
+        "confidence": 0.88,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-ur-e-kish-nu-gal",
+      "name": "E-kish-nu-gal",
+      "deity": {
+        "deity_id": "deity-nanna",
+        "name": "Nanna",
+        "epithet": "Ashimbabbar",
+        "domain": "moon-time"
+      },
+      "city": {
+        "city_id": "city-ur",
+        "name": "Ur",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 8,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "lunar-cycle",
+          "city-patron",
+          "light"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 8: E-kish-nu-gal of Nanna at Ur (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-kish-nu-gal",
+          "variants": [
+            "E kish nu gal"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Ur",
+          "Nanna"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 1,
+          "edges": [
+            {
+              "target_temple": "temple-nippur-e-kur",
+              "edge_type": "ritual",
+              "weight": 0.75
+            }
+          ]
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "hub"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.84,
+          "tech": 0.68,
+          "cosmo": 0.83,
+          "coherence": 0.88,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.02,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.7488,
+        "confidence": 0.9,
+        "provenance": {
+          "mode": "curated-static",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-ur-e-hursag-shulgi",
+      "name": "E-hursag-Shulgi",
+      "deity": {
+        "deity_id": "deity-shulgi",
+        "name": "Shulgi",
+        "epithet": "Shulgi of An",
+        "domain": "royal-cult"
+      },
+      "city": {
+        "city_id": "city-ur",
+        "name": "Ur",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 9,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "kingship",
+          "royal-house"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 9: E-hursag-Shulgi — Shulgi @ Ur. ETCSL addition: E-hursag of Shulgi in Urim"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-hursag-Shulgi",
+          "variants": [
+            "E hursag Shulgi"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Ur",
+          "Shulgi"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-kuara-e-kuara",
+      "name": "E-Kuara",
+      "deity": {
+        "deity_id": "deity-asarluhhi",
+        "name": "Asarluhhi",
+        "epithet": "Son of the abzu",
+        "domain": "incantation-war"
+      },
+      "city": {
+        "city_id": "city-kuara",
+        "name": "Kuara",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 10,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "incantation",
+          "warrior",
+          "abzu"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 10: E-Kuara of Asarluhhi at Kuara (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Kuara",
+          "variants": [
+            "E Kuara"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Kuara",
+          "Asarluhhi"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-ki-abrig-e-gud-du-shar",
+      "name": "E-gud-du-shar",
+      "deity": {
+        "deity_id": "deity-ningublaga",
+        "name": "Ningublaga",
+        "epithet": "Son of Nanna",
+        "domain": "cattle-cult"
+      },
+      "city": {
+        "city_id": "city-ki-abrig",
+        "name": "Ki-abrig",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 11,
+      "theo_slots": {
+        "rank": "minor",
+        "function": [
+          "cattle",
+          "incantation"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 11: E-gud-du-shar of Ningublaga at Ki-abrig (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-gud-du-shar",
+          "variants": [
+            "E gud du shar"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Ki-abrig",
+          "Ningublaga"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "satellite"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.6,
+          "tech": 0.68,
+          "cosmo": 0.56,
+          "coherence": 0.72,
+          "sovereignty": 0.78
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.03,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.04
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.5516,
+        "confidence": 0.75,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-gaesh-kar-zida",
+      "name": "Kar-zida",
+      "deity": {
+        "deity_id": "deity-nanna",
+        "name": "Nanna",
+        "epithet": "Ashimbabbar",
+        "domain": "moon-time"
+      },
+      "city": {
+        "city_id": "city-gaesh",
+        "name": "Gaesh",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 12,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "moon",
+          "pure-quay"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 12: Kar-zida of Nanna at Gaesh (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "Kar-zida",
+          "variants": [
+            "Kar zida"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Gaesh",
+          "Nanna"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-larsam-e-babbar-larsam",
+      "name": "E-babbar-Larsam",
+      "deity": {
+        "deity_id": "deity-utu",
+        "name": "Utu",
+        "epithet": "Sovereign of E-babbar",
+        "domain": "sun-justice"
+      },
+      "city": {
+        "city_id": "city-larsam",
+        "name": "Larsam",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 13,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "sun",
+          "justice",
+          "true-word"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 13: E-babbar-Larsam of Utu at Larsam (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-babbar-Larsam",
+          "variants": [
+            "E babbar Larsam"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Larsam",
+          "Utu"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "hub"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.8,
+          "tech": 0.68,
+          "cosmo": 0.78,
+          "coherence": 0.88,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.08,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6664,
+        "confidence": 0.88,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-enegir-e-gida",
+      "name": "E-gida",
+      "deity": {
+        "deity_id": "deity-ninazu",
+        "name": "Ninazu",
+        "epithet": "Sacred one of the underworld",
+        "domain": "underworld"
+      },
+      "city": {
+        "city_id": "city-enegir",
+        "name": "Enegir",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 14,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "underworld",
+          "libation",
+          "prayer"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 14: E-gida of Ninazu at Enegir (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-gida",
+          "variants": [
+            "E gida"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Enegir",
+          "Ninazu"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-gishbanda-e-gishbanda",
+      "name": "E-Gishbanda",
+      "deity": {
+        "deity_id": "deity-ningishzida",
+        "name": "Ningishzida",
+        "epithet": "Holy one of heaven",
+        "domain": "underworld-vegetation"
+      },
+      "city": {
+        "city_id": "city-gishbanda",
+        "name": "Gishbanda",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 15,
+      "theo_slots": {
+        "rank": "minor",
+        "function": [
+          "underworld",
+          "vegetation"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 15: E-Gishbanda of Ningishzida at Gishbanda (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Gishbanda",
+          "variants": [
+            "E Gishbanda"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Gishbanda",
+          "Ningishzida"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "satellite"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.6,
+          "tech": 0.68,
+          "cosmo": 0.56,
+          "coherence": 0.72,
+          "sovereignty": 0.78
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.03,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.04
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.5516,
+        "confidence": 0.75,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-uruk-e-ana",
+      "name": "E-ana",
+      "deity": {
+        "deity_id": "deity-inanna",
+        "name": "Inanna",
+        "epithet": "Queen of heaven and earth",
+        "domain": "love-war"
+      },
+      "city": {
+        "city_id": "city-uruk",
+        "name": "Uruk",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 16,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "love",
+          "war",
+          "sovereignty"
+        ],
+        "relationships": [
+          {
+            "relation_type": "rival",
+            "target_temple": null,
+            "target_deity": "deity-enlil"
+          }
+        ],
+        "hymn_signature": "Temple Hymn 16: E-ana of Inanna at Uruk (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-ana",
+          "variants": [
+            "E ana"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Uruk",
+          "Inanna"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 2,
+          "edges": [
+            {
+              "target_temple": "temple-nippur-e-kur",
+              "edge_type": "theological",
+              "weight": 0.75
+            },
+            {
+              "target_temple": "temple-ur-e-kish-nu-gal",
+              "edge_type": "political",
+              "weight": 0.55
+            }
+          ]
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "hub"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.92,
+          "tech": 0.73,
+          "cosmo": 0.92,
+          "coherence": 0.88,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.02,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.8002,
+        "confidence": 0.94,
+        "provenance": {
+          "mode": "curated-static",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-bad-tibira-e-mush",
+      "name": "E-mush",
+      "deity": {
+        "deity_id": "deity-dumuzid",
+        "name": "Dumuzid",
+        "epithet": "Husband of holy Inana",
+        "domain": "shepherd-fertility"
+      },
+      "city": {
+        "city_id": "city-bad-tibira",
+        "name": "Bad-tibira",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 17,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "shepherd",
+          "netherworld",
+          "fertility"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 17: E-mush of Dumuzid at Bad-tibira (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-mush",
+          "variants": [
+            "E mush"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Bad-tibira",
+          "Dumuzid"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-akkil-e-akkil",
+      "name": "E-akkil",
+      "deity": {
+        "deity_id": "deity-ninshubur",
+        "name": "Ninshubur",
+        "epithet": "True minister of E-ana",
+        "domain": "ministry"
+      },
+      "city": {
+        "city_id": "city-akkil",
+        "name": "Akkil",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 18,
+      "theo_slots": {
+        "rank": "minor",
+        "function": [
+          "minister",
+          "lamentation"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 18: E-akkil of Ninshubur at Akkil (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-akkil",
+          "variants": [
+            "E akkil"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Akkil",
+          "Ninshubur"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "satellite"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.6,
+          "tech": 0.68,
+          "cosmo": 0.56,
+          "coherence": 0.72,
+          "sovereignty": 0.78
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.03,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.04
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.5516,
+        "confidence": 0.75,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-murum-e-murum",
+      "name": "E-Murum",
+      "deity": {
+        "deity_id": "deity-ningirim",
+        "name": "Ningirim",
+        "epithet": "Lady of shining lustration water",
+        "domain": "lustration"
+      },
+      "city": {
+        "city_id": "city-murum",
+        "name": "Murum",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 19,
+      "theo_slots": {
+        "rank": "minor",
+        "function": [
+          "incantation",
+          "lustration"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 19: E-Murum of Ningirim at Murum (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Murum",
+          "variants": [
+            "E Murum"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Murum",
+          "Ningirim"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "satellite"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.6,
+          "tech": 0.68,
+          "cosmo": 0.56,
+          "coherence": 0.72,
+          "sovereignty": 0.78
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.03,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.04
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.5516,
+        "confidence": 0.75,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-lagash-e-ninnu",
+      "name": "E-ninnu",
+      "deity": {
+        "deity_id": "deity-ningirsu",
+        "name": "Ningirsu",
+        "epithet": "Son of Enlil",
+        "domain": "war-storm"
+      },
+      "city": {
+        "city_id": "city-lagash",
+        "name": "Lagash",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 20,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "war",
+          "storm",
+          "city-patron"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 20: E-ninnu of Ningirsu at Lagash (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-ninnu",
+          "variants": [
+            "E ninnu"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Lagash",
+          "Ningirsu"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 1,
+          "edges": [
+            {
+              "target_temple": "temple-nippur-e-kur",
+              "edge_type": "theological",
+              "weight": 0.65
+            }
+          ]
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "hub"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.86,
+          "tech": 0.68,
+          "cosmo": 0.84,
+          "coherence": 0.88,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.02,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.7564,
+        "confidence": 0.9,
+        "provenance": {
+          "mode": "curated-static",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-iri-kug-e-iri-kug",
+      "name": "E-Iri-kug",
+      "deity": {
+        "deity_id": "deity-bau",
+        "name": "Bau",
+        "epithet": "Mother Bau",
+        "domain": "healing-city"
+      },
+      "city": {
+        "city_id": "city-iri-kug",
+        "name": "Iri-kug",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 21,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "healing",
+          "destiny",
+          "mother"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 21: E-Iri-kug of Bau at Iri-kug (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Iri-kug",
+          "variants": [
+            "E Iri kug"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Iri-kug",
+          "Bau"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-sirara-e-sirara",
+      "name": "E-Sirara",
+      "deity": {
+        "deity_id": "deity-nanshe",
+        "name": "Nanshe",
+        "epithet": "Lady of the sea foam",
+        "domain": "fisheries-justice"
+      },
+      "city": {
+        "city_id": "city-sirara",
+        "name": "Sirara",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 22,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "sea",
+          "justice",
+          "fisheries"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 22: E-Sirara of Nanshe at Sirara (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Sirara",
+          "variants": [
+            "E Sirara"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Sirara",
+          "Nanshe"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-gu-aba-e-ab-shaga-la",
+      "name": "E-ab-shaga-la",
+      "deity": {
+        "deity_id": "deity-ninmarki",
+        "name": "Ninmarki",
+        "epithet": "Controller of the pure sea",
+        "domain": "sea"
+      },
+      "city": {
+        "city_id": "city-gu-aba",
+        "name": "Gu-aba",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 23,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "sea",
+          "storehouse"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 23: E-ab-shaga-la of Ninmarki at Gu-aba (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-ab-shaga-la",
+          "variants": [
+            "E ab shaga la"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Gu-aba",
+          "Ninmarki"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "satellite"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.56,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.03,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6032,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-kinirsha-e-kinirsha",
+      "name": "E-Kinirsha",
+      "deity": {
+        "deity_id": "deity-dumuzid-abzu",
+        "name": "Dumuzid-abzu",
+        "epithet": "True wild cow",
+        "domain": "abzu-fertility"
+      },
+      "city": {
+        "city_id": "city-kinirsha",
+        "name": "Kinirsha",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 24,
+      "theo_slots": {
+        "rank": "minor",
+        "function": [
+          "song",
+          "fertility"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 24: E-Kinirsha of Dumuzid-abzu at Kinirsha (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Kinirsha",
+          "variants": [
+            "E Kinirsha"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Kinirsha",
+          "Dumuzid-abzu"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "satellite"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.6,
+          "tech": 0.68,
+          "cosmo": 0.56,
+          "coherence": 0.72,
+          "sovereignty": 0.78
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.03,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.04
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.5516,
+        "confidence": 0.75,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-umma-e-mah-umma",
+      "name": "E-mah-Umma",
+      "deity": {
+        "deity_id": "deity-shara",
+        "name": "Shara",
+        "epithet": "Princely son of the Mistress",
+        "domain": "city-patron"
+      },
+      "city": {
+        "city_id": "city-umma",
+        "name": "Umma",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 25,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "abundance",
+          "city-patron"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 25: E-mah-Umma of Shara at Umma (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-mah-Umma",
+          "variants": [
+            "E mah Umma"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Umma",
+          "Shara"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-zabalam-e-sherzi-guru",
+      "name": "E-sherzi-guru",
+      "deity": {
+        "deity_id": "deity-inanna",
+        "name": "Inanna",
+        "epithet": "Great daughter of Suen",
+        "domain": "love-war"
+      },
+      "city": {
+        "city_id": "city-zabalam",
+        "name": "Zabalam",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 26,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "love",
+          "war",
+          "evening-star"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 26: E-sherzi-guru of Inanna at Zabalam (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-sherzi-guru",
+          "variants": [
+            "E sherzi guru"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Zabalam",
+          "Inanna"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-karkara-e-ishkur",
+      "name": "E-Ishkur",
+      "deity": {
+        "deity_id": "deity-ishkur",
+        "name": "Ishkur",
+        "epithet": "Canal inspector of heaven and earth",
+        "domain": "storm-rain"
+      },
+      "city": {
+        "city_id": "city-karkara",
+        "name": "Karkara",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 27,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "storm",
+          "rain",
+          "barley"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 27: E-Ishkur of Ishkur at Karkara (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Ishkur",
+          "variants": [
+            "E Ishkur"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Karkara",
+          "Ishkur"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-hymn-28",
+      "name": "E-fragmentary-28",
+      "deity": {
+        "deity_id": "deity-unknown",
+        "name": "Unknown",
+        "epithet": null,
+        "domain": null
+      },
+      "city": {
+        "city_id": "city-unknown",
+        "name": "Unknown",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 28,
+      "theo_slots": {
+        "rank": "minor",
+        "function": [],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 28: E-fragmentary-28 — Unknown @ Unknown. ETCSL lines 352–362 fragmentary colophon"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-fragmentary-28",
+          "variants": [
+            "E fragmentary 28"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": null,
+        "role_in_grid": "satellite"
+      },
+      "status": "unknown",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.432,
+          "tech": 0.68,
+          "cosmo": 0.4032,
+          "coherence": 0.612,
+          "sovereignty": 0.663
+        },
+        "penalty_priors": {
+          "unknownNode": 0.1,
+          "weakConnectivity": 0.03,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.04
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.3345,
+        "confidence": 0.55,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-adab-e-mah-adab",
+      "name": "E-mah-Adab",
+      "deity": {
+        "deity_id": "deity-ninhursag",
+        "name": "Ninhursag",
+        "epithet": "Mother Nintur",
+        "domain": "fertility"
+      },
+      "city": {
+        "city_id": "city-adab",
+        "name": "Adab",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 29,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "birth",
+          "destiny",
+          "canal-city"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 29: E-mah-Adab — Ninhursag @ Adab. Also associated with Ashgi as temple prince"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-mah-Adab",
+          "variants": [
+            "E mah Adab"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Adab",
+          "Ninhursag"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.8,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.78,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6496,
+        "confidence": 0.88,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-isin-e-isin",
+      "name": "E-Isin",
+      "deity": {
+        "deity_id": "deity-ninisina",
+        "name": "Ninisina",
+        "epithet": "Great healer of the Land",
+        "domain": "healing"
+      },
+      "city": {
+        "city_id": "city-isin",
+        "name": "Isin",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 30,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "healing",
+          "medicine",
+          "destiny"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 30: E-Isin of Ninisina at Isin (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Isin",
+          "variants": [
+            "E Isin"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Isin",
+          "Ninisina"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 1,
+          "edges": [
+            {
+              "target_temple": "temple-nippur-e-kur",
+              "edge_type": "theological",
+              "weight": 0.55
+            }
+          ]
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "hub"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.8,
+          "tech": 0.68,
+          "cosmo": 0.78,
+          "coherence": 0.88,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.02,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.7264,
+        "confidence": 0.88,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-kazallu-kun-satu",
+      "name": "Kun-satu",
+      "deity": {
+        "deity_id": "deity-numushda",
+        "name": "Numushda",
+        "epithet": "Great lord Numushda",
+        "domain": "city-patron"
+      },
+      "city": {
+        "city_id": "city-kazallu",
+        "name": "Kazallu",
+        "region": "Akkad",
+        "coordinates": null
+      },
+      "hymn_index": 31,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "mountain-threshold",
+          "strength"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 31: Kun-satu of Numushda at Kazallu (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "Kun-satu",
+          "variants": [
+            "Kun satu"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Kazallu",
+          "Numushda"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-marda-e-igi-kalama",
+      "name": "E-igi-kalama",
+      "deity": {
+        "deity_id": "deity-lugal-marda",
+        "name": "Lugal-Marda",
+        "epithet": null,
+        "domain": "city-patron"
+      },
+      "city": {
+        "city_id": "city-marda",
+        "name": "Marda",
+        "region": "Akkad",
+        "coordinates": null
+      },
+      "hymn_index": 32,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "eye-of-land"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 32: E-igi-kalama — Lugal-Marda @ Marda. ETCSL colophon partly damaged; deity Lugal-Marda standard"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-igi-kalama",
+          "variants": [
+            "E igi kalama"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Marda",
+          "Lugal-Marda"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "satellite"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.56,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.03,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6032,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-der-e-dim-gal-kalama",
+      "name": "E-dim-gal-kalama",
+      "deity": {
+        "deity_id": "deity-ishtaran",
+        "name": "Ishtaran",
+        "epithet": "Sovereign of heaven",
+        "domain": "judgment"
+      },
+      "city": {
+        "city_id": "city-der",
+        "name": "Der",
+        "region": "Akkad",
+        "coordinates": null
+      },
+      "hymn_index": 33,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "judgment",
+          "counsel",
+          "border"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 33: E-dim-gal-kalama of Ishtaran at Der (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-dim-gal-kalama",
+          "variants": [
+            "E dim gal kalama"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Der",
+          "Ishtaran"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-eshnunna-e-sikil",
+      "name": "E-sikil",
+      "deity": {
+        "deity_id": "deity-ninazu",
+        "name": "Ninazu",
+        "epithet": "Warrior son of Enlil",
+        "domain": "war-underworld"
+      },
+      "city": {
+        "city_id": "city-eshnunna",
+        "name": "Eshnunna",
+        "region": "Diyala",
+        "coordinates": null
+      },
+      "hymn_index": 34,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "war",
+          "pure-house",
+          "underworld"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 34: E-sikil of Ninazu at Eshnunna (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-sikil",
+          "variants": [
+            "E sikil"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Eshnunna",
+          "Ninazu"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-kish-e-dub",
+      "name": "E-dub",
+      "deity": {
+        "deity_id": "deity-zababa",
+        "name": "Zababa",
+        "epithet": "Warrior Zababa",
+        "domain": "war"
+      },
+      "city": {
+        "city_id": "city-kish",
+        "name": "Kish",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 35,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "war",
+          "city-patron",
+          "storm"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 35: E-dub of Zababa at Kish (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-dub",
+          "variants": [
+            "E dub"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Kish",
+          "Zababa"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "hub"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.8,
+          "tech": 0.68,
+          "cosmo": 0.78,
+          "coherence": 0.88,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.08,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6664,
+        "confidence": 0.88,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-gudua-e-gishkeshda-kalama",
+      "name": "E-gishkeshda-kalama",
+      "deity": {
+        "deity_id": "deity-nergal",
+        "name": "Nergal",
+        "epithet": "Meshlamta-ea",
+        "domain": "underworld-war"
+      },
+      "city": {
+        "city_id": "city-gudua",
+        "name": "Gudua",
+        "region": "Akkad",
+        "coordinates": null
+      },
+      "hymn_index": 36,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "underworld",
+          "war",
+          "sunset"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 36: E-gishkeshda-kalama of Nergal at Gudua (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-gishkeshda-kalama",
+          "variants": [
+            "E gishkeshda kalama"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Gudua",
+          "Nergal"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "hub"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.8,
+          "tech": 0.68,
+          "cosmo": 0.78,
+          "coherence": 0.88,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.08,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6664,
+        "confidence": 0.88,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-urum-e-ab-lua",
+      "name": "E-ab-lua",
+      "deity": {
+        "deity_id": "deity-suen",
+        "name": "Suen",
+        "epithet": "Ashimbabbar",
+        "domain": "moon-time"
+      },
+      "city": {
+        "city_id": "city-urum",
+        "name": "Urum",
+        "region": "Akkad",
+        "coordinates": null
+      },
+      "hymn_index": 37,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "moon",
+          "judgment",
+          "cattle"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 37: E-ab-lua of Suen at Urum (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-ab-lua",
+          "variants": [
+            "E ab lua"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Urum",
+          "Suen"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-sippar-e-babbar-zimbir",
+      "name": "E-babbar-Zimbir",
+      "deity": {
+        "deity_id": "deity-utu",
+        "name": "Utu",
+        "epithet": "Sovereign of E-babbar",
+        "domain": "sun-justice"
+      },
+      "city": {
+        "city_id": "city-sippar",
+        "name": "Sippar",
+        "region": "Akkad",
+        "coordinates": null
+      },
+      "hymn_index": 38,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "sun",
+          "judgment",
+          "divine-powers"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 38: E-babbar-Zimbir of Utu at Sippar (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-babbar-Zimbir",
+          "variants": [
+            "E babbar Zimbir"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Sippar",
+          "Utu"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 1,
+          "edges": [
+            {
+              "target_temple": "temple-larsam-e-babbar-larsam",
+              "edge_type": "ritual",
+              "weight": 0.6
+            }
+          ]
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "hub"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.8,
+          "tech": 0.68,
+          "cosmo": 0.78,
+          "coherence": 0.88,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.02,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.7264,
+        "confidence": 0.88,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-hymn-39",
+      "name": "E-hursag-Ninhursag",
+      "deity": {
+        "deity_id": "deity-ninhursag",
+        "name": "Ninhursag",
+        "epithet": "Midwife of heaven and earth",
+        "domain": "fertility"
+      },
+      "city": {
+        "city_id": "city-unknown",
+        "name": "Unknown",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 39,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "birth",
+          "kingship-crown"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 39: E-hursag-Ninhursag — Ninhursag @ Unknown. ETCSL: city name lost; Ninhursaga / Nintur midwife cult"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-hursag-Ninhursag",
+          "variants": [
+            "E hursag Ninhursag"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Ninhursag"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "junction"
+      },
+      "status": "unknown",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.576,
+          "tech": 0.68,
+          "cosmo": 0.4752,
+          "coherence": 0.663,
+          "sovereignty": 0.731
+        },
+        "penalty_priors": {
+          "unknownNode": 0.1,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.4079,
+        "confidence": 0.55,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-ulmas-e-ulmas",
+      "name": "E-Ulmas",
+      "deity": {
+        "deity_id": "deity-inanna",
+        "name": "Inanna",
+        "epithet": "Mistress of battle",
+        "domain": "love-war"
+      },
+      "city": {
+        "city_id": "city-ulmas",
+        "name": "Ulmas",
+        "region": "Akkad",
+        "coordinates": null
+      },
+      "hymn_index": 40,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "battle",
+          "silver-lapis",
+          "wisdom"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 40: E-Ulmas of Inanna at Ulmas (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Ulmas",
+          "variants": [
+            "E Ulmas"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Ulmas",
+          "Inanna"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 0,
+          "edges": []
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "junction"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.66,
+          "coherence": 0.72,
+          "sovereignty": 0.82
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.05,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6072,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-agade-e-agade",
+      "name": "E-Agade",
+      "deity": {
+        "deity_id": "deity-aba",
+        "name": "Aba",
+        "epithet": "God of Agade",
+        "domain": "imperial-war"
+      },
+      "city": {
+        "city_id": "city-agade",
+        "name": "Agade",
+        "region": "Akkad",
+        "coordinates": null
+      },
+      "hymn_index": 41,
+      "theo_slots": {
+        "rank": "city-patron",
+        "function": [
+          "battle",
+          "imperial"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 41: E-Agade of Aba at Agade (ETCSL t.4.80.1 / TCS 3)"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-Agade",
+          "variants": [
+            "E Agade"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Agade",
+          "Aba"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 1,
+          "edges": [
+            {
+              "target_temple": "temple-ulmas-e-ulmas",
+              "edge_type": "political",
+              "weight": 0.55
+            }
+          ]
+        },
+        "energy_profile": "standard-node",
+        "role_in_grid": "terminus"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.7,
+          "tech": 0.68,
+          "cosmo": 0.62,
+          "coherence": 0.72,
+          "sovereignty": 0.86
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.02,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.6332,
+        "confidence": 0.82,
+        "provenance": {
+          "mode": "derived-historical",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    },
+    {
+      "temple_id": "temple-eresh-e-zagin",
+      "name": "E-zagin",
+      "deity": {
+        "deity_id": "deity-nisaba",
+        "name": "Nisaba",
+        "epithet": "Great Nanibgal",
+        "domain": "writing-wisdom"
+      },
+      "city": {
+        "city_id": "city-eresh",
+        "name": "Eresh",
+        "region": "Sumer",
+        "coordinates": null
+      },
+      "hymn_index": 42,
+      "theo_slots": {
+        "rank": "major",
+        "function": [
+          "writing",
+          "wisdom",
+          "measure"
+        ],
+        "relationships": [],
+        "hymn_signature": "Temple Hymn 42: E-zagin — Nisaba @ Eresh. Colophon: compiler En-hedu-ana; closing signature hymn"
+      },
+      "tech_slots": {
+        "protocol_version": "enheduanna-1.0",
+        "packet_form": "sumerian-temple-hymn-envelope: invocation / house-praise / epithet-cluster / colophon-lines",
+        "naming_profile": {
+          "canonical_name": "E-zagin",
+          "variants": [
+            "E zagin"
+          ],
+          "language": "Sumerian"
+        },
+        "interoperability_tags": [
+          "Sumer",
+          "Temple-Hymns-42",
+          "ETCSL-t.4.80.1",
+          "TCS-3",
+          "Eresh",
+          "Nisaba"
+        ]
+      },
+      "cosmo_slots": {
+        "grid_layer": "underlying-grid",
+        "connectivity": {
+          "degree": 1,
+          "edges": [
+            {
+              "target_temple": "temple-nippur-e-kur",
+              "edge_type": "theological",
+              "weight": 0.5
+            }
+          ]
+        },
+        "energy_profile": "high-intensity-node",
+        "role_in_grid": "terminus"
+      },
+      "status": "active",
+      "logoc_fingerprint": {
+        "profile_id": "logoc.temple-grid.v1",
+        "version": "1.0.0",
+        "channels": {
+          "theo": 0.88,
+          "tech": 0.78,
+          "cosmo": 0.62,
+          "coherence": 0.78,
+          "sovereignty": 0.96
+        },
+        "penalty_priors": {
+          "unknownNode": 0,
+          "weakConnectivity": 0.02,
+          "protocolDrift": 0.03,
+          "domainImbalance": 0.02
+        },
+        "weights": {
+          "theo": 0.26,
+          "tech": 0.18,
+          "cosmo": 0.24,
+          "coherence": 0.18,
+          "sovereignty": 0.14
+        },
+        "baseline_total": 0.7228,
+        "confidence": 0.96,
+        "provenance": {
+          "mode": "curated-static",
+          "source_refs": [
+            "ETCSL:t.4.80.1",
+            "TCS-3",
+            "TEMPLE_GRID.md",
+            "logoc.temple-grid.v1"
+          ],
+          "last_reviewed_at": "2026-07-19"
+        }
+      }
+    }
+  ]
+}
