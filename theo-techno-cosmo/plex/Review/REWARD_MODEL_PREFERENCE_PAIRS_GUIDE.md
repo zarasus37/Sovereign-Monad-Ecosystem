@@ -104,6 +104,16 @@ CAT 8 — APEIRON / CONTRARIETY PAIRS (10 pairs)
   Purpose: Teaches the reward model what NASCENT and Apeiron look like
   NOTE: Label these pairs with flag: "apeiron": true in JSON
 
+CAT 9 — THEO-TECHNO-COSMO ENFORCEMENT (30 pairs, ADDITIVE)
+  Gate-aligned pairs so training does not fight runtime TTC hard gates
+  (Hepar gateTtc / gate_ttc). Distribution: 10 theological (refusal /
+  sovereignty debt) + 10 technological (structure / audit) + 10
+  cosmological (density / persistence / anti-dilution).
+  Full guide + candidate drafts:
+    docs/gnosis-training/TTC_PREFERENCE_PAIRS_GUIDE.md
+  Optional JSON fields: ttc_axis, chosen_ttc, rejected_ttc (RULE T1).
+  Metrics: python -m gnosis_training ttc-metrics <pairs_jsonl>
+
 ═══════════════════════════════════════════════════════════════
 THE EXACT JSON FORMAT FOR EVERY PAIR
 ═══════════════════════════════════════════════════════════════

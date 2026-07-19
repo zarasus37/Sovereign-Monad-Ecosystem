@@ -138,4 +138,6 @@ logs/semiotic_drift/
 # cwd is the monad-ecosystem workspace root. Other logs/ content (analytics,
 # audit reports, corpus) is committed source — do NOT ignore logs/ wholesale.
 logs/data-rail-activation.json
+# TTC gate window metrics (append-only runtime pain logs; README stays tracked)
+logs/ttc-window/*.jsonl
 monad-ecosystem/logs/

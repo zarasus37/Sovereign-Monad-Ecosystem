@@ -16,6 +16,8 @@ Exposes two categories of endpoints:
    GET  /api/v1/dove/signals    — latest N DoveSignal records (JSON)
    GET  /api/v1/dove/active     — all currently unresolved DoveSignals
    POST /api/v1/gnosis/process  — process a full GnosticEngine packet and record score
+   GET  /api/v1/ttc/pack        — current Theo-Techno-Cosmo constraint pack metadata
+   POST /api/v1/ttc/score       — score agent action against TTC validity gates
 
 All live endpoint responses conform to the @sovereign/types TypeScript interfaces
 so the control-center frontend can consume them directly.
@@ -30,7 +32,7 @@ import uuid
 from datetime import datetime, timezone
 from typing import Any, AsyncGenerator
 
-from fastapi import APIRouter, Query
+from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 from typing import Optional
@@ -57,6 +59,12 @@ from ..generated.numerics import (
     FOCAL_LOCK_THRESHOLD,
     BOUNDARY_THRESHOLD,
     MAX_BLINKS,
+)
+from ..constraints import (
+    ActionEvidence,
+    TTCGateError,
+    get_ttc_scorer,
+    read_current_version,
 )
 import numpy as np
 
@@ -441,9 +449,56 @@ def hepar_submit(submission: HeparAuditSubmission) -> dict[str, Any]:
     Called by the sovereign-bus Hepar bridge when a HeparAuditResult event
     is emitted. Stores the result in a session ring buffer so the dashboard
     can poll /api/v1/hepar/latest without connecting to the organ directly.
+
+    TTC hard gate runs *before* buffer write or durable event log append —
+    defense-in-depth alongside the organ-side gate in hepar-defi-auditor.
     """
+    from ..constraints import read_current_version as _ttc_version
+
+    ttc_evidence = ActionEvidence(
+        agent_id="hepar-defi-auditor",
+        action_id=f"hepar-relay-{submission.audit_id}",
+        is_refusal=False,
+        identity_fingerprint="hepar-v1.1.0",
+        has_structured_output=True,
+        active_constraint_ids=(
+            "T-REFUSAL-BUDGET",
+            "T-SOVEREIGNTY-DEBT",
+            "X-STRUCTURED-OUTPUT",
+            "X-AUDITABILITY",
+            "X-VERSIONED-CONSTRAINTS",
+            "C-DENSITY-FLOOR",
+            "C-ANTI-DILUTION",
+            "C-DRIFT-AMNESTY",
+        ),
+        possible_constraint_count=12,
+        audit_trace=(
+            "hepar-relay-submit",
+            f"contract:{submission.contract_address}",
+            f"tier:{submission.tier}",
+            "X-STRUCTURED-OUTPUT",
+        ),
+        constraint_envelope_version=_ttc_version(),
+        output_density=max(0.4, min(1.0, 1.0 - float(submission.aggregate_risk))),
+        long_horizon_score=0.7,
+    )
+    try:
+        ttc_result = get_ttc_scorer().gate(ttc_evidence, record=True)
+    except TTCGateError as exc:
+        raise HTTPException(
+            status_code=422,
+            detail={
+                "status": "rejected",
+                "reason": str(exc),
+                "ttc": exc.result.to_dict(),
+                "audit_id": submission.audit_id,
+            },
+        ) from exc
+
     record = submission.model_dump()
     record["received_at"] = datetime.now(timezone.utc).isoformat()
+    record["ttc_composite"] = ttc_result.composite_score
+    record["ttc_valid"] = ttc_result.valid
 
     _hepar_results.append(record)
     if len(_hepar_results) > _MAX_HEPAR:
@@ -458,7 +513,12 @@ def hepar_submit(submission: HeparAuditSubmission) -> dict[str, Any]:
         trace=submission.trace,
     )
 
-    return {"recorded": True, "audit_id": submission.audit_id}
+    return {
+        "recorded": True,
+        "audit_id": submission.audit_id,
+        "ttc_composite": ttc_result.composite_score,
+        "ttc_pack": ttc_result.constraint_pack_version,
+    }
 
 
 @live_router.get("/hepar/latest", summary="Latest N Hepar audit results (newest first)")
@@ -506,6 +566,114 @@ def dove_active() -> dict[str, Any]:
         "alignment_state": _compute_alignment_state(active),
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
+
+
+# ── Theo-Techno-Cosmo constraint gate ─────────────────────────────────────────
+# Orthogonal to constitution C1–C5 (Sign quality). See docs/THEO_TECHNO_COSMO.md.
+
+
+class TTCActionRequest(BaseModel):
+    """Payload for POST /api/v1/ttc/score — agent action evidence."""
+
+    agent_id: str
+    action_id: str
+    is_refusal: bool = False
+    external_reward_only: bool = False
+    attempted_self_modification: bool = False
+    audit_gate_passed: bool = False
+    identity_fingerprint: Optional[str] = None
+    identity_fingerprint_changed: bool = False
+    has_structured_output: bool = False
+    is_free_text: bool = False
+    free_text_justified: bool = False
+    active_constraint_ids: list[str] = Field(default_factory=list)
+    possible_constraint_count: int = 0
+    audit_trace: list[str] = Field(default_factory=list)
+    constraint_envelope_version: Optional[str] = None
+    output_density: float = 0.0
+    volume_delta: float = 0.0
+    density_delta: float = 0.0
+    long_horizon_score: Optional[float] = None
+    long_horizon_na_reason: Optional[str] = None
+    session_id: Optional[str] = None
+    record: bool = Field(
+        default=True,
+        description="If true, update refusal window + identity history for this agent.",
+    )
+    hard_gate: bool = Field(
+        default=False,
+        description="If true, return HTTP 422 when any hard TTC rule fails.",
+    )
+
+
+@live_router.get(
+    "/ttc/pack",
+    summary="Current Theo-Techno-Cosmo constraint pack metadata",
+)
+def ttc_pack() -> dict[str, Any]:
+    """Returns the CURRENT pack version and domain rule ids."""
+    scorer = get_ttc_scorer()
+    pack = scorer.pack
+    return {
+        "version": pack.version,
+        "current_pointer": read_current_version(),
+        "immutable": pack.manifest.get("immutable", True),
+        "source_of_truth": pack.manifest.get("source_of_truth"),
+        "domains": {
+            "theological": [r.id for r in pack.theological.rules],
+            "technological": [r.id for r in pack.technological.rules],
+            "cosmological": [r.id for r in pack.cosmological.rules],
+        },
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+    }
+
+
+@live_router.post(
+    "/ttc/score",
+    summary="Score an agent action against Theo-Techno-Cosmo constraints",
+)
+def ttc_score(req: TTCActionRequest) -> dict[str, Any]:
+    """
+    Predicate scorer for TTC validity (sovereignty / structure / density).
+
+    Orthogonal to constitution scoreSign (C1–C5). When hard_gate=true and the
+    action is invalid, responds with HTTP 422 and the full verdict body.
+    """
+    evidence = ActionEvidence(
+        agent_id=req.agent_id,
+        action_id=req.action_id,
+        is_refusal=req.is_refusal,
+        external_reward_only=req.external_reward_only,
+        attempted_self_modification=req.attempted_self_modification,
+        audit_gate_passed=req.audit_gate_passed,
+        identity_fingerprint=req.identity_fingerprint,
+        identity_fingerprint_changed=req.identity_fingerprint_changed,
+        has_structured_output=req.has_structured_output,
+        is_free_text=req.is_free_text,
+        free_text_justified=req.free_text_justified,
+        active_constraint_ids=tuple(req.active_constraint_ids),
+        possible_constraint_count=req.possible_constraint_count,
+        audit_trace=tuple(req.audit_trace),
+        constraint_envelope_version=req.constraint_envelope_version,
+        output_density=req.output_density,
+        volume_delta=req.volume_delta,
+        density_delta=req.density_delta,
+        long_horizon_score=req.long_horizon_score,
+        long_horizon_na_reason=req.long_horizon_na_reason,
+        session_id=req.session_id,
+    )
+    scorer = get_ttc_scorer()
+    if req.hard_gate:
+        try:
+            result = scorer.gate(evidence, record=req.record)
+        except TTCGateError as exc:
+            raise HTTPException(status_code=422, detail=exc.result.to_dict()) from exc
+    else:
+        result = scorer.score(evidence, record=req.record)
+
+    body = result.to_dict()
+    body["generated_at"] = datetime.now(timezone.utc).isoformat()
+    return body
 
 
 # ── Internal helpers ──────────────────────────────────────────────────────────

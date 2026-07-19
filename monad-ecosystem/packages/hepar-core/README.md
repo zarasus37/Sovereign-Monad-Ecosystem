@@ -1,5 +1,7 @@
 ## Hepar Core (Advisory Tier, Upgraded)
 
+> **TTC rule:** All side-effect paths in organs must call `gateTtc` / `gate_ttc` before external actions or state changes. Hepar enforces this inside `@sovereign/hepar-defi-auditor` (`runDefiAudit` → hard gate → bus emit). See `docs/THEO_TECHNO_COSMO.md` and `docs/agents/HEPAR_DESIGN_DECLARATION.md`.
+
 Modular implementation of Hepar forensic stack, now expanded into a full DeFi zero‑day auditing protocol with stages A‑D:
 - Stage A: Static Forensics
 - Stage B: Symbolic Proving

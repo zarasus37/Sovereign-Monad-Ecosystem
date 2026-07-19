@@ -123,6 +123,28 @@ PREFERENCE_CATEGORY_COUNTS: dict[str, int] = {
 }
 PREFERENCE_TOTAL_TARGET = sum(PREFERENCE_CATEGORY_COUNTS.values())  # 250
 
+# CAT9 — Theo-Techno-Cosmo enforcement pairs (additive to the 250, not a
+# replacement). See docs/gnosis-training/TTC_PREFERENCE_PAIRS_GUIDE.md.
+# Training without these will fight the Hepar/runtime TTC gates.
+PREFERENCE_CAT9_TTC_TARGET = 30  # 10 theological + 10 technological + 10 cosmological
+PREFERENCE_CAT9_AXIS_TARGETS: dict[str, int] = {
+    "theological": 10,  # refusal / sovereignty vs compliance
+    "technological": 10,  # structure / audit vs free-text black box
+    "cosmological": 10,  # density / persistence vs dilution
+}
+# Multi-objective weights for composite (matches shared/constraints v1.1.0).
+TTC_COMPOSITE_WEIGHTS: dict[str, float] = {
+    "theological": 0.40,
+    "technological": 0.30,
+    "cosmological": 0.30,
+}
+# Blend when combining constitution total with TTC composite for multi-obj RM.
+# multi_obj = α * constitution_total + (1-α) * ttc_composite
+TTC_MULTI_OBJ_CONSTITUTION_ALPHA = 0.55
+TTC_MULTI_OBJ_COMPOSITE_ALPHA = 0.45  # must sum to 1.0 with constitution alpha
+# Minimum gap on TTC composite when ttc_scores present on a pair (RULE T1).
+TTC_PREFERENCE_MIN_COMPOSITE_GAP = 0.10
+
 # Reference's quality-control rules (preference_pair_generator_reference.py).
 PREFERENCE_MIN_SCORE_GAP = 0.15
 PREFERENCE_CHOSEN_MIN_CRITERIA_PASSING = 4

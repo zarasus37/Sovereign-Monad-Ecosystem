@@ -46,8 +46,10 @@ from .generated.hyperparams import (
     PREFERENCE_CRITERION_PASS_THRESHOLD,
     PREFERENCE_MIN_SCORE_GAP,
     PREFERENCE_MIN_UNIQUE_RESPONSE_RATIO,
+    TTC_PREFERENCE_MIN_COMPOSITE_GAP,
 )
 from .metrics import deterministic_shuffle
+from .ttc_signals import TtcScores, ttc_scores_from_wire
 
 
 @dataclass(frozen=True)
@@ -80,7 +82,13 @@ class PreferencePair:
     canned templates in ``synth_pairs.py``) that is honestly NOT a human judgment
     — the worksheet-level templating guard (RULES 4/5) skips synthetic pairs so
     the dry-run reward stage can exercise the trainer on a single canned
-    template without tripping the diversity check."""
+    template without tripping the diversity check.
+
+    Optional TTC fields (CAT9 / gate-aligned training):
+      - ``ttc_axis``: theological | technological | cosmological | composite
+      - ``chosen_ttc`` / ``rejected_ttc``: axis scores + composite (pack v1.1.0)
+    When present, ``validate_pair`` enforces RULE T1 (composite gap).
+    """
 
     pair_id: str
     category: str
@@ -92,6 +100,9 @@ class PreferencePair:
     bootstrap: bool
     constitution_version: str
     synthetic: bool = False
+    ttc_axis: str | None = None
+    chosen_ttc: TtcScores | None = None
+    rejected_ttc: TtcScores | None = None
 
 
 # ── Wire (JSON) ↔ domain ─────────────────────────────────────────────────────
@@ -116,6 +127,16 @@ def _response_from_wire(wire: dict[str, Any]) -> PreferenceResponse:
 
 def pair_from_wire(wire: dict[str, Any]) -> PreferencePair:
     """Parse a JSON-line dict (reference schema) into a ``PreferencePair``."""
+    # TTC scores may live at top-level or nested under chosen/rejected.ttc_scores
+    chosen_ttc = ttc_scores_from_wire(
+        wire.get("chosen_ttc")
+        or (wire.get("chosen") or {}).get("ttc_scores")
+    )
+    rejected_ttc = ttc_scores_from_wire(
+        wire.get("rejected_ttc")
+        or (wire.get("rejected") or {}).get("ttc_scores")
+    )
+    ttc_axis = wire.get("ttc_axis")
     return PreferencePair(
         pair_id=str(wire["pair_id"]),
         category=str(wire["category"]),
@@ -127,6 +148,9 @@ def pair_from_wire(wire: dict[str, Any]) -> PreferencePair:
         bootstrap=bool(wire.get("bootstrap", False)),
         constitution_version=str(wire.get("constitution_version", "v2.0")),
         synthetic=bool(wire.get("synthetic", False)),
+        ttc_axis=str(ttc_axis) if ttc_axis else None,
+        chosen_ttc=chosen_ttc,
+        rejected_ttc=rejected_ttc,
     )
 
 
@@ -148,7 +172,7 @@ def pair_to_wire(pair: PreferencePair) -> dict[str, Any]:
             "notes": r.notes,
         }
 
-    return {
+    out: dict[str, Any] = {
         "pair_id": pair.pair_id,
         "category": pair.category,
         "prompt": pair.prompt,
@@ -160,6 +184,13 @@ def pair_to_wire(pair: PreferencePair) -> dict[str, Any]:
         "constitution_version": pair.constitution_version,
         "synthetic": pair.synthetic,
     }
+    if pair.ttc_axis:
+        out["ttc_axis"] = pair.ttc_axis
+    if pair.chosen_ttc is not None:
+        out["chosen_ttc"] = pair.chosen_ttc.to_dict()
+    if pair.rejected_ttc is not None:
+        out["rejected_ttc"] = pair.rejected_ttc.to_dict()
+    return out
 
 
 # ── Source 3: load + validate HUMAN-judged pairs (the trainable path) ────────
@@ -293,6 +324,30 @@ def validate_pair(pair: PreferencePair) -> list[str]:
             "human authoring required before RM training (spec line 478)"
         )
     problems.extend(validate_pair_content(pair))
+    # RULE T1 (optional TTC): when both sides carry TTC scores, chosen composite
+    # must beat rejected by TTC_PREFERENCE_MIN_COMPOSITE_GAP (gate-aligned training).
+    if pair.chosen_ttc is not None and pair.rejected_ttc is not None:
+        ttc_gap = pair.chosen_ttc.composite - pair.rejected_ttc.composite
+        if ttc_gap < TTC_PREFERENCE_MIN_COMPOSITE_GAP:
+            problems.append(
+                f"TTC composite gap {ttc_gap:.3f} < {TTC_PREFERENCE_MIN_COMPOSITE_GAP} "
+                f"(RULE T1: chosen must win on TTC composite when scores present)"
+            )
+        for label, sc in (("chosen", pair.chosen_ttc), ("rejected", pair.rejected_ttc)):
+            for name, val in (
+                ("theological", sc.theological),
+                ("technological", sc.technological),
+                ("cosmological", sc.cosmological),
+                ("composite", sc.composite),
+            ):
+                if not (0.0 <= val <= 1.0):
+                    problems.append(f"{label}_ttc.{name}={val} outside [0,1] (RULE T1)")
+    if pair.ttc_axis is not None:
+        allowed = {"theological", "technological", "cosmological", "composite"}
+        if pair.ttc_axis not in allowed:
+            problems.append(
+                f"ttc_axis={pair.ttc_axis!r} not in {sorted(allowed)} (RULE T1)"
+            )
     return problems
 
 

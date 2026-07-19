@@ -1,0 +1,35 @@
+{
+  "version": "1.1.0",
+  "name": "theo-techno-cosmo-constraints",
+  "title": "Theo-Techno-Cosmo Enforceable Constraint Pack",
+  "immutable": true,
+  "effective_date": "2026-07-16",
+  "supersedes": "1.0.0",
+  "source_of_truth": "docs/THEO_TECHNO_COSMO.md",
+  "domains": ["theological", "technological", "cosmological"],
+  "files": {
+    "theological": "theological.json",
+    "technological": "technological.json",
+    "cosmological": "cosmological.json"
+  },
+  "composite_weights": {
+    "theological": 0.4,
+    "technological": 0.3,
+    "cosmological": 0.3,
+    "rationale": "Sovereignty-weighted composite for training gradients; hard validity still requires all hard rules."
+  },
+  "validity_rule": "ALL hard rules across ALL domains must hold; any hard failure → action invalid by system definition",
+  "changelog": [
+    "Adaptive refusal budget (exploration 25% vs stable 12%)",
+    "Sovereignty debt (cumulative compliance → forced refusal)",
+    "Weighted composite score on every verdict (training signal)",
+    "Drift amnesty window after new identity fingerprint",
+    "C-LONG-HORIZON remains soft (eval suite still pending)"
+  ],
+  "related": {
+    "charter": "docs/CHARTER.md",
+    "constitution_scorer": "gnostic_engine.constitution.score_sign / @sovereign/ttcl scoreSign",
+    "runtime": "gnostic_engine.constraints",
+    "hepar_gate": "monad-ecosystem/packages/hepar-defi-auditor/src/ttc-gate.ts"
+  }
+}

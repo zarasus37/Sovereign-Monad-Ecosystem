@@ -40,9 +40,11 @@ This is a large, intentionally multi-domain ecosystem. You do not need to read e
    Non-negotiable constraints on architecture, code, governance, narratives, and human–AI collaboration. All contributors and AI collaborators are bound by it.
 4. **Shared AI Collaboration Charter** — `docs/SHARED_AI_COLLABORATION_CHARTER.md`  
    Operational companion binding AI co-architects and code-authoring assistants to the guardrails.
-5. **Layout map** — `docs/REPO_STRUCTURE_MAP.md`  
+5. **Theo-Techno-Cosmo (operational)** — `docs/THEO_TECHNO_COSMO.md`  
+   Tripartite validity gates (sovereignty/refusal, structure, density). Machine packs: `shared/constraints/`. Runtime: `gnostic_engine.constraints`.
+6. **Layout map** — `docs/REPO_STRUCTURE_MAP.md`  
    What is active, archived, or generated, and how the physical directories relate to the domains.
-5. **Build discipline** — `docs/ECOSYSTEM_BUILD_MAP.md`, `docs/BUILD_EXECUTION_FLOW.md`, `docs/CANONICAL_SYNC_DISCIPLINE.md`  
+7. **Build discipline** — `docs/ECOSYSTEM_BUILD_MAP.md`, `docs/BUILD_EXECUTION_FLOW.md`, `docs/CANONICAL_SYNC_DISCIPLINE.md`  
    Only when you are changing build order, architecture, or sync behavior.
 
 **Fastest resume path:**
@@ -61,7 +63,7 @@ The ecosystem has distinct operational domains, each with its own role, but all 
 
 | Domain | Location | Role in the Ecosystem | Tech Stack |
 |---|---|---|---|
-| **Theo-Techno-Cosmo** | `theo-techno-cosmo/` | Symbolic, philosophical, and decision-schematic substrate | Markdown, PDF, research code |
+| **Theo-Techno-Cosmo** | `theo-techno-cosmo/` (+ `docs/THEO_TECHNO_COSMO.md`, `shared/constraints/`) | Symbolic substrate **and** enforceable tripartite validity (T/X/C) | Markdown, PDF; versioned JSON packs; Python scorer in gnostic-engine |
 | **Gnostic Engine** | `gnostic-engine/` | Volumetric runtime that evaluates signals against the substrate | Python (uv) |
 | **Gnosis Training** | `gnosis-training/` | TTCL Layer 7 Training Pipeline (SFT→Reward→GRPO→Eval); real TRL wiring, dry-run GPU-verified 2026-07-14, real 8B run capital-gated | Python (uv) |
 | **Monad Ecosystem** | `monad-ecosystem/` | On-chain and TypeScript infrastructure that executes outcomes | TypeScript, Motoko, Solidity |

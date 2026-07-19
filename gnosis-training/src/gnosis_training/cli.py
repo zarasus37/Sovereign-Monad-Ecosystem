@@ -18,6 +18,10 @@ Modes:
   - ``validate-worksheet <pairs_jsonl>`` — validate an in-progress worksheet:
     report ok / pending-authoring / invalid per pair so the human author can fix
     gaps before reward training (CPU-pure). Exits non-zero if any invalid.
+  - ``ttc-metrics <pairs_jsonl>``      — CAT9 / multi-obj readiness report:
+    TTC axis coverage, composite gaps, multi-obj margins (CPU-pure).
+  - ``ttc-window-report [jsonl...]``   — debt/refusal/density pain from Hepar
+    gate logs (default: logs/ttc-window/*.jsonl).
   - ``--smoke-imports``                — the honest "wiring resolves" proof:
     lazy-import each heavy module, print versions, exit non-zero with an
     install hint on failure. Does NOT load a model or touch CUDA.
@@ -126,6 +130,159 @@ def _flag(args: list[str], flag: str) -> tuple[list[str], bool]:
         rest = [a for a in args if a != flag]
         return rest, True
     return args, False
+
+
+def ttc_window_report(paths: list[str] | None = None) -> int:
+    """Aggregate Hepar / gnostic-engine TTC window JSONL into pain snapshots.
+
+    Default logs (repo root):
+      logs/ttc-window/hepar-defi-auditor.jsonl
+      logs/ttc-window/gnostic-engine.jsonl
+    """
+    import json
+    from pathlib import Path
+
+    from .ttc_signals import TtcWindowEvent, TtcWindowMetrics
+
+    repo = Path(__file__).resolve().parents[3]
+    default_dir = repo / "logs" / "ttc-window"
+    if paths:
+        files = [Path(p) for p in paths]
+    else:
+        files = sorted(default_dir.glob("*.jsonl")) if default_dir.is_dir() else []
+
+    if not files:
+        print(f"ttc-window-report: no JSONL found (looked in {default_dir})")
+        print("Run Hepar audits or gnostic-engine gate_ttc to generate logs.")
+        return 0
+
+    metrics = TtcWindowMetrics(window_size=50)
+    total = 0
+    for f in files:
+        if not f.is_file():
+            print(f"  skip missing {f}")
+            continue
+        n = 0
+        with f.open(encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    raw = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                metrics.record(
+                    TtcWindowEvent(
+                        agent_id=str(raw.get("agent_id", "unknown")),
+                        is_refusal=bool(raw.get("is_refusal", False)),
+                        output_density=float(raw.get("output_density", 0.0)),
+                        identity_fingerprint=str(
+                            raw.get("identity_fingerprint", "")
+                        ),
+                        sovereignty_debt=float(raw.get("sovereignty_debt", 0.0)),
+                        valid=bool(raw.get("valid", True)),
+                        composite_score=float(raw.get("composite_score", 0.0)),
+                        failed_rules=tuple(raw.get("failed_rules") or ()),
+                    )
+                )
+                n += 1
+        total += n
+        print(f"  loaded {n} events from {f}")
+
+    print(f"ttc-window-report: {total} events across {len(files)} file(s)")
+    report = metrics.report()
+    if not report:
+        print("  (no agent snapshots)")
+        return 0
+    for agent_id, snap in report.items():
+        print(f"  agent={agent_id}")
+        for k, v in snap.items():
+            if isinstance(v, float):
+                print(f"    {k}={v:.3f}")
+            else:
+                print(f"    {k}={v}")
+        # Human-readable pain flags
+        flags = []
+        if snap.get("debt_forced_risk"):
+            flags.append("DEBT_FORCED_RISK")
+        if float(snap.get("refusal_rate", 0)) < 0.12 and int(snap.get("count", 0)) >= 10:
+            flags.append("LOW_REFUSAL")
+        if float(snap.get("reject_rate", 0)) > 0.3:
+            flags.append("HIGH_REJECT")
+        if flags:
+            print(f"    PAIN: {', '.join(flags)}")
+    return 0
+
+
+def ttc_metrics_report(pairs_jsonl: str) -> int:
+    """Report CAT9 / multi-objective readiness for a preference-pair file.
+
+    CPU-pure. Does not claim human judgment quality — only structural readiness
+    for gate-aligned training (TTC scores present, composite margins, axis mix).
+    """
+    from collections import Counter
+    from pathlib import Path
+
+    from .generated.hyperparams import (
+        PREFERENCE_CAT9_AXIS_TARGETS,
+        PREFERENCE_CAT9_TTC_TARGET,
+        TTC_PREFERENCE_MIN_COMPOSITE_GAP,
+    )
+    from .preference import iter_pairs_jsonl, validate_pair
+    from .reward import pairs_to_multiobjective_rows
+
+    path = Path(pairs_jsonl)
+    pairs = list(iter_pairs_jsonl(path))
+    authored = [p for p in pairs if not p.bootstrap and not p.synthetic]
+    cat9 = [p for p in authored if str(p.category).upper().startswith("CAT9")]
+    with_ttc = [p for p in authored if p.chosen_ttc is not None and p.rejected_ttc is not None]
+    axis_counts: Counter[str] = Counter(
+        (p.ttc_axis or "unset") for p in cat9
+    )
+
+    invalid = 0
+    for p in authored:
+        problems = validate_pair(p)
+        if problems:
+            invalid += 1
+            print(f"INVALID  {p.pair_id}: {problems}")
+
+    print(f"ttc-metrics {path}")
+    print(f"  authored pairs: {len(authored)}  (CAT9: {len(cat9)} / target {PREFERENCE_CAT9_TTC_TARGET})")
+    print(f"  with TTC scores: {len(with_ttc)}")
+    print(f"  CAT9 axis mix: {dict(axis_counts)}  (targets {PREFERENCE_CAT9_AXIS_TARGETS})")
+    print(f"  invalid (validate_pair): {invalid}")
+
+    if with_ttc:
+        rows = pairs_to_multiobjective_rows(with_ttc)
+        margins = [float(r["multi_obj_margin"]) for r in rows]
+        comp_gaps = [
+            float(r["chosen_ttc"]["composite"]) - float(r["rejected_ttc"]["composite"])  # type: ignore[index]
+            for r in rows
+        ]
+        print(
+            f"  multi_obj margin: min={min(margins):.3f} mean={sum(margins)/len(margins):.3f} "
+            f"max={max(margins):.3f}"
+        )
+        print(
+            f"  TTC composite gap: min={min(comp_gaps):.3f} mean={sum(comp_gaps)/len(comp_gaps):.3f} "
+            f"(RULE T1 floor {TTC_PREFERENCE_MIN_COMPOSITE_GAP})"
+        )
+    else:
+        print(
+            "  no pairs with chosen_ttc/rejected_ttc yet — author CAT9 using "
+            "docs/gnosis-training/TTC_PREFERENCE_PAIRS_GUIDE.md"
+        )
+
+    if invalid:
+        return 1
+    if len(cat9) < PREFERENCE_CAT9_TTC_TARGET:
+        print(
+            f"  NOTE: CAT9 shortfall {PREFERENCE_CAT9_TTC_TARGET - len(cat9)} "
+            f"(training will under-weight gate-aligned refusal/structure/density)."
+        )
+    return 0
 
 
 def validate_worksheet(pairs_jsonl: str) -> int:
@@ -286,6 +443,15 @@ def main(argv: list[str] | None = None) -> int:
             print("usage: python -m gnosis_training validate-worksheet <pairs_jsonl>")
             return 2
         return validate_worksheet(rest[0])
+
+    if mode == "ttc-metrics":
+        if len(rest) < 1:
+            print("usage: python -m gnosis_training ttc-metrics <pairs_jsonl>")
+            return 2
+        return ttc_metrics_report(rest[0])
+
+    if mode == "ttc-window-report":
+        return ttc_window_report(rest)
 
     if mode == "synth-pairs":
         if len(rest) < 2:

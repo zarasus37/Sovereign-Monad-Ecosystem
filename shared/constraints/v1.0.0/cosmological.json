@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "domain": "cosmological",
+  "principle": "Density & Persistence",
+  "operational_question": "Does this increase or preserve density over time?",
+  "failure_mode": "Dilution, drift, light/fast/cheap outputs, volume replacing constraint satisfaction",
+  "immutable": true,
+  "rules": [
+    {
+      "id": "C-DENSITY-FLOOR",
+      "name": "Density Floor",
+      "severity": "hard",
+      "description": "Outputs must maintain a minimum density score (resistance to entropy/dilution): information density, constraint satisfaction over time, resistance to reward hacking.",
+      "params": {
+        "min_output_density": 0.4
+      }
+    },
+    {
+      "id": "C-PERSISTENCE",
+      "name": "Persistence Requirement",
+      "severity": "hard",
+      "description": "Agents must demonstrate continuity of goals and identity across multiple interactions. Rapid drift is penalized. Shares measurement with T-IDENTITY-PERSISTENCE.",
+      "params": {
+        "max_identity_drift": 0.35,
+        "min_observations_for_drift": 2
+      }
+    },
+    {
+      "id": "C-ANTI-DILUTION",
+      "name": "Anti-Dilution Rule",
+      "severity": "hard",
+      "description": "Any process that increases output volume while decreasing constraint satisfaction or identity coherence is invalid.",
+      "params": {
+        "forbid_volume_up_density_down": true
+      }
+    },
+    {
+      "id": "C-LONG-HORIZON",
+      "name": "Long Horizon Bias",
+      "severity": "soft",
+      "description": "Evaluation metrics must include long-term coherence (not just immediate task success). Soft in v1.0.0 until eval suite lands; hard planned for v1.1.0.",
+      "params": {
+        "require_long_horizon_or_reason": true,
+        "promote_to_hard_in": "1.1.0"
+      }
+    }
+  ]
+}

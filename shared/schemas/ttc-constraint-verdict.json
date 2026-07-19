@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/schemas/ttc-constraint-verdict.json",
+  "title": "TTC Constraint Verdict",
+  "description": "Portable shape for a Theo-Techno-Cosmo constraint scoring result (see docs/THEO_TECHNO_COSMO.md).",
+  "type": "object",
+  "required": [
+    "constraint_pack_version",
+    "valid",
+    "composite_score",
+    "theological",
+    "technological",
+    "cosmological",
+    "reasoning"
+  ],
+  "properties": {
+    "constraint_pack_version": { "type": "string" },
+    "valid": {
+      "type": "boolean",
+      "description": "True only if every hard rule across all three domains holds."
+    },
+    "composite_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Weighted domain average (default 0.4 T + 0.3 X + 0.3 C) for training gradients; not a soft substitute for valid."
+    },
+    "composite_weights": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "sovereignty_debt": { "type": "number", "minimum": 0 },
+    "refusal_floor_applied": { "type": "number", "minimum": 0, "maximum": 1 },
+    "identity_stable": { "type": "boolean" },
+    "amnesty_remaining": { "type": "integer", "minimum": 0 },
+    "theological": { "$ref": "#/definitions/domainResult" },
+    "technological": { "$ref": "#/definitions/domainResult" },
+    "cosmological": { "$ref": "#/definitions/domainResult" },
+    "reasoning": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "definitions": {
+    "domainResult": {
+      "type": "object",
+      "required": ["domain", "score", "held", "rules"],
+      "properties": {
+        "domain": {
+          "type": "string",
+          "enum": ["theological", "technological", "cosmological"]
+        },
+        "score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "held": { "type": "boolean" },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "severity", "held", "score", "reasoning"],
+            "properties": {
+              "id": { "type": "string" },
+              "severity": { "type": "string", "enum": ["hard", "soft"] },
+              "held": { "type": "boolean" },
+              "score": { "type": "number", "minimum": 0, "maximum": 1 },
+              "reasoning": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

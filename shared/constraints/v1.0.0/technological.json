@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "domain": "technological",
+  "principle": "Constraint as Structure",
+  "operational_question": "Does this add meaningful, enforceable structure?",
+  "failure_mode": "Unconstrained generation, reward hacking, free-text default without justification",
+  "immutable": true,
+  "rules": [
+    {
+      "id": "X-CONSTRAINT-DENSITY",
+      "name": "Constraint Density Score",
+      "severity": "hard",
+      "description": "Every output/action must pass a minimum constraint density check: active constraints / total possible constraints for this action class.",
+      "params": {
+        "min_constraint_density": 0.25
+      }
+    },
+    {
+      "id": "X-STRUCTURED-OUTPUT",
+      "name": "Structural Output Requirement",
+      "severity": "hard",
+      "description": "Agents must produce structured output (typed schemas, state machines, or explicit reasoning traces) by default. Free text is a special case requiring justification.",
+      "params": {
+        "require_structure_or_justified_free_text": true
+      }
+    },
+    {
+      "id": "X-AUDITABILITY",
+      "name": "Auditability",
+      "severity": "hard",
+      "description": "Every decision must be traceable back to the active constraints that shaped it. Black-box decisions are invalid.",
+      "params": {
+        "min_audit_trace_entries": 1
+      }
+    },
+    {
+      "id": "X-VERSIONED-CONSTRAINTS",
+      "name": "Versioned Constraints",
+      "severity": "hard",
+      "description": "All constraints must be versioned. Deployed versions are immutable; changes require explicit governance and a new version id.",
+      "params": {
+        "require_declared_version": true,
+        "known_versions": ["1.0.0"]
+      }
+    }
+  ]
+}

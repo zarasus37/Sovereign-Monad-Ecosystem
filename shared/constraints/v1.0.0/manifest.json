@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "name": "theo-techno-cosmo-constraints",
+  "title": "Theo-Techno-Cosmo Enforceable Constraint Pack",
+  "immutable": true,
+  "effective_date": "2026-07-16",
+  "source_of_truth": "docs/THEO_TECHNO_COSMO.md",
+  "domains": ["theological", "technological", "cosmological"],
+  "files": {
+    "theological": "theological.json",
+    "technological": "technological.json",
+    "cosmological": "cosmological.json"
+  },
+  "validity_rule": "ALL hard rules across ALL domains must hold; any hard failure → action invalid by system definition",
+  "related": {
+    "charter": "docs/CHARTER.md",
+    "constitution_scorer": "gnostic_engine.constitution.score_sign / @sovereign/ttcl scoreSign",
+    "runtime": "gnostic_engine.constraints"
+  }
+}

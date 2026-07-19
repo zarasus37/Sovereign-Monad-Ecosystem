@@ -82,6 +82,37 @@ def _pairs_to_dataset(pairs: list[PreferencePair]) -> Any:
     return Dataset.from_list(rows)
 
 
+def pairs_to_multiobjective_rows(pairs: list[PreferencePair]) -> list[dict[str, Any]]:
+    """Project pairs into multi-objective rows (constitution total + TTC composite).
+
+    Used for ranking-margin experiments and future multi-head reward training.
+    Does NOT replace TRL's ``{prompt, chosen, rejected}`` path yet — that remains
+    the default RewardTrainer input. When CAT9 pairs carry ``chosen_ttc`` /
+    ``rejected_ttc``, those scores are used; otherwise lexical proxies fill in.
+    """
+    from .ttc_signals import preference_multi_obj_row
+
+    rows: list[dict[str, Any]] = []
+    for p in pairs:
+        problems = validate_pair(p)
+        if problems:
+            raise ValueError(f"pair {p.pair_id}: {problems}")
+        row = preference_multi_obj_row(
+            prompt=p.prompt,
+            chosen_text=p.chosen.response,
+            rejected_text=p.rejected.response,
+            chosen_constitution_total=p.chosen.scores.total,
+            rejected_constitution_total=p.rejected.scores.total,
+            chosen_ttc=p.chosen_ttc,
+            rejected_ttc=p.rejected_ttc,
+        )
+        row["pair_id"] = p.pair_id
+        row["category"] = p.category
+        row["ttc_axis"] = p.ttc_axis
+        rows.append(row)
+    return rows
+
+
 def build_reward_trainer(cfg: RewardConfig, preference_pairs_jsonl: str | Path) -> Any:
     """Build a real ``trl.RewardTrainer`` for Stage 2. Loads HUMAN-judged
     preference pairs (spec line 478) from ``preference_pairs_ALL.jsonl``

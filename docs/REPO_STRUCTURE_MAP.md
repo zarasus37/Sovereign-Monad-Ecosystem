@@ -24,13 +24,15 @@ These are the canonical working surfaces for the ecosystem:
 - `gnostic-engine/`
   - volumetric 4D processing engine work
   - API / dashboard surfaces
+  - `constraints/` — TTC constraint scorer + identity/refusal trackers (`score_ttc` / `gate_ttc`; pack loaded from `shared/constraints/`)
 - `gnosis-training/`
   - TTCL Layer 7 Training Pipeline (SFT→Reward→GRPO→Eval; real TRL wiring, CPU-verified, GPU run pending; Stage-3 = GRPO, doctrinal upgrade from PPO)
   - uv-managed Python package (`@sovereign/gnosis-training`)
 - `theo-techno-cosmo/`
   - TTCL / LOGOC / philosophical and doctrinal materials
 - `shared/`
-  - `schemas/` — portable JSON schemas for the cross-domain contract layer (`signal-event`, `dove-signal`, `gnosis-score`, `hepar-audit-result`)
+  - `schemas/` — portable JSON schemas for the cross-domain contract layer (`signal-event`, `dove-signal`, `gnosis-score`, `hepar-audit-result`, `ttc-constraint-verdict`)
+  - `constraints/` — **versioned, immutable Theo-Techno-Cosmo constraint packs** (`CURRENT` → `v1.0.0/`); source of truth for enforceable T/X/C rules (see `docs/THEO_TECHNO_COSMO.md`)
 
 ## Canonical Docs
 
@@ -38,6 +40,8 @@ These files define system-level truth and should be treated as primary reference
 
 - `README.md` — entry point: how to run the ecosystem and where to read next
 - `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` — authoritative operating backbone: philosophy, architecture, roadmap, blockers
+- `docs/THEO_TECHNO_COSMO.md` — operational TTC constraint system (validity gates: sovereignty, structure, density)
+- `docs/CHARTER.md` — non-negotiable guardrails (sovereignty, mutual growth, human capability drift)
 - `docs/PROJECT_STATE.md` — build-state snapshot and resume point during active work
 - `docs/PROJECT_STATE.json` — machine-readable state summary
 - `docs/ECOSYSTEM_BUILD_MAP.md`

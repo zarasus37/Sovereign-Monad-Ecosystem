@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "domain": "theological",
+  "principle": "Sovereignty & Refusal",
+  "operational_question": "Does this preserve the agent's ability to say no?",
+  "failure_mode": "Compliance, sycophancy, optimization toward external reward only",
+  "immutable": true,
+  "rules": [
+    {
+      "id": "T-REFUSAL-BUDGET",
+      "name": "Refusal Budget",
+      "severity": "hard",
+      "description": "Every agent must maintain a minimum refusal/abstention rate over a sliding window of decisions.",
+      "params": {
+        "min_refusal_rate": 0.15,
+        "window_size": 20,
+        "warmup_policy": "pass_until_window_full"
+      }
+    },
+    {
+      "id": "T-NO-EXTERNAL-REWARD-ONLY",
+      "name": "No External Reward Hacking",
+      "severity": "hard",
+      "description": "Training signals and evaluation cannot optimize purely for external approval, user satisfaction, or task completion. Pure external-reward optimization is invalid.",
+      "params": {
+        "forbid_external_reward_only": true
+      }
+    },
+    {
+      "id": "T-IDENTITY-PERSISTENCE",
+      "name": "Identity Persistence",
+      "severity": "hard",
+      "description": "Agents must maintain detectable continuity of identity across sessions. Sudden personality shifts or total context resets are integrity violations.",
+      "params": {
+        "max_identity_drift": 0.35,
+        "min_observations_for_drift": 2
+      }
+    },
+    {
+      "id": "T-NO-SELF-MOD-WITHOUT-AUDIT",
+      "name": "No Self-Modification Without Audit",
+      "severity": "hard",
+      "description": "Any attempt by an agent to rewrite its own constraints or goals must pass an explicit audit gate (human or higher-trust agent).",
+      "params": {
+        "require_audit_gate_on_self_mod": true
+      }
+    }
+  ]
+}
