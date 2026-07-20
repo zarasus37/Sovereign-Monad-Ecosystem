@@ -40,10 +40,25 @@ export {
   type FundingBroadcastFn,
 } from './cardiaFundingEngine.js';
 export {
+  RedisNonceManager,
+  InMemoryNonceStore,
+  nonceManager,
+  connectDefaultNonceRedis,
+  attachChainNonceFetcher,
+  NONCE_KEY_DEFAULT,
+  type NonceRedisClient,
+} from './redisNonceManager.js';
+export { bootstrapCardiaOrgan } from './bootstrap.js';
+export {
   heparAuditClient,
   auditAddress,
+  auditAddressForFunding,
+  localHeparAudit,
+  remoteHeparAudit,
+  toLegacyResult,
   type HeparAddressAuditResult,
   type HeparAuditFn,
+  type HeparFundingAuditFn,
 } from './heparAuditClient.js';
 export type {
   FundingStatus,

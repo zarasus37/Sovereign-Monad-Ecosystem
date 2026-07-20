@@ -10,7 +10,11 @@
  */
 
 import { createHash } from 'node:crypto';
-import type { HeparAuditFn } from './heparAuditClient.js';
+import { isHeparPass, type HeparAuditResponse } from '@sovereign/types';
+import type {
+  HeparAuditFn,
+  HeparFundingAuditFn,
+} from './heparAuditClient.js';
 import { heparAuditClient } from './heparAuditClient.js';
 import {
   CARDIA_FUNDING_TOPIC,
@@ -18,31 +22,49 @@ import {
   type CardiaFundingKafkaEvent,
   type FundingMandate,
 } from './cardiaFunding.types.js';
+import {
+  nonceManager,
+  type RedisNonceManager,
+} from './redisNonceManager.js';
 
 export type FundingBroadcastFn = (
   event: CardiaFundingKafkaEvent,
 ) => Promise<void> | void;
 
 export type FundingEngineDeps = {
+  /**
+   * Preferred: full forensic audit (Vector 4.4).
+   * Inject in tests for deterministic verdicts.
+   */
+  auditFunding?: HeparFundingAuditFn;
+  /**
+   * @deprecated Use auditFunding. Legacy (wallet → {passed}) still honored.
+   */
   auditAddress?: HeparAuditFn;
   broadcast?: FundingBroadcastFn;
   /** Force live path (still needs env secrets). */
   live?: boolean;
   /** USD notional override (default 15000). */
   amountUsd?: number;
-  /** Injected for tests. */
-  transferFn?: (to: string, amount: bigint) => Promise<{
+  /**
+   * Injected transfer for tests. Receives allocated nonce.
+   */
+  transferFn?: (
+    to: string,
+    amount: bigint,
+    nonce: number,
+  ) => Promise<{
     hash: string;
     wait: (confirms?: number) => Promise<{ status?: number; blockNumber?: number }>;
   }>;
+  /** Override nonce manager (tests). */
+  nonceManager?: RedisNonceManager;
+  /** @deprecated prefer nonceManager — still honored as one-shot getNextNonce */
   getNonce?: () => Promise<number>;
 };
 
-/** Process-local nonce tracker (prod: Redis). */
-let currentNonce: number | null = null;
-
 export function resetFundingNonceForTests(): void {
-  currentNonce = null;
+  nonceManager.resetForTests();
 }
 
 function isLiveEnabled(deps?: FundingEngineDeps): boolean {
@@ -136,11 +158,48 @@ export function mandateFromWalletBind(opts: {
  * Execute funding under Hepar gate + Cosmo constraints.
  * Mutates and returns the mandate with terminal status.
  */
+async function resolveHeparAudit(
+  mandate: FundingMandate,
+  deps: FundingEngineDeps,
+): Promise<HeparAuditResponse> {
+  const request = {
+    targetAddress: mandate.principalWallet,
+    context: 'TIER_1_FUNDING' as const,
+    auditTrace: mandate.auditTrace,
+  };
+
+  if (deps.auditFunding) {
+    return deps.auditFunding(request);
+  }
+
+  if (deps.auditAddress) {
+    // Legacy injector: map {passed} → verdict envelope
+    const legacy = await deps.auditAddress(mandate.principalWallet);
+    if (legacy.verdict) {
+      return {
+        verdict: legacy.verdict,
+        riskScore: legacy.riskScore ?? (legacy.passed ? 0.1 : 0.9),
+        flags: legacy.flags ?? [],
+        auditId: legacy.auditId,
+        reason: legacy.reason,
+      };
+    }
+    return {
+      verdict: legacy.passed ? 'PASS' : 'FAIL_HIGH_RISK',
+      riskScore: legacy.riskScore ?? (legacy.passed ? 0.1 : 0.9),
+      flags: legacy.flags ?? [legacy.reason],
+      auditId: legacy.auditId,
+      reason: legacy.reason,
+    };
+  }
+
+  return heparAuditClient.auditAddressForFunding(request);
+}
+
 export async function executeFunding(
   mandate: FundingMandate,
   deps: FundingEngineDeps = {},
 ): Promise<FundingMandate> {
-  const audit = deps.auditAddress ?? heparAuditClient.auditAddress;
   const broadcast = deps.broadcast ?? defaultBroadcast;
   const amountUsd = deps.amountUsd ?? mandate.amount ?? TIER_1_FUNDING_USD;
   mandate.amount = amountUsd;
@@ -149,24 +208,38 @@ export async function executeFunding(
     `[Cardia Engine] Evaluating mandate ${mandate.mandateId} for ${mandate.principalWallet}`,
   );
 
-  // 1. HEPAR GATE
+  // 1. HEPAR GATE (Vector 4.4 — real forensic client, fail-closed)
   mandate.status = 'PENDING_HEPAR_AUDIT';
-  const heparResult = await audit(mandate.principalWallet);
+  const heparResponse = await resolveHeparAudit(mandate, deps);
+
   mandate.auditTrace.push(
-    `hepar:audit:${heparResult.passed ? 'pass' : 'fail'}:${heparResult.auditId}:${heparResult.reason}`,
+    `hepar:audit:${heparResponse.verdict}:score:${heparResponse.riskScore}:id:${heparResponse.auditId}`,
+  );
+  if (heparResponse.flags.length > 0) {
+    mandate.auditTrace.push(`hepar:flags:${heparResponse.flags.join(',')}`);
+  }
+  // Keep legacy token for existing tests / consumers
+  mandate.auditTrace.push(
+    `hepar:audit:${isHeparPass(heparResponse.verdict) ? 'pass' : 'fail'}:${heparResponse.auditId}:${heparResponse.reason ?? heparResponse.verdict}`,
   );
 
-  if (!heparResult.passed) {
+  if (!isHeparPass(heparResponse.verdict)) {
     console.warn(
-      `[Cardia Engine] Hepar audit FAILED for ${mandate.principalWallet}. Holding funds in escrow.`,
+      `[Cardia Engine] Hepar audit FAILED for ${mandate.principalWallet}. Verdict: ${heparResponse.verdict}. Holding funds in escrow.`,
     );
     mandate.status = 'AUDIT_FAILED';
+    if (heparResponse.verdict === 'ERROR_SERVICE_UNAVAILABLE') {
+      mandate.auditTrace.push('hepar:fail_closed:service_unavailable');
+    }
     await broadcastStatus(mandate, broadcast);
     return mandate;
   }
 
   mandate.status = 'AUDIT_PASSED';
-  mandate.auditTrace.push('hepar:gate:passed');
+  mandate.auditTrace.push(
+    'hepar:gate:passed',
+    `hepar:auditId:${heparResponse.auditId}`,
+  );
 
   const live = isLiveEnabled(deps) && (deps.transferFn || hasLiveSecrets());
 
@@ -192,8 +265,15 @@ export async function executeFunding(
     return mandate;
   }
 
+  const nm = deps.nonceManager ?? nonceManager;
+
   try {
-    // 2. Prepare transfer (USDC 6 decimals)
+    // 2. Allocate nonce (Redis INCR when wired; atomic across processes)
+    const nonce = deps.getNonce
+      ? await deps.getNonce()
+      : await nm.getNextNonce();
+
+    // 3. Prepare transfer (USDC 6 decimals)
     const amountInUnits = BigInt(amountUsd) * 10n ** 6n;
 
     let transferFn = deps.transferFn;
@@ -204,6 +284,10 @@ export async function executeFunding(
         process.env.BOOTSTRAP_PRIVATE_KEY!,
         provider,
       );
+      // Ensure chain fetcher is attached for resync
+      nm.setChainPendingFetcher(async () =>
+        provider.getTransactionCount(bootstrapWallet.address, 'pending'),
+      );
       const erc20Abi = [
         'function transfer(address to, uint256 amount) returns (bool)',
       ];
@@ -213,21 +297,9 @@ export async function executeFunding(
         bootstrapWallet,
       );
 
-      if (currentNonce === null) {
-        if (deps.getNonce) {
-          currentNonce = await deps.getNonce();
-        } else {
-          currentNonce = await provider.getTransactionCount(
-            bootstrapWallet.address,
-            'pending',
-          );
-        }
-      }
-
-      const nonce = currentNonce;
-      transferFn = async (to: string, amount: bigint) => {
+      transferFn = async (to: string, amount: bigint, n: number) => {
         const tx = await tokenContract.transfer(to, amount, {
-          nonce,
+          nonce: n,
           gasLimit: 100_000n,
         });
         return {
@@ -235,19 +307,20 @@ export async function executeFunding(
           wait: (confirms = 1) => tx.wait(confirms),
         };
       };
-    } else if (currentNonce === null && deps.getNonce) {
-      currentNonce = await deps.getNonce();
     }
 
     console.log(
-      `[Cardia Engine] Signing transaction to fund ${mandate.principalWallet}…`,
+      `[Cardia Engine] Signing transaction with nonce ${nonce} to fund ${mandate.principalWallet}…`,
     );
-    const tx = await transferFn!(mandate.principalWallet, amountInUnits);
-    if (currentNonce !== null) currentNonce += 1;
+    const tx = await transferFn!(
+      mandate.principalWallet,
+      amountInUnits,
+      nonce,
+    );
 
     mandate.txHash = tx.hash;
     mandate.status = 'TX_BROADCAST';
-    mandate.auditTrace.push(`tx:broadcast:${tx.hash}`);
+    mandate.auditTrace.push(`tx:broadcast:${tx.hash}:nonce:${nonce}`);
     await broadcastStatus(mandate, broadcast);
 
     console.log(`[Cardia Engine] Awaiting confirmation for tx ${tx.hash}…`);
@@ -257,7 +330,7 @@ export async function executeFunding(
       mandate.status = 'TX_CONFIRMED';
       mandate.blockNumber = receipt.blockNumber;
       mandate.auditTrace.push(
-        `tx:confirmed:block:${receipt.blockNumber ?? 'unknown'}`,
+        `tx:confirmed:block:${receipt.blockNumber ?? 'unknown'}:nonce:${nonce}`,
       );
       console.log(
         `[Cardia Engine] Funding successful for ${mandate.principalWallet}.`,
@@ -265,12 +338,12 @@ export async function executeFunding(
     } else {
       mandate.status = 'TX_FAILED';
       mandate.auditTrace.push(
-        `tx:reverted:block:${receipt?.blockNumber ?? 'unknown'}`,
+        `tx:reverted:block:${receipt?.blockNumber ?? 'unknown'}:nonce:${nonce}`,
       );
       console.error(
         `[Cardia Engine] Transaction reverted for ${mandate.principalWallet}.`,
       );
-      if (currentNonce !== null) currentNonce -= 1;
+      await nm.handleTransactionFailure();
     }
     await broadcastStatus(mandate, broadcast);
   } catch (error: unknown) {
@@ -278,6 +351,12 @@ export async function executeFunding(
     console.error(`[Cardia Engine] Execution error:`, error);
     mandate.status = 'TX_FAILED';
     mandate.auditTrace.push(`error:execution:${message}`);
+    if (
+      /nonce|replacement|underpriced/i.test(message)
+    ) {
+      await nm.handleTransactionFailure();
+      mandate.auditTrace.push('nonce:resync:after_failure');
+    }
     await broadcastStatus(mandate, broadcast);
   }
 

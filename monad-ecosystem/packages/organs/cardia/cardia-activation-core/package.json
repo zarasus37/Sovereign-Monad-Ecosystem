@@ -15,9 +15,10 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
+    "start:organ": "tsx src/bootstrap.ts",
     "dev": "ts-node src/index.ts",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test src/cardiaFundingEngine.test.ts src/plLedgerConsumer.test.ts && node tests/run-tests.js"
+    "test": "tsx --test src/cardiaFundingEngine.test.ts src/plLedgerConsumer.test.ts src/redisNonceManager.test.ts src/heparAuditClient.test.ts && node tests/run-tests.js"
   },
   "dependencies": {
     "@sovereign/bus": "workspace:*",
@@ -25,6 +26,7 @@
   },
   "optionalDependencies": {
     "ethers": "^6.13.5",
+    "ioredis": "^5.4.1",
     "kafkajs": "^2.2.4"
   },
   "devDependencies": {

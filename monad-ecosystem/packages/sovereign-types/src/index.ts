@@ -63,6 +63,15 @@ export type {
   HeparAuditResult,
 } from './types/hepar.js';
 
+// ── Hepar funding address gate (Vector 4.4) ───────────────────────────────────
+export type {
+  HeparAuditVerdict,
+  HeparAuditContext,
+  HeparAuditRequest,
+  HeparAuditResponse,
+} from './types/hepar-audit.js';
+export { isHeparPass } from './types/hepar-audit.js';
+
 // ── Durable Event Log (Layer 5 audit trail) ─────────────────────────────────
 export type {
   StoredEvent,

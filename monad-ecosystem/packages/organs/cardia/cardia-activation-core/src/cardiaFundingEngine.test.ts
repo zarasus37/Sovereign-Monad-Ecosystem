@@ -15,10 +15,12 @@ describe('cardiaFundingEngine', () => {
     });
     const out = await executeFunding(mandate, {
       live: false,
-      auditAddress: async () => ({
-        passed: false,
-        reason: 'sanctioned',
+      auditFunding: async () => ({
+        verdict: 'FAIL_SANCTIONED',
+        riskScore: 0.99,
+        flags: ['sanctioned'],
         auditId: 'a1',
+        reason: 'sanctioned',
       }),
       broadcast: (e) => {
         events.push(e);
@@ -26,7 +28,29 @@ describe('cardiaFundingEngine', () => {
     });
     assert.equal(out.status, 'AUDIT_FAILED');
     assert.ok(out.auditTrace.some((t) => t.includes('hepar:audit:fail')));
+    assert.ok(out.auditTrace.some((t) => t.includes('FAIL_SANCTIONED')));
     assert.equal(events.at(-1)?.status, 'AUDIT_FAILED');
+  });
+
+  it('fail-closed when Hepar service unavailable', async () => {
+    const mandate = mandateFromWalletBind({
+      principalWallet: '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    });
+    const out = await executeFunding(mandate, {
+      live: false,
+      auditFunding: async () => ({
+        verdict: 'ERROR_SERVICE_UNAVAILABLE',
+        riskScore: 1,
+        flags: ['hepar_timeout', 'fail_closed'],
+        auditId: 'error-no-audit',
+        reason: 'timeout',
+      }),
+      broadcast: () => {},
+    });
+    assert.equal(out.status, 'AUDIT_FAILED');
+    assert.ok(
+      out.auditTrace.some((t) => t.includes('fail_closed:service_unavailable')),
+    );
   });
 
   it('synthesizes dry-run funding when not live', async () => {
@@ -37,10 +61,12 @@ describe('cardiaFundingEngine', () => {
     });
     const out = await executeFunding(mandate, {
       live: false,
-      auditAddress: async () => ({
-        passed: true,
-        reason: 'ok',
+      auditFunding: async () => ({
+        verdict: 'PASS',
+        riskScore: 0.05,
+        flags: [],
         auditId: 'a2',
+        reason: 'ok',
       }),
       broadcast: (e) => {
         events.push(e);
@@ -57,50 +83,62 @@ describe('cardiaFundingEngine', () => {
   it('broadcasts TX_CONFIRMED on live path with injected transfer', async () => {
     resetFundingNonceForTests();
     const events: CardiaFundingKafkaEvent[] = [];
+    let usedNonce: number | undefined;
     const mandate = mandateFromWalletBind({
       principalWallet: '0x3333333333333333333333333333333333333333',
     });
     const out = await executeFunding(mandate, {
       live: true,
       getNonce: async () => 7,
-      transferFn: async () => ({
-        hash: '0xabc123',
-        wait: async () => ({ status: 1, blockNumber: 42 }),
-      }),
-      auditAddress: async () => ({
-        passed: true,
-        reason: 'ok',
+      transferFn: async (_to, _amt, nonce) => {
+        usedNonce = nonce;
+        return {
+          hash: '0xabc123',
+          wait: async () => ({ status: 1, blockNumber: 42 }),
+        };
+      },
+      auditFunding: async () => ({
+        verdict: 'PASS',
+        riskScore: 0.05,
+        flags: [],
         auditId: 'a3',
+        reason: 'ok',
       }),
       broadcast: (e) => {
         events.push(e);
       },
     });
     assert.equal(out.status, 'TX_CONFIRMED');
+    assert.equal(usedNonce, 7);
     assert.equal(out.txHash, '0xabc123');
     assert.equal(out.blockNumber, 42);
+    assert.ok(out.auditTrace.some((t) => t.includes('nonce:7')));
     assert.ok(events.some((e) => e.status === 'TX_BROADCAST'));
     assert.ok(events.some((e) => e.status === 'TX_CONFIRMED'));
   });
 
-  it('marks TX_FAILED on revert and does not leave silent success', async () => {
+  it('marks TX_FAILED on revert and resyncs nonce path', async () => {
     resetFundingNonceForTests();
     const mandate = mandateFromWalletBind({
       principalWallet: '0x4444444444444444444444444444444444444444',
     });
     const out = await executeFunding(mandate, {
       live: true,
+      getNonce: async () => 3,
       transferFn: async () => ({
         hash: '0xdead',
         wait: async () => ({ status: 0, blockNumber: 9 }),
       }),
-      auditAddress: async () => ({
-        passed: true,
-        reason: 'ok',
+      auditFunding: async () => ({
+        verdict: 'PASS',
+        riskScore: 0.05,
+        flags: [],
         auditId: 'a4',
+        reason: 'ok',
       }),
       broadcast: () => {},
     });
     assert.equal(out.status, 'TX_FAILED');
+    assert.ok(out.auditTrace.some((t) => t.includes('tx:reverted')));
   });
 });

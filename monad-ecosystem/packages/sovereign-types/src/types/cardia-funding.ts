@@ -30,6 +30,8 @@ export interface FundingMandate {
 }
 
 export interface CardiaFundingKafkaEvent {
+  /** Unique event identifier. */
+  eventId?: string;
   mandateId: string;
   principalWallet: string;
   status: FundingStatus;
