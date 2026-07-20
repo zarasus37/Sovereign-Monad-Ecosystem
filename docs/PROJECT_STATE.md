@@ -49,20 +49,20 @@
 
 ### Vector 6: Infrastructure + First Breath ✓
 - [x] Docker containers (host + python)
-- [x] docker-compose topology
-- [x] Azure Key Vault integration
-- [x] **First breath integration script**
-- [x] **First Meshaleach audit trace**
+- [x] docker-compose topology (`with-kafka`, `observability` profiles)
+- [x] Azure Key Vault integration (`keyCustody.ts` → secret `BootstrapPrivateKey`)
+- [x] Observability (Prometheus `/metrics` + Grafana dashboard)
+- [x] Stage 2 RewardTrainer first-breath lock (`gnosis-v2.0-reward`, CPU verified dry-run on 41 pairs)
+- [x] **Go-live package (The Breath):** runbook + env template + pulse script
 
----
+### Final Sequence — The Breath (Go-Live package) ✓
+- [x] `docs/GO_LIVE_EXECUTION.md` — provision → Key Vault → env → compose → pulse → first Meshaleach
+- [x] `monad-ecosystem/.env.production.example` — live flags, vault, Router B, Kafka/Redis
+- [x] Compose `env_file` + Key Vault env wiring; monorepo-aware host Dockerfile
+- [x] `/health` pulse: `kafka`, `redis`, `live_funding`, `key_custody`, `metrics`
+- [x] `monad-ecosystem/scripts/go-live-pulse.sh`
 
-## Recent Commits
-
-```
-c83242a feat(vector3.3): Cardia funding engine — wallet bind, Hepar gate...
-503e92a feat(gate-acl): wallet bind protocol — EIP-191 Meshaleach → 0x...
-8c0ac33 feat(vector3): Kafka PL bridge + fix logoc manifold import...
-```
+**Honest gate:** `CARDIA_FUNDING_LIVE=true` moves real capital. Default false until vault + testnet cycles pass.
 
 ---
 
@@ -75,7 +75,7 @@ c83242a feat(vector3.3): Cardia funding engine — wallet bind, Hepar gate...
 | `@sovereign/shaliah-onboarding` | 0.1.0 | Onboarding flow |
 | `@sovereign/cardia-funding-stream` | 0.1.0 | SSE funding stream |
 | `@sovereign/monad-mev` | 0.1.0 | MEV execution engine |
-| `@sovereign/host` | 0.1.0 | Express backend |
+| `@sovereign/host` | 0.1.0 | Express backend + metrics + key custody |
 
 ---
 
@@ -85,26 +85,30 @@ c83242a feat(vector3.3): Cardia funding engine — wallet bind, Hepar gate...
 - **Backend**: Express + Node.js (Docker)
 - **Analytics**: FastAPI + Python (Docker)
 - **Cache**: Redis (Docker)
-- **Event Bus**: Kafka (optional)
-- **Key Custody**: Azure Key Vault
+- **Event Bus**: Kafka (optional profile)
+- **Key Custody**: Azure Key Vault (Managed Identity preferred)
+- **Observability**: Prometheus + Grafana (optional profile)
 
 ---
 
 ## Documentation
 
+- `docs/GO_LIVE_EXECUTION.md` — **operator runbook for cloud deploy**
+- `docs/GNOSIS_V2_PRETRAIN_AUDIT.md` / `GNOSIS_V2_TRAINING_LOG.md` — Stage 2 audit
 - `docs/VOX_NARRATIVE.md` — External semiotic interface
-- `docs/FIRST_MESHALEACH_AUDIT.md` — First onboarding audit trace
 - `docs/implementation_*.md` — Technical implementation plans
 
 ---
 
-## Next Steps
+## Next Steps (operator, capital-gated)
 
-- [ ] Deploy to Monad testnet
-- [ ] Configure production secrets
-- [ ] First real wallet onboarding
-- [ ] Monitor Hepar + Shadow Gate
+- [ ] Deploy VM + Key Vault; inject `BootstrapPrivateKey` (never commit)
+- [ ] Copy `.env.production.example` → `.env.production`; testnet first
+- [ ] `docker compose --env-file .env.production --profile with-kafka up -d --build`
+- [ ] `bash scripts/go-live-pulse.sh` → `status: ALIVE`
+- [ ] First real Meshaleach onboarding on **testnet** before mainnet capital
+- [ ] Promote CAT6–9 preference pairs; GPU Stage 2 full epochs when ready
 
 ---
 
-*The organism breathes. The first Meshaleach has entered the covenant.*
+*The organism has a body and a breath procedure. Capital still waits on deliberate custody.*

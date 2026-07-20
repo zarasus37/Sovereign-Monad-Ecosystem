@@ -132,14 +132,29 @@ export function createSovereignApp(
   }
 
   // ── Health (The Pulse) ───────────────────────────────────────────────────
-  app.get('/health', (_req: Request, res: Response) => {
+  app.get('/health', async (_req: Request, res: Response) => {
+    let key_custody: {
+      configured: boolean;
+      keyVaultName: string | null;
+      authType: string;
+    } = { configured: false, keyVaultName: null, authType: 'none' };
+    try {
+      const { checkKeyVaultHealth } = await import('./lib/keyCustody.js');
+      key_custody = await checkKeyVaultHealth();
+    } catch {
+      /* optional module path */
+    }
+
     res.status(200).json({
       status: 'ALIVE',
       service: '@sovereign/host',
       kafka: kafkaEnabled,
       redis: Boolean(process.env.REDIS_URL),
       live_funding: process.env.CARDIA_FUNDING_LIVE === 'true',
+      yield_router_live: process.env.YIELD_ROUTER_LIVE === 'true',
       metrics: opts.metricsEnabled !== false,
+      key_custody,
+      bootstrap_env_fallback: Boolean(process.env.BOOTSTRAP_PRIVATE_KEY),
       observability_topics: OBSERVABILITY_TOPICS,
       frontend_origin: frontendOrigin,
       timestamp: new Date().toISOString(),

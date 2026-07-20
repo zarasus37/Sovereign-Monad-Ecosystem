@@ -1,52 +1,57 @@
-# Sovereign Host Dockerfile
-# Node 2: Express backend API + Cardia SSE + monad-mev engine
+# Sovereign Host — monorepo-aware production image (Vector Final Sequence / The Breath)
+#
+# Build from repository root:
+#   docker build -f monad-ecosystem/packages/sovereign-host/Dockerfile -t sovereign-host .
+#
+# Runtime: node dist/server.js  (PORT default 3001)
 
-FROM node:20-alpine AS base
+FROM node:20-bookworm-slim AS builder
 
-# Install pnpm
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@9.6.0 --activate
 
-WORKDIR /app
+WORKDIR /repo
 
-# Copy package files
-COPY monad-ecosystem/packages/sovereign-host/package.json ./
-COPY monad-ecosystem/packages/sovereign-host/tsconfig.json ./
-COPY monad-ecosystem/pnpm-workspace.yaml ./
-COPY monad-ecosystem/pnpm-lock.yaml ./
+# Workspace manifests
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
-# Install dependencies
-RUN pnpm install --frozen-lockfile --prod --ignore-scripts
+# Minimal package set for @sovereign/host + its workspace graph
+COPY monad-ecosystem/packages/sovereign-types ./monad-ecosystem/packages/sovereign-types
+COPY monad-ecosystem/packages/sovereign-bus ./monad-ecosystem/packages/sovereign-bus
+COPY monad-ecosystem/packages/gate-acl ./monad-ecosystem/packages/gate-acl
+COPY monad-ecosystem/packages/cardia-funding-stream ./monad-ecosystem/packages/cardia-funding-stream
+COPY monad-ecosystem/packages/sovereign-host ./monad-ecosystem/packages/sovereign-host
 
-# Copy source
-COPY monad-ecosystem/packages/sovereign-host/src ./src
+# Install and build only what the host needs
+RUN pnpm install --filter @sovereign/host... --frozen-lockfile \
+  && pnpm --filter @sovereign/types build \
+  && pnpm --filter @sovereign/bus build \
+  && pnpm --filter @sovereign/gate-acl build \
+  && pnpm --filter @sovereign/cardia-funding-stream build \
+  && pnpm --filter @sovereign/host build
 
-# Build
-RUN pnpm run build
+FROM node:20-bookworm-slim AS production
 
-# Production image
-FROM node:20-alpine AS production
+RUN corepack enable && corepack prepare pnpm@9.6.0 --activate \
+  && apt-get update && apt-get install -y --no-install-recommends wget ca-certificates \
+  && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+WORKDIR /repo
 
-# Copy built artifacts
-COPY --from=base /app/dist ./dist
-COPY --from=base /app/package.json ./
+COPY --from=builder /repo/package.json /repo/pnpm-lock.yaml /repo/pnpm-workspace.yaml ./
+COPY --from=builder /repo/node_modules ./node_modules
+COPY --from=builder /repo/monad-ecosystem/packages ./monad-ecosystem/packages
 
-# Production dependencies only
-RUN corepack enable && corepack prepare pnpm@latest --activate && \
-    pnpm install --frozen-lockfile --prod --ignore-scripts
+ENV NODE_ENV=production
+ENV PORT=3001
 
-# Non-root user
-RUN addgroup -g 1001 -S sovereign && \
-    adduser -u 1001 -S sovereign -G sovereign
+RUN groupadd -g 1001 sovereign && useradd -u 1001 -g sovereign -m sovereign \
+  && chown -R sovereign:sovereign /repo
 USER sovereign
 
-# Expose port
 EXPOSE 3001
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD wget --quiet --tries=1 --spider http://localhost:3001/health || exit 1
+HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
+  CMD wget -q -O- http://127.0.0.1:3001/health >/dev/null || exit 1
 
-# Start
+WORKDIR /repo/monad-ecosystem/packages/sovereign-host
 CMD ["node", "dist/server.js"]

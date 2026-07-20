@@ -1,20 +1,21 @@
 # Sovereign Monad Ecosystem — Docker Compose
-# 
-# UMS Infrastructure Standup (Vector Final Sequence)
-# 
-# Usage:
-#   docker-compose up -d
-#   docker-compose logs -f
-#   docker-compose down
 #
-# Health check after boot:
-#   curl http://localhost:3001/health
-
-version: '3.8'
+# Final Sequence: The Breath (see docs/GO_LIVE_EXECUTION.md)
+#
+# Usage (from this directory):
+#   cp .env.production.example .env.production   # fill secrets — never commit
+#   docker compose --env-file .env.production --profile with-kafka up -d --build
+#   docker compose --env-file .env.production --profile observability up -d
+#   curl -s http://localhost:3001/health | jq .
+#
+# Profiles:
+#   with-kafka     — in-compose Kafka
+#   observability  — Prometheus + Grafana
+#   full           — observability alias
 
 services:
   # ═══════════════════════════════════════════════════════════════════════════
-  # Node 2: Sovereign Host (Backend API + Cardia SSE + MEV Engine)
+  # Sovereign Host (API + Cardia SSE + metrics + key custody)
   # ═══════════════════════════════════════════════════════════════════════════
   sovereign-host:
     build:
@@ -23,36 +24,48 @@ services:
     container_name: sovereign-host
     ports:
       - "3001:3001"
+    env_file:
+      - path: .env.production
+        required: false
     environment:
       - NODE_ENV=production
       - PORT=3001
       - FRONTEND_URL=${FRONTEND_URL:-https://app.yourdomain.com}
-      
-      # Network
+
+      # Cosmos
       - MONAD_RPC_URL=${MONAD_RPC_URL:-https://rpc.testnet.monad.xyz}
-      - MONAD_CHAIN_ID=${MONAD_CHAIN_ID:-1000}
-      
-      # Cardia Funding
+      - MONAD_CHAIN_ID=${MONAD_CHAIN_ID:-10143}
+      - STABLECOIN_CONTRACT=${STABLECOIN_CONTRACT:-}
+
+      # Live capital (default false)
       - CARDIA_FUNDING_LIVE=${CARDIA_FUNDING_LIVE:-false}
       - YIELD_ROUTER_LIVE=${YIELD_ROUTER_LIVE:-false}
-      
-      # Value sinks
+
+      # Router B sinks
       - PRINCIPAL_TREASURY=${PRINCIPAL_TREASURY:-0x0000000000000000000000000000000000000000}
       - SHALIAH_TREASURY=${SHALIAH_TREASURY:-0x0000000000000000000000000000000000000000}
       - ECOSYSTEM_VAULT=${ECOSYSTEM_VAULT:-0x0000000000000000000000000000000000000000}
-      
-      # Nervous system
+
+      # Nervous system (compose service DNS)
       - KAFKA_ENABLED=${KAFKA_ENABLED:-false}
-      - KAFKA_BROKERS=${KAFKA_BROKERS:-localhost:9092}
+      - KAFKA_BROKERS=${KAFKA_BROKERS:-kafka:9092}
       - KAFKA_SASL_USERNAME=${KAFKA_SASL_USERNAME:-}
       - KAFKA_SASL_PASSWORD=${KAFKA_SASL_PASSWORD:-}
       - REDIS_URL=${REDIS_URL:-redis://redis:6379}
-      
+
       # Forensic gates
-      - HEPAR_API_URL=http://python-engine:8000/api/v1/hepar
+      - HEPAR_API_URL=${HEPAR_API_URL:-http://python-engine:8000/api/v1/hepar}
       - HEPAR_AUDIT_MODE=${HEPAR_AUDIT_MODE:-http}
-      - SHADOW_API_URL=http://python-engine:8000/api/v1/shadow/evaluate
+      - HEPAR_API_KEY=${HEPAR_API_KEY:-}
       - SHADOW_API_URL=${SHADOW_API_URL:-http://python-engine:8000/api/v1/shadow/evaluate}
+
+      # Key custody (Azure Key Vault) — preferred over BOOTSTRAP_PRIVATE_KEY
+      - KEY_VAULT_NAME=${KEY_VAULT_NAME:-}
+      - AZURE_TENANT_ID=${AZURE_TENANT_ID:-}
+      - AZURE_CLIENT_ID=${AZURE_CLIENT_ID:-}
+      - AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET:-}
+      # Dev/staging only — never mainnet capital on disk env:
+      - BOOTSTRAP_PRIVATE_KEY=${BOOTSTRAP_PRIVATE_KEY:-}
     depends_on:
       redis:
         condition: service_healthy
@@ -66,7 +79,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 10s
+      start_period: 20s
 
   # ═══════════════════════════════════════════════════════════════════════════
   # Node 3: Python Engine (FastAPI + Hepar + Shadow Markout)

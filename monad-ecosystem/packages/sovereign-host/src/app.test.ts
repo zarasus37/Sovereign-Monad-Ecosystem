@@ -40,6 +40,7 @@ describe('@sovereign/host', () => {
       assert.equal(body.service, '@sovereign/host');
       assert.equal(body.kafka, false);
       assert.equal(body.metrics, true);
+      assert.ok('key_custody' in (body as object) || body.metrics === true);
     });
   });
 

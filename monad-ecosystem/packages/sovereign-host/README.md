@@ -9,7 +9,12 @@
 | `POST` | `/api/v1/gate-acl/promote-pl` | `promotePlHttp` |
 | `POST` | `/api/v1/gate-acl/bind-wallet` | `bindWalletHttp` |
 | `GET` | `/api/v1/cardia/funding/stream/:wallet` | Cardia SSE |
-| `GET` | `/health` | Pulse (kafka / redis / live_funding flags) |
+| `GET` | `/health` | Pulse (kafka / redis / live_funding / key_custody) |
+| `GET` | `/metrics` | Prometheus (Vector 6.3) |
+
+## Go-live
+
+See **`docs/GO_LIVE_EXECUTION.md`**. Production env template: `monad-ecosystem/.env.production.example`.
 
 ## Run (local)
 
