@@ -243,3 +243,36 @@ export {
   CARDIA_FUNDING_TOPIC,
   TIER_1_FUNDING_USD,
 } from './types/cardia-funding.js';
+
+// ── Shadow Markout Gate (Vector 5.1) ───────────────────────────────────────
+export type {
+  ShadowVerdict,
+  ShadowMarkoutRequest,
+  ShadowMarkoutResponse,
+  TradePayload,
+  TradeStatus,
+} from './types/shadow-gate.js';
+export {
+  SHADOW_API_URL,
+  SHADOW_TIMEOUT_MS,
+} from './types/shadow-gate.js';
+
+// ── Capacity ceiling (Vector 5.2) ─────────────────────────────────────────────
+export type {
+  CapacityCeilingEventKind,
+  TradeOutcome,
+  CeilingDecision,
+  CapacityCeilingConfig,
+  CapacityCeilingEvent,
+} from './types/capacity-ceiling.js';
+export {
+  CAPACITY_CEILING_TOPIC,
+  CAPACITY_CEILING_DEFAULT_ALLOCATION_USD,
+  CAPACITY_CEILING_STABLE_DECIMALS,
+  C_DENSITY_FLOOR_DEFAULT,
+  C_DENSITY_WARNING_DEFAULT,
+  CAPACITY_MIN_FLOOR_USD_DEFAULT,
+  CAPACITY_ROLLING_WINDOW_DEFAULT,
+  usdToStableBaseUnits,
+  stableBaseUnitsToUsd,
+} from './types/capacity-ceiling.js';
