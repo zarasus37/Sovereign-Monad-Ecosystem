@@ -40,6 +40,9 @@ export interface TradePayload {
   amountUsd: number;
   isBuy: boolean;
   assetPair: string;
+  /** Stablecoin / yield token for Router B routing. */
+  tokenAddress?: string;
+  tradeId?: string;
   pythPriceUpdate?: {
     price: number;
     conf: number;
@@ -49,15 +52,21 @@ export interface TradePayload {
   status: TradeStatus;
   txHash?: string;
   auditTrace: string[];
+  /** Gross yield after fill (set by engine). */
+  grossYieldUsd?: number;
 }
 
-export type TradeStatus = 
+export type TradeStatus =
   | 'PENDING'
+  | 'MANDATE_REJECTED'
+  | 'CEILING_REJECTED'
   | 'SHADOW_GATE_EVALUATING'
   | 'SHADOW_FAIL_ABORTED'
   | 'TX_BROADCAST'
   | 'TX_CONFIRMED'
-  | 'TX_FAILED';
+  | 'TX_FAILED'
+  | 'YIELD_ROUTED'
+  | 'YIELD_ROUTE_FAILED';
 
 export const SHADOW_API_URL = process.env.SHADOW_API_URL || 'http://localhost:8000/api/v1/shadow/evaluate';
 export const SHADOW_TIMEOUT_MS = 2000;

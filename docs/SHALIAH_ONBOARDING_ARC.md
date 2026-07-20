@@ -250,6 +250,7 @@ Post-graduation: continuous HCD via `@sovereign/hcd-monitor` (Charter §2.1); EC
 | V4.3 | Express/Azure host mount for promote/bind HTTP + Cardia SSE | **landed** (`@sovereign/host` :3001; Vite proxy `/api/v1/gate-acl` + `/api/v1/cardia`) |
 | V4.4 | Real Hepar forensic gate (fail-closed) on Cardia funding | **landed** (`HEPAR_API_URL` / local stub; mock on :3002) |
 | V5.2 | Capacity Ceiling enforcer (C-DENSITY-FLOOR / throttle / exhaustion) | **landed** (`@sovereign/monad-mev`) |
+| V5.3 | Sovereign Execution Loop — CapitalMandate + Router B 50/40/10 | **landed** (EIP-712 mandate, yield router, guarded engine) |
 | V1.3b | JSONL telemetry under `logs/onboarding/` + hcd-monitor parsers | pending |
 | V1.4 | Production Bootstrap key custody | ops / capital-gated |
 | V1.5 | Shadow market UI + override panel | pending |

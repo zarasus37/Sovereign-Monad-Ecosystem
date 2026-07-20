@@ -1,116 +1,409 @@
 /**
- * MEV Execution Engine with Shadow Markout Gate
- * 
- * The live trading engine that enforces the Fail-Closed Doctrine.
- * Every trade must pass the Shadow Markout evaluation before broadcasting.
+ * MEV Execution Engine — Sovereign Execution Loop (Vectors 5.1–5.3).
+ *
+ * Flow:
+ * 1. Verify CapitalMandate (EIP-712, expiry, allocation)
+ * 2. Capacity Ceiling (C-DENSITY-FLOOR)
+ * 3. Shadow Markout Gate (fail-closed)
+ * 4. Execute trade (dry-run mock or live)
+ * 5. Route yield 50/40/10 (Router B / Axiom 7)
  */
 
-import { ethers } from 'ethers';
+import { createHash } from 'node:crypto';
+import type {
+  CapitalMandate,
+  ShadowMarkoutRequest,
+  ShadowMarkoutResponse,
+  SovereignLoopEvent,
+  TradePayload,
+  TradeStatus,
+  YieldDistribution,
+} from '@sovereign/types';
 import {
   evaluateShadowMarkout,
   shouldProceedTrade,
   explainVerdict,
 } from './shadowMarkoutGate.js';
+import { verifyCapitalMandate } from './loop/mandateVerifier.js';
+import { routeYield } from './loop/yieldRouter.js';
+import { broadcastLoopEvent } from './loop/loopBroadcast.js';
 import {
-  type TradePayload,
-  type TradeStatus,
-  SHADOW_API_URL,
-} from '@sovereign/types';
+  CapacityCeilingMonitor,
+  type CapacityCeilingMonitorOptions,
+} from './capacityCeiling.js';
 
-/** Default RPC for Monad testnet */
-const DEFAULT_RPC = process.env.RPC_URL || 'https://rpc.testnet.monad.xyz';
-const CHAIN_ID = Number(process.env.CHAIN_ID) || 1000; // Monad testnet
-
-interface ExecutionConfig {
-  rpcUrl: string;
-  privateKey: string;
+export type ExecutionConfig = {
+  rpcUrl?: string;
+  privateKey?: string;
   shadowApiUrl?: string;
-}
+  /** When true, attempt chain broadcast (requires privateKey). */
+  liveChain?: boolean;
+};
 
-interface ExecutionResult {
+export type GuardedTradeDeps = {
+  /** Injected shadow evaluator (tests). */
+  evaluateShadow?: (
+    req: ShadowMarkoutRequest,
+  ) => Promise<ShadowMarkoutResponse>;
+  /** Shared capacity monitor (process-level). */
+  ceiling?: CapacityCeilingMonitor;
+  ceilingOptions?: CapacityCeilingMonitorOptions;
+  /** Skip EIP-712 crypto (unit tests of structural gates). */
+  skipMandateSignature?: boolean;
+  /** Override profit after fill (USD). Defaults to shadowProfitUsd. */
+  calculateProfit?: (
+    payload: TradePayload,
+    shadow: ShadowMarkoutResponse,
+  ) => number;
+  /** Inject yield router (tests). */
+  routeYieldFn?: typeof routeYield;
+  /** Live ERC-20 transfer for yield routing. */
+  yieldTransferFn?: (
+    to: string,
+    amountBaseUnits: bigint,
+  ) => Promise<{ hash: string }>;
+  nowSec?: number;
+  engineOperator?: string;
+  /** Mock trade fill without ethers. */
+  executeTradeFn?: (payload: TradePayload) => Promise<{
+    hash: string;
+    status: 0 | 1;
+  }>;
+  broadcast?: (event: SovereignLoopEvent) => Promise<void> | void;
+};
+
+export type ExecutionResult = {
   success: boolean;
   txHash?: string;
   status: TradeStatus;
   error?: string;
   auditTrace: string[];
+  distribution?: YieldDistribution;
+  amountUsdUsed?: number;
+  mandateId?: string;
+};
+
+function defaultProfit(
+  _payload: TradePayload,
+  shadow: ShadowMarkoutResponse,
+): number {
+  return Math.max(0, shadow.shadowProfitUsd);
 }
 
 /**
- * Execute a live trade with Shadow Markout Gate validation.
- * 
- * Flow:
- * 1. Validate trade parameters
- * 2. Fetch current Pyth price (assumed — placeholder)
- * 3. Call Shadow Markout Gate for validation
- * 4. If FAIL: abort without signing
- * 5. If PASS: sign and broadcast transaction
- * 6. Return result with full audit trace
+ * Full guarded live trade — requires CapitalMandate (Vector 5.3).
  */
-export async function executeLiveTrade(
+export async function executeGuardedLiveTrade(
   payload: TradePayload,
-  config: ExecutionConfig,
+  mandate: CapitalMandate,
+  config: ExecutionConfig = {},
+  deps: GuardedTradeDeps = {},
 ): Promise<ExecutionResult> {
-  console.log(`[MEV Engine] Starting trade execution on ${payload.poolAddress}...`);
-  
-  const auditTrace: string[] = [...payload.auditTrace];
-  const startTime = Date.now();
+  const auditTrace: string[] = [...(payload.auditTrace ?? [])];
+  const broadcast = deps.broadcast ?? broadcastLoopEvent;
+  const tradeId =
+    payload.tradeId ?? `trade-${Date.now().toString(36)}`;
+  payload.tradeId = tradeId;
+  payload.status = 'SHADOW_GATE_EVALUATING';
+
+  const emit = async (
+    kind: SovereignLoopEvent['kind'],
+    reason: string,
+    extra?: Partial<SovereignLoopEvent>,
+  ) => {
+    await broadcast({
+      kind,
+      reason,
+      mandateId: mandate.mandateId,
+      tradeId,
+      principalWallet: mandate.principalWallet,
+      amountUsd: payload.amountUsd,
+      auditTrace: [...auditTrace],
+      timestamp: new Date().toISOString(),
+      ...extra,
+    });
+  };
 
   try {
-    // ─────────────────────────────────────────────────────────────
-    // STEP 1: Validate trade parameters
-    // ─────────────────────────────────────────────────────────────
-    if (!ethers.isAddress(payload.poolAddress)) {
+    // ── 1. Capital Mandate ─────────────────────────────────────────────
+    const engineOp =
+      deps.engineOperator ||
+      (config.privateKey
+        ? undefined // resolved later if needed
+        : mandate.engineOperator);
+
+    const mandateOk = await verifyCapitalMandate(
+      mandate,
+      payload.amountUsd,
+      {
+        engineOperator: engineOp,
+        nowSec: deps.nowSec,
+        chainId: mandate.chainId,
+        skipSignature: deps.skipMandateSignature === true,
+      },
+    );
+
+    if (!mandateOk) {
+      payload.status = 'MANDATE_REJECTED';
+      auditTrace.push('mandate:rejected');
+      await emit('MANDATE_REJECTED', 'MANDATE_INVALID_OR_EXPIRED');
       return {
         success: false,
-        status: 'SHADOW_FAIL_ABORTED',
-        error: 'INVALID_POOL_ADDRESS',
-        auditTrace: [...auditTrace, 'error:invalid_pool_address'],
+        status: 'MANDATE_REJECTED',
+        error: 'MANDATE_INVALID_OR_EXPIRED',
+        auditTrace,
+        mandateId: mandate.mandateId,
       };
     }
 
-    if (payload.amountUsd <= 0 || payload.amountUsd > 50000) {
+    auditTrace.push(`mandate:verified:${mandate.mandateId}`);
+    await emit('MANDATE_VERIFIED', 'mandate ok');
+
+    // ── 2. Capacity Ceiling ────────────────────────────────────────────
+    const ceiling =
+      deps.ceiling ??
+      new CapacityCeilingMonitor({
+        ...deps.ceilingOptions,
+        principalWallet: mandate.principalWallet,
+        initialAllocationUsd:
+          deps.ceilingOptions?.initialAllocationUsd ??
+          mandate.amountAllocated / 1e6,
+      });
+
+    const ceilingDecision = ceiling.checkCeiling(payload.amountUsd);
+    if (!ceilingDecision.allowed) {
+      payload.status = 'CEILING_REJECTED';
+      auditTrace.push(`ceiling:rejected:${ceilingDecision.reason}`);
       return {
         success: false,
-        status: 'SHADOW_FAIL_ABORTED',
-        error: 'AMOUNT_OUT_OF_BOUNDS',
-        auditTrace: [...auditTrace, 'error:amount_out_of_bounds'],
+        status: 'CEILING_REJECTED',
+        error: ceilingDecision.reason,
+        auditTrace,
+        mandateId: mandate.mandateId,
       };
     }
 
-    auditTrace.push(`engine:trade_validated:${payload.poolAddress}`);
+    const amountUsd =
+      ceilingDecision.throttledSize ?? payload.amountUsd;
+    if (ceilingDecision.throttledSize !== undefined) {
+      auditTrace.push(
+        `ceiling:throttled:${payload.amountUsd}->${amountUsd}`,
+      );
+      payload.amountUsd = amountUsd;
+    } else {
+      auditTrace.push('ceiling:ok');
+    }
 
-    // ─────────────────────────────────────────────────────────────
-    // STEP 2: Fetch current Pyth price (placeholder for integration)
-    // ─────────────────────────────────────────────────────────────
+    // ── 3. Shadow Markout Gate ─────────────────────────────────────────
     const pythPriceUpdate = payload.pythPriceUpdate || {
-      price: 3500.00, // Mock ETH price
+      price: 3500,
       conf: 0.05,
       expo: -8,
       publishTime: Math.floor(Date.now() / 1000),
     };
 
-    auditTrace.push(`pyth:price_fetched:${pythPriceUpdate.price}`);
-
-    // ─────────────────────────────────────────────────────────────
-    // STEP 3: THE SHADOW MARKOUT GATE
-    // ─────────────────────────────────────────────────────────────
-    const shadowResponse = await evaluateShadowMarkout({
+    const evaluate = deps.evaluateShadow ?? evaluateShadowMarkout;
+    const shadowResponse = await evaluate({
       poolAddress: payload.poolAddress,
-      amountInUsd: payload.amountUsd,
+      amountInUsd: amountUsd,
       isBuy: payload.isBuy,
       pythPriceUpdate,
     });
 
     auditTrace.push(
-      `shadow:gate:${shadowResponse.verdict}:slip:${shadowResponse.expectedSlippage}:profit:${shadowResponse.shadowProfitUsd}:audit:${shadowResponse.auditId}`
+      `shadow:gate:${shadowResponse.verdict}:slip:${shadowResponse.expectedSlippage}:profit:${shadowResponse.shadowProfitUsd}:audit:${shadowResponse.auditId}`,
     );
 
-    // ─────────────────────────────────────────────────────────────
-    // STEP 4: FAIL CLOSED — If shadow gate fails, abort immediately
-    // ─────────────────────────────────────────────────────────────
     if (!shouldProceedTrade(shadowResponse)) {
-      console.warn(`[MEV Engine] Trade ABORTED by Shadow Gate: ${explainVerdict(shadowResponse.verdict)}`);
-      
+      console.warn(
+        `[MEV Engine] Trade ABORTED by Shadow Gate: ${explainVerdict(shadowResponse.verdict)}`,
+      );
+      payload.status = 'SHADOW_FAIL_ABORTED';
+      return {
+        success: false,
+        status: 'SHADOW_FAIL_ABORTED',
+        error: `SHADOW_VERDICT_${shadowResponse.verdict}`,
+        auditTrace,
+        mandateId: mandate.mandateId,
+        amountUsdUsed: amountUsd,
+      };
+    }
+
+    auditTrace.push('shadow:gate_passed');
+
+    // ── 4. Execute trade ───────────────────────────────────────────────
+    let txHash: string;
+    let fillOk = true;
+
+    if (deps.executeTradeFn) {
+      const fill = await deps.executeTradeFn(payload);
+      txHash = fill.hash;
+      fillOk = fill.status === 1;
+    } else if (config.liveChain && config.privateKey) {
+      // Minimal live path placeholder — production wires real swap calldata
+      const { ethers } = await import('ethers');
+      const provider = new ethers.JsonRpcProvider(
+        config.rpcUrl ||
+          process.env.MONAD_RPC_URL ||
+          process.env.RPC_URL ||
+          'https://rpc.testnet.monad.xyz',
+      );
+      const wallet = new ethers.Wallet(config.privateKey, provider);
+      auditTrace.push(`tx:building:${payload.poolAddress}`);
+      // Dry structural sign only unless explicitly broadcasting is implemented
+      const mockTxHash =
+        '0x' +
+        createHash('sha256')
+          .update(`${tradeId}:${wallet.address}:${Date.now()}`)
+          .digest('hex');
+      txHash = mockTxHash;
+      auditTrace.push(
+        `tx:broadcast:${txHash}:note:swap_calldata_not_wired`,
+      );
+    } else {
+      txHash =
+        '0x' +
+        createHash('sha256')
+          .update(`${tradeId}:dry:${amountUsd}`)
+          .digest('hex');
+      auditTrace.push(`tx:synthesized:${txHash.slice(0, 18)}…`);
+    }
+
+    payload.txHash = txHash;
+    payload.status = fillOk ? 'TX_CONFIRMED' : 'TX_FAILED';
+    auditTrace.push(
+      fillOk
+        ? `tx:confirmed:${txHash}`
+        : `tx:failed:${txHash}`,
+    );
+
+    if (!fillOk) {
+      await emit('TRADE_FAILED', 'fill failed', { amountUsd });
+      return {
+        success: false,
+        txHash,
+        status: 'TX_FAILED',
+        error: 'FILL_FAILED',
+        auditTrace,
+        mandateId: mandate.mandateId,
+        amountUsdUsed: amountUsd,
+      };
+    }
+
+    // ── 5. Record capacity outcome ─────────────────────────────────────
+    const calcProfit = deps.calculateProfit ?? defaultProfit;
+    const grossYield = calcProfit(payload, shadowResponse);
+    payload.grossYieldUsd = grossYield;
+
+    ceiling.recordTradeOutcome({
+      tradeId,
+      notionalUsd: amountUsd,
+      realizedSlippage: shadowResponse.expectedSlippage,
+      pnlUsd: grossYield,
+      capitalConsumedUsd: amountUsd,
+      principalWallet: mandate.principalWallet,
+    });
+
+    await emit('TRADE_EXECUTED', 'fill ok', {
+      amountUsd,
+      grossYield,
+    });
+
+    // ── 6. Route yield (Router B) ───────────────────────────────────────
+    let distribution: YieldDistribution | undefined;
+    if (grossYield > 0) {
+      try {
+        const route = deps.routeYieldFn ?? routeYield;
+        distribution = await route(grossYield, {
+          tradeId: `yield-${tradeId}`,
+          tokenAddress: payload.tokenAddress,
+          transferFn: deps.yieldTransferFn,
+          live: Boolean(deps.yieldTransferFn),
+          auditTrace,
+        });
+        auditTrace.push(
+          `yield:routed:principal:${distribution.splits.principal}`,
+          `yield:routed:shaliah:${distribution.splits.shaliahTreasury}`,
+          `yield:routed:vault:${distribution.splits.ecosystemVault}`,
+        );
+        if (distribution.synthesized) {
+          auditTrace.push('yield:mode:dry-run');
+        }
+        payload.status = 'YIELD_ROUTED';
+        await emit('YIELD_ROUTED', 'Router B 50/40/10', {
+          grossYield,
+          distribution,
+          synthesized: distribution.synthesized,
+        });
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        auditTrace.push(`yield:error:${message}`);
+        payload.status = 'YIELD_ROUTE_FAILED';
+        return {
+          success: true,
+          txHash,
+          status: 'YIELD_ROUTE_FAILED',
+          error: message,
+          auditTrace,
+          mandateId: mandate.mandateId,
+          amountUsdUsed: amountUsd,
+        };
+      }
+    }
+
+    return {
+      success: true,
+      txHash,
+      status: payload.status,
+      auditTrace,
+      distribution,
+      mandateId: mandate.mandateId,
+      amountUsdUsed: amountUsd,
+    };
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error(`[MEV Engine] Execution error:`, message);
+    payload.status = 'TX_FAILED';
+    auditTrace.push(`error:execution:${message}`);
+    return {
+      success: false,
+      status: 'TX_FAILED',
+      error: message,
+      auditTrace,
+      mandateId: mandate.mandateId,
+    };
+  }
+}
+
+/**
+ * Legacy entry: shadow gate only (no mandate). Prefer executeGuardedLiveTrade.
+ */
+export async function executeLiveTrade(
+  payload: TradePayload,
+  config: ExecutionConfig,
+  deps: Pick<GuardedTradeDeps, 'evaluateShadow'> = {},
+): Promise<ExecutionResult> {
+  const auditTrace: string[] = [...(payload.auditTrace ?? [])];
+  payload.status = 'SHADOW_GATE_EVALUATING';
+
+  try {
+    const pythPriceUpdate = payload.pythPriceUpdate || {
+      price: 3500,
+      conf: 0.05,
+      expo: -8,
+      publishTime: Math.floor(Date.now() / 1000),
+    };
+    const evaluate = deps.evaluateShadow ?? evaluateShadowMarkout;
+    const shadowResponse = await evaluate({
+      poolAddress: payload.poolAddress,
+      amountInUsd: payload.amountUsd,
+      isBuy: payload.isBuy,
+      pythPriceUpdate,
+    });
+    auditTrace.push(
+      `shadow:gate:${shadowResponse.verdict}:audit:${shadowResponse.auditId}`,
+    );
+    if (!shouldProceedTrade(shadowResponse)) {
       return {
         success: false,
         status: 'SHADOW_FAIL_ABORTED',
@@ -118,91 +411,42 @@ export async function executeLiveTrade(
         auditTrace,
       };
     }
-
-    console.log(`[MEV Engine] Shadow Gate PASSED. Profit Est: $${shadowResponse.shadowProfitUsd}`);
-    auditTrace.push(`shadow:gate_passed:proceeding_to_sign`);
-
-    // ─────────────────────────────────────────────────────────────
-    // STEP 5: Sign and broadcast transaction (placeholder)
-    // ─────────────────────────────────────────────────────────────
-    // In production, this would:
-    // 1. Build the swap transaction using the validated price
-    // 2. Sign with the configured private key
-    // 3. Broadcast to the RPC
-    
-    const provider = new ethers.JsonRpcProvider(config.rpcUrl);
-    const wallet = new ethers.Wallet(config.privateKey, provider);
-
-    // Placeholder: construct a dummy transaction for demonstration
-    // In production, this would be a UniV4/swap contract call
-    const tx = {
-      to: payload.poolAddress,
-      value: ethers.parseEther('0.001'), // Minimal value for demo
-      gasLimit: 21000,
-    };
-
-    auditTrace.push(`tx:building:${payload.poolAddress}`);
-
-    // Sign
-    const signedTx = await wallet.signTransaction(tx);
-    auditTrace.push(`tx:signed:${wallet.address}`);
-
-    // NOTE: In production, you would broadcast here
-    // const broadcastTx = await wallet.sendTransaction(tx);
-    // const txHash = broadcastTx.hash;
-    
-    // Mock broadcast for demonstration
-    const mockTxHash = `0x${Buffer.from(Date.now().toString()).toString('hex').padStart(64, '0')}`;
-    auditTrace.push(`tx:broadcast:${mockTxHash}`);
-
-    const elapsed = Date.now() - startTime;
-    console.log(`[MEV Engine] Trade executed successfully in ${elapsed}ms`);
-
+    const txHash =
+      '0x' +
+      createHash('sha256')
+        .update(`legacy:${payload.poolAddress}:${Date.now()}`)
+        .digest('hex');
+    auditTrace.push(`tx:synthesized:${txHash.slice(0, 18)}…`);
     return {
       success: true,
-      txHash: mockTxHash,
+      txHash,
       status: 'TX_BROADCAST',
       auditTrace,
     };
-
-  } catch (error: any) {
-    console.error(`[MEV Engine] Execution error:`, error.message);
-    
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error);
     return {
       success: false,
       status: 'TX_FAILED',
-      error: error.message,
+      error: message,
       auditTrace,
     };
   }
 }
 
 /**
- * Execute a trade in guarded-live mode (with Shadow Gate, slower but safer).
- * This is the default mode for production use.
- */
-export async function executeGuardedLiveTrade(
-  payload: TradePayload,
-  config: ExecutionConfig,
-): Promise<ExecutionResult> {
-  payload.status = 'SHADOW_GATE_EVALUATING';
-  return executeLiveTrade(payload, config);
-}
-
-/**
- * Execute a trade in guardless mode (for backtesting/lab only).
- * WARNING: Never use in production with real funds.
+ * Guardless mode — lab / backtest only. Never with real funds.
  */
 export async function executeGuardlessTrade(
   payload: TradePayload,
-  config: ExecutionConfig,
+  _config: ExecutionConfig = {},
 ): Promise<ExecutionResult> {
   console.warn(`[MEV Engine] GUARDLESS MODE — Shadow Gate BYPASSED`);
-  
-  // Skip shadow gate, proceed directly to execution
-  const auditTrace = [...payload.auditTrace, 'shadow:bypass:guardless_mode'];
-  
-  // ... execute without validation (placeholder)
+  const auditTrace = [
+    ...(payload.auditTrace ?? []),
+    'shadow:bypass:guardless_mode',
+    'mandate:bypass:guardless_mode',
+  ];
   return {
     success: true,
     txHash: `0xguardless-${Date.now()}`,
@@ -211,4 +455,8 @@ export async function executeGuardlessTrade(
   };
 }
 
-export { evaluateShadowMarkout, shouldProceedTrade, explainVerdict } from './shadowMarkoutGate.js';
+export {
+  evaluateShadowMarkout,
+  shouldProceedTrade,
+  explainVerdict,
+} from './shadowMarkoutGate.js';

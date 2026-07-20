@@ -276,3 +276,24 @@ export {
   usdToStableBaseUnits,
   stableBaseUnitsToUsd,
 } from './types/capacity-ceiling.js';
+
+// ── Sovereign execution loop (Vector 5.3) ─────────────────────────────────────
+export type {
+  CapitalMandate,
+  YieldDistribution,
+  MandateVerifyResult,
+  SovereignLoopEventKind,
+  SovereignLoopEvent,
+} from './types/sovereign-loop.js';
+export {
+  SOVEREIGN_MANDATE_DOMAIN_NAME,
+  SOVEREIGN_MANDATE_DOMAIN_VERSION,
+  SOVEREIGN_LOOP_TOPIC,
+  YIELD_SPLIT_PRINCIPAL_BPS,
+  YIELD_SPLIT_SHALIAH_BPS,
+  YIELD_SPLIT_VAULT_BPS,
+  LOOP_STABLE_DECIMALS,
+  loopUsdToBaseUnits,
+  loopBaseUnitsToUsd,
+  computeYieldSplitsBaseUnits,
+} from './types/sovereign-loop.js';

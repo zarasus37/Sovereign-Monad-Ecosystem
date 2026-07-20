@@ -624,6 +624,9 @@ importers:
       '@sovereign/types':
         specifier: workspace:*
         version: link:../sovereign-types
+      ethers:
+        specifier: ^6.13.5
+        version: 6.16.0
     optionalDependencies:
       kafkajs:
         specifier: ^2.2.4

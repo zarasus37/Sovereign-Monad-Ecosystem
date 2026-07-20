@@ -1,7 +1,7 @@
 {
   "name": "@sovereign/monad-mev",
   "version": "0.1.0",
-  "description": "Monad MEV capacity ceiling — C-DENSITY-FLOOR guard for Meshaleach Tier-1 allocation (Vector 5.2)",
+  "description": "Monad MEV engine — shadow gate, capacity ceiling, capital mandate, Router B yield (Vectors 5.1–5.3)",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",
@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "@sovereign/bus": "workspace:*",
-    "@sovereign/types": "workspace:*"
+    "@sovereign/types": "workspace:*",
+    "ethers": "^6.13.5"
   },
   "optionalDependencies": {
     "kafkajs": "^2.2.4"
