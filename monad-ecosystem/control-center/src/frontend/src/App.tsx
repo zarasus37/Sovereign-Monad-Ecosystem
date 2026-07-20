@@ -19,6 +19,7 @@ import VoxPage from "@/pages/VoxPage";
 import BrokenGenesisPage from "@/pages/onboarding/BrokenGenesisPuzzle";
 import HeparShadowMarketPage from "@/pages/onboarding/HeparShadowMarket";
 import ArchonInterrogationPage from "@/pages/onboarding/ArchonInterrogation";
+import LiveActivationGatePage from "@/pages/onboarding/LiveActivationGate";
 import {
   RouterProvider,
   createRootRoute,
@@ -128,6 +129,11 @@ const routes = [
     getParentRoute: () => rootRoute,
     path: "/onboarding/archon-gate",
     component: ArchonInterrogationPage,
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/onboarding/live-activation",
+    component: LiveActivationGatePage,
   }),
 ];
 

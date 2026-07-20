@@ -426,6 +426,9 @@ importers:
 
   monad-ecosystem/packages/gate-acl:
     dependencies:
+      ethers:
+        specifier: ^6.13.5
+        version: 6.16.0
       ioredis:
         specifier: ^5.4.1
         version: 5.11.1
@@ -602,6 +605,10 @@ importers:
       '@sovereign/types':
         specifier: workspace:*
         version: link:../../../sovereign-types
+    optionalDependencies:
+      kafkajs:
+        specifier: ^2.2.4
+        version: 2.2.4
     devDependencies:
       '@types/node':
         specifier: ^20.11.0
@@ -734,6 +741,22 @@ importers:
       typescript:
         specifier: ^5.6.0
         version: 5.9.3
+
+  monad-ecosystem/packages/shaliah-telemetry-bus:
+    dependencies:
+      '@sovereign/hcd-monitor':
+        specifier: workspace:*
+        version: link:../hcd-monitor
+      '@sovereign/shaliah-onboarding':
+        specifier: workspace:*
+        version: link:../shaliah-onboarding
+    devDependencies:
+      typescript:
+        specifier: ^5.3.0
+        version: 5.9.3
+      vitest:
+        specifier: ^2.1.0
+        version: 2.1.9(@edge-runtime/vm@3.2.0)(@types/node@22.7.5)
 
   monad-ecosystem/packages/sovereign-bus:
     dependencies:

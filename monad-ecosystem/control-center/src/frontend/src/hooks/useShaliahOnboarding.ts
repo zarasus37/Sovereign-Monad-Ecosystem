@@ -52,6 +52,8 @@ interface ShaliahOnboardingState {
   phase3Complete: boolean;
   phase3Result: Phase3Completion | null;
   meshaleachVerified: boolean;
+  /** Set after EIP-191 bind — canonical on-chain principal */
+  boundWallet: string | null;
 
   captureTelemetry: (event: BehavioralTelemetry) => void;
   captureQuarantineTelemetry: (event: QuarantineTelemetry) => void;
@@ -66,6 +68,7 @@ interface ShaliahOnboardingState {
   resetPhase1: () => void;
   resetPhase2: () => void;
   resetPhase3: () => void;
+  setBoundWallet: (wallet: string | null) => void;
   exportTelemetryJson: () => string;
 }
 
@@ -147,6 +150,7 @@ export const useShaliahOnboarding = create<ShaliahOnboardingState>()(
       phase3Complete: false,
       phase3Result: null,
       meshaleachVerified: false,
+      boundWallet: null,
 
       captureTelemetry: (event) => {
         stealthAnalyzePhase1(event);
@@ -430,6 +434,8 @@ export const useShaliahOnboarding = create<ShaliahOnboardingState>()(
           meshaleachVerified: false,
         }),
 
+      setBoundWallet: (wallet) => set({ boundWallet: wallet }),
+
       exportTelemetryJson: () => {
         const st = get();
         return JSON.stringify(
@@ -455,6 +461,7 @@ export const useShaliahOnboarding = create<ShaliahOnboardingState>()(
               meshaleachVerified: st.meshaleachVerified,
               telemetry: st.phase3Telemetry,
             },
+            boundWallet: st.boundWallet,
           },
           null,
           2,
@@ -481,6 +488,7 @@ export const useShaliahOnboarding = create<ShaliahOnboardingState>()(
         phase3Complete: s.phase3Complete,
         phase3Result: s.phase3Result,
         meshaleachVerified: s.meshaleachVerified,
+        boundWallet: s.boundWallet,
       }),
     },
   ),

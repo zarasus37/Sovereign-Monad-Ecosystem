@@ -36,7 +36,9 @@ export type CardiaPlUnlockResult =
 
 /**
  * Evaluate a PL ledger broadcast for Cardia Tier-1 capital unlock.
- * Rejects client-style verifiers (defense-in-depth).
+ *
+ * Funding unlock requires wallet-bind-tier1-activation (Vector 3.2) — not
+ * simulation PL alone. Rejects client-style verifiers (defense-in-depth).
  */
 export function evaluatePlForTier1(
   event: CardiaPlLedgerEvent,
@@ -53,14 +55,26 @@ export function evaluatePlForTier1(
     };
   }
 
-  if (event.totalPl >= threshold) {
+  const walletBound = event.taskId === 'wallet-bind-tier1-activation';
+  if (event.totalPl >= threshold && walletBound) {
     return {
       unlocked: true,
       principalId: event.principalId,
       totalPl: event.totalPl,
       capitalUsd,
       mandate: 'TIER_1_MESHALEACH',
-      reason: `totalPl ${event.totalPl} ≥ ${threshold} after ${event.taskId}`,
+      reason: `wallet-bound totalPl ${event.totalPl} ≥ ${threshold} — funding eligible`,
+    };
+  }
+
+  if (event.totalPl >= threshold && !walletBound) {
+    return {
+      unlocked: false,
+      principalId: event.principalId,
+      totalPl: event.totalPl,
+      remainingPl: 0,
+      reason:
+        'PL threshold met but wallet not bound — await wallet-bind-tier1-activation',
     };
   }
 

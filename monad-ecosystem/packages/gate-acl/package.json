@@ -15,7 +15,7 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "test": "tsx --test src/gateAcl.test.ts src/runtime.adapters.test.ts src/closedLoop.test.ts src/logocTrade.test.ts src/plBridge.test.ts",
+    "test": "tsx --test src/gateAcl.test.ts src/runtime.adapters.test.ts src/closedLoop.test.ts src/logocTrade.test.ts src/plBridge.test.ts src/walletBind.test.ts",
     "demo": "tsx src/demo.ts",
     "closed-loop": "tsx src/closedLoop.ts",
     "closed-loop:interactive": "tsx src/closedLoop.ts --interactive",
@@ -25,6 +25,7 @@
     "start": "tsx src/main.ts"
   },
   "dependencies": {
+    "ethers": "^6.13.5",
     "ioredis": "^5.4.1",
     "kafkajs": "^2.2.4"
   },

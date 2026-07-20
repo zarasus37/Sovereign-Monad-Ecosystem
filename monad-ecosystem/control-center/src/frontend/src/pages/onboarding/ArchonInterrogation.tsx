@@ -373,6 +373,15 @@ export function ArchonInterrogation() {
                 envelope {PHASE3_CONSTRAINT_ENVELOPE}
               </Badge>
             )}
+            <Button
+              asChild
+              type="button"
+              className="mt-4 font-mono text-xs bg-emerald-700 hover:bg-emerald-600"
+            >
+              <Link to="/onboarding/live-activation">
+                Continue → Bind Wallet & Live Capital
+              </Link>
+            </Button>
           </div>
         )}
       </div>

@@ -27,6 +27,7 @@ const NAV_LAYERS = [
   { layer: 18, label: "Onboarding · Broken Genesis", route: "/onboarding/broken-genesis" },
   { layer: 19, label: "Onboarding · Shadow Market", route: "/onboarding/shadow-market" },
   { layer: 20, label: "Onboarding · Archon Gate", route: "/onboarding/archon-gate" },
+  { layer: 21, label: "Onboarding · Live Activation", route: "/onboarding/live-activation" },
 ] as const;
 
 function Sidebar() {
@@ -109,7 +110,7 @@ function Sidebar() {
           </span>
         </div>
         <div className="font-mono text-[9px] text-muted-foreground/30 tracking-wider">
-          20-LAYER ECOSYSTEM OS
+          21-LAYER ECOSYSTEM OS
         </div>
       </div>
     </aside>

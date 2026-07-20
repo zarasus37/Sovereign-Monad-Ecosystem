@@ -214,3 +214,11 @@ export type {
   ArchonTaskPayload,
   PlPromoteResult,
 } from './types/pl-ledger.js';
+
+// ── Wallet bind (Vector 3.2) ─────────────────────────────────────────────────
+export type {
+  WalletBindRequest,
+  WalletBindKafkaPayload,
+  WalletBindResult,
+} from './types/wallet-bind.js';
+export { WALLET_BIND_MESSAGE_PREFIX } from './types/wallet-bind.js';
