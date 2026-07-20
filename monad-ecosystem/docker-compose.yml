@@ -54,7 +54,7 @@ services:
       - REDIS_URL=${REDIS_URL:-redis://redis:6379}
 
       # Forensic gates
-      - HEPAR_API_URL=${HEPAR_API_URL:-http://python-engine:8000/api/v1/hepar}
+      - HEPAR_API_URL=${HEPAR_API_URL:-http://hepar-engine:3003/api/v1/hepar}
       - HEPAR_AUDIT_MODE=${HEPAR_AUDIT_MODE:-http}
       - HEPAR_API_KEY=${HEPAR_API_KEY:-}
       - SHADOW_API_URL=${SHADOW_API_URL:-http://python-engine:8000/api/v1/shadow/evaluate}
@@ -69,6 +69,8 @@ services:
     depends_on:
       redis:
         condition: service_healthy
+      hepar-engine:
+        condition: service_healthy
       python-engine:
         condition: service_healthy
     restart: unless-stopped
@@ -82,7 +84,32 @@ services:
       start_period: 20s
 
   # ═══════════════════════════════════════════════════════════════════════════
-  # Node 3: Python Engine (FastAPI + Hepar + Shadow Markout)
+  # Hepar Engine — True TypeScript forensic chain scanner (A→B→C→D)
+  # Replaces the python-engine mock Hepar endpoint.
+  # ═══════════════════════════════════════════════════════════════════════════
+  hepar-engine:
+    build:
+      context: ../..
+      dockerfile: monad-ecosystem/packages/hepar-service/Dockerfile
+    container_name: sovereign-hepar
+    ports:
+      - "3003:3003"
+    environment:
+      - NODE_ENV=production
+      - PORT=3003
+    restart: unless-stopped
+    networks:
+      - sovereign-net
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3003/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # Node 3: Python Engine (FastAPI + Shadow Markout only)
+  # Note: Hepar endpoint REMOVED — now served by hepar-engine above.
   # ═══════════════════════════════════════════════════════════════════════════
   python-engine:
     build:
