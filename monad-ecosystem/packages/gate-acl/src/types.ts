@@ -28,6 +28,8 @@ export interface GateEvent {
   gateId: string;
   verifiedBy: VerifiedBy;
   at: number; // unix ms
+  /** Optional custom points (onboarding archon = 25); default POINTS.comprehension_gate_pass */
+  points?: number;
 }
 
 export interface OverrideEvent {
@@ -51,6 +53,8 @@ export interface TaskEvent {
   outcome: 'passed' | 'failed';
   verifiedBy: VerifiedBy;
   at: number;
+  /** Optional custom points (onboarding: 10 genesis / 15 quarantine); default POINTS.domain_task_pass */
+  points?: number;
 }
 
 /** Closed LOGOC paper trade (process-valid) — small PL credit toward tier 2. */

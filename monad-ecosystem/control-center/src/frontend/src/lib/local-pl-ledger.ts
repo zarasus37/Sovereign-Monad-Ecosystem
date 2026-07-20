@@ -29,6 +29,9 @@ export interface LocalPlEvent {
   constraintEnvelopeVersion?: string;
   profileWeights?: Phase1ProfileWeights;
   meta?: Record<string, unknown>;
+  /** True after successful POST /promote-pl (Kafka or local synthesis). */
+  synced?: boolean;
+  serverEventId?: string;
 }
 
 /** @deprecated alias for genesis-shaped records */
@@ -261,4 +264,48 @@ export function computeSnapshot(
     events,
     lastUpdated: Date.now(),
   };
+}
+
+/** Mark a local task award as synced to the server/Kafka bridge. */
+export function markSynced(
+  principalId: string,
+  taskId: LocalPlTaskId,
+  serverEventId?: string,
+): void {
+  const all = loadAll();
+  let changed = false;
+  for (const e of all) {
+    if (
+      e.principalId === principalId &&
+      e.taskId === taskId &&
+      e.outcome === "passed"
+    ) {
+      e.synced = true;
+      if (serverEventId) e.serverEventId = serverEventId;
+      changed = true;
+    }
+  }
+  if (changed) saveAll(all);
+}
+
+export function isTaskSynced(
+  principalId: string,
+  taskId: LocalPlTaskId,
+): boolean {
+  return loadAll().some(
+    (e) =>
+      e.principalId === principalId &&
+      e.taskId === taskId &&
+      e.outcome === "passed" &&
+      e.synced === true,
+  );
+}
+
+export function getUnsyncedTasks(principalId: string): LocalPlEvent[] {
+  return loadAll().filter(
+    (e) =>
+      e.principalId === principalId &&
+      e.outcome === "passed" &&
+      !e.synced,
+  );
 }

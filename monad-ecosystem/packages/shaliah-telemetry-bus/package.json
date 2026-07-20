@@ -1,0 +1,26 @@
+{
+  "name": "@sovereign/shaliah-telemetry-bus",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Shaliah Onboarding telemetry → hcd-monitor BusEvent adapter",
+  "exports": {
+    ".": "./dist/index.js",
+    "./cli": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --passWithNoTests",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sovereign/hcd-monitor": "workspace:*",
+    "@sovereign/shaliah-onboarding": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

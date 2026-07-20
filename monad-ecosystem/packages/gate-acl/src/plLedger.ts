@@ -87,7 +87,13 @@ export class PLLedger {
       const w = decayWeight(e.at, now, this.halfLifeMs);
       if (e.kind === 'comprehension_gate') {
         comprehensionGates.push(e);
-        if (e.passed) raw += POINTS.comprehension_gate_pass * w;
+        if (e.passed) {
+          const pts =
+            typeof e.points === 'number' && e.points > 0
+              ? e.points
+              : POINTS.comprehension_gate_pass;
+          raw += pts * w;
+        }
       } else if (e.kind === 'valid_override') {
         if (e.validated) {
           validOverrides.push(e);
@@ -96,7 +102,11 @@ export class PLLedger {
       } else if (e.kind === 'domain_task') {
         if (e.outcome === 'passed') {
           domainTasksCompleted.push(e);
-          raw += POINTS.domain_task_pass * w;
+          const pts =
+            typeof e.points === 'number' && e.points > 0
+              ? e.points
+              : POINTS.domain_task_pass;
+          raw += pts * w;
         }
       } else if (e.kind === 'logoc_paper_trade') {
         logocPaperTrades.push(e);

@@ -5,8 +5,9 @@ cross-principal race on tier changes).
 
 | Topic | Producer | Consumer(s) | Payload |
 |---|---|---|---|
-| `pl.events` | comprehension-gate svc, override-verifier svc, task-verifier svc | `pl-ledger` service | `PLEvent` |
+| `pl.events` | comprehension-gate svc, override-verifier svc, task-verifier svc, **PL promote bridge** | `pl-ledger` service | `PLEvent` |
 | `pl.state.updated` | `pl-ledger` service | `gate-acl` service | `PLState` (post-recompute) |
+| `sovereign.pl.ledger.events` | **PL promote bridge** (server only) | Cardia, Hepar, Dove, multi-organ | `PlLedgerKafkaEvent` (onboarding awards + auditTrace) |
 | `intent.raised` | agent decision layer | `gate-acl` service | `IntentRaised` |
 | `execution.approved` | `gate-acl` service | executor | `ExecutionApproved` |
 | `execution.rejected` | `gate-acl` service | quarantine consumer, audit log | `ExecutionRejected` |

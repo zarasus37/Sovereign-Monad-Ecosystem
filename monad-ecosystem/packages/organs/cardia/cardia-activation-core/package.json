@@ -22,6 +22,9 @@
     "@sovereign/bus": "workspace:*",
     "@sovereign/types": "workspace:*"
   },
+  "optionalDependencies": {
+    "kafkajs": "^2.2.4"
+  },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "ts-node": "^10.9.2",

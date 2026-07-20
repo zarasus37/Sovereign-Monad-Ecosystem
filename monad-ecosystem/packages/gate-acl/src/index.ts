@@ -54,6 +54,24 @@ export {
 } from './genesisVerify.js';
 
 export {
+  verifyPlPromoteClaim,
+  buildPlLedgerKafkaEvent,
+  toPlEvent,
+  deterministicEventId,
+  PL_POINTS,
+  CONSTRAINT_ENVELOPE_VERSION,
+  type PromoteVerifyResult,
+} from './plBridge.js';
+export type {
+  PlPromoteClaim,
+  PlPromoteResult,
+  PlLedgerKafkaEvent,
+  PlOnboardingTaskId,
+  PlTaskPayload,
+} from './plBridge.types.js';
+export { promotePl, promotePlHttp, type PlBridgeDeps } from './plBridgeService.js';
+
+export {
   SYNTHETIC_ACCOUNT_DEFAULT,
   RISK_PCT_MIN,
   RISK_PCT_MAX,

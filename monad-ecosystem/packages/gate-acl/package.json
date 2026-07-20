@@ -15,7 +15,7 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "test": "tsx --test src/gateAcl.test.ts src/runtime.adapters.test.ts src/closedLoop.test.ts src/logocTrade.test.ts",
+    "test": "tsx --test src/gateAcl.test.ts src/runtime.adapters.test.ts src/closedLoop.test.ts src/logocTrade.test.ts src/plBridge.test.ts",
     "demo": "tsx src/demo.ts",
     "closed-loop": "tsx src/closedLoop.ts",
     "closed-loop:interactive": "tsx src/closedLoop.ts --interactive",

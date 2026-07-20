@@ -9,8 +9,10 @@ import {
   appendArchonPl,
   appendBrokenGenesisPl,
   appendQuarantinePl,
+  markSynced,
   type LocalPlSnapshot,
 } from "@/lib/local-pl-ledger";
+import { promotePlToBridge } from "@/lib/pl-promote-client";
 import type {
   InterrogationTelemetry,
   Phase3Completion,
@@ -260,6 +262,22 @@ export const useShaliahOnboarding = create<ShaliahOnboardingState>()(
           lastEventAt: result.twin.stabilizedAt,
           plSnapshot: pl.snapshot,
         });
+        void bridgePromote({
+          principalId: s.principalId,
+          taskId: "broken-genesis-repair",
+          currentPl: Math.max(0, pl.snapshot.score - 10),
+          taskPayload: {
+            kind: "broken-genesis",
+            isStable: true,
+            totalEnergy:
+              result.profileWeights.theoWeight +
+              result.profileWeights.technoWeight +
+              result.profileWeights.cosmoWeight,
+            theoWeight: result.profileWeights.theoWeight,
+            technoWeight: result.profileWeights.technoWeight,
+            cosmoWeight: result.profileWeights.cosmoWeight,
+          },
+        });
         return { ok: true };
       },
 
@@ -313,6 +331,17 @@ export const useShaliahOnboarding = create<ShaliahOnboardingState>()(
         } catch {
           /* quota */
         }
+        void bridgePromote({
+          principalId: s.principalId,
+          taskId: "quarantine-refusal-literacy",
+          currentPl: Math.max(0, pl.snapshot.score - 15),
+          taskPayload: {
+            kind: "quarantine",
+            correctHalts: result.comprehensionScore,
+            hcd1Burden: result.hcd1Burden,
+            hcd2Fidelity: result.hcd2Fidelity,
+          },
+        });
         return { ok: true };
       },
 
@@ -362,6 +391,15 @@ export const useShaliahOnboarding = create<ShaliahOnboardingState>()(
         } catch {
           /* quota */
         }
+        void bridgePromote({
+          principalId: s.principalId,
+          taskId: "archon-comprehension-gate",
+          currentPl: Math.max(0, pl.snapshot.score - 25),
+          taskPayload: {
+            kind: "archon",
+            gatesPassed: result.gatesPassed,
+          },
+        });
         return { ok: true };
       },
 
@@ -450,4 +488,39 @@ export const useShaliahOnboarding = create<ShaliahOnboardingState>()(
 
 function clamp01(x: number): number {
   return Math.max(0, Math.min(1, x));
+}
+
+/**
+ * Optimistic local PL already written — attempt server/Kafka promote.
+ * Offline or failed verify keeps local cache (ACL live capital stays closed).
+ */
+async function bridgePromote(opts: {
+  principalId: string;
+  taskId:
+    | "broken-genesis-repair"
+    | "quarantine-refusal-literacy"
+    | "archon-comprehension-gate";
+  taskPayload: Record<string, unknown>;
+  currentPl: number;
+}): Promise<void> {
+  try {
+    const result = await promotePlToBridge({
+      principalId: opts.principalId,
+      domain: "agent_ops",
+      taskId: opts.taskId,
+      taskPayload: {
+        ...opts.taskPayload,
+        currentPl: opts.currentPl,
+      },
+    });
+    markSynced(opts.principalId, opts.taskId, result.event.eventId);
+    console.log(
+      `[PL Bridge] Synced to ${result.status}. Verified by: ${result.event.verifiedBy}. totalPl=${result.event.totalPl}`,
+    );
+  } catch (err) {
+    console.warn(
+      `[PL Bridge] Offline or verification failed. Retaining local ledger only.`,
+      err,
+    );
+  }
 }

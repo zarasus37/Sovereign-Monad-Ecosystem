@@ -243,8 +243,9 @@ Post-graduation: continuous HCD via `@sovereign/hcd-monitor` (Charter §2.1); EC
 | V1.1b | Control Center Phase 1 React: `BrokenGenesisPuzzle` + `useShaliahOnboarding` + twin seed | **landed** (`/onboarding/broken-genesis`) |
 | V1.2 | Control Center Phase 2 React: `HeparShadowMarket` + quarantine HCD-1/2 | **landed** (`/onboarding/shadow-market`) |
 | V1.3 | Control Center Phase 3 Archon blocks UI + PL +25 Meshaleach | **landed** (`/onboarding/archon-gate`) |
+| V3 | Kafka PL bridge: `promotePl` verify + `sovereign.pl.ledger.events` + Cardia Tier-1 unlock | **landed** (local synthesis default; `KAFKA_ENABLED=true` for live) |
 | V1.3b | JSONL telemetry under `logs/onboarding/` + hcd-monitor parsers | pending |
-| V1.4 | Production Kafka pl-ledger + mint dormant / live unlock | capital-gated |
+| V1.4 | Mint dormant NFT / funded Cardia capital execution | capital-gated |
 | V1.5 | Shadow market UI + override panel | pending |
 | V1.6 | Archon terminal UI + structured refusal form | pending |
 | V1.7 | Mint dormant / graduate unlock (contracts) | capital-gated |

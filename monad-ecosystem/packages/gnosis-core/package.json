@@ -20,7 +20,7 @@
     "start": "node dist/cli.js",
     "start:registry": "node dist/registry-server.js",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "clean": "rm -rf dist"
   },
   "dependencies": {

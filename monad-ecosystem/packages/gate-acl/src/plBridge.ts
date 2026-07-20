@@ -239,6 +239,7 @@ export function toPlEvent(
       gateId: kafkaEvent.taskId,
       verifiedBy: 'comprehension-gate',
       at: now,
+      points: kafkaEvent.pointsAwarded,
     };
     return ge;
   }
@@ -251,6 +252,7 @@ export function toPlEvent(
     outcome: 'passed',
     verifiedBy: 'task-verifier',
     at: now,
+    points: kafkaEvent.pointsAwarded,
   };
   return te;
 }

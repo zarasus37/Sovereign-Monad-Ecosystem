@@ -19,6 +19,19 @@ export type {
   CardiaActivationStatus,
 };
 
+export {
+  evaluatePlForTier1,
+  TIER_1_THRESHOLD,
+  TIER_1_CAPITAL_USD,
+  type CardiaPlLedgerEvent,
+  type CardiaPlUnlockResult,
+} from './plUnlock.js';
+export {
+  handlePlLedgerMessage,
+  startPlLedgerConsumer,
+  type UnlockCapitalFn,
+} from './plLedgerConsumer.js';
+
 import { EventBus } from '@sovereign/bus';
 import type { EventTrace } from '@sovereign/types';
 
