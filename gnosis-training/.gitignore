@@ -1,7 +1,13 @@
 # Dry-run + real-run training outputs — never committed.
 # (see docs/gnosis-training/DRY_RUN_RUNBOOK.md)
 dryrun/
-checkpoints/
+# Checkpoint weights ignored; Vector 6.1 lock metadata is force-tracked below.
+checkpoints/*
+!checkpoints/gnosis-v2.0-reward/
+checkpoints/gnosis-v2.0-reward/*
+!checkpoints/gnosis-v2.0-reward/MODEL_CARD.md
+!checkpoints/gnosis-v2.0-reward/training_metrics.json
+!checkpoints/gnosis-v2.0-reward/split.json
 eval/results/
 data/gnosis-events-*.jsonl
 data/dry-run-pairs.jsonl
