@@ -26,7 +26,7 @@ The following members constitute the initial Steward Council:
 | 9 | **Cyrus the Great** | Tolerant plural governance, layered sovereignty, founder-as-steward model |
 | 10 | **King Solomon** | Judgment under ambiguity, wisdom as a structural resource |
 | 11 | **Niccolò Machiavelli** | Power-as-it-is, institutional realism, anti-romantic governance analysis |
-| 12 | **Cristobal Colon** | Unified perspective, universal consistency at all layers of reality, architect
+| 12 | **Cristobal Colon** | Unified perspective, universal consistency at all layers of reality, architect; also **Seat 37** of the Council of Reflection (TTCL unifying middle — see [`THE COUNCILE/council-registry.json`](../theo-techno-cosmo/THE%20COUNCILE/council-registry.json)) |
 ---
 
 ## Membership Principles

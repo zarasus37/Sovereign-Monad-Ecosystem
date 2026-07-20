@@ -942,6 +942,12 @@ Philosophy → enforceable system validity (orthogonal to constitution C1–C5):
 - Enheduanna bound to TempleGrid fixture; `pnpm check:council` enforces every source file is claimed
 - Distinct from Steward Council (charter votes) — documented in STEWARD_COUNCIL.md cross-link
 
+### Completed: Council Seat 37 — Cristobal Colon TTCL middle (2026-07-19)
+
+- Reflection registry + source: `Cristobal Colon — TTCL Unifying Seat.txt`
+- Role: hold all Council of Reflection voices under TTCL/LOGOC without founder veto or Archontic collapse
+- Bindings: Steward Council #12, principal:cris-colon, Agent 0 fixture, TempleGrid as operative grammar
+
 ### Completed: Agent 0 closed-loop PL→ACL (2026-07-19)
 
 - Fixture: `gate-acl/fixtures/agent-0-profile.json` — Cristobal Colon / xkryptic genesis with IPIP-NEO-300 + SD3 from `emergence-claim-core` registration; bound to `principal:cris-colon`, PL domain `trading`

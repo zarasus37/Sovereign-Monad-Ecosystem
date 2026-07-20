@@ -357,6 +357,30 @@ const MEMBERS = [
     file_patterns: [/Zenobia/i],
     recently_added: true,
   },
+  // Seat 37 — TTCL unifying middle (not another historical extraction)
+  {
+    member_id: 'cristobal-colon',
+    display_name: 'Cristobal Colon',
+    era: 'living — principal:cris-colon',
+    ttc_emphasis: ['THEOLOGY', 'TECHNOLOGY', 'COSMOLOGY'],
+    contribution:
+      'Seat 37: TTCL unifying middle — holds the full Council of Reflection under tripartite grammar without founder veto or Archontic collapse',
+    key_insight:
+      'Unified perspective is the clear center of the table: all voices at full voltage, none the Source, compression into one act under LOGOC/TTCL',
+    file_patterns: [/Cristobal Colon/i],
+    recently_added: true,
+    system_bindings: [
+      { kind: 'steward-council', ref: 'docs/STEWARD_COUNCIL.md#12' },
+      {
+        kind: 'logoc-corpus',
+        ref: 'monad-ecosystem/packages/gate-acl/fixtures/agent-0-profile.json',
+      },
+      {
+        kind: 'temple-grid',
+        ref: 'shared/fixtures/layer6/enheduanna-temple-grid.json',
+      },
+    ],
+  },
 ];
 
 const files = readdirSync(councilDir).filter((f) => {

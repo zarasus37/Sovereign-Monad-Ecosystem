@@ -20,6 +20,7 @@ Every source file in this directory must map to a `member_id` in the registry. *
 | Member | Binding |
 |--------|---------|
 | **Enheduanna** | TempleGrid: `shared/fixtures/layer6/enheduanna-temple-grid.json` + LOGOC `logoc.temple-grid.v1` |
+| **Cristobal Colon (Seat 37)** | TTCL unifying middle · Steward Council #12 · Agent 0 / `principal:cris-colon` · not founder veto |
 
 ---
 
@@ -86,6 +87,14 @@ Curated from source files. Prefer **profile** texts for onboarding; **GNOSIS EVE
 | **Mirabai** | c. 1498–c. 1557 | Direct devotion dissolves inherited caste/marriage architecture |
 | **Queen of Sheba (Makeda)** | multi-tradition | Wisdom verified by encounter, not rumor |
 | **Zenobia of Palmyra** | c. 240–c. 274 CE | Peripheral nodes can temporarily become hubs of order |
+
+### Seat 37 — TTCL unifying middle
+
+| Member | Role |
+|--------|------|
+| **Cristobal Colon** | Living middle of the assembly: full Council at voltage, none as Source; Theology · Technology · Cosmology held together under LOGOC/TTCL; binds reflection corpus to principal responsibility without founder veto |
+
+Seat 37 is **not** a thirty-seventh historical god of the grid. It is the **clear center of the table** — the only place all other seats can be true at once.
 
 ---
 

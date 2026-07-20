@@ -5,7 +5,7 @@
   "kind": "council-of-reflection",
   "source_dir": "theo-techno-cosmo/THE COUNCILE",
   "description": "Historical / contemplative Council of Reflection. Distinct from docs/STEWARD_COUNCIL.md (charter governance).",
-  "generated_at": "2026-07-19",
+  "generated_at": "2026-07-20",
   "members": [
     {
       "member_id": "akhenaten",
@@ -171,6 +171,39 @@
         "Christine de Pizan (1364–c. 1430) i.txt"
       ],
       "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "cristobal-colon",
+      "display_name": "Cristobal Colon",
+      "era": "living — principal:cris-colon",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Seat 37: TTCL unifying middle — holds the full Council of Reflection under tripartite grammar without founder veto or Archontic collapse",
+      "key_insight": "Unified perspective is the clear center of the table: all voices at full voltage, none the Source, compression into one act under LOGOC/TTCL",
+      "source_files": [
+        "Cristobal Colon (2026- ) founder of.txt",
+        "Cristobal Colon — TTCL Unifying Seat.txt"
+      ],
+      "system_bindings": [
+        {
+          "kind": "steward-council",
+          "ref": "docs/STEWARD_COUNCIL.md#12"
+        },
+        {
+          "kind": "logoc-corpus",
+          "ref": "monad-ecosystem/packages/gate-acl/fixtures/agent-0-profile.json"
+        },
+        {
+          "kind": "temple-grid",
+          "ref": "shared/fixtures/layer6/enheduanna-temple-grid.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -672,8 +705,8 @@
     }
   ],
   "stats": {
-    "member_count": 36,
-    "source_file_count": 43,
-    "recently_added_count": 9
+    "member_count": 37,
+    "source_file_count": 45,
+    "recently_added_count": 10
   }
 }
