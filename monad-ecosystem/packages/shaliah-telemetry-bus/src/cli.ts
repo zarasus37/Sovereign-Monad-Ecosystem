@@ -9,10 +9,8 @@
  */
 
 import { readFile, writeFile, stat } from 'node:fs/promises';
-import { resolve, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
 import { parseShaliahTelemetry, type ShaliahTelemetryParseResult } from './parser.js';
-import { toBusEvents } from './adapter.js';
 
 interface CliArgs {
   input?: string;

@@ -606,6 +606,9 @@ importers:
         specifier: workspace:*
         version: link:../../../sovereign-types
     optionalDependencies:
+      ethers:
+        specifier: ^6.13.5
+        version: 6.16.0
       kafkajs:
         specifier: ^2.2.4
         version: 2.2.4
@@ -616,6 +619,9 @@ importers:
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@20.19.43)(typescript@5.9.3)
+      tsx:
+        specifier: ^4.19.0
+        version: 4.21.0
       typescript:
         specifier: ^5.3.3
         version: 5.9.3

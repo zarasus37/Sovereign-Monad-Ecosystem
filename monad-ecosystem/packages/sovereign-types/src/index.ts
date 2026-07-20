@@ -222,3 +222,15 @@ export type {
   WalletBindResult,
 } from './types/wallet-bind.js';
 export { WALLET_BIND_MESSAGE_PREFIX } from './types/wallet-bind.js';
+
+// ── Cardia funding (Vector 3.3) ──────────────────────────────────────────────
+export type {
+  FundingStatus,
+  FundingTier,
+  FundingMandate,
+  CardiaFundingKafkaEvent,
+} from './types/cardia-funding.js';
+export {
+  CARDIA_FUNDING_TOPIC,
+  TIER_1_FUNDING_USD,
+} from './types/cardia-funding.js';

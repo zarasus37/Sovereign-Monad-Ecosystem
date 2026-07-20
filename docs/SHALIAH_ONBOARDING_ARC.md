@@ -245,8 +245,9 @@ Post-graduation: continuous HCD via `@sovereign/hcd-monitor` (Charter §2.1); EC
 | V1.3 | Control Center Phase 3 Archon blocks UI + PL +25 Meshaleach | **landed** (`/onboarding/archon-gate`) |
 | V3 | Kafka PL bridge: `promotePl` verify + `sovereign.pl.ledger.events` + Cardia Tier-1 unlock | **landed** (local synthesis default; `KAFKA_ENABLED=true` for live) |
 | V3.2 | Wallet bind: EIP-191 + server PL check + `wallet-bind-tier1-activation` Kafka | **landed** (`/onboarding/live-activation`) |
+| V3.3 | Cardia Funding Engine — Hepar gate + dry-run / live ERC-20 transfer | **landed** (dry-run default; `CARDIA_FUNDING_LIVE=true` for chain) |
 | V1.3b | JSONL telemetry under `logs/onboarding/` + hcd-monitor parsers | pending |
-| V1.4 | Cardia Funding Engine — real $15k mandate tx | capital-gated |
+| V1.4 | Host mount HTTP + production Bootstrap key custody | ops / capital-gated |
 | V1.5 | Shadow market UI + override panel | pending |
 | V1.6 | Archon terminal UI + structured refusal form | pending |
 | V1.7 | Mint dormant / graduate unlock (contracts) | capital-gated |

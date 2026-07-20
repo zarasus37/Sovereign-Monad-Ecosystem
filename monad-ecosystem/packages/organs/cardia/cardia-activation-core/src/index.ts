@@ -30,7 +30,30 @@ export {
   handlePlLedgerMessage,
   startPlLedgerConsumer,
   type UnlockCapitalFn,
+  type FundingTriggerFn,
 } from './plLedgerConsumer.js';
+export {
+  executeFunding,
+  mandateFromWalletBind,
+  resetFundingNonceForTests,
+  type FundingEngineDeps,
+  type FundingBroadcastFn,
+} from './cardiaFundingEngine.js';
+export {
+  heparAuditClient,
+  auditAddress,
+  type HeparAddressAuditResult,
+  type HeparAuditFn,
+} from './heparAuditClient.js';
+export type {
+  FundingStatus,
+  FundingMandate,
+  CardiaFundingKafkaEvent,
+} from './cardiaFunding.types.js';
+export {
+  CARDIA_FUNDING_TOPIC,
+  TIER_1_FUNDING_USD,
+} from './cardiaFunding.types.js';
 
 import { EventBus } from '@sovereign/bus';
 import type { EventTrace } from '@sovereign/types';
