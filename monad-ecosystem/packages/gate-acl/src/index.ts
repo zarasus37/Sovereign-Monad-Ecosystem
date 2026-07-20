@@ -47,6 +47,13 @@ export { GateIntentService } from './gateIntentService.js';
 export { ShaliahIntentEmitter, PlEventEmitter } from './shaliahAgentPath.js';
 
 export {
+  verifyBrokenGenesisStructural,
+  buildBrokenGenesisTaskEvent,
+  type GenesisProfileWeights,
+  type GenesisVerifyInput,
+} from './genesisVerify.js';
+
+export {
   SYNTHETIC_ACCOUNT_DEFAULT,
   RISK_PCT_MIN,
   RISK_PCT_MAX,

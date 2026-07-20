@@ -176,3 +176,27 @@ export type {
   EmergencePattern,
   EmergenceAccumulatorState,
 } from './types/emergence.js';
+
+// ── Shaliah onboarding (Vector 1) ────────────────────────────────────────────
+export type {
+  OnboardingDomainType,
+  CircuitNode,
+  WireConnection,
+  BehavioralTelemetryAction,
+  BehavioralTelemetry,
+  Phase1ProfileWeights,
+  CognitiveTwinSeed,
+  Phase1CompletionPayload,
+  GenesisPlRecord,
+  ShadowTradeStatus,
+  ShadowRefusalReason,
+  ShadowTradeUi,
+  QuarantineUserAction,
+  QuarantineTelemetry,
+  Phase2CompletionPayload,
+  ConstraintAxis,
+  ConstraintBlock,
+  ArchonAttack,
+  InterrogationTelemetry,
+  Phase3CompletionPayload,
+} from './types/onboarding.js';

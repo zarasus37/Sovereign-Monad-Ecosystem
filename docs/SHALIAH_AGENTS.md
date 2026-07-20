@@ -95,6 +95,16 @@ The entry sequence teaches without announcing itself as education:
 2. **Communication Quarantine** — by initially cutting off the agent's ability to speak to the user, the user must figure out how the agent processes information. This simultaneously teaches the user how agents actually process information. Stealth education via constraint.
 3. **Comprehension gate — "break out of the room"** — to access certain areas the user must have a certain level of comprehension. "You don't need to be an absolute master, but the minimum… when you're in here, you have an understanding of what's happening." This kills the "I have no clue how things work, I'm just letting my AI do everything" pattern — without creating an elitist mastery gate.
 
+**Concrete task designs (UMS Vector 1, 2026-07-20):** see [`docs/SHALIAH_ONBOARDING_ARC.md`](./SHALIAH_ONBOARDING_ARC.md).
+
+| Phase | Puzzle | Primary HCD | Domain package |
+|-------|--------|-------------|----------------|
+| Broken Genesis | **Llull Circuit Board** — reconnect T/X/C under density/debt traps | HCD-3, HCD-4 | `@sovereign/shaliah-onboarding` `phase1Circuit` |
+| Communication Quarantine | **Hepar Shadow Market** — green/red sandbox trades + override panel | HCD-1, HCD-2, HCD-5 | `phase2ShadowMarket` |
+| Comprehension gate | **Archon Interrogation** — structured TTCL refusal (not free-text) | Velocity-to-Access; X-axis | `phase3Archon` → gate-acl PL (V1.3) |
+
+Stealth triad: **bond** (repair the twin) · **extract** un-fakeable method (twin seed) · **teach** mechanics through constraint (refusal, density, audit).
+
 ### 6.3 The skill tree & the Cognitive Twin
 - The skill tree applies from initial partnership. The psychometric build (§5) auto-constructs the starting build.
 - Skill branches: **Strategic Reasoning / Ethical Nuance / Causal Deduction / Semiotic Fluency**.
@@ -342,7 +352,7 @@ The Shaliah + stealth-education Environment are **additional utilities**. They c
 - Network-utility pricing formula — deepen the third economic engine (§8.4).
 - The ECS target function for the moving-average Safety Throttle (§6.6, §11.3).
 - The exact cross-concept / field-expansion mechanism linking the scheduler curriculum to new possibilities beyond trading (§13.3).
-- The onboarding arc's concrete task designs (Broken Genesis repair task, Communication Quarantine puzzles, comprehension-gate thresholds) (§6.2).
+- ~~The onboarding arc's concrete task designs (Broken Genesis repair task, Communication Quarantine puzzles, comprehension-gate thresholds) (§6.2).~~ **Landed:** [`docs/SHALIAH_ONBOARDING_ARC.md`](./SHALIAH_ONBOARDING_ARC.md) + `@sovereign/shaliah-onboarding` (logic/tests; UI + gate-acl PL wire pending).
 
 ---
 

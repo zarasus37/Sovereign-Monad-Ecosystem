@@ -16,6 +16,9 @@ import PneumaPage from "@/pages/PneumaPage";
 import SynapsePage from "@/pages/SynapsePage";
 import SystemStatePage from "@/pages/SystemStatePage";
 import VoxPage from "@/pages/VoxPage";
+import BrokenGenesisPage from "@/pages/onboarding/BrokenGenesisPuzzle";
+import HeparShadowMarketPage from "@/pages/onboarding/HeparShadowMarket";
+import ArchonInterrogationPage from "@/pages/onboarding/ArchonInterrogation";
 import {
   RouterProvider,
   createRootRoute,
@@ -110,6 +113,21 @@ const routes = [
     getParentRoute: () => rootRoute,
     path: "/system-state",
     component: SystemStatePage,
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/onboarding/broken-genesis",
+    component: BrokenGenesisPage,
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/onboarding/shadow-market",
+    component: HeparShadowMarketPage,
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/onboarding/archon-gate",
+    component: ArchonInterrogationPage,
   }),
 ];
 
