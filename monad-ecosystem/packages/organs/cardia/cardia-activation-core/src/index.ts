@@ -19,6 +19,57 @@ export type {
   CardiaActivationStatus,
 };
 
+export {
+  evaluatePlForTier1,
+  TIER_1_THRESHOLD,
+  TIER_1_CAPITAL_USD,
+  type CardiaPlLedgerEvent,
+  type CardiaPlUnlockResult,
+} from './plUnlock.js';
+export {
+  handlePlLedgerMessage,
+  startPlLedgerConsumer,
+  type UnlockCapitalFn,
+  type FundingTriggerFn,
+} from './plLedgerConsumer.js';
+export {
+  executeFunding,
+  mandateFromWalletBind,
+  resetFundingNonceForTests,
+  type FundingEngineDeps,
+  type FundingBroadcastFn,
+} from './cardiaFundingEngine.js';
+export {
+  RedisNonceManager,
+  InMemoryNonceStore,
+  nonceManager,
+  connectDefaultNonceRedis,
+  attachChainNonceFetcher,
+  NONCE_KEY_DEFAULT,
+  type NonceRedisClient,
+} from './redisNonceManager.js';
+export { bootstrapCardiaOrgan } from './bootstrap.js';
+export {
+  heparAuditClient,
+  auditAddress,
+  auditAddressForFunding,
+  localHeparAudit,
+  remoteHeparAudit,
+  toLegacyResult,
+  type HeparAddressAuditResult,
+  type HeparAuditFn,
+  type HeparFundingAuditFn,
+} from './heparAuditClient.js';
+export type {
+  FundingStatus,
+  FundingMandate,
+  CardiaFundingKafkaEvent,
+} from './cardiaFunding.types.js';
+export {
+  CARDIA_FUNDING_TOPIC,
+  TIER_1_FUNDING_USD,
+} from './cardiaFunding.types.js';
+
 import { EventBus } from '@sovereign/bus';
 import type { EventTrace } from '@sovereign/types';
 

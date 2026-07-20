@@ -38,13 +38,86 @@ import type { WheelRegistry } from "./registry.js";
 import { compositeKey } from "./moves.js";
 import { ALL_DOMAINS, type Move, type ScheduleConfig, type ScheduleState } from "./state.js";
 
-/** The four objective terms + the scalar J. All in [0, 1] except J. */
+/** The six objective terms + the scalar J. All in [0, 1] except J. */
 export interface ObjectiveTerms {
   readonly C: number;
   readonly L: number;
   readonly T: number;
   readonly S: number;
+  /** Letter-pair validity (εP term) — 1 if valid, 0 if invalid, 1 if no letter-pairs configured. */
+  readonly P: number;
+  /** Fourth-Figure Tabula Generalis validity (ζF term) — 1 if valid, 0 if invalid, 1 if not enabled. */
+  readonly F: number;
   readonly J: number;
+}
+
+/**
+ * Letter-pair validity check (εP term).
+ * 
+ * Returns 1 if the current composite's letter combination is valid according to the
+ * 45-pair letter table, 0 if invalid. When letter-pairs are not configured, returns 1.
+ * 
+ * Per spec: letter-pair validity is a DISTINCT term (εP), NOT a filter that rejects moves.
+ * Invalid composites still execute but receive no εP bonus.
+ */
+export function letterPairValidity(
+  state: ScheduleState,
+  registry: WheelRegistry
+): number {
+  if (!registry.letterPairs) return 1; // No filter configured = always valid
+  
+  const pair = registry.pairById.get(state.pattern)!;
+  const [w1, w2] = pair.wheels;
+  
+  const wheel1 = registry.wheels.get(w1)!;
+  const wheel2 = registry.wheels.get(w2)!;
+  
+  const pos1 = state.offsets[w1]!;
+  const pos2 = state.offsets[w2]!;
+  
+  // Get letters at current positions (fallback to A, B, C... if no alphabet defined)
+  const letter1 = wheel1.alphabet?.[pos1] ?? String.fromCharCode(65 + pos1);
+  const letter2 = wheel2.alphabet?.[pos2] ?? String.fromCharCode(65 + pos2);
+  
+  // Normalize key order (BC = CB for lookup)
+  const key = letter1 < letter2 ? `${letter1}${letter2}` : `${letter2}${letter1}`;
+  
+  // Valid if letter pair exists in the 45-pair table
+  return registry.letterPairs.letterPairLookup.has(key) ? 1 : 0;
+}
+
+/**
+ * Fourth-Figure Tabula Generalis validity check (ζF term).
+ * 
+ * Returns 1 if the 3-wheel composite's letter combination forms a valid
+ * camera in the Tabula Generalis (84 cameras), 0 if invalid.
+ * When Fourth Figure is not enabled, returns 1.
+ * 
+ * This evaluates THREE wheels (THEOLOGY, TECHNOLOGY, COSMOLOGY facets),
+ * unlike εP which evaluates two wheels from the active pair.
+ */
+export function fourthFigureValidity(
+  state: ScheduleState,
+  registry: WheelRegistry,
+  facets: Readonly<Record<Domain, string>>
+): number {
+  if (!registry.fourthFigure || !registry.fourthFigure.enabled) return 1;
+  
+  // Get the three wheels currently active (THEOLOGY, TECHNOLOGY, COSMOLOGY)
+  const domainOrder: Domain[] = ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"];
+  
+  const letters = domainOrder.map(domain => {
+    const wheelName = facets[domain];
+    const wheel = registry.wheels.get(wheelName)!;
+    const pos = state.offsets[wheelName]!;
+    return wheel.alphabet?.[pos] ?? String.fromCharCode(65 + pos);
+  });
+  
+  // Normalize: sort alphabetically for lookup (BCD = CDB = DBC)
+  const sorted = [...letters].sort();
+  const key = sorted.join('');
+  
+  return registry.fourthFigure.cameraLookup.has(key) ? 1 : 0;
 }
 
 /** Move roughness — the semantic disruption rank (drives the Locality term). */
@@ -121,11 +194,14 @@ export function tripartite(window: readonly ReadonlySet<Domain>[]): number {
  * Evaluate the objective terms for a step: given the move just taken, the new
  * state, the trailing composite-domain window (NOT yet including this step —
  * the caller appends this step's compositeDomains), and the visited composite
- * keys, return {C, L, T, S, J}.
+ * keys, return {C, L, T, S, P, F, J}.
  *
  * C uses `compositeKey(newState)` against `visited` (the caller adds the new
  * key to the set after evaluation if the step is accepted). T uses `window`
- * (the pre-step trailing window). L + S use `move`.
+ * (the pre-step trailing window). L + S use `move`. P uses letter-pair validity.
+ * F uses Fourth-Figure validity (3-wheel composite).
+ *
+ * Extended formula: J = αC + βL + γT − δS + εP + ζF
  */
 export function evaluateMove(
   move: Move,
@@ -139,8 +215,25 @@ export function evaluateMove(
   const L = locality(move);
   const T = tripartite(window);
   const S = cost(move);
-  const J = config.weights.alpha * C + config.weights.beta * L + config.weights.gamma * T - config.weights.delta * S;
-  return { C, L, T, S, J };
+  
+  // Letter-pair validity (εP term) — distinct from Coverage per spec
+  const P = letterPairValidity(newState, registry);
+  
+  // Fourth-Figure validity (ζF term) — evaluates 3-wheel composite
+  const F = fourthFigureValidity(newState, registry, newState.facets);
+  
+  // Core objective: αC + βL + γT − δS
+  const J_core = config.weights.alpha * C 
+               + config.weights.beta * L 
+               + config.weights.gamma * T 
+               - config.weights.delta * S;
+               
+  // Add letter-pair bonus: J = J_core + εP + ζF
+  const epsilon = config.weights.epsilon ?? 0.05;
+  const zeta = config.weights.zeta ?? 0.02;
+  const J = J_core + epsilon * P + zeta * F;
+          
+  return { C, L, T, S, P, F, J };
 }
 
 /** ΔJ = J_new − J_old (the SA acceptance delta). */
