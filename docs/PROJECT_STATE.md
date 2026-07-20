@@ -48,12 +48,13 @@
 - [x] Fail-closed gate integration
 
 ### Vector 6: Infrastructure + First Breath ✓
-- [x] Docker containers (host + python)
+- [x] Docker containers (host + python + hepar)
 - [x] docker-compose topology (`with-kafka`, `observability` profiles)
 - [x] Azure Key Vault integration (`keyCustody.ts` → secret `BootstrapPrivateKey`)
 - [x] Observability (Prometheus `/metrics` + Grafana dashboard)
 - [x] Stage 2 RewardTrainer first-breath lock (`gnosis-v2.0-reward`, CPU verified dry-run on 41 pairs)
 - [x] **Go-live package (The Breath):** runbook + env template + pulse script
+- [x] **Vector 6.4:** Real Hepar Integration (Standalone TS microservice running A→B→C→D forensic pipeline)
 
 ### Final Sequence — The Breath (Go-Live package) ✓
 - [x] `docs/GO_LIVE_EXECUTION.md` — provision → Key Vault → env → compose → pulse → first Meshaleach
@@ -76,6 +77,7 @@
 | `@sovereign/cardia-funding-stream` | 0.1.0 | SSE funding stream |
 | `@sovereign/monad-mev` | 0.1.0 | MEV execution engine |
 | `@sovereign/host` | 0.1.0 | Express backend + metrics + key custody |
+| `@sovereign/hepar-service` | 1.0.0 | Forensic 4-stage chain scanner microservice |
 
 ---
 
@@ -83,6 +85,7 @@
 
 - **Frontend**: Vite + React (Control Center)
 - **Backend**: Express + Node.js (Docker)
+- **Forensics**: TS Microservice (Docker — `hepar-engine`)
 - **Analytics**: FastAPI + Python (Docker)
 - **Cache**: Redis (Docker)
 - **Event Bus**: Kafka (optional profile)

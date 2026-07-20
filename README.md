@@ -196,11 +196,11 @@ New to the Sovereign Monad? Begin with the [Theo-Techno-Cosmo quick start guide]
 - **Vector 6: The First Breath (Deployment Readiness)** — Dockerized the full topology (Express Host, Python MEV/Hepar Engine, Redis, Kafka). Added Azure KeyVault `keyCustody` integration, Prometheus observability stack with Grafana, and successfully ran the `first_breath.ts` end-to-end testnet simulation to generate `docs/FIRST_MESHALEACH_AUDIT.md`.
 - **Gnosis Training (Stage 2)** — Executed a CPU-verified dry-run of the RewardTrainer on the 71-pair CAT1-9 preference corpus, locking `gnosis-v2.0-reward`.
 - **x402-bridge sovereignty remediation** — the bridge is wrapped as a self-contained sovereign agent (`X402Agent`) with a cost-accounting ledger. 
+- **Real Hepar Integration** — The legacy `hepar-core` typescript stack was extracted and resurrected as a standalone `@sovereign/hepar-service` microservice. It executes the full 4-stage pipeline (Static, Symbolic, Monte Carlo, Consensus) via Express at `POST /api/v1/hepar`. The python mock is retired, and `docker-compose.yml` natively wires the `hepar-engine` container to the host.
 
 ### Active frontier
 - **Cloud Provisioning (The Final Breath)** — All infrastructure (Docker Compose, Prometheus, Azure KeyVault, Express endpoints, Python FastAPI) is merged to `main`. The only remaining step is for the architect to physically provision the cloud VM, inject the `BOOTSTRAP_PRIVATE_KEY` to the vault, set up `.env.production`, and run `docker compose --profile with-kafka up -d`.
 - **Real 8B GPU Run** — The Stage 2 RewardTrainer works and is CPU-verified, but awaits real GPU capital (RunPod/AWS) to train the 8B parameter model properly.
-- **Real Hepar Integration** — Swap the fail-closed mock Hepar service out for the true forensic chain scanner before mainnet capital is deposited.
 
 See the Master Operating File in `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` for the full axioms, architecture, and execution instructions, and `docs/PROJECT_STATE.md` for the live 9-layer status table.
 
