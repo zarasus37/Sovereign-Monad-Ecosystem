@@ -10,7 +10,7 @@ Treat `monad-mev` as a build-and-verification surface inside the broader Soverei
 
 When a task concerns ecosystem status, architecture, build order, doctrine, or blockers, synchronize to these files first:
 
-1. `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`
+1. `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`
 2. `docs/ECOSYSTEM_BUILD_MAP.md`
 3. `docs/BUILD_EXECUTION_FLOW.md`
 4. `docs/CANONICAL_SYNC_DISCIPLINE.md`

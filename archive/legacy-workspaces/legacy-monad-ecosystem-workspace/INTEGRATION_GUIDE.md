@@ -4,7 +4,7 @@
 
 This document explains how the archived legacy workspace relates to:
 1. **Legacy folder structure** (`gnostic-engine/`, `theo-techno-cosmo/`, `monad-ecosystem/`)
-2. **Master Operating File (MOF)** (`docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`)
+2. **Master Operating File (MOF)** (`docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`)
 3. **Live deployments** (Monad mainnet, Azure cloud services)
 
 ---

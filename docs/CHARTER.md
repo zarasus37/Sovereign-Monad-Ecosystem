@@ -189,5 +189,5 @@ In practice:
 
 ## See also
 
-- [`docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`](./SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md) — authoritative operating backbone
+- [`docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`](./SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md) — authoritative operating backbone
 - [`docs/SHARED_AI_COLLABORATION_CHARTER.md`](./SHARED_AI_COLLABORATION_CHARTER.md) — operational companion for AI co-architects and code-authoring assistants

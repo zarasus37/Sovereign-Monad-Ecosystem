@@ -34,7 +34,7 @@ Canonical project status does not live in this repo. Use the separate `sovereign
 ## Source Of Truth
 
 - Canonical status and active master phase: `https://github.com/zarasus37/sovereign-monad`
-- Local mirrored MOF for workspace use: `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`
+- Local mirrored MOF for workspace use: `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`
 - Local mirrored build map for workspace use: `docs/ECOSYSTEM_BUILD_MAP.md`
 - Local mirrored sync discipline for workspace use: `docs/CANONICAL_SYNC_DISCIPLINE.md`
 - Local mirrored candidate standard kernel v0: `docs/CANDIDATE_STANDARD_KERNEL_V0.md`

@@ -34,7 +34,7 @@ See `scripts/bootstrap.ps1` for full environment setup (uv + pnpm).
 This is a large, intentionally multi-domain ecosystem. You do not need to read everything at once.
 
 1. **Start here** — this `README.md` for orientation and how to run it.
-2. **Master Operating File** — `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`  
+2. **Master Operating File** — `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`  
    The authoritative backbone: philosophy, intention, system functions, architecture, layers, roadmap, and active blockers.
 3. **Guardrail Charter** — `docs/CHARTER.md`  
    Non-negotiable constraints on architecture, code, governance, narratives, and human–AI collaboration. All contributors and AI collaborators are bound by it.
@@ -114,7 +114,7 @@ The_Sovereign/
 |   |-- PROJECT_STATE.md
 |   |-- PROJECT_STATE.json
 |   |-- REPO_STRUCTURE_MAP.md
-|   `-- SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md
+|   `-- SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md
 |-- shared/
 |   `-- schemas/                  # cross-domain JSON schemas (signal, dove, gnosis, hepar)
 |-- theo-techno-cosmo/
@@ -202,7 +202,7 @@ New to the Sovereign Monad? Begin with the [Theo-Techno-Cosmo quick start guide]
 - **Cloud Provisioning (The Final Breath)** — All infrastructure (Docker Compose, Prometheus, Azure KeyVault, Express endpoints, Python FastAPI) is merged to `main`. The only remaining step is for the architect to physically provision the cloud VM, inject the `BOOTSTRAP_PRIVATE_KEY` to the vault, set up `.env.production`, and run `docker compose --profile with-kafka up -d`.
 - **Real 8B GPU Run** — The Stage 2 RewardTrainer works and is CPU-verified, but awaits real GPU capital (RunPod/AWS) to train the 8B parameter model properly.
 
-See the Master Operating File in `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` for the full axioms, architecture, and execution instructions, and `docs/PROJECT_STATE.md` for the live 9-layer status table.
+See the Master Operating File in `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` for the full axioms, architecture, and execution instructions, and `docs/PROJECT_STATE.md` for the live 9-layer status table.
 
 ---
 

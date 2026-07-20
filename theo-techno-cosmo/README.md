@@ -30,7 +30,7 @@ This domain is not an application runtime. Use it by reading and navigating the 
 
 - Start with `README.md`
 - Operational constraints: `../docs/THEO_TECHNO_COSMO.md`
-- Then read `../docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`
+- Then read `../docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`
 
 ## Do Not Put Here
 

@@ -280,7 +280,7 @@ New empirical tests should:
 
 - **Wheel/** — Operative diagrams that structure how PLEX components relate
 - **THE COUNCILE/** — Historical precedent for each axiom being tested here
-- **[SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE v2.4.0](../../docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md)** — High-level architecture that the PLEX operationalizes
+- **[SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE v2.4.0](../../docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md)** — High-level architecture that the PLEX operationalizes
 - **gnostic-engine/** — Code manifestation of PLEX constraints
 - **monad-ecosystem/** — Economic and behavioral manifestation of PLEX constraints
 

@@ -4,7 +4,7 @@ $files = @(
 'g:\My Drive\The_Sovereign\docs\LOGOC_DUAL_WHEEL_GNOSIS_ENGINE_SPEC_v5_1.md',
 'g:\My Drive\The_Sovereign\docs\LOGOC_v5_TESTING_DIAGNOSTICS_ANALYSIS.md',
 'g:\My Drive\The_Sovereign\docs\HEPAR_INTERNAL_ARCHITECTURE.md',
-'g:\My Drive\The_Sovereign\docs\SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md',
+'g:\My Drive\The_Sovereign\docs\SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md',
 'g:\My Drive\The_Sovereign\docs\WHAT_MAKES_GNOSIS_REAL.md',
 'g:\My Drive\The_Sovereign\docs\PHASE2_MIGRATION_PLAN.md',
 'g:\My Drive\The_Sovereign\gnostic-engine\notes\README.md',

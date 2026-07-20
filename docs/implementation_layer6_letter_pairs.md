@@ -20,7 +20,7 @@ The Layer 6 Scheduler (`@sovereign/scheduler`) currently operates with:
 
 ### 1.2 The Deferred Items
 
-From `SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` and `PROJECT_STATE.md`:
+From `SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` and `PROJECT_STATE.md`:
 
 | Item | Description | Current Status |
 |------|-------------|-----------------|
@@ -383,7 +383,7 @@ Where:
 ## 8. References
 
 - `TTCL_v1_0_BREAKDOWN.md` — Primary spec source (layer 6 spec entry)
-- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` — Layer 6 spec entry
+- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` — Layer 6 spec entry
 - `docs/PROJECT_STATE.md` — Layer 6 status table
 - `monad-ecosystem/packages/scheduler/src/` — Current implementation
 - `shared/fixtures/layer6/wheel-registry.json` — Current registry (28 pairs)

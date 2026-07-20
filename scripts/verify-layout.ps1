@@ -47,7 +47,7 @@ $requiredDocs = @(
   'docs/PROJECT_STATE.md',
   'docs/PROJECT_STATE.json',
   'docs/REPO_STRUCTURE_MAP.md',
-  'docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md'
+  'docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md'
 )
 
 $missingRequiredDocs = $requiredDocs | Where-Object { -not (Test-Path (Join-Path $root $_)) }

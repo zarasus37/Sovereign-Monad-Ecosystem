@@ -54,5 +54,5 @@ The following members constitute the initial Steward Council:
 
 - [`docs/CHARTER.md`](./CHARTER.md) — adjudication rules and guardrails the council interprets
 - [`docs/SHARED_AI_COLLABORATION_CHARTER.md`](./SHARED_AI_COLLABORATION_CHARTER.md) — AI collaborator obligations
-- [`docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`](./SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md) — governance layer context
+- [`docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`](./SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md) — governance layer context
 - [`theo-techno-cosmo/THE COUNCILE/`](../theo-techno-cosmo/THE%20COUNCILE/README.md) — **Council of Reflection** (historical gnosis sources; not voting members). Machine index: [`council-registry.json`](../theo-techno-cosmo/THE%20COUNCILE/council-registry.json)

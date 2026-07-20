@@ -65,7 +65,7 @@ Think of this as the "north star" document—start here to find your path throug
 - How will Dove evaluate me?
 
 **File Locations**:
-- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`
+- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`
 - `theo-techno-cosmo/plex/Manifest/OPERATIONAL_AXIOMS_PHASE4.md`
 - `theo-techno-cosmo/plex/Manifest/AGENT_PERSONALITY_FRAMES_v5.md`
 - `theo-techno-cosmo/plex/Review/` (all files)
@@ -95,7 +95,7 @@ Think of this as the "north star" document—start here to find your path throug
 - How do I know if I'm making an aligned decision?
 
 **File Locations**:
-- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` (Sections 5-6)
+- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` (Sections 5-6)
 - `theo-techno-cosmo/plex/Manifest/OPERATIONAL_AXIOMS_PHASE4.md`
 - `theo-techno-cosmo/plex/Manifest/DOVE_OPERATIONAL_SPECIFICATION_v1.md`
 - `theo-techno-cosmo/plex/Manifest/AGENT_PERSONALITY_FRAMES_v5.md`
@@ -126,7 +126,7 @@ Think of this as the "north star" document—start here to find your path throug
 - Are we maintaining axiom alignment as the system evolves?
 
 **File Locations**:
-- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` (full)
+- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` (full)
 - `theo-techno-cosmo/plex/Manifest/OPERATIONAL_AXIOMS_PHASE4.md`
 - `theo-techno-cosmo/plex/Manifest/AGENT_PERSONALITY_FRAMES_v5.md`
 - `theo-techno-cosmo/plex/Manifest/DOVE_OPERATIONAL_SPECIFICATION_v1.md`
@@ -155,7 +155,7 @@ Think of this as the "north star" document—start here to find your path throug
 
 **File Locations**:
 - `theo-techno-cosmo/INTEGRATION_MAP.md` (you are here)
-- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` (Sections 1-2)
+- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` (Sections 1-2)
 - `theo-techno-cosmo/plex/Manifest/OPERATIONAL_AXIOMS_PHASE4.md`
 
 ---
