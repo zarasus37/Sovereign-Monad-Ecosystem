@@ -30,7 +30,7 @@
  */
 
 // Registry (L6 input).
-export { loadRegistry, buildRegistry, rotateOffset, type WheelRegistry, type WheelAsset, type Pair } from "./registry.js";
+export { loadRegistry, buildRegistry, rotateOffset, type WheelRegistry, type WheelAsset, type Pair, type LetterPair, type LetterPairsConfig, type FourthFigureCamera, type FourthFigureConfig } from "./registry.js";
 
 // State + config + moves.
 export {
@@ -63,6 +63,8 @@ export {
   materializationCost,
   compositeDomains,
   tripartite,
+  letterPairValidity,
+  fourthFigureValidity,
   MAX_ROUGHNESS,
   MIN_COST,
   MAX_COST,

@@ -200,3 +200,17 @@ export type {
   InterrogationTelemetry,
   Phase3CompletionPayload,
 } from './types/onboarding.js';
+
+// ── PL ledger Kafka bridge (Vector 3) ────────────────────────────────────────
+export type {
+  PlOnboardingTaskId,
+  PlPointsAwarded,
+  PlVerifiedBy,
+  PlLedgerKafkaEvent,
+  PlPromoteClaim,
+  PlTaskPayload,
+  BrokenGenesisTaskPayload,
+  QuarantineTaskPayload,
+  ArchonTaskPayload,
+  PlPromoteResult,
+} from './types/pl-ledger.js';

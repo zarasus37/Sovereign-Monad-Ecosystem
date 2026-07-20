@@ -77,6 +77,84 @@
           }
         }
       }
+    },
+    "letterPairs": {
+      "type": ["object", "null"],
+      "description": "Letter-level pair table (45-pair reconstruction). The primary Llull source (Third Figure) states 36 cameras (BC…IK, C(9,2)=36, no self-pairs). The '45' is a reconstruction = 36 + 9 self-pairs (BB…KK) = T₉, which the source does NOT state. This is a secondary interpretation, surfaced as a spec NOTE. When configured, the scheduler adds an εP term to the objective that rewards valid letter combinations (letter-pair validity is a DISTINCT term, NOT modifying Coverage).",
+      "properties": {
+        "alphabet": {
+          "type": "array",
+          "minItems": 9,
+          "maxItems": 9,
+          "items": { "type": "string", "minLength": 1, "maxLength": 1 },
+          "description": "The 9 Prima-Figura letters (B-K, J skipped). Order must match the wheel alphabets for letter-pair lookup."
+        },
+        "pairs": {
+          "type": "array",
+          "minItems": 45,
+          "maxItems": 45,
+          "description": "45 pairs: 36 distinct + 9 self-pairs (T₉). Each entry's 'letters' are normalized for lookup (BC = CB).",
+          "items": {
+            "type": "object",
+            "required": ["id", "letters"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "letters": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items": { "type": "string", "minLength": 1, "maxLength": 1 }
+              }
+            }
+          }
+        },
+        "includeSelfPairs": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether the pair table includes self-pairs (BB, CC, ... KK). Default true for T₉ = 45."
+        }
+      },
+      "required": ["alphabet", "pairs"]
+    },
+    "fourthFigure": {
+      "type": ["object", "null"],
+      "description": "Fourth-Figure Tabula Generalis configuration. The Tabula Generalis uses 3-letter 'cameras' (BCD, BCE, BDF...), a separate structure from the 2-letter Third Figure (BC…IK). Per the primary Llull source, the Fourth Figure is a distinct combinatorial layer that validates 3-wheel composites. When enabled, adds ζF term to the objective (decoupled from εP). Architecture is modular to support future extension.",
+      "properties": {
+        "enabled": { 
+          "type": "boolean", 
+          "default": false,
+          "description": "Enable Fourth-Figure validation. When false, ζF term defaults to 1 (always valid)."
+        },
+        "alphabet": {
+          "type": "array",
+          "minItems": 9,
+          "maxItems": 9,
+          "items": { "type": "string", "minLength": 1, "maxLength": 1 },
+          "description": "The 9 Prima-Figura letters (B-K, J skipped). Must match the letter alphabet for camera lookup."
+        },
+        "cameras": {
+          "type": "array",
+          "minItems": 84,
+          "maxItems": 84,
+          "description": "84 cameras: C(9,3) = 84 distinct 3-letter combinations from the 9-letter alphabet. Each camera is a sorted 3-tuple (BCD = BCD = CDB = DBC).",
+          "items": {
+            "type": "object",
+            "required": ["id", "letters"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "letters": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": { "type": "string", "minLength": 1, "maxLength": 1 }
+              }
+            }
+          }
+        }
+      },
+      "required": ["enabled"]
     }
   }
 }

@@ -72,8 +72,10 @@ function initialTerms(config: ScheduleConfig): ObjectiveTerms {
   // The seed state: C would be 1 (first visit) but there is no move to score
   // L/S against. Record J = γ·1 (a tripartite-neutral baseline) so the first
   // real ΔJ is well-defined. The seed is always "accepted".
+  // P defaults to 1 (letter-pair validity assumed at seed state).
+  // F defaults to 1 (Fourth-Figure validity assumed at seed state).
   const J = config.weights.gamma; // tripartite present (T=1) at the seed window
-  return { C: 1, L: 1, T: 1, S: 0, J };
+  return { C: 1, L: 1, T: 1, S: 0, P: 1, F: 1, J };
 }
 
 /**

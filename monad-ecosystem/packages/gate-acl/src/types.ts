@@ -200,6 +200,11 @@ export type GateResult =
 export const TOPICS = {
   PL_EVENTS: 'pl.events',
   PL_STATE_UPDATED: 'pl.state.updated',
+  /**
+   * Rich onboarding PL broadcast for Cardia / multi-organ consumers
+   * (UMS Vector 3 — PlLedgerKafkaEvent).
+   */
+  PL_LEDGER_EVENTS: 'sovereign.pl.ledger.events',
   INTENT_RAISED: 'intent.raised',
   EXECUTION_APPROVED: 'execution.approved',
   EXECUTION_REJECTED: 'execution.rejected',
