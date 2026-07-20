@@ -22,6 +22,8 @@ import {
   PrincipalWalletRegistry,
 } from '@sovereign/gate-acl';
 import { createCardiaFundingStreamRouter } from '@sovereign/cardia-funding-stream';
+import { renderPrometheusText } from './metrics.js';
+import { ingestKafkaPayload, OBSERVABILITY_TOPICS } from './metricsKafka.js';
 
 export type SovereignAppOptions = {
   /** Override frontend origin for CORS (default FRONTEND_URL or Vite 5173). */
@@ -32,6 +34,8 @@ export type SovereignAppOptions = {
   registry?: PrincipalWalletRegistry;
   /** Force Kafka flag (default KAFKA_ENABLED===true). */
   kafkaEnabled?: boolean;
+  /** Mount Prometheus /metrics (default true). */
+  metricsEnabled?: boolean;
 };
 
 export type SovereignAppContext = {
@@ -100,6 +104,33 @@ export function createSovereignApp(
   // Mount at /api/v1/cardia → GET .../funding/stream/:walletAddress
   app.use('/api/v1/cardia', createCardiaFundingStreamRouter());
 
+  // ── Observability (Vector 6.3) ───────────────────────────────────────────
+  if (opts.metricsEnabled !== false) {
+    app.get('/metrics', (_req: Request, res: Response) => {
+      res
+        .status(200)
+        .type('text/plain; version=0.0.4; charset=utf-8')
+        .send(renderPrometheusText());
+    });
+
+    // Dev/staging inject when Kafka is offline (honest local scrape path)
+    app.post(
+      '/api/v1/metrics/ingest',
+      (req: Request, res: Response) => {
+        const topic =
+          typeof req.body?.topic === 'string'
+            ? req.body.topic
+            : CARDIA_DEFAULT_TOPIC;
+        const payload =
+          req.body?.payload && typeof req.body.payload === 'object'
+            ? (req.body.payload as Record<string, unknown>)
+            : (req.body as Record<string, unknown>);
+        ingestKafkaPayload(topic, payload ?? {});
+        res.status(202).json({ ok: true, topic });
+      },
+    );
+  }
+
   // ── Health (The Pulse) ───────────────────────────────────────────────────
   app.get('/health', (_req: Request, res: Response) => {
     res.status(200).json({
@@ -108,6 +139,8 @@ export function createSovereignApp(
       kafka: kafkaEnabled,
       redis: Boolean(process.env.REDIS_URL),
       live_funding: process.env.CARDIA_FUNDING_LIVE === 'true',
+      metrics: opts.metricsEnabled !== false,
+      observability_topics: OBSERVABILITY_TOPICS,
       frontend_origin: frontendOrigin,
       timestamp: new Date().toISOString(),
     });
@@ -132,3 +165,5 @@ export function createSovereignApp(
 
   return { app, ledger, registry, kafkaEnabled };
 }
+
+const CARDIA_DEFAULT_TOPIC = 'sovereign.cardia.funding.events';

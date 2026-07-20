@@ -6,9 +6,17 @@
  */
 
 import { createSovereignApp } from './app.js';
+import { startMetricsKafkaConsumer } from './metricsKafka.js';
 
 export { createSovereignApp } from './app.js';
 export type { SovereignAppOptions, SovereignAppContext } from './app.js';
+export {
+  renderPrometheusText,
+  recordFundingEvent,
+  recordCapacityEvent,
+  recordLoopEvent,
+  recordShadowVerdict,
+} from './metrics.js';
 
 const PORT = Number(process.env.PORT) || 3001;
 const frontendOrigin =
@@ -24,6 +32,16 @@ const isMain =
     process.argv[1].endsWith('server.js'));
 
 if (isMain) {
+  void startMetricsKafkaConsumer().then((handle) => {
+    if (handle) {
+      const shutdown = () => {
+        void handle.stop().finally(() => process.exit(0));
+      };
+      process.on('SIGINT', shutdown);
+      process.on('SIGTERM', shutdown);
+    }
+  });
+
   app.listen(PORT, () => {
     console.log(`[Sovereign Host] Listening on port ${PORT}`);
     console.log(`[Sovereign Host] CORS Origin: ${frontendOrigin}`);
@@ -35,6 +53,7 @@ if (isMain) {
     console.log(`  POST /api/v1/gate-acl/promote-pl`);
     console.log(`  POST /api/v1/gate-acl/bind-wallet`);
     console.log(`  GET  /api/v1/cardia/funding/stream/:walletAddress`);
+    console.log(`  GET  /metrics`);
     console.log(`  GET  /health`);
   });
 }

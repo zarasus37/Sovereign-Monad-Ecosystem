@@ -42,6 +42,32 @@ Export `createSovereignApp()` (no `listen`) and wrap with your Function App HTTP
 
 **Honesty:** process-local `PLLedger` / `PrincipalWalletRegistry` reset on cold start. Durable store before multi-instance production.
 
+## Observability (Vector 6.3)
+
+```text
+GET  /metrics                     → Prometheus exposition
+POST /api/v1/metrics/ingest       → inject Kafka-shaped payloads (local/dev)
+```
+
+With Kafka:
+
+```powershell
+$env:KAFKA_ENABLED = "true"
+$env:KAFKA_BROKERS = "localhost:9092"
+pnpm --filter @sovereign/host start
+```
+
+Stack:
+
+```powershell
+cd monad-ecosystem
+docker compose --profile observability up -d
+# Prometheus http://localhost:9090
+# Grafana    http://localhost:3000  (admin / sovereign)
+```
+
+Dashboard JSON: `monad-ecosystem/grafana/dashboard.json`
+
 ## Mock Hepar (Vector 4.4 local forensics)
 
 ```powershell

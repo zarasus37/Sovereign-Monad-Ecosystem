@@ -1,0 +1,26 @@
+# Prometheus scrape config — Vector 6.3 Observability
+# Targets sovereign-host /metrics (process-local registry + Kafka bridge).
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: sovereign-host
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - sovereign-host:3001
+        labels:
+          organism: sovereign-monad
+          component: host
+
+  # Local dev (host network) — override via compose command if needed
+  - job_name: sovereign-host-localhost
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - host.docker.internal:3001
+        labels:
+          organism: sovereign-monad
+          component: host-local

@@ -34,10 +34,22 @@ describe('@sovereign/host', () => {
         status: string;
         kafka: boolean;
         service: string;
+        metrics?: boolean;
       };
       assert.equal(body.status, 'ALIVE');
       assert.equal(body.service, '@sovereign/host');
       assert.equal(body.kafka, false);
+      assert.equal(body.metrics, true);
+    });
+  });
+
+  it('GET /metrics returns Prometheus exposition', async () => {
+    await withServer(async (base) => {
+      const res = await fetch(`${base}/metrics`);
+      assert.equal(res.status, 200);
+      const text = await res.text();
+      assert.match(text, /sovereign_funding_events_total/);
+      assert.match(text, /TYPE.*counter/);
     });
   });
 
