@@ -104,6 +104,48 @@ export function createSovereignApp(
   // Mount at /api/v1/cardia → GET .../funding/stream/:walletAddress
   app.use('/api/v1/cardia', createCardiaFundingStreamRouter());
 
+  // ── Hepar Audit Proxy (Vector 5.1) ──────────────────────────────────────
+  // Proxies wallet audits to hepar-service; returns verdict + confidence.
+  // No local state, no ledger writes — stateless pass-through.
+  const HEPAR_API_URL =
+    process.env.HEPAR_API_URL ?? 'http://hepar-service:3003';
+
+  app.post(
+    '/api/v1/hepar/audit',
+    async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const { walletAddress, localPrincipalId, protocolId, contractAddresses } =
+          req.body ?? {};
+
+        if (!walletAddress || typeof walletAddress !== 'string') {
+          res.status(400).json({
+            error: 'INVALID_BODY',
+            message: 'walletAddress (string) is required',
+          });
+          return;
+        }
+
+        console.log(`[Hepar Proxy] Forwarding audit for ${walletAddress}`);
+
+        const upstream = await fetch(`${HEPAR_API_URL}/api/v1/hepar`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            walletAddress,
+            localPrincipalId: localPrincipalId ?? undefined,
+            protocolId: protocolId ?? undefined,
+            contractAddresses: contractAddresses ?? undefined,
+          }),
+        });
+
+        const json = await upstream.json();
+        res.status(upstream.status).json(json);
+      } catch (err) {
+        next(err);
+      }
+    },
+  );
+
   // ── Observability (Vector 6.3) ───────────────────────────────────────────
   if (opts.metricsEnabled !== false) {
     app.get('/metrics', (_req: Request, res: Response) => {
