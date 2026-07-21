@@ -26,6 +26,7 @@ jobs:
       packages: write
 
     strategy:
+      fail-fast: false
       matrix:
         include:
           - image: sovereign-host
@@ -46,6 +47,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Clear GHA build cache
+        run: |
+          for id in $(gh cache list --limit 10 --jq '.[].id'); do
+            gh cache delete "$id" 2>/dev/null || true
+          done
 
       - name: Login to ACR
         run: echo "${{ secrets.ACR_PASSWORD }}" | docker login ${{ env.REGISTRY }} -u "${{ secrets.ACR_USERNAME }}" --password-stdin
@@ -72,8 +79,6 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha,scope=${{ matrix.image }}
-          cache-to: type=gha,mode=max,scope=${{ matrix.image }}
 
       - name: Image digest
         run: |
