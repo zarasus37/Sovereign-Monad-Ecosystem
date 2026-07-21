@@ -21,13 +21,22 @@ COPY monad-ecosystem/packages/gate-acl ./monad-ecosystem/packages/gate-acl
 COPY monad-ecosystem/packages/cardia-funding-stream ./monad-ecosystem/packages/cardia-funding-stream
 COPY monad-ecosystem/packages/sovereign-host ./monad-ecosystem/packages/sovereign-host
 
-# Install and build only what the host needs
-RUN pnpm install --filter @sovereign/host... --frozen-lockfile \
-  && pnpm --filter @sovereign/types build \
-  && pnpm --filter @sovereign/bus build \
-  && pnpm --filter @sovereign/gate-acl build \
-  && pnpm --filter @sovereign/cardia-funding-stream build \
-  && pnpm --filter @sovereign/host build
+# ── Install all workspace dependencies (wires @sovereign/types → @sovereign/bus, etc.)
+RUN pnpm install --frozen-lockfile
+
+# ── Build in strict dependency order ──────────────────────────────────────────
+# types has no workspace deps → build first
+RUN pnpm --filter @sovereign/types build
+
+# bus depends on types → types is now available as a linked package
+RUN pnpm --filter @sovereign/bus build
+
+# gate-acl and cardia-funding-stream depend on types → build after types
+RUN pnpm --filter @sovereign/gate-acl build
+RUN pnpm --filter @sovereign/cardia-funding-stream build
+
+# host depends on all of the above → build last
+RUN pnpm --filter @sovereign/host build
 
 FROM node:20-bookworm-slim AS production
 

@@ -52,8 +52,10 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          no-cache-fallback: true
-
+          no-cache-filters: |
+            node_modules
+            .pnpm-store
+          provenance: false
   # ─────────────────────────────────────────────────────────────────────────────
   # hepar-service and monad-mev — run after sovereign-host succeeds
   # ─────────────────────────────────────────────────────────────────────────────
@@ -105,4 +107,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          no-cache-fallback: true
+          no-cache-filters: |
+            node_modules
+            .pnpm-store
+          provenance: false
