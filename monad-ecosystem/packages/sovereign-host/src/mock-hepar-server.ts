@@ -70,7 +70,7 @@ function audit(targetAddress: string): HeparAuditResponse {
   };
 }
 
-const app = express();
+const app: express.Express = express();
 app.use(express.json());
 
 app.get('/health', (_req: Request, res: Response) => {

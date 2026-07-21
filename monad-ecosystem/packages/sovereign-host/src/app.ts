@@ -139,7 +139,7 @@ export function createSovereignApp(
       authType: string;
     } = { configured: false, keyVaultName: null, authType: 'none' };
     try {
-      const { checkKeyVaultHealth } = await import('./lib/keyCustody.js');
+      const { checkKeyVaultHealth } = await import('./lib/keyCustody');
       key_custody = await checkKeyVaultHealth();
     } catch {
       /* optional module path */
