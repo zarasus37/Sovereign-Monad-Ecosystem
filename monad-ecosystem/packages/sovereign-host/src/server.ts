@@ -7,6 +7,7 @@
 
 import { createSovereignApp } from './app.js';
 import { startMetricsKafkaConsumer } from './metricsKafka.js';
+import { getBootstrapWallet, isKeyCustodyConfigured } from './lib/keyCustody.js';
 
 export { createSovereignApp } from './app.js';
 export type { SovereignAppOptions, SovereignAppContext } from './app.js';
@@ -32,6 +33,19 @@ const isMain =
     process.argv[1].endsWith('server.js'));
 
 if (isMain) {
+  // Bootstrap key from Key Vault via MSI (fails fast if misconfigured)
+  if (isKeyCustodyConfigured()) {
+    try {
+      const wallet = await getBootstrapWallet();
+      console.log(`[Key Custody] Bootstrap wallet: ${wallet.address}`);
+    } catch (err) {
+      console.error('[Key Custody] FAILED to fetch bootstrap key from Key Vault:', (err as Error).message);
+      process.exit(1);
+    }
+  } else if (!process.env.BOOTSTRAP_PRIVATE_KEY) {
+    console.warn('[Key Custody] WARNING: No bootstrap key configured (KV not set up, BOOTSTRAP_PRIVATE_KEY not set)');
+  }
+
   void startMetricsKafkaConsumer().then((handle) => {
     if (handle) {
       const shutdown = () => {
