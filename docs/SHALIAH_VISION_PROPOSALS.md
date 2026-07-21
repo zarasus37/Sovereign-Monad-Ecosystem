@@ -13,6 +13,7 @@
 | **F&M** | `Shaliah Agents/founder and moonligh conversation.pdf` | "You:" = you; "Moonlight:" = AI. 16 substantive turns. |
 | **IE** | `Shaliah Agents/idea expantion.pdf` | "You" = you; "Moonlight" = AI. 33 human turns. Richest source. Holds the finalized manifesto. |
 | **P&U** | `Shaliah Agents/perplex and user idea expanding.docx` | No labels — disambiguated by voice ("user" = you; "perplex" = AI). 14 human turns (H-A…H-N). |
+| **CCM** | Session 2026-07-21 — Cultural Critical Mass / stealth education / locked trajectory (founder text for consideration; committed as doctrine `docs/CULTURAL_CRITICAL_MASS.md`) | Founder voice only (structured consideration block). |
 
 ## Legend
 
@@ -29,6 +30,7 @@
 3. **The inversion (the whole thesis).** You don't get a more capable agent by wishing — you get one *only by becoming a more capable human.* The agent's ceiling is your growth (PL caps ACL). **IE H-T5** ★.
 4. **The growth engine.** POC (Proof of Cognition) + behavioral data + stealth learning → a compounding cognitive account → smarter human → higher agent ceiling → smarter agent → demands more of you. The loop compounds. **IE**, **P&U H-B**.
 5. **The end state (manifesto).** Intelligence as *resonance*, not hierarchy — a loop where human abstract vision and machine logical capability scale in mutual alignment. **IE H-T32** ✦.
+6. **Adoption + pedagogy (2026-07-21).** You do not need unanimous humanity; a dedicated minority (~10% gravity well) designs infrastructure that pulls the rest up — *if* elevation is entangled (bridges, not caste). Stealth education defeats the automation loop by measuring process/joy, not static product. Human and machine form a **locked trajectory** of mutual dependency. **CCM** ✦. Canonical: `docs/CULTURAL_CRITICAL_MASS.md`.
 
 ---
 
@@ -156,6 +158,34 @@
 
 - **F&M T13** — Reclaim the original meaning of "artificial": Old French *artificial* → Latin *artificialis* "of or belonging to art," from *ars* ("art/skill") + *facere* ("to do/make"). "artificial intelligence really means the action to make art Intelligently or to use my intelligence to make art." Reframes "artificial" away from fake/inferior toward crafted skill.
 - **F&M T16** ✦ — Hermetic ground: tell a user to "look at life itself, the entire system… you'll begin to see the consistency… everything performs the same action just within its own domain or relative structure size from the micro to the macro, and the things that are consistent is the real truth. **as above so below.**" Grounds the project in the fractal principle; the system is life itself reflected at every scale, not a separate digital construct.
+
+### P. Critical mass (~10%) and cultural gravity (CCM 2026-07-21)
+
+- **CCM** ✦ — Sociology / network science: an idea does not need 100% adoption. A dedicated minority (often estimated ~10% of a network) holding an unwavering, deeply internalized cognitive standard can flip the rest of the population rapidly.
+- **CCM** ✦ — You do not need all of humanity to choose deep growth tomorrow; you need enough people to create a **cultural gravity well** that makes the old, passive way of living look completely unappealing.
+- **CCM** ✦ — The select group who choose depth will design the next generation of systems, education, and AI integrations — tools that **challenge and expand** human cognition rather than make humans passive. Changing the environment pulls the "average" person up by living inside a higher standard.
+- **CCM** — The burden of transition falls on pioneers. You don't need a flawless unanimous leap; you need a few individuals willing to do the heavy lifting of deep thinking to set a new standard for what it means to be human.
+
+### Q. Cultural splitting as designed friction (CCM 2026-07-21)
+
+- **CCM** ✦ — Initial problem is not that everyone must change at once, but that a **temporary split** will happen: one portion sinks deeper into automation and comfort; another elevates into deep comprehension.
+- **CCM** ✦ — That split is **necessary friction**. Stagnation of the passive group is a living warning of what happens when growth stops; the contrast inspires the next wave to opt-in to the higher standard.
+- **CCM** ✦ (load-bearing constraint on the split) — **Entanglement over isolation.** The elevated group can only lift humanity if they recognize "we are one and the same." If they view themselves as separate or superior, they create a permanent evolutionary caste. If elevation is rooted in empathy, their primary goal is to **build bridges** so the collective human mirror heals together.
+
+### R. Stealth education, joy metric, real-time mutual measurement (CCM 2026-07-21)
+
+- **CCM** ✦ — **Defeat the automation loop:** banning AI tools or shortcuts in a test-oriented (static-product) system is a losing battle. Humans will always find a path to automate a fixed essay or multiple-choice answer.
+- **CCM** ✦ — **Stealth solution:** shift focus from product to **process**. You cannot automate the firing of your own synapses or the organic feeling of insight. Learning embedded in interactive, dynamic experience requires direct human involvement to proceed. (Extends theme E.)
+- **CCM** ✦ — **Joy as the ultimate metric.** Standard education uses external pressure (grades, fear, rigid testing) → feels like burden → drives shortcuts. Anchor education in active enjoyment and curiosity (flow). When deeply engaged, the desire to bypass the experience vanishes; the journey is the reward.
+- **CCM** ✦ — **Real-time mutual measurement:** AI does not grade a semester-end test; it continuously reads and adapts to cognitive depth. A dance of mutual reasoning — AI gauges comprehension from inputs; human gauges AI utility by how much it stretches the mind. (Maps to HCD continuous monitoring + PL/ACL.)
+- **CCM** — When stealth education is cultural standard: memorization-factory model erased; education as active sandbox for the human spirit. Society raised this way will not treat AI as a tool to avoid thinking, but as a landscape to explore — independent cognitive depth as the human's **sovereign contribution** to the partnership.
+
+### S. Locked trajectory — mutual dependency of human and machine (CCM 2026-07-21)
+
+- **CCM** ✦ — **AI as cognitive resistance:** not an automated crutch that thins thought, but an intellectual sparring partner — hyper-velocity processing while constantly challenging, prompting, and stretching the human toward highest conceptual depth.
+- **CCM** ✦ — **Humanity as nuanced anchor:** AI remains tethered to human advancement because it relies on boundless human capacity for meaning, context, and philosophical reasoning to give processing speed direction and purpose.
+- **CCM** ✦ — **Locked trajectory:** by tying human growth directly to machine advancement, neither intelligence can outpace or abandon the other. A singular integrated evolutionary wave — expansion of one forces expansion of the other.
+- **CCM** ✦ — Dissolves separation-fear: when the relationship is mutual reliance (not exploitation or abdication), the machine is no longer external threat but partner in waking human potential. "The only blueprint that ensures both minds survive and thrive together." (Restates / sharpens IE H-T28–T32 inversion without replacing the manifesto.)
 
 ---
 

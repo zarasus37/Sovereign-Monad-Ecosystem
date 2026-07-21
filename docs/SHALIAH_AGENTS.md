@@ -19,6 +19,8 @@ Every "bad AI end-state" scenario misdiagnoses the threat as "AI gets too smart.
 
 **The asymmetry:** humans aren't smarter than AI, but humans hold abstract vision — the "why" and the direction AI can't see. The human is never obsolete because the human is the source of the vision and the gate on the agent's growth.
 
+**Adoption and pedagogy (doctrine):** Critical mass (~10% gravity well), temporary cultural split as friction without caste, stealth education (process/joy over automatable product), and the locked human–machine trajectory are spelled out in [`docs/CULTURAL_CRITICAL_MASS.md`](./CULTURAL_CRITICAL_MASS.md). Founder source lines: `docs/SHALIAH_VISION_PROPOSALS.md` §P–S (tag **CCM**).
+
 ---
 
 ## 2. What a Shaliah is — and is not
