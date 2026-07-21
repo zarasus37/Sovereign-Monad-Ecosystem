@@ -24,7 +24,6 @@ import {
 import { createCardiaFundingStreamRouter } from '@sovereign/cardia-funding-stream';
 import { renderPrometheusText } from './metrics.js';
 import { ingestKafkaPayload, OBSERVABILITY_TOPICS } from './metricsKafka.js';
-import { checkKeyVaultHealth } from './lib/keyCustody.js';
 
 export type SovereignAppOptions = {
   /** Override frontend origin for CORS (default FRONTEND_URL or Vite 5173). */
@@ -140,7 +139,7 @@ export function createSovereignApp(
       authType: string;
     } = { configured: false, keyVaultName: null, authType: 'none' };
     try {
-      const { checkKeyVaultHealth } = await import('./lib/keyCustody');
+      const { checkKeyVaultHealth } = await import('./lib/keyCustody.js');
       key_custody = await checkKeyVaultHealth();
     } catch {
       /* optional module path */
