@@ -16,7 +16,7 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY monad-ecosystem/packages/sovereign-types ./monad-ecosystem/packages/sovereign-types
 COPY monad-ecosystem/packages/hepar-service   ./monad-ecosystem/packages/hepar-service
 
-RUN pnpm install --filter @sovereign/hepar-service... --frozen-lockfile \
+RUN pnpm install --frozen-lockfile \
   && pnpm --filter @sovereign/types build \
   && pnpm --filter @sovereign/hepar-service build
 
