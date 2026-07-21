@@ -46,6 +46,11 @@ wheels/
 /MANIFEST
 *.log
 
+# Negate src/lib/ — these are workspace TS packages, not OS lib directories
+!monad-ecosystem/packages/sovereign-host/src/lib/
+!monad-ecosystem/packages/hepar-service/src/lib/
+!monad-ecosystem/packages/gate-acl/src/lib/
+
 # Node / JS / TS / Motoko
 node_modules/
 .pnpm-store/
@@ -95,7 +100,6 @@ desktop.ini
 
 # Binary / archive artifacts
 *.zip
-*.7z
 *.tar.gz
 *.sqlite
 *.db
