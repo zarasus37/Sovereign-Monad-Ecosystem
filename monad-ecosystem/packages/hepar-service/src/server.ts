@@ -13,13 +13,13 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import crypto from 'node:crypto';
-import { createDefaultHeparOrchestrator } from './core/HeparOrchestrator';
+import { createDefaultHeparOrchestrator } from './core/HeparOrchestrator.js';
 import type {
   HeparAuditRequest,
   HeparAuditResponse,
   ActionBand,
   Severity,
-} from './core/types/hepar.types';
+} from './core/types/hepar.types.js';
 
 const PORT = Number(process.env.PORT ?? 3003);
 const orchestrator = createDefaultHeparOrchestrator();

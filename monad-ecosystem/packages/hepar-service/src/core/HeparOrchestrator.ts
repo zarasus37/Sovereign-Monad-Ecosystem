@@ -3,14 +3,14 @@
 // Coordinates the full 4-stage forensic pipeline: A → B → C → D.
 // Supports full pipeline execution and partial (up-to-stage) runs.
 
-import { StageA } from './stageA';
-import { StageB } from './stageB';
-import { StageC } from './stageC';
-import { StageD } from './stageD';
+import { StageA } from './stageA.js';
+import { StageB } from './stageB.js';
+import { StageC } from './stageC.js';
+import { StageD } from './stageD.js';
 import type {
   HeparOrchestratorConfig,
   HeparPipelineResult,
-} from './types/hepar.types';
+} from './types/hepar.types.js';
 
 export class HeparOrchestrator {
   private readonly stageA: StageA;

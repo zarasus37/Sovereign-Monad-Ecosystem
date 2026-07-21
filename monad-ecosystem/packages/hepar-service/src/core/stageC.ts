@@ -13,7 +13,7 @@ import type {
   ActionBand,
   Severity,
   StageAResult,
-} from './types/hepar.types';
+} from './types/hepar.types.js';
 
 // Seeded LCG (same as Stage A for reproducibility)
 function lcg(seed: number): () => number {

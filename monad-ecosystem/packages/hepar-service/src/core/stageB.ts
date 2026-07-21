@@ -4,7 +4,7 @@
 // STUB mode: deterministic constraint solving based on finding severity.
 // LIVE mode: hook in Mythril / Halmos / custom SMT solver here.
 
-import type { StageBConfig, StageBResult, InvariantViolation, StageAResult } from './types/hepar.types';
+import type { StageBConfig, StageBResult, InvariantViolation, StageAResult } from './types/hepar.types.js';
 
 const INVARIANT_MAP: Record<string, string> = {
   PROXY_ADMIN:        'admin_slot_integrity ∧ ¬upgrade_without_authority',

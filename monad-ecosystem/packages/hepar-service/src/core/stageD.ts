@@ -13,7 +13,7 @@ import type {
   StageAResult,
   ActionBand,
   Severity,
-} from './types/hepar.types';
+} from './types/hepar.types.js';
 
 const DEFAULT_WEIGHTS: Record<ActionBand, number> = {
   BLOCK:       2.0,
