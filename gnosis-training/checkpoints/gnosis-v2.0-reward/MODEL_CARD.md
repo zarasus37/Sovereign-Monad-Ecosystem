@@ -2,7 +2,7 @@
 
 **Stage:** 2 RewardTrainer (Vector 6.1)  
 **Checkpoint:** `checkpoints/gnosis-v2.0-reward`  
-**Training date (UTC):** 2026-07-21T15:50:45.008858+00:00  
+**Training date (UTC):** 2026-07-21T16:19:54.194917+00:00  
 **Mode:** `CPU_VERIFIED_DRY_RUN`
 
 ## Corpus
@@ -10,18 +10,18 @@
 | Field | Value |
 |-------|-------|
 | Trainable file | `data/preference_pairs_ALL.jsonl` |
-| Human-judged pairs | **91** |
-| CAT distribution | `{'CAT1': 13, 'CAT2': 10, 'CAT3': 8, 'CAT4': 9, 'CAT5': 1, 'CAT6': 5, 'CAT7': 5, 'CAT8': 5, 'CAT9': 35}` |
+| Human-judged pairs | **128** |
+| CAT distribution | `{'CAT1': 19, 'CAT2': 16, 'CAT3': 14, 'CAT4': 15, 'CAT5': 9, 'CAT6': 5, 'CAT7': 5, 'CAT8': 10, 'CAT9': 35}` |
 | CATs represented | CAT1, CAT2, CAT3, CAT4, CAT5, CAT6, CAT7, CAT8, CAT9 |
 | CATs missing (vs CAT1–9) | — |
-| Train / eval split | 72 / 19 (80/20, seed=42) |
+| Train / eval split | 102 / 26 (80/20, seed=42) |
 
 ### Honesty on the "71 pairs / worksheet" claim
 
 The task referenced `preference_pairs_worksheet.jsonl` with 71 pairs. On disk that
 file is a **250-row bootstrap scaffold**
 (250 pending authoring, empty responses).  
-Training used **`preference_pairs_ALL.jsonl`** (91 human-judged pairs)
+Training used **`preference_pairs_ALL.jsonl`** (128 human-judged pairs)
 per spec line 478.
 
 ## Base model
@@ -46,9 +46,9 @@ when GPU/HF Llama access is not configured.
 
 ## Metrics
 
-- **Train loss (final):** 0.3861713781952858
-- **Eval loss (final):** 0.6054090261459351
-- **Wall time (s):** 133.4
+- **Train loss (final):** 0.8222173899412155
+- **Eval loss (final):** 0.34241539239883423
+- **Wall time (s):** 153.6
 
 See `training_metrics.json` and `docs/GNOSIS_V2_TRAINING_LOG.md` for full history.
 
