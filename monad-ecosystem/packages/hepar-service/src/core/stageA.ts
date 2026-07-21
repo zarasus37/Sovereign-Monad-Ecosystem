@@ -4,7 +4,7 @@
 // proxy admin signals, LP unlock vectors, taint patterns, and anomalies.
 // Operates in STUB mode (deterministic seeded scoring) ready for live hooks.
 
-import type { StageAConfig, StageAResult, StaticFinding, PatternType, Severity } from './types/hepar.types';
+import type { StageAConfig, StageAResult, StaticFinding, PatternType, Severity } from './types/hepar.types.js';
 
 // Simple seeded LCG for deterministic, reproducible findings
 function lcg(seed: number): () => number {

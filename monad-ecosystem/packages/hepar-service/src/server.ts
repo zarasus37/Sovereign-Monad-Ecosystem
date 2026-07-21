@@ -10,7 +10,7 @@
 //   INVESTIGATE → verdict: WARN_INVESTIGATE          (score ≈ 0.30)
 //   ALLOW       → verdict: PASS                      (score ≈ 0.05)
 
-import express, { Request, Response, NextFunction } from 'express';
+import express, { type Express } from 'express';
 import cors from 'cors';
 import crypto from 'node:crypto';
 import { createDefaultHeparOrchestrator } from './core/HeparOrchestrator.js';
@@ -24,12 +24,12 @@ import type {
 const PORT = Number(process.env.PORT ?? 3003);
 const orchestrator = createDefaultHeparOrchestrator();
 
-const app = express();
+const app: Express = express();
 app.use(cors());
 app.use(express.json());
 
 // ── Health ───────────────────────────────────────────────────────────────────
-app.get('/health', (_req: Request, res: Response) => {
+app.get('/health', (_req, res) => {
   res.json({ status: 'ALIVE', service: '@sovereign/hepar-service', timestamp: new Date().toISOString() });
 });
 

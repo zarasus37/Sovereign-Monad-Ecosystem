@@ -50,13 +50,13 @@ export class HeparOrchestrator {
     result.stageA = await this.stageA.analyze(protocolId, addresses);
     if (upTo === 'A') { result.totalDurationMs = Date.now() - t0; return result; }
 
-    result.stageB = await this.stageB.prove(protocolId, result.stageA);
+    result.stageB = await this.stageB.prove(protocolId, result.stageA!);
     if (upTo === 'B') { result.totalDurationMs = Date.now() - t0; return result; }
 
-    result.stageC = await this.stageC.execute(protocolId, result.stageA);
+    result.stageC = await this.stageC.execute(protocolId, result.stageA!);
     if (upTo === 'C') { result.totalDurationMs = Date.now() - t0; return result; }
 
-    result.stageD = this.stageD.fuse(result.stageA, result.stageB, result.stageC);
+    result.stageD = this.stageD.fuse(result.stageA!, result.stageB!, result.stageC!);
     result.totalDurationMs = Date.now() - t0;
     return result;
   }
