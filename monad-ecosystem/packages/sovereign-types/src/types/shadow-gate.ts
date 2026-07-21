@@ -68,5 +68,8 @@ export type TradeStatus =
   | 'YIELD_ROUTED'
   | 'YIELD_ROUTE_FAILED';
 
-export const SHADOW_API_URL = process.env.SHADOW_API_URL || 'http://localhost:8000/api/v1/shadow/evaluate';
+// Use globalThis so this TypeScript file doesn't require @types/node as a peer dep
+const _process = typeof globalThis !== 'undefined' ? (globalThis as any).process : undefined;
+export const SHADOW_API_URL =
+  (_process?.env?.SHADOW_API_URL as string | undefined) ?? 'http://localhost:8000/api/v1/shadow/evaluate';
 export const SHADOW_TIMEOUT_MS = 2000;
