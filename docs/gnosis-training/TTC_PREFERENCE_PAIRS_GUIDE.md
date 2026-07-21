@@ -260,11 +260,26 @@ Promote only after human authoring of full tripartite chosen/rejected text + sco
 
 ---
 
-## CANDIDATE PAIRS — Cultural Critical Mass / Locked Trajectory (2026-07-21)
+## Promoted: CCM Cultural Critical Mass (2026-07-21) — **IN JSONL · PP-072…076**
 
-**Source doctrine:** `docs/CULTURAL_CRITICAL_MASS.md` · vision tags **CCM** §P–S in `docs/SHALIAH_VISION_PROPOSALS.md`.  
-**NOT IN JSONL.** Suggested next free IDs after corpus `PP-071`: draft labels `DRAFT-CCM-1`…`5` → promote as `PP-072`… when authored.  
-**Category note:** Prefer **CAT9** when the prompt binds a live TTC/Hepar/PL-ACL situation; otherwise author as constitution CAT1–8 style mutual-growth pairs (still human-judged, `synthetic: false`). Axis hints below are starting points — rebalance T/C if you want closer to 10/10/10.
+| Field | Value |
+|---|---|
+| IDs | `PP-072` … `PP-076` (5 pairs) |
+| File | `gnosis-training/data/preference_pairs_ALL.jsonl` |
+| Category | **CAT9** |
+| Axis mix (this batch) | T:**2** · X:**1** · C:**2** |
+| Corpus after | **76** human-judged · CAT9 **35** (T9/X17/C9) |
+| Script | `gnosis-training/scripts/promote_ccm_pairs.py` (idempotent) |
+| Stage 2 | Re-locked `gnosis-v2.0-reward` CPU dry-run on 76 pairs (2026-07-21) |
+
+**Themes:** critical mass vs gate-drop · elite isolation vs bridges · process over essay product · joy/density metrics vs grade throttle · locked-trajectory vs autopilot crutch.
+
+---
+
+## CANDIDATE PAIRS — Cultural Critical Mass / Locked Trajectory (2026-07-21) — **PROMOTED (archive outlines)**
+
+**Source doctrine:** `docs/CULTURAL_CRITICAL_MASS.md` · vision tags **CCM** §P–S.  
+**Status:** Full responses promoted as `PP-072`…`PP-076` (see above). Outlines below retained as provenance.
 
 ### DRAFT-CCM-1 · Critical mass vs unanimous conversion
 **ttc_axis (hint):** cosmological  
