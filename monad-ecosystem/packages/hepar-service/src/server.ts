@@ -93,7 +93,7 @@ app.post('/api/v1/hepar', async (req: Request, res: Response, _next: NextFunctio
     );
     res.json(response);
   } catch (err) {
-    next(err);
+    _next(err);
   }
 });
 
