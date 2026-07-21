@@ -12,7 +12,13 @@
 #   with-kafka     — in-compose Kafka
 #   observability  — Prometheus + Grafana
 #   full           — observability alias
-
+#
+# Network: network_mode=host throughout
+#   All services communicate via localhost on the host network namespace.
+#   This is REQUIRED for the sovereign-host to reach Azure MSI (169.254.169.254)
+#   when running inside Docker on an Azure VM. Container ports are declared for
+#   documentation; Docker ignores them in host network mode.
+#
 services:
   # ═══════════════════════════════════════════════════════════════════════════
   # Sovereign Host (API + Cardia SSE + metrics + key custody)
@@ -22,6 +28,7 @@ services:
       context: ../..
       dockerfile: monad-ecosystem/packages/sovereign-host/Dockerfile
     container_name: sovereign-host
+    # Ports ignored in host network mode; declared for documentation.
     ports:
       - "3001:3001"
     env_file:
@@ -46,18 +53,18 @@ services:
       - SHALIAH_TREASURY=${SHALIAH_TREASURY:-0x0000000000000000000000000000000000000000}
       - ECOSYSTEM_VAULT=${ECOSYSTEM_VAULT:-0x0000000000000000000000000000000000000000}
 
-      # Nervous system (compose service DNS)
+      # Nervous system (localhost — all services on host network)
       - KAFKA_ENABLED=${KAFKA_ENABLED:-false}
-      - KAFKA_BROKERS=${KAFKA_BROKERS:-kafka:9092}
+      - KAFKA_BROKERS=${KAFKA_BROKERS:-localhost:9092}
       - KAFKA_SASL_USERNAME=${KAFKA_SASL_USERNAME:-}
       - KAFKA_SASL_PASSWORD=${KAFKA_SASL_PASSWORD:-}
-      - REDIS_URL=${REDIS_URL:-redis://redis:6379}
+      - REDIS_URL=${REDIS_URL:-redis://localhost:6379}
 
-      # Forensic gates
-      - HEPAR_API_URL=${HEPAR_API_URL:-http://hepar-engine:3003/api/v1/hepar}
+      # Forensic gates (localhost)
+      - HEPAR_API_URL=${HEPAR_API_URL:-http://localhost:3003/api/v1/hepar}
       - HEPAR_AUDIT_MODE=${HEPAR_AUDIT_MODE:-http}
       - HEPAR_API_KEY=${HEPAR_API_KEY:-}
-      - SHADOW_API_URL=${SHADOW_API_URL:-http://python-engine:8000/api/v1/shadow/evaluate}
+      - SHADOW_API_URL=${SHADOW_API_URL:-http://localhost:8000/api/v1/shadow/evaluate}
 
       # Key custody (Azure Key Vault) — preferred over BOOTSTRAP_PRIVATE_KEY
       - KEY_VAULT_NAME=${KEY_VAULT_NAME:-}
@@ -66,6 +73,7 @@ services:
       - AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET:-}
       # Dev/staging only — never mainnet capital on disk env:
       - BOOTSTRAP_PRIVATE_KEY=${BOOTSTRAP_PRIVATE_KEY:-}
+    network_mode: host
     depends_on:
       redis:
         condition: service_healthy
@@ -74,8 +82,6 @@ services:
       python-engine:
         condition: service_healthy
     restart: unless-stopped
-    networks:
-      - sovereign-net
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3001/health"]
       interval: 30s
@@ -85,7 +91,6 @@ services:
 
   # ═══════════════════════════════════════════════════════════════════════════
   # Hepar Engine — True TypeScript forensic chain scanner (A→B→C→D)
-  # Replaces the python-engine mock Hepar endpoint.
   # ═══════════════════════════════════════════════════════════════════════════
   hepar-engine:
     build:
@@ -97,9 +102,8 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3003
+    network_mode: host
     restart: unless-stopped
-    networks:
-      - sovereign-net
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3003/health"]
       interval: 30s
@@ -108,8 +112,7 @@ services:
       start_period: 15s
 
   # ═══════════════════════════════════════════════════════════════════════════
-  # Node 3: Python Engine (FastAPI + Shadow Markout only)
-  # Note: Hepar endpoint REMOVED — now served by hepar-engine above.
+  # Python Engine (FastAPI + Shadow Markout)
   # ═══════════════════════════════════════════════════════════════════════════
   python-engine:
     build:
@@ -120,9 +123,8 @@ services:
       - "8000:8000"
     environment:
       - PYTHON_ENV=production
+    network_mode: host
     restart: unless-stopped
-    networks:
-      - sovereign-net
     healthcheck:
       test: ["CMD", "python", "-c", "import httpx; httpx.get('http://localhost:8000/health')"]
       interval: 30s
@@ -141,8 +143,7 @@ services:
     volumes:
       - redis-data:/data
     restart: unless-stopped
-    networks:
-      - sovereign-net
+    network_mode: host
     command: redis-server --appendonly yes
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
@@ -152,7 +153,7 @@ services:
       start_period: 5s
 
   # ═══════════════════════════════════════════════════════════════════════════
-  # Kafka: Event Bus (Optional — disable for local dev)
+  # Kafka: Event Bus (Optional — enable with --profile with-kafka)
   # ═══════════════════════════════════════════════════════════════════════════
   kafka:
     image: confluentinc/cp-kafka:7.5.0
@@ -163,8 +164,9 @@ services:
       KAFKA_NODE_ID: 1
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
-      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      # host network mode → localhost, not kafka hostname
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9093
       KAFKA_PROCESS_ROLES: broker,controller
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
@@ -175,8 +177,7 @@ services:
     volumes:
       - kafka-data:/var/lib/kafka/data
     restart: unless-stopped
-    networks:
-      - sovereign-net
+    network_mode: host
     profiles:
       - with-kafka
     healthcheck:
@@ -202,8 +203,7 @@ services:
       - --storage.tsdb.path=/prometheus
       - --web.enable-lifecycle
     restart: unless-stopped
-    networks:
-      - sovereign-net
+    network_mode: host
     depends_on:
       - sovereign-host
     profiles:
@@ -225,8 +225,7 @@ services:
       - ./grafana/dashboard.json:/var/lib/grafana/dashboards/sovereign-organism.json:ro
       - grafana-data:/var/lib/grafana
     restart: unless-stopped
-    networks:
-      - sovereign-net
+    network_mode: host
     depends_on:
       - prometheus
     profiles:
@@ -234,7 +233,8 @@ services:
       - full
 
 # ═══════════════════════════════════════════════════════════════════════════
-# Networks
+# Networks — not used with network_mode=host; kept for reference.
+# All inter-service communication is via localhost on the host network.
 # ═══════════════════════════════════════════════════════════════════════════
 networks:
   sovereign-net:
