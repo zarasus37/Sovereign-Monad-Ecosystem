@@ -10,7 +10,7 @@
 //   INVESTIGATE → verdict: WARN_INVESTIGATE          (score ≈ 0.30)
 //   ALLOW       → verdict: PASS                      (score ≈ 0.05)
 
-import express, { type Express } from 'express';
+import express, { type Express, type Request, type Response, type NextFunction } from 'express';
 import cors from 'cors';
 import crypto from 'node:crypto';
 import { createDefaultHeparOrchestrator } from './core/HeparOrchestrator.js';
@@ -34,7 +34,7 @@ app.get('/health', (_req, res) => {
 });
 
 // ── Audit endpoint ────────────────────────────────────────────────────────────
-app.post('/api/v1/hepar', async (req: Request, res: Response, next: NextFunction) => {
+app.post('/api/v1/hepar', async (req: Request, res: Response, _next: NextFunction) => {
   try {
     const body = req.body as HeparAuditRequest;
     if (!body?.walletAddress) {
