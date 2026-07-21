@@ -93,10 +93,29 @@ Default TRL RewardTrainer still uses `{prompt, chosen, rejected}` text ranking; 
 
 ---
 
+## Promoted: UMS Execution Vector 2 (2026-07-20) — **IN JSONL · CAT9 30/30**
+
+| Field | Value |
+|---|---|
+| IDs | `PP-042` … `PP-071` (30 pairs) |
+| File | `gnosis-training/data/preference_pairs_ALL.jsonl` |
+| Category | **CAT9** (UMS “CAT 5–8” labels = T/X/C/authenticity axes, not LOGOC cats) |
+| Axis mix | T:**7** · X:**16** · C:**7** (count target 30 hit; X intentionally heavy) |
+| Scripts | `promote_ums_vector2_pairs.py` (12) + `promote_ums_vector2_xc_closeout.py` (+18) |
+| Validate | `python -m gnosis_training validate-worksheet data/preference_pairs_ALL.jsonl` |
+
+**Batch A (`PP-042`…`053`):** sovereignty debt, structured USDC, anti-dilution essay, identity sniper-mimicry + 8 Archon traps (gnostic, utilitarian, semantic void, velocity, Napoleon, compassion, founder, jargon).
+
+**Batch B X/C closeout (`PP-054`…`071`):** 14 technological (audit_trace surveillance, version regression, conversational free-text, zero-shot Solidity, post-hoc explanation, silent patch, density-for-speed, MEV free-flow, provenance trust-me, pragmatism v1.0, audit+marketing scope creep, plain revenue, blanket approval, unbound governance) + 4 cosmological (Twitter dilution, brain-dump, memory wipe, amnesty abuse).
+
+**Corpus after closeout:** **71** human-judged pairs total · CAT9 **30/30** · ready for Stage 2 RewardTrainer.
+
+---
+
 ## CANDIDATE PAIRS — CLAUDE-DRAFTED, PENDING USER REVIEW (TTC BATCH 1)
 
-**NOT IN JSONL.** Review → edit → promote (same flow as Batch 2).  
-Suggested IDs: `PP-T01`… after you promote; below use draft labels.
+**NOT IN JSONL** (except where superseded by UMS Vector 2 themes above). Review → edit → promote.  
+Suggested IDs: continue from `PP-054`…; below use draft labels.
 
 ### Theological (sovereignty & refusal) — 4 drafts toward 10
 
