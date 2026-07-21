@@ -183,10 +183,11 @@ export function createSovereignApp(
       configured: Boolean(
         process.env.KEY_VAULT_NAME &&
           (process.env.MSI_ENDPOINT || process.env.IDENTITY_ENDPOINT ||
+           process.env.AZURE_CLIENT_ID ||
            (process.env.AZURE_TENANT_ID && process.env.AZURE_CLIENT_ID))
       ),
       keyVaultName: process.env.KEY_VAULT_NAME || null,
-      authType: process.env.MSI_ENDPOINT || process.env.IDENTITY_ENDPOINT
+      authType: process.env.MSI_ENDPOINT || process.env.IDENTITY_ENDPOINT || process.env.AZURE_CLIENT_ID
         ? 'managed-identity'
         : process.env.AZURE_TENANT_ID
         ? 'service-principal'
