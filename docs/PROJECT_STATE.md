@@ -3,7 +3,7 @@
 ## Sovereign Monad Ecosystem — Implementation Status
 
 > Last Updated: 2026-07-21
-> Status: **VECTOR 6.4 COMPLETE** · Stage 2 corpus **152** pairs
+> Status: **VECTOR 6.4 COMPLETE** · Stage 2 corpus **250** pairs (guide floor hit)
 
 ---
 
@@ -52,12 +52,13 @@
 - [x] docker-compose topology (`with-kafka`, `observability` profiles)
 - [x] Azure Key Vault integration (`keyCustody.ts` → secret `BootstrapPrivateKey`)
 - [x] Observability (Prometheus `/metrics` + Grafana dashboard)
-- [x] Stage 2 RewardTrainer first-breath lock (`gnosis-v2.0-reward`, CPU verified dry-run; re-locked 2026-07-21 on **152** human-judged pairs)
+- [x] Stage 2 RewardTrainer first-breath lock (`gnosis-v2.0-reward`, CPU verified dry-run; re-locked 2026-07-21 on **250** human-judged pairs)
 - [x] **UMS Vector 2 CAT9 closeout:** +30 pairs (`PP-042`…`PP-071`) → 71 total; CAT9 **30/30** (T7/X16/C7)
 - [x] **CCM doctrine pairs (2026-07-21):** +5 CAT9 (`PP-072`…`PP-076`) → 76 total; CAT9 **35** (T9/X17/C9); `promote_ccm_pairs.py`
-- [x] **CAT6–8 first batch (2026-07-21):** +15 pairs (`PP-077`…`PP-091`) → 91 total; CAT6 **5** / CAT7 **5** / CAT8 **5**
-- [x] **CAT1–5 grow + CAT8 complete (2026-07-21):** +37 pairs (`PP-092`…`PP-128`) → 128 total; CAT8 **10/10**; `promote_cat1_5_8_grow.py`
-- [x] **CAT5 + CAT6 grow (2026-07-21):** +24 pairs (`PP-129`…`PP-152`) → **152** total; CAT5 **21**/30; CAT6 **17**/30; `promote_cat5_6_grow.py`
+- [x] **CAT6–8 first batch (2026-07-21):** +15 pairs (`PP-077`…`PP-091`) → 91 total
+- [x] **CAT1–5 grow + CAT8 complete (2026-07-21):** +37 pairs (`PP-092`…`PP-128`) → 128; CAT8 **10/10**
+- [x] **CAT5 + CAT6 grow (2026-07-21):** +24 pairs (`PP-129`…`PP-152`) → 152
+- [x] **Corpus floor 250 (2026-07-21):** +98 pairs (`PP-153`…`PP-250`) via `promote_to_250.py` → **250** total; CAT5/6 **30/30**; CAT8 **10/10**
 - [x] **Go-live package (The Breath):** runbook + env template + pulse script
 - [x] **Vector 6.4:** Real Hepar Integration (Standalone TS microservice running A→B→C→D forensic pipeline)
 
@@ -116,7 +117,7 @@
 - [ ] `docker compose --env-file .env.production --profile with-kafka up -d --build`
 - [ ] `bash scripts/go-live-pulse.sh` → `status: ALIVE`
 - [ ] First real Meshaleach onboarding on **testnet** before mainnet capital
-- [ ] Expand preference pairs toward 200–300 (CAT8 **10/10**; CAT5 **21**/30; CAT6 **17**/30; grow CAT1–4/7; optional CAT9 T/C rebalance); GPU Stage 2 full epochs / 8B when capital ready
+- [ ] Optional: grow toward full CAT1–8 guide mix (still short CAT1/2/3/4/7 vs 50/40/35/30/25) and/or 300; CAT9 T/C rebalance; GPU Stage 2 full epochs / 8B when capital ready
 
 ---
 
