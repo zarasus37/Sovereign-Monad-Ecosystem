@@ -110,14 +110,31 @@
 
 ---
 
+## Go-Live status (Azure Container Apps — 2026-07-21)
+
+| Resource | Status |
+|----------|--------|
+| `sovereign-host` | **Running** — `https://sovereign-host.wittycoast-d4ae00a3.eastus2.azurecontainerapps.io` · `/health` → `ALIVE` |
+| `hepar-service` | **Running** |
+| `sovereign-redis` | **Running** (internal) · host reports `redis: true` |
+| `sovereign-grafana` | **Running** |
+| `monad-mev` | **Running** (no public FQDN) |
+| Key Vault | `sovereign-kv-20260721` · host `key_custody.configured=true` · **managed-identity** |
+| Kafka | **Off** in current host env (`kafka: false`) — optional profile / managed bus still open |
+| Live capital | **`CARDIA_FUNDING_LIVE=false`** (safe default) · funding SSE runs mock path |
+
+**Operator pulse:** `node scripts/pulse-test.mjs` (env: `SOVEREIGN_HOST_URL`, optional `PULSE_PRIVATE_KEY`) — verified 2026-07-21: health → hepar → PL≥50 → wallet bind → Cardia SSE.
+
 ## Next Steps (operator, capital-gated)
 
-- [ ] Deploy VM + Key Vault; inject `BootstrapPrivateKey` (never commit)
-- [ ] Copy `.env.production.example` → `.env.production`; testnet first
-- [ ] `docker compose --env-file .env.production --profile with-kafka up -d --build`
-- [ ] `bash scripts/go-live-pulse.sh` → `status: ALIVE`
-- [ ] First real Meshaleach onboarding on **testnet** before mainnet capital
-- [ ] Optional: grow toward full CAT1–8 guide mix (still short CAT1/2/3/4/7 vs 50/40/35/30/25) and/or 300; CAT9 T/C rebalance; GPU Stage 2 full epochs / 8B when capital ready
+- [x] Deploy cloud compute + Key Vault; Bootstrap via MI (never commit keys)
+- [x] Host pulse `status: ALIVE` + end-to-end API pulse (paper path)
+- [ ] Optional: enable Kafka / observability wiring end-to-end
+- [ ] Point `FRONTEND_URL` / CORS at real Control Center origin (still `localhost:5173` on host)
+- [ ] Testnet Meshaleach ritual in Control Center (Broken Genesis → Archon → bind)
+- [ ] Fund Bootstrap **testnet** only; dry cycles before any mainnet
+- [ ] Flip `CARDIA_FUNDING_LIVE=true` **only** after testnet cycles + deliberate custody review
+- [ ] Optional: gnosis corpus guide-mix / GPU Stage 2 8B when capital ready
 
 ---
 
