@@ -24,6 +24,7 @@ import {
 import { createCardiaFundingStreamRouter } from '@sovereign/cardia-funding-stream';
 import { renderPrometheusText } from './metrics.js';
 import { ingestKafkaPayload, OBSERVABILITY_TOPICS } from './metricsKafka.js';
+import { checkKeyVaultHealth } from './lib/keyCustody.js';
 
 export type SovereignAppOptions = {
   /** Override frontend origin for CORS (default FRONTEND_URL or Vite 5173). */
