@@ -25,7 +25,7 @@
 import { ethers, Wallet } from 'ethers';
 
 /** Secret name in Key Vault */
-const SECRET_NAME = 'BootstrapPrivateKey';
+const SECRET_NAME = 'BOOTSTRAP-DEPLOYER-KEY';
 
 /** Cache for the wallet instance */
 let cachedWallet: Wallet | null = null;
