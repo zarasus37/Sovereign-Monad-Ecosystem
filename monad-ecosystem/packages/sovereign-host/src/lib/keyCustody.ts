@@ -32,25 +32,22 @@ let cachedWallet: Wallet | null = null;
 
 /**
  * Check if Key Vault integration is configured.
+ * KEY_VAULT_NAME is the only requirement — DefaultAzureCredential auto-detects
+ * system MI (Container Apps), user-assigned MI, service principal, and env creds.
  */
 export function isKeyCustodyConfigured(): boolean {
-  return !!(
-    process.env.KEY_VAULT_NAME &&
-    (hasManagedIdentity() || hasServicePrincipal())
-  );
+  return !!process.env.KEY_VAULT_NAME;
 }
 
 /**
- * Check for Azure Managed Identity (VM / Container Apps).
- * Container Apps doesn't set MSI_ENDPOINT/IDENTITY_ENDPOINT but DOES set
- * AZURE_CLIENT_ID when a system/user-managed identity is assigned.
- * DefaultAzureCredential + ManagedIdentityCredential handle this automatically.
+ * Check for explicit managed identity env vars (not required — DefaultAzureCredential
+ * handles system MI auto-detection in Container Apps without any env vars).
  */
-function hasManagedIdentity(): boolean {
+function hasExplicitManagedIdentity(): boolean {
   return !!(
     process.env.MSI_ENDPOINT ||
     process.env.IDENTITY_ENDPOINT ||
-    process.env.AZURE_CLIENT_ID // Container Apps sets this for managed identity
+    process.env.AZURE_CLIENT_ID
   );
 }
 
@@ -94,26 +91,15 @@ async function fetchKeyFromVault(): Promise<string> {
 
 /**
  * Get the appropriate Azure credential based on environment.
+ * Uses DefaultAzureCredential which auto-detects:
+ *   - System-assigned MI (Container Apps, no env vars needed)
+ *   - User-assigned MI (AZURE_CLIENT_ID)
+ *   - Service principal (AZURE_TENANT_ID + AZURE_CLIENT_ID + AZURE_CLIENT_SECRET)
+ *   - Environment variables (AZURE_TENANT_ID + AZURE_CLIENT_ID + AZURE_CLIENT_SECRET)
  */
 async function getAzureCredential(): Promise<any> {
-  if (hasManagedIdentity()) {
-    // Use Managed Identity (no additional config needed)
-    const { DefaultAzureCredential } = await import('@azure/identity');
-    return new DefaultAzureCredential();
-  } else if (hasServicePrincipal()) {
-    // Use service principal
-    const { ClientSecretCredential } = await import('@azure/identity');
-    return new ClientSecretCredential(
-      process.env.AZURE_TENANT_ID!,
-      process.env.AZURE_CLIENT_ID!,
-      process.env.AZURE_CLIENT_SECRET!
-    );
-  } else {
-    throw new Error(
-      'Neither Managed Identity nor service principal credentials found. ' +
-      'Set MSI_ENDPOINT (Managed Identity) or AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET (service principal).'
-    );
-  }
+  const { DefaultAzureCredential } = await import('@azure/identity');
+  return new DefaultAzureCredential();
 }
 
 /**
@@ -172,25 +158,25 @@ export function invalidateCache(): void {
 
 /**
  * Health check for Key Vault connectivity.
+ * Reports auth type based on which env vars are present (DefaultAzureCredential
+ * handles all cases at runtime; this is just for diagnostics).
  */
 export async function checkKeyVaultHealth(): Promise<{
   configured: boolean;
   keyVaultName: string | null;
-  authType: 'managed-identity' | 'service-principal' | 'none';
+  authType: 'managed-identity' | 'service-principal' | 'default-azure-credential' | 'none';
 }> {
   const configured = isKeyCustodyConfigured();
   const keyVaultName = process.env.KEY_VAULT_NAME || null;
-  
-  let authType: 'managed-identity' | 'service-principal' | 'none' = 'none';
-  if (hasManagedIdentity()) {
+
+  let authType: 'managed-identity' | 'service-principal' | 'default-azure-credential' | 'none' = 'none';
+  if (process.env.MSI_ENDPOINT || process.env.IDENTITY_ENDPOINT || process.env.AZURE_CLIENT_ID) {
     authType = 'managed-identity';
-  } else if (hasServicePrincipal()) {
+  } else if (process.env.AZURE_TENANT_ID && process.env.AZURE_CLIENT_SECRET) {
     authType = 'service-principal';
+  } else if (configured) {
+    authType = 'default-azure-credential';
   }
-  
-  return {
-    configured,
-    keyVaultName,
-    authType,
-  };
+
+  return { configured, keyVaultName, authType };
 }
