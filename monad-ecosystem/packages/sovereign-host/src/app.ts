@@ -24,7 +24,6 @@ import {
 import { createCardiaFundingStreamRouter } from '@sovereign/cardia-funding-stream';
 import { renderPrometheusText } from './metrics.js';
 import { ingestKafkaPayload, OBSERVABILITY_TOPICS } from './metricsKafka.js';
-import { checkKeyVaultHealth } from './lib/keyCustody';
 
 export type SovereignAppOptions = {
   /** Override frontend origin for CORS (default FRONTEND_URL or Vite 5173). */
@@ -138,12 +137,19 @@ export function createSovereignApp(
       configured: boolean;
       keyVaultName: string | null;
       authType: string;
-    } = { configured: false, keyVaultName: null, authType: 'none' };
-    try {
-      key_custody = await checkKeyVaultHealth();
-    } catch {
-      /* Key Vault not configured — dev / test environment */
-    }
+    } = {
+      configured: Boolean(
+        process.env.KEY_VAULT_NAME &&
+          (process.env.MSI_ENDPOINT || process.env.IDENTITY_ENDPOINT ||
+           (process.env.AZURE_TENANT_ID && process.env.AZURE_CLIENT_ID))
+      ),
+      keyVaultName: process.env.KEY_VAULT_NAME || null,
+      authType: process.env.MSI_ENDPOINT || process.env.IDENTITY_ENDPOINT
+        ? 'managed-identity'
+        : process.env.AZURE_TENANT_ID
+        ? 'service-principal'
+        : 'none',
+    };
 
     res.status(200).json({
       status: 'ALIVE',
