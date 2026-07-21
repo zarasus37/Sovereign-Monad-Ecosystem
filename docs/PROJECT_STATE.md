@@ -2,8 +2,8 @@
 
 ## Sovereign Monad Ecosystem — Implementation Status
 
-> Last Updated: 2026-07-20
-> Status: **VECTOR 6.4 COMPLETE**
+> Last Updated: 2026-07-21
+> Status: **VECTOR 6.4 COMPLETE** · Stage 2 corpus **76** pairs
 
 ---
 
@@ -52,8 +52,9 @@
 - [x] docker-compose topology (`with-kafka`, `observability` profiles)
 - [x] Azure Key Vault integration (`keyCustody.ts` → secret `BootstrapPrivateKey`)
 - [x] Observability (Prometheus `/metrics` + Grafana dashboard)
-- [x] Stage 2 RewardTrainer first-breath lock (`gnosis-v2.0-reward`, CPU verified dry-run; corpus now **71** human-judged pairs after UMS Vector 2 CAT9 closeout)
-- [x] **UMS Vector 2 CAT9 closeout:** +30 pairs (`PP-042`…`PP-071`) → **71** total; CAT9 **30/30** (T7/X16/C7 — X intentionally heavy)
+- [x] Stage 2 RewardTrainer first-breath lock (`gnosis-v2.0-reward`, CPU verified dry-run; re-locked 2026-07-21 on **76** human-judged pairs)
+- [x] **UMS Vector 2 CAT9 closeout:** +30 pairs (`PP-042`…`PP-071`) → 71 total; CAT9 **30/30** (T7/X16/C7)
+- [x] **CCM doctrine pairs (2026-07-21):** +5 CAT9 (`PP-072`…`PP-076`) → **76** total; CAT9 **35** (T9/X17/C9); promote script `promote_ccm_pairs.py`
 - [x] **Go-live package (The Breath):** runbook + env template + pulse script
 - [x] **Vector 6.4:** Real Hepar Integration (Standalone TS microservice running A→B→C→D forensic pipeline)
 
@@ -99,6 +100,7 @@
 
 - `docs/GO_LIVE_EXECUTION.md` — **operator runbook for cloud deploy**
 - `docs/GNOSIS_V2_PRETRAIN_AUDIT.md` / `GNOSIS_V2_TRAINING_LOG.md` — Stage 2 audit
+- `docs/CULTURAL_CRITICAL_MASS.md` — critical mass / stealth education / locked trajectory doctrine
 - `docs/VOX_NARRATIVE.md` — External semiotic interface
 - `docs/implementation_*.md` — Technical implementation plans
 
@@ -111,7 +113,7 @@
 - [ ] `docker compose --env-file .env.production --profile with-kafka up -d --build`
 - [ ] `bash scripts/go-live-pulse.sh` → `status: ALIVE`
 - [ ] First real Meshaleach onboarding on **testnet** before mainnet capital
-- [ ] Expand preference pairs toward 200–300 (CAT6–8 + optional CAT9 T/C rebalance); GPU Stage 2 full epochs when ready
+- [ ] Expand preference pairs toward 200–300 (**CAT6–8 still missing**; optional CAT9 T/C rebalance toward 10/10/10); GPU Stage 2 full epochs / 8B when capital ready
 
 ---
 
