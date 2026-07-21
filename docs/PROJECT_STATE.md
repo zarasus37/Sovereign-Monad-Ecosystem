@@ -3,7 +3,7 @@
 ## Sovereign Monad Ecosystem — Implementation Status
 
 > Last Updated: 2026-07-21
-> Status: **VECTOR 6.4 COMPLETE** · Stage 2 corpus **76** pairs
+> Status: **VECTOR 6.4 COMPLETE** · Stage 2 corpus **91** pairs
 
 ---
 
@@ -52,9 +52,10 @@
 - [x] docker-compose topology (`with-kafka`, `observability` profiles)
 - [x] Azure Key Vault integration (`keyCustody.ts` → secret `BootstrapPrivateKey`)
 - [x] Observability (Prometheus `/metrics` + Grafana dashboard)
-- [x] Stage 2 RewardTrainer first-breath lock (`gnosis-v2.0-reward`, CPU verified dry-run; re-locked 2026-07-21 on **76** human-judged pairs)
+- [x] Stage 2 RewardTrainer first-breath lock (`gnosis-v2.0-reward`, CPU verified dry-run; re-locked 2026-07-21 on **91** human-judged pairs)
 - [x] **UMS Vector 2 CAT9 closeout:** +30 pairs (`PP-042`…`PP-071`) → 71 total; CAT9 **30/30** (T7/X16/C7)
-- [x] **CCM doctrine pairs (2026-07-21):** +5 CAT9 (`PP-072`…`PP-076`) → **76** total; CAT9 **35** (T9/X17/C9); promote script `promote_ccm_pairs.py`
+- [x] **CCM doctrine pairs (2026-07-21):** +5 CAT9 (`PP-072`…`PP-076`) → 76 total; CAT9 **35** (T9/X17/C9); `promote_ccm_pairs.py`
+- [x] **CAT6–8 first batch (2026-07-21):** +15 pairs (`PP-077`…`PP-091`) → **91** total; CAT6 **5** / CAT7 **5** / CAT8 **5** (apeiron); `promote_cat6_8_pairs.py`
 - [x] **Go-live package (The Breath):** runbook + env template + pulse script
 - [x] **Vector 6.4:** Real Hepar Integration (Standalone TS microservice running A→B→C→D forensic pipeline)
 
@@ -113,7 +114,7 @@
 - [ ] `docker compose --env-file .env.production --profile with-kafka up -d --build`
 - [ ] `bash scripts/go-live-pulse.sh` → `status: ALIVE`
 - [ ] First real Meshaleach onboarding on **testnet** before mainnet capital
-- [ ] Expand preference pairs toward 200–300 (**CAT6–8 still missing**; optional CAT9 T/C rebalance toward 10/10/10); GPU Stage 2 full epochs / 8B when capital ready
+- [ ] Expand preference pairs toward 200–300 (CAT6–8 seeded at 5 each — targets 30/25/10; grow CAT1–5; optional CAT9 T/C rebalance); GPU Stage 2 full epochs / 8B when capital ready
 
 ---
 
