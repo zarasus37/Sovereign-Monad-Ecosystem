@@ -33,6 +33,27 @@ export default defineConfig({
   },
   server: {
     proxy: {
+      // Vector 4.3 — Sovereign Express host (gate-acl + Cardia SSE).
+      // More specific than generic /api so ICP canister proxy still works.
+      "/api/v1/gate-acl": {
+        target: process.env.VITE_SOVEREIGN_HOST || "http://localhost:3001",
+        changeOrigin: true,
+      },
+      "/api/v1/cardia": {
+        target: process.env.VITE_SOVEREIGN_HOST || "http://localhost:3001",
+        changeOrigin: true,
+        // SSE: disable buffering if the proxy supports it
+        configure: (proxy) => {
+          proxy.on("proxyRes", (proxyRes) => {
+            if (
+              proxyRes.headers["content-type"]?.includes("text/event-stream")
+            ) {
+              proxyRes.headers["cache-control"] = "no-cache";
+              proxyRes.headers["x-accel-buffering"] = "no";
+            }
+          });
+        },
+      },
       "/api": {
         target: "http://127.0.0.1:4943",
         changeOrigin: true,

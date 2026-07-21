@@ -3,7 +3,7 @@
 > This is the single canonical source of truth for the Sovereign Monad Ecosystem.
 > All participants — human or AI — synchronize to this file.
 > Do not act on subordinate documents if they conflict with this file.
-> Last updated 2026-07-14
+> Last updated 2026-07-20
 ---
 
 # SECTION 1 — WHAT THIS FILE IS
@@ -477,7 +477,7 @@ These should be treated as an opening funnel component, not merely a later-layer
 
 - Agent 0 guarded-live progression: keep the current on-chain behavioral proof as record-only, use shadow-paper markout analysis for the first 50 to 100 would-have trades, then require explicit operator review before any funded trading authority.
 - High-Fidelity DeFi Gaming: treat MonadSpin as the umbrella GameFi / gamified environment rail, not a slot-first product thesis; final gameplay, economy, fairness, and agent-role specifications remain pending.
-- Six-organ institutional depth: `Hepar`, `Cortex`, `Synapse`, `Cardia`, `Pneuma`, and `Vox` are accepted as institutional-depth organ tracks. Five organs (`Hepar`, `Cortex`, `Synapse`, `Pneuma`, `Vox`) are LIVE at Advisory Tier and actively integrated into the Ultimate Hepar Revenue Orchestrator. The pipeline natively implements Dynamic Cardia Allocation Caps (0.05% - 0.2% TVL, bounded $15k-$100k) scaled by the enhanced Hepar audit scoring engine (TVL tier, governance, heuristics).
+- Six-organ institutional depth: `Hepar`, `Cortex`, `Synapse`, `Cardia`, `Pneuma`, and `Vox` are accepted as institutional-depth organ tracks. `Hepar` is now a fully standalone TS microservice executing the A-D forensic pipeline. The pipeline natively implements Dynamic Cardia Allocation Caps (0.05% - 0.2% TVL, bounded $15k-$100k) scaled by the enhanced Hepar audit scoring engine (TVL tier, governance, heuristics).
 - Commercial intelligence rails: Hepar forensic reports, risk API/feed packaging, LightVerify certification, and Data Rail licensing are operationalized via an autonomous, human-gated scheduled orchestrator. Post-dispatch diagnostics and 5-day cycle response tracking systems are active, aggressively scaling institutional sales (priced at $28k setup, $9k/mo minimum continuous monitoring).
 - Sovereign Monad Control Hub: Deployment of the `hepar-dashboard-api` HTTP trigger on Azure Functions to securely serve live pipeline telemetry (lead status, proposals, and CRM data) to the React frontend Control Center using `x-functions-key` authentication.
 - Wallet Architecture & Configuration: Established a secure and structured deployment architecture with specific public addresses for "Deployer" and "Bootstrap Source" roles, securely mapped across `.env.phase1a` and `config/phase1a.deploy.json`.
@@ -510,9 +510,9 @@ This means the architecture and local analysis stack are materially advanced. It
 
 ### Completion Interpretation
 
-- locally complete at the current expected level: Canonical Core, Intelligence Layer, Signal Layer, Platform, DAO, Keys, Narrative, Dove, Gnosis, Data Rail, Emergent Protocol local surfaces, **and Four-Layer Hermeneutic Engine (Layer 4 Antikythera)**
+- locally complete at the current expected level: Canonical Core, Intelligence Layer, Signal Layer, Platform, DAO, Keys, Narrative, Dove, Gnosis, Data Rail, Emergent Protocol local surfaces, **Four-Layer Hermeneutic Engine (Layer 4 Antikythera)**, and **Vector 6 / 6.4 (First Breath + Hepar Microservice)**
 - locally partial but meaningful: Oracle, Phase 1a substrate, runtime engine, commercial stack, production ops
-- still blocked or not started in live terms: Treasury, runtime execution-truth closure, funded `Cardia`, live Keys activation, public Data Rail activation, and broader production/public rollout
+- still blocked or not started in live terms: Treasury, live Keys activation, public Data Rail activation, and broader production/public rollout (cloud provisioning)
 
 ## 6.2 Current Live Snapshot
 
@@ -544,7 +544,7 @@ This means the architecture and local analysis stack are materially advanced. It
 | Live Agent Behavioral Loop | COMPLETE / LIVE MAINNET PROOF | `emergence-claim-core` now contains Agent 0 full IPIP-NEO + SD3 profile encoding, deterministic facet-level routing, Dove flags, live Monad decision preparation, and a deployed `EmergenceRecorder`; Agent 0 profile registration and one behavioral claim are both mined on Monad mainnet |
 | Agent 0 Trading Evaluation Path | HARDENED SHADOW-PAPER ANALYSIS COMPLETE | `shadow_markout_hardened.py` complete with real on-chain Pyth Network RPC execution validation (`getPriceUnsafe()`). Concurrency, adverse selection flagging, and dynamic Capacity Ceiling metric logic are implemented. Ready for Explicit Operator Review. |
 | High-Fidelity DeFi Gaming | ACCEPTED DESIGN DIRECTION / SPEC PENDING | MonadSpin is now the umbrella GameFi / gamified environment rail; transitional GameFi control scaffolds may support state and operator flow, but no final high-fidelity game product is live |
-| Six-Organ Institutional Depth | LIVE AT ADVISORY TIER (HEPAR UPGRADED) | `Hepar` has been vastly expanded into a full DeFi zero-day auditing protocol (Stages A-D) with privilege, arithmetic, reentrancy, economic, and state agents. `Cortex`, `Synapse`, `Pneuma`, and `Vox` remain LIVE at Advisory Tier. The dynamic `Cardia` allocation framework is active. |
+| Six-Organ Institutional Depth | HEPAR FULLY LIVE / STANDALONE MICROSERVICE | `Hepar` has been extracted and resurrected as a standalone TS microservice (`@sovereign/hepar-service`) executing the full DeFi zero-day auditing protocol (Stages A-D) with privilege, arithmetic, reentrancy, economic, and state agents. The legacy python mock has been retired, and `docker-compose.yml` routes traffic to it natively. `Cortex`, `Synapse`, `Pneuma`, and `Vox` remain LIVE at Advisory Tier. The dynamic `Cardia` allocation framework is active. |
 | Cardia / Organ Runtime Activation | LOCAL ANALYSIS / READY FOR FUNDING POSTURE | `cardia-activation-core` converted to ESM, `execution-truth-core` and `organ-runtime` stubs created under `packages/organs/`, local snapshot reports `ready_for_funding`; live wallet funding and execution-truth closure remain downstream gates. |
 | x402 QuickNode Payment Bridge | REHOMED / LIVE SMOKE GREEN / REMEDIATED | Live client, JWT auth helper (`auth_sdk.cjs` via the official `@quicknode/x402` SDK), price fetcher, and live smoke test moved to canonical Poetry package `monad-ecosystem/packages/x402-bridge/`. Unit auth tests pass. Live smoke test GREEN 2026-07-10 (`eth_blockNumber` on `monad-mainnet`, PR #30). **`LEGACY_NON_SOVEREIGN` cleared (PR #45, 2026-07-13)** — bridge wrapped as a sovereign agent (`X402Agent`): cost ledger, retry envelope, sovereign-agent consumer (`docs/LEGACY_COMPONENTS.md` §6). |
 | Cross-Domain Contract Layer | DOCUMENTED + CODEGEN | `shared/schemas/` + `shared/ttcl-specs/` hold the portable JSON-schema contracts; `@sovereign/types` (now owns the Peirce 66-class manifold, relocated from logoc per PR #24) and `@sovereign/bus` provide the typed TypeScript contract and event backbone. Layer-3 codegen (PRs #19/#22) generates types + Sign-event validators/factories from JSON source of truth. |

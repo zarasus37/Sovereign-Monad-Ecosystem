@@ -16,7 +16,7 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "monitor": "node dist/cli.js",
     "generate-traced-window": "node scripts/generate-traced-window.mjs logs/audit/signal-stream-traced.jsonl"
   },

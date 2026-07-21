@@ -7,7 +7,7 @@ This document defines the practical order for working in the unified ecosystem.
 1. Read `README.md`.
 2. Read `docs/REPO_STRUCTURE_MAP.md`.
 3. Read `docs/PROJECT_STATE.md`.
-4. Read `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md`.
+4. Read `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`.
 5. Identify whether the change belongs to an active pillar, a canonical doc, or the archive.
 6. Make the smallest change that keeps the unified root coherent.
 7. Run `pnpm check:layout` when structural paths or top-level folders change. If `ripgrep` (`rg`) is not installed, the legacy-path scan is skipped with a warning while the top-level guard still runs.

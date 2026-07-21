@@ -28,6 +28,8 @@ export interface GateEvent {
   gateId: string;
   verifiedBy: VerifiedBy;
   at: number; // unix ms
+  /** Optional custom points (onboarding archon = 25); default POINTS.comprehension_gate_pass */
+  points?: number;
 }
 
 export interface OverrideEvent {
@@ -51,6 +53,8 @@ export interface TaskEvent {
   outcome: 'passed' | 'failed';
   verifiedBy: VerifiedBy;
   at: number;
+  /** Optional custom points (onboarding: 10 genesis / 15 quarantine); default POINTS.domain_task_pass */
+  points?: number;
 }
 
 /** Closed LOGOC paper trade (process-valid) — small PL credit toward tier 2. */
@@ -200,6 +204,11 @@ export type GateResult =
 export const TOPICS = {
   PL_EVENTS: 'pl.events',
   PL_STATE_UPDATED: 'pl.state.updated',
+  /**
+   * Rich onboarding PL broadcast for Cardia / multi-organ consumers
+   * (UMS Vector 3 — PlLedgerKafkaEvent).
+   */
+  PL_LEDGER_EVENTS: 'sovereign.pl.ledger.events',
   INTENT_RAISED: 'intent.raised',
   EXECUTION_APPROVED: 'execution.approved',
   EXECUTION_REJECTED: 'execution.rejected',

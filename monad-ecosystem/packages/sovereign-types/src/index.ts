@@ -63,6 +63,15 @@ export type {
   HeparAuditResult,
 } from './types/hepar.js';
 
+// ── Hepar funding address gate (Vector 4.4) ───────────────────────────────────
+export type {
+  HeparAuditVerdict,
+  HeparAuditContext,
+  HeparAuditRequest,
+  HeparAuditResponse,
+} from './types/hepar-audit.js';
+export { isHeparPass } from './types/hepar-audit.js';
+
 // ── Durable Event Log (Layer 5 audit trail) ─────────────────────────────────
 export type {
   StoredEvent,
@@ -176,3 +185,115 @@ export type {
   EmergencePattern,
   EmergenceAccumulatorState,
 } from './types/emergence.js';
+
+// ── Shaliah onboarding (Vector 1) ────────────────────────────────────────────
+export type {
+  OnboardingDomainType,
+  CircuitNode,
+  WireConnection,
+  BehavioralTelemetryAction,
+  BehavioralTelemetry,
+  Phase1ProfileWeights,
+  CognitiveTwinSeed,
+  Phase1CompletionPayload,
+  GenesisPlRecord,
+  ShadowTradeStatus,
+  ShadowRefusalReason,
+  ShadowTradeUi,
+  QuarantineUserAction,
+  QuarantineTelemetry,
+  Phase2CompletionPayload,
+  ConstraintAxis,
+  ConstraintBlock,
+  ArchonAttack,
+  InterrogationTelemetry,
+  Phase3CompletionPayload,
+} from './types/onboarding.js';
+
+// ── PL ledger Kafka bridge (Vector 3) ────────────────────────────────────────
+export type {
+  PlOnboardingTaskId,
+  PlPointsAwarded,
+  PlVerifiedBy,
+  PlLedgerKafkaEvent,
+  PlPromoteClaim,
+  PlTaskPayload,
+  BrokenGenesisTaskPayload,
+  QuarantineTaskPayload,
+  ArchonTaskPayload,
+  PlPromoteResult,
+} from './types/pl-ledger.js';
+
+// ── Wallet bind (Vector 3.2) ─────────────────────────────────────────────────
+export type {
+  WalletBindRequest,
+  WalletBindKafkaPayload,
+  WalletBindResult,
+} from './types/wallet-bind.js';
+export { WALLET_BIND_MESSAGE_PREFIX } from './types/wallet-bind.js';
+
+// ── Cardia funding (Vector 3.3) ──────────────────────────────────────────────
+export type {
+  FundingStatus,
+  FundingTier,
+  FundingMandate,
+  CardiaFundingKafkaEvent,
+} from './types/cardia-funding.js';
+export {
+  CARDIA_FUNDING_TOPIC,
+  TIER_1_FUNDING_USD,
+} from './types/cardia-funding.js';
+
+// ── Shadow Markout Gate (Vector 5.1) ───────────────────────────────────────
+export type {
+  ShadowVerdict,
+  ShadowMarkoutRequest,
+  ShadowMarkoutResponse,
+  TradePayload,
+  TradeStatus,
+} from './types/shadow-gate.js';
+export {
+  SHADOW_API_URL,
+  SHADOW_TIMEOUT_MS,
+} from './types/shadow-gate.js';
+
+// ── Capacity ceiling (Vector 5.2) ─────────────────────────────────────────────
+export type {
+  CapacityCeilingEventKind,
+  TradeOutcome,
+  CeilingDecision,
+  CapacityCeilingConfig,
+  CapacityCeilingEvent,
+} from './types/capacity-ceiling.js';
+export {
+  CAPACITY_CEILING_TOPIC,
+  CAPACITY_CEILING_DEFAULT_ALLOCATION_USD,
+  CAPACITY_CEILING_STABLE_DECIMALS,
+  C_DENSITY_FLOOR_DEFAULT,
+  C_DENSITY_WARNING_DEFAULT,
+  CAPACITY_MIN_FLOOR_USD_DEFAULT,
+  CAPACITY_ROLLING_WINDOW_DEFAULT,
+  usdToStableBaseUnits,
+  stableBaseUnitsToUsd,
+} from './types/capacity-ceiling.js';
+
+// ── Sovereign execution loop (Vector 5.3) ─────────────────────────────────────
+export type {
+  CapitalMandate,
+  YieldDistribution,
+  MandateVerifyResult,
+  SovereignLoopEventKind,
+  SovereignLoopEvent,
+} from './types/sovereign-loop.js';
+export {
+  SOVEREIGN_MANDATE_DOMAIN_NAME,
+  SOVEREIGN_MANDATE_DOMAIN_VERSION,
+  SOVEREIGN_LOOP_TOPIC,
+  YIELD_SPLIT_PRINCIPAL_BPS,
+  YIELD_SPLIT_SHALIAH_BPS,
+  YIELD_SPLIT_VAULT_BPS,
+  LOOP_STABLE_DECIMALS,
+  loopUsdToBaseUnits,
+  loopBaseUnitsToUsd,
+  computeYieldSplitsBaseUnits,
+} from './types/sovereign-loop.js';

@@ -90,16 +90,38 @@ $env:KAFKA_BROKERS = "localhost:9092"
 $env:REDIS_URL = "redis://localhost:6379"
 $env:GATE_ACL_SIGNING_SECRET = "<strong-secret>"
 $env:GATE_ACL_REQUIRE_SECRET = "1"   # hard throw if secret missing
+$env:KAFKA_ENABLED = "true"          # PL promote bridge real emit
 pnpm start
 ```
 
 | Env | Purpose |
 |---|---|
 | `KAFKA_BROKERS` | comma-separated brokers (default `localhost:9092`) |
+| `KAFKA_ENABLED` | `true` → `promotePl` broadcasts to Kafka |
 | `REDIS_URL` | mandate store; if unset → `InMemoryMandateStore` + warning |
 | `GATE_ACL_SIGNING_SECRET` | HMAC key for mandates |
 | `GATE_ACL_REQUIRE_SECRET` | `1` or `NODE_ENV=production` → refuse dev fallback |
 | `GATE_ACL_EXECUTE_ON_APPROVE` | `1` → run Executor in the gate process after approve |
+
+### PL promote bridge (UMS Vector 3)
+
+Client **claims** task completion; server **verifies** and may broadcast. Never `verifiedBy: client`.
+
+```ts
+import { promotePl, promotePlHttp, PLLedger } from '@sovereign/gate-acl';
+
+const ledger = new PLLedger();
+const out = await promotePl(
+  {
+    principalId: 'principal:…',
+    taskId: 'archon-comprehension-gate',
+    taskPayload: { kind: 'archon', gatesPassed: 2 },
+  },
+  { ledger, kafkaEnabled: process.env.KAFKA_ENABLED === 'true' },
+);
+// Topics: pl.events · sovereign.pl.ledger.events · pl.state.updated
+// HTTP adapter: promotePlHttp(body, { ledger }) → { status, json }
+```
 
 ## Secrets
 

@@ -39,7 +39,7 @@ These are the canonical working surfaces for the ecosystem:
 These files define system-level truth and should be treated as primary references:
 
 - `README.md` — entry point: how to run the ecosystem and where to read next
-- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` — authoritative operating backbone: philosophy, architecture, roadmap, blockers
+- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` — authoritative operating backbone: philosophy, architecture, roadmap, blockers
 - `docs/THEO_TECHNO_COSMO.md` — operational TTC constraint system (validity gates: sovereignty, structure, density)
 - `docs/CHARTER.md` — non-negotiable guardrails (sovereignty, mutual growth, human capability drift)
 - `docs/PROJECT_STATE.md` — build-state snapshot and resume point during active work
@@ -87,7 +87,7 @@ These folders are workspace artifacts, not product architecture:
 The long-term target is:
 
 1. keep the three active domains plus the cross-domain contract layer under one unified root
-2. use `README.md` as the entry point and `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` as the authoritative operating backbone
+2. use `README.md` as the entry point and `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` as the authoritative operating backbone
 3. quarantine legacy material under `legacy/` or `archive/`
 4. keep generated and local-only artifacts out of the mental model
 5. keep `shared/schemas/` and `@sovereign/types` synchronized as the canonical contract layer

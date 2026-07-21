@@ -1,0 +1,176 @@
+# Gnosis V2 Training Log (Vector 6.1 Stage 2)
+
+_UTC: 2026-07-20T17:05:49.750226+00:00_
+
+**Mode:** `CPU_VERIFIED_DRY_RUN`  
+**CUDA:** False  
+**Base model:** `Qwen/Qwen2.5-0.5B-Instruct`  
+**Pairs:** 41 (train 32 / eval 9)
+
+## Effective hyperparams
+
+```json
+{
+  "batch_size": 1,
+  "learning_rate": 1e-05,
+  "epochs": 1,
+  "max_steps": 4,
+  "max_length": 512
+}
+```
+
+## Train metrics
+
+```json
+{
+  "train_runtime": 111.0981,
+  "train_samples_per_second": 0.036,
+  "train_steps_per_second": 0.036,
+  "total_flos": 7475636653056.0,
+  "train_loss": 0.46249570697546005,
+  "epoch": 0.23529411764705882
+}
+```
+
+## Eval metrics
+
+```json
+{
+  "eval_loss": 0.3650001883506775,
+  "eval_runtime": 27.9581,
+  "eval_samples_per_second": 0.179,
+  "eval_steps_per_second": 0.179,
+  "eval_num_tokens": 2444.0,
+  "eval_min_reward": 1.3612619161605835,
+  "eval_mean_reward": 1.9568578958511353,
+  "eval_max_reward": 2.5524539947509766,
+  "eval_accuracy": 0.8,
+  "eval_margin": 1.052479100227356,
+  "epoch": 0.23529411764705882
+}
+```
+
+## Loss curve (trainer log_history)
+
+| step | loss | eval_loss | learning_rate |
+|------|------|-----------|---------------|
+| 1 | 1.0654133558273315 |  | 0.0 |
+| 2 | 0.26860731840133667 |  | 1e-05 |
+| 2 |  | 0.38374873995780945 |  |
+| 3 | 0.3738671839237213 |  | 7.500000000000001e-06 |
+| 4 | 0.14209496974945068 |  | 2.5000000000000015e-06 |
+| 4 |  | 0.3650001883506775 |  |
+| 4 |  | 0.3650001883506775 |  |
+
+## Raw log_history
+
+```json
+[
+  {
+    "loss": 1.0654133558273315,
+    "grad_norm": 85.87560272216797,
+    "learning_rate": 0.0,
+    "num_tokens": 594.0,
+    "min_reward": 1.1420912742614746,
+    "mean_reward": 1.4635543823242188,
+    "max_reward": 1.7850173711776733,
+    "accuracy": 0.0,
+    "margin": -0.6429260969161987,
+    "epoch": 0.058823529411764705,
+    "step": 1
+  },
+  {
+    "loss": 0.26860731840133667,
+    "grad_norm": 28.82939910888672,
+    "learning_rate": 1e-05,
+    "num_tokens": 1250.0,
+    "min_reward": 1.7718275785446167,
+    "mean_reward": 2.3604259490966797,
+    "max_reward": 2.949024200439453,
+    "accuracy": 1.0,
+    "margin": 1.1771966218948364,
+    "epoch": 0.11764705882352941,
+    "step": 2
+  },
+  {
+    "eval_loss": 0.38374873995780945,
+    "eval_runtime": 20.1738,
+    "eval_samples_per_second": 0.248,
+    "eval_steps_per_second": 0.248,
+    "eval_num_tokens": 1250.0,
+    "eval_min_reward": 1.3840713977813721,
+    "eval_mean_reward": 1.9600147008895874,
+    "eval_max_reward": 2.535957908630371,
+    "eval_accuracy": 0.8,
+    "eval_margin": 0.9867409229278564,
+    "epoch": 0.11764705882352941,
+    "step": 2
+  },
+  {
+    "loss": 0.3738671839237213,
+    "grad_norm": 43.326698303222656,
+    "learning_rate": 7.500000000000001e-06,
+    "num_tokens": 1860.0,
+    "min_reward": 1.0979530811309814,
+    "mean_reward": 1.4935050010681152,
+    "max_reward": 1.889056921005249,
+    "accuracy": 1.0,
+    "margin": 0.7911038398742676,
+    "epoch": 0.17647058823529413,
+    "step": 3
+  },
+  {
+    "loss": 0.14209496974945068,
+    "grad_norm": 22.84050941467285,
+    "learning_rate": 2.5000000000000015e-06,
+    "num_tokens": 2444.0,
+    "min_reward": 1.6874635219573975,
+    "mean_reward": 2.6271491050720215,
+    "max_reward": 3.5668344497680664,
+    "accuracy": 1.0,
+    "margin": 1.879370927810669,
+    "epoch": 0.23529411764705882,
+    "step": 4
+  },
+  {
+    "eval_loss": 0.3650001883506775,
+    "eval_runtime": 42.4233,
+    "eval_samples_per_second": 0.118,
+    "eval_steps_per_second": 0.118,
+    "eval_num_tokens": 2444.0,
+    "eval_min_reward": 1.3612619161605835,
+    "eval_mean_reward": 1.9568578958511353,
+    "eval_max_reward": 2.5524539947509766,
+    "eval_accuracy": 0.8,
+    "eval_margin": 1.052479100227356,
+    "epoch": 0.23529411764705882,
+    "step": 4
+  },
+  {
+    "train_runtime": 111.0981,
+    "train_samples_per_second": 0.036,
+    "train_steps_per_second": 0.036,
+    "total_flos": 7475636653056.0,
+    "train_loss": 0.46249570697546005,
+    "epoch": 0.23529411764705882,
+    "step": 4
+  },
+  {
+    "eval_loss": 0.3650001883506775,
+    "eval_runtime": 27.9581,
+    "eval_samples_per_second": 0.179,
+    "eval_steps_per_second": 0.179,
+    "eval_num_tokens": 2444.0,
+    "eval_min_reward": 1.3612619161605835,
+    "eval_mean_reward": 1.9568578958511353,
+    "eval_max_reward": 2.5524539947509766,
+    "eval_accuracy": 0.8,
+    "eval_margin": 1.052479100227356,
+    "epoch": 0.23529411764705882,
+    "step": 4
+  }
+]
+```
+
+**Elapsed:** 140.0s  
+**Checkpoint:** `checkpoints/gnosis-v2.0-reward`

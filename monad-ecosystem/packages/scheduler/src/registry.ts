@@ -64,6 +64,36 @@ export interface Pair {
   readonly wheels: readonly [string, string];
 }
 
+/** A letter-level pair entry (45-pair reconstruction). */
+export interface LetterPair {
+  readonly id: string;
+  readonly letters: readonly [string, string];
+}
+
+/** A 3-letter camera for the Fourth Figure Tabula Generalis. */
+export interface FourthFigureCamera {
+  readonly id: string;
+  readonly letters: readonly [string, string, string];
+}
+
+/** Fourth-Figure configuration (3-letter camera validation). */
+export interface FourthFigureConfig {
+  readonly enabled: boolean;
+  readonly alphabet: readonly string[];
+  readonly cameras: readonly FourthFigureCamera[];
+  /** Lookup map: normalized key (e.g., "BCD") -> FourthFigureCamera */
+  readonly cameraLookup: ReadonlyMap<string, FourthFigureCamera>;
+}
+
+/** Letter-level pair configuration (45-pair reconstruction). */
+export interface LetterPairsConfig {
+  readonly alphabet: readonly string[];
+  readonly pairs: readonly LetterPair[];
+  readonly includeSelfPairs: boolean;
+  /** Lookup map: normalized key (e.g., "BC") -> LetterPair */
+  readonly letterPairLookup: ReadonlyMap<string, LetterPair>;
+}
+
 /**
  * The in-memory registry: live `Wheel<N>` instances (real @sovereign/ttcl
  * wheels, `initial:0`, available for any runtime consumer) plus the metadata
@@ -85,6 +115,10 @@ export interface WheelRegistry {
   readonly pairIds: readonly string[];
   /** Pairs keyed by id. */
   readonly pairById: ReadonlyMap<string, Pair>;
+  /** Letter-level pair table (45-pair reconstruction), or null if not configured. */
+  readonly letterPairs: LetterPairsConfig | null;
+  /** Fourth-Figure configuration (deferred), or null if not configured. */
+  readonly fourthFigure: FourthFigureConfig | null;
 }
 
 /** The raw JSON shape (post-ajv, pre-integrity). */
@@ -99,6 +133,16 @@ interface RegistryJson {
   }[];
   facets: { THEOLOGY: string; TECHNOLOGY: string; COSMOLOGY: string };
   pairs: { id: string; wheels: [string, string] }[];
+  letterPairs?: {
+    alphabet: string[];
+    pairs: { id: string; letters: [string, string] }[];
+    includeSelfPairs?: boolean;
+  } | null;
+  fourthFigure?: {
+    enabled?: boolean;
+    alphabet?: string[];
+    cameras?: { id: string; letters: [string, string, string] }[];
+  } | null;
 }
 
 /**
@@ -212,6 +256,59 @@ export function buildRegistry(raw: unknown): WheelRegistry {
     pairById.set(p.id, pair);
   }
 
+  // Build letter-pairs config if present
+  let letterPairsConfig: LetterPairsConfig | null = null;
+  if (json.letterPairs !== null && json.letterPairs !== undefined) {
+    const lp = json.letterPairs;
+    const lookup = new Map<string, LetterPair>();
+    const letterPairList: LetterPair[] = [];
+    
+    for (const lpEntry of lp.pairs) {
+      // Normalize key: sort letters alphabetically so BC = CB
+      const [l1, l2] = lpEntry.letters;
+      const key = l1 < l2 ? `${l1}${l2}` : `${l2}${l1}`;
+      
+      const entry: LetterPair = { id: lpEntry.id, letters: lpEntry.letters };
+      letterPairList.push(entry);
+      lookup.set(key, entry);
+    }
+    
+    letterPairsConfig = {
+      alphabet: lp.alphabet,
+      pairs: letterPairList,
+      includeSelfPairs: lp.includeSelfPairs ?? true,
+      letterPairLookup: lookup,
+    };
+  }
+
+  // Build fourth-figure config if present (84 C(9,3) cameras)
+  let fourthFigureConfig: FourthFigureConfig | null = null;
+  if (json.fourthFigure !== null && json.fourthFigure !== undefined) {
+    const ff = json.fourthFigure;
+    const cameraLookup = new Map<string, FourthFigureCamera>();
+    const cameraList: FourthFigureCamera[] = [];
+    
+    if (ff.cameras) {
+      for (const cam of ff.cameras) {
+        // Normalize key: sort letters alphabetically so BCD = CDB = DBC
+        const [l1, l2, l3] = cam.letters;
+        const sorted = [l1, l2, l3].sort();
+        const key = sorted.join('');
+        
+        const entry: FourthFigureCamera = { id: cam.id, letters: cam.letters };
+        cameraList.push(entry);
+        cameraLookup.set(key, entry);
+      }
+    }
+    
+    fourthFigureConfig = {
+      enabled: ff.enabled ?? false,
+      alphabet: ff.alphabet ?? [],
+      cameras: cameraList,
+      cameraLookup: cameraLookup,
+    };
+  }
+
   return {
     registry: json.registry,
     wheels,
@@ -221,6 +318,8 @@ export function buildRegistry(raw: unknown): WheelRegistry {
     pairs,
     pairIds,
     pairById,
+    letterPairs: letterPairsConfig,
+    fourthFigure: fourthFigureConfig,
   };
 }
 

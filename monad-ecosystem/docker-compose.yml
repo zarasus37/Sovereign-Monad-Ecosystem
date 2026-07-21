@@ -1,0 +1,250 @@
+# Sovereign Monad Ecosystem — Docker Compose
+#
+# Final Sequence: The Breath (see docs/GO_LIVE_EXECUTION.md)
+#
+# Usage (from this directory):
+#   cp .env.production.example .env.production   # fill secrets — never commit
+#   docker compose --env-file .env.production --profile with-kafka up -d --build
+#   docker compose --env-file .env.production --profile observability up -d
+#   curl -s http://localhost:3001/health | jq .
+#
+# Profiles:
+#   with-kafka     — in-compose Kafka
+#   observability  — Prometheus + Grafana
+#   full           — observability alias
+
+services:
+  # ═══════════════════════════════════════════════════════════════════════════
+  # Sovereign Host (API + Cardia SSE + metrics + key custody)
+  # ═══════════════════════════════════════════════════════════════════════════
+  sovereign-host:
+    build:
+      context: ../..
+      dockerfile: monad-ecosystem/packages/sovereign-host/Dockerfile
+    container_name: sovereign-host
+    ports:
+      - "3001:3001"
+    env_file:
+      - path: .env.production
+        required: false
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - FRONTEND_URL=${FRONTEND_URL:-https://app.yourdomain.com}
+
+      # Cosmos
+      - MONAD_RPC_URL=${MONAD_RPC_URL:-https://rpc.testnet.monad.xyz}
+      - MONAD_CHAIN_ID=${MONAD_CHAIN_ID:-10143}
+      - STABLECOIN_CONTRACT=${STABLECOIN_CONTRACT:-}
+
+      # Live capital (default false)
+      - CARDIA_FUNDING_LIVE=${CARDIA_FUNDING_LIVE:-false}
+      - YIELD_ROUTER_LIVE=${YIELD_ROUTER_LIVE:-false}
+
+      # Router B sinks
+      - PRINCIPAL_TREASURY=${PRINCIPAL_TREASURY:-0x0000000000000000000000000000000000000000}
+      - SHALIAH_TREASURY=${SHALIAH_TREASURY:-0x0000000000000000000000000000000000000000}
+      - ECOSYSTEM_VAULT=${ECOSYSTEM_VAULT:-0x0000000000000000000000000000000000000000}
+
+      # Nervous system (compose service DNS)
+      - KAFKA_ENABLED=${KAFKA_ENABLED:-false}
+      - KAFKA_BROKERS=${KAFKA_BROKERS:-kafka:9092}
+      - KAFKA_SASL_USERNAME=${KAFKA_SASL_USERNAME:-}
+      - KAFKA_SASL_PASSWORD=${KAFKA_SASL_PASSWORD:-}
+      - REDIS_URL=${REDIS_URL:-redis://redis:6379}
+
+      # Forensic gates
+      - HEPAR_API_URL=${HEPAR_API_URL:-http://hepar-engine:3003/api/v1/hepar}
+      - HEPAR_AUDIT_MODE=${HEPAR_AUDIT_MODE:-http}
+      - HEPAR_API_KEY=${HEPAR_API_KEY:-}
+      - SHADOW_API_URL=${SHADOW_API_URL:-http://python-engine:8000/api/v1/shadow/evaluate}
+
+      # Key custody (Azure Key Vault) — preferred over BOOTSTRAP_PRIVATE_KEY
+      - KEY_VAULT_NAME=${KEY_VAULT_NAME:-}
+      - AZURE_TENANT_ID=${AZURE_TENANT_ID:-}
+      - AZURE_CLIENT_ID=${AZURE_CLIENT_ID:-}
+      - AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET:-}
+      # Dev/staging only — never mainnet capital on disk env:
+      - BOOTSTRAP_PRIVATE_KEY=${BOOTSTRAP_PRIVATE_KEY:-}
+    depends_on:
+      redis:
+        condition: service_healthy
+      hepar-engine:
+        condition: service_healthy
+      python-engine:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - sovereign-net
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # Hepar Engine — True TypeScript forensic chain scanner (A→B→C→D)
+  # Replaces the python-engine mock Hepar endpoint.
+  # ═══════════════════════════════════════════════════════════════════════════
+  hepar-engine:
+    build:
+      context: ../..
+      dockerfile: monad-ecosystem/packages/hepar-service/Dockerfile
+    container_name: sovereign-hepar
+    ports:
+      - "3003:3003"
+    environment:
+      - NODE_ENV=production
+      - PORT=3003
+    restart: unless-stopped
+    networks:
+      - sovereign-net
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3003/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # Node 3: Python Engine (FastAPI + Shadow Markout only)
+  # Note: Hepar endpoint REMOVED — now served by hepar-engine above.
+  # ═══════════════════════════════════════════════════════════════════════════
+  python-engine:
+    build:
+      context: ../..
+      dockerfile: monad-ecosystem/packages/monad-mev/python/Dockerfile
+    container_name: python-engine
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHON_ENV=production
+    restart: unless-stopped
+    networks:
+      - sovereign-net
+    healthcheck:
+      test: ["CMD", "python", "-c", "import httpx; httpx.get('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # Redis: Nonce Manager & Cache (Nervous System)
+  # ═══════════════════════════════════════════════════════════════════════════
+  redis:
+    image: redis:7-alpine
+    container_name: sovereign-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - sovereign-net
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # Kafka: Event Bus (Optional — disable for local dev)
+  # ═══════════════════════════════════════════════════════════════════════════
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: sovereign-kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    restart: unless-stopped
+    networks:
+      - sovereign-net
+    profiles:
+      - with-kafka
+    healthcheck:
+      test: ["CMD", "kafka-broker-api-versions", "--bootstrap-server", "localhost:9092"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # Observability (Vector 6.3) — Prometheus + Grafana
+  # ═══════════════════════════════════════════════════════════════════════════
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    container_name: sovereign-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --web.enable-lifecycle
+    restart: unless-stopped
+    networks:
+      - sovereign-net
+    depends_on:
+      - sovereign-host
+    profiles:
+      - observability
+      - full
+
+  grafana:
+    image: grafana/grafana:11.2.0
+    container_name: sovereign-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-sovereign}
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_SERVER_ROOT_URL=${GRAFANA_ROOT_URL:-http://localhost:3000}
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboard.json:/var/lib/grafana/dashboards/sovereign-organism.json:ro
+      - grafana-data:/var/lib/grafana
+    restart: unless-stopped
+    networks:
+      - sovereign-net
+    depends_on:
+      - prometheus
+    profiles:
+      - observability
+      - full
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Networks
+# ═══════════════════════════════════════════════════════════════════════════
+networks:
+  sovereign-net:
+    driver: bridge
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Volumes
+# ═══════════════════════════════════════════════════════════════════════════
+volumes:
+  redis-data:
+  kafka-data:
+  prometheus-data:
+  grafana-data:

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { PeirceManifold, getManifold } from "../src/peirce/manifold";
+import { PeirceManifold, getManifold } from "@sovereign/types";
 import { PeirceClassifier } from "../src/peirce/classifier";
 import { LogocEvent, SemioticFlags } from "../src/peirce/models";
 import { readFileSync } from "fs";

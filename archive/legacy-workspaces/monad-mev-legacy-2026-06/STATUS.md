@@ -57,7 +57,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\sync-canonical-mirrors.ps1
 ## Notes For Codex
 
 - Read `AGENTS.md` first.
-- For ecosystem truth, read `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` and `docs/ECOSYSTEM_BUILD_MAP.md` before making broad claims.
+- For ecosystem truth, read `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` and `docs/ECOSYSTEM_BUILD_MAP.md` before making broad claims.
 - Do not infer live status from local scaffolds alone.
 
 <!-- AUTO-STATUS:START -->

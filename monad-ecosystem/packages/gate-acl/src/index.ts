@@ -47,6 +47,50 @@ export { GateIntentService } from './gateIntentService.js';
 export { ShaliahIntentEmitter, PlEventEmitter } from './shaliahAgentPath.js';
 
 export {
+  verifyBrokenGenesisStructural,
+  buildBrokenGenesisTaskEvent,
+  type GenesisProfileWeights,
+  type GenesisVerifyInput,
+} from './genesisVerify.js';
+
+export {
+  verifyPlPromoteClaim,
+  buildPlLedgerKafkaEvent,
+  toPlEvent,
+  deterministicEventId,
+  PL_POINTS,
+  CONSTRAINT_ENVELOPE_VERSION,
+  type PromoteVerifyResult,
+} from './plBridge.js';
+export type {
+  PlPromoteClaim,
+  PlPromoteResult,
+  PlLedgerKafkaEvent,
+  PlOnboardingTaskId,
+  PlTaskPayload,
+} from './plBridge.types.js';
+export { promotePl, promotePlHttp, type PlBridgeDeps } from './plBridgeService.js';
+
+export {
+  verifyWalletBind,
+  buildWalletBindEvent,
+  buildBindMessage,
+  parseBindMessage,
+  PrincipalWalletRegistry,
+  WALLET_BIND_TASK_ID,
+  TIER_1_PL_MINIMUM,
+  WALLET_BIND_MESSAGE_PREFIX,
+  type WalletBindRequest,
+  type WalletBindKafkaPayload,
+} from './walletBind.js';
+export {
+  bindWallet,
+  bindWalletHttp,
+  type WalletBindDeps,
+  type WalletBindServiceResult,
+} from './walletBindService.js';
+
+export {
   SYNTHETIC_ACCOUNT_DEFAULT,
   RISK_PCT_MIN,
   RISK_PCT_MAX,

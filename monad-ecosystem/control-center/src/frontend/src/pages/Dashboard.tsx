@@ -5,6 +5,7 @@ import { ActivityLog } from "@/components/ActivityLog";
 import { ConfigPanel } from "@/components/ConfigPanel";
 import { ControlPanel } from "@/components/ControlPanel";
 import { MetricsPanel } from "@/components/MetricsPanel";
+import { FundingStatusPanel } from "@/components/FundingStatusPanel";
 import { Badge } from "@/components/ui/badge";
 import { useConfig, useControls } from "@/hooks/use-dashboard";
 
@@ -48,6 +49,7 @@ export default function Dashboard() {
   return (
     <div className="space-y-8" data-ocid="dashboard.page">
       <DashboardHeader />
+      <FundingStatusPanel />
       <MetricsPanel config={config} />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <ControlPanel />

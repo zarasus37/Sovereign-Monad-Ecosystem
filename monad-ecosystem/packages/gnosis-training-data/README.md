@@ -4,7 +4,7 @@ TTCL **Layer 7 — data-generation consumer**. The prose names the Layer 7
 "next code priority" as *the data-generation consumer that turns a
 `canonical_schedule` into Gnosis training events*
 (`docs/PROJECT_STATE.json` `known_follow_ups`;
-`docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md:2035`).
+`docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md:2035`).
 This package is that consumer.
 
 It reads a `CanonicalSchedule` produced by `@sovereign/scheduler` (Layer 6),

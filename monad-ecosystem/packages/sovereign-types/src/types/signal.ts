@@ -36,6 +36,11 @@ export type SignalEventType =
   | 'trade.approved'
   | 'trade.executed'
   | 'trade.rejected'
+  // Capacity ceiling (Vector 5.2 — Meshaleach allocation guard)
+  | 'capacity.ceiling.exhausted'
+  | 'capacity.ceiling.density_halt'
+  | 'capacity.ceiling.throttle'
+  | 'capacity.ceiling.trade_recorded'
   // Revenue events
   | 'revenue.routed'
   | 'revenue.sink.received'

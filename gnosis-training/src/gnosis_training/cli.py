@@ -5,7 +5,9 @@ Modes:
     ``--dry-run`` this is a documented future GPU job (no execution). With
     ``--dry-run`` it executes the REAL QLoRA SFT path on a tiny model
     (Qwen2.5-0.5B) to verify the pipeline.
-  - ``reward <preference_pairs_jsonl> [--dry-run]`` — Stage 2 reward model.
+  - ``reward <preference_pairs_jsonl> [--dry-run|--stage2-v2]`` — Stage 2 reward model.
+    ``--stage2-v2`` runs Vector 6.1 (human pairs → checkpoints/gnosis-v2.0-reward;
+    CPU verified dry-run if no CUDA).
   - ``grpo <train_jsonl> [--dry-run]`` — Stage 3 GRPO (GPU-only).
   - ``eval [--dry-run]``               — Stage 4 eval battery (GPU-only).
   - ``dry-run``                        — run the FULL chain (sft → reward → grpo
@@ -467,12 +469,33 @@ def main(argv: list[str] | None = None) -> int:
 
     if mode in ("sft", "reward", "grpo", "eval"):
         rest, is_dry = _flag(rest, "--dry-run")
+        rest, is_stage2 = _flag(rest, "--stage2-v2")
+        if mode == "reward" and is_stage2:
+            # Vector 6.1 — human-judged pairs → gnosis-v2.0-reward checkpoint
+            from pathlib import Path
+
+            from .stage2_v2 import Stage2V2Config, run_stage2_v2
+
+            pairs = rest[0] if rest else "data/preference_pairs_ALL.jsonl"
+            print(f"[stage2-v2] corpus={pairs}")
+            result = run_stage2_v2(
+                Stage2V2Config(pairs_jsonl=Path(pairs)),
+                write_docs=True,
+            )
+            print(
+                f"[stage2-v2] done mode={result['mode']} "
+                f"pairs={result['pairs_total']} "
+                f"checkpoint={result['output_dir']} "
+                f"eval={result.get('eval_metrics')}"
+            )
+            return 0
         if not is_dry:
             print(
                 f"mode '{mode}' is real TRL wiring but is a future GPU job — not executed "
                 "(no model load, no training). Add --dry-run to run it on the tiny-model "
-                "preset, or run on a GPU box with `uv sync --extra qlora` after the "
-                "feedstock + human-judged preference pairs are ready (spec line 478)."
+                "preset, --stage2-v2 for Vector 6.1 human-pair Stage 2, or run on a GPU "
+                "box with `uv sync --extra qlora` after human-judged pairs are ready "
+                "(spec line 478)."
             )
             return 0
         # --dry-run: execute the real QLoRA path on the tiny model.

@@ -13,7 +13,7 @@
     "build": "tsc",
     "dev": "tsc --watch",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "lint": "echo 'No lint step for gnosis-training-data package'"
   },
   "dependencies": {

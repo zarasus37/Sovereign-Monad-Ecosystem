@@ -82,4 +82,4 @@ This document is a subordinate operational charter. Changes to it require the sa
 **See also:**
 
 - [`docs/CHARTER.md`](./CHARTER.md) — the full Sovereign Monad Guardrail Charter
-- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.4.0.md` — authoritative operating backbone
+- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` — authoritative operating backbone

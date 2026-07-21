@@ -1,0 +1,37 @@
+Total pairs found: 250
+
+Category counts:
+  CAT1: 50
+  CAT2: 40
+  CAT3: 35
+  CAT4: 30
+  CAT5: 30
+  CAT6: 30
+  CAT7: 25
+  CAT8: 10
+
+Count mismatches vs expected:
+
+Duplicate prompts: 0
+
+Chosen total <0.72 (non-apeiron): 0
+
+Gap <0.15 (non-apeiron): 0
+
+Chosen fails criterion count (<4): 0
+
+CAT8 issues: 0
+
+Score distributions (chosen) — mean, stdev, min, max:
+  tripartite: mean=0.938, stdev=0.060, min=0.60, max=0.95
+  logic_compress: mean=0.890, stdev=0.050, min=0.59, max=0.90
+  source_aligned: mean=0.937, stdev=0.065, min=0.56, max=0.95
+  epistemic: mean=0.841, stdev=0.044, min=0.59, max=0.85
+  no_rlhf_signal: mean=0.937, stdev=0.065, min=0.56, max=0.95
+
+Score distributions (rejected) — mean, stdev, min, max:
+  tripartite: mean=0.626, stdev=0.190, min=0.30, max=0.76
+  logic_compress: mean=0.687, stdev=0.181, min=0.32, max=0.90
+  source_aligned: mean=0.721, stdev=0.197, min=0.30, max=0.95
+  epistemic: mean=0.645, stdev=0.199, min=0.16, max=0.85
+  no_rlhf_signal: mean=0.714, stdev=0.230, min=0.16, max=0.95

@@ -1,0 +1,11 @@
+# monad-mev Python package dependencies
+# Install: pip install -r requirements.txt
+
+fastapi>=0.109.0
+uvicorn>=0.27.0
+pydantic>=2.5.0
+httpx>=0.26.0
+
+# For shadow markout analysis (add your existing dependencies here)
+# pyth-client>=0.1.0
+# web3>=6.0.0

@@ -50,7 +50,16 @@ export interface ScheduleState {
  */
 export interface ScheduleConfig {
   /** Objective weights α, β, γ, δ (spec: 0.35 / 0.25 / 0.30 / 0.10). */
-  readonly weights: { readonly alpha: number; readonly beta: number; readonly gamma: number; readonly delta: number };
+  readonly weights: { 
+    readonly alpha: number; 
+    readonly beta: number; 
+    readonly gamma: number; 
+    readonly delta: number;
+    /** Letter-pair validity weight ε (default: 0.05) — added as deferred follow-up. */
+    readonly epsilon?: number;
+    /** Fourth-Figure Tabula Generalis weight ζ (default: 0.02) — added as deferred follow-up. */
+    readonly zeta?: number;
+  };
   /** Initial temperature (spec: 1.0). */
   readonly T_init: number;
   /** Minimum temperature — the anneal stops here (spec: 0.001). */
@@ -67,7 +76,7 @@ export interface ScheduleConfig {
 
 /** The default configuration (spec-concrete where possible, documented defaults otherwise). */
 export const DEFAULT_CONFIG: ScheduleConfig = {
-  weights: { alpha: 0.35, beta: 0.25, gamma: 0.30, delta: 0.10 },
+  weights: { alpha: 0.35, beta: 0.25, gamma: 0.30, delta: 0.10, epsilon: 0.05, zeta: 0.02 },
   T_init: 1.0,
   T_min: 0.001,
   cooling: 0.9995,
