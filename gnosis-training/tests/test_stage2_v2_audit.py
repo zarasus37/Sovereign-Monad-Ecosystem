@@ -17,7 +17,7 @@ def test_audit_reports_worksheet_as_bootstrap_scaffold():
     assert audit.claimed_worksheet_pending == 250
     assert audit.trainable_ok >= 40  # human-judged ALL file
     assert "CAT1" in audit.trainable_cats
-    assert "CAT9" in audit.cats_missing
+    assert "CAT9" in audit.trainable_cats
     assert any("bootstrap worksheet" in n.lower() or "scaffold" in n.lower() for n in audit.honesty_notes)
     md = audit.to_markdown()
     assert "Pre-Train Audit" in md
