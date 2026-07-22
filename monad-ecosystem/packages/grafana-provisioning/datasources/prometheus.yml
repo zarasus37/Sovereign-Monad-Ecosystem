@@ -1,0 +1,11 @@
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    # Container Apps flat network — apps in the same environment reach each
+    # other by short name; port 9090 is the Prometheus web UI/metrics port.
+    url: http://sovereign-prometheus:9090
+    isDefault: true
+    editable: false
