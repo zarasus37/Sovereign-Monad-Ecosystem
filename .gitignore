@@ -147,3 +147,9 @@ logs/ttc-window/*.jsonl
 # Paper-trading journal (Agent 0 / principal sessions)
 logs/paper-trading/
 monad-ecosystem/logs/
+
+scripts/node_modules/
+scripts/package-lock.json
+scripts/package.json
+scripts/meshaleach-shots/
+
