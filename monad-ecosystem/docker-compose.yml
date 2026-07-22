@@ -66,13 +66,9 @@ services:
       - HEPAR_API_KEY=${HEPAR_API_KEY:-}
       - SHADOW_API_URL=${SHADOW_API_URL:-http://localhost:8000/api/v1/shadow/evaluate}
 
-      # Key custody (Azure Key Vault) — preferred over BOOTSTRAP_PRIVATE_KEY
+      # Key custody
       - KEY_VAULT_NAME=${KEY_VAULT_NAME:-}
-      - AZURE_TENANT_ID=${AZURE_TENANT_ID:-}
-      - AZURE_CLIENT_ID=${AZURE_CLIENT_ID:-}
-      - AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET:-}
-      # Dev/staging only — never mainnet capital on disk env:
-      - BOOTSTRAP_PRIVATE_KEY=${BOOTSTRAP_PRIVATE_KEY:-}
+      # Dev only — BOOTSTRAP_PRIVATE_KEY from env_file, not overridden here
     network_mode: host
     depends_on:
       redis:
@@ -174,6 +170,7 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_CLUSTER_ID: ${KAFKA_CLUSTER_ID}
     volumes:
       - kafka-data:/var/lib/kafka/data
     restart: unless-stopped

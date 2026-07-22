@@ -9,13 +9,13 @@ WORKDIR /app
 RUN pip install uv
 
 # Copy requirements
-COPY monad-ecosystem/packages/monad-mev/python/requirements.txt ./requirements.txt
+COPY packages/monad-mev/python/requirements.txt ./requirements.txt
 
 # Install dependencies into system Python
 RUN uv pip install --system --no-cache-dir -r requirements.txt
 
 # Copy source
-COPY monad-ecosystem/packages/monad-mev/python/shadow_markout_api.py ./shadow_markout_api.py
+COPY packages/monad-mev/python/shadow_markout_api.py ./shadow_markout_api.py
 
 # Non-root user
 RUN useradd -m -u 1001 appuser && chown -R appuser:appuser /app

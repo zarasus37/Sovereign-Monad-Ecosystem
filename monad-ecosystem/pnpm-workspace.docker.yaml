@@ -1,0 +1,8 @@
+# Docker local build — packages at ./packages/
+packages:
+  - 'packages/*'
+  - 'packages/organs/*'
+  - 'packages/organs/*/*'
+  - 'control-center/src/frontend'
+  - 'gnostic-engine'
+  - 'gnosis-training'

@@ -15,14 +15,14 @@ WORKDIR /repo
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Minimal package set for @sovereign/host + its workspace graph
-COPY monad-ecosystem/packages/sovereign-types ./monad-ecosystem/packages/sovereign-types
-COPY monad-ecosystem/packages/sovereign-bus ./monad-ecosystem/packages/sovereign-bus
-COPY monad-ecosystem/packages/gate-acl ./monad-ecosystem/packages/gate-acl
-COPY monad-ecosystem/packages/cardia-funding-stream ./monad-ecosystem/packages/cardia-funding-stream
-COPY monad-ecosystem/packages/sovereign-host ./monad-ecosystem/packages/sovereign-host
+COPY packages/sovereign-types ./packages/sovereign-types
+COPY packages/sovereign-bus ./packages/sovereign-bus
+COPY packages/gate-acl ./packages/gate-acl
+COPY packages/cardia-funding-stream ./packages/cardia-funding-stream
+COPY packages/sovereign-host ./packages/sovereign-host
 
 # ── Install all workspace dependencies (wires @sovereign/types → @sovereign/bus, etc.)
-RUN pnpm install --frozen-lockfile
+RUN pnpm install
 
 # ── Build in strict dependency order ──────────────────────────────────────────
 # types has no workspace deps → build first
@@ -48,7 +48,7 @@ WORKDIR /repo
 
 COPY --from=builder /repo/package.json /repo/pnpm-lock.yaml /repo/pnpm-workspace.yaml ./
 COPY --from=builder /repo/node_modules ./node_modules
-COPY --from=builder /repo/monad-ecosystem/packages ./monad-ecosystem/packages
+COPY --from=builder /repo/packages ./packages
 
 ENV NODE_ENV=production
 ENV PORT=3001
@@ -62,5 +62,5 @@ EXPOSE 3001
 HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
   CMD wget -q -O- http://127.0.0.1:3001/health >/dev/null || exit 1
 
-WORKDIR /repo/monad-ecosystem/packages/sovereign-host
+WORKDIR /repo/packages/sovereign-host
 CMD ["node", "dist/server.js"]

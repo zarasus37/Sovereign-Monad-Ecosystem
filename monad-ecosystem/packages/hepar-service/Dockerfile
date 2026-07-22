@@ -13,10 +13,10 @@ WORKDIR /repo
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Only the packages hepar-service depends on
-COPY monad-ecosystem/packages/sovereign-types ./monad-ecosystem/packages/sovereign-types
-COPY monad-ecosystem/packages/hepar-service   ./monad-ecosystem/packages/hepar-service
+COPY packages/sovereign-types ./packages/sovereign-types
+COPY packages/hepar-service   ./packages/hepar-service
 
-RUN pnpm install --frozen-lockfile \
+RUN pnpm install \
   && pnpm --filter @sovereign/types build \
   && pnpm --filter @sovereign/hepar-service build
 
@@ -30,7 +30,7 @@ WORKDIR /repo
 
 COPY --from=builder /repo/package.json /repo/pnpm-lock.yaml /repo/pnpm-workspace.yaml ./
 COPY --from=builder /repo/node_modules ./node_modules
-COPY --from=builder /repo/monad-ecosystem/packages ./monad-ecosystem/packages
+COPY --from=builder /repo/packages ./packages
 
 ENV NODE_ENV=production
 ENV PORT=3003
@@ -44,5 +44,5 @@ EXPOSE 3003
 HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
   CMD wget -q -O- http://127.0.0.1:3003/health > /dev/null || exit 1
 
-WORKDIR /repo/monad-ecosystem/packages/hepar-service
+WORKDIR /repo/packages/hepar-service
 CMD ["node", "dist/server.js"]
