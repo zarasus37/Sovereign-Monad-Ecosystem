@@ -125,13 +125,23 @@
 
 **Operator pulse:** `node scripts/pulse-test.mjs` (env: `SOVEREIGN_HOST_URL`, optional `PULSE_PRIVATE_KEY`) — verified 2026-07-21: health → hepar → PL≥50 → wallet bind → Cardia SSE.
 
+**Meshaleach UI walk (Control Center, 2026-07-22):** Playwright driver `scripts/meshaleach-ui-walk.mjs` against Vite `127.0.0.1:5173` proxied to Azure host.
+
+| Phase | Result |
+|-------|--------|
+| 1 Broken Genesis | **COMPLETE** — COMPILE CONSTRAINT ENVELOPE · Twin online · PL +10 |
+| 2 Shadow Market | Partial in automation (halt literacy flaky) — **manual: Halt 3× SYSTEM_REFUSED → RESTORE** · PL +15 |
+| 3 Archon Gate | **MESHALEACH VERIFIED** — Gates Defended 2/2 · PL +25 |
+| 4 Live Activation | Archon **passed**; bind needs **local PL ≥ 50** (phase1+2+3 = 50) + MetaMask |
+
 ## Next Steps (operator, capital-gated)
 
 - [x] Deploy cloud compute + Key Vault; Bootstrap via MI (never commit keys)
 - [x] Host pulse `status: ALIVE` + end-to-end API pulse (paper path)
+- [x] UI Meshaleach phases 1 + 3 verified (phase 2 manual for full PL 50)
+- [ ] Complete Phase 2 Shadow Market → PL 50 → BIND WALLET (MetaMask)
 - [ ] Optional: enable Kafka / observability wiring end-to-end
 - [ ] Point `FRONTEND_URL` / CORS at real Control Center origin (still `localhost:5173` on host)
-- [ ] Testnet Meshaleach ritual in Control Center (Broken Genesis → Archon → bind)
 - [ ] Fund Bootstrap **testnet** only; dry cycles before any mainnet
 - [ ] Flip `CARDIA_FUNDING_LIVE=true` **only** after testnet cycles + deliberate custody review
 - [ ] Optional: gnosis corpus guide-mix / GPU Stage 2 8B when capital ready
