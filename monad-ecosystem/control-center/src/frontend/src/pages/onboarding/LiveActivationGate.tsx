@@ -13,7 +13,8 @@ import { useBindWallet } from "@/hooks/useBindWallet";
 import { useShaliahOnboarding } from "@/hooks/useShaliahOnboarding";
 
 export function LiveActivationGate() {
-  const { bindWallet, isBinding, error, currentPl } = useBindWallet();
+  const { bindWallet, isBinding, error, statusHint, currentPl } =
+    useBindWallet();
   const meshaleachVerified = useShaliahOnboarding((s) => s.meshaleachVerified);
   const phase3Complete = useShaliahOnboarding((s) => s.phase3Complete);
   const boundWalletFromStore = useShaliahOnboarding((s) => s.boundWallet);
@@ -74,6 +75,19 @@ export function LiveActivationGate() {
                 ? "AWAITING SIGNATURE…"
                 : "BIND WALLET & ACTIVATE CAPITAL"}
             </button>
+            {isBinding && statusHint && (
+              <p className="mt-4 text-amber-400/90 text-xs text-center max-w-md leading-relaxed">
+                {statusHint}
+              </p>
+            )}
+            {isBinding && (
+              <ol className="mt-3 text-[11px] text-gray-500 text-left max-w-md space-y-1 list-decimal list-inside">
+                <li>Click the MetaMask fox icon in the browser toolbar</li>
+                <li>Unlock the wallet if it is locked</li>
+                <li>Open the Activity / pending tab — look for Connect or Sign</li>
+                <li>If nothing is pending, refresh this page and try BIND again</li>
+              </ol>
+            )}
             {error && (
               <p className="mt-4 text-red-500 text-sm text-center max-w-md">
                 {error}
