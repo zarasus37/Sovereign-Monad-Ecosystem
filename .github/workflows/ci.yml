@@ -8,6 +8,11 @@ on:
   workflow_dispatch:
 
 jobs:
+  # ─────────────────────────────────────────────────────────────────────────
+  # Fast layout + drift gate. Mirrors the wired `pnpm check:*` script entries
+  # in package.json. Fails fast on top-level hygiene and contract drift before
+  # the heavier jobs run.
+  # ─────────────────────────────────────────────────────────────────────────
   layout-and-smoke:
     runs-on: windows-latest
 
@@ -31,3 +36,43 @@ jobs:
 
       - name: Layout check
         run: pnpm check:layout
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # Full aggregate: pnpm check:layout && pnpm check:numerics && ...
+  # && pnpm test:integration. This is the canonical "is this PR safe to
+  # merge?" gate — the same chain a developer runs locally as `pnpm validate`.
+  #
+  # Currently RED on main because the canonical-schedule schema (Layer 6
+  # scheduler artifact) is stale w.r.t. the runtime: the schema declares
+  # config.weights.{alpha,beta,gamma,delta} and steps[].terms.{C,L,T,S,J}, but
+  # the runtime now emits config.weights.{epsilon,zeta} and
+  # steps[].terms.{P,F} as well (the Layer 6 εP / ζF follow-up). Schema must
+  # be regenerated. Tracked in issue #76.
+  #
+  # Until #76 is fixed, this job will fail — that is the intended signal.
+  # Branch protection should mark this job as required so future PRs cannot
+  # merge while the aggregate is red.
+  # ─────────────────────────────────────────────────────────────────────────
+  validate:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.6.0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Aggregate validate (layout + drift + typecheck + integration)
+        run: pnpm validate
