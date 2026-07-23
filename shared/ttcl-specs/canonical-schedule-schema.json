@@ -17,13 +17,16 @@
       "properties": {
         "weights": {
           "type": "object",
-          "required": ["alpha", "beta", "gamma", "delta"],
+          "description": "Objective weights — six terms: α (Coverage), β (Locality), γ (Tripartite), δ (Cost, negated), ε (Letter-pair validity), ζ (Fourth-Figure Tabula Generalis validity). Spec: J = αC + βL + γT − δS + εP + ζF.",
+          "required": ["alpha", "beta", "gamma", "delta", "epsilon", "zeta"],
           "additionalProperties": false,
           "properties": {
-            "alpha": { "type": "number" },
-            "beta": { "type": "number" },
-            "gamma": { "type": "number" },
-            "delta": { "type": "number" }
+            "alpha": { "type": "number", "description": "Coverage weight (default 0.35)." },
+            "beta":  { "type": "number", "description": "Locality weight (default 0.25)." },
+            "gamma": { "type": "number", "description": "Tripartite weight (default 0.30)." },
+            "delta": { "type": "number", "description": "Cost weight, subtracted (default 0.10)." },
+            "epsilon": { "type": "number", "description": "Letter-pair validity weight — εP term (default 0.05)." },
+            "zeta":    { "type": "number", "description": "Fourth-Figure Tabula Generalis validity weight — ζF term (default 0.02)." }
           }
         },
         "T_init": { "type": "number" },
@@ -89,14 +92,17 @@
           "state": { "$ref": "#/definitions/state" },
           "terms": {
             "type": "object",
-            "required": ["C", "L", "T", "S", "J"],
+            "description": "Objective terms for this step. Seven values: C (Coverage), L (Locality), T (Tripartite), S (Cost), P (Letter-pair validity), F (Fourth-Figure validity), J (scalar objective). Spec: J = αC + βL + γT − δS + εP + ζF.",
+            "required": ["C", "L", "T", "S", "P", "F", "J"],
             "additionalProperties": false,
             "properties": {
-              "C": { "type": "number" },
-              "L": { "type": "number" },
-              "T": { "type": "number" },
-              "S": { "type": "number" },
-              "J": { "type": "number" }
+              "C": { "type": "number", "description": "Coverage — 1 if this step's composite is newly visited, else 0." },
+              "L": { "type": "number", "description": "Locality — 1 − (roughness − 1)/(MAX_ROUGHNESS − 1); smoother moves score higher. Range [0, 1]." },
+              "T": { "type": "number", "description": "Tripartite — fraction of the 3 TTCL domains present in the trailing N-step window. Range [0, 1]." },
+              "S": { "type": "number", "description": "Cost — composites materialized, normalized to [0, 1]." },
+              "P": { "type": "number", "description": "Letter-pair validity (εP term) — 1 if the current pair is a valid 45-pair combination, 0 otherwise, 1 if letter-pairs are not configured." },
+              "F": { "type": "number", "description": "Fourth-Figure Tabula Generalis validity (ζF term) — 1 if the 3-wheel composite is a valid 84-camera combination, 0 otherwise, 1 if the Fourth Figure is not enabled." },
+              "J": { "type": "number", "description": "Scalar objective — J = αC + βL + γT − δS + εP + ζF." }
             }
           },
           "temperature": { "type": "number" },
