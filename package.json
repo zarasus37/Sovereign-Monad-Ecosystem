@@ -1,6 +1,6 @@
 {
   "name": "the-sovereign",
-  "version": "2.4.0",
+  "version": "2.5.2",
   "description": "Unified Theotechnological Gnostic Ecosystem — Layered Monorepo",
   "private": true,
   "type": "module",
@@ -9,7 +9,7 @@
     "bootstrap:local": "powershell -ExecutionPolicy Bypass -File scripts/bootstrap-local.ps1",
     "sync": "powershell -ExecutionPolicy Bypass -File scripts/sync-canonical.ps1",
     "status": "powershell -ExecutionPolicy Bypass -File scripts/status.ps1",
-    "check:layout": "powershell -ExecutionPolicy Bypass -File scripts/verify-layout.ps1",
+    "check:layout": "node scripts/verify-layout.mjs",
     "dev": "pnpm --recursive dev",
     "dev:host": "pnpm --filter @sovereign/host start",
     "dev:mock-hepar": "pnpm --filter @sovereign/host mock-hepar",

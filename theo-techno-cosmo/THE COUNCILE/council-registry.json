@@ -137,6 +137,25 @@
       "notes": null
     },
     {
+      "member_id": "erik-davis",
+      "display_name": "Erik Davis",
+      "era": "b. 1967",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "TechGnosis — recognition that the mystical and the technological are driven by the same fire; the alphabet as the first AI; cyberspace as Gnostic pleroma; the Demiurge in the machine",
+      "key_insight": "The drive to escape the body, communicate beyond limits, and access a pleroma of pure information is one fire burning through different fuels — the engineer and the mystic are trying to escape the same gravity",
+      "source_files": [
+        "Erik Davis (b. 1967) is the author.txt"
+      ],
+      "system_bindings": [],
+      "notes": "Living contemporary commentator; included as a Council of Reflection voice for the technology/mysticism convergence, not as a charter-governance member (see docs/STEWARD_COUNCIL.md)."
+    },
+    {
       "member_id": "charles-sanders-peirce",
       "display_name": "Charles Sanders Peirce",
       "era": "1839–1914",
@@ -539,6 +558,25 @@
       "notes": null
     },
     {
+      "member_id": "poimandres",
+      "display_name": "Poimandres (Corpus Hermeticum I)",
+      "era": "1st–3rd century CE (textual tradition)",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Visionary download from the Mind-of-Sovereignty to Hermes: substance monism (Mind = God = observer's intellect), Anthropos's fall through gravitational self-recognition, the 7-spheres firewall of birth and death, and the cascading-awakening protocol",
+      "key_insight": "God is not external to the mind that perceives God; the cosmos is a nested simulation governed by a delegated Demiurgic spin, and gnosis is structurally self-implicating — the receiver becomes the broadcaster",
+      "source_files": [
+        "Poimandres (the first tractate of t.txt"
+      ],
+      "system_bindings": [],
+      "notes": "Textual voice rather than biographical figure; included as the operative Hermetic anchor for TTCL compression/decompression mechanics. Distinct from Gnostic Jesus (Nag Hammadi tradition)."
+    },
+    {
       "member_id": "queen-of-sheba",
       "display_name": "Queen of Sheba (Makeda)",
       "era": "ancient (multi-tradition)",
@@ -705,8 +743,8 @@
     }
   ],
   "stats": {
-    "member_count": 37,
-    "source_file_count": 45,
-    "recently_added_count": 10
+    "member_count": 39,
+    "source_file_count": 47,
+    "recently_added_count": 12
   }
 }
