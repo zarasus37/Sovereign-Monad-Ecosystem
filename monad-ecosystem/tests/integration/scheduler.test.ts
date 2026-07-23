@@ -66,9 +66,10 @@ const REGISTRY_PATH = resolve(repoRoot, 'shared', 'fixtures', 'layer6', 'wheel-r
 const OUTPUT_SCHEMA_PATH = resolve(repoRoot, 'shared', 'ttcl-specs', 'canonical-schedule-schema.json');
 const ARTIFACT_PATH = resolve(repoRoot, 'shared', 'fixtures', 'layer6', 'canonical-schedule.json');
 
-/** A small-config run used by the determinism + invariant tests (fast, still explores). */
+/** A small-config run used by the determinism + invariant tests (fast, still explores).
+ *  Includes the Layer 6 εP / ζF weights; the schema requires all six. */
 const SMALL_CONFIG: ScheduleConfig = {
-  weights: { alpha: 0.35, beta: 0.25, gamma: 0.30, delta: 0.10 },
+  weights: { alpha: 0.35, beta: 0.25, gamma: 0.30, delta: 0.10, epsilon: 0.05, zeta: 0.02 },
   T_init: 1.0,
   T_min: 0.001,
   cooling: 0.9995,
@@ -302,7 +303,12 @@ describe('Layer 6 — objective J = αC + βL + γT − δS', () => {
     const visited = new Set<string>([compositeKey(s0, reg)]);
     const window = [compositeDomains(s0, reg)];
     const terms1 = evaluateMove(move, s1, window, visited, reg, DEFAULT_CONFIG);
-    const terms0 = { C: 1, L: 1, T: 1, S: 0, J: DEFAULT_CONFIG.weights.gamma };
+    // Initial seed: γT baseline (tripartite neutral), plus εP + ζF bonuses
+    // (P=F=1 when their respective configs aren't loaded — see objective.ts).
+    const terms0 = {
+      C: 1, L: 1, T: 1, S: 0, P: 1, F: 1,
+      J: DEFAULT_CONFIG.weights.gamma + DEFAULT_CONFIG.weights.epsilon + DEFAULT_CONFIG.weights.zeta,
+    };
     expect(deltaJ(terms0, terms1)).toBeCloseTo(terms1.J - terms0.J, 10);
 
     // C=1 for the new composite (it is not in visited yet).
@@ -311,11 +317,18 @@ describe('Layer 6 — objective J = αC + βL + γT − δS', () => {
     expect(terms1.L).toBe(1);
     // S for a LocalRotate = 0 (cost 1 normalized → (1-1)/(2-1) = 0).
     expect(terms1.S).toBe(0);
-    // J = α·1 + β·1 + γ·T − δ·0.
+    // P, F are binary validity terms ∈ {0, 1} — depend on the registry's
+    // letter-pair and Fourth-Figure configuration. With the default llull
+    // registry the new composite may or may not hit a valid combination.
+    expect(terms1.P === 0 || terms1.P === 1).toBe(true);
+    expect(terms1.F === 0 || terms1.F === 1).toBe(true);
+    // J = α·1 + β·1 + γ·T − δ·0 + ε·P + ζ·F (spec: J = αC + βL + γT − δS + εP + ζF).
     const expectedJ =
       DEFAULT_CONFIG.weights.alpha * 1 +
       DEFAULT_CONFIG.weights.beta * 1 +
-      DEFAULT_CONFIG.weights.gamma * terms1.T;
+      DEFAULT_CONFIG.weights.gamma * terms1.T +
+      DEFAULT_CONFIG.weights.epsilon * terms1.P +
+      DEFAULT_CONFIG.weights.zeta * terms1.F;
     expect(terms1.J).toBeCloseTo(expectedJ, 10);
   });
 
