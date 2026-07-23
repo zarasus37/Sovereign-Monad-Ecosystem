@@ -74,5 +74,22 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
+      # Build the workspace packages that need a `dist/` for the validate
+      # chain to work. The `check:schedule-schema` drift gate (added in
+      # #79) imports `@sovereign/scheduler`'s compiled `dist/index.js`;
+      # the integration tests do the same for ten packages (types, ttcl,
+      # bus, logoc, compiler, gnosis-evaluator-core, scheduler,
+      # data-rail-core, gnosis-training-data, hepar-core), plus
+      # hepar-core's transitive dep @sovereign/hepar-defi-auditor. All
+      # have working `tsc` build scripts, and `pnpm -r` resolves
+      # workspace symlinks in topological order.
+      #
+      # We avoid `pnpm -r build` (all 44 workspace projects) because
+      # monad-ecosystem/packages/organs/pneuma/public-activation-core
+      # currently fails to build (missing tsconfig.json) — a separate
+      # defect, not blocking the validate chain.
+      - name: Build validate-chain packages (topological)
+        run: pnpm -r --filter "@sovereign/types" --filter "@sovereign/ttcl" --filter "@sovereign/bus" --filter "@sovereign/logoc" --filter "@sovereign/compiler" --filter "@sovereign/gnosis-evaluator-core" --filter "@sovereign/scheduler" --filter "@sovereign/data-rail-core" --filter "@sovereign/gnosis-training-data" --filter "@sovereign/hepar-core" --filter "@sovereign/hepar-defi-auditor" build
+
       - name: Aggregate validate (layout + drift + typecheck + integration)
         run: pnpm validate
