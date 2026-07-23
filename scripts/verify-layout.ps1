@@ -2,120 +2,49 @@ param(
   [switch]$Quiet
 )
 
+<#
+  .SYNOPSIS
+    Repo layout verifier — delegates to the cross-platform Node implementation.
+
+  .DESCRIPTION
+    This script is a thin PowerShell wrapper around scripts/verify-layout.mjs.
+    The Node script is the source of truth and runs on Windows, macOS, and
+    Linux (including WSL). The .ps1 wrapper exists so that PowerShell-first
+    workflows and CI runs on `windows-latest` can still call a single entry
+    point (e.g. `pwsh scripts/verify-layout.ps1`).
+
+    All three layout checks are performed by the Node script:
+      1. Unexpected top-level entries
+      2. Missing required project-state docs
+      3. Legacy path/name references in active surfaces (skipped with a warning
+         if ripgrep is not on PATH)
+
+  .PARAMETER Quiet
+    Suppress the "Layout check passed." success line.
+
+  .EXAMPLE
+    pwsh scripts/verify-layout.ps1
+    node scripts/verify-layout.mjs
+#>
+
 $ErrorActionPreference = 'Stop'
 
-$root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
-$allowedTopLevel = @(
-  '.git',
-  '.github',
-  '.claude',
-  '.editorconfig',
-  '.gitattributes',
-  '.gitignore',
-  '.npmrc',
-  '.pytest_cache',
-  '.smartroute',
-  '.stale-node_modules-20260612153231',
-  '.stale-node_modules-20260612153258',
-  '.stale-node_modules-20260612153345',
-  '.stale-node_modules-20260612153417',
-  '.stale-node_modules-20260612153442',
-  '.husky',
-  '.kilocode',
-  '.testfox',
-  'desktop.ini',
-  'README.md',
-  'vitest.config.ts',
-  'CONTRIBUTING.md',
-  'archive',
-  'docs',
-  'gnostic-engine',
-  'gnosis-training',
-  'infrastructure',
-  'monad-ecosystem',
-  'node_modules',
-  'notes',
-  'package.json',
-  'pnpm-lock.yaml',
-  'pnpm-workspace.yaml',
-  'scripts',
-  'theo-techno-cosmo'
-)
+$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$mjs = Join-Path $scriptDir 'verify-layout.mjs'
 
-$requiredDocs = @(
-  'README.md',
-  'docs/PROJECT_STATE.md',
-  'docs/PROJECT_STATE.json',
-  'docs/REPO_STRUCTURE_MAP.md',
-  'docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md'
-)
-
-$missingRequiredDocs = $requiredDocs | Where-Object { -not (Test-Path (Join-Path $root $_)) }
-
-$unexpectedTopLevel = Get-ChildItem -LiteralPath $root -Force |
-  Where-Object { $_.Name -notin $allowedTopLevel -and -not $_.PSIsContainer } |
-  Where-Object { $_.Name -ne '.girignore' } |
-  Where-Object {
-    # Ignore files already excluded by .gitignore (e.g., gh.exe)
-    $rel = $_.FullName.Substring($root.Length + 1)
-    $ignored = git check-ignore $rel 2>$null
-    -not $ignored
-  } |
-  Select-Object -ExpandProperty Name
-
-$expectedTrackedDirs = @('logs', 'packages', 'shared')
-$unexpectedTopLevel += Get-ChildItem -LiteralPath $root -Force -Directory |
-  Where-Object { $_.Name -notin $allowedTopLevel -and $_.Name -notin $expectedTrackedDirs } |
-  Select-Object -ExpandProperty Name
-
-$activeScanRoots = @(
-  'README.md',
-  'docs',
-  'gnostic-engine',
-  'monad-ecosystem',
-  'theo-techno-cosmo',
-  'scripts',
-  'package.json',
-  'pnpm-workspace.yaml',
-  '.gitignore',
-  '.github'
-)
-
-$legacyPattern = 'Succor_Gnostic_Engine|Theo_Techno_Cosmo_Logically|Sovereign_Monad_Ecosystem|G:/My Drive/Succor_Gnostic_Engine|G:\\My Drive\\Succor_Gnostic_Engine|G:/My Drive/Theo_Techno_Cosmo_Logically|G:\\My Drive\\Theo_Techno_Cosmo_Logically|G:/My Drive/Sovereign_Monad_Ecosystem|G:\\My Drive\\Sovereign_Monad_Ecosystem'
-
-$rg = Get-Command rg -ErrorAction SilentlyContinue
-
-if (-not $rg) {
-  if (-not $Quiet) {
-    Write-Host "ripgrep (rg) not found in PATH; skipping legacy-path scan. Install rg for full layout check." -ForegroundColor Yellow
-  }
-  $patternHits = @()
-} else {
-  $patternHits = & rg -n --hidden --glob '!archive/**' --glob '!**/node_modules/**' --glob '!**/.git/**' --glob '!**/.pytest_cache/**' --glob '!**/__pycache__/**' --glob '!**/.venv/**' --glob '!**/.venv2/**' --glob '!**/.venv.broken/**' --glob '!**/.stale-node_modules-*/**' --glob '!**/legacy/**' --glob '!**/out/**' --glob '!**/dist/**' --glob '!**/build/**' --glob '!**/coverage/**' --glob '!**/generated/**' --glob '!**/*.pdf' --glob '!**/*.png' --glob '!**/*.jpg' --glob '!**/*.jpeg' --glob '!**/*.gif' --glob '!**/*.mp4' --glob '!**/*.mov' --glob '!**/*.pptx' --glob '!**/*.xlsx' --glob '!**/*.csv' --glob '!**/*.jsonl' --glob '!**/*.db' --glob '!**/*.sqlite' --glob '!**/*.parquet' --glob '!**/*.zip' --glob '!**/*.7z' --glob '!**/*.tar.gz' --glob '!**/*.log' --glob '!**/*.bak' --glob '!**/*.tmp' --glob '!**/desktop.ini' --glob '!**/*.ico' --glob '!**/*.webp' --glob '!**/*.docx' --glob '!**/*.rtf' --glob '!**/*.mp3' --glob '!**/*.wav' --glob '!**/*.m4a' --glob '!**/*.avi' --glob '!**/*.mkv' --glob '!**/*.flac' --glob '!**/*.json.bak' --glob '!**/*.map' --glob '!**/*.lock' --glob '!**/*.min.*' --glob '!**/*.env' --glob '!**/*.pem' --glob '!**/*.key' --glob '!**/*.wasm' --glob '!**/*.did' --glob '!**/*.dll' --glob '!**/*.exe' --glob '!**/*.bin' --glob '!**/*.DS_Store' --glob '!**/*.swp' --glob '!**/*.swo' --glob '!**/*~' --glob '!scripts/verify-layout.ps1' -e $legacyPattern $activeScanRoots 2>$null
-}
-
-$errors = @()
-
-if ($unexpectedTopLevel) {
-  $errors += "Unexpected top-level entries:`n  - " + ($unexpectedTopLevel -join "`n  - ")
-}
-
-if ($missingRequiredDocs) {
-  $errors += "Missing required project state docs:`n  - " + ($missingRequiredDocs -join "`n  - ")
-}
-
-if ($LASTEXITCODE -eq 0 -and $patternHits) {
-  $filteredHits = $patternHits | Where-Object { $_ -notmatch 'scripts[\\/]+verify-layout\.ps1' }
-  if ($filteredHits) {
-    $errors += "Legacy path/name references found in active surfaces:`n  - " + (($filteredHits | Select-Object -Unique) -join "`n  - ")
-  }
-}
-
-if ($errors.Count -gt 0) {
-  $errors | ForEach-Object { Write-Host $_ -ForegroundColor Red }
+if (-not (Test-Path $mjs)) {
+  Write-Host "verify-layout.mjs not found next to this script: $mjs" -ForegroundColor Red
   exit 1
 }
 
-if (-not $Quiet) {
-  Write-Host "Layout check passed."
+$node = Get-Command node -ErrorAction SilentlyContinue
+if (-not $node) {
+  Write-Host "node not found in PATH. Install Node.js >= 20 to run the layout check." -ForegroundColor Red
+  exit 1
 }
+
+$args = @($mjs)
+if ($Quiet) { $args += '--quiet' }
+
+& node @args
+exit $LASTEXITCODE
