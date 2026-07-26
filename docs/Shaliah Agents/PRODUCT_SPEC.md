@@ -11,11 +11,12 @@ Education should move from static instruction to lived competence. AI should sup
 Users should become more capable, more self-directed, and less dependent on external validation. The system should cultivate real judgment, not just content recall.
 
 ## Core entities
-- Human Meshaleach: the locus of will and growth.
-- Shaliah: the human-bound coach, mirror, extension, and transactional vehicle on **one identity spine** (see `docs/SHALIAH_IDENTITY_V2.md`).
-- Autonomous agents: the broader society, rivals, peers, and environment (not the Shaliah slot).
-- Integrity layer: the mechanism that verifies authentic progress.
-- Learning Constitution: the rules that prevent grind, botting, and fake mastery.
+- Human Meshaleach: the locus of will and growth (**one identity spine** root).
+- Shaliah: human-bound **coach, mirror, extension, attention shield, and transactional vehicle** — covenanted emissary, **not** co-captain / co-sovereign; never sets user \(r\) (see `docs/SHALIAH_IDENTITY_V2.md`).
+- Autonomous Multitude: full minds — society, rivals, peers, structural workers (**other** identities; not the Shaliah slot).
+- Control plane (Integrity / Momentum / Efficiency): infrastructure, not personal twin.
+- Integrity layer: verifies authentic progress / Proof of Cognition.
+- Learning Constitution: prevents grind, botting, and fake mastery.
 
 ## Core primitives
 - Situation

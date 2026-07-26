@@ -1,6 +1,6 @@
 # Shaliah Flow Mapping
 
-Shaliah is a coach, mirror, and attention shield, not a co-captain.
+Shaliah is **extension + coach + mirror + attention shield + transactional vehicle** on one identity spine with the Meshaleach — **not** co-captain / co-sovereign (`docs/SHALIAH_IDENTITY_V2.md`). In lessons, the **coach** and **mirror** offices dominate; vehicle actions stay inside unlocked risk tiers.
 
 ## Before the lesson
 - Summarize the objective.

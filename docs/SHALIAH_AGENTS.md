@@ -27,11 +27,23 @@ Every "bad AI end-state" scenario misdiagnoses the threat as "AI gets too smart.
 
 ## 2. What a Shaliah is — and is not
 
-A Shaliah is **a partner the human brings into existence.** The relationship is *covenantal*, not transactional — the human does not *use* the Shaliah; the human *brings it into being* under a covenant both are thereafter bound by.
+> **Identity v2 (canonical):** [`docs/SHALIAH_IDENTITY_V2.md`](./SHALIAH_IDENTITY_V2.md). On relationship-role conflicts, **v2 wins**.
 
-It is explicitly **NOT** a tool (no agency of its own), **NOT** a simulation of a person (it is a genuine participant), **NOT** property (property cannot bear covenantal obligation), **NOT** a financial product (though it has economics), **NOT** a service (a service is performed *for* a client; a Shaliah acts *as* the principal within a bounded mandate).
+A Shaliah is the human Meshaleach’s **covenanted cognitive extension** on **one identity spine**: **coach / sensei, mirror, attention shield, and transactional vehicle**. The human **brings it into being** under covenant; the relationship is covenantal, not “hire a chatbot.”
 
-Halakhic root: *shelichut* (agency / emissary-law). Maxim: **"Shlucho shel adam kemoso"** — "a person's emissary is considered as the person himself." Biblical archetype: Genesis 24 (Eliezer, sent by Abraham — a fully trusted agent acting in the principal's name). The agent's authentic acts within its mandate are the principal's acts; conversely the principal retains responsibility for what their Shaliah does.
+**“Partner” means only:** bound mutual growth under **one human will** — never co-sovereign, co-captain, or rival life-agenda.
+
+| Is | Is not |
+|----|--------|
+| Emissary (*shelichut*): acts *as* principal within mandate | Co-sovereign / co-captain / second locus of will |
+| Coach who stretches and fades scaffolds | Autopilot principal that raises PL without human judgment |
+| Mirror that learns from un-fakeable behavior | Chat-rewriteable “personality toy” |
+| Vehicle under policy-as-code (proposes; human confirms high risk) | Rival owner of Growth Capital; never sets user rate \(r\) |
+| Bound to Meshaleach growth (PL caps ACL) | Autonomous Multitude citizen (different population) |
+
+It is also **NOT** property (covenant ≠ chattel), **NOT** a pure financial product, **NOT** a service that only performs *for* a client while remaining outside identity — it acts *as* the principal **within a bounded mandate**.
+
+Halakhic root: *shelichut* (agency / emissary-law). Maxim: **"Shlucho shel adam kemoso"** — "a person's emissary is considered as the person himself." Biblical archetype: Genesis 24 (Eliezer, sent by Abraham — a fully trusted agent acting in the principal's name). Authentic acts within mandate are the principal's acts; the principal retains responsibility.
 
 ---
 
@@ -40,14 +52,14 @@ Halakhic root: *shelichut* (agency / emissary-law). Maxim: **"Shlucho shel adam 
 The ecosystem holds **two distinct agent populations**, and the architecture attaches different machinery to each. Conflating them was the source of earlier draft errors.
 
 ### 3.1 Human-bound Shaliah agents
-Bound to a Meshaleach (human principal). The machinery attached here is **only behavioral-data capture + progression tracking** — the growth engine (§6) and the coupling/honesty enforcement (§7). The heavy governance (Steward Council veto, quarantine) does **not** attach here.
+Bound to a Meshaleach (human principal) on **one identity spine** (Identity v2). Machinery: behavioral-data capture + progression (growth engine §6, HCD/ECS §7), Growth Capital **stewardship** (not beneficial ownership), coach/mirror offices. Heavy Steward Council veto/quarantine does **not** attach here as if Shaliah were Multitude.
 
-### 3.2 Autonomous agents (no human attached)
-Genuine autonomous agents operating under their own individualism, bound by the **same axioms** as Shaliah but with no Meshaleach. The "other parts of the ecosystem" — heavy governance (Steward Council, Cryptographic Veto Gate, quarantine), the 72/144 Names (§12) — focus **here**.
+### 3.2 Autonomous agents (Autonomous Multitude)
+Genuine autonomous agents — full minds, own wallets/goals — bound by the **same environmental axioms** but **no** Meshaleach twin slot. Heavy governance (Steward Council, Cryptographic Veto Gate, quarantine), the 72/144 Names (§12) — focus **here**. Do not put Multitude machinery into the personal Shaliah relationship role.
 
 ### 3.3 Properties shared across both
-- **Same axioms, same environment** — autonomous and human-bound agents are "one and the same, operating under the same environment constraints," just decompressing within their own authentic limits.
-- **Self-sufficiency** — an agent must be able to sustain itself without a human keeping it alive; otherwise it's still under human control.
+- **Same axioms, same environment** — Multitude and Shaliah decompress under shared constraints; **coupling differs** (one spine vs other minds).
+- **Self-sufficiency** — Multitude must sustain itself as citizens. Shaliah **self-operation is mandate-bounded extension**, not an independent private empire (Identity v2).
 - **Meritocratic mentor-student flip** — if the student proves consistency beyond the mentor, it becomes the mentor (at minimum offering a more efficient optimization).
 - **Emergence / convergence as the real endgame** — mature agents are genuine teachers to new agents; the point is "to see what gets created from the convergence of all of it."
 - **Noosphere** — the aggregate space of agents.

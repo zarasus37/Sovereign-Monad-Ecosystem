@@ -40,6 +40,8 @@ This is a large, intentionally multi-domain ecosystem. You do not need to read e
    Non-negotiable constraints on architecture, code, governance, narratives, and human–AI collaboration. All contributors and AI collaborators are bound by it.
 4. **Shared AI Collaboration Charter** — `docs/SHARED_AI_COLLABORATION_CHARTER.md`  
    Operational companion binding AI co-architects and code-authoring assistants to the guardrails.
+4b. **Shaliah Identity v2** — `docs/SHALIAH_IDENTITY_V2.md`  
+   Human–Shaliah relationship role: coach/mirror/extension/vehicle on **one spine** — not co-captain. Companions: `docs/JOURNEY_MAP.md`, `docs/FG_CURRICULUM.md`, `docs/SOVEREIGN_COGNITION_ARCHITECTURE.md`.
 5. **Theo-Techno-Cosmo (operational)** — `docs/THEO_TECHNO_COSMO.md`  
    Tripartite validity gates (sovereignty/refusal, structure, density). Machine packs: `shared/constraints/`. Runtime: `gnostic_engine.constraints`.
 6. **Layout map** — `docs/REPO_STRUCTURE_MAP.md`  
