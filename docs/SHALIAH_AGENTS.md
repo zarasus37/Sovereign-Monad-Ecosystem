@@ -2,6 +2,8 @@
 
 > **What this is:** the single full outline of the entire Shaliah agents system *and the idea behind it*. Status: outline for expansion, not a finalized spec. Additive utility — it plugs into the existing ecosystem (TTCL compiler, Llull wheels, Layer 6 scheduler, Dove, Steward Council) without rearchitecting it.
 >
+> **Identity canon (wins on conflict):** [`docs/SHALIAH_IDENTITY_V2.md`](./SHALIAH_IDENTITY_V2.md) — Shaliah is coach/mirror/extension/vehicle on **one identity spine** with the Meshaleach; **not** co-captain / co-sovereign. Growth Capital and PL→ACL rules there supersede older ornamental treasury splits when they clash.
+>
 > **Companion file:** `docs/SHALIAH_VISION_PROPOSALS.md` is the separate, append-only running record of the founder's own proposals across the conversation files. This outline is informed by it; the tracker stays the source of "what the founder said."
 
 ---

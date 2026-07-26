@@ -105,6 +105,15 @@
 - `docs/GO_LIVE_EXECUTION.md` — **operator runbook for cloud deploy**
 - `docs/GNOSIS_V2_PRETRAIN_AUDIT.md` / `GNOSIS_V2_TRAINING_LOG.md` — Stage 2 audit
 - `docs/CULTURAL_CRITICAL_MASS.md` — critical mass / stealth education / locked trajectory doctrine
+- `docs/COGNITIVE_INSTITUTION_GAMIFIED.md` — **how minds grow + gamified institutional laws (anti-hollow)**
+- `docs/GROWTH_ECONOMY_SOCIETAL_EVENTS.md` — **Growth Capital** (default **20%**; bank-style individual claim + collective deploy; user changes \(r\) only after Financial Graduation; wealth-while-learning)
+- `docs/SOVEREIGN_COGNITION_ARCHITECTURE.md` — **E2E architecture canon** (Shaliah vs Multitude, Learning Constitution / Anti-Grind, control plane, Growth Capital, L1–L4)
+- `docs/JOURNEY_MAP.md` — **Door→Middle→End journey** + ops params (\(r=0.20\), Financial Graduation, \(\alpha/\beta/\gamma\), eligible \(C\), Monad+L3, control-plane hosting)
+- `docs/Shaliah Agents/` — product pack: PLAYBOOK, PRODUCT_SPEC, ONBOARDING_FLOW, Lesson Architecture, Flow Mapping, ARCHITECTURE_INDEX
+- `docs/OPEN_DECISIONS_RESEARCH.md` — **FOUNDER-ACCEPTED** research defaults (2026-07-26): \(r\) bounds, FG-1–3, bank pool, PoC credential, L4 posture — promoted into journey/economy/architecture
+- `docs/SHALIAH_IDENTITY_V2.md` — **canonical Shaliah identity** (one spine; coach/mirror/extension/vehicle; not co-captain; Growth Capital steward; PL→ACL)
+- `docs/FG_CURRICULUM.md` — **Financial Graduation lesson map** FG-1→FG-3 (L1.1–L3.G, spacing, gate batteries, Integrity)
+- `@sovereign/shaliah-onboarding` — **implemented:** lesson engine + FG catalog/gates/session + Shaliah office prompt pack (`pnpm test` / `pnpm demo:fg`)
 - `docs/VOX_NARRATIVE.md` — External semiotic interface
 - `docs/implementation_*.md` — Technical implementation plans
 

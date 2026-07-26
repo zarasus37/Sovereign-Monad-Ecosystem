@@ -1,7 +1,7 @@
 {
   "name": "@sovereign/shaliah-onboarding",
   "version": "0.1.0",
-  "description": "Shaliah Onboarding Arc (Vector 1) — Broken Genesis, Communication Quarantine, Archon Comprehension Gate",
+  "description": "Shaliah Onboarding Arc + FG lesson engine + office prompt pack",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",
@@ -15,8 +15,9 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "test": "tsx --test src/phase1Circuit.test.ts src/phase2ShadowMarket.test.ts src/phase3Archon.test.ts src/arc.test.ts",
-    "demo": "tsx src/demo.ts"
+    "test": "tsx --test src/phase1Circuit.test.ts src/phase2ShadowMarket.test.ts src/phase3Archon.test.ts src/arc.test.ts src/lessonEngine/engine.test.ts src/fg/fg.test.ts src/prompts/shaliahOffices.test.ts",
+    "demo": "tsx src/demo.ts",
+    "demo:fg": "tsx src/fgDemo.ts"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

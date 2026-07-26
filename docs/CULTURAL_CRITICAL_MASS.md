@@ -158,4 +158,13 @@ They are **not** in `preference_pairs_ALL.jsonl` until human-authored, scored, a
 
 ---
 
+## 8. Learning institution + growth society (2026-07-22)
+
+Operational ground for gamified cognitive institution, DeFi growth economy, and societal events:
+
+- `docs/COGNITIVE_INSTITUTION_GAMIFIED.md`
+- `docs/GROWTH_ECONOMY_SOCIETAL_EVENTS.md`
+
+---
+
 *Doctrine, not roadmap dates. Implementation lands through Shaliah arcs, gates, metrics, and human-judged pairs — not through slogans alone.*
