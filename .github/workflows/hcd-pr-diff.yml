@@ -38,7 +38,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build HCD monitor
-        run: pnpm --filter=@sovereign/hcd-monitor build
+        run: pnpm --filter=@sovereign/hcd-monitor... build
 
       - name: Generate PR drift report
         shell: bash
@@ -81,3 +81,4 @@ jobs:
           } > .github/hcd-diff.md
 
           gh pr comment "$PR_NUMBER" --body-file .github/hcd-diff.md
+

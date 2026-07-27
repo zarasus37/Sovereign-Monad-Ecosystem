@@ -105,7 +105,8 @@ const MEMBERS = [
     ttc_emphasis: ['THEOLOGY', 'COSMOLOGY'],
     contribution: 'Plural satrapy governance, tolerant layered sovereignty',
     key_insight: 'Unity need not require uniformity',
-    file_patterns: [/Cyrus/i],
+    // "The Sovereignty of the Unseen…" is Cyrus analysis without "Cyrus" in the filename
+    file_patterns: [/Cyrus/i, /Sovereignty of the Unseen/i],
   },
   {
     member_id: 'king-solomon',

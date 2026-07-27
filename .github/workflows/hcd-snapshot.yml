@@ -33,7 +33,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build HCD monitor
-        run: pnpm --filter=@sovereign/hcd-monitor build
+        run: pnpm --filter=@sovereign/hcd-monitor... build
 
       - name: Generate dated drift report
         shell: bash
@@ -56,3 +56,4 @@ jobs:
             git commit -m "chore(audit): weekly HCD snapshot $(date +%Y-%m-%d)" &&
             git push origin main
           )
+
