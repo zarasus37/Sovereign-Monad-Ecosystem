@@ -22,6 +22,9 @@ Modes:
     gaps before reward training (CPU-pure). Exits non-zero if any invalid.
   - ``ttc-metrics <pairs_jsonl>``      — CAT9 / multi-obj readiness report:
     TTC axis coverage, composite gaps, multi-obj margins (CPU-pure).
+  - ``pair-coverage [pairs_jsonl]``    — GP-1 coverage report (CAT mix, gaps,
+    failing criteria, thin spots). Default: data/preference_pairs_ALL.jsonl.
+    Writes logs/gnosis/pair_coverage_*.{json,md} (CPU-pure).
   - ``ttc-window-report [jsonl...]``   — debt/refusal/density pain from Hepar
     gate logs (default: logs/ttc-window/*.jsonl).
   - ``--smoke-imports``                — the honest "wiring resolves" proof:
@@ -451,6 +454,42 @@ def main(argv: list[str] | None = None) -> int:
             print("usage: python -m gnosis_training ttc-metrics <pairs_jsonl>")
             return 2
         return ttc_metrics_report(rest[0])
+
+    if mode == "pair-coverage":
+        from pathlib import Path
+
+        from .coverage import run_coverage
+
+        # Prefer package data/ then repo gnosis-training/data/
+        default_candidates = [
+            Path("data/preference_pairs_ALL.jsonl"),
+            Path("gnosis-training/data/preference_pairs_ALL.jsonl"),
+        ]
+        pairs = Path(rest[0]) if rest else next(
+            (p for p in default_candidates if p.exists()),
+            default_candidates[-1],
+        )
+        if not pairs.exists():
+            print(f"pair-coverage: file not found: {pairs}")
+            print(
+                "usage: python -m gnosis_training pair-coverage [pairs_jsonl]"
+            )
+            return 2
+        report = run_coverage(pairs)
+        print(f"pair-coverage n={report['pair_count']} source={report['source']}")
+        print(f"  by_category={report['by_category']}")
+        print(f"  thin={report['thin_categories']}")
+        print(f"  ttc_axis={report['ttc_axis']}")
+        g = report["score_gap_chosen_minus_rejected"]
+        if g.get("n"):
+            print(
+                f"  score_gap mean={g['mean']} min={g['min']} median={g['median']}"
+            )
+        print(f"  wrote {report['outputs']['latest_md']}")
+        print(f"  wrote {report['outputs']['latest_json']}")
+        for r in report["recommendations"]:
+            print(f"  → {r}")
+        return 0
 
     if mode == "ttc-window-report":
         return ttc_window_report(rest)

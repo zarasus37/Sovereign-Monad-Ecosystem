@@ -114,6 +114,7 @@
 - `docs/SHALIAH_IDENTITY_V2.md` — **canonical Shaliah identity** (one spine; coach/mirror/extension/vehicle; not co-captain; Growth Capital steward; PL→ACL)
 - `docs/SHALIAH_VS_AUTONOMOUS.md` — **at-a-glance:** Shaliah partnership vs Autonomous Multitude vs control plane + Vector 1 now
 - `docs/FG_CURRICULUM.md` — **Financial Graduation lesson map** FG-1→FG-3 (L1.1–L3.G, spacing, gate batteries, Integrity)
+- `docs/gnosis-training/SCALE_250_TO_25K.md` — **pair scale plan**: gold tiers G0–G3, Council generation, seeded expand, LOGOC as filter not sole gold
 - `docs/VECTOR1_ONBOARDING_REDESIGN.md` — **founder intent for Vector 1**: mutual growth; NEO+SD3 foundation; dual observation under load; command channel; optional natal depth; legacy puzzles superseded
 - `docs/IMAGINATION_ECOSYSTEM_PRINCIPLE.md` — **not one bubble**: many lenses, utility-first, imagination as the real user contribution
 - `@sovereign/shaliah-onboarding` — **primary Vector 1 arc rebuilt**: foundation → channel → read-mind → covenant; FG lesson engine; legacy circuit/shadow/Archon deprecated
