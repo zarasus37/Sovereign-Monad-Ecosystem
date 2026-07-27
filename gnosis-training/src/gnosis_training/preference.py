@@ -51,6 +51,13 @@ from .generated.hyperparams import (
 from .metrics import deterministic_shuffle
 from .ttc_signals import TtcScores, ttc_scores_from_wire
 
+# GP-2 provenance tiers (docs/gnosis-training/SCALE_250_TO_25K.md)
+PROVENANCE_TIERS = frozenset({"G0", "G1", "G2", "G3", "G4"})
+"""G0 gold · G1 council · G2 seeded expand · G3 hard-neg · G4 draft (not train)."""
+
+TRAINABLE_PROVENANCE_TIERS = frozenset({"G0", "G1", "G2", "G3"})
+"""Tiers allowed into reward training (G4 excluded until promoted)."""
+
 
 @dataclass(frozen=True)
 class PreferenceScores:
@@ -88,6 +95,14 @@ class PreferencePair:
       - ``ttc_axis``: theological | technological | cosmological | composite
       - ``chosen_ttc`` / ``rejected_ttc``: axis scores + composite (pack v1.1.0)
     When present, ``validate_pair`` enforces RULE T1 (composite gap).
+
+    Optional provenance (GP-2 / SCALE_250_TO_25K):
+      - ``provenance_tier``: G0|G1|G2|G3|G4 (G4 = draft queue, not trainable)
+      - ``seed_pair_ids``: parent gold/council ids (required for G2)
+      - ``generator``: free-text origin tag (human|council:…|expand:…|hardneg:…)
+      - ``reviewed_by``: optional reviewer id/name
+    Missing tier is allowed for legacy gold (treated as G0-equivalent when
+    synthetic=false and bootstrap=false).
     """
 
     pair_id: str
@@ -103,6 +118,10 @@ class PreferencePair:
     ttc_axis: str | None = None
     chosen_ttc: TtcScores | None = None
     rejected_ttc: TtcScores | None = None
+    provenance_tier: str | None = None
+    seed_pair_ids: list[str] | None = None
+    generator: str | None = None
+    reviewed_by: str | None = None
 
 
 # ── Wire (JSON) ↔ domain ─────────────────────────────────────────────────────
@@ -137,6 +156,17 @@ def pair_from_wire(wire: dict[str, Any]) -> PreferencePair:
         or (wire.get("rejected") or {}).get("ttc_scores")
     )
     ttc_axis = wire.get("ttc_axis")
+    seeds_raw = wire.get("seed_pair_ids")
+    seed_pair_ids: list[str] | None
+    if seeds_raw is None:
+        seed_pair_ids = None
+    else:
+        seed_pair_ids = [str(s) for s in seeds_raw]
+
+    tier = wire.get("provenance_tier")
+    gen = wire.get("generator")
+    reviewed = wire.get("reviewed_by")
+
     return PreferencePair(
         pair_id=str(wire["pair_id"]),
         category=str(wire["category"]),
@@ -151,6 +181,10 @@ def pair_from_wire(wire: dict[str, Any]) -> PreferencePair:
         ttc_axis=str(ttc_axis) if ttc_axis else None,
         chosen_ttc=chosen_ttc,
         rejected_ttc=rejected_ttc,
+        provenance_tier=str(tier).upper() if tier else None,
+        seed_pair_ids=seed_pair_ids,
+        generator=str(gen) if gen else None,
+        reviewed_by=str(reviewed) if reviewed else None,
     )
 
 
@@ -190,6 +224,14 @@ def pair_to_wire(pair: PreferencePair) -> dict[str, Any]:
         out["chosen_ttc"] = pair.chosen_ttc.to_dict()
     if pair.rejected_ttc is not None:
         out["rejected_ttc"] = pair.rejected_ttc.to_dict()
+    if pair.provenance_tier:
+        out["provenance_tier"] = pair.provenance_tier
+    if pair.seed_pair_ids is not None:
+        out["seed_pair_ids"] = list(pair.seed_pair_ids)
+    if pair.generator:
+        out["generator"] = pair.generator
+    if pair.reviewed_by:
+        out["reviewed_by"] = pair.reviewed_by
     return out
 
 
@@ -348,15 +390,75 @@ def validate_pair(pair: PreferencePair) -> list[str]:
             problems.append(
                 f"ttc_axis={pair.ttc_axis!r} not in {sorted(allowed)} (RULE T1)"
             )
+    problems.extend(validate_provenance(pair))
     return problems
 
 
+def validate_provenance(pair: PreferencePair) -> list[str]:
+    """GP-2 provenance rules (RULE P).
+
+    - Missing tier: OK (legacy gold; effective G0 when not synthetic/bootstrap).
+    - Present tier must be G0–G4.
+    - G2 requires non-empty ``seed_pair_ids``.
+    - G0 must not be synthetic=true.
+    - G4 is valid as a *worksheet/draft* row but is not trainable
+      (``is_trainable_pair`` / ``load_human_pairs`` exclude it).
+    """
+    problems: list[str] = []
+    tier = pair.provenance_tier
+    if tier is None:
+        return problems
+    if tier not in PROVENANCE_TIERS:
+        problems.append(
+            f"provenance_tier={tier!r} not in {sorted(PROVENANCE_TIERS)} (RULE P)"
+        )
+        return problems
+    if tier == "G0" and pair.synthetic:
+        problems.append(
+            "provenance_tier=G0 cannot have synthetic=true (RULE P: gold is human)"
+        )
+    if tier == "G2":
+        seeds = pair.seed_pair_ids or []
+        if not seeds:
+            problems.append(
+                "provenance_tier=G2 requires non-empty seed_pair_ids (RULE P)"
+            )
+    if tier in {"G1", "G2", "G3"} and pair.bootstrap:
+        problems.append(
+            f"provenance_tier={tier} cannot be bootstrap=true (RULE P)"
+        )
+    return problems
+
+
+def effective_provenance_tier(pair: PreferencePair) -> str:
+    """Tier used for training mix: explicit tier, else G0 for human gold, else G4."""
+    if pair.provenance_tier:
+        return pair.provenance_tier
+    if pair.bootstrap or pair.synthetic:
+        return "G4"
+    return "G0"
+
+
+def is_trainable_pair(pair: PreferencePair) -> bool:
+    """True if pair may enter reward training (valid + not bootstrap + not explicit G4).
+
+    Untagged synthetic dry-run pairs remain loadable (legacy dry-run path). Explicit
+    ``provenance_tier=G4`` is the draft queue and is never trainable.
+    """
+    if pair.bootstrap:
+        return False
+    if validate_pair(pair):
+        return False
+    if pair.provenance_tier == "G4":
+        return False
+    return True
+
+
 def load_human_pairs(path: str | Path) -> list[PreferencePair]:
-    """Load a human-authored ``preference_pairs_ALL.jsonl`` (reference schema)
-    and return ONLY the valid, non-bootstrap pairs. Invalid pairs raise with a
-    precise message (garbage-in-garbage-out). The worksheet-level templating
-    guard (RULES 4/5) runs over the whole loaded set so a canned file cannot
-    slip through on per-pair score consistency alone (the PR #56 failure mode)."""
+    """Load ``preference_pairs_ALL.jsonl`` (reference schema) and return valid
+    non-bootstrap pairs. Explicit ``provenance_tier=G4`` draft rows are skipped.
+    Invalid pairs raise (garbage-in-garbage-out). Worksheet templating guard
+    (RULES 4/5) runs over the loaded set (PR #56 failure mode)."""
     p = Path(path)
     pairs: list[PreferencePair] = []
     with p.open("r", encoding="utf-8") as fh:
@@ -369,6 +471,9 @@ def load_human_pairs(path: str | Path) -> list[PreferencePair]:
             problems = validate_pair(pair)
             if problems:
                 raise ValueError(f"{p}:{lineno} pair {pair.pair_id}: {problems}")
+            if pair.provenance_tier == "G4":
+                # Explicit draft queue only — do not train.
+                continue
             pairs.append(pair)
     templating = detect_worksheet_templating(pairs)
     if templating:
@@ -376,6 +481,39 @@ def load_human_pairs(path: str | Path) -> list[PreferencePair]:
             f"{p}: worksheet-level templating guard failed (RULES 4/5): {templating}"
         )
     return pairs
+
+
+def tag_pairs_g0(
+    pairs: list[PreferencePair],
+    *,
+    generator: str = "human",
+    reviewed_by: str | None = None,
+) -> list[PreferencePair]:
+    """Return copies tagged provenance_tier=G0 (for backfilling gold corpora)."""
+    out: list[PreferencePair] = []
+    for p in pairs:
+        out.append(
+            PreferencePair(
+                pair_id=p.pair_id,
+                category=p.category,
+                prompt=p.prompt,
+                chosen=p.chosen,
+                rejected=p.rejected,
+                failing_criteria=list(p.failing_criteria),
+                apeiron=p.apeiron,
+                bootstrap=p.bootstrap,
+                constitution_version=p.constitution_version,
+                synthetic=p.synthetic,
+                ttc_axis=p.ttc_axis,
+                chosen_ttc=p.chosen_ttc,
+                rejected_ttc=p.rejected_ttc,
+                provenance_tier="G0",
+                seed_pair_ids=p.seed_pair_ids,
+                generator=p.generator or generator,
+                reviewed_by=reviewed_by if reviewed_by is not None else p.reviewed_by,
+            )
+        )
+    return out
 
 
 # ── Source 1: bootstrap worksheet (scaffold — NOT trainable without humans) ─

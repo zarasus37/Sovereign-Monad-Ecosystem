@@ -25,6 +25,9 @@ Modes:
   - ``pair-coverage [pairs_jsonl]``    — GP-1 coverage report (CAT mix, gaps,
     failing criteria, thin spots). Default: data/preference_pairs_ALL.jsonl.
     Writes logs/gnosis/pair_coverage_*.{json,md} (CPU-pure).
+  - ``tag-provenance-g0 <in_jsonl> [out_jsonl]`` — GP-2: stamp provenance_tier=G0
+    + generator=human on all pairs (backfill gold). Default out: in with
+    ``.g0.jsonl`` suffix (CPU-pure).
   - ``ttc-window-report [jsonl...]``   — debt/refusal/density pain from Hepar
     gate logs (default: logs/ttc-window/*.jsonl).
   - ``--smoke-imports``                — the honest "wiring resolves" proof:
@@ -489,6 +492,51 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  wrote {report['outputs']['latest_json']}")
         for r in report["recommendations"]:
             print(f"  → {r}")
+        return 0
+
+    if mode == "tag-provenance-g0":
+        from pathlib import Path
+
+        import json as _json
+
+        from .preference import (
+            pair_from_wire,
+            serialize_pairs_jsonl,
+            tag_pairs_g0,
+            validate_pair,
+        )
+
+        if len(rest) < 1:
+            print(
+                "usage: python -m gnosis_training tag-provenance-g0 "
+                "<in_jsonl> [out_jsonl]"
+            )
+            return 2
+        in_path = Path(rest[0])
+        if not in_path.exists():
+            print(f"tag-provenance-g0: not found: {in_path}")
+            return 2
+        out_path = (
+            Path(rest[1])
+            if len(rest) >= 2
+            else in_path.with_suffix("").with_name(in_path.stem + ".g0.jsonl")
+        )
+        # Load without train filter — include all valid score rows
+        raw_pairs = []
+        with in_path.open(encoding="utf-8") as fh:
+            for lineno, line in enumerate(fh, start=1):
+                line = line.strip()
+                if not line:
+                    continue
+                pair = pair_from_wire(_json.loads(line))
+                problems = validate_pair(pair)
+                if problems:
+                    print(f"skip {pair.pair_id} line {lineno}: {problems}")
+                    continue
+                raw_pairs.append(pair)
+        tagged = tag_pairs_g0(raw_pairs, generator="human")
+        out_path.write_text(serialize_pairs_jsonl(tagged), encoding="utf-8")
+        print(f"tag-provenance-g0 wrote {len(tagged)} pairs → {out_path}")
         return 0
 
     if mode == "ttc-window-report":

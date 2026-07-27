@@ -7,11 +7,15 @@ from gnosis_training.event import GnosisEvent, from_wire
 from gnosis_training.preference import (
     PreferencePair,
     build_bootstrap_worksheet,
+    effective_provenance_tier,
+    is_trainable_pair,
     load_human_pairs,
     pair_from_wire,
     pair_to_wire,
     serialize_pairs_jsonl,
+    tag_pairs_g0,
     validate_pair,
+    validate_provenance,
 )
 
 
@@ -133,6 +137,49 @@ def test_pair_from_to_wire_roundtrip_reference_schema():
     wire = _human_pair_wire()
     pair: PreferencePair = pair_from_wire(wire)
     assert pair_to_wire(pair) == wire
+
+
+def test_provenance_roundtrip_and_rules():
+    wire = _human_pair_wire()
+    wire["provenance_tier"] = "G2"
+    wire["seed_pair_ids"] = ["PP-001"]
+    wire["generator"] = "expand:v1"
+    wire["synthetic"] = True
+    pair = pair_from_wire(wire)
+    assert pair.provenance_tier == "G2"
+    assert pair.seed_pair_ids == ["PP-001"]
+    assert pair_to_wire(pair)["provenance_tier"] == "G2"
+    assert validate_provenance(pair) == []
+    assert validate_pair(pair) == []
+
+    bad_g2 = pair_from_wire({**wire, "seed_pair_ids": []})
+    assert any("seed_pair_ids" in p for p in validate_provenance(bad_g2))
+
+    g0_synth = pair_from_wire(
+        {**_human_pair_wire(), "provenance_tier": "G0", "synthetic": True}
+    )
+    assert any("G0" in p for p in validate_provenance(g0_synth))
+
+    g4 = pair_from_wire({**_human_pair_wire(), "provenance_tier": "G4", "synthetic": True})
+    assert validate_pair(g4) == []  # draft may be schema-valid
+    assert is_trainable_pair(g4) is False
+    assert effective_provenance_tier(g4) == "G4"
+
+    untagged = pair_from_wire(_human_pair_wire())
+    assert effective_provenance_tier(untagged) == "G0"
+    assert is_trainable_pair(untagged) is True
+
+    # Untagged synthetic dry-run still loads (legacy dry-run path)
+    synth = pair_from_wire({**_human_pair_wire(), "synthetic": True})
+    assert is_trainable_pair(synth) is True
+
+
+def test_tag_pairs_g0():
+    pair = pair_from_wire(_human_pair_wire())
+    tagged = tag_pairs_g0([pair])[0]
+    assert tagged.provenance_tier == "G0"
+    assert tagged.generator == "human"
+    assert validate_pair(tagged) == []
 
 
 def test_validate_pair_accepts_good_human_pair():

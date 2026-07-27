@@ -1,6 +1,6 @@
 # Preference pair coverage report (GP-1)
 
-- **Generated:** 2026-07-27T17:35:44.559020+00:00
+- **Generated:** 2026-07-27T17:48:26.371540+00:00
 - **Source:** `C:\Users\crisc\OneDrive - Southern Careers Institute\My Drive\The_Sovereign\gnosis-training\data\preference_pairs_ALL.jsonl`
 - **Pair count:** 250
 
@@ -67,7 +67,7 @@ n=250 · mean=0.35 · median=0.361 · min=0.15 · max=0.63 · stdev=0.1298
 - bootstrap: 0
 - apeiron: 10
 - pairs with chosen_ttc/rejected_ttc: 35
-- provenance_tier: `{'untagged': 250}`
+- provenance_tier: `{'G0': 250}`
 
 ## ID hygiene
 
@@ -79,7 +79,6 @@ n=250 · mean=0.35 · median=0.361 · min=0.15 · max=0.63 · stdev=0.1298
 
 - Expand thin categories first: CAT8(10), CAT7(11)
 - Rebalance CAT9 ttc_axis coverage (theological / technological / cosmological)
-- No provenance_tier tags yet — add G0/G1/G2/G3 when scaling past gold
 - Next: Council prototype (G1) on thin CATs + seeded expand (G2) from strong gold seeds
 
 ---

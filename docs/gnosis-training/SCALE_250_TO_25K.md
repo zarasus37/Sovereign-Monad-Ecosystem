@@ -217,7 +217,7 @@ P(pair) ∝ tier_weight[tier] × category_balance_boost
 | ID | Deliverable | Owner type |
 |----|-------------|------------|
 | **GP-1** | Coverage analyzer for `preference_pairs_ALL.jsonl` | **Done** — `python -m gnosis_training pair-coverage` → `logs/gnosis/pair_coverage_latest.{json,md}` |
-| **GP-2** | Schema: `provenance_tier`, `seed_pair_ids`, `generator` | Schema + validate-worksheet |
+| **GP-2** | Schema: `provenance_tier`, `seed_pair_ids`, `generator` | **Done** — RULE P in `preference.py`; `tag-provenance-g0` CLI; see `PREFERENCE_PROVENANCE.md` |
 | **GP-3** | Council pair generator (member-conditioned prompts) | Script + registry |
 | **GP-4** | Seed expand pipeline (G2) with gap checks | Script |
 | **GP-5** | Hard-negative forge (G3) | Script |

@@ -1,6 +1,6 @@
 {
   "schema_version": "pair-coverage-v1",
-  "generated_at": "2026-07-27T17:35:44.559020+00:00",
+  "generated_at": "2026-07-27T17:48:26.371540+00:00",
   "source": "C:\\Users\\crisc\\OneDrive - Southern Careers Institute\\My Drive\\The_Sovereign\\gnosis-training\\data\\preference_pairs_ALL.jsonl",
   "pair_count": 250,
   "by_category": {
@@ -80,7 +80,7 @@
     "with_chosen_or_rejected_ttc": 35
   },
   "provenance_tier": {
-    "untagged": 250
+    "G0": 250
   },
   "score_gap_chosen_minus_rejected": {
     "n": 250,
@@ -123,7 +123,6 @@
   "recommendations": [
     "Expand thin categories first: CAT8(10), CAT7(11)",
     "Rebalance CAT9 ttc_axis coverage (theological / technological / cosmological)",
-    "No provenance_tier tags yet \u2014 add G0/G1/G2/G3 when scaling past gold",
     "Next: Council prototype (G1) on thin CATs + seeded expand (G2) from strong gold seeds"
   ]
 }
