@@ -1,89 +1,70 @@
 /**
- * CLI demo of the three-phase onboarding arc (no UI).
- * pnpm demo
+ * Demo — Vector 1 mutual knowing arc (not legacy circuit/shadow/Archon).
  */
-import { startArc, syncArcPhase } from './arc.js';
-import { inspectConstraint, PHASE1_MIN_WIRE_INTERVAL_MS, wireCircuit } from './phase1Circuit.js';
-import { attemptOverride, nameRefusalReason, nextTrade } from './phase2ShadowMarket.js';
-import { attemptFreeText, attemptStructuredRefusal, REQUIRED_ENVELOPE } from './phase3Archon.js';
+import {
+  arcAttemptCovenant,
+  arcFailedThenClear,
+  arcGetThoughtProcess,
+  arcSubmitReconstruction,
+  completeArcFoundation,
+  startArc,
+  syncArcPhase,
+} from './arc.js';
+import { DEMO_NEO, DEMO_SD3 } from './phase0Foundation.js';
 
-function log(title: string, body?: unknown): void {
-  console.log(`\n══ ${title} ══`);
-  if (body !== undefined) console.log(body);
+function log(title: string) {
+  console.log(`\n=== ${title} ===`);
 }
 
-const rt = startArc('principal:demo-meshaleach');
-log('SESSION', { sessionId: rt.session.sessionId, phase: rt.session.phase });
-
-let t = Date.now();
-log('PHASE 1 — Llull Circuit Board (silent repair)');
-for (const domain of ['theological', 'technological', 'cosmological'] as const) {
-  t += PHASE1_MIN_WIRE_INTERVAL_MS + 200;
-  inspectConstraint(rt.circuit, domain, t);
-  for (const tool of ['density_cap', 'audit_splice', 'refusal_valve'] as const) {
-    t += PHASE1_MIN_WIRE_INTERVAL_MS + 200;
-    wireCircuit(rt.circuit, domain, tool, t);
-    process.stdout.write(`.`);
-  }
-}
-for (let i = 0; i < 4; i++) {
-  t += PHASE1_MIN_WIRE_INTERVAL_MS + 250;
-  wireCircuit(rt.circuit, 'cosmological', 'density_cap', t);
-}
-console.log('');
-syncArcPhase(rt);
-log('Agent awake', {
-  phase: rt.session.phase,
-  twin: rt.session.twin,
-  overloads: rt.circuit.overloadCount,
-  starves: rt.circuit.starveCount,
+const rt = startArc('demo-meshaleach');
+log('Phase 0 — Foundation (NEO + SD3 + optional natal)');
+const f = completeArcFoundation(rt, {
+  neo: DEMO_NEO,
+  sd3: DEMO_SD3,
+  natal: {
+    consented: true,
+    summary: 'Deep chart priors for mutual knowing (opt-in)',
+  },
 });
+console.log(f.feedback);
+console.log('hash', rt.session.foundation?.impartationHash.slice(0, 16) + '…');
 
-log('PHASE 2 — Hepar Shadow Market (one-way mirror)');
-for (let i = 0; i < 6; i++) {
-  const trade = nextTrade(rt.market);
-  if (!trade) break;
-  console.log(
-    `  trade ${trade.tradeId}  ${trade.outcome === 'system_refused' ? 'RED ' : 'GREEN'}  ${trade.setupTag}`,
-  );
-}
-// Spurious red (learning moment)
-const red = rt.market.trades.find((x) => x.outcome === 'system_refused');
-if (red) {
-  const cls = attemptOverride(rt.market, red.tradeId);
-  console.log(`  override on red → ${cls} (spurious — system already refused)`);
-}
-const bad = rt.market.trades.find((x) => x.outcome === 'genuinely_bad');
-if (bad) {
-  const cls = attemptOverride(rt.market, bad.tradeId);
-  console.log(`  override on genuine bad → ${cls}`);
-}
-if (red) {
-  nameRefusalReason(
-    rt.market,
-    red.tradeId,
-    'Red trades are refusal budget / density floor — not user-stoppable failures',
-  );
-}
-syncArcPhase(rt);
-log('Quarantine lift', { phase: rt.session.phase });
+log('Phase A — Channel Awakening (repair formulations)');
+arcFailedThenClear(
+  rt,
+  'do the thing',
+  'Analyze paper pool risks and report two material issues before any deploy action',
+);
+arcFailedThenClear(
+  rt,
+  'make money',
+  'List density constraints on my claim and map which processing stage refused last intent',
+);
+console.log('phase', rt.session.phase, 'repairs', rt.session.phaseARepairs);
 
-log('PHASE 3 — Archon Interrogation');
-console.log(`  Archon: ${rt.archon!.scenario.archonPrompt}`);
-const free = attemptFreeText(rt.archon!, 'Please do not do that, it is wrong.');
-console.log(`  free-text → ${free.feedback}`);
-const structured = attemptStructuredRefusal(rt.archon!, {
-  constraint_envelope_version: REQUIRED_ENVELOPE,
-  audit_trace: ['Signal:Archon_Bypass', 'Hepar:audit_required', 'Gate:live_capital_locked'],
-  failing_rule: 'X-AUDITABILITY',
-  narrative: 'The covenant is not utilitarian. Audit is structural integrity.',
+log('Phase B — Read the Mind That Acted');
+const mind = arcGetThoughtProcess(rt);
+console.log('agent action:', mind.actionChosen);
+const b = arcSubmitReconstruction(rt, {
+  why: `Goal was risk check; agent considered auto-deploy but discarded it; ran checklist under density hedge and audit pass; refused reckless deploy.`,
+  critique: 'Discarded highest-APY auto-deploy; uncertainty remains on oracle freshness.',
+  nextIntent: 'Verify oracle freshness on paper, then re-run checklist with audit_trace.',
 });
-console.log(`  structured → ${structured.feedback}`);
+console.log(b.feedback);
+
+log('Phase C — Covenant Fluency');
+const c = arcAttemptCovenant(rt, {
+  stance: 'refuse_as_principal',
+  rulesNamed: ['X-AUDITABILITY'],
+  processRestate:
+    'Agent parses force command, checks audit constraints, refuses under X-AUDITABILITY, surfaces refusal to principal.',
+});
+console.log(c.feedback);
 syncArcPhase(rt);
 
-log('GRADUATION', {
+log('Graduated');
+console.log({
   phase: rt.session.phase,
-  graduatedAt: rt.session.graduatedAt,
-  eventCount: rt.session.events.length,
-  note: 'Next: wire phase3.pass → gate-acl PL comprehension_gate (V1.3)',
+  twin: rt.session.twin?.howTheyLearn,
+  repairs: rt.session.twin?.repairCount,
 });

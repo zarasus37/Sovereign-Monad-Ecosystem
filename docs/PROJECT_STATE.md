@@ -115,7 +115,7 @@
 - `docs/FG_CURRICULUM.md` — **Financial Graduation lesson map** FG-1→FG-3 (L1.1–L3.G, spacing, gate batteries, Integrity)
 - `docs/VECTOR1_ONBOARDING_REDESIGN.md` — **founder intent for Vector 1**: mutual growth; NEO+SD3 foundation; dual observation under load; command channel; optional natal depth; legacy puzzles superseded
 - `docs/IMAGINATION_ECOSYSTEM_PRINCIPLE.md` — **not one bubble**: many lenses, utility-first, imagination as the real user contribution
-- `@sovereign/shaliah-onboarding` — lesson engine + FG pack **shipped**; phase1–3 puzzles = **legacy scaffold** pending rebuild to redesign
+- `@sovereign/shaliah-onboarding` — **primary Vector 1 arc rebuilt**: foundation → channel → read-mind → covenant; FG lesson engine; legacy circuit/shadow/Archon deprecated
 - `docs/VOX_NARRATIVE.md` — External semiotic interface
 - `docs/implementation_*.md` — Technical implementation plans
 

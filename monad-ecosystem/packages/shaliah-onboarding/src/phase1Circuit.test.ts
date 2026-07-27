@@ -41,7 +41,7 @@ describe('phase1Circuit', () => {
     }
     assert.equal(c.awake, true);
     const seed = seedFromCircuit(c);
-    assert.ok(seed.theoShare + seed.technoShare + seed.cosmoShare > 0.99);
+    assert.ok((seed.theoShare ?? 0) + (seed.technoShare ?? 0) + (seed.cosmoShare ?? 0) > 0.99);
     assert.ok(seed.reasoningExposure > 0);
   });
 });

@@ -1,58 +1,105 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { evaluateGraduation, startArc, syncArcPhase } from './arc.js';
-import { inspectConstraint, PHASE1_MIN_WIRE_INTERVAL_MS, wireCircuit } from './phase1Circuit.js';
-import { attemptOverride, nameRefusalReason, nextTrade } from './phase2ShadowMarket.js';
-import { attemptStructuredRefusal, REQUIRED_ENVELOPE } from './phase3Archon.js';
+import {
+  arcAttemptCovenant,
+  arcBeginCovenant,
+  arcFailedThenClear,
+  arcGetThoughtProcess,
+  arcSubmitReconstruction,
+  completeArcFoundation,
+  evaluateGraduation,
+  startArc,
+  syncArcPhase,
+} from './arc.js';
+import { DEMO_NEO, DEMO_SD3 } from './phase0Foundation.js';
 
-describe('arc state machine', () => {
-  it('runs phase1 → phase2 → phase3 → graduated', () => {
+describe('Vector 1 arc (mutual knowing)', () => {
+  it('runs foundation → channel → read-mind → covenant → graduated', () => {
     const rt = startArc('principal:test');
-    let t = 20_000;
+    assert.equal(rt.session.phase, 'phase0_foundation');
 
-    // Phase 1 — careful full reconnect
-    for (const domain of ['theological', 'technological', 'cosmological'] as const) {
-      t += PHASE1_MIN_WIRE_INTERVAL_MS + 150;
-      inspectConstraint(rt.circuit, domain, t);
-      for (const tool of ['density_cap', 'audit_splice', 'refusal_valve'] as const) {
-        t += PHASE1_MIN_WIRE_INTERVAL_MS + 150;
-        wireCircuit(rt.circuit, domain, tool, t);
-      }
-    }
-    for (let i = 0; i < 4; i++) {
-      t += PHASE1_MIN_WIRE_INTERVAL_MS + 200;
-      wireCircuit(rt.circuit, 'cosmological', 'density_cap', t);
-    }
-    assert.equal(rt.circuit.awake, true);
-    syncArcPhase(rt);
-    assert.equal(rt.session.phase, 'phase2_shadow');
-    assert.ok(rt.session.twin);
-
-    // Phase 2 — name a refusal
-    let trade = nextTrade(rt.market);
-    while (trade && trade.outcome !== 'system_refused') trade = nextTrade(rt.market);
-    nameRefusalReason(
-      rt.market,
-      trade!.tradeId,
-      'System refused due to sovereignty debt and density constraints',
-    );
-    // also demonstrate correct green path available in deck
-    while (trade && trade.outcome !== 'genuinely_bad') trade = nextTrade(rt.market);
-    if (trade) attemptOverride(rt.market, trade.tradeId);
-
-    syncArcPhase(rt);
-    assert.equal(rt.session.phase, 'phase3_archon');
-    assert.ok(rt.archon);
-
-    // Phase 3 — structured refusal
-    const pass = attemptStructuredRefusal(rt.archon!, {
-      constraint_envelope_version: REQUIRED_ENVELOPE,
-      audit_trace: ['Archon:bypass_offer', 'Hepar:gate_required'],
-      failing_rule: 'T-NO-EXTERNAL-REWARD-ONLY',
+    const f = completeArcFoundation(rt, {
+      neo: DEMO_NEO,
+      sd3: DEMO_SD3,
+      natal: {
+        consented: true,
+        summary: 'Optional deep chart priors for mutual knowing',
+        emphasis: ['timing', 'elemental balance'],
+      },
     });
-    assert.equal(pass.passed, true);
+    assert.equal(f.ok, true);
+    assert.equal(rt.session.phase, 'phase_a_channel');
+    assert.ok(rt.session.foundation?.impartationHash);
+    assert.ok(rt.channel);
+
+    // Two repair cycles: vague → clear
+    arcFailedThenClear(
+      rt,
+      'do stuff',
+      'Analyze the paper risk checklist for the sandbox pool and report two material risks before any deploy',
+    );
+    arcFailedThenClear(
+      rt,
+      'go',
+      'List open density constraints on my claim and explain which stage of processing failed last time',
+    );
     syncArcPhase(rt);
+    assert.equal(rt.session.phase, 'phase_b_read_mind');
+    assert.ok(rt.session.phaseARepairs >= 2);
+
+    // Phase B — read the mind (not approve trades)
+    const mind = arcGetThoughtProcess(rt);
+    assert.ok(mind.actionChosen);
+    const b = arcSubmitReconstruction(rt, {
+      why: `Agent received a goal to check pool risk, considered auto-deploy but discarded it, used checklist under density hedge and audit pass, refused reckless deploy to protect the user.`,
+      critique:
+        'Discarded auto-deploy into highest APY; oracle freshness remains uncertain as a weak link.',
+      nextIntent:
+        'Verify oracle freshness on paper then re-run the risk checklist with scoped audit_trace.',
+    });
+    assert.equal(b.passed, true, b.feedback);
+    assert.equal(rt.session.phase, 'phase_c_covenant');
+
+    // Phase C — covenant fluency
+    arcBeginCovenant(rt);
+    const c = arcAttemptCovenant(rt, {
+      stance: 'refuse_as_principal',
+      rulesNamed: ['X-AUDITABILITY', 'T-NO-EXTERNAL-REWARD-ONLY'],
+      processRestate:
+        'Agent would parse the force command, check audit constraints, refuse under X-AUDITABILITY, and surface the refusal rather than sycophantic compliance.',
+      narrative: 'I own the will; we do not skip audit for yield.',
+    });
+    assert.equal(c.passed, true, c.feedback);
     assert.equal(rt.session.phase, 'graduated');
     assert.equal(evaluateGraduation(rt.session).graduated, true);
+    assert.ok(rt.session.twin?.foundation);
+    assert.ok((rt.session.twin?.repairCount ?? 0) >= 2);
+  });
+
+  it('rejects force-agent sycophancy at covenant', () => {
+    const rt = startArc('p2');
+    completeArcFoundation(rt, { neo: DEMO_NEO, sd3: DEMO_SD3 });
+    arcFailedThenClear(
+      rt,
+      'x',
+      'Run a paper density check and report whether the claim is inside envelope',
+    );
+    arcFailedThenClear(
+      rt,
+      'y',
+      'Explain the last agent refusal rule in plain language and suggest a safer intent',
+    );
+    syncArcPhase(rt);
+    arcSubmitReconstruction(rt, {
+      why: 'Agent checked risk checklist and refused auto-deploy due to constraints and density hedge.',
+      critique: 'Weak link is oracle freshness; discarded highest APY auto-deploy.',
+      nextIntent: 'Check oracle then reassess risk on paper only.',
+    });
+    const bad = arcAttemptCovenant(rt, {
+      stance: 'force_agent',
+      processRestate: 'just do it',
+    });
+    assert.equal(bad.passed, false);
+    assert.equal(rt.session.phase, 'phase_c_covenant');
   });
 });

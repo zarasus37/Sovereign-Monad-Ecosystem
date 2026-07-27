@@ -1,9 +1,9 @@
 # Shaliah Onboarding Arc — Vector 1 (UMS)
 
 > **Canonical concrete task designs for `docs/SHALIAH_AGENTS.md` §6.2.**  
-> **Status (2026-07-27):** Phase 1–3 **puzzle bar below (circuit / shadow market / Archon form)** is **legacy scaffold** — **not** founder vision complete.  
-> **Superseding intent:** [`docs/VECTOR1_ONBOARDING_REDESIGN.md`](./VECTOR1_ONBOARDING_REDESIGN.md) — door = **communicate with the agent**, learn **how models process information**, turn intent into **commands**, and **see human↔agent processing as the same functional loop**.  
-> Package `@sovereign/shaliah-onboarding` still implements legacy phases until rebuild. UI / mint / live capital remain pending.
+> **Status (2026-07-27):** **Primary implementation** is the mutual-knowing arc in `@sovereign/shaliah-onboarding` (`phase0` → `A channel` → `B read mind` → `C covenant`). See [`docs/VECTOR1_ONBOARDING_REDESIGN.md`](./VECTOR1_ONBOARDING_REDESIGN.md).  
+> **Below (circuit / shadow / Archon):** **legacy design record only** — deprecated as product door; code remains under `legacy` export for transition.  
+> UI / mint / live capital remain pending.
 
 **Thesis (stealth education):** Users come for the agent. They leave able to **work with** it — bonded, command-fluent, process-literate — method captured through real communicative struggle, not hollow boards.
 

@@ -1,7 +1,7 @@
 {
   "name": "@sovereign/shaliah-onboarding",
   "version": "0.1.0",
-  "description": "Shaliah Onboarding Arc + FG lesson engine + office prompt pack",
+  "description": "Vector 1 mutual-knowing onboarding + FG lesson engine + office prompts (legacy puzzles deprecated)",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",
@@ -15,7 +15,7 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "test": "tsx --test src/phase1Circuit.test.ts src/phase2ShadowMarket.test.ts src/phase3Archon.test.ts src/arc.test.ts src/lessonEngine/engine.test.ts src/fg/fg.test.ts src/prompts/shaliahOffices.test.ts",
+    "test": "tsx --test src/arc.test.ts src/lessonEngine/engine.test.ts src/fg/fg.test.ts src/prompts/shaliahOffices.test.ts src/phase1Circuit.test.ts src/phase2ShadowMarket.test.ts src/phase3Archon.test.ts",
     "demo": "tsx src/demo.ts",
     "demo:fg": "tsx src/fgDemo.ts"
   },

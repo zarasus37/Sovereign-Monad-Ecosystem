@@ -209,6 +209,8 @@ export function seedFromCircuit(state: CircuitState): CognitiveTwinSeed {
     cosmoShare: state.domainFlow.cosmological / total,
     methodDiversity,
     reasoningExposure,
+    repairCount: 0,
+    emotionUnderLoadNotes: ['legacy_circuit_seed'],
     overloadCount: state.overloadCount,
     starveCount: state.starveCount,
     stabilizedAt: state.awake ? Date.now() : undefined,
