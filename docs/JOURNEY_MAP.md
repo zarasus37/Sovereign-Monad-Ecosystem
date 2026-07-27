@@ -50,11 +50,13 @@ Detail lives in `docs/SHALIAH_ONBOARDING_ARC.md`. The door must **point forward*
 |-------|-------------------|----------------|
 | **J0 Attract** | Sees DeFi gaming pull: real agency, pay-for-competence, multi-agent world—not a quiz app | Intent to bind |
 | **J1 Bind** | Wallet / Meshaleach identity; limited agency; dormant vehicle possible | Identity bound |
-| **J2 Genesis** | Broken Shaliah; silent repair; stealth capture of method (HCD) | Stable density / bond signals |
-| **J3 Gate** | Shadow market + Archon; names real refusal; structured TTCL comprehension | Graduated Meshaleach; **paper** path open |
+| **J2 Genesis** | **Communication Genesis** (redesign): learn how agents process info; dual-loop human↔agent visual; command channel opens | Can repair failed intents; bond via method of *communication* |
+| **J3 Gate** | Read agent thought process after actions + covenant fluency (not approve/stop-trade arcade / form-only Archon) | Graduated Meshaleach; **paper** path open; command- + reasoning-fluent |
 
-**Door teaches:** process over product, constraint law, covenant seed.  
-**Door does not yet:** full Growth Capital, live capital, Multitude careers, L4.
+**Door teaches:** how to speak so Shaliah can act; shared process model; constraint as language; covenant as principal will.  
+**Door does not yet:** full Growth Capital, live capital, Multitude careers, L4.  
+
+**Legacy note:** Llull circuit / Hepar shadow / Archon JSON-gate were extreme shorthand; see `docs/VECTOR1_ONBOARDING_REDESIGN.md`.
 
 ---
 

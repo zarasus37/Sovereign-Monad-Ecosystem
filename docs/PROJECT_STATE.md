@@ -113,7 +113,9 @@
 - `docs/OPEN_DECISIONS_RESEARCH.md` — **FOUNDER-ACCEPTED** research defaults (2026-07-26): \(r\) bounds, FG-1–3, bank pool, PoC credential, L4 posture — promoted into journey/economy/architecture
 - `docs/SHALIAH_IDENTITY_V2.md` — **canonical Shaliah identity** (one spine; coach/mirror/extension/vehicle; not co-captain; Growth Capital steward; PL→ACL)
 - `docs/FG_CURRICULUM.md` — **Financial Graduation lesson map** FG-1→FG-3 (L1.1–L3.G, spacing, gate batteries, Integrity)
-- `@sovereign/shaliah-onboarding` — **implemented:** lesson engine + FG catalog/gates/session + Shaliah office prompt pack (`pnpm test` / `pnpm demo:fg`)
+- `docs/VECTOR1_ONBOARDING_REDESIGN.md` — **founder intent for Vector 1**: mutual growth; NEO+SD3 foundation; dual observation under load; command channel; optional natal depth; legacy puzzles superseded
+- `docs/IMAGINATION_ECOSYSTEM_PRINCIPLE.md` — **not one bubble**: many lenses, utility-first, imagination as the real user contribution
+- `@sovereign/shaliah-onboarding` — lesson engine + FG pack **shipped**; phase1–3 puzzles = **legacy scaffold** pending rebuild to redesign
 - `docs/VOX_NARRATIVE.md` — External semiotic interface
 - `docs/implementation_*.md` — Technical implementation plans
 

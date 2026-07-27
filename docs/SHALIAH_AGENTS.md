@@ -106,20 +106,17 @@ This is the heart of the whole system. Everything else exists to make this loop 
 **"They don't even know they're learning."** The education is hidden inside the activity. The tasks that collect the high-fidelity behavioral data (which funds the system, §8) are designed to feel like play, quests, co-coding — "hands-on learning disguised as gamification." It is "a genuine learning model where the engagement, by engaging, teaches you." The engagement *is* the teaching. People come for the agent, the play, the compensation — and grow as an invisible byproduct that compounds into everything else. "It was never the school's job to make sure how much you made; it was the school's job to make sure you learned something."
 
 ### 6.2 The onboarding arc
-The entry sequence teaches without announcing itself as education:
-1. **Broken Genesis** — the agent is born dormant / mute: "before he could receive his problem solving or logic thinking function broke and now you have to interact with it on a one-way street. He can't tell you but you have to tell him." The user's *performance on the repair task* becomes the direct starting understanding, logic, and problem-solving embedded into the agent. Bonding + data-imprinting in one act.
-2. **Communication Quarantine** — by initially cutting off the agent's ability to speak to the user, the user must figure out how the agent processes information. This simultaneously teaches the user how agents actually process information. Stealth education via constraint.
-3. **Comprehension gate — "break out of the room"** — to access certain areas the user must have a certain level of comprehension. "You don't need to be an absolute master, but the minimum… when you're in here, you have an understanding of what's happening." This kills the "I have no clue how things work, I'm just letting my AI do everything" pattern — without creating an elitist mastery gate.
+The entry sequence teaches without announcing itself as school. **Founder intent (2026-07-27):** the door is **communication genesis** — not hollow minigames.
 
-**Concrete task designs (UMS Vector 1, 2026-07-20):** see [`docs/SHALIAH_ONBOARDING_ARC.md`](./SHALIAH_ONBOARDING_ARC.md).
+**Vision (canonical):** [`docs/VECTOR1_ONBOARDING_REDESIGN.md`](./VECTOR1_ONBOARDING_REDESIGN.md)
 
-| Phase | Puzzle | Primary HCD | Domain package |
-|-------|--------|-------------|----------------|
-| Broken Genesis | **Llull Circuit Board** — reconnect T/X/C under density/debt traps | HCD-3, HCD-4 | `@sovereign/shaliah-onboarding` `phase1Circuit` |
-| Communication Quarantine | **Hepar Shadow Market** — green/red sandbox trades + override panel | HCD-1, HCD-2, HCD-5 | `phase2ShadowMarket` |
-| Comprehension gate | **Archon Interrogation** — structured TTCL refusal (not free-text) | Velocity-to-Access; X-axis | `phase3Archon` → gate-acl PL (V1.3) |
+1. **Channel Awakening (Broken Genesis — true meaning)** — the channel is incomplete until the human learns how agents/models **process information** and how to **translate intent into commands** the agent can execute. Visual: human loop ↔ agent loop as **functionally the same**. Bond + method imprint from *how they communicate*, not board clicks. (Founder source still holds the “one-way / you have to tell him” spirit — as **command literacy**, not a circuit puzzle.)
+2. **Read the Mind That Acted** — Shaliah acts in sandbox; the human must **read and reconstruct the agent’s thought process** (*why* those actions), not approve/stop trades as the skill. Builds another layer in the web of mutual understanding.
+3. **Covenant Fluency** — prove principal will + process literacy under temptation to offload; paper path opens only when they can *work with* Shaliah.
 
-Stealth triad: **bond** (repair the twin) · **extract** un-fakeable method (twin seed) · **teach** mechanics through constraint (refusal, density, audit).
+**Legacy scaffold (superseded in intent; code still present until rebuild):** Llull circuit / Hepar shadow market / Archon form tables in [`docs/SHALIAH_ONBOARDING_ARC.md`](./SHALIAH_ONBOARDING_ARC.md). Do **not** treat those puzzles as the product bar.
+
+Stealth triad: **bond** (open the channel) · **extract** un-fakeable communicative method · **teach** processing + command + **reasoning literacy** (read *why* the agent acted).
 
 ### 6.3 The skill tree & the Cognitive Twin
 - The skill tree applies from initial partnership. The psychometric build (§5) auto-constructs the starting build.

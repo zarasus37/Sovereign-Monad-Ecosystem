@@ -21,6 +21,19 @@
 
 > **Shaliah is the human’s covenanted cognitive extension—coach, mirror, and transactional vehicle on one identity spine—not a co-sovereign mind, not a tool-slave, and not a member of the Autonomous Multitude.**
 
+### 0.1 Why Shaliah exists (mutual growth)
+
+The reason to have a Shaliah is **for you and the agent to grow with each other**.
+
+An AI’s ability to learn *you* is bounded by the quality of data and lived interaction it is given. A **meaningful partnership** therefore requires a beginning that is **not ornamental**:
+
+1. **Foundation** — who you are (e.g. NEO Big Five, SD3, optional deep natal analysis)  
+2. **Observation** — how you think, solve, and feel under challenge (Vector 1; dual observation by system *and* Shaliah)  
+3. **Channel** — you learn to communicate with a processing mind **and to read why it acted**; it learns how *you* learn, what you need, when to adjust difficulty, and how you engage with its reasoning  
+
+Outcome: growth with someone who **truly knows you** — and helps you know yourself — under Charter mutual growth, never co-captain replacement.  
+Detail: `docs/VECTOR1_ONBOARDING_REDESIGN.md`.
+
 ---
 
 ## 1. Why v2 exists
