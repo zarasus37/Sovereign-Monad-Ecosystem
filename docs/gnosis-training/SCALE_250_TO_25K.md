@@ -218,7 +218,7 @@ P(pair) ∝ tier_weight[tier] × category_balance_boost
 |----|-------------|------------|
 | **GP-1** | Coverage analyzer for `preference_pairs_ALL.jsonl` | **Done** — `python -m gnosis_training pair-coverage` → `logs/gnosis/pair_coverage_latest.{json,md}` |
 | **GP-2** | Schema: `provenance_tier`, `seed_pair_ids`, `generator` | **Done** — RULE P in `preference.py`; `tag-provenance-g0` CLI; see `PREFERENCE_PROVENANCE.md` |
-| **GP-3** | Council pair generator (member-conditioned prompts) | Script + registry |
+| **GP-3** | Council pair generator (member-conditioned prompts) | **Prototype done** — `scripts/generate_council_cat7_8_prototype.py` → 50 G1 pairs (28 CAT7 / 22 CAT8); spot-check before promote |
 | **GP-4** | Seed expand pipeline (G2) with gap checks | Script |
 | **GP-5** | Hard-negative forge (G3) | Script |
 | **GP-6** | LOGOC/TTC filter + review queue | Bridge to gnostic-engine |
@@ -250,12 +250,19 @@ P(pair) ∝ tier_weight[tier] × category_balance_boost
 
 ---
 
-## 8. Immediate next step (when you say go)
+## 8. Immediate next steps
 
-1. Run **GP-1** coverage report on the 250.  
-2. Lock **provenance schema** (GP-2).  
-3. Prototype **one Council member → 50 pairs** through validate-worksheet + human spot check.  
-4. If quality holds, open the firehose (G1 + G2 + G3) toward 25k with weighted training.
+| Done | Next |
+|------|------|
+| GP-1 coverage | Spot-check `data/council_cat7_8_prototype.jsonl` |
+| GP-2 provenance | Promote reviewed G1 subset into ALL (optional) |
+| GP-3 50-pair CAT7/8 prototype | GP-4 seeded expand (G2); more Council batches |
+
+```powershell
+cd gnosis-training
+uv run python scripts/generate_council_cat7_8_prototype.py --strict
+# Review data/council_cat7_8_prototype.jsonl — then promote if happy
+```
 
 ---
 
