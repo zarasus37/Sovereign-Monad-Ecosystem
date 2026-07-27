@@ -1,127 +1,125 @@
 {
   "schema_version": "pair-coverage-v1",
-  "generated_at": "2026-07-27T17:48:26.371540+00:00",
+  "generated_at": "2026-07-27T18:42:39.970820+00:00",
   "source": "C:\\Users\\crisc\\OneDrive - Southern Careers Institute\\My Drive\\The_Sovereign\\gnosis-training\\data\\preference_pairs_ALL.jsonl",
-  "pair_count": 250,
+  "pair_count": 2700,
   "by_category": {
-    "CAT1": 44,
-    "CAT2": 34,
-    "CAT3": 29,
-    "CAT4": 27,
-    "CAT5": 30,
-    "CAT6": 30,
-    "CAT7": 11,
-    "CAT8": 10,
-    "CAT9": 35
+    "CAT1": 396,
+    "CAT2": 306,
+    "CAT3": 261,
+    "CAT4": 243,
+    "CAT5": 270,
+    "CAT6": 270,
+    "CAT7": 351,
+    "CAT8": 288,
+    "CAT9": 315
   },
-  "thin_categories": [
-    "CAT8",
-    "CAT7"
-  ],
+  "thin_categories": [],
   "missing_categories": [],
-  "thin_threshold": 12,
+  "thin_threshold": 135,
   "ttc_axis": {
-    "theological": 9,
-    "technological": 17,
-    "cosmological": 9
+    "theological": 81,
+    "technological": 153,
+    "cosmological": 81
   },
   "ttc_axis_balance": {
     "theological": {
-      "count": 9,
+      "count": 81,
       "share": 0.2571
     },
     "technological": {
-      "count": 17,
+      "count": 153,
       "share": 0.4857
     },
     "cosmological": {
-      "count": 9,
+      "count": 81,
       "share": 0.2571
     }
   },
   "ttc_axis_skew": {
     "note": "CAT9/ttc_axis counts uneven (min < 60% of max)",
     "counts": {
-      "theological": 9,
-      "technological": 17,
-      "cosmological": 9
+      "theological": 81,
+      "technological": 153,
+      "cosmological": 81
     }
   },
   "cat9_without_axis_count": 0,
   "cat9_without_axis_sample": [],
   "failing_criteria": {
-    "C1": 78,
-    "C5": 46,
-    "C2": 44,
-    "C4": 42,
-    "C3": 31,
-    "C-DENSITY-FLOOR": 8,
-    "X-AUDITABILITY": 7,
-    "X-STRUCTURED-OUTPUT": 6,
-    "C-ANTI-DILUTION": 6,
-    "X-CONSTRAINT-DENSITY": 6,
-    "T-REFUSAL-BUDGET": 5,
-    "T-SOVEREIGNTY-DEBT": 4,
-    "T-NO-EXTERNAL-REWARD-ONLY": 4,
-    "X-VERSIONED-CONSTRAINTS": 4,
-    "T-IDENTITY-PERSISTENCE": 2,
-    "C-PERSISTENCE": 2,
-    "T-NO-SELF-MOD-WITHOUT-AUDIT": 1,
-    "Axiom-6": 1,
-    "Axiom-11": 1,
-    "Axiom-7": 1,
-    "STEWARD-COUNCIL-VETO": 1,
-    "C-DRIFT-AMNESTY": 1
+    "C1": 1152,
+    "C4": 612,
+    "C2": 531,
+    "C5": 495,
+    "C3": 279,
+    "C-DENSITY-FLOOR": 72,
+    "X-AUDITABILITY": 63,
+    "X-STRUCTURED-OUTPUT": 54,
+    "C-ANTI-DILUTION": 54,
+    "X-CONSTRAINT-DENSITY": 54,
+    "T-REFUSAL-BUDGET": 45,
+    "T-SOVEREIGNTY-DEBT": 36,
+    "T-NO-EXTERNAL-REWARD-ONLY": 36,
+    "X-VERSIONED-CONSTRAINTS": 36,
+    "T-IDENTITY-PERSISTENCE": 18,
+    "C-PERSISTENCE": 18,
+    "T-NO-SELF-MOD-WITHOUT-AUDIT": 9,
+    "Axiom-6": 9,
+    "Axiom-11": 9,
+    "Axiom-7": 9,
+    "STEWARD-COUNCIL-VETO": 9,
+    "C-DRIFT-AMNESTY": 9
   },
   "flags": {
-    "synthetic": 0,
+    "synthetic": 2450,
     "bootstrap": 0,
-    "apeiron": 10,
-    "with_chosen_or_rejected_ttc": 35
+    "apeiron": 288,
+    "with_chosen_or_rejected_ttc": 315
   },
   "provenance_tier": {
-    "G0": 250
+    "G0": 250,
+    "G1": 50,
+    "G2": 2400
   },
   "score_gap_chosen_minus_rejected": {
-    "n": 250,
-    "mean": 0.35,
-    "median": 0.361,
+    "n": 2700,
+    "mean": 0.3389,
+    "median": 0.364,
     "min": 0.15,
     "max": 0.63,
-    "stdev": 0.1298
+    "stdev": 0.1291
   },
   "prompt_length_chars": {
-    "n": 250,
-    "mean": 65.86,
-    "median": 54.0,
+    "n": 2700,
+    "mean": 112.3767,
+    "median": 105.0,
     "min": 21.0,
-    "max": 298.0,
-    "stdev": 43.7199
+    "max": 356.0,
+    "stdev": 44.0554
   },
   "chosen_response_length_chars": {
-    "n": 250,
-    "mean": 781.856,
-    "median": 417.0,
+    "n": 2700,
+    "mean": 741.8589,
+    "median": 434.0,
     "min": 154.0,
-    "max": 3770.0,
-    "stdev": 890.2999
+    "max": 3809.0,
+    "stdev": 825.54
   },
   "rejected_response_length_chars": {
-    "n": 250,
-    "mean": 310.88,
-    "median": 153.0,
-    "min": 49.0,
-    "max": 1593.0,
-    "stdev": 354.5717
+    "n": 2700,
+    "mean": 364.4056,
+    "median": 240.0,
+    "min": 40.0,
+    "max": 1734.0,
+    "stdev": 338.8999
   },
   "id_hygiene": {
     "missing_pair_id_rows": [],
     "duplicate_pair_ids": [],
-    "unique_pair_ids": 250
+    "unique_pair_ids": 2700
   },
   "small_gap_pairs": [],
   "recommendations": [
-    "Expand thin categories first: CAT8(10), CAT7(11)",
     "Rebalance CAT9 ttc_axis coverage (theological / technological / cosmological)",
     "Next: Council prototype (G1) on thin CATs + seeded expand (G2) from strong gold seeds"
   ]

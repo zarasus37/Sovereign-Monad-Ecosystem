@@ -218,8 +218,8 @@ P(pair) ∝ tier_weight[tier] × category_balance_boost
 |----|-------------|------------|
 | **GP-1** | Coverage analyzer for `preference_pairs_ALL.jsonl` | **Done** — `python -m gnosis_training pair-coverage` → `logs/gnosis/pair_coverage_latest.{json,md}` |
 | **GP-2** | Schema: `provenance_tier`, `seed_pair_ids`, `generator` | **Done** — RULE P in `preference.py`; `tag-provenance-g0` CLI; see `PREFERENCE_PROVENANCE.md` |
-| **GP-3** | Council pair generator (member-conditioned prompts) | **Prototype done** — `scripts/generate_council_cat7_8_prototype.py` → 50 G1 pairs (28 CAT7 / 22 CAT8); spot-check before promote |
-| **GP-4** | Seed expand pipeline (G2) with gap checks | Script |
+| **GP-3** | Council pair generator (member-conditioned prompts) | **Done + promoted** — 50 G1 CAT7/8 into ALL (`promote_council_cat7_8.py`) |
+| **GP-4** | Seed expand pipeline (G2) with gap checks | **Done** — `expand_g2.py` + `expand_seeded_g2.py`; 2400 G2 appended (300 seeds × 8) |
 | **GP-5** | Hard-negative forge (G3) | Script |
 | **GP-6** | LOGOC/TTC filter + review queue | Bridge to gnostic-engine |
 | **GP-7** | Weighted dataloader / mix config for reward stage | Training |

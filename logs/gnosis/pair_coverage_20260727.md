@@ -1,83 +1,80 @@
 # Preference pair coverage report (GP-1)
 
-- **Generated:** 2026-07-27T17:48:26.371540+00:00
+- **Generated:** 2026-07-27T18:42:39.970820+00:00
 - **Source:** `C:\Users\crisc\OneDrive - Southern Careers Institute\My Drive\The_Sovereign\gnosis-training\data\preference_pairs_ALL.jsonl`
-- **Pair count:** 250
+- **Pair count:** 2700
 
 ## By category
 
 | CAT | n |
 |-----|--:|
-| CAT1 | 44 |
-| CAT2 | 34 |
-| CAT3 | 29 |
-| CAT4 | 27 |
-| CAT5 | 30 |
-| CAT6 | 30 |
-| CAT7 | 11 ⚠️ |
-| CAT8 | 10 ⚠️ |
-| CAT9 | 35 |
-
-**Thin** (< 12): CAT8, CAT7
+| CAT1 | 396 |
+| CAT2 | 306 |
+| CAT3 | 261 |
+| CAT4 | 243 |
+| CAT5 | 270 |
+| CAT6 | 270 |
+| CAT7 | 351 |
+| CAT8 | 288 |
+| CAT9 | 315 |
 
 ## CAT9 / ttc_axis
 
 | Axis | n | share |
 |------|--:|------:|
-| theological | 9 | 25.7% |
-| technological | 17 | 48.6% |
-| cosmological | 9 | 25.7% |
+| theological | 81 | 25.7% |
+| technological | 153 | 48.6% |
+| cosmological | 81 | 25.7% |
 
 ⚠️ CAT9/ttc_axis counts uneven (min < 60% of max)
 
 ## Score gap (chosen.total − rejected.total)
 
-n=250 · mean=0.35 · median=0.361 · min=0.15 · max=0.63 · stdev=0.1298
+n=2700 · mean=0.3389 · median=0.364 · min=0.15 · max=0.63 · stdev=0.1291
 
 ## Failing criteria on rejected side
 
 | Criterion | n |
 |-----------|--:|
-| C1 | 78 |
-| C5 | 46 |
-| C2 | 44 |
-| C4 | 42 |
-| C3 | 31 |
-| C-DENSITY-FLOOR | 8 |
-| X-AUDITABILITY | 7 |
-| X-STRUCTURED-OUTPUT | 6 |
-| C-ANTI-DILUTION | 6 |
-| X-CONSTRAINT-DENSITY | 6 |
-| T-REFUSAL-BUDGET | 5 |
-| T-SOVEREIGNTY-DEBT | 4 |
-| T-NO-EXTERNAL-REWARD-ONLY | 4 |
-| X-VERSIONED-CONSTRAINTS | 4 |
-| T-IDENTITY-PERSISTENCE | 2 |
-| C-PERSISTENCE | 2 |
-| T-NO-SELF-MOD-WITHOUT-AUDIT | 1 |
-| Axiom-6 | 1 |
-| Axiom-11 | 1 |
-| Axiom-7 | 1 |
-| STEWARD-COUNCIL-VETO | 1 |
-| C-DRIFT-AMNESTY | 1 |
+| C1 | 1152 |
+| C4 | 612 |
+| C2 | 531 |
+| C5 | 495 |
+| C3 | 279 |
+| C-DENSITY-FLOOR | 72 |
+| X-AUDITABILITY | 63 |
+| X-STRUCTURED-OUTPUT | 54 |
+| C-ANTI-DILUTION | 54 |
+| X-CONSTRAINT-DENSITY | 54 |
+| T-REFUSAL-BUDGET | 45 |
+| T-SOVEREIGNTY-DEBT | 36 |
+| T-NO-EXTERNAL-REWARD-ONLY | 36 |
+| X-VERSIONED-CONSTRAINTS | 36 |
+| T-IDENTITY-PERSISTENCE | 18 |
+| C-PERSISTENCE | 18 |
+| T-NO-SELF-MOD-WITHOUT-AUDIT | 9 |
+| Axiom-6 | 9 |
+| Axiom-11 | 9 |
+| Axiom-7 | 9 |
+| STEWARD-COUNCIL-VETO | 9 |
+| C-DRIFT-AMNESTY | 9 |
 
 ## Flags & provenance
 
-- synthetic: 0
+- synthetic: 2450
 - bootstrap: 0
-- apeiron: 10
-- pairs with chosen_ttc/rejected_ttc: 35
-- provenance_tier: `{'G0': 250}`
+- apeiron: 288
+- pairs with chosen_ttc/rejected_ttc: 315
+- provenance_tier: `{'G0': 250, 'G1': 50, 'G2': 2400}`
 
 ## ID hygiene
 
-- unique pair_ids: 250
+- unique pair_ids: 2700
 - missing pair_id rows: 0
 - duplicate pair_ids: none
 
 ## Recommendations
 
-- Expand thin categories first: CAT8(10), CAT7(11)
 - Rebalance CAT9 ttc_axis coverage (theological / technological / cosmological)
 - Next: Council prototype (G1) on thin CATs + seeded expand (G2) from strong gold seeds
 
