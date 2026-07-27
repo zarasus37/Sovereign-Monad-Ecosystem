@@ -1,122 +1,123 @@
 {
   "schema_version": "pair-coverage-v1",
-  "generated_at": "2026-07-27T18:42:39.970820+00:00",
+  "generated_at": "2026-07-27T21:58:06.097769+00:00",
   "source": "C:\\Users\\crisc\\OneDrive - Southern Careers Institute\\My Drive\\The_Sovereign\\gnosis-training\\data\\preference_pairs_ALL.jsonl",
-  "pair_count": 2700,
+  "pair_count": 26700,
   "by_category": {
-    "CAT1": 396,
-    "CAT2": 306,
-    "CAT3": 261,
-    "CAT4": 243,
-    "CAT5": 270,
-    "CAT6": 270,
-    "CAT7": 351,
-    "CAT8": 288,
-    "CAT9": 315
+    "CAT1": 3916,
+    "CAT2": 3026,
+    "CAT3": 2581,
+    "CAT4": 2403,
+    "CAT5": 2670,
+    "CAT6": 2670,
+    "CAT7": 3471,
+    "CAT8": 2848,
+    "CAT9": 3115
   },
   "thin_categories": [],
   "missing_categories": [],
-  "thin_threshold": 135,
+  "thin_threshold": 1335,
   "ttc_axis": {
-    "theological": 81,
-    "technological": 153,
-    "cosmological": 81
+    "theological": 801,
+    "technological": 1513,
+    "cosmological": 801
   },
   "ttc_axis_balance": {
     "theological": {
-      "count": 81,
+      "count": 801,
       "share": 0.2571
     },
     "technological": {
-      "count": 153,
+      "count": 1513,
       "share": 0.4857
     },
     "cosmological": {
-      "count": 81,
+      "count": 801,
       "share": 0.2571
     }
   },
   "ttc_axis_skew": {
     "note": "CAT9/ttc_axis counts uneven (min < 60% of max)",
     "counts": {
-      "theological": 81,
-      "technological": 153,
-      "cosmological": 81
+      "theological": 801,
+      "technological": 1513,
+      "cosmological": 801
     }
   },
   "cat9_without_axis_count": 0,
   "cat9_without_axis_sample": [],
   "failing_criteria": {
-    "C1": 1152,
-    "C4": 612,
-    "C2": 531,
-    "C5": 495,
-    "C3": 279,
-    "C-DENSITY-FLOOR": 72,
-    "X-AUDITABILITY": 63,
-    "X-STRUCTURED-OUTPUT": 54,
-    "C-ANTI-DILUTION": 54,
-    "X-CONSTRAINT-DENSITY": 54,
-    "T-REFUSAL-BUDGET": 45,
-    "T-SOVEREIGNTY-DEBT": 36,
-    "T-NO-EXTERNAL-REWARD-ONLY": 36,
-    "X-VERSIONED-CONSTRAINTS": 36,
-    "T-IDENTITY-PERSISTENCE": 18,
-    "C-PERSISTENCE": 18,
-    "T-NO-SELF-MOD-WITHOUT-AUDIT": 9,
-    "Axiom-6": 9,
-    "Axiom-11": 9,
-    "Axiom-7": 9,
-    "STEWARD-COUNCIL-VETO": 9,
-    "C-DRIFT-AMNESTY": 9
+    "C1": 11568,
+    "C4": 5808,
+    "C5": 5355,
+    "C2": 5079,
+    "C3": 2511,
+    "C-DENSITY-FLOOR": 648,
+    "X-AUDITABILITY": 567,
+    "X-STRUCTURED-OUTPUT": 486,
+    "C-ANTI-DILUTION": 486,
+    "X-CONSTRAINT-DENSITY": 486,
+    "T-REFUSAL-BUDGET": 405,
+    "T-SOVEREIGNTY-DEBT": 324,
+    "T-NO-EXTERNAL-REWARD-ONLY": 324,
+    "X-VERSIONED-CONSTRAINTS": 324,
+    "T-IDENTITY-PERSISTENCE": 162,
+    "C-PERSISTENCE": 162,
+    "T-NO-SELF-MOD-WITHOUT-AUDIT": 81,
+    "Axiom-6": 81,
+    "Axiom-11": 81,
+    "Axiom-7": 81,
+    "STEWARD-COUNCIL-VETO": 81,
+    "C-DRIFT-AMNESTY": 81
   },
   "flags": {
-    "synthetic": 2450,
+    "synthetic": 26450,
     "bootstrap": 0,
-    "apeiron": 288,
-    "with_chosen_or_rejected_ttc": 315
+    "apeiron": 2848,
+    "with_chosen_or_rejected_ttc": 3115
   },
   "provenance_tier": {
     "G0": 250,
     "G1": 50,
-    "G2": 2400
+    "G2": 24000,
+    "G3": 2400
   },
   "score_gap_chosen_minus_rejected": {
-    "n": 2700,
-    "mean": 0.3389,
+    "n": 26700,
+    "mean": 0.3416,
     "median": 0.364,
     "min": 0.15,
     "max": 0.63,
-    "stdev": 0.1291
+    "stdev": 0.1272
   },
   "prompt_length_chars": {
-    "n": 2700,
-    "mean": 112.3767,
-    "median": 105.0,
+    "n": 26700,
+    "mean": 96.4666,
+    "median": 87.0,
     "min": 21.0,
     "max": 356.0,
-    "stdev": 44.0554
+    "stdev": 42.7929
   },
   "chosen_response_length_chars": {
-    "n": 2700,
-    "mean": 741.8589,
-    "median": 434.0,
+    "n": 26700,
+    "mean": 722.1535,
+    "median": 414.0,
     "min": 154.0,
     "max": 3809.0,
-    "stdev": 825.54
+    "stdev": 825.5293
   },
   "rejected_response_length_chars": {
-    "n": 2700,
-    "mean": 364.4056,
-    "median": 240.0,
+    "n": 26700,
+    "mean": 350.1669,
+    "median": 233.0,
     "min": 40.0,
     "max": 1734.0,
-    "stdev": 338.8999
+    "stdev": 328.9102
   },
   "id_hygiene": {
     "missing_pair_id_rows": [],
     "duplicate_pair_ids": [],
-    "unique_pair_ids": 2700
+    "unique_pair_ids": 26700
   },
   "small_gap_pairs": [],
   "recommendations": [

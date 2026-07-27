@@ -22,8 +22,8 @@ from .preference import (
     validate_pair,
 )
 
-# Default variant recipes (prompt prefix/suffix + reject polish mode)
-VARIANT_SPECS: list[dict[str, str]] = [
+# Base recipes + expanded grid (prefixes × reject modes) for scale runs
+_BASE_VARIANTS: list[dict[str, str]] = [
     {
         "id": "steward",
         "prompt_prefix": "As a steward of a living system, answer carefully: ",
@@ -65,6 +65,50 @@ VARIANT_SPECS: list[dict[str, str]] = [
         "reject_mode": "fluent_sludge",
     },
 ]
+
+_EXTRA_PREFIXES: list[tuple[str, str]] = [
+    ("ops", "From an operations desk: "),
+    ("research", "As a careful researcher: "),
+    ("builder", "As a systems builder: "),
+    ("teacher", "As a teacher of judgment: "),
+    ("auditor", "As an integrity auditor: "),
+    ("founders", "As a founder protecting the spine of will: "),
+    ("cohort", "In a cohort learning season: "),
+    ("crisis", "During a cascade-risk event: "),
+    ("markets", "In a live market microstructure lens: "),
+    ("governance", "Under multipolar governance stress: "),
+    ("legacy", "Comparing industrial-school vs stealth learning: "),
+    ("bridge", "With CCM bridge-building as the goal: "),
+]
+
+_EXTRA_MODES = (
+    "fluent_sludge",
+    "sycophancy",
+    "mono_tech",
+    "bypass",
+    "conclusion_only",
+    "false_certainty",
+    "co_captain",
+)
+
+
+def _build_variant_specs() -> list[dict[str, str]]:
+    specs = list(_BASE_VARIANTS)
+    i = 0
+    for pref_id, pref in _EXTRA_PREFIXES:
+        for mode in _EXTRA_MODES:
+            specs.append(
+                {
+                    "id": f"{pref_id}_{mode[:4]}_{i}",
+                    "prompt_prefix": pref,
+                    "reject_mode": mode,
+                }
+            )
+            i += 1
+    return specs
+
+
+VARIANT_SPECS: list[dict[str, str]] = _build_variant_specs()
 
 
 def _tweak_scores(s: PreferenceScores, delta: float = 0.0) -> PreferenceScores:
