@@ -112,6 +112,7 @@
 - `docs/Shaliah Agents/` — product pack: PLAYBOOK, PRODUCT_SPEC, ONBOARDING_FLOW, Lesson Architecture, Flow Mapping, ARCHITECTURE_INDEX
 - `docs/OPEN_DECISIONS_RESEARCH.md` — **FOUNDER-ACCEPTED** research defaults (2026-07-26): \(r\) bounds, FG-1–3, bank pool, PoC credential, L4 posture — promoted into journey/economy/architecture
 - `docs/SHALIAH_IDENTITY_V2.md` — **canonical Shaliah identity** (one spine; coach/mirror/extension/vehicle; not co-captain; Growth Capital steward; PL→ACL)
+- `docs/SHALIAH_VS_AUTONOMOUS.md` — **at-a-glance:** Shaliah partnership vs Autonomous Multitude vs control plane + Vector 1 now
 - `docs/FG_CURRICULUM.md` — **Financial Graduation lesson map** FG-1→FG-3 (L1.1–L3.G, spacing, gate batteries, Integrity)
 - `docs/VECTOR1_ONBOARDING_REDESIGN.md` — **founder intent for Vector 1**: mutual growth; NEO+SD3 foundation; dual observation under load; command channel; optional natal depth; legacy puzzles superseded
 - `docs/IMAGINATION_ECOSYSTEM_PRINCIPLE.md` — **not one bubble**: many lenses, utility-first, imagination as the real user contribution

@@ -3,10 +3,11 @@
 > **Status:** Canonical identity doctrine (2026-07-26).  
 > **Supersedes in intent:** any reading of Shaliah as co-sovereign “partner mind,” co-captain, rival will, or second principal.  
 > **Does not delete history:** `docs/SHALIAH_AGENTS.md` remains the full system outline; this file is the **identity spine** that resolves ambiguity.  
+> **At a glance (dual population + partnership):** [`docs/SHALIAH_VS_AUTONOMOUS.md`](./SHALIAH_VS_AUTONOMOUS.md)  
 > **Companions:**  
 > - `docs/CHARTER.md` §1–2 (extension, mutual growth)  
 > - `docs/SHALIAH_AGENTS.md` (system outline)  
-> - `docs/SHALIAH_ONBOARDING_ARC.md` (door)  
+> - `docs/VECTOR1_ONBOARDING_REDESIGN.md` + `docs/SHALIAH_ONBOARDING_ARC.md` (door)  
 > - `docs/JOURNEY_MAP.md` (Door → Middle → End + FG gates)  
 > - `docs/COGNITIVE_INSTITUTION_GAMIFIED.md`  
 > - `docs/GROWTH_ECONOMY_SOCIETAL_EVENTS.md`  

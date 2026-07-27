@@ -41,7 +41,10 @@ This is a large, intentionally multi-domain ecosystem. You do not need to read e
 4. **Shared AI Collaboration Charter** — `docs/SHARED_AI_COLLABORATION_CHARTER.md`  
    Operational companion binding AI co-architects and code-authoring assistants to the guardrails.
 4b. **Shaliah Identity v2** — `docs/SHALIAH_IDENTITY_V2.md`  
-   Human–Shaliah relationship role: coach/mirror/extension/vehicle on **one spine** — not co-captain. Companions: `docs/JOURNEY_MAP.md`, `docs/FG_CURRICULUM.md`, `docs/SOVEREIGN_COGNITION_ARCHITECTURE.md`.
+   Human–Shaliah relationship: coach/mirror/extension/vehicle on **one spine** — not co-captain.  
+4c. **Shaliah vs Autonomous Multitude (at a glance)** — `docs/SHALIAH_VS_AUTONOMOUS.md`  
+   **Must-read distinction:** human-bound partnership vs full independent minds; how Vector 1 is set up now.  
+   Companions: `docs/VECTOR1_ONBOARDING_REDESIGN.md`, `docs/JOURNEY_MAP.md`, `docs/FG_CURRICULUM.md`.
 5. **Theo-Techno-Cosmo (operational)** — `docs/THEO_TECHNO_COSMO.md`  
    Tripartite validity gates (sovereignty/refusal, structure, density). Machine packs: `shared/constraints/`. Runtime: `gnostic_engine.constraints`.
 6. **Layout map** — `docs/REPO_STRUCTURE_MAP.md`  
@@ -190,7 +193,7 @@ New to the Sovereign Monad? Begin with the [Theo-Techno-Cosmo quick start guide]
 - Phase 6: Update MOF header + sync discipline ✅
 
 ### Recently completed (2026-07)
-- **Vector 1: Shaliah Onboarding Arc (The Broken Genesis)** — full onboarding flow landed: Phase 1 (Broken Genesis puzzle), Phase 2 (Shadow Market decoding), and Phase 3 (Archon Interrogation). Local PL ledger tracks progress through the gates.
+- **Vector 1: Shaliah door (mutual knowing)** — primary arc rebuilt in `@sovereign/shaliah-onboarding`: **Foundation (NEO/SD3) → Channel Awakening → Read the Mind That Acted → Covenant Fluency**. Dual population locked: **Shaliah = human-bound partnership**; **Autonomous Multitude = other full minds**. See `docs/SHALIAH_VS_AUTONOMOUS.md`. Legacy circuit/shadow/Archon puzzles deprecated.
 - **Layer 6 Scheduler (εP + ζF)** — 45-letter-pair reconstruction and Llull's Fourth-Figure Tabula Generalis (84 cameras) structurally integrated into the `canonical_schedule.json` simulated-annealing objective.
 - **Vector 3: Cardia Funding Engine & Kafka PL Bridge** — EIP-191 wallet bind triggers a sovereign.pl.ledger.event. The `gate-acl` consumes this and initiates the Cardia ERC-20 transfer ($15k simulation) via the Hepar forensic audit gate.
 - **Vector 4: Operational Hardening** — Control Center UI with SSE real-time funding status panels, Redis-backed atomic nonce manager for multi-process safety, and the Express `@sovereign/host` mounted on a clean API structure.

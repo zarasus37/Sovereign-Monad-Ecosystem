@@ -2,7 +2,8 @@
 
 > **Status:** Canonical journey map (2026-07-26). Middles and ends required so beginnings are not hollow.  
 > **Architecture:** `docs/SOVEREIGN_COGNITION_ARCHITECTURE.md`  
-> **Door (onboarding phases 1–3):** `docs/SHALIAH_ONBOARDING_ARC.md`  
+> **Door:** `docs/VECTOR1_ONBOARDING_REDESIGN.md` · `docs/SHALIAH_VS_AUTONOMOUS.md` · package `@sovereign/shaliah-onboarding`  
+> **Legacy puzzle record:** `docs/SHALIAH_ONBOARDING_ARC.md`  
 > **Mind laws:** `docs/COGNITIVE_INSTITUTION_GAMIFIED.md`  
 > **Economy / events:** `docs/GROWTH_ECONOMY_SOCIETAL_EVENTS.md`  
 > **Not:** UI wireframes, smart-contract ABIs, or go-live runbooks.
@@ -27,7 +28,7 @@
 J0  Attract                          (pull: agency, DeFi sport, society)
 J1  Bind identity                    (wallet + Meshaleach spine)
 J2  Genesis / bond                   (Broken twin → un-fakeable method)
-J3  Constraint sport + Archon        (Hepar/TTC law; comprehension door)
+J3  Read mind + covenant fluency     (why agent acted; principal will; paper path)
         ── Meshaleach graduated (paper path open) ──
 J4  Operator apprenticeship          (paper ops; Shaliah coach fully active)
 J5  Anti-Grind continuous loop       (Stretch + Transfer; Integrity signs)

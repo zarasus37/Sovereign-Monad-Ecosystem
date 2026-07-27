@@ -1,19 +1,37 @@
-README.md
-# Sovereign Monad Ecosystem
+# Shaliah Agents (product pack)
 
-A human-centered learning OS where AI supports growth instead of replacing it. The project combines guided play, mastery gating, telemetry, and staged progression so learning becomes a natural part of how people live and work.
+Human-centered learning OS materials. **Start with the population split and partnership dynamic.**
 
-## What belongs here
-- `docs/PLAYBOOK.md` — operating rules for learners, coaches, and builders
-- `docs/PRODUCT_SPEC.md` — product definition and functional requirements
-- `docs/ONBOARDING_FLOW.md` — stage-by-stage learner journey
-- `docs/ARCHITECTURE_INDEX.md` — map of the system and document dependencies
+## Must-read (current system)
 
-## Core idea
-The human stays the locus of will and growth. AI acts as coach, mirror, and extension. Progress is earned through proof of cognition, not time spent.
+1. **`docs/SHALIAH_VS_AUTONOMOUS.md`** — Shaliah (human-bound) vs Autonomous Multitude vs control plane  
+2. **`docs/SHALIAH_IDENTITY_V2.md`** — full identity + mutual growth partnership  
+3. **`docs/VECTOR1_ONBOARDING_REDESIGN.md`** — how the door works now (not hollow puzzles)  
+4. **`docs/JOURNEY_MAP.md`** — door → middle → end  
 
-## Start here
-1. Read `docs/ARCHITECTURE_INDEX.md`
-2. Read `docs/PLAYBOOK.md`
-3. Read `docs/ONBOARDING_FLOW.md`
-4. Read `docs/PRODUCT_SPEC.md`
+## In this folder
+
+| File | Role |
+|------|------|
+| `PLAYBOOK.md` | Learner / Shaliah offices / builder rules |
+| `PRODUCT_SPEC.md` | Learning OS product definition |
+| `ONBOARDING_FLOW.md` | Stage journey (aligned to redesign) |
+| `ARCHITECTURE_INDEX.md` | Doc dependency map |
+| `Lesson Architecture.md` / `Lesson Engine Data Model.md` | Pedagogy + data |
+| `Shaliah Flow Mapping.md` | Coach behaviors in lessons |
+| `Architecture of Sovereign Cognition.txt` / `updateArch.docx` | Strategic essays (prefer `docs/SOVEREIGN_COGNITION_ARCHITECTURE.md` for canon MD) |
+
+## Core idea (do not blur)
+
+| Population | Dynamic |
+|------------|---------|
+| **Meshaleach + Shaliah** | **One identity spine** — mutual growth partnership; human will; agent coach/mirror/extension/vehicle |
+| **Autonomous Multitude** | **Other minds** — society, rivalry, structural work under the same laws |
+| **Control plane** | Integrity / Momentum / Efficiency — **infrastructure**, not your twin |
+
+Progress is earned through proof of cognition and mutual knowing — not time spent or hollow minigames.
+
+## Package
+
+Domain implementation: `monad-ecosystem/packages/shaliah-onboarding`  
+(`pnpm demo` walks the primary Vector 1 arc.)
