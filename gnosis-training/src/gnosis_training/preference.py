@@ -101,6 +101,7 @@ class PreferencePair:
       - ``seed_pair_ids``: parent gold/council ids (required for G2)
       - ``generator``: free-text origin tag (human|council:…|expand:…|hardneg:…)
       - ``reviewed_by``: optional reviewer id/name
+      - ``core_ids``: optional shared-core motif ids (Core Resonance catalog)
     Missing tier is allowed for legacy gold (treated as G0-equivalent when
     synthetic=false and bootstrap=false).
     """
@@ -122,6 +123,7 @@ class PreferencePair:
     seed_pair_ids: list[str] | None = None
     generator: str | None = None
     reviewed_by: str | None = None
+    core_ids: list[str] | None = None
 
 
 # ── Wire (JSON) ↔ domain ─────────────────────────────────────────────────────
@@ -166,6 +168,12 @@ def pair_from_wire(wire: dict[str, Any]) -> PreferencePair:
     tier = wire.get("provenance_tier")
     gen = wire.get("generator")
     reviewed = wire.get("reviewed_by")
+    cores_raw = wire.get("core_ids")
+    core_ids: list[str] | None
+    if cores_raw is None:
+        core_ids = None
+    else:
+        core_ids = [str(c) for c in cores_raw]
 
     return PreferencePair(
         pair_id=str(wire["pair_id"]),
@@ -185,6 +193,7 @@ def pair_from_wire(wire: dict[str, Any]) -> PreferencePair:
         seed_pair_ids=seed_pair_ids,
         generator=str(gen) if gen else None,
         reviewed_by=str(reviewed) if reviewed else None,
+        core_ids=core_ids,
     )
 
 
@@ -232,6 +241,8 @@ def pair_to_wire(pair: PreferencePair) -> dict[str, Any]:
         out["generator"] = pair.generator
     if pair.reviewed_by:
         out["reviewed_by"] = pair.reviewed_by
+    if pair.core_ids:
+        out["core_ids"] = list(pair.core_ids)
     return out
 
 

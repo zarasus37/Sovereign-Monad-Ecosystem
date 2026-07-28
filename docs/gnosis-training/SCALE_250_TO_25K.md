@@ -219,10 +219,11 @@ P(pair) ∝ tier_weight[tier] × category_balance_boost
 | **GP-1** | Coverage analyzer for `preference_pairs_ALL.jsonl` | **Done** — `python -m gnosis_training pair-coverage` → `logs/gnosis/pair_coverage_latest.{json,md}` |
 | **GP-2** | Schema: `provenance_tier`, `seed_pair_ids`, `generator` | **Done** — RULE P in `preference.py`; `tag-provenance-g0` CLI; see `PREFERENCE_PROVENANCE.md` |
 | **GP-3** | Council pair generator (member-conditioned prompts) | **Done + promoted** — 50 G1 CAT7/8 into ALL (`promote_council_cat7_8.py`) |
-| **GP-4** | Seed expand pipeline (G2) with gap checks | **Done** — `expand_g2.py` + `expand_seeded_g2.py`; 2400 G2 appended (300 seeds × 8) |
-| **GP-5** | Hard-negative forge (G3) | Script |
+| **GP-3b** | Member-true G1 from THE COUNCILE + Core Resonance | **Done** — `council_g1.py`, `core_resonance.py`, CLI `council-g1-generate` / `core-resonance`; see `CORE_RESONANCE.md` |
+| **GP-4** | Seed expand pipeline (G2) with gap checks | **Done** — `expand_g2.py` + `scale_runthrough.py`; ~24k G2 at 80 variants/seed |
+| **GP-5** | Hard-negative forge (G3) | **Done** — `hardneg_g3.py` + scale_runthrough |
 | **GP-6** | LOGOC/TTC filter + review queue | Bridge to gnostic-engine |
-| **GP-7** | Weighted dataloader / mix config for reward stage | Training |
+| **GP-7** | Weighted dataloader / mix config for reward stage | **Partial** — `train_sample_weight` + core boost; wire into RM dataloader next |
 | **GP-8** | Eval set held out (pure G0 + fresh human) | Never train on holdout |
 
 ---
@@ -254,14 +255,16 @@ P(pair) ∝ tier_weight[tier] × category_balance_boost
 
 | Done | Next |
 |------|------|
-| GP-1 coverage | Spot-check `data/council_cat7_8_prototype.jsonl` |
-| GP-2 provenance | Promote reviewed G1 subset into ALL (optional) |
-| GP-3 50-pair CAT7/8 prototype | GP-4 seeded expand (G2); more Council batches |
+| GP-1…5 scale to ~26.7k | Spot-review member-true G1; promote |
+| Core Resonance report | Wire GP-7 weights into reward dataloader |
+| 50 CAT7/8 prototype G1 | Grow G1 from full Council windows (not only expand G2) |
 
 ```powershell
 cd gnosis-training
-uv run python scripts/generate_council_cat7_8_prototype.py --strict
-# Review data/council_cat7_8_prototype.jsonl — then promote if happy
+uv run python -m gnosis_training core-resonance data/preference_pairs_ALL.jsonl
+uv run python -m gnosis_training council-g1-generate data/council_g1_member_true.jsonl
+# Review data/council_g1_member_true.jsonl — then:
+# uv run python scripts/promote_council_g1_member_true.py
 ```
 
 ---

@@ -28,6 +28,11 @@ Modes:
   - ``tag-provenance-g0 <in_jsonl> [out_jsonl]`` — GP-2: stamp provenance_tier=G0
     + generator=human on all pairs (backfill gold). Default out: in with
     ``.g0.jsonl`` suffix (CPU-pure).
+  - ``core-resonance [pairs_jsonl]``  — Core Resonance Score: shared-direction
+    motifs across THE COUNCILE windows + pairs. Writes
+    logs/gnosis/core_resonance_*.{json,md} (CPU-pure).
+  - ``council-g1-generate [out_jsonl]`` — member-true G1 pairs from each
+    Council member's key_insight / sources (spot-review before promote).
   - ``ttc-window-report [jsonl...]``   — debt/refusal/density pain from Hepar
     gate logs (default: logs/ttc-window/*.jsonl).
   - ``--smoke-imports``                — the honest "wiring resolves" proof:
@@ -538,6 +543,68 @@ def main(argv: list[str] | None = None) -> int:
         out_path.write_text(serialize_pairs_jsonl(tagged), encoding="utf-8")
         print(f"tag-provenance-g0 wrote {len(tagged)} pairs → {out_path}")
         return 0
+
+    if mode == "core-resonance":
+        from pathlib import Path
+
+        from .core_resonance import run_core_resonance
+
+        default_candidates = [
+            Path("data/preference_pairs_ALL.jsonl"),
+            Path("gnosis-training/data/preference_pairs_ALL.jsonl"),
+        ]
+        pairs = Path(rest[0]) if rest else next(
+            (p for p in default_candidates if p.exists()),
+            default_candidates[-1],
+        )
+        report = run_core_resonance(pairs if pairs.exists() else None)
+        print(
+            f"core-resonance members={report['member_count']} "
+            f"pairs={report['pair_count']} hits={report['hit_count']}"
+        )
+        top = report.get("top_cores") or []
+        if top:
+            print("  top shared cores:")
+            for t in top[:8]:
+                print(
+                    f"    {t['core_id']}: score={t['score']} "
+                    f"members={t['member_count']}"
+                )
+        print(f"  wrote {report['outputs']['latest_md']}")
+        print(f"  wrote {report['outputs']['latest_json']}")
+        for r in report.get("recommendations") or []:
+            print(f"  → {r}")
+        return 0
+
+    if mode == "council-g1-generate":
+        from pathlib import Path
+
+        from .council_g1 import build_member_true_pairs, write_g1_jsonl
+
+        out = (
+            Path(rest[0])
+            if rest
+            else Path("data/council_g1_member_true.jsonl")
+        )
+        # Allow running from repo root
+        if not out.is_absolute() and not Path("data").is_dir():
+            alt = Path("gnosis-training") / out
+            if alt.parent.is_dir():
+                out = alt
+        pairs = build_member_true_pairs()
+        summary = write_g1_jsonl(pairs, out)
+        print(
+            f"council-g1-generate wrote={summary['wrote']} "
+            f"invalid={summary['invalid']} generators={summary['generators']}"
+        )
+        print(f"  → {summary['path']}")
+        if summary.get("core_hist"):
+            top_c = sorted(
+                summary["core_hist"].items(), key=lambda x: -x[1]
+            )[:8]
+            print(f"  core tags: {dict(top_c)}")
+        print("  Spot-review before promoting into preference_pairs_ALL.jsonl")
+        return 0 if summary["invalid"] == 0 else 1
 
     if mode == "ttc-window-report":
         return ttc_window_report(rest)

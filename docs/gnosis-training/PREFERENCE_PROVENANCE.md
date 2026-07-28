@@ -36,7 +36,8 @@ Missing `provenance_tier` on legacy gold is allowed; effective tier is **G0** if
   "provenance_tier": "G0",
   "seed_pair_ids": [],
   "generator": "human",
-  "reviewed_by": null
+  "reviewed_by": null,
+  "core_ids": ["freedom_in_constraint"]
 }
 ```
 
@@ -46,6 +47,7 @@ Missing `provenance_tier` on legacy gold is allowed; effective tier is **G0** if
 | `seed_pair_ids` | string[] | **Required non-empty for G2** |
 | `generator` | string | Free tag, e.g. `human`, `council:llull`, `expand:v1` |
 | `reviewed_by` | string \| null | Optional reviewer id |
+| `core_ids` | string[] | Optional Core Resonance motif ids (see `CORE_RESONANCE.md`) |
 
 ---
 

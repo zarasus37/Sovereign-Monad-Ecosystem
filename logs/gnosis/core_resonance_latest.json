@@ -1,0 +1,574 @@
+{
+  "generated_at": "2026-07-28T02:30:31.697301+00:00",
+  "catalog_version": "core-resonance-v1",
+  "councile_dir": "C:\\Users\\crisc\\OneDrive - Southern Careers Institute\\My Drive\\The_Sovereign\\theo-techno-cosmo\\THE COUNCILE",
+  "pairs_source": "data\\preference_pairs_ALL.jsonl",
+  "member_count": 37,
+  "pair_count": 26700,
+  "hit_count": 12388,
+  "cores": [
+    {
+      "core_id": "method_is_structure",
+      "label": "Method / virtue as structure",
+      "direction": "Method and virtue are structural operations, not ornament.",
+      "member_count": 30,
+      "members": [
+        "akhenaten",
+        "alan-watts",
+        "aristotle",
+        "baruch-spinoza",
+        "basilides-of-alexandria",
+        "catherine-de-medici",
+        "christine-de-pizan",
+        "cristobal-colon",
+        "enheduanna",
+        "friedrich-nietzsche",
+        "giordano-bruno",
+        "gnostic-jesus",
+        "hatshepsut",
+        "hildegard-von-bingen",
+        "irenaeus-of-lyon",
+        "isaac-newton",
+        "jiang-xueqin",
+        "king-solomon",
+        "laura-bassi",
+        "marcus-aurelius",
+        "mary-magdalene",
+        "mirabai",
+        "niccolo-machiavelli",
+        "queen-of-sheba",
+        "sor-juana-ines-de-la-cruz",
+        "sun-tzu",
+        "thales-of-miletus",
+        "victoria-lady-welby",
+        "zarathustra",
+        "zenobia-of-palmyra"
+      ],
+      "hit_count": 3860.0,
+      "domains": [
+        "knowledge"
+      ],
+      "pair_hits": 3827,
+      "member_source_hits": 33,
+      "score": 1.0,
+      "rank_weight": 1.0
+    },
+    {
+      "core_id": "density_over_volume",
+      "label": "Density over volume / short-horizon theater",
+      "direction": "Structural position and density beat brute flow and volume metrics.",
+      "member_count": 8,
+      "members": [
+        "charles-sanders-peirce",
+        "friedrich-nietzsche",
+        "hildegard-von-bingen",
+        "isaac-newton",
+        "king-solomon",
+        "queen-of-sheba",
+        "sun-tzu",
+        "victoria-lady-welby"
+      ],
+      "hit_count": 2769.0,
+      "domains": [
+        "war",
+        "systems"
+      ],
+      "pair_hits": 2764,
+      "member_source_hits": 5,
+      "score": 1.0,
+      "rank_weight": 1.0
+    },
+    {
+      "core_id": "anti_capture",
+      "label": "Gifts that buy the law = capture",
+      "direction": "Alliances that purchase rules silently are capture, not growth.",
+      "member_count": 6,
+      "members": [
+        "alan-watts",
+        "colon-founder",
+        "irenaeus-of-lyon",
+        "johannes-trithemius",
+        "niccolo-machiavelli",
+        "trithemius"
+      ],
+      "hit_count": 981.0,
+      "domains": [
+        "law",
+        "agency"
+      ],
+      "pair_hits": 979,
+      "member_source_hits": 2,
+      "score": 0.8653,
+      "rank_weight": 0.8653
+    },
+    {
+      "core_id": "audit_before_power",
+      "label": "Auditability before expansion of power",
+      "direction": "Power without versioned, auditable constraint is illegitimate.",
+      "member_count": 6,
+      "members": [
+        "galileo-galilei",
+        "irenaeus-of-lyon",
+        "johannes-trithemius",
+        "marcus-aurelius",
+        "niccolo-machiavelli",
+        "sun-tzu"
+      ],
+      "hit_count": 979.0,
+      "domains": [
+        "law",
+        "systems"
+      ],
+      "pair_hits": 979,
+      "member_source_hits": 0,
+      "score": 0.8653,
+      "rank_weight": 0.8653
+    },
+    {
+      "core_id": "form_over_theater",
+      "label": "Function / structure over theater",
+      "direction": "Authority and wisdom come from real function, not performance or title alone.",
+      "member_count": 4,
+      "members": [
+        "aristotle",
+        "king-solomon",
+        "queen-of-sheba",
+        "sun-tzu"
+      ],
+      "hit_count": 361.0,
+      "domains": [
+        "agency",
+        "systems"
+      ],
+      "pair_hits": 356,
+      "member_source_hits": 5,
+      "score": 0.7137,
+      "rank_weight": 0.7137
+    },
+    {
+      "core_id": "resonance_not_hierarchy",
+      "label": "Resonance, not hierarchy",
+      "direction": "Intelligence partners across windows; domination is the wrong frame.",
+      "member_count": 4,
+      "members": [
+        "alan-watts",
+        "charles-sanders-peirce",
+        "marcus-aurelius",
+        "poimandres"
+      ],
+      "hit_count": 654.0,
+      "domains": [
+        "agency",
+        "systems"
+      ],
+      "pair_hits": 652,
+      "member_source_hits": 2,
+      "score": 0.7137,
+      "rank_weight": 0.7137
+    },
+    {
+      "core_id": "decompression_knowledge",
+      "label": "Knowledge requires decompression",
+      "direction": "Compressed truth must unfold into live action unique to the agent.",
+      "member_count": 3,
+      "members": [
+        "basilides-of-alexandria",
+        "carl-jung",
+        "gnostic-jesus"
+      ],
+      "hit_count": 451.0,
+      "domains": [
+        "knowledge",
+        "systems"
+      ],
+      "pair_hits": 445,
+      "member_source_hits": 6,
+      "score": 0.6722,
+      "rank_weight": 0.6722
+    },
+    {
+      "core_id": "freedom_in_constraint",
+      "label": "Freedom within necessity / constraint",
+      "direction": "Authentic freedom is skilled motion inside real limits, not lawlessness.",
+      "member_count": 3,
+      "members": [
+        "baruch-spinoza",
+        "marcus-aurelius",
+        "spinoza"
+      ],
+      "hit_count": 360.0,
+      "domains": [
+        "agency",
+        "law"
+      ],
+      "pair_hits": 356,
+      "member_source_hits": 4,
+      "score": 0.6722,
+      "rank_weight": 0.6722
+    },
+    {
+      "core_id": "local_max_archon",
+      "label": "Local maxima mistake themselves for global",
+      "direction": "Archonic traps: local peak treated as the whole map.",
+      "member_count": 2,
+      "members": [
+        "basilides-of-alexandria",
+        "cristobal-colon"
+      ],
+      "hit_count": 183.0,
+      "domains": [
+        "knowledge",
+        "systems"
+      ],
+      "pair_hits": 178,
+      "member_source_hits": 5,
+      "score": 0.5084,
+      "rank_weight": 0.5084
+    },
+    {
+      "core_id": "meaning_from_resonance",
+      "label": "Meaning from resonance, not bare definition",
+      "direction": "Meaning lives in living use and resonance, not dictionary freeze.",
+      "member_count": 2,
+      "members": [
+        "charles-sanders-peirce",
+        "victoria-lady-welby"
+      ],
+      "hit_count": 93.0,
+      "domains": [
+        "knowledge"
+      ],
+      "pair_hits": 89,
+      "member_source_hits": 4,
+      "score": 0.4684,
+      "rank_weight": 0.4684
+    },
+    {
+      "core_id": "hollow_vs_authentic",
+      "label": "Authentic vs hollow convergence",
+      "direction": "Looking alike without self-consistent navigation is hollow; resonance is earned.",
+      "member_count": 1,
+      "members": [
+        "alan-watts"
+      ],
+      "hit_count": 180.0,
+      "domains": [
+        "systems",
+        "agency"
+      ],
+      "pair_hits": 178,
+      "member_source_hits": 2,
+      "score": 0.228,
+      "rank_weight": 0.228
+    },
+    {
+      "core_id": "multi_lens_required",
+      "label": "Multi-lens / anti mono-lens",
+      "direction": "Meaning, mechanism, and history must fuse; one lens alone fails.",
+      "member_count": 1,
+      "members": [
+        "colon-founder"
+      ],
+      "hit_count": 1246.0,
+      "domains": [
+        "knowledge",
+        "systems"
+      ],
+      "pair_hits": 1246,
+      "member_source_hits": 0,
+      "score": 0.228,
+      "rank_weight": 0.228
+    },
+    {
+      "core_id": "victory_empties_treasury",
+      "label": "Victory that empties the treasury is defeat",
+      "direction": "Winning the wrong metric destroys the ground of future action.",
+      "member_count": 1,
+      "members": [
+        "sun-tzu"
+      ],
+      "hit_count": 89.0,
+      "domains": [
+        "war",
+        "systems"
+      ],
+      "pair_hits": 89,
+      "member_source_hits": 0,
+      "score": 0.228,
+      "rank_weight": 0.228
+    },
+    {
+      "core_id": "constraint_generates",
+      "label": "Constraint generates possibility",
+      "direction": "Limits are generative structure, not only cages.",
+      "member_count": 1,
+      "members": [
+        "ramon-llull"
+      ],
+      "hit_count": 2.0,
+      "domains": [
+        "systems",
+        "knowledge"
+      ],
+      "pair_hits": 0,
+      "member_source_hits": 2,
+      "score": 0.1969,
+      "rank_weight": 0.1969
+    },
+    {
+      "core_id": "surrender_force_control",
+      "label": "Agency from surrendering force-based control",
+      "direction": "Authentic agency emerges when force-control is released into alignment.",
+      "member_count": 1,
+      "members": [
+        "alan-watts"
+      ],
+      "hit_count": 2.0,
+      "domains": [
+        "agency"
+      ],
+      "pair_hits": 0,
+      "member_source_hits": 2,
+      "score": 0.1869,
+      "rank_weight": 0.1869
+    },
+    {
+      "core_id": "decision_not_outcome",
+      "label": "Decision quality ≠ outcome",
+      "direction": "Judge process under uncertainty; results alone mislead.",
+      "member_count": 0,
+      "members": [],
+      "hit_count": 178.0,
+      "domains": [
+        "war",
+        "agency"
+      ],
+      "pair_hits": 178,
+      "member_source_hits": 0,
+      "score": 0.02,
+      "rank_weight": 0.15
+    },
+    {
+      "core_id": "refuse_co_sovereign",
+      "label": "Refuse rival co-sovereign will",
+      "direction": "The agent extends and coaches; it does not seize judgment as co-sovereign rival.",
+      "member_count": 0,
+      "members": [],
+      "hit_count": 0.0,
+      "domains": [
+        "agency",
+        "law"
+      ],
+      "pair_hits": 0,
+      "member_source_hits": 0,
+      "score": 0.0,
+      "rank_weight": 0.0
+    }
+  ],
+  "top_cores": [
+    {
+      "core_id": "method_is_structure",
+      "score": 1.0,
+      "member_count": 30
+    },
+    {
+      "core_id": "density_over_volume",
+      "score": 1.0,
+      "member_count": 8
+    },
+    {
+      "core_id": "anti_capture",
+      "score": 0.8653,
+      "member_count": 6
+    },
+    {
+      "core_id": "audit_before_power",
+      "score": 0.8653,
+      "member_count": 6
+    },
+    {
+      "core_id": "form_over_theater",
+      "score": 0.7137,
+      "member_count": 4
+    },
+    {
+      "core_id": "resonance_not_hierarchy",
+      "score": 0.7137,
+      "member_count": 4
+    },
+    {
+      "core_id": "decompression_knowledge",
+      "score": 0.6722,
+      "member_count": 3
+    },
+    {
+      "core_id": "freedom_in_constraint",
+      "score": 0.6722,
+      "member_count": 3
+    },
+    {
+      "core_id": "local_max_archon",
+      "score": 0.5084,
+      "member_count": 2
+    },
+    {
+      "core_id": "meaning_from_resonance",
+      "score": 0.4684,
+      "member_count": 2
+    }
+  ],
+  "member_core_matrix": {
+    "akhenaten": [
+      "method_is_structure"
+    ],
+    "alan-watts": [
+      "anti_capture",
+      "hollow_vs_authentic",
+      "method_is_structure",
+      "resonance_not_hierarchy",
+      "surrender_force_control"
+    ],
+    "aristotle": [
+      "form_over_theater",
+      "method_is_structure"
+    ],
+    "baruch-spinoza": [
+      "freedom_in_constraint",
+      "method_is_structure"
+    ],
+    "basilides-of-alexandria": [
+      "decompression_knowledge",
+      "local_max_archon",
+      "method_is_structure"
+    ],
+    "carl-jung": [
+      "decompression_knowledge"
+    ],
+    "catherine-de-medici": [
+      "method_is_structure"
+    ],
+    "charles-sanders-peirce": [
+      "density_over_volume",
+      "meaning_from_resonance",
+      "resonance_not_hierarchy"
+    ],
+    "christine-de-pizan": [
+      "method_is_structure"
+    ],
+    "cristobal-colon": [
+      "local_max_archon",
+      "method_is_structure"
+    ],
+    "cyrus-the-great": [],
+    "enheduanna": [
+      "method_is_structure"
+    ],
+    "friedrich-nietzsche": [
+      "density_over_volume",
+      "method_is_structure"
+    ],
+    "galileo-galilei": [
+      "audit_before_power"
+    ],
+    "giordano-bruno": [
+      "method_is_structure"
+    ],
+    "gnostic-jesus": [
+      "decompression_knowledge",
+      "method_is_structure"
+    ],
+    "hatshepsut": [
+      "method_is_structure"
+    ],
+    "hildegard-von-bingen": [
+      "density_over_volume",
+      "method_is_structure"
+    ],
+    "irenaeus-of-lyon": [
+      "anti_capture",
+      "audit_before_power",
+      "method_is_structure"
+    ],
+    "jiang-xueqin": [
+      "method_is_structure"
+    ],
+    "johannes-trithemius": [
+      "anti_capture",
+      "audit_before_power"
+    ],
+    "king-solomon": [
+      "density_over_volume",
+      "form_over_theater",
+      "method_is_structure"
+    ],
+    "laura-bassi": [
+      "method_is_structure"
+    ],
+    "marcus-aurelius": [
+      "audit_before_power",
+      "freedom_in_constraint",
+      "method_is_structure",
+      "resonance_not_hierarchy"
+    ],
+    "mary-magdalene": [
+      "method_is_structure"
+    ],
+    "mirabai": [
+      "method_is_structure"
+    ],
+    "napoleon-bonaparte": [],
+    "niccolo-machiavelli": [
+      "anti_capture",
+      "audit_before_power",
+      "method_is_structure"
+    ],
+    "queen-of-sheba": [
+      "density_over_volume",
+      "form_over_theater",
+      "method_is_structure"
+    ],
+    "ramon-llull": [
+      "constraint_generates"
+    ],
+    "isaac-newton": [
+      "density_over_volume",
+      "method_is_structure"
+    ],
+    "sor-juana-ines-de-la-cruz": [
+      "method_is_structure"
+    ],
+    "sun-tzu": [
+      "audit_before_power",
+      "density_over_volume",
+      "form_over_theater",
+      "method_is_structure",
+      "victory_empties_treasury"
+    ],
+    "thales-of-miletus": [
+      "method_is_structure"
+    ],
+    "victoria-lady-welby": [
+      "density_over_volume",
+      "meaning_from_resonance",
+      "method_is_structure"
+    ],
+    "zarathustra": [
+      "method_is_structure"
+    ],
+    "zenobia-of-palmyra": [
+      "method_is_structure"
+    ]
+  },
+  "sample_weight": {
+    "n": 26700,
+    "mean": 0.6276,
+    "min": 0.45,
+    "max": 1.5
+  },
+  "recommendations": [
+    "Upweight train samples on high-resonance cores: method_is_structure, density_over_volume, anti_capture, audit_before_power, form_over_theater",
+    "5 cores seen in only one window — personal gold, not yet shared-core",
+    "2 catalog cores have zero hits — deepen member-true G1 on those directions",
+    "Shared-core score rewards multi-member recurrence; never collapse windows into one voice"
+  ]
+}
