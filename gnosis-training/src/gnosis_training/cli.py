@@ -35,6 +35,8 @@ Modes:
     Council member's key_insight / sources (spot-review before promote).
   - ``sample-weights [pairs_jsonl]``  — GP-7 weight report (tier × core boost);
     optional ``--expand`` preview oversampled tier mix (CPU-pure).
+  - ``identity-factory-onboarding``   — G1 from THE COUNCILE gnosis events for
+    the 11 onboarding Council members (TRAINING CORPUS ONLY; not product agents).
   - ``ttc-window-report [jsonl...]``   — debt/refusal/density pain from Hepar
     gate logs (default: logs/ttc-window/*.jsonl).
   - ``--smoke-imports``                — the honest "wiring resolves" proof:
@@ -606,6 +608,41 @@ def main(argv: list[str] | None = None) -> int:
             )[:8]
             print(f"  core tags: {dict(top_c)}")
         print("  Spot-review before promoting into preference_pairs_ALL.jsonl")
+        return 0 if summary["invalid"] == 0 else 1
+
+    if mode == "identity-factory-onboarding":
+        from pathlib import Path
+
+        from .council_identity_factory import (
+            ONBOARDING_MEMBER_IDS,
+            build_identity_pairs,
+            write_identity_pairs,
+        )
+
+        out = (
+            Path(rest[0])
+            if rest
+            else Path("data/council_g1_identity_onboarding.jsonl")
+        )
+        if not out.is_absolute() and not Path("data").is_dir():
+            alt = Path("gnosis-training") / out
+            if alt.parent.is_dir():
+                out = alt
+        pairs, report = build_identity_pairs(
+            ONBOARDING_MEMBER_IDS, min_confidence=0.70
+        )
+        summary = write_identity_pairs(pairs, out)
+        print(
+            f"identity-factory members={len(ONBOARDING_MEMBER_IDS)} "
+            f"wrote={summary['wrote']} invalid={summary['invalid']}"
+        )
+        for mid, info in report["members"].items():
+            print(
+                f"  {mid}: events={info['events_parsed']} "
+                f"used={info['events_used']}"
+            )
+        print(f"  → {summary['path']}")
+        print("  TRAINING CORPUS ONLY — not product Council personas")
         return 0 if summary["invalid"] == 0 else 1
 
     if mode == "sample-weights":
