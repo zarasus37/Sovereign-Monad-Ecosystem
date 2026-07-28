@@ -638,31 +638,61 @@ TIER_WEIGHTS: dict[str, float] = {
 }
 
 
+# Soft caps so keyword packing / long core_ids lists cannot outrank dense gold.
+CORE_BOOST_MAX = 0.35
+"""Max additive boost from cores (+35% → multiplier ≤ 1.35)."""
+CORE_TAG_CAP = 2
+"""At most this many explicit ``core_ids`` tags contribute to the boost."""
+CORE_BOOST_SCALE = 0.5
+"""Maps best core rank_weight ∈ [0,1] toward the additive boost (pre-cap)."""
+
+
 def pair_core_boost(
     pair: dict[str, Any],
     core_scores: dict[str, CoreScore],
 ) -> float:
-    """Multiplier from cores present in pair text / tags."""
+    """Multiplier from cores present in pair text / tags.
+
+    Soft-cap rules (spot-read 2026-07-28):
+    - At most ``CORE_TAG_CAP`` explicit tags count (highest rank_weight).
+    - Extra tags apply a packing tax so G1 scaffolds cannot farm weight.
+    - Text-matched cores are uncapped by tag count (prose density wins).
+    - Final multiplier ≤ ``1 + CORE_BOOST_MAX``.
+    """
     chosen = (pair.get("chosen") or {}).get("response") or ""
     prompt = pair.get("prompt") or ""
-    ids = set(match_cores_in_text(f"{prompt}\n{chosen}"))
-    for cid in pair.get("core_ids") or []:
-        ids.add(str(cid))
-    if not ids:
-        return 1.0
-    best = max(
-        (core_scores[c].rank_weight for c in ids if c in core_scores),
-        default=0.0,
+    text_ids = match_cores_in_text(f"{prompt}\n{chosen}")
+    tag_ids = [str(c) for c in (pair.get("core_ids") or [])]
+
+    text_weights = [
+        core_scores[c].rank_weight for c in text_ids if c in core_scores
+    ]
+    text_best = max(text_weights) if text_weights else 0.0
+
+    tag_weights = sorted(
+        (core_scores[c].rank_weight for c in tag_ids if c in core_scores),
+        reverse=True,
     )
-    # Up to +50% for sitting on a high-resonance core
-    return 1.0 + 0.5 * best
+    n_tags = len(tag_ids)
+    # Packing tax: 3+ tags dilute tag-driven boost
+    if n_tags <= CORE_TAG_CAP:
+        pack = 1.0
+    else:
+        pack = max(0.5, CORE_TAG_CAP / float(n_tags))
+    tag_best = (tag_weights[0] * pack) if tag_weights else 0.0
+
+    best = max(text_best, tag_best)
+    if best <= 0:
+        return 1.0
+    raw = 1.0 + CORE_BOOST_SCALE * best
+    return min(1.0 + CORE_BOOST_MAX, raw)
 
 
 def train_sample_weight(
     pair: dict[str, Any],
     core_scores: dict[str, CoreScore] | None = None,
 ) -> float:
-    """P(pair) ∝ tier_weight × core_boost (GP-7 starter)."""
+    """P(pair) ∝ tier_weight × core_boost (GP-7; soft-capped core boost)."""
     tier = str(pair.get("provenance_tier") or "G0").upper()
     if pair.get("synthetic") is False and not pair.get("bootstrap"):
         tier = tier or "G0"
@@ -850,7 +880,8 @@ def render_core_resonance_md(report: dict[str, Any]) -> str:
             "## Train sampling (starter)",
             "",
             "```text",
-            "P(pair) ∝ tier_weight[G0=1.0, G1=0.95, G2=0.55, G3=0.45] × (1 + 0.5 × best_core_rank_weight)",
+            "P(pair) ∝ tier_weight[G0=1.0, G1=0.95, G2=0.55, G3=0.45] × core_boost",
+            "core_boost ≤ 1.35; ≤2 core_ids tags count; 3+ tags packing-taxed",
             "```",
             "",
         ]

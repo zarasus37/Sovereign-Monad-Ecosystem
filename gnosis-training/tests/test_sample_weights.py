@@ -121,3 +121,74 @@ def test_summarize():
     s = summarize_weights(pairs, {})
     assert s.n == 2
     assert "G0" in s.by_tier
+
+
+def test_core_tag_packing_soft_capped():
+    """Many core_ids tags must not beat dense G0 with one real text core."""
+    from gnosis_training.core_resonance import pair_core_boost
+
+    scores = core_scores_from_report(
+        {
+            "cores": [
+                {
+                    "core_id": cid,
+                    "label": cid,
+                    "direction": "d",
+                    "member_count": 5,
+                    "members": list("abcde"),
+                    "hit_count": 10,
+                    "domains": [],
+                    "pair_hits": 0,
+                    "member_source_hits": 5,
+                    "score": 1.0,
+                    "rank_weight": 1.0,
+                }
+                for cid in (
+                    "anti_capture",
+                    "audit_before_power",
+                    "density_over_volume",
+                    "freedom_in_constraint",
+                    "method_is_structure",
+                    "hollow_vs_authentic",
+                )
+            ]
+        }
+    )
+    packed = {
+        "prompt": "q",
+        "chosen": {"response": "generic no motifs"},
+        "core_ids": [
+            "anti_capture",
+            "audit_before_power",
+            "density_over_volume",
+            "freedom_in_constraint",
+            "method_is_structure",
+            "hollow_vs_authentic",
+        ],
+        "provenance_tier": "G1",
+    }
+    dense_g0 = {
+        "prompt": "q",
+        "chosen": {
+            "response": (
+                "A gift that purchases the law is not alliance — it is capture."
+            )
+        },
+        "core_ids": [],
+        "provenance_tier": "G0",
+        "synthetic": False,
+        "bootstrap": False,
+    }
+    b_packed = pair_core_boost(packed, scores)
+    b_dense = pair_core_boost(dense_g0, scores)
+    # Packing tax: tag farm boost < dense single-core text boost
+    assert b_packed < b_dense
+    # Hard ceiling on any core boost
+    assert b_packed <= 1.35 + 1e-9
+    assert b_dense <= 1.35 + 1e-9
+    # Full train weight: dense G0 still above packed G1
+    from gnosis_training.core_resonance import train_sample_weight
+
+    assert train_sample_weight(dense_g0, scores) > train_sample_weight(
+        packed, scores
+    )

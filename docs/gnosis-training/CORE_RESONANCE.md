@@ -53,12 +53,17 @@ For each core, from hits on THE COUNCILE sources + preference pairs:
 - **Output:** `score ∈ [0, 1]`, `rank_weight` for sampling  
 
 ```text
-P(pair) ∝ tier_weight × (1 + 0.5 × best_core_rank_weight)
+P(pair) ∝ tier_weight × core_boost
 
 tier_weight: G0=1.0  G1=0.95  G2=0.55  G3=0.45  G4=0
+
+core_boost:
+  text matches → best rank_weight (full credit)
+  core_ids tags → at most 2 highest rank_weight; 3+ tags get packing tax
+  multiplier ≤ 1.35  (+35% soft cap; was uncapped +50%)
 ```
 
-Optional wire field on pairs: `core_ids: ["anti_capture", …]` (member-true G1 tags these when matched).
+Optional wire field on pairs: `core_ids: ["anti_capture", …]` (member-true G1 tags these when matched). Tag packing cannot outrank dense G0 prose.
 
 ---
 
