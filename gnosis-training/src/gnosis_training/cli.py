@@ -33,6 +33,8 @@ Modes:
     logs/gnosis/core_resonance_*.{json,md} (CPU-pure).
   - ``council-g1-generate [out_jsonl]`` — member-true G1 pairs from each
     Council member's key_insight / sources (spot-review before promote).
+  - ``sample-weights [pairs_jsonl]``  — GP-7 weight report (tier × core boost);
+    optional ``--expand`` preview oversampled tier mix (CPU-pure).
   - ``ttc-window-report [jsonl...]``   — debt/refusal/density pain from Hepar
     gate logs (default: logs/ttc-window/*.jsonl).
   - ``--smoke-imports``                — the honest "wiring resolves" proof:
@@ -605,6 +607,56 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  core tags: {dict(top_c)}")
         print("  Spot-review before promoting into preference_pairs_ALL.jsonl")
         return 0 if summary["invalid"] == 0 else 1
+
+    if mode == "sample-weights":
+        from pathlib import Path
+
+        from .preference import load_human_pairs
+        from .sample_weights import (
+            expand_for_weighted_training,
+            load_core_scores,
+            summarize_weights,
+            weight_histogram,
+            pairs_to_weighted_rows,
+        )
+
+        default_candidates = [
+            Path("data/preference_pairs_ALL.jsonl"),
+            Path("gnosis-training/data/preference_pairs_ALL.jsonl"),
+        ]
+        rest_flags = list(rest)
+        do_expand = False
+        if "--expand" in rest_flags:
+            do_expand = True
+            rest_flags.remove("--expand")
+        pairs_path = Path(rest_flags[0]) if rest_flags else next(
+            (p for p in default_candidates if p.exists()),
+            default_candidates[-1],
+        )
+        if not pairs_path.exists():
+            print(f"sample-weights: not found: {pairs_path}")
+            return 2
+        pairs = load_human_pairs(pairs_path)
+        scores = load_core_scores()
+        summary = summarize_weights(pairs, scores)
+        print(
+            f"sample-weights n={summary.n} mean={summary.mean} "
+            f"min={summary.min_w} max={summary.max_w}"
+        )
+        print(f"  by_tier_mean={summary.by_tier}")
+        print("  top weighted pair_ids:")
+        for pid, w in summary.top_pair_ids[:10]:
+            print(f"    {pid}: {w:.3f}")
+        if do_expand:
+            rows = pairs_to_weighted_rows(
+                pairs, core_scores=scores, expand=True, seed=42
+            )
+            hist = weight_histogram(rows)
+            print(
+                f"  expand preview n={hist['n']} by_tier={hist['by_tier']} "
+                f"weight_mean={hist['weight_mean']}"
+            )
+        return 0
 
     if mode == "ttc-window-report":
         return ttc_window_report(rest)

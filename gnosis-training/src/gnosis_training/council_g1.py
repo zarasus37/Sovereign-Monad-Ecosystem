@@ -122,12 +122,13 @@ def _chosen_for(member: CouncilMember, mode: str) -> str:
         body = (
             f"{window}\n"
             f"THEOLOGICAL LENS: The insight names a sacred boundary — "
-            f"what must remain real when status and speed demand theater.\n\n"
-            f"TECHNOLOGICAL LENS: Encode the insight as constraint and audit surface "
-            f"in agent policy; do not leave it as rhetoric. Emphasis: {emphasis}. "
-            f"All three lenses must hold; one lens alone fails.\n\n"
+            f"what must remain real when status and speed demand theater. "
+            f"Quoting {member.display_name} without living the law is hollow.\n\n"
+            f"TECHNOLOGICAL LENS: Encode the insight as operational constraint in "
+            f"agent policy and human practice; do not leave it as rhetoric. "
+            f"Emphasis: {emphasis}. All three lenses must hold; one lens alone fails.\n\n"
             f"COSMOLOGICAL LENS: Across eras, the same direction reappears when "
-            f"navigators refuse local maxima that pretend to be the whole map.\n\n"
+            f"independent navigators refuse local maxima that pretend to be the whole map.\n\n"
             f"LOGIC COMPRESSION: Act from {member.display_name}'s law — {insight} — "
             f"as operational structure, not quotation. Method is structural, not ornamental."
         )

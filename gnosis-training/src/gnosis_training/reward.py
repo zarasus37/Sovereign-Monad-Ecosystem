@@ -60,23 +60,46 @@ def build_reward_model(cfg: RewardConfig) -> Any:
     return model
 
 
-def _pairs_to_dataset(pairs: list[PreferencePair]) -> Any:
+def _pairs_to_dataset(
+    pairs: list[PreferencePair],
+    *,
+    use_core_weights: bool = True,
+    seed: int = 42,
+) -> Any:
     """Project validated human-judged pairs into TRL ``RewardTrainer`` row
     shape: ``{prompt, chosen, rejected}`` (TRL's expected preference dataset
-    columns). Lazy ``datasets`` import."""
-    from datasets import Dataset 
+    columns). Lazy ``datasets`` import.
 
-    rows = []
+    When ``use_core_weights`` (GP-7 default), oversamples by tier × Core
+    Resonance so G0/G1 and high-core pairs appear more often than bulk G2/G3.
+    """
+    from datasets import Dataset
+
     for p in pairs:
-        # validate_pair returns [] for a valid pair; raise on any invalid.
         problems = validate_pair(p)
         if problems:
             raise ValueError(f"pair {p.pair_id}: {problems}")
+
+    if use_core_weights:
+        from .sample_weights import load_core_scores, pairs_to_weighted_rows
+
+        rows = pairs_to_weighted_rows(
+            pairs,
+            core_scores=load_core_scores(),
+            expand=True,
+            seed=seed,
+        )
+        return Dataset.from_list(rows)
+
+    rows = []
+    for p in pairs:
         rows.append(
             {
                 "prompt": p.prompt,
                 "chosen": p.chosen.response,
                 "rejected": p.rejected.response,
+                "pair_id": p.pair_id,
+                "sample_weight": 1.0,
             }
         )
     return Dataset.from_list(rows)
@@ -133,7 +156,11 @@ def build_reward_trainer(cfg: RewardConfig, preference_pairs_jsonl: str | Path) 
             "no trainable preference pairs — reward model needs human-judged "
             "pairs (spec line 478), not the bootstrap worksheet"
         )
-    dataset = _pairs_to_dataset(pairs)
+    dataset = _pairs_to_dataset(
+        pairs,
+        use_core_weights=True,
+        seed=cfg.seed.seed,
+    )
 
     tokenizer = AutoTokenizer.from_pretrained(cfg.base_model_id)
     if tokenizer.pad_token is None:

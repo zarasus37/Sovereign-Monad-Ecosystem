@@ -49,6 +49,10 @@ class Stage2V2Config:
     max_steps_cpu: int | None = 4
     # Force dry-run model even on GPU (tests / smoke)
     force_tiny_model: bool = False
+    # GP-7: oversample by tier × Core Resonance weight before train/eval split
+    use_core_weights: bool = True
+    # Keep train multiset size ≈ |pairs| (rebalanced); set higher for more G0/G1 exposure
+    weighted_target_n: int | None = None
 
 
 @dataclass
@@ -184,8 +188,28 @@ def _cuda_available() -> bool:
         return False
 
 
-def _pairs_to_dataset(pairs: list[PreferencePair]) -> Any:
+def _pairs_to_dataset(
+    pairs: list[PreferencePair],
+    *,
+    use_core_weights: bool = False,
+    weighted_target_n: int | None = None,
+    seed: int = 42,
+) -> Any:
     from datasets import Dataset
+
+    if use_core_weights:
+        from .sample_weights import load_core_scores, pairs_to_weighted_rows
+
+        scores = load_core_scores()
+        rows = pairs_to_weighted_rows(
+            pairs,
+            core_scores=scores,
+            expand=True,
+            target_n=weighted_target_n,
+            seed=seed,
+        )
+        # TRL needs prompt/chosen/rejected; keep metadata columns for audit
+        return Dataset.from_list(rows)
 
     rows = [
         {
@@ -194,6 +218,8 @@ def _pairs_to_dataset(pairs: list[PreferencePair]) -> Any:
             "rejected": p.rejected.response,
             "pair_id": p.pair_id,
             "category": p.category,
+            "provenance_tier": p.provenance_tier,
+            "sample_weight": 1.0,
         }
         for p in pairs
     ]
@@ -292,7 +318,12 @@ def run_stage2_v2(
     out_dir = Path(cfg.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    dataset = _pairs_to_dataset(pairs)
+    dataset = _pairs_to_dataset(
+        pairs,
+        use_core_weights=cfg.use_core_weights,
+        weighted_target_n=cfg.weighted_target_n,
+        seed=cfg.seed,
+    )
     split = dataset.train_test_split(
         test_size=1.0 - cfg.train_fraction,
         seed=cfg.seed,
@@ -302,6 +333,16 @@ def run_stage2_v2(
     eval_ds = split["test"]
 
     # Persist split membership for auditability
+    weight_note: dict[str, Any] = {"use_core_weights": cfg.use_core_weights}
+    if cfg.use_core_weights and "sample_weight" in train_ds.column_names:
+        tw = list(train_ds["sample_weight"])
+        weight_note["train_weight_mean"] = round(sum(tw) / len(tw), 4) if tw else None
+        if "provenance_tier" in train_ds.column_names:
+            from collections import Counter
+
+            weight_note["train_tier_counts"] = dict(
+                Counter(train_ds["provenance_tier"])
+            )
     split_meta = {
         "train_ids": list(train_ds["pair_id"]),
         "eval_ids": list(eval_ds["pair_id"]),
@@ -309,6 +350,7 @@ def run_stage2_v2(
         "eval_n": len(eval_ds),
         "train_fraction": cfg.train_fraction,
         "seed": cfg.seed,
+        "gp7_weights": weight_note,
     }
     (out_dir / "split.json").write_text(
         json.dumps(split_meta, indent=2) + "\n",

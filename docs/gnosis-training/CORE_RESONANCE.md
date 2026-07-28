@@ -105,11 +105,27 @@ Rejected sides are capture / hollow / mono-lens sludge.
 
 ---
 
-## Next (not all done)
+## GP-7 train weights (wired)
+
+```powershell
+uv run python -m gnosis_training sample-weights data/preference_pairs_ALL.jsonl
+uv run python -m gnosis_training sample-weights data/preference_pairs_ALL.jsonl --expand
+```
+
+Stage 2 / reward path oversamples with `use_core_weights=True` (default):
+
+- `sample_weights.expand_for_weighted_training`
+- `stage2_v2.Stage2V2Config.use_core_weights`
+- `reward._pairs_to_dataset(use_core_weights=True)`
+
+## Mining
+
+`collect_hits_from_members(deep=True)` chunks **full** THE COUNCILE source files (not only registry excerpts), deduped per (core, member, source label).
+
+## Next
 
 | Item | Notes |
 |------|--------|
-| Deeper source mining | Full-file motif extraction beyond excerpts |
 | Core cluster UI | Interactive plot of rays → ridges |
-| GP-7 train sampler | Wire `train_sample_weight` into reward dataloader |
 | You-ratify core lock | Steward-approved core set versioned in repo |
+| Production 8B job | Capital-gated; weights already in path |

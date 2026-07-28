@@ -223,7 +223,7 @@ P(pair) ∝ tier_weight[tier] × category_balance_boost
 | **GP-4** | Seed expand pipeline (G2) with gap checks | **Done** — `expand_g2.py` + `scale_runthrough.py`; ~24k G2 at 80 variants/seed |
 | **GP-5** | Hard-negative forge (G3) | **Done** — `hardneg_g3.py` + scale_runthrough |
 | **GP-6** | LOGOC/TTC filter + review queue | Bridge to gnostic-engine |
-| **GP-7** | Weighted dataloader / mix config for reward stage | **Partial** — `train_sample_weight` + core boost; wire into RM dataloader next |
+| **GP-7** | Weighted dataloader / mix config for reward stage | **Done** — `sample_weights.py` oversample + Stage2/reward default `use_core_weights`; CLI `sample-weights` |
 | **GP-8** | Eval set held out (pure G0 + fresh human) | Never train on holdout |
 
 ---

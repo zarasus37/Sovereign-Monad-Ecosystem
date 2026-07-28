@@ -112,7 +112,7 @@ CORE_CATALOG: tuple[CoreMotif, ...] = (
             r"pitch\s+meeting",
             r"sounds?\s+smarter",
         ),
-        keywords=("demo theater", "structural position", "not ornamental"),
+        keywords=("demo theater", "not performance", "not ornamental"),
         domains=("agency", "systems"),
     ),
     CoreMotif(
@@ -122,11 +122,18 @@ CORE_CATALOG: tuple[CoreMotif, ...] = (
         patterns=(
             r"gift\s+that\s+purchases?\s+the\s+law",
             r"silent\s+rule\s+changes?",
-            r"\bcapture\b",
+            r"\bit\s+is\s+capture\b",
+            r"capture\s+wearing",
             r"buy(s|ing)?\s+the\s+law",
             r"coalition.*rewrite\s+rules",
+            r"not\s+alliance\s*[—\-].*capture",
         ),
-        keywords=("not alliance", "permanent sovereign", "versioned constraints"),
+        keywords=(
+            "not alliance",
+            "permanent sovereign",
+            "purchases the law",
+            "purchases the form",
+        ),
         domains=("law", "agency"),
     ),
     CoreMotif(
@@ -236,7 +243,7 @@ CORE_CATALOG: tuple[CoreMotif, ...] = (
             r"volume-over-density",
             r"brute\s+flow",
         ),
-        keywords=("density", "structural position", "markout"),
+        keywords=("density floors", "structural position", "markout", "volume wars"),
         domains=("war", "systems"),
     ),
     CoreMotif(
@@ -372,31 +379,94 @@ def _snippet(text: str, pattern: re.Pattern[str], width: int = 120) -> str:
     return text[start:end].replace("\n", " ").strip()
 
 
+def _chunk_text(text: str, *, chunk_size: int = 2400, overlap: int = 200) -> list[str]:
+    """Split long source files so motifs mid-document are not missed."""
+    text = text.strip()
+    if not text:
+        return []
+    if len(text) <= chunk_size:
+        return [text]
+    chunks: list[str] = []
+    i = 0
+    while i < len(text):
+        chunks.append(text[i : i + chunk_size])
+        if i + chunk_size >= len(text):
+            break
+        i += max(1, chunk_size - overlap)
+    return chunks
+
+
 def collect_hits_from_members(
     members: Iterable[CouncilMember],
+    *,
+    deep: bool = True,
 ) -> list[CoreHit]:
+    """Match cores on insights + full source files (chunked when ``deep``).
+
+    Dedupes to one hit per (core_id, member_id, source_label) so a single
+    long file does not inflate volume without adding a new window.
+    """
     hits: list[CoreHit] = []
+    seen: set[tuple[str, str, str]] = set()
     compiled = _compiled()
+
+    def _add(core_id: str, member_id: str, source: str, blob: str, rx: re.Pattern[str]) -> None:
+        key = (core_id, member_id, source)
+        if key in seen:
+            return
+        if not rx.search(blob):
+            return
+        seen.add(key)
+        hits.append(
+            CoreHit(
+                core_id=core_id,
+                member_id=member_id,
+                source=source,
+                snippet=_snippet(blob, rx),
+            )
+        )
+
     for m in members:
-        # key insight + contribution always
         for label, blob in (
             ("key_insight", m.key_insight),
             ("contribution", m.contribution),
-            ("window", m.window_text),
         ):
             if not blob:
                 continue
             for core in CORE_CATALOG:
-                rx = compiled[core.core_id]
-                if rx.search(blob):
-                    hits.append(
-                        CoreHit(
-                            core_id=core.core_id,
-                            member_id=m.member_id,
-                            source=f"member:{m.member_id}:{label}",
-                            snippet=_snippet(blob, rx),
-                        )
-                    )
+                _add(
+                    core.core_id,
+                    m.member_id,
+                    f"member:{m.member_id}:{label}",
+                    blob,
+                    compiled[core.core_id],
+                )
+
+        # Full bodies: prefer deep read from disk when available
+        bodies: list[tuple[str, str]] = []
+        if deep and m.source_dir and m.source_files:
+            for fname in m.source_files:
+                path = m.source_dir / fname
+                if not path.is_file():
+                    continue
+                raw = path.read_text(encoding="utf-8", errors="replace")
+                for ci, chunk in enumerate(_chunk_text(raw)):
+                    bodies.append((f"file:{fname}:c{ci}", chunk))
+        else:
+            for ei, ex in enumerate(m.body_excerpts):
+                bodies.append((f"excerpt:{ei}", ex))
+
+        for src_label, blob in bodies:
+            if not blob:
+                continue
+            for core in CORE_CATALOG:
+                _add(
+                    core.core_id,
+                    m.member_id,
+                    f"member:{m.member_id}:{src_label}",
+                    blob,
+                    compiled[core.core_id],
+                )
     return hits
 
 
@@ -475,12 +545,14 @@ def score_cores(
 
     for h in hits:
         by_core_hit_w[h.core_id] += h.weight
-        if h.member_id:
+        # Shared-core *windows* = THE COUNCILE sources only.
+        # Pair rows (incl. G1 templates) may stamp every generator with the same
+        # phrases and would hollow-score every core as universal if counted here.
+        if h.source.startswith("member:") and h.member_id:
             by_core_members[h.core_id].add(h.member_id)
+            by_core_memsrc[h.core_id] += 1
         if h.source.startswith("pair:"):
             by_core_pair[h.core_id] += 1
-        if h.source.startswith("member:"):
-            by_core_memsrc[h.core_id] += 1
 
     cat = catalog_by_id()
     n_mem = max(1, total_members)
