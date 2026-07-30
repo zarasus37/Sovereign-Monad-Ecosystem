@@ -49,6 +49,9 @@ Curated from source files. Prefer **profile** texts for onboarding; **GNOSIS EVE
 | **Gnostic Jesus** | 1–2nd c. CE (textual) | Knowledge requires decompression |
 | **Alan Watts** | 1915–1973 | Agency from surrendering force-control |
 | **Zarathustra** | ~1500–1000 BCE | Polarity/constraint as ontological |
+| **Carl Jung | 1875–1961 | Individuation; archetypal architecture |
+| **Cyrus the Great | c. 600–530 BCE | Plural satrapy; layered sovereignty |
+| **King Solomon | c. 990–931 BCE | Judgment under ambiguity |
 
 ### Extended corpus
 
@@ -57,14 +60,11 @@ Curated from source files. Prefer **profile** texts for onboarding; **GNOSIS EVE
 | Akhenaten | c. 1353–1336 BCE | Aten reform; sacred geography |
 | Aristotle | 384–322 BCE | Causality, categories, virtue method |
 | Baruch Spinoza | 1632–1677 | Substance monism; freedom in necessity |
-| Carl Jung | 1875–1961 | Individuation; archetypal architecture |
 | Christine de Pizan | 1364–c. 1430 | Rewriting social identity “source code” |
-| Cyrus the Great | c. 600–530 BCE | Plural satrapy; layered sovereignty |
 | Friedrich Nietzsche | 1844–1900 | Genealogy; self-implicating perspectivism |
 | Galileo Galilei | 1564–1642 | Instrumental visibility of truth |
 | Giordano Bruno | 1548–1600 | Infinite worlds |
 | Irenaeus of Lyon | c. 130–202 CE | Orthodoxy as boundary technology |
-| King Solomon | c. 990–931 BCE | Judgment under ambiguity |
 | Mary Magdalene | 1st c. (Gnostic tradition) | Exemplary knower in contested assembly |
 | Napoleon Bonaparte | 1769–1821 | Cognitive battlefield |
 | Niccolò Machiavelli | 1469–1527 | Power-as-it-is |
@@ -73,12 +73,7 @@ Curated from source files. Prefer **profile** texts for onboarding; **GNOSIS EVE
 | Sun Tzu | c. 544–496 BCE | Structural victory over brute force |
 | Thales of Miletus | c. 624–545 BCE | First-principles unity of substance |
 | Victoria, Lady Welby | 1837–1912 | Significs — technology of meaning |
-
-### Recently added (integrated into registry)
-
-| Member | Era | Key insight |
-|--------|-----|-------------|
-| **Enheduanna** | c. 23rd c. BCE | Temple hymns as **semantic protocol** on one **underlying grid** (TempleGrid) |
+| **Enheduanna** | c. 23rd c. BCE | Temple hymns as **semantic protocol** on one **underlying grid**    (TempleGrid) |
 | **Basilides of Alexandria** | early 2nd c. CE | Compression/decompression; Archon as local maximum; Great Ignorance as mercy |
 | **Hatshepsut** | c. 1507–1458 BCE | Legitimacy as manufactured stone-code; iconographic iteration |
 | **Hildegard von Bingen** | 1098–1179 | Latent vision → theological/musical/medical system when externalized |
