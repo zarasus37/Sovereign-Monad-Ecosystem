@@ -42,16 +42,8 @@ jobs:
   # && pnpm test:integration. This is the canonical "is this PR safe to
   # merge?" gate — the same chain a developer runs locally as `pnpm validate`.
   #
-  # Currently RED on main because the canonical-schedule schema (Layer 6
-  # scheduler artifact) is stale w.r.t. the runtime: the schema declares
-  # config.weights.{alpha,beta,gamma,delta} and steps[].terms.{C,L,T,S,J}, but
-  # the runtime now emits config.weights.{epsilon,zeta} and
-  # steps[].terms.{P,F} as well (the Layer 6 εP / ζF follow-up). Schema must
-  # be regenerated. Tracked in issue #76.
-  #
-  # Until #76 is fixed, this job will fail — that is the intended signal.
-  # Branch protection should mark this job as required so future PRs cannot
-  # merge while the aggregate is red.
+  # Layer 6 schedule-schema drift (εP/ζF, terms P/F) was fixed in schema +
+  # runtime; `pnpm check:schedule-schema` is green. Keep validate required.
   # ─────────────────────────────────────────────────────────────────────────
   validate:
     runs-on: windows-latest

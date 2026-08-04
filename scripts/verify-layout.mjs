@@ -70,6 +70,9 @@ const ALLOWED_TOP_LEVEL = new Set([
   'pnpm-workspace.yaml',
   'scripts',
   'theo-techno-cosmo',
+  // P0/P1 monorepo hygiene + golden topology
+  'docker-compose.yml',
+  'ZKP',
 ]);
 
 // These top-level dirs are *expected* even though they're not in the canonical
@@ -82,6 +85,7 @@ const REQUIRED_DOCS = [
   'docs/PROJECT_STATE.json',
   'docs/REPO_STRUCTURE_MAP.md',
   'docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md',
+  'docs/CANON.md',
 ];
 
 // Active surfaces to scan for legacy references. Mirrors the .ps1 list.

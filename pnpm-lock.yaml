@@ -132,6 +132,9 @@ importers:
       '@react-three/fiber':
         specifier: ~9.1.2
         version: 9.1.4(@types/react@19.1.17)(react-dom@19.1.8(react@19.1.8))(react@19.1.8)(three@0.176.0)
+      '@sovereign/types':
+        specifier: workspace:*
+        version: link:../../../packages/sovereign-types
       '@tanstack/react-query':
         specifier: ^5.24.0
         version: 5.101.0(react@19.1.8)
