@@ -36,34 +36,36 @@ These are the canonical working surfaces for the ecosystem:
 
 ## Canonical Docs
 
-These files define system-level truth and should be treated as primary references:
+**Start at [`docs/CANON.md`](CANON.md)** — single authority map.
 
-- `README.md` — entry point: how to run the ecosystem and where to read next
-- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` — authoritative operating backbone: philosophy, architecture, roadmap, blockers
-- `docs/THEO_TECHNO_COSMO.md` — operational TTC constraint system (validity gates: sovereignty, structure, density)
-- `docs/CHARTER.md` — non-negotiable guardrails (sovereignty, mutual growth, human capability drift)
-- `docs/PROJECT_STATE.md` — build-state snapshot and resume point during active work
-- `docs/PROJECT_STATE.json` — machine-readable state summary
-- `docs/ECOSYSTEM_BUILD_MAP.md`
-- `docs/BUILD_EXECUTION_FLOW.md`
-- `docs/CANONICAL_SYNC_DISCIPLINE.md`
-- `docs/LICENSE.md`
-- `docs/LICENSING.md`
+Primary references:
 
-## Legacy And Archive
+- `README.md` — live set, 15-minute path, orientation
+- `docs/CANON.md` — canon index (P0)
+- `docs/P0_MONOREPO_HYGIENE.md` — live vs archive policy
+- `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md` — operating backbone
+- `docs/THEO_TECHNO_COSMO.md` — TTC constraint system
+- `docs/CHARTER.md` — non-negotiable guardrails
+- `docs/PROJECT_STATE.md` / `docs/PROJECT_STATE.json` — resume state
+- `docs/ECOSYSTEM_BUILD_MAP.md`, `docs/BUILD_EXECUTION_FLOW.md`, `docs/CANONICAL_SYNC_DISCIPLINE.md`
+- `docs/LICENSE.md`, `docs/LICENSING.md`
+
+## Legacy And Archive (FROZEN)
 
 These areas preserve older names, prior attempts, or completed work that should not be confused with the active shape of the repo. **They are tagged `LEGACY_NON_SOVEREIGN` under `docs/CHARTER.md` §3.1.**
 
-- `archive/legacy-workspaces/` — prior workspace merges, including the old `monad-mev/` tree
-- `archive/generated/` — exported decks, manifests, and other build artifacts
-- `archive/sandboxes/` — experimental code that never graduated
-- `archive/infrastructure/` — legacy Azure Function (`api/`) and default Vite React dashboard (`dashboard/`) that pointed to old `monad-mev/` paths
-- `archive/notes/` — historical SGE deep-dive text files
-- `monad-ecosystem/legacy/` — staged legacy code from the monad-mev rehome
-- older `Succor` naming that still appears in archived docs and manifests
-- earlier `v2.4.0` references inside historical reports and snapshots
+**P0 rule: do not import from these paths into live packages.** Leaving them on disk avoids bulk history surgery; they are not the product spine.
 
-For the full inventory, remediation paths, and deadlines, see `docs/LEGACY_COMPONENTS.md`.
+- `archive/legacy-workspaces/` — prior workspace merges, including the old `monad-mev/` tree
+- `archive/generated/` — exported decks, manifests, NotebookLM dumps
+- `archive/sandboxes/` — experimental code that never graduated
+- `archive/infrastructure/` — legacy Azure Function + old dashboard
+- `archive/notes/` — historical SGE deep-dive text files
+- `monad-ecosystem/legacy/` — staged legacy MEV/worker code
+- older `Succor` naming in archived docs
+- earlier `v2.4.0` references inside historical reports
+
+For inventory and remediation, see `docs/LEGACY_COMPONENTS.md` and `docs/P0_MONOREPO_HYGIENE.md`.
 
 ## Generated Or Local-Only
 

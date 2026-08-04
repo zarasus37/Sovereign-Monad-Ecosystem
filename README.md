@@ -2,30 +2,81 @@
 
 **Sovereign Monad Ecosystem** — Layered Monorepo (v2.5.2)
 
+> **Not [Monad](https://www.monad.xyz/) L1.** “Monad” here means *Sovereign Monad* — the cognitive/economic architecture (TTCL, LOGOC, organs, Shaliah). Do not confuse with the Monad blockchain.
+
 > An economic system in which AI agents exist as genuine participants — not tools, not features, not labor — operating authentically within compressed constraint envelopes, decompressing into live, contextual, self-consistent action, and being compensated for that authentic operation.
 
 > This repository is the canonical working copy for one unified ecosystem. Any mirrored copies are downstream sync targets only.
 
 ---
 
-## 90-Second Start
+## Live set vs archive (P0 rule)
+
+| Status | Paths | Rule |
+|--------|--------|------|
+| **LIVE (spine)** | `gnostic-engine/`, `gnosis-training/`, `monad-ecosystem/packages/` (esp. `ttcl`, `gate-acl`, `sovereign-bus`, `sovereign-types`, `sovereign-host`, `hepar-service`, `logoc`, `hcd-monitor`), `monad-ecosystem/control-center/`, `shared/`, `theo-techno-cosmo/` (doctrine + Councile), `docs/` (canon), `scripts/`, root manifests | **Build, import, and extend only here** |
+| **LIVE (supporting)** | `ZKP/` (design only), `.github/` | Product design / CI |
+| **FROZEN archive** | `archive/**` | Historical. **Do not import from `archive/` in live code.** Do not “fix” product bugs by editing archive dumps. Promote explicitly if something returns to live. |
+| **FROZEN legacy** | `monad-ecosystem/legacy/**` | Tombstone for old MEV/worker trees. Prefer `gate-acl` + organs for trading paths. |
+| **Runtime memory** | `logs/**` (except small committed fixtures), `.runtime_state/` | Prefer object storage / local; see `.gitignore` |
+
+**“Without touching archive bulk”** means: P0 **declares** archive/legacy frozen and stops new live dependencies on them — it does **not** delete multi‑GB history, NotebookLM export forests, or 144 slot-profile dumps in one pass. That is a later P2/P3 move (submodule, LFS, or tombstone tag) when you choose it.
+
+Canon doc index: **[docs/CANON.md](docs/CANON.md)** · Hygiene notes: **[docs/P0_MONOREPO_HYGIENE.md](docs/P0_MONOREPO_HYGIENE.md)**
+
+---
+
+## 15-minute path
 
 ```powershell
-# One-time setup
+# From repo root — one-time
 pnpm install
 .\scripts\bootstrap.ps1
 
-# Development
-pnpm dev
+# 1) Gnostic engine smoke (Python / uv)
+cd gnostic-engine
+uv sync
+uv run pytest tests/ -q --tb=no -x
+cd ..
 
-# Structural hygiene
+# 2) Gnosis-training smoke (pairs / wiring)
+cd gnosis-training
+uv sync
+uv run python -m gnosis_training --smoke-imports
+uv run pytest tests/test_smoke_imports.py tests/test_preference.py -q --tb=no
+cd ..
+
+# 3) Host / control plane (TS)
+pnpm --filter @sovereign/host start
+# optional: pnpm dev  (broader workspace dev)
+
+# 4) Structural hygiene + resume checkpoint
 pnpm check:layout
-
-# Open the resume checkpoint
 pnpm status
 ```
 
+**Kernel files (deep review):**
+
+| Concern | Path |
+|---------|------|
+| LOGOC pipeline | `gnostic-engine/src/gnostic_engine/core/logoc_pipeline.py` |
+| TTCL runtime | `monad-ecosystem/packages/ttcl/src/runtime/index.ts` |
+| Closed loop | `monad-ecosystem/packages/gate-acl/src/closedLoop.ts` |
+
+Paper-trade / mandate paths live under `@sovereign/gate-acl` (not under root `packages/`).
+
 See `scripts/bootstrap.ps1` for full environment setup (uv + pnpm).
+
+---
+
+## 90-Second Start
+
+```powershell
+pnpm install
+.\scripts\bootstrap.ps1
+pnpm status
+pnpm check:layout
+```
 
 ---
 
@@ -33,32 +84,30 @@ See `scripts/bootstrap.ps1` for full environment setup (uv + pnpm).
 
 This is a large, intentionally multi-domain ecosystem. You do not need to read everything at once.
 
-1. **Start here** — this `README.md` for orientation and how to run it.
-2. **Master Operating File** — `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`  
+1. **Start here** — this `README.md` (live set + 15-minute path).
+2. **Canon index** — [docs/CANON.md](docs/CANON.md) — single map of authoritative docs.
+3. **Master Operating File** — `docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`  
    The authoritative backbone: philosophy, intention, system functions, architecture, layers, roadmap, and active blockers.
-3. **Guardrail Charter** — `docs/CHARTER.md`  
+4. **Guardrail Charter** — `docs/CHARTER.md`  
    Non-negotiable constraints on architecture, code, governance, narratives, and human–AI collaboration. All contributors and AI collaborators are bound by it.
-4. **Shared AI Collaboration Charter** — `docs/SHARED_AI_COLLABORATION_CHARTER.md`  
+5. **Shared AI Collaboration Charter** — `docs/SHARED_AI_COLLABORATION_CHARTER.md`  
    Operational companion binding AI co-architects and code-authoring assistants to the guardrails.
-4b. **Shaliah Identity v2** — `docs/SHALIAH_IDENTITY_V2.md`  
+6. **Shaliah Identity v2** — `docs/SHALIAH_IDENTITY_V2.md`  
    Human–Shaliah relationship: coach/mirror/extension/vehicle on **one spine** — not co-captain.  
-4c. **Shaliah vs Autonomous Multitude (at a glance)** — `docs/SHALIAH_VS_AUTONOMOUS.md`  
-   **Must-read distinction:** human-bound partnership vs full independent minds; how Vector 1 is set up now.  
+7. **Shaliah vs Autonomous Multitude** — `docs/SHALIAH_VS_AUTONOMOUS.md`  
+   **Must-read distinction:** human-bound partnership vs full independent minds.  
    Companions: `docs/VECTOR1_ONBOARDING_REDESIGN.md`, `docs/JOURNEY_MAP.md`, `docs/FG_CURRICULUM.md`.
-5. **Theo-Techno-Cosmo (operational)** — `docs/THEO_TECHNO_COSMO.md`  
-   Tripartite validity gates (sovereignty/refusal, structure, density). Machine packs: `shared/constraints/`. Runtime: `gnostic_engine.constraints`.
-6. **Layout map** — `docs/REPO_STRUCTURE_MAP.md`  
-   What is active, archived, or generated, and how the physical directories relate to the domains.
-7. **Build discipline** — `docs/ECOSYSTEM_BUILD_MAP.md`, `docs/BUILD_EXECUTION_FLOW.md`, `docs/CANONICAL_SYNC_DISCIPLINE.md`  
-   Only when you are changing build order, architecture, or sync behavior.
+8. **Theo-Techno-Cosmo (operational)** — `docs/THEO_TECHNO_COSMO.md`  
+   Tripartite validity gates. Machine packs: `shared/constraints/`. Runtime: `gnostic_engine.constraints`.
+9. **Layout map** — `docs/REPO_STRUCTURE_MAP.md`  
+   Active vs archived vs generated.
+10. **Build discipline** — `docs/ECOSYSTEM_BUILD_MAP.md`, `docs/BUILD_EXECUTION_FLOW.md`, `docs/CANONICAL_SYNC_DISCIPLINE.md`  
 
 **Fastest resume path:**
 
 ```powershell
 pnpm status
 ```
-
-Archive material lives under `archive/` and is historical unless explicitly promoted.
 
 ---
 
@@ -70,10 +119,12 @@ The ecosystem has distinct operational domains, each with its own role, but all 
 |---|---|---|---|
 | **Theo-Techno-Cosmo** | `theo-techno-cosmo/` (+ `docs/THEO_TECHNO_COSMO.md`, `shared/constraints/`) | Symbolic substrate **and** enforceable tripartite validity (T/X/C) | Markdown, PDF; versioned JSON packs; Python scorer in gnostic-engine |
 | **Gnostic Engine** | `gnostic-engine/` | Volumetric runtime that evaluates signals against the substrate | Python (uv) |
-| **Gnosis Training** | `gnosis-training/` | TTCL Layer 7 Training Pipeline (SFT→Reward→GRPO→Eval); real TRL wiring, dry-run GPU-verified 2026-07-14, real 8B run capital-gated | Python (uv) |
-| **Monad Ecosystem** | `monad-ecosystem/` | On-chain and TypeScript infrastructure that executes outcomes | TypeScript, Motoko, Solidity |
+| **Gnosis Training** | `gnosis-training/` | TTCL Layer 7 Training Pipeline (SFT→Reward→GRPO→Eval) | Python (uv) |
+| **Monad Ecosystem** | `monad-ecosystem/` | Organs, control center, TTCL/gate packages that execute outcomes | TypeScript, Motoko, Solidity |
 
-For a clearer breakdown of active domains versus legacy and generated surfaces, see [docs/REPO_STRUCTURE_MAP.md](docs/REPO_STRUCTURE_MAP.md).
+**Spine (product kernel):** TTCL + gnostic-engine + gate-acl + sovereign-bus/types/host.
+
+For active vs legacy detail, see [docs/REPO_STRUCTURE_MAP.md](docs/REPO_STRUCTURE_MAP.md).
 
 ---
 
