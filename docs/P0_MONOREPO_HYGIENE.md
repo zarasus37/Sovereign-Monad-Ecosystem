@@ -74,5 +74,6 @@ Placeholders (e.g. `UseDevelopmentStorage=true`) still teach a bad pattern if re
 - [x] `.gitignore` tightened  
 - [x] This hygiene note  
 - [x] Surgical untrack of known `local.settings.json` / `scout-key.json` (if present)  
-- [ ] Optional later: gitleaks CI workflow  
+- [x] Optional later: gitleaks CI workflow (`.github/workflows/gitleaks.yml`)  
 - [ ] Optional later: archive submodule / release artifact split  
+- [x] P1 started: golden topology + LIVE_PACKAGES (see `GOLDEN_TOPOLOGY.md`)  

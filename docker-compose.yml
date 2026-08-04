@@ -1,0 +1,26 @@
+# Sovereign Monad Ecosystem — root entry for golden topology
+#
+# This file does NOT redefine services. It includes the production compose
+# under monad-ecosystem/ so contributors can run from the monorepo root.
+#
+# Usage (from monorepo root):
+#   cd monad-ecosystem
+#   cp .env.production.example .env.production   # never commit secrets
+#   cd ..
+#   docker compose --env-file monad-ecosystem/.env.production up -d --build
+#
+#   # Optional profiles (same as monad-ecosystem/docker-compose.yml):
+#   docker compose --env-file monad-ecosystem/.env.production --profile with-kafka up -d
+#   docker compose --env-file monad-ecosystem/.env.production --profile observability up -d
+#
+#   curl -s http://localhost:3001/health
+#
+# Full runbook: docs/GO_LIVE_EXECUTION.md · Topology notes: docs/GOLDEN_TOPOLOGY.md
+# Live package statuses: docs/LIVE_PACKAGES.md
+#
+# Note: included compose uses network_mode=host (Azure MSI / localhost wiring).
+# Prefer Linux VM or WSL2 for full stack; pure Windows Docker Desktop may need
+# profile adjustments.
+
+include:
+  - path: monad-ecosystem/docker-compose.yml

@@ -23,6 +23,8 @@
 | Sync discipline | [`CANONICAL_SYNC_DISCIPLINE.md`](CANONICAL_SYNC_DISCIPLINE.md) |
 | Project resume state | [`PROJECT_STATE.md`](PROJECT_STATE.md) + `PROJECT_STATE.json` |
 | P0 hygiene | [`P0_MONOREPO_HYGIENE.md`](P0_MONOREPO_HYGIENE.md) |
+| Golden topology | [`GOLDEN_TOPOLOGY.md`](GOLDEN_TOPOLOGY.md) + root `docker-compose.yml` |
+| Live package STATUS | [`LIVE_PACKAGES.md`](LIVE_PACKAGES.md) |
 
 ## Doctrine & constraints
 

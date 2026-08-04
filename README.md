@@ -22,7 +22,9 @@
 
 **“Without touching archive bulk”** means: P0 **declares** archive/legacy frozen and stops new live dependencies on them — it does **not** delete multi‑GB history, NotebookLM export forests, or 144 slot-profile dumps in one pass. That is a later P2/P3 move (submodule, LFS, or tombstone tag) when you choose it.
 
-Canon doc index: **[docs/CANON.md](docs/CANON.md)** · Hygiene notes: **[docs/P0_MONOREPO_HYGIENE.md](docs/P0_MONOREPO_HYGIENE.md)**
+Canon doc index: **[docs/CANON.md](docs/CANON.md)** · Hygiene: **[docs/P0_MONOREPO_HYGIENE.md](docs/P0_MONOREPO_HYGIENE.md)** · Topology: **[docs/GOLDEN_TOPOLOGY.md](docs/GOLDEN_TOPOLOGY.md)** · Packages: **[docs/LIVE_PACKAGES.md](docs/LIVE_PACKAGES.md)**
+
+**Docker golden path (from root):** configure `monad-ecosystem/.env.production`, then `pnpm topology:up` (or `docker compose --env-file monad-ecosystem/.env.production up -d --build`). Health: `http://localhost:3001/health`.
 
 ---
 
