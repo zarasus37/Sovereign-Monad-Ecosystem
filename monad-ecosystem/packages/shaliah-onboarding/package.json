@@ -15,9 +15,13 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "test": "tsx --test src/arc.test.ts src/lessonEngine/engine.test.ts src/fg/fg.test.ts src/prompts/shaliahOffices.test.ts src/phase1Circuit.test.ts src/phase2ShadowMarket.test.ts src/phase3Archon.test.ts",
+    "test": "tsx --test src/arc.test.ts src/lessonEngine/engine.test.ts src/fg/fg.test.ts src/fg/meshaleachPoCMint.test.ts src/prompts/shaliahOffices.test.ts src/phase1Circuit.test.ts src/phase2ShadowMarket.test.ts src/phase3Archon.test.ts",
     "demo": "tsx src/demo.ts",
     "demo:fg": "tsx src/fgDemo.ts"
+  },
+  "dependencies": {
+    "@sovereign/types": "workspace:*",
+    "ethers": "^6.13.5"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

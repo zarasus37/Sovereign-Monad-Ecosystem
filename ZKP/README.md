@@ -232,20 +232,25 @@ Use the lightest tool that matches the verifier’s hostility.
 | 2026-07-30 | `ZKP/` opened as design home; Phase 0 = signed PoC; Phase 1 = selective disclosure; Phase 2 = circuits. |
 | 2026-08-04 | **Dual-pop locked:** Shaliah-outward memory privacy **primary**; autonomous standing **secondary**; no ZK wall human↔Shaliah; ZK ≠ memory store. |
 | 2026-08-04 | **Phase 0 engineered:** PoC / consent-grant / memory-epoch-commit schemas + `@sovereign/types` + fixtures + tests. |
+| 2026-08-05 | **Phase 1 + FG mint:** EIP-191 MeshaleachPoC on gate pass; Merkle domain-tag / memory-epoch commit+reveal (`merkle-sd`). |
 | — | Colon / founder seat is the 12th of the onboarding Council set (already in registry); identity-factory batch covers the other 11 historical windows. |
 
 ---
 
 ## 12. Next concrete engineering
 
-**Phase 0 complete** (schemas + types + validators + fixtures).
+**Phase 0 complete** · **Phase 1 Merkle + FG mint complete**
 
 1. ~~Formalize Meshaleach / PoC JSON schema~~  
 2. ~~Consent + memory epoch commit model~~  
-3. **Phase 1:** commitment + reveal for domain tags / memory epochs (Merkle or SD-JWT).  
-4. Wire FG mint / onboarding completion to emit `MeshaleachPoC` + optional `MemoryEpochCommit` (signature real EIP-191).  
+3. ~~Phase 1 Merkle commitment + reveal (`merkle-commit.ts`) for domain tags / epochs~~  
+4. ~~Wire FG gate pass → EIP-191 `MeshaleachPoC` mint (`meshaleachPoCMint.ts` + `FgMintOpts`)~~  
 5. One **reference circuit** (Phase 2): “gate_passed ∧ human_bound” public, principal salt private.  
-6. Autonomous standing proofs — only after Shaliah-outward path is real.
+6. Autonomous standing proofs — only after Shaliah-outward path is real.  
+
+**Code entry:**  
+- Mint/verify: `@sovereign/shaliah-onboarding` → `mintMeshaleachPoC`, `verifyMeshaleachPoC`, `attemptFg*Gate(..., mint?)`  
+- Merkle: `@sovereign/types` → `commitDomainTags`, `verifyMerkleProof`, `commitMemoryEpochs`
 
 ---
 

@@ -244,6 +244,7 @@ export type {
   PoCIntegrity,
   PoCPublicClaims,
   PoCProof,
+  PoCMerkleDisclosure,
   MeshaleachPoC,
 } from './types/meshaleach-poc.js';
 export {
@@ -251,6 +252,16 @@ export {
   MESHALEACH_POC_ISSUER_DEFAULT,
   FG_DOMAIN_TAGS,
 } from './types/meshaleach-poc.js';
+export type { HexHash, MerkleProof, MerkleTree } from './types/merkle-commit.js';
+export {
+  hashLeaf,
+  buildMerkleTree,
+  buildMerkleFromRecords,
+  getMerkleProof,
+  verifyMerkleProof,
+  commitDomainTags,
+  memoryEpochLeafRecord,
+} from './types/merkle-commit.js';
 export type {
   ConsentDataLayer,
   ConsentGrantStatus,

@@ -7,6 +7,8 @@ import { randomUUID } from 'node:crypto';
 import { completeLessonHappyPath, startLesson } from '../lessonEngine/engine.js';
 import type { LessonRuntime } from '../lessonEngine/types.js';
 import { getLesson, FG1_LESSON_IDS, FG2_LESSON_IDS, FG3_LESSON_IDS } from './curriculum.js';
+import type { MeshaleachPoC } from '@sovereign/types';
+import type { Signer } from 'ethers';
 import {
   evaluateFg1Gate,
   evaluateFg2Gate,
@@ -16,6 +18,10 @@ import {
   type Fg3Answers,
   type GateBatteryResult,
 } from './gates.js';
+import {
+  buildUnsignedMeshaleachPoC,
+  mintMeshaleachPoC,
+} from './meshaleachPoCMint.js';
 
 export type FgProgressState =
   | 'fg_locked'
@@ -46,12 +52,21 @@ export interface FgSession {
   completedLessons: string[];
   activeLesson?: LessonRuntime;
   gateResults: GateBatteryResult[];
+  /** Issued Meshaleach PoC seals (one per passed gate when mint opts provided). */
+  meshaleachSeals: MeshaleachPoC[];
   /** r locked at 0.20 until fg3_passed */
   r: number;
   rLocked: boolean;
   lastRateChangeAt?: number;
   unlocked: FgUnlocks;
   events: Array<{ id: string; kind: string; at: number; payload?: Record<string, unknown> }>;
+}
+
+/** Optional wallet signer for real EIP-191 MeshaleachPoC mint on gate pass. */
+export interface FgMintOpts {
+  readonly signer: Signer;
+  readonly walletAddress?: string;
+  readonly withMerkleDisclosure?: boolean;
 }
 
 const DEFAULT_R = 0.2;
@@ -76,6 +91,7 @@ export function startFgSession(principalId: string, now = Date.now()): FgSession
     state: 'fg1_in_progress',
     completedLessons: [],
     gateResults: [],
+    meshaleachSeals: [],
     r: DEFAULT_R,
     rLocked: true,
     unlocked: emptyUnlocks(),
@@ -88,6 +104,41 @@ export function startFgSession(principalId: string, now = Date.now()): FgSession
       },
     ],
   };
+}
+
+async function maybeMintSeal(
+  session: FgSession,
+  result: GateBatteryResult,
+  mint: FgMintOpts | undefined,
+  now: number,
+): Promise<MeshaleachPoC | undefined> {
+  if (!result.passed || !mint) return undefined;
+  const unsigned = buildUnsignedMeshaleachPoC({
+    principalId: session.principalId,
+    gateResult: result,
+    walletAddress: mint.walletAddress,
+    issuedAt: new Date(now).toISOString(),
+    allDomainTags: session.unlocked.domainTags.includes(result.domainTag)
+      ? session.unlocked.domainTags
+      : [...session.unlocked.domainTags, result.domainTag],
+    withMerkleDisclosure: mint.withMerkleDisclosure ?? true,
+    population: 'shaliah',
+  });
+  const { poc, signerAddress } = await mintMeshaleachPoC(unsigned, mint.signer);
+  session.meshaleachSeals.push(poc);
+  session.events.push({
+    id: randomUUID(),
+    kind: 'fg.meshaleach_poc_minted',
+    at: now,
+    payload: {
+      gate: result.gate,
+      domain_tag: poc.domain_tag,
+      proof_system: poc.proof.system,
+      signer: signerAddress,
+      principal_commitment: poc.principal_commitment,
+    },
+  });
+  return poc;
 }
 
 /** Growth Capital may arm before FG; r still locked. */
@@ -161,11 +212,12 @@ export function fg3LessonsComplete(session: FgSession): boolean {
   return FG3_LESSON_IDS.every((id) => session.completedLessons.includes(id));
 }
 
-export function attemptFg1Gate(
+export async function attemptFg1Gate(
   session: FgSession,
   answers: Fg1Answers,
   now = Date.now(),
-): GateBatteryResult {
+  mint?: FgMintOpts,
+): Promise<GateBatteryResult> {
   if (!fg1LessonsComplete(session)) {
     throw new Error('Complete L1.1–L1.5 before FG-1 gate battery');
   }
@@ -185,15 +237,17 @@ export function attemptFg1Gate(
       safeDeployMenu: true,
       domainTags: [...session.unlocked.domainTags, result.domainTag],
     };
+    await maybeMintSeal(session, result, mint, now);
   }
   return result;
 }
 
-export function attemptFg2Gate(
+export async function attemptFg2Gate(
   session: FgSession,
   answers: Fg2Answers,
   now = Date.now(),
-): GateBatteryResult {
+  mint?: FgMintOpts,
+): Promise<GateBatteryResult> {
   if (session.state !== 'fg2_in_progress' && session.state !== 'fg1_passed') {
     if (session.state !== 'fg2_passed' && session.state !== 'fg3_in_progress' && session.state !== 'fg3_passed') {
       // must have fg1
@@ -221,15 +275,17 @@ export function attemptFg2Gate(
       highRiskConfirm: true,
       domainTags: [...session.unlocked.domainTags, result.domainTag],
     };
+    await maybeMintSeal(session, result, mint, now);
   }
   return result;
 }
 
-export function attemptFg3Gate(
+export async function attemptFg3Gate(
   session: FgSession,
   answers: Fg3Answers,
   now = Date.now(),
-): GateBatteryResult {
+  mint?: FgMintOpts,
+): Promise<GateBatteryResult> {
   if (!(session.state === 'fg2_passed' || session.state === 'fg3_in_progress')) {
     throw new Error('FG-3 gate requires fg2_passed or fg3_in_progress');
   }
@@ -258,6 +314,7 @@ export function attemptFg3Gate(
       session.r = answers.chosenR;
       session.lastRateChangeAt = now;
     }
+    await maybeMintSeal(session, result, mint, now);
   }
   return result;
 }

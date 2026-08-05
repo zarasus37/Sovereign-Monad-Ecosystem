@@ -825,6 +825,13 @@ importers:
         version: 2.1.9(@edge-runtime/vm@3.2.0)(@types/node@22.7.5)
 
   monad-ecosystem/packages/shaliah-onboarding:
+    dependencies:
+      '@sovereign/types':
+        specifier: workspace:*
+        version: link:../sovereign-types
+      ethers:
+        specifier: ^6.13.5
+        version: 6.16.0
     devDependencies:
       '@types/node':
         specifier: ^20.0.0

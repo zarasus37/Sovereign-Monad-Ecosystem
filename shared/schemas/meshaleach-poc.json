@@ -81,7 +81,25 @@
           "enum": ["none", "merkle-sd", "groth16", "plonk"]
         },
         "bytes": { "type": ["string", "null"] },
-        "public_inputs": { "type": "array" }
+        "public_inputs": { "type": "array" },
+        "merkle": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["root", "leaf", "leafIndex", "path"],
+          "properties": {
+            "root": { "type": "string", "minLength": 1 },
+            "leaf": { "type": "string", "minLength": 1 },
+            "leafIndex": { "type": "integer", "minimum": 0 },
+            "path": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "revealed": {
+              "type": "object",
+              "additionalProperties": { "type": "string" }
+            }
+          }
+        }
       }
     },
     "signature": {

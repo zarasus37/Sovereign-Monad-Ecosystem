@@ -64,6 +64,19 @@ export function meshaleachPoCError(data: unknown): string | null {
   if (typeof data.proof.system !== 'string' || !PROOF_SYSTEMS.has(data.proof.system as PoCProofSystem)) {
     return 'proof.system invalid';
   }
+  if (data.proof.merkle !== undefined) {
+    if (!isRecord(data.proof.merkle)) return 'proof.merkle must be object';
+    const m = data.proof.merkle;
+    if (!isNonEmptyString(m.root) || !isNonEmptyString(m.leaf)) {
+      return 'proof.merkle.root and leaf required';
+    }
+    if (typeof m.leafIndex !== 'number' || m.leafIndex < 0) {
+      return 'proof.merkle.leafIndex invalid';
+    }
+    if (!Array.isArray(m.path) || !m.path.every(isNonEmptyString)) {
+      return 'proof.merkle.path must be string[]';
+    }
+  }
   if (!isNonEmptyString(data.signature)) return 'signature required';
   if (typeof data.population !== 'string' || !POPS.has(data.population as DualPopulation)) {
     return 'population must be shaliah|autonomous';

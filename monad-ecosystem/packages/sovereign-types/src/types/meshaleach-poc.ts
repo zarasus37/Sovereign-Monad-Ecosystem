@@ -38,10 +38,21 @@ export interface PoCPublicClaims {
   readonly human_bound: boolean;
 }
 
+/** Phase 1 Merkle selective disclosure attached to PoC proof. */
+export interface PoCMerkleDisclosure {
+  readonly root: string;
+  readonly leaf: string;
+  readonly leafIndex: number;
+  readonly path: readonly string[];
+  readonly revealed?: Readonly<Record<string, string>>;
+}
+
 export interface PoCProof {
   readonly system: PoCProofSystem;
   readonly bytes?: string | null;
   readonly public_inputs?: readonly unknown[];
+  /** When system is merkle-sd, path proves domain_tag (or epoch) membership. */
+  readonly merkle?: PoCMerkleDisclosure;
 }
 
 /**

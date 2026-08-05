@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
+import { Wallet } from 'ethers';
 import { FG_LESSONS, FG1_LESSON_IDS, getLesson } from './curriculum.js';
 import {
   attemptFg1Gate,
@@ -11,6 +12,7 @@ import {
   FG_R_DEFAULT,
 } from './fgSession.js';
 import { evaluateFg2Gate } from './gates.js';
+import { verifyMeshaleachPoC } from './meshaleachPoCMint.js';
 
 describe('FG curriculum catalog', () => {
   it('has 14 content lessons L1.1–L3.4', () => {
@@ -21,13 +23,13 @@ describe('FG curriculum catalog', () => {
 });
 
 describe('FG session', () => {
-  it('locks r until FG-3 and unlocks rate sovereignty', () => {
+  it('locks r until FG-3 and unlocks rate sovereignty', async () => {
     const s = startFgSession('mesh-1');
     assert.equal(s.r, FG_R_DEFAULT);
     assert.equal(s.rLocked, true);
 
     completeLessonsForGate(s, 'fg1', 1_000);
-    const g1 = attemptFg1Gate(
+    const g1 = await attemptFg1Gate(
       s,
       {
         defiRisk: 'Safer pool with audit; risks include liquidity and smart contract drawdown.',
@@ -52,7 +54,7 @@ describe('FG session', () => {
     });
     assert.equal(g2fail.passed, false);
 
-    const g2 = attemptFg2Gate(
+    const g2 = await attemptFg2Gate(
       s,
       {
         channelAlloc: 'I fund claim community and job escrow without pure private hoarding.',
@@ -68,7 +70,7 @@ describe('FG session', () => {
     assert.equal(s.unlocked.highRiskConfirm, true);
 
     completeLessonsForGate(s, 'fg3', 5_000);
-    const g3 = attemptFg3Gate(
+    const g3 = await attemptFg3Gate(
       s,
       {
         ratePredictions:
@@ -94,6 +96,32 @@ describe('FG session', () => {
     const okLater = setUserRate(s, 0.1, 6_000 + 31 * 24 * 60 * 60 * 1000);
     assert.equal(okLater.ok, true);
     assert.equal(s.r, 0.1);
+  });
+
+  it('mints EIP-191 MeshaleachPoC with merkle-sd on gate pass', async () => {
+    const wallet = Wallet.createRandom();
+    const s = startFgSession('mesh-poc');
+    completeLessonsForGate(s, 'fg1', 1_000);
+    const g1 = await attemptFg1Gate(
+      s,
+      {
+        defiRisk: 'Safer pool with audit; risks include liquidity and smart contract drawdown.',
+        timePreference: 'I trade time for compound future growth with patience.',
+        realEconomy: 'Storage and time cost of waiting on commodity demand.',
+        claimExplain: 'My claim is units; NAV is the collective pool value of funds.',
+      },
+      2_000,
+      { signer: wallet, walletAddress: wallet.address, withMerkleDisclosure: true },
+    );
+    assert.equal(g1.passed, true);
+    assert.equal(s.meshaleachSeals.length, 1);
+    const poc = s.meshaleachSeals[0]!;
+    assert.equal(poc.gate, 'fg1');
+    assert.equal(poc.proof.system, 'merkle-sd');
+    assert.ok(poc.proof.merkle);
+    const v = verifyMeshaleachPoC(poc, { expectedAddress: wallet.address });
+    assert.equal(v.ok, true, v.ok ? '' : v.error);
+    assert.ok(s.events.some((e) => e.kind === 'fg.meshaleach_poc_minted'));
   });
 
   it('rejects r outside bounds after FG-3', () => {
