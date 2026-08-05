@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/schemas/memory-epoch-commit.json",
+  "title": "MemoryEpochCommit",
+  "description": "Phase 0 commitment to a memory epoch blob without revealing contents. Chain via prev_commit. Privacy layer (ZKP/SD) can later prove membership/consent without opening the vessel. See ZKP/README.md §2.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "principal_commitment",
+    "epoch_id",
+    "commit",
+    "consent_layers",
+    "purpose_tags",
+    "created_at",
+    "signature",
+    "population"
+  ],
+  "properties": {
+    "schema_version": { "const": "memory-epoch.v1" },
+    "principal_commitment": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Commitment to principal (preferred over clear principal_id for outward proofs)."
+    },
+    "epoch_id": { "type": "string", "minLength": 1 },
+    "prev_commit": {
+      "type": ["string", "null"],
+      "description": "Previous epoch commit hash for chain integrity; null for genesis epoch."
+    },
+    "commit": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Hash/commitment of encrypted epoch payload + metadata."
+    },
+    "consent_layers": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "enum": ["I", "II", "III", "IV", "V"] },
+      "uniqueItems": true
+    },
+    "purpose_tags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "store_ops": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Optional count of store ops in epoch (no content)."
+    },
+    "recall_ops": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Optional count of recall ops in epoch (no content)."
+    },
+    "signature": { "type": "string", "minLength": 1 },
+    "population": {
+      "type": "string",
+      "enum": ["shaliah", "autonomous"],
+      "description": "Shaliah primary for Phase 0 memory vessel."
+    }
+  }
+}

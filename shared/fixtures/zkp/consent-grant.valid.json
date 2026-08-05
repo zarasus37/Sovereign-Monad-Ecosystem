@@ -1,0 +1,13 @@
+{
+  "schema_version": "consent.v1",
+  "grant_id": "grant-001",
+  "principal_commitment": "0xabc123commitment",
+  "layer": "III",
+  "purpose": "shaliah.coach",
+  "granted_at": "2026-08-04T20:00:00.000Z",
+  "expires_at": null,
+  "revoked_at": null,
+  "status": "active",
+  "signature": "0xphase0placeholder-signature",
+  "population": "shaliah"
+}

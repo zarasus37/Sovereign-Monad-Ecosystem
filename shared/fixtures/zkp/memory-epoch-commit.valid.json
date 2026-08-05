@@ -1,0 +1,14 @@
+{
+  "schema_version": "memory-epoch.v1",
+  "principal_commitment": "0xabc123commitment",
+  "epoch_id": "epoch-0001",
+  "prev_commit": null,
+  "commit": "0xepochblobcommit",
+  "consent_layers": ["I", "II", "III"],
+  "purpose_tags": ["shaliah.coach", "shaliah.mirror"],
+  "created_at": "2026-08-04T20:00:00.000Z",
+  "store_ops": 3,
+  "recall_ops": 1,
+  "signature": "0xphase0placeholder-signature",
+  "population": "shaliah"
+}

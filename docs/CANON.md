@@ -74,6 +74,9 @@
 |-------|----------------|
 | ZKP doctrine | [`../ZKP/README.md`](../ZKP/README.md) |
 | Claim map | [`../ZKP/CLAIM_MAP.md`](../ZKP/CLAIM_MAP.md) |
+| Dual-pop ZKP decision | [`../ZKP/DECISION_DUAL_POP.md`](../ZKP/DECISION_DUAL_POP.md) |
+| Phase 0 schemas | `shared/schemas/meshaleach-poc.json`, `consent-grant.json`, `memory-epoch-commit.json` |
+| Phase 0 types | `@sovereign/types` — `MeshaleachPoC`, `ConsentGrant`, `MemoryEpochCommit` |
 | Consent-graded data | [`Shaliah Agents/consent-graded-data-exchange-whitepaper.md`](Shaliah%20Agents/consent-graded-data-exchange-whitepaper.md) |
 
 ## Explicitly non-canon

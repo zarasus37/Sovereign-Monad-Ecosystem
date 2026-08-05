@@ -232,6 +232,46 @@ export type {
 } from './types/wallet-bind.js';
 export { WALLET_BIND_MESSAGE_PREFIX } from './types/wallet-bind.js';
 
+// ── ZKP Phase 0: Meshaleach PoC + consent + memory epoch ─────────────────────
+// Doctrine: ZKP/README.md — privacy layer around memory; Shaliah-outward primary.
+// JSON Schema: shared/schemas/{meshaleach-poc,consent-grant,memory-epoch-commit}.json
+export type {
+  FgGate,
+  MeshaleachDomainTag,
+  DualPopulation,
+  PoCProofSystem,
+  IntegrityComponents,
+  PoCIntegrity,
+  PoCPublicClaims,
+  PoCProof,
+  MeshaleachPoC,
+} from './types/meshaleach-poc.js';
+export {
+  MESHALEACH_POC_SCHEMA_VERSION,
+  MESHALEACH_POC_ISSUER_DEFAULT,
+  FG_DOMAIN_TAGS,
+} from './types/meshaleach-poc.js';
+export type {
+  ConsentDataLayer,
+  ConsentGrantStatus,
+  ConsentGrant,
+} from './types/consent-grant.js';
+export {
+  CONSENT_GRANT_SCHEMA_VERSION,
+  CONSENT_DATA_LAYERS,
+} from './types/consent-grant.js';
+export type { MemoryEpochCommit } from './types/memory-epoch.js';
+export { MEMORY_EPOCH_SCHEMA_VERSION } from './types/memory-epoch.js';
+export {
+  meshaleachPoCError,
+  isMeshaleachPoC,
+  consentGrantError,
+  isConsentGrant,
+  isConsentGrantActive,
+  memoryEpochCommitError,
+  isMemoryEpochCommit,
+} from './types/zkp-phase0-validate.js';
+
 // ── Cardia funding (Vector 3.3) ──────────────────────────────────────────────
 export type {
   FundingStatus,

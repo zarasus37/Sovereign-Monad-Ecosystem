@@ -1,0 +1,23 @@
+{
+  "schema_version": "poc.v1",
+  "principal_commitment": "0xabc123commitment",
+  "gate": "fg2",
+  "domain_tag": "fg2.stewardship",
+  "lesson_ids": ["fg2-t1-risk", "fg2-t3-drawdown"],
+  "integrity": {
+    "hash": "0xintegrityhash"
+  },
+  "issued_at": "2026-08-04T20:00:00.000Z",
+  "issuer": "meshaleach-v1",
+  "public_claims": {
+    "gate_passed": true,
+    "human_bound": true
+  },
+  "proof": {
+    "system": "none",
+    "bytes": null,
+    "public_inputs": []
+  },
+  "signature": "0xphase0placeholder-signature",
+  "population": "shaliah"
+}

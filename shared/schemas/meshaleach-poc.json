@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/schemas/meshaleach-poc.json",
+  "title": "MeshaleachPoC",
+  "description": "Phase 0 Proof of Cognition / Meshaleach seal envelope. proof.system=none until selective disclosure or ZK is wired. See ZKP/README.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "gate",
+    "domain_tag",
+    "lesson_ids",
+    "integrity",
+    "issued_at",
+    "issuer",
+    "public_claims",
+    "proof",
+    "signature",
+    "population"
+  ],
+  "properties": {
+    "schema_version": { "const": "poc.v1" },
+    "principal_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Clear principal id when internal; omit if only principal_commitment is used outward."
+    },
+    "principal_commitment": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Privacy-preserving commitment (e.g. 0x + hex). Preferred for external verifiers."
+    },
+    "gate": { "type": "string", "enum": ["fg1", "fg2", "fg3"] },
+    "domain_tag": {
+      "type": "string",
+      "minLength": 1,
+      "description": "e.g. fg1.literacy | fg2.stewardship | fg3.rate_sovereignty"
+    },
+    "lesson_ids": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "components": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "N_i": { "type": "number", "minimum": 0, "maximum": 1 },
+            "C_i": { "type": "number", "minimum": 0, "maximum": 1 },
+            "P_i": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "hash": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Hash of integrity components when components are not revealed."
+        }
+      }
+    },
+    "issued_at": { "type": "string", "format": "date-time" },
+    "issuer": { "type": "string", "minLength": 1 },
+    "public_claims": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gate_passed", "human_bound"],
+      "properties": {
+        "gate_passed": { "type": "boolean" },
+        "human_bound": { "type": "boolean" }
+      }
+    },
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system"],
+      "properties": {
+        "system": {
+          "type": "string",
+          "enum": ["none", "merkle-sd", "groth16", "plonk"]
+        },
+        "bytes": { "type": ["string", "null"] },
+        "public_inputs": { "type": "array" }
+      }
+    },
+    "signature": {
+      "type": "string",
+      "minLength": 1,
+      "description": "EIP-191 or issuer signature over canonical payload (excluding signature field)."
+    },
+    "population": {
+      "type": "string",
+      "enum": ["shaliah", "autonomous"],
+      "description": "Dual-pop tag: Shaliah seals are primary Phase 0 consumers."
+    }
+  },
+  "anyOf": [
+    { "required": ["principal_id"] },
+    { "required": ["principal_commitment"] }
+  ]
+}

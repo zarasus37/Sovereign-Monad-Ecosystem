@@ -145,11 +145,16 @@ Quick table: [CLAIM_MAP.md](./CLAIM_MAP.md).
 
 ## 7. Phased implementation
 
-### Phase 0 — Now (no circuits) — **Shaliah-first**
-- Structured **PoC payload** + Integrity signature (FG curriculum minimum).
-- Meshaleach Seal as **signed claim** (EIP-191 / equivalent).
-- Consent registry: class × purpose × expiry × revocable.
-- Private memory vessel + ACL (store/recall under purpose tags).
+### Phase 0 — Done (no circuits) — **Shaliah-first**
+- Structured **PoC payload** + Integrity signature fields (FG curriculum minimum).
+- Meshaleach Seal envelope as **signed claim** shape (`proof.system: "none"`).
+- Consent grant: class × purpose × expiry × revocable.
+- Memory epoch **commits** (chainable hashes; no content in the clear).
+- **Artifacts:**
+  - Schemas: `shared/schemas/meshaleach-poc.json`, `consent-grant.json`, `memory-epoch-commit.json`
+  - Types + pure guards: `@sovereign/types` (`MeshaleachPoC`, `ConsentGrant`, `MemoryEpochCommit`, `is*` validators)
+  - Fixtures: `shared/fixtures/zkp/*.valid.json`
+  - Tests: `monad-ecosystem/tests/integration/zkp-phase0-schemas.test.ts`
 
 ### Phase 1 — Selective disclosure (often enough before SNARKs)
 - Merkle commitments over credential attributes; reveal paths for needed fields only.
@@ -226,17 +231,20 @@ Use the lightest tool that matches the verifier’s hostility.
 | 2026-07-28 | ZKP has genuine role for **credential / eligibility / consent** privacy; not for covenant action audit. |
 | 2026-07-30 | `ZKP/` opened as design home; Phase 0 = signed PoC; Phase 1 = selective disclosure; Phase 2 = circuits. |
 | 2026-08-04 | **Dual-pop locked:** Shaliah-outward memory privacy **primary**; autonomous standing **secondary**; no ZK wall human↔Shaliah; ZK ≠ memory store. |
+| 2026-08-04 | **Phase 0 engineered:** PoC / consent-grant / memory-epoch-commit schemas + `@sovereign/types` + fixtures + tests. |
 | — | Colon / founder seat is the 12th of the onboarding Council set (already in registry); identity-factory batch covers the other 11 historical windows. |
 
 ---
 
-## 12. Next concrete engineering (when greenlit)
+## 12. Next concrete engineering
 
-1. Formalize **Meshaleach / PoC JSON schema** (Phase 0) in `shared/` or `monad-ecosystem`.  
-2. Consent + **memory epoch commit** model (Phase 0 vessel, Phase 1 prove-about).  
-3. Implement **commitment + reveal** for domain tags (Phase 1).  
-4. One **reference circuit**: “gate_passed ∧ human_bound” public, principal salt private (Phase 2 spike).  
-5. Wire FG mint path to attach proof artifact without breaking current signature flow.  
+**Phase 0 complete** (schemas + types + validators + fixtures).
+
+1. ~~Formalize Meshaleach / PoC JSON schema~~  
+2. ~~Consent + memory epoch commit model~~  
+3. **Phase 1:** commitment + reveal for domain tags / memory epochs (Merkle or SD-JWT).  
+4. Wire FG mint / onboarding completion to emit `MeshaleachPoC` + optional `MemoryEpochCommit` (signature real EIP-191).  
+5. One **reference circuit** (Phase 2): “gate_passed ∧ human_bound” public, principal salt private.  
 6. Autonomous standing proofs — only after Shaliah-outward path is real.
 
 ---
