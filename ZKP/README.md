@@ -234,6 +234,7 @@ Use the lightest tool that matches the verifier’s hostility.
 | 2026-08-04 | **Phase 0 engineered:** PoC / consent-grant / memory-epoch-commit schemas + `@sovereign/types` + fixtures + tests. |
 | 2026-08-05 | **Phase 1 + FG mint:** EIP-191 MeshaleachPoC on gate pass; Merkle domain-tag / memory-epoch commit+reveal (`merkle-sd`). |
 | 2026-08-05 | **Phase 2 SNARK + custody + UI:** Circom/snarkjs Groth16; issuer Key Vault/env; `useFgMintOpts` after wallet bind. |
+| 2026-08-05 | **FG UI + ptau runbook:** `/onboarding/financial-graduation` calls `getFgMintOpts` per gate; `PRODUCTION_PTAU.md` for multi-party ceremony. |
 | — | Colon / founder seat is the 12th of the onboarding Council set (already in registry); identity-factory batch covers the other 11 historical windows. |
 
 ---
@@ -249,13 +250,17 @@ Use the lightest tool that matches the verifier’s hostility.
 5. ~~Groth16 SNARK `gate_passed ∧ human_bound` (`@sovereign/meshaleach-zk`)~~  
 6. ~~Production issuer custody (`getMeshaleachIssuerSigner`)~~  
 7. ~~Wallet-bind UI → `useFgMintOpts` / `fgMintBridge`~~  
-8. Autonomous standing proofs — reuse machinery later.  
+8. ~~FG UI page → `getFgMintOpts` per gate + MeshaleachPoC mint~~  
+9. ~~Production ptau ceremony runbook~~ (`meshaleach-zk/PRODUCTION_PTAU.md`)  
+10. Execute multi-party ceremony + pin production vkey (ops)  
+11. Autonomous standing proofs — reuse machinery later.  
 
 **Code entry:**  
 - Mint/verify: `@sovereign/shaliah-onboarding` → `mintMeshaleachPoC`, `FgMintOpts.withSnark`, `useIssuerCustody`  
 - SNARK: `@sovereign/meshaleach-zk` → `proveGateHumanBound` / `verifyGateHumanBound`  
+- Production ptau: `monad-ecosystem/packages/meshaleach-zk/PRODUCTION_PTAU.md`  
 - Issuer: `MESHALEACH_ISSUER_PRIVATE_KEY` or Key Vault `MESHALEACH-ISSUER-KEY`  
-- UI: `useFgMintOpts().getFgMintOpts()` after Live Activation bind
+- UI: `/onboarding/financial-graduation` → `useFgMintOpts().getFgMintOpts()` on each FG gate
 
 ---
 

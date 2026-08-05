@@ -122,6 +122,15 @@ export function LiveActivationGate() {
               <span className="text-emerald-500">useFgMintOpts().getFgMintOpts()</span>{" "}
               when running FG-1–3 gate batteries.
             </p>
+            <Button
+              variant="outline"
+              className="mt-5 font-mono text-xs h-9 border-emerald-800 text-emerald-400"
+              asChild
+            >
+              <Link to="/onboarding/financial-graduation">
+                Continue → Financial Graduation
+              </Link>
+            </Button>
           </div>
         )}
       </div>

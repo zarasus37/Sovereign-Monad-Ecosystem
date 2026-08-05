@@ -56,6 +56,7 @@ wheels/
 !monad-ecosystem/packages/sovereign-host/src/lib/
 !monad-ecosystem/packages/hepar-service/src/lib/
 !monad-ecosystem/packages/gate-acl/src/lib/
+!monad-ecosystem/control-center/src/frontend/src/lib/
 
 # Node / JS / TS / Motoko
 node_modules/

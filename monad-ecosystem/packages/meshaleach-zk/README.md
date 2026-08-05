@@ -18,6 +18,8 @@ Outputs (commit these for CI):
 
 **Note:** `build/` ptau is a **demo ceremony** — re-run a real powers-of-tau for production.
 
+**Production runbook:** [PRODUCTION_PTAU.md](./PRODUCTION_PTAU.md) (public Phase-1 ptau + multi-party Phase-2, verify zkey, pin vkey).
+
 ## API
 
 ```ts

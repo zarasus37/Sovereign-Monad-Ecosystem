@@ -80,6 +80,8 @@
 | Phase 2 SNARK | `@sovereign/meshaleach-zk` — `gate_passed ∧ human_bound` Groth16 |
 | FG mint + issuer | `@sovereign/shaliah-onboarding` — `FgMintOpts`, `getMeshaleachIssuerSigner` |
 | Browser FgMintOpts | `control-center/.../lib/fgMintBridge.ts`, `hooks/useFgMintOpts.ts` |
+| FG UI (getFgMintOpts per gate) | `control-center/.../pages/onboarding/FinancialGraduation.tsx` · route `/onboarding/financial-graduation` |
+| Production ptau ceremony | `monad-ecosystem/packages/meshaleach-zk/PRODUCTION_PTAU.md` |
 | Consent-graded data | [`Shaliah Agents/consent-graded-data-exchange-whitepaper.md`](Shaliah%20Agents/consent-graded-data-exchange-whitepaper.md) |
 
 ## Explicitly non-canon

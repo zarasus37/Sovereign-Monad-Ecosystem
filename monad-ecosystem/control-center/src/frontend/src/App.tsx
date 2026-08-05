@@ -20,6 +20,7 @@ import BrokenGenesisPage from "@/pages/onboarding/BrokenGenesisPuzzle";
 import HeparShadowMarketPage from "@/pages/onboarding/HeparShadowMarket";
 import ArchonInterrogationPage from "@/pages/onboarding/ArchonInterrogation";
 import LiveActivationGatePage from "@/pages/onboarding/LiveActivationGate";
+import FinancialGraduationPage from "@/pages/onboarding/FinancialGraduation";
 import {
   RouterProvider,
   createRootRoute,
@@ -134,6 +135,11 @@ const routes = [
     getParentRoute: () => rootRoute,
     path: "/onboarding/live-activation",
     component: LiveActivationGatePage,
+  }),
+  createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/onboarding/financial-graduation",
+    component: FinancialGraduationPage,
   }),
 ];
 

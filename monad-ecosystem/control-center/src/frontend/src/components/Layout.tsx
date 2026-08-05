@@ -28,6 +28,7 @@ const NAV_LAYERS = [
   { layer: 19, label: "Onboarding · Shadow Market", route: "/onboarding/shadow-market" },
   { layer: 20, label: "Onboarding · Archon Gate", route: "/onboarding/archon-gate" },
   { layer: 21, label: "Onboarding · Live Activation", route: "/onboarding/live-activation" },
+  { layer: 22, label: "Onboarding · Financial Graduation", route: "/onboarding/financial-graduation" },
 ] as const;
 
 function Sidebar() {
