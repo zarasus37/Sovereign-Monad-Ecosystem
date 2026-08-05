@@ -174,8 +174,13 @@ export function useBindWallet() {
         status: string;
       };
       setBoundWallet(data.walletAddress);
+      // Marks fgMintReady — useFgMintOpts / resolveFgMintOpts can now build
+      // FgMintOpts from this same injected wallet for MeshaleachPoC mint.
       setStatusHint(null);
       console.log(`[Wallet Bind] ${data.status} → ${data.walletAddress}`);
+      console.log(
+        "[Wallet Bind] FG mint ready — call useFgMintOpts().getFgMintOpts() for EIP-191 seals",
+      );
       return data.walletAddress;
     } catch (err: unknown) {
       const raw = err instanceof Error ? err.message : "Binding failed";

@@ -233,24 +233,29 @@ Use the lightest tool that matches the verifier’s hostility.
 | 2026-08-04 | **Dual-pop locked:** Shaliah-outward memory privacy **primary**; autonomous standing **secondary**; no ZK wall human↔Shaliah; ZK ≠ memory store. |
 | 2026-08-04 | **Phase 0 engineered:** PoC / consent-grant / memory-epoch-commit schemas + `@sovereign/types` + fixtures + tests. |
 | 2026-08-05 | **Phase 1 + FG mint:** EIP-191 MeshaleachPoC on gate pass; Merkle domain-tag / memory-epoch commit+reveal (`merkle-sd`). |
+| 2026-08-05 | **Phase 2 SNARK + custody + UI:** Circom/snarkjs Groth16; issuer Key Vault/env; `useFgMintOpts` after wallet bind. |
 | — | Colon / founder seat is the 12th of the onboarding Council set (already in registry); identity-factory batch covers the other 11 historical windows. |
 
 ---
 
 ## 12. Next concrete engineering
 
-**Phase 0 complete** · **Phase 1 Merkle + FG mint complete**
+**Phase 0–2 core path complete** (demo ptau — re-ceremony for prod)
 
 1. ~~Formalize Meshaleach / PoC JSON schema~~  
 2. ~~Consent + memory epoch commit model~~  
-3. ~~Phase 1 Merkle commitment + reveal (`merkle-commit.ts`) for domain tags / epochs~~  
-4. ~~Wire FG gate pass → EIP-191 `MeshaleachPoC` mint (`meshaleachPoCMint.ts` + `FgMintOpts`)~~  
-5. One **reference circuit** (Phase 2): “gate_passed ∧ human_bound” public, principal salt private.  
-6. Autonomous standing proofs — only after Shaliah-outward path is real.  
+3. ~~Phase 1 Merkle commitment + reveal~~  
+4. ~~Wire FG gate pass → EIP-191 `MeshaleachPoC` mint~~  
+5. ~~Groth16 SNARK `gate_passed ∧ human_bound` (`@sovereign/meshaleach-zk`)~~  
+6. ~~Production issuer custody (`getMeshaleachIssuerSigner`)~~  
+7. ~~Wallet-bind UI → `useFgMintOpts` / `fgMintBridge`~~  
+8. Autonomous standing proofs — reuse machinery later.  
 
 **Code entry:**  
-- Mint/verify: `@sovereign/shaliah-onboarding` → `mintMeshaleachPoC`, `verifyMeshaleachPoC`, `attemptFg*Gate(..., mint?)`  
-- Merkle: `@sovereign/types` → `commitDomainTags`, `verifyMerkleProof`, `commitMemoryEpochs`
+- Mint/verify: `@sovereign/shaliah-onboarding` → `mintMeshaleachPoC`, `FgMintOpts.withSnark`, `useIssuerCustody`  
+- SNARK: `@sovereign/meshaleach-zk` → `proveGateHumanBound` / `verifyGateHumanBound`  
+- Issuer: `MESHALEACH_ISSUER_PRIVATE_KEY` or Key Vault `MESHALEACH-ISSUER-KEY`  
+- UI: `useFgMintOpts().getFgMintOpts()` after Live Activation bind
 
 ---
 

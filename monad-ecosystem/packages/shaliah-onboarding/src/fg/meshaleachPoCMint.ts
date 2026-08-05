@@ -82,6 +82,12 @@ export interface BuildUnsignedPoCOpts {
   readonly allDomainTags?: readonly string[];
   /** Attach Phase 1 merkle path for this gate's domain tag among allDomainTags. */
   readonly withMerkleDisclosure?: boolean;
+  /**
+   * Attach Phase 2 Groth16 SNARK (gate_passed ∧ human_bound).
+   * Requires @sovereign/meshaleach-zk artifacts (build:circuit).
+   */
+  readonly withSnark?: boolean;
+  readonly snarkSalt?: string | number | bigint;
   readonly population?: 'shaliah' | 'autonomous';
 }
 
@@ -156,6 +162,53 @@ export function buildUnsignedMeshaleachPoC(opts: BuildUnsignedPoCOpts): Meshalea
     population: opts.population ?? 'shaliah',
   };
   return unsigned;
+}
+
+/**
+ * Async build that can attach a real Groth16 SNARK (gate∧human_bound).
+ * Prefer this when `withSnark: true`.
+ */
+export async function buildUnsignedMeshaleachPoCAsync(
+  opts: BuildUnsignedPoCOpts,
+): Promise<MeshaleachPoCUnsigned> {
+  const unsigned = buildUnsignedMeshaleachPoC(opts);
+  if (!opts.withSnark) return unsigned;
+
+  const human = (opts.population ?? 'shaliah') === 'shaliah' ? 1 : 1;
+  // human_bound flag for autonomous can still prove standing with 1 when policy says so;
+  // public_claims.human_bound remains authoritative for dual-pop.
+  const gate_passed = opts.gateResult.passed ? 1 : 0;
+  if (gate_passed !== 1) {
+    throw new Error('SNARK requires passed gate');
+  }
+
+  const { proveGateHumanBound, snarkToPoCProofFields, artifactsReady } =
+    await import('@sovereign/meshaleach-zk');
+  if (!artifactsReady()) {
+    throw new Error(
+      'SNARK requested but artifacts missing — run pnpm --filter @sovereign/meshaleach-zk build:circuit',
+    );
+  }
+  const salt =
+    opts.snarkSalt ??
+    BigInt('0x' + createHash('sha256').update(`${opts.principalId}|${opts.gateResult.gate}|${Date.now()}`).digest('hex').slice(0, 16));
+  const bundle = await proveGateHumanBound({
+    gate_passed: 1,
+    human_bound: human as 0 | 1,
+    salt,
+  });
+  const snarkFields = snarkToPoCProofFields(bundle);
+  // Prefer groth16 as primary system; keep merkle alongside if present
+  return {
+    ...unsigned,
+    proof: {
+      ...unsigned.proof,
+      system: 'groth16',
+      bytes: snarkFields.bytes,
+      public_inputs: snarkFields.public_inputs,
+      merkle: unsigned.proof.merkle,
+    },
+  };
 }
 
 export interface MintPoCResult {

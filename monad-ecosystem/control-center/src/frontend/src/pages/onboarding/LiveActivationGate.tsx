@@ -116,6 +116,12 @@ export function LiveActivationGate() {
             <p className="text-[10px] text-gray-600 mt-4">
               taskId: wallet-bind-tier1-activation · funding engine is next
             </p>
+            <p className="text-[10px] text-emerald-700/80 mt-3 max-w-md mx-auto leading-relaxed">
+              FG mint ready: this wallet is the FgMintOpts signer for MeshaleachPoC
+              (EIP-191). Use{" "}
+              <span className="text-emerald-500">useFgMintOpts().getFgMintOpts()</span>{" "}
+              when running FG-1–3 gate batteries.
+            </p>
           </div>
         )}
       </div>

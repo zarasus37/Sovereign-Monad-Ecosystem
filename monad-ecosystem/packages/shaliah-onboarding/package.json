@@ -20,8 +20,13 @@
     "demo:fg": "tsx src/fgDemo.ts"
   },
   "dependencies": {
+    "@sovereign/meshaleach-zk": "workspace:*",
     "@sovereign/types": "workspace:*",
     "ethers": "^6.13.5"
+  },
+  "optionalDependencies": {
+    "@azure/identity": "^4.5.0",
+    "@azure/keyvault-secrets": "^4.9.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

@@ -20,8 +20,10 @@ import {
 } from './gates.js';
 import {
   buildUnsignedMeshaleachPoC,
+  buildUnsignedMeshaleachPoCAsync,
   mintMeshaleachPoC,
 } from './meshaleachPoCMint.js';
+import { mintMeshaleachPoCWithIssuerCustody } from './issuerCustody.js';
 
 export type FgProgressState =
   | 'fg_locked'
@@ -67,6 +69,10 @@ export interface FgMintOpts {
   readonly signer: Signer;
   readonly walletAddress?: string;
   readonly withMerkleDisclosure?: boolean;
+  /** Attach Groth16 SNARK (gate∧human_bound) when meshaleach-zk artifacts exist. */
+  readonly withSnark?: boolean;
+  /** Use production issuer custody instead of user signer for EIP-191. */
+  readonly useIssuerCustody?: boolean;
 }
 
 const DEFAULT_R = 0.2;
@@ -113,7 +119,7 @@ async function maybeMintSeal(
   now: number,
 ): Promise<MeshaleachPoC | undefined> {
   if (!result.passed || !mint) return undefined;
-  const unsigned = buildUnsignedMeshaleachPoC({
+  const buildOpts = {
     principalId: session.principalId,
     gateResult: result,
     walletAddress: mint.walletAddress,
@@ -122,9 +128,17 @@ async function maybeMintSeal(
       ? session.unlocked.domainTags
       : [...session.unlocked.domainTags, result.domainTag],
     withMerkleDisclosure: mint.withMerkleDisclosure ?? true,
-    population: 'shaliah',
-  });
-  const { poc, signerAddress } = await mintMeshaleachPoC(unsigned, mint.signer);
+    withSnark: mint.withSnark ?? false,
+    population: 'shaliah' as const,
+  };
+  const unsigned = mint.withSnark
+    ? await buildUnsignedMeshaleachPoCAsync(buildOpts)
+    : buildUnsignedMeshaleachPoC(buildOpts);
+
+  const { poc, signerAddress } = mint.useIssuerCustody
+    ? await mintMeshaleachPoCWithIssuerCustody(unsigned)
+    : await mintMeshaleachPoC(unsigned, mint.signer);
+
   session.meshaleachSeals.push(poc);
   session.events.push({
     id: randomUUID(),
@@ -136,6 +150,7 @@ async function maybeMintSeal(
       proof_system: poc.proof.system,
       signer: signerAddress,
       principal_commitment: poc.principal_commitment,
+      issuer_custody: Boolean(mint.useIssuerCustody),
     },
   });
   return poc;

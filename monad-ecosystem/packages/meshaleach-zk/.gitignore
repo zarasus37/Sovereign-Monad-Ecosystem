@@ -1,0 +1,6 @@
+# Local circom binary (download via release; not committed)
+bin/
+# Intermediate powers-of-tau / r1cs build (keep final wasm/zkey/vkey)
+artifacts/build/
+node_modules/
+dist/

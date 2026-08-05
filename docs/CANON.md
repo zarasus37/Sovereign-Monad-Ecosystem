@@ -77,6 +77,9 @@
 | Dual-pop ZKP decision | [`../ZKP/DECISION_DUAL_POP.md`](../ZKP/DECISION_DUAL_POP.md) |
 | Phase 0 schemas | `shared/schemas/meshaleach-poc.json`, `consent-grant.json`, `memory-epoch-commit.json` |
 | Phase 0 types | `@sovereign/types` — `MeshaleachPoC`, `ConsentGrant`, `MemoryEpochCommit` |
+| Phase 2 SNARK | `@sovereign/meshaleach-zk` — `gate_passed ∧ human_bound` Groth16 |
+| FG mint + issuer | `@sovereign/shaliah-onboarding` — `FgMintOpts`, `getMeshaleachIssuerSigner` |
+| Browser FgMintOpts | `control-center/.../lib/fgMintBridge.ts`, `hooks/useFgMintOpts.ts` |
 | Consent-graded data | [`Shaliah Agents/consent-graded-data-exchange-whitepaper.md`](Shaliah%20Agents/consent-graded-data-exchange-whitepaper.md) |
 
 ## Explicitly non-canon

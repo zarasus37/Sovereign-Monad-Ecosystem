@@ -3,3 +3,4 @@ export * from './gates.js';
 export * from './fgSession.js';
 export * from './meshaleachPoCMint.js';
 export * from './memoryEpochMint.js';
+export * from './issuerCustody.js';

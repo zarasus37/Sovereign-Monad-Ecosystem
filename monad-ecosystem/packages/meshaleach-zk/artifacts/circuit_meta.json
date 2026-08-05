@@ -1,0 +1,12 @@
+{
+  "name": "gate_human_bound",
+  "system": "groth16",
+  "curve": "bn128",
+  "public": [
+    "out_gate",
+    "out_human",
+    "commit"
+  ],
+  "builtAt": "2026-08-05T02:53:12.655Z",
+  "note": "Demo ptau — re-run trusted setup for production"
+}

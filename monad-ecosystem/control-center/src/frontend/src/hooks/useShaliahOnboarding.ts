@@ -54,6 +54,11 @@ interface ShaliahOnboardingState {
   meshaleachVerified: boolean;
   /** Set after EIP-191 bind — canonical on-chain principal */
   boundWallet: string | null;
+  /**
+   * True after successful wallet bind — FG mint may use MetaMask signer via
+   * `resolveFgMintOpts()` (see lib/fgMintBridge.ts).
+   */
+  fgMintReady: boolean;
 
   captureTelemetry: (event: BehavioralTelemetry) => void;
   captureQuarantineTelemetry: (event: QuarantineTelemetry) => void;
@@ -69,6 +74,7 @@ interface ShaliahOnboardingState {
   resetPhase2: () => void;
   resetPhase3: () => void;
   setBoundWallet: (wallet: string | null) => void;
+  setFgMintReady: (ready: boolean) => void;
   exportTelemetryJson: () => string;
 }
 
@@ -151,6 +157,7 @@ export const useShaliahOnboarding = create<ShaliahOnboardingState>()(
       phase3Result: null,
       meshaleachVerified: false,
       boundWallet: null,
+      fgMintReady: false,
 
       captureTelemetry: (event) => {
         stealthAnalyzePhase1(event);
@@ -434,7 +441,9 @@ export const useShaliahOnboarding = create<ShaliahOnboardingState>()(
           meshaleachVerified: false,
         }),
 
-      setBoundWallet: (wallet) => set({ boundWallet: wallet }),
+      setBoundWallet: (wallet) =>
+        set({ boundWallet: wallet, fgMintReady: Boolean(wallet) }),
+      setFgMintReady: (ready) => set({ fgMintReady: ready }),
 
       exportTelemetryJson: () => {
         const st = get();
