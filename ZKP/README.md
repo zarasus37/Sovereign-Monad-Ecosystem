@@ -235,6 +235,7 @@ Use the lightest tool that matches the verifier’s hostility.
 | 2026-08-05 | **Phase 1 + FG mint:** EIP-191 MeshaleachPoC on gate pass; Merkle domain-tag / memory-epoch commit+reveal (`merkle-sd`). |
 | 2026-08-05 | **Phase 2 SNARK + custody + UI:** Circom/snarkjs Groth16; issuer Key Vault/env; `useFgMintOpts` after wallet bind. |
 | 2026-08-05 | **FG UI + ptau runbook:** `/onboarding/financial-graduation` calls `getFgMintOpts` per gate; `PRODUCTION_PTAU.md` for multi-party ceremony. |
+| 2026-08-06 | **Vkey pin + ceremony CLI:** demo pin enforced; `phase2-contribute` / `pin-vkey`; `MESHALEACH_REQUIRE_PROD_VKEY` for prod hosts. |
 | — | Colon / founder seat is the 12th of the onboarding Council set (already in registry); identity-factory batch covers the other 11 historical windows. |
 
 ---
@@ -252,14 +253,17 @@ Use the lightest tool that matches the verifier’s hostility.
 7. ~~Wallet-bind UI → `useFgMintOpts` / `fgMintBridge`~~  
 8. ~~FG UI page → `getFgMintOpts` per gate + MeshaleachPoC mint~~  
 9. ~~Production ptau ceremony runbook~~ (`meshaleach-zk/PRODUCTION_PTAU.md`)  
-10. Execute multi-party ceremony + pin production vkey (ops)  
-11. Autonomous standing proofs — reuse machinery later.  
+10. ~~Vkey pin + Phase-2 ceremony scripts~~ (`vkeyPin`, `pin:vkey`, `ceremony:contribute|finalize`)  
+11. Execute multi-party ceremony + pin production vkey (**ops** — humans + public ptau)  
+12. Set `MESHALEACH_REQUIRE_PROD_VKEY=1` on production hosts after pin  
+13. Autonomous standing proofs — reuse machinery later.  
 
 **Code entry:**  
 - Mint/verify: `@sovereign/shaliah-onboarding` → `mintMeshaleachPoC`, `FgMintOpts.withSnark`, `useIssuerCustody`  
-- SNARK: `@sovereign/meshaleach-zk` → `proveGateHumanBound` / `verifyGateHumanBound`  
+- SNARK: `@sovereign/meshaleach-zk` → `proveGateHumanBound` / `verifyGateHumanBound` / `getVkeyPinStatus`  
 - Production ptau: `monad-ecosystem/packages/meshaleach-zk/PRODUCTION_PTAU.md`  
-- Issuer: `MESHALEACH_ISSUER_PRIVATE_KEY` or Key Vault `MESHALEACH-ISSUER-KEY`  
+- Ceremony CLI: `pnpm --filter @sovereign/meshaleach-zk ceremony:contribute|finalize`  
+- Issuer: `MESHALEACH_ISSUER_PRIVATE_KEY` or Key Vault `MESHALEACH-ISSUER-KEY` (see `shaliah-onboarding/.env.example`)  
 - UI: `/onboarding/financial-graduation` → `useFgMintOpts().getFgMintOpts()` on each FG gate
 
 ---

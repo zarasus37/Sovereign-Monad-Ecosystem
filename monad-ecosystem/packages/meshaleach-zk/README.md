@@ -20,6 +20,17 @@ Outputs (commit these for CI):
 
 **Production runbook:** [PRODUCTION_PTAU.md](./PRODUCTION_PTAU.md) (public Phase-1 ptau + multi-party Phase-2, verify zkey, pin vkey).
 
+**Ceremony CLI (after public ptau is available):**
+
+```bash
+pnpm run ceremony:contribute -- --ptau=./potXX_final.ptau --name=contributor-0
+pnpm run ceremony:contribute -- --from=./artifacts/build/gate_0001.zkey --name=contributor-1
+pnpm run ceremony:finalize -- --from=./artifacts/build/gate_0002.zkey --ptau=./potXX_final.ptau
+```
+
+Demo artifacts pin: `artifacts/vkey.sha256` + `circuit_meta.ceremony.mode = "demo"`.  
+Set `MESHALEACH_REQUIRE_PROD_VKEY=1` on production hosts to refuse demo keys.
+
 ## API
 
 ```ts

@@ -5,6 +5,7 @@
 
 import { readFileSync } from 'node:fs';
 import { artifactPaths, artifactsReady } from './paths.js';
+import { assertProductionVkeyIfRequired, assertVkeyPinMatches } from './vkeyPin.js';
 
 export interface GateHumanBoundPrivateInput {
   /** Must be 1 to satisfy circuit */
@@ -53,6 +54,7 @@ export async function proveGateHumanBound(
   input: GateHumanBoundPrivateInput,
 ): Promise<GateHumanBoundProofBundle> {
   assertArtifactsReady();
+  assertProductionVkeyIfRequired();
   if (input.gate_passed !== 1 || input.human_bound !== 1) {
     throw new Error('Circuit requires gate_passed=1 and human_bound=1');
   }
@@ -87,6 +89,8 @@ export async function verifyGateHumanBound(
   bundle: GateHumanBoundProofBundle,
 ): Promise<boolean> {
   assertArtifactsReady();
+  assertVkeyPinMatches();
+  assertProductionVkeyIfRequired();
   if (bundle.public.out_gate !== '1' || bundle.public.out_human !== '1') {
     return false;
   }

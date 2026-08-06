@@ -4,6 +4,7 @@
  * Uses local bin/circom.exe (Windows) or circom on PATH.
  */
 import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -105,7 +106,10 @@ if (existsSync(wasm)) {
   else throw new Error('wasm not found after circom');
 }
 
-// write meta
+// write meta (demo ceremony) + pin vkey
+const vkeyBytes = readFileSync(vkey);
+const vkeySha256 = createHash('sha256').update(vkeyBytes).digest('hex');
+writeFileSync(join(outDir, 'vkey.sha256'), vkeySha256 + '\n');
 writeFileSync(
   join(outDir, 'circuit_meta.json'),
   JSON.stringify(
@@ -116,6 +120,17 @@ writeFileSync(
       public: ['out_gate', 'out_human', 'commit'],
       builtAt: new Date().toISOString(),
       note: 'Demo ptau — re-run trusted setup for production',
+      vkeySha256,
+      ceremony: {
+        mode: 'demo',
+        vkeySha256,
+        phase1: 'local powersoftau new bn128 12',
+        phase2Contributors: ['sovereign-demo'],
+        beacon: null,
+        zkeyVerify: 'demo-local',
+        note: 'Demo only — use scripts/phase2-contribute.mjs + PRODUCTION_PTAU.md for production',
+        pinnedAt: new Date().toISOString(),
+      },
     },
     null,
     2,
@@ -123,3 +138,4 @@ writeFileSync(
 );
 
 console.log('Circuit artifacts written to', outDir);
+console.log('Demo vkey pin:', vkeySha256);

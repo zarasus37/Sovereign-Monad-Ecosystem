@@ -149,15 +149,40 @@ node path/to/snarkjs/cli.cjs zkey verify \
 
 ---
 
+## Repo tooling (engineering ready)
+
+| Script | Purpose |
+|--------|---------|
+| `pnpm run build:circuit` | **Demo** full rebuild (local ptau power 12) + pin demo vkey |
+| `pnpm run pin:vkey` | Hash `verification_key.json` → `circuit_meta` + `vkey.sha256` |
+| `pnpm run ceremony:contribute -- --ptau=…` | Phase-2 first setup + contribute from prepared ptau |
+| `pnpm run ceremony:contribute -- --from=…` | Additional multi-party contribute |
+| `pnpm run ceremony:finalize -- --from=… [--ptau=…]` | Export vkey, optional `zkey verify`, pin **mode=production** |
+
+Runtime guards (`@sovereign/meshaleach-zk`):
+
+- `assertVkeyPinMatches()` — disk vkey must match pin in `circuit_meta.json`
+- `MESHALEACH_REQUIRE_PROD_VKEY=1` — prove/verify refuse demo keys (use in production hosts)
+
+```bash
+# After final contributor hands you the last zkey:
+pnpm --filter @sovereign/meshaleach-zk ceremony:finalize -- \
+  --from=./path/to/gate_final.zkey \
+  --ptau=./potXX_final.ptau \
+  --contributors=alice,bob,carol \
+  --phase1=hermez-potXX
+```
+
 ## Wiring after ceremony
 
 ```ts
 // Server / shaliah-onboarding
+process.env.MESHALEACH_REQUIRE_PROD_VKEY = '1'; // refuse demo ptau
 await attemptFg1Gate(session, answers, Date.now(), {
   signer, // or useIssuerCustody: true
   walletAddress,
   withMerkleDisclosure: true,
-  withSnark: true, // requires prod artifacts
+  withSnark: true, // requires prod artifacts + pin
 });
 ```
 

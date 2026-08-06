@@ -8,5 +8,18 @@
     "commit"
   ],
   "builtAt": "2026-08-05T02:53:12.655Z",
-  "note": "Demo ptau — re-run trusted setup for production"
+  "note": "Demo ptau — re-run trusted setup for production",
+  "vkeySha256": "7b962dfe98e71e8651acf0bf533f6bd0198977dbad851563f90bfec21d5eed19",
+  "ceremony": {
+    "mode": "demo",
+    "vkeySha256": "7b962dfe98e71e8651acf0bf533f6bd0198977dbad851563f90bfec21d5eed19",
+    "phase1": "local powersoftau new bn128 12",
+    "phase2Contributors": [
+      "sovereign-demo"
+    ],
+    "beacon": null,
+    "zkeyVerify": "demo-local",
+    "note": "Demo only — use scripts/phase2-contribute.mjs + PRODUCTION_PTAU.md for production",
+    "pinnedAt": "2026-08-06T06:52:27.583Z"
+  }
 }
