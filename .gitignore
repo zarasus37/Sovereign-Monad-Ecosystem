@@ -3,6 +3,8 @@
 # Secrets / secret-adjacent (P0 hygiene — never re-commit)
 .env
 .env.*
+!.env.example
+!**/.env.example
 credentials.json
 *.pem
 *.key
