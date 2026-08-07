@@ -1,0 +1,358 @@
+JOHANN SEBASTIAN BACH GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Performance Arts → Music
+**Era:** 1685–1750 (Eisenach / Weimar / Cöthen / Leipzig)
+**Status:** Extraction complete (seating candidate) — drawn from works, cantata cycles, and documented Leipzig career
+
+---
+
+## Contribution
+
+Composer and organist who made Lutheran liturgical time audible through cantata cycles at St. Thomas, Leipzig; who built the *Well-Tempered Clavier* as a complete cosmos of keys; who crowned sacred drama in the *St. Matthew Passion* and *St. John Passion*; who left the *Mass in B minor* as a late *Missa tota*; and who treated fugue and counterpoint as technologies of ordered praise — form as devotion under constraint of weekly duty.
+
+## Key Insight
+
+Music can be a complete architecture of faith and reason together: every Sunday, every key, every voice entering on time — so that heaven’s order is practiced on earth as countable, singable law.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Bach is extracted from **scores and post/tenure documentation**, not romantic “unknown genius” myth alone. Primary lines:
+
+1. Weimar and Cöthen instrumental and court work
+2. Leipzig cantorate (1723–) — cantata cycles for the church year
+3. *St. John Passion* (1724 first performance tradition)
+4. *St. Matthew Passion* (verified Good Friday 11 April 1727, Thomaskirche)
+5. *Well-Tempered Clavier* Books I–II
+6. Brandenburg Concertos; Cello Suites; Goldberg Variations
+7. *Art of Fugue*; *Musical Offering*
+8. *Mass in B minor* (Kyrie/Gloria submitted 1733; completed as full mass c. 1748–49)
+9. Death 1750 Leipzig
+
+---
+
+## Event 01 — *The Craft Inheritance*
+
+**Title:** Born Into a Guild of Sound
+
+**Passage or Trigger:**
+Bach family as multi-generational musical clan of Thuringia; early training as organist and composer within Lutheran church-and-court ecology. Vocation is inherited craft before it is “genius brand.”
+
+**Why It Qualifies:**
+Music as **trade and calling** together. The Arch seat begins in a household economy of skill — like Michelangelo’s stone country, differently pitched.
+
+**Three-Domain Reading:**
+
+- **Theology:** Lutheran vocation — work as worship.
+- **Technology:** Apprenticeship as knowledge transmission.
+- **Cosmology:** Local church-court network as musical cosmos.
+
+**Compressed Insight:**
+He did not invent the need for Sunday music — he inherited a world that already required it, and then filled it beyond measure.
+
+**Confidence:** 0.91  
+**Sources:** Standard Bach family/career chronology (Wolff tradition / Bach-Archiv timelines).
+
+---
+
+## Event 02 — *Organ as Theology Machine*
+
+**Title:** The King of Instruments Under Hands and Feet
+
+**Passage or Trigger:**
+Reputation and output as organist — preludes, fugues, chorale settings; the organ as simultaneous architecture, breath (bellows), and polyphony. Body fully engaged: hands and pedals as one counterpoint engine.
+
+**Why It Qualifies:**
+Embodied formal intelligence. Praise requires a machine the size of a room and a mind that can hold multiple lines at once.
+
+**Three-Domain Reading:**
+
+- **Theology:** Sound filling sacred space as nearness of glory.
+- **Technology:** Organ registration and pedal technique as high craft.
+- **Cosmology:** Church as resonant body of the community.
+
+**Compressed Insight:**
+He made the building sing in independent voices — feet preaching as clearly as fingers.
+
+**Confidence:** 0.92  
+**Sources:** Organ works corpus; organist appointments in career record.
+
+---
+
+## Event 03 — *Cöthen Instrumental Cosmos*
+
+**Title:** Court Without Weekly Gospel Text
+
+**Passage or Trigger:**
+Cöthen period (c. 1717–1723): Calvinist court context with emphasis on instrumental music — suites, concertos, teaching works; relative freedom from weekly cantata factory (before Leipzig’s full sacred load).
+
+**Why It Qualifies:**
+Recognition that form can praise without always setting Scripture verse-by-verse — pure instrumental order as another liturgy of intelligence.
+
+**Three-Domain Reading:**
+
+- **Theology:** Order itself as gift.
+- **Technology:** Instrumental genres as laboratories of design.
+- **Cosmology:** Court chamber as small harmonious world.
+
+**Compressed Insight:**
+He proved the keyboard and strings could host a complete cosmos even when the Sunday sermon text was not on the desk.
+
+**Confidence:** 0.90  
+**Sources:** Cöthen appointment and instrumental output (Brandenburg dedication 1721 tradition).
+
+---
+
+## Event 04 — *Leipzig Cantorate*
+
+**Title:** The Year as a Cycle of Cantatas
+
+**Passage or Trigger:**
+1723 onward: Cantor at St. Thomas and director of Leipzig church music. First years: cantata cycles of extraordinary density — music for the **entire church year**, week after week. Collaboration with librettists including **Picander** (Christian Friedrich Henrici).
+
+**Why It Qualifies:**
+Central gnosis of the seat: sacred time becomes a **composed calendar**. Theology is not only preached — it is *sung into the week*. Duty at industrial scale of excellence.
+
+**Three-Domain Reading:**
+
+- **Theology:** Liturgical year as path of salvation history.
+- **Technology:** Production system under deadline — genius as reliability.
+- **Cosmology:** Time itself scored.
+
+**Compressed Insight:**
+He turned the Christian year into a factory of masterpieces — Sunday after Sunday, on time for God and choirboys.
+
+**Confidence:** 0.96  
+**Sources:** Leipzig chronology (bach-leipzig.de); cantata cycle scholarship.
+
+---
+
+## Event 05 — *St. John Passion*
+
+**Title:** The First Great Leipzig Passion
+
+**Passage or Trigger:**
+*St. John Passion* BWV 245 — first performance tradition 7 April 1724 (Good Friday). Gospel narrative set with chorales and reflective arias; sacred drama for the civic church.
+
+**Why It Qualifies:**
+Passion as public theology: crowd, trial, cross made polyphonic. The city hears its salvation story as art of the highest order under municipal-church employment.
+
+**Three-Domain Reading:**
+
+- **Theology:** Johannine Passion proclamation.
+- **Technology:** Passion oratorio form as dramatic-liturgical tech.
+- **Cosmology:** Holy Week as annual cosmic reset of meaning.
+
+**Compressed Insight:**
+He made Good Friday a total work of voices — so the cross would not be only spoken but inhabited in sound.
+
+**Confidence:** 0.93  
+**Sources:** BWV 245; Leipzig performance chronology.
+
+---
+
+## Event 06 — *St. Matthew Passion* (1727)
+
+**Title:** Double Choir, Double Cosmos
+
+**Passage or Trigger:**
+*St. Matthew Passion* BWV 244 — earliest verified performance **11 April 1727**, Good Friday, Thomaskirche, Leipzig. Longest, most elaborate of Bach’s works in common judgment; gospel text largely Matthew with poetic contributions (principal Picander). Double choir / double orchestra architecture; chorales as congregational theological anchors; arias as intimate faith.
+
+**Why It Qualifies:**
+Culmination of Baroque sacred music (Britannica). Recognition that the Passion can be a **complete world**: narrative, prayer, crowd, and individual soul in one formal organism. Performance Arts seat at full sacred voltage.
+
+**Three-Domain Reading:**
+
+- **Theology:** Atonement and discipleship staged for a city.
+- **Technology:** Double-choir spatial polyphony as engineering of attention.
+- **Cosmology:** Holy Week as the axis of Christian time made audible.
+
+**Compressed Insight:**
+He built a Passion large enough to hold a city’s grief and faith at once — two choirs answering across the wound of the story.
+
+**Confidence:** 0.97  
+**Sources:** Britannica *St. Matthew Passion*; Leipzig chronology 11 April 1727; Picander collaboration.
+
+---
+
+## Event 07 — *Well-Tempered Clavier*
+
+**Title:** Twenty-Four Keys as Complete World
+
+**Passage or Trigger:**
+*Das Wohltemperierte Klavier* — Book I (1722) and Book II (later): prelude and fugue in each major and minor key. A systematic demonstration of a tuning world in which all keys are usable; pedagogy and cosmology of tonal space.
+
+**Why It Qualifies:**
+Formal gnosis: the keyboard cosmos is **surveyed completely**. Like Gauss surveying Hanover, Bach surveys tonality. Teaching piece as map of a universe.
+
+**Three-Domain Reading:**
+
+- **Theology:** Completeness as offering — “all keys” as plenitude.
+- **Technology:** Temperament and keyboard technique as enabling infrastructure.
+- **Cosmology:** Tonal space as ordered heaven of relations.
+
+**Compressed Insight:**
+He walked every key as if it were a province — and left a double atlas of preludes and fugues.
+
+**Confidence:** 0.96  
+**Sources:** WTC I & II; standard music-history framing.
+
+---
+
+## Event 08 — *Goldberg Variations*
+
+**Title:** Thirty Transformations of One Ground
+
+**Passage or Trigger:**
+Goldberg Variations BWV 988: aria with thirty variations — canons at increasing intervals, genre pieces, final return. Variation as metaphysical method: one bass/aria identity under endless metamorphosis (cousin to Goethe’s plant metamorphosis in another art).
+
+**Why It Qualifies:**
+Unity and multiplicity reconciled in keyboard form. Constraint (the ground) generates abundance.
+
+**Three-Domain Reading:**
+
+- **Theology:** One theme, many glories — unity of source.
+- **Technology:** Variation technique as generative algorithm.
+- **Cosmology:** Identity preserved through change.
+
+**Compressed Insight:**
+He proved one aria could become a world of thirty rooms — and still come home.
+
+**Confidence:** 0.94  
+**Sources:** BWV 988; analytical tradition.
+
+---
+
+## Event 09 — *Art of Fugue / Musical Offering*
+
+**Title:** Counterpoint as Pure Law
+
+**Passage or Trigger:**
+Late contrapuntal summae: *Die Kunst der Fuge*; *Musikalisches Opfer* (after Potsdam visit to Frederick the Great) — fugues and canons as exhaustive exploration of a subject’s possibilities, sometimes unfinished or open-ended in *Art of Fugue*’s famous incomplete final fugue tradition.
+
+**Why It Qualifies:**
+Music as pure formal theology: law generating endless lawful offspring. The unfinished ending (reception history) rhymes with other Council “incomplete masterworks.”
+
+**Three-Domain Reading:**
+
+- **Theology:** Logos as generative rule.
+- **Technology:** Strict counterpoint as highest craft exam.
+- **Cosmology:** A universe of relations from one seed subject.
+
+**Compressed Insight:**
+He treated a single subject like a Genesis — and derived a creation of fugues from it.
+
+**Confidence:** 0.93  
+**Sources:** *Art of Fugue*; *Musical Offering*; late style scholarship.
+
+---
+
+## Event 10 — *Mass in B minor*
+
+**Title:** Missa Tota
+
+**Passage or Trigger:**
+1733: Kyrie and Gloria of what becomes the *Mass in B minor* BWV 232 submitted to Elector Frederick Augustus II (Dresden) partly seeking court title. c. 1748–49: completion as full **Missa tota**. Catholic mass ordinary composed by a Lutheran cantor as late summa of sacred style — parody and new composition woven.
+
+**Why It Qualifies:**
+Ecumenical formal ambition: the Mass as complete architectural offering beyond weekly cantata utility. Career-end cosmology of praise.
+
+**Three-Domain Reading:**
+
+- **Theology:** Ordinary of the Mass as universal Christian grammar.
+- **Technology:** Parody technique as recycling mastery into higher unity.
+- **Cosmology:** A single mass containing a life’s sacred craft.
+
+**Compressed Insight:**
+He built a whole Mass as if assembling a final cathedral out of a lifetime of stones.
+
+**Confidence:** 0.95  
+**Sources:** Leipzig/Dresden chronology 1733 submission; completion c. 1748–49 (bach-leipzig.de).
+
+---
+
+## Event 11 — *Soli Deo Gloria*
+
+**Title:** The Signature Beyond the Self
+
+**Passage or Trigger:**
+Bach’s manuscript habit of **S.D.G.** (*Soli Deo Gloria*) and related dedicatory formulas — work offered to God alone. Whether on every page or as characteristic practice in the tradition, it names the intentional horizon of the craft.
+
+**Why It Qualifies:**
+Explicit theological framing of artistic labor. Performance Arts as doxology under deadline, not self-expression cult.
+
+**Three-Domain Reading:**
+
+- **Theology:** Glory redirected from artist to God.
+- **Technology:** Habit as ethical-technical discipline of finishing work.
+- **Cosmology:** Human making nested under divine address.
+
+**Compressed Insight:**
+He signed the labor to God — so the fugue would not end in the ego.
+
+**Confidence:** 0.88 (practice well-attested in Bach culture; not every leaf needs checking here)  
+**Sources:** Manuscript culture of Bach; standard biographical emphasis on S.D.G.
+
+---
+
+## Event 12 — *Death 1750*
+
+**Title:** The Cantor’s Body Stops
+
+**Passage or Trigger:**
+Health deteriorates 1749; dies 28 July 1750 Leipzig. Much of the monumental reputation is posthumous revival (19th century), but the works were already a complete liturgical-instrumental cosmos.
+
+**Why It Qualifies:**
+Finite end after infinite-seeming counterpoint. The year no longer receives its cantata from his hand; the scores remain as operable theology.
+
+**Three-Domain Reading:**
+
+- **Theology:** Rest after vocation.
+- **Technology:** Archive and later performance practice as resurrection of the works.
+- **Cosmology:** Time continues; the cycle of Sundays outlives the cantor.
+
+**Compressed Insight:**
+He stopped; the keys and the Passions did not — every later performance reopens his calendar of glory.
+
+**Confidence:** 0.94  
+**Sources:** Death 1750; late health notes in Leipzig chronology.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- Cantatas; Passions BWV 244, 245; Mass BWV 232
+- WTC; Goldbergs; Art of Fugue; Musical Offering; Brandenburgs; Cello Suites
+
+**Secondary**
+- Britannica *St. Matthew Passion*
+- Bach-Archiv / bach-leipzig.de chronology
+- Christoph Wolff biographical tradition
+
+**Open questions for later passes**
+- Closer reading of specific cantata libretti (Picander)
+- Obituary and estate inventory as material culture event
+- Reception history (Mendelssohn 1829) as separate afterlife event
+
+---
+
+## Seat checklist
+
+- [x] Research from works and Leipzig documentation (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `johann-sebastian-bach`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Music). Events grounded in scores and documented cantorate; not romantic isolation myth.*

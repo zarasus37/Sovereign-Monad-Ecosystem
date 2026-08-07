@@ -1,0 +1,361 @@
+LEONHARD EULER GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Formal Sciences → Mathematics
+**Era:** 1707–1783 (Basel / St. Petersburg / Berlin / St. Petersburg)
+**Status:** Extraction complete (seating candidate) — drawn from major works, the Königsberg analysis, and standard scientific biography
+
+---
+
+## Contribution
+
+Most prolific mathematician of the modern era, who rebuilt analysis as a systematic science of functions (*Introductio in analysin infinitorum*), standardized much of modern mathematical notation (e, f(x), Σ, i, …), founded graph theory with the Seven Bridges of Königsberg (1736), advanced number theory, mechanics, fluid dynamics, astronomy, and optics, and continued producing mathematics after near-total blindness — a living proof that formal vision need not depend on physical sight.
+
+## Key Insight
+
+Structure survives abstraction: when a city’s bridges are stripped to vertices and edges, when a sum is named Σ, when a base of natural growth is named e — the world becomes calculable because form has been made portable across problems.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Euler is extracted from **published mathematics and documented career**, not from the “Euler did everything” meme alone. Primary lines:
+
+1. Seven Bridges of Königsberg / *Solutio problematis ad geometriam situs pertinentis* (1736) — graph theory
+2. *Introductio in analysin infinitorum* (1748)
+3. *Institutiones calculi differentialis* / *integralis* — calculus systematization
+4. Number theory (Euler’s totient, work on primes, Fermat’s little theorem generalizations)
+5. Euler’s identity / formula linking e, i, π
+6. Mechanics, lunar theory, fluid mechanics (*Scientia navalis*, etc.)
+7. Academy life: St. Petersburg (under Catherine’s Russia), Berlin (Frederick the Great), return to St. Petersburg
+8. Blindness (right eye early; near-total later) and continued dictation of work
+9. Death 1783 St. Petersburg
+
+---
+
+## Event 01 — *The Seven Bridges*
+
+**Title:** The City Becomes a Graph
+
+**Passage or Trigger:**
+Königsberg (Pregel river): seven bridges linking four land masses. Popular puzzle: walk each bridge exactly once (and return). **Euler (1735–36)** proves **impossibility** by abstracting land masses to **vertices** and bridges to **edges**, then analyzing **degrees** (how many bridges meet each land). A connected graph admits an Eulerian circuit only under parity conditions on vertex degrees; Königsberg has four odd-degree vertices — hence no such tour. Founding theorem of **graph theory**; foreshadowing of *analysis situs* / topology.
+
+**Why It Qualifies:**
+Decisive gnosis of **abstraction**: drop distances, angles, scenery — keep only connection. Geometry of position without metric. A civic riddle becomes the birth of a mathematical cosmos of networks.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truth independent of sensory clutter — essence of relation.
+- **Technology:** Networks (roads, chips, web) still speak Euler’s language of vertices and edges.
+- **Cosmology:** Cities and any linked system as pure connectivity structures.
+
+**Compressed Insight:**
+He erased the city until only dots and lines remained — and proved the walk was impossible before anyone finished walking.
+
+**Confidence:** 0.97  
+**Sources:** Euler 1736 paper tradition; Wikipedia / Britannica Königsberg; standard graph-theory histories.
+
+---
+
+## Event 02 — *Analysis of Position*
+
+**Title:** Geometry Without Measure
+
+**Passage or Trigger:**
+Euler’s bridge work and later remarks feed what 19th-century mathematicians call *analysis situs* — analysis of position. Features irrelevant to connection are discarded. Topology’s ancestry.
+
+**Why It Qualifies:**
+Recognition that “shape” has layers: metric shape vs connective shape. A new dimension of mathematical being.
+
+**Three-Domain Reading:**
+
+- **Theology:** Form beyond appearance.
+- **Technology:** Abstraction as method for hard problems.
+- **Cosmology:** Multiple geometries of the same world.
+
+**Compressed Insight:**
+He taught that some truths of a place care nothing for length — only for how parts touch.
+
+**Confidence:** 0.92  
+**Sources:** Historical linkage of Königsberg work to combinatorial topology.
+
+---
+
+## Event 03 — *Introductio in analysin infinitorum* (1748)
+
+**Title:** Functions as the Objects of Analysis
+
+**Passage or Trigger:**
+*Introductio in analysin infinitorum* — systematic presentation of elementary functions, infinite series, and the conceptual shift toward **function** as central object of analysis. Prepares the ground for Euler’s calculus treatises.
+
+**Why It Qualifies:**
+Analysis becomes a **science of functions**, not only of geometric curves. The mental furniture of modern calculus is rearranged.
+
+**Three-Domain Reading:**
+
+- **Theology:** Infinite approached with ordered rules — not chaos.
+- **Technology:** Series and function language as toolkit still taught.
+- **Cosmology:** Continuous change as primary object of study.
+
+**Compressed Insight:**
+He put the function at the center of analysis — so infinity could be handled as law, not fog.
+
+**Confidence:** 0.94  
+**Sources:** *Introductio* (1748); histories of analysis.
+
+---
+
+## Event 04 — *Notation as World-Software*
+
+**Title:** Naming the Invisible Operators
+
+**Passage or Trigger:**
+Euler’s role in stabilizing modern notation: **f(x)** for functions, **e** for base of natural logarithms, **Σ** for summation, **i** for √−1 (among other standardizations he popularized or introduced). Notation is not cosmetics — it is cognitive technology.
+
+**Why It Qualifies:**
+Gnosis of **symbolic infrastructure**. Once named, operations travel. A civilization of calculation becomes possible when marks mean the same across academies.
+
+**Three-Domain Reading:**
+
+- **Theology:** Logos as nameable structure — the word that makes thought shareable.
+- **Technology:** Notation as the deepest API of mathematics.
+- **Cosmology:** Shared symbols as a common mental sky for Europe’s science.
+
+**Compressed Insight:**
+He wrote the alphabet that later centuries still use to speak infinity and change.
+
+**Confidence:** 0.93  
+**Sources:** Standard histories of mathematical notation; Euler’s textbooks’ influence.
+
+---
+
+## Event 05 — *e, i, π — The Identity*
+
+**Title:** The Most Compressed Miracle of Form
+
+**Passage or Trigger:**
+**Euler’s formula** e^{ix} = cos x + i sin x, and the identity **e^{iπ} + 1 = 0** (Euler’s identity) — uniting exponential, trigonometric, and imaginary structure in one equation celebrated as emblematic of mathematical unity.
+
+**Why It Qualifies:**
+Recognition that domains thought separate (growth, rotation, imaginary unit, circle constant) are **one organism**. Beauty here is not decoration — it is symptom of deep isomorphism.
+
+**Three-Domain Reading:**
+
+- **Theology:** Unity of truth under diverse appearances — almost a creed in symbols.
+- **Technology:** Complex exponential as workhorse of physics and engineering.
+- **Cosmology:** One law beneath oscillation and growth.
+
+**Compressed Insight:**
+He wrote an equation where growth, rotation, nothing, and unity shake hands — and the handshake still holds.
+
+**Confidence:** 0.95  
+**Sources:** Euler’s work on complex exponentials; standard textbook attribution of the identity.
+
+---
+
+## Event 06 — *Number Theory Hands*
+
+**Title:** Primes, Totients, and Fermat’s Seed
+
+**Passage or Trigger:**
+Deep work in number theory: Euler’s **totient function** φ(n), proofs and extensions around Fermat’s little theorem, contributions feeding later prime theory and algebraic number thought. Arithmetic as Euler’s playground alongside analysis.
+
+**Why It Qualifies:**
+Integers as an infinite structured world — not only continuum analysis. Complements Gauss’s later *Disquisitiones* reign; Euler is a principal prior cartographer.
+
+**Three-Domain Reading:**
+
+- **Theology:** Eternal patterns in discrete creation.
+- **Technology:** Number-theoretic functions as later crypto/compute ancestors.
+- **Cosmology:** Discrete cosmos beside continuous cosmos.
+
+**Compressed Insight:**
+He counted the integers’ secret officers — φ(n) and kin — so arithmetic would have a civil service of theorems.
+
+**Confidence:** 0.92  
+**Sources:** Euler’s number-theory papers; standard number-theory histories.
+
+---
+
+## Event 07 — *Mechanics and the Heavens*
+
+**Title:** Calculus Goes to Sea and Sky
+
+**Passage or Trigger:**
+Treatises on mechanics, **lunar theory**, naval science (*Scientia navalis*), fluid resistance — analysis applied to ships, planets, and fluids. Euler as house mathematician of empires that needed prediction.
+
+**Why It Qualifies:**
+Same mind that abstracted bridges calculates the moon’s stubborn motion. Pure form returns as power over matter in motion.
+
+**Three-Domain Reading:**
+
+- **Theology:** Ordered heavens and seas under law.
+- **Technology:** Ballistics, navigation, ship design math.
+- **Cosmology:** Solar system as integrable-enough machine (within limits).
+
+**Compressed Insight:**
+He lent infinity’s calculus to captains and astronomers — so ships and moons would both answer equations.
+
+**Confidence:** 0.91  
+**Sources:** Euler’s mechanics and astronomy corpus; academy commissions.
+
+---
+
+## Event 08 — *Basel, Bernoulli, Departure*
+
+**Title:** From the Rhine School Outward
+
+**Passage or Trigger:**
+Born Basel 1707; trained in the **Bernoulli** orbit; leaves for **St. Petersburg Academy** (Peter the Great’s scientific project) — first great transplantation of his career. Mathematics becomes a mobile imperial resource.
+
+**Why It Qualifies:**
+Science as vocation across borders. The Swiss mind becomes Russian academy engine — knowledge as transferable power.
+
+**Three-Domain Reading:**
+
+- **Theology:** Calling beyond hometown.
+- **Technology:** Academies as factories of formal talent.
+- **Cosmology:** Europe’s scientific network as one field.
+
+**Compressed Insight:**
+He carried Basel’s rigor to the Neva — and the academy became a second homeland for theorems.
+
+**Confidence:** 0.90  
+**Sources:** Standard biography (Basel → St. Petersburg).
+
+---
+
+## Event 09 — *Berlin Years*
+
+**Title:** Frederick’s Academy
+
+**Passage or Trigger:**
+Berlin period under **Frederick the Great** — enormous output, institutional science, correspondence across Europe. Later return to St. Petersburg under Catherine’s Russia. Two empires, one pen.
+
+**Why It Qualifies:**
+Politics of patronage without stopping the flood of papers. The mathematician as permanent secretary of the invisible empire of analysis.
+
+**Three-Domain Reading:**
+
+- **Theology:** Work as steadiness under princes.
+- **Technology:** Institutional science production model.
+- **Cosmology:** Courts as nodes of a continental brain.
+
+**Compressed Insight:**
+He served kings without letting kings set the axioms — output outran any single capital.
+
+**Confidence:** 0.89  
+**Sources:** Career timeline Berlin / St. Petersburg.
+
+---
+
+## Event 10 — *Blindness*
+
+**Title:** Sight Lost, Vision Intact
+
+**Passage or Trigger:**
+Euler loses useful vision in one eye relatively early; later approaches near-total blindness, yet continues massive production by **dictation** and memory — calculating and composing treatises in the dark. Documented wonder of scientific biography.
+
+**Why It Qualifies:**
+Embodied gnosis: mathematical seeing is not retinal. The formal cosmos remains navigable when the physical light fails. Opposite of romantic tragic genius alone — it is **discipline under constraint**.
+
+**Three-Domain Reading:**
+
+- **Theology:** Interior light; vocation persevering through affliction.
+- **Technology:** Dictation, assistants, memory as production system.
+- **Cosmology:** Mind’s world independent of eye’s world.
+
+**Compressed Insight:**
+He went blind and kept writing infinity — proof that analysis lives behind the eyes.
+
+**Confidence:** 0.94  
+**Sources:** Standard scientific biographies of Euler’s blindness and late productivity.
+
+---
+
+## Event 11 — *Volume of Output*
+
+**Title:** The Library That Was One Man
+
+**Passage or Trigger:**
+Euler’s published corpus is among the largest in mathematical history — hundreds of memoirs and books spanning pure and applied fields. Quantity here is quality’s companion: a life spent making domains *systematic*.
+
+**Why It Qualifies:**
+Recognition that a field advances not only by single theorems but by **complete expositions** that others can inhabit. Euler builds cities of text, not only monuments.
+
+**Three-Domain Reading:**
+
+- **Theology:** Stewardship of talent as long labor.
+- **Technology:** Treatise as scalable teaching machine.
+- **Cosmology:** Mathematics as expandable world needing many maps.
+
+**Compressed Insight:**
+He wrote so much that later centuries still mine one life as if it were a school.
+
+**Confidence:** 0.93  
+**Sources:** Euler archive / Opera Omnia scale; historical consensus on productivity.
+
+---
+
+## Event 12 — *Death in St. Petersburg (1783)*
+
+**Title:** The Calculation Ends
+
+**Passage or Trigger:**
+Dies 18 September 1783 in St. Petersburg — traditional anecdotes of last day (calculating, tea, stroke) vary in polish; the firm fact is death after a life of almost continuous formal production in imperial Russia.
+
+**Why It Qualifies:**
+Finite body after infinite-seeming output. The academy continues; the man stops mid-stream of a life that treated every day as a theorem’s due date.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creaturely limit.
+- **Technology:** Succession of science beyond the individual.
+- **Cosmology:** Time ends even for those who mastered its series.
+
+**Compressed Insight:**
+The man who named e and mapped bridges met the one sum that does not extend — a life’s series closed.
+
+**Confidence:** 0.90  
+**Sources:** Death date; standard biographies (anecdotal last-day details at lower confidence).
+
+---
+
+## Sources / Working Notes
+
+**Primary / near-primary**
+- Euler 1736 Königsberg / *geometriam situs* paper tradition
+- *Introductio in analysin infinitorum* (1748)
+- Calculus *Institutiones*
+- Number theory and mechanics memoirs
+- *Opera Omnia* (modern edition project)
+
+**Secondary**
+- Britannica Königsberg problem
+- Standard histories of graph theory, analysis, notation
+- Scientific biographies of Euler’s career and blindness
+
+**Open questions for later passes**
+- Closer primary quotation from 1736 Latin paper
+- Fluid mechanics and the Euler equations as dedicated event
+- Correspondence with contemporaries for theological/philosophical tone
+
+---
+
+## Seat checklist
+
+- [x] Research from major works and Königsberg analysis (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `leonhard-euler`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Mathematics). Events grounded in Euler’s mathematics and documented career; not productivity folklore alone.*

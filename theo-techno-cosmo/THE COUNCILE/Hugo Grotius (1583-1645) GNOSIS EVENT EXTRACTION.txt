@@ -1,0 +1,357 @@
+HUGO GROTIUS GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Applied Sciences & Professions → Law & Jurisprudence
+**Era:** 1583–1645 (Delft / Paris / exile / Rostock death on journey)
+**Status:** Extraction complete (seating candidate) — drawn from *Mare Liberum*, *De Jure Belli ac Pacis*, and documented Dutch career
+
+---
+
+## Contribution
+
+Jurist and humanist who argued the **freedom of the seas** (*Mare Liberum*, 1609) from natural law and the common heritage of navigation; who systematized the law of war and peace in *De Jure Belli ac Pacis* (1625); who grounded rights of war in nature, society, and right reason while insisting on good faith and moderation; and who became a foundational voice of modern international law — law between peoples when no common sovereign sits above them.
+
+## Key Insight
+
+Even without a world emperor, war and trade are not lawless: nature and the society of humankind supply rules — the sea cannot be owned like a field, force is limited by right, and peace once pledged must be kept.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Grotius is extracted from **legal-philosophical works and career**, including the Dutch East India context of *Mare Liberum* (interest and principle braided — Council holds both). Primary lines:
+
+1. *De Jure Praedae* (commentary on prize; early natural-law draft)
+2. *Mare Liberum* (1609; chapter of the prize work published as pamphlet)
+3. Arrest in religious-political conflicts of the Dutch Republic; escape in a book chest (famous episode)
+4. Paris exile; *De Jure Belli ac Pacis* (1625)
+5. Swedish diplomatic service
+6. Death 1645
+7. Reception as “father of international law” (honorific; many precursors)
+
+---
+
+## Event 01 — *Natural Law as Universal Grammar*
+
+**Title:** Right Before Statute
+
+**Passage or Trigger:**
+Across *De Jure Praedae* and mature works: natural law derived from divine will / nature of things and right reason — binding even where positive human law is silent or contested. Primary laws include use of common things without damage to all, and contentment with one’s portion regarding another’s.
+
+**Why It Qualifies:**
+Law is not only the prince’s word. A moral-physics of human association precedes the state. Arch Law seat begins in that claim.
+
+**Three-Domain Reading:**
+
+- **Theology:** God/nature as source of obligatory order (in Grotius’s frame).
+- **Technology:** Natural-law method as toolkit for arguing across sovereigns.
+- **Cosmology:** Humanity as one society under shared first principles.
+
+**Compressed Insight:**
+He wrote law that could travel where no common king ruled — because nature had already legislated the first clauses.
+
+**Confidence:** 0.94  
+**Sources:** *De Jure Praedae* / *Mare Liberum* natural-law framing; Online Library of Liberty notes.
+
+---
+
+## Event 02 — *Mare Liberum* (1609)
+
+**Title:** The Sea Cannot Remain Proper
+
+**Passage or Trigger:**
+*Mare Liberum* (*The Free Sea*): navigation and trade free by nature/nations; sea fluid and (in his argument) not apt for exclusive possession like land; fish and passage as common use. Famous structural contrast: land can become property through occupation/labor; sea, except narrow margins, cannot be enclosed without hindering general use.
+
+**Why It Qualifies:**
+Cosmology of elements as legal ontology. Water’s nature becomes argument. Dutch commercial interest is real; so is the formal claim that some things are *extra commercium* of exclusive dominion.
+
+**Three-Domain Reading:**
+
+- **Theology:** World given in common; property as human institution with limits.
+- **Technology:** Legal brief as instrument of oceanic empire and of free-trade ideology.
+- **Cosmology:** Planet’s seas as shared medium of humankind.
+
+**Compressed Insight:**
+He told empires they could fence fields — not the ocean’s road.
+
+**Confidence:** 0.96  
+**Sources:** *Mare Liberum* (1609); Liberty Fund / Cambridge companion discussions of sea vs shore.
+
+---
+
+## Event 03 — *Freedom of Trade as Mutual Need*
+
+**Title:** Nations Excel So They Must Meet
+
+**Passage or Trigger:**
+*Mare Liberum* / natural-law trade argument (Stoic-tinged): every nation free to travel and trade; nature does not put all necessaries in one place — so mutual need engenders friendship and blocks total self-sufficiency’s unsociability. God/nature wills exchange.
+
+**Why It Qualifies:**
+Economics as designed interdependence. Isolation as anti-natural. A cosmology of ports.
+
+**Three-Domain Reading:**
+
+- **Theology:** Providence of unequal gifts across lands.
+- **Technology:** Trade routes as civilizational tech.
+- **Cosmology:** Human world as network of lacks and excellences.
+
+**Compressed Insight:**
+He read the map of unequal soils as a command to sail and trade — not a license to monopolize the path.
+
+**Confidence:** 0.93  
+**Sources:** *Mare Liberum* trade-and-nature passages (standard translations/summaries).
+
+---
+
+## Event 04 — *De Jure Belli ac Pacis* (1625)
+
+**Title:** Whether Any War Can Be Lawful
+
+**Passage or Trigger:**
+*On the Law of War and Peace*: systematic inquiry — whether any war can be lawful, and what is lawful in war. War aligned with first principles of nature insofar as it preserves life and useful things; yet right reason and social nature forbid force that destroys others’ rights. Just causes beyond pure defense: recovery of what is due, punishment.
+
+**Why It Qualifies:**
+Central Law event: war under rules. Neither pure pacifism nor pure realism. A grammar for *ius ad bellum* and *ius in bello* in early modern key.
+
+**Three-Domain Reading:**
+
+- **Theology:** Force not inherently anti-nature; unjust force is.
+- **Technology:** Casuistry of war as decision procedure for princes.
+- **Cosmology:** International society as space where violence still answers to norm.
+
+**Compressed Insight:**
+He asked whether war can be lawful — and answered by binding it to rights, not by blessing every sword.
+
+**Confidence:** 0.96  
+**Sources:** *De Jure Belli ac Pacis* (1625); Classics of Strategy / AEI review paraphrases of nature and war.
+
+---
+
+## Event 05 — *Moderation and Good Faith in War*
+
+**Title:** Necessity With Brakes
+
+**Passage or Trigger:**
+In the law of war’s conduct: necessity as governing principle (permissive and restrictive); moderation toward civilians and prisoners; good faith required — perfidy forbidden, ordinary ruses allowed; careful attention to themes modern readers recognize (neutrality groundwork, treatment of property, limits on slaughter).
+
+**Why It Qualifies:**
+Even lawful war is not unlimited appetite. Form restrains victory. Humanity inside enmity.
+
+**Three-Domain Reading:**
+
+- **Theology:** Enemy as still under moral law.
+- **Technology:** Rules of engagement avant la lettre.
+- **Cosmology:** War as tragic institution inside a still-moral universe.
+
+**Compressed Insight:**
+He wrote limits for the winner — so that victory would not erase the human.
+
+**Confidence:** 0.92  
+**Sources:** Secondary syntheses of Grotius on conduct of war (Cambridge companion summary tradition).
+
+---
+
+## Event 06 — *Peace Must Be Kept*
+
+**Title:** Sacredness of Pledged Faith
+
+**Passage or Trigger:**
+On peace: however concluded, peace must be absolutely kept because of the sacredness of faith pledged — treaties as moral steel, not scraps when inconvenient (theme stressed in biographical/natural-law reception of Grotius).
+
+**Why It Qualifies:**
+International order stands or falls on promise-keeping. Law’s backbone is fides.
+
+**Three-Domain Reading:**
+
+- **Theology:** Oath and covenant structure secularized into interstate faith.
+- **Technology:** Treaty as binding tech of peace.
+- **Cosmology:** Time after war ordered by word given.
+
+**Compressed Insight:**
+He made the signed peace holier than the mood that follows it.
+
+**Confidence:** 0.90  
+**Sources:** Reception summaries of Grotius on peace and good faith.
+
+---
+
+## Event 07 — *Escape in the Book Chest*
+
+**Title:** The Jurist as Contraband
+
+**Passage or Trigger:**
+After religious-political conflict in the Dutch Republic (Arminian controversies; fall of Oldenbarnevelt’s circle), Grotius imprisoned; famous escape aided by his wife, hidden in a chest of books — exile begins. (Details polished by legend; core episode standard in biographies.)
+
+**Why It Qualifies:**
+Law’s author becomes fugitive under positive law of his own republic. Irony of natural-law thinker under party justice. Body and books share a crate.
+
+**Three-Domain Reading:**
+
+- **Theology:** Conscience vs faction.
+- **Technology:** Exile as condition of authorship (*De Jure Belli* written in Paris years).
+- **Cosmology:** Small republics can cage large minds.
+
+**Compressed Insight:**
+He left prison inside a box of books — and then wrote the book that outlived the jailers.
+
+**Confidence:** 0.88  
+**Sources:** Standard biographical escape narrative.
+
+---
+
+## Event 08 — *Paris Exile and the Great Treatise*
+
+**Title:** System Built in Banishment
+
+**Passage or Trigger:**
+Paris years: composition and 1625 publication of *De Jure Belli ac Pacis* — the summa of his legal thought, addressed to a Europe of wars (Thirty Years’ War context).
+
+**Why It Qualifies:**
+Crisis as furnace of system. International law’s classic born from a continent on fire and a jurist without home.
+
+**Three-Domain Reading:**
+
+- **Theology:** Order sought while Christendom tears itself.
+- **Technology:** Large-scale treatise as civilizational software.
+- **Cosmology:** Europe as patient of a legal physician in exile.
+
+**Compressed Insight:**
+He answered a continent’s blood with a system of rights — from a desk that was not in his homeland.
+
+**Confidence:** 0.93  
+**Sources:** 1625 publication; exile chronology.
+
+---
+
+## Event 09 — *Swedish Service*
+
+**Title:** Diplomat of a Northern Crown
+
+**Passage or Trigger:**
+Later service as Swedish ambassador in Paris — practical diplomacy after theoretical law of nations. Theory tested in court corridors.
+
+**Why It Qualifies:**
+Applied jurisprudence. The writer of war and peace becomes negotiator under a foreign flag.
+
+**Three-Domain Reading:**
+
+- **Theology:** Loyalty complex — home lost, function retained.
+- **Technology:** Diplomacy as law’s performance art.
+- **Cosmology:** Baltic power inside European system.
+
+**Compressed Insight:**
+He served Sweden’s interests with a Dutch mind — proving law’s author must also practice the possible.
+
+**Confidence:** 0.89  
+**Sources:** Career timeline of Swedish ambassadorship.
+
+---
+
+## Event 10 — *Voluntary Law of Nations*
+
+**Title:** Custom Beside Nature
+
+**Passage or Trigger:**
+In *De Jure Belli ac Pacis*: interplay of natural law and **voluntary law of nations** (customary practice among states) — sometimes departing from pure natural law (e.g. equal belligerent rights regardless of just cause in some doctrines of conduct). Dual source structure.
+
+**Why It Qualifies:**
+Legal realism without abandoning norm: practice generates norms; nature judges practice. A sophisticated OS for international order.
+
+**Three-Domain Reading:**
+
+- **Theology:** Human agreement under natural ceiling.
+- **Technology:** Custom as second legislature of states.
+- **Cosmology:** International society as evolving rule-field.
+
+**Compressed Insight:**
+He let custom speak beside nature — so law would fit a world of many sovereigns, not only a philosopher’s republic.
+
+**Confidence:** 0.91  
+**Sources:** Standard expositions of Grotius on natural vs voluntary law of nations.
+
+---
+
+## Event 11 — *Reception as Father of International Law*
+
+**Title:** The Name That Outgrows the Man
+
+**Passage or Trigger:**
+Centuries of reception crown Grotius “father of international law” — textbook honorific that both preserves and flattens a richer tradition (Vitoria, Gentili, etc.). The seat holds the honor and the historiography of precursors.
+
+**Why It Qualifies:**
+Institutional afterlife: one Dutch exile becomes the brand name of a discipline. Ideas become curriculum.
+
+**Three-Domain Reading:**
+
+- **Theology:** Canon formation — who gets remembered as origin.
+- **Technology:** Pedagogy of international law.
+- **Cosmology:** Modern state system narrating its own conscience.
+
+**Compressed Insight:**
+The world called him father of a law among nations — and still argues with his children, the treaties.
+
+**Confidence:** 0.90  
+**Sources:** Reception history of international law.
+
+---
+
+## Event 12 — *Death on the Journey* (1645)
+
+**Title:** The Body Fails Between Posts
+
+**Passage or Trigger:**
+Dies 28 August 1645 after shipwreck/hard journey returning from Sweden — traditional biographical end. The jurist of safe passage meets the sea’s remaining dangers.
+
+**Why It Qualifies:**
+Finite end after oceanic doctrine. Mare liberum does not make every voyage safe.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creature under risk.
+- **Technology:** Travel as fatal interface.
+- **Cosmology:** Law’s author subject to nature’s remaining force.
+
+**Compressed Insight:**
+He freed the sea in argument — and the sea still took its toll on his last road home.
+
+**Confidence:** 0.87  
+**Sources:** Standard death narrative 1645.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *Mare Liberum* (1609)
+- *De Jure Belli ac Pacis* (1625)
+- *De Jure Praedae* (background)
+
+**Secondary**
+- Liberty Fund / Online Library of Liberty on free sea
+- Cambridge Companion materials on war law
+- Biographical accounts of imprisonment and escape
+
+**Open questions for later passes**
+- Fuller Latin/English parallel on key *Mare Liberum* chapters
+- Theological works (*De veritate religionis Christianae*) as separate event
+- Colonial implications of free-sea doctrine (critical dossier)
+
+---
+
+## Seat checklist
+
+- [x] Research from major legal works (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `hugo-grotius`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Law & Jurisprudence). Events grounded in Grotius’s treatises and documented career; Dutch commercial interest noted beside principle.*

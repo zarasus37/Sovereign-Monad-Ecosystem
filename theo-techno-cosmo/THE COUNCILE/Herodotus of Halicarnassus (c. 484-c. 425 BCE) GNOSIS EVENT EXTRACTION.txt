@@ -1,0 +1,358 @@
+HERODOTUS OF HALICARNASSUS GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Humanities → History
+**Era:** c. 484 – c. 425 BCE (Halicarnassus / travel / Athens orbit; dates traditional)
+**Status:** Extraction complete (seating candidate) — drawn from *The Histories* and classical reception
+
+---
+
+## Contribution
+
+Author of *The Histories* (*Historiai* — “inquiries”), the foundational large-scale prose investigation of the Greco-Persian wars and the peoples around them; who framed history as research so that great deeds of Greeks and “barbarians” would not lack renown and so that the *why* of their war would be shown; who mixed ethnography, geography, and political narrative; and who left the Croesus–Solon logos as a permanent meditation on happiness, envy of the gods, and counting no one happy before the end.
+
+## Key Insight
+
+Memory dies unless inquiry holds it: the past is not safe in rumor — it must be displayed through research, so that glory and cause both survive time’s blotting, and so that prosperity is never trusted until the whole life is seen.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Herodotus is extracted from **the *Histories***, not from the “father of lies” insult alone (Plutarch) or pure defense. Primary lines:
+
+1. Opening proem — *historie* as inquiry
+2. Croesus–Solon logos (1.29–33)
+3. Croesus and Delphi’s ambiguous oracle
+4. Ethnographic *logoi* (Egypt Book 2, Scythians, etc.)
+5. Rise of Persia; Ionian Revolt; Marathon; Thermopylae; Salamis; Plataea arc
+6. Method: “I heard / I saw / I judge” habit of source marking
+7. Reception: Cicero “father of history”; Thucydides’ rivalry; accuracy debates
+
+English: standard modern translations (e.g. Waterfield / de Sélincourt / Godley for sense).
+
+---
+
+## Event 01 — *The Proem*
+
+**Title:** Inquiry So Deeds Not Fade
+
+**Passage or Trigger:**
+Opening of the *Histories* (standard English sense):
+
+> Herodotus of Halicarnassus here displays his inquiry (*historie*), so that human achievements may not become forgotten in time, and great and marvelous deeds — some displayed by Greeks, some by barbarians — may not be without their glory; and especially to show why the two peoples fought with each other.
+
+**Why It Qualifies:**
+Birth certificate of Western historiography as **stated method**: not epic song alone, but *inquiry* with dual aim — memorial glory and causal explanation. Greeks and non-Greeks both get marvelous deeds.
+
+**Three-Domain Reading:**
+
+- **Theology:** Against time’s erasure — a moral duty to remember.
+- **Technology:** Prose research as memory tech.
+- **Cosmology:** War of East and West as event needing a *why*.
+
+**Compressed Insight:**
+He named his book Inquiry — so that glory and cause would not drown together in silence.
+
+**Confidence:** 0.98  
+**Sources:** *Histories* 1.proem; SuperSummary / standard translations.
+
+---
+
+## Event 02 — *Historie as Method*
+
+**Title:** I Heard, I Saw, I Weigh
+
+**Passage or Trigger:**
+Throughout the work: Herodotus marks sources — what Egyptians say, what Persians say, what he himself saw or doubts. The narrative includes legendary abductions then shifts to what he judges the real start of the conflict.
+
+**Why It Qualifies:**
+Critical spirit inside storytelling. History is not one voice of the Muse — it is contested report under a traveling judge.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truth-seeking as piety toward the dead’s deeds.
+- **Technology:** Source-criticism as early method (imperfect, real).
+- **Cosmology:** Many peoples’ memories in one frame.
+
+**Compressed Insight:**
+He refused a single official story — and made the reader watch him choose among tellers.
+
+**Confidence:** 0.94  
+**Sources:** Methodological habits across the *Histories*; prefatory shift from legend to inquiry.
+
+---
+
+## Event 03 — *Croesus and Solon*
+
+**Title:** Count No Man Happy Before the End
+
+**Passage or Trigger:**
+Book 1: Croesus of Lydia displays treasures to Solon and asks who is happiest; Solon names Tellus of Athens and others, not the king; explains life’s reversals — call no one happy until dead (popular summary of 1.29–33). Scholars doubt the meeting; the *logos* is structurally central.
+
+**Why It Qualifies:**
+Moral cosmology of fortune. Wealth is not happiness; the gods’ envy and life’s end rewrite the ledger. History as wisdom literature.
+
+**Three-Domain Reading:**
+
+- **Theology:** Divine envy / instability of human prosperity (Solon’s teaching in the text).
+- **Technology:** Exemplum as ethical tech inside history.
+- **Cosmology:** Time as the only full accountant of a life.
+
+**Compressed Insight:**
+He staged a rich king humbled by a traveler’s wisdom — happiness is a verdict only death can sign.
+
+**Confidence:** 0.95 (as textual event; 0.70 as literal history)  
+**Sources:** *Histories* 1.29–33; Fordham sourcebook; modern commentary on the logos.
+
+---
+
+## Event 04 — *The Oracle’s Ambiguity*
+
+**Title:** A Great Empire Will Fall
+
+**Passage or Trigger:**
+Croesus tests oracles; Delphi’s answer on attacking Persia: if he crosses the river / attacks, a great empire will fall — he destroys his own. Theme of misread prophecy throughout the work.
+
+**Why It Qualifies:**
+Language as trap. Power hears what it wants. History as tragedy of interpretation.
+
+**Three-Domain Reading:**
+
+- **Theology:** Oracles true and lethal when misread.
+- **Technology:** Ambiguity as political-religious medium.
+- **Cosmology:** Fate working through human wishful hearing.
+
+**Compressed Insight:**
+He showed a king ruined by a sentence that was true — and pointed the wrong way in his ears.
+
+**Confidence:** 0.94  
+**Sources:** *Histories* 1.46–54 region; famous oracle reception.
+
+---
+
+## Event 05 — *Ethnography of Egypt*
+
+**Title:** The Other as Full World
+
+**Passage or Trigger:**
+Book 2: long Egyptian *logos* — customs, Nile, kings, wonders. Accuracy debated (some errors notorious); ambition clear: non-Greek peoples get sustained attention as civilizations.
+
+**Why It Qualifies:**
+History expands beyond Hellas-as-only-center. The “barbarian” is ethnographic subject, not only enemy silhouette. (Critical: some of Herodotus’s Egypt is wrong or second-hand — the *event* is the inclusion.)
+
+**Three-Domain Reading:**
+
+- **Theology:** Many customs under many gods — comparative religion avant la lettre.
+- **Technology:** Travel report as knowledge genre.
+- **Cosmology:** Oikoumene as mosaic of ways of life.
+
+**Compressed Insight:**
+He gave Egypt a book-length soul inside a Greek war story — so the enemy’s world would not stay a rumor.
+
+**Confidence:** 0.90  
+**Sources:** *Histories* Book 2; modern debates on autopsy vs report.
+
+---
+
+## Event 06 — *Custom Is King*
+
+**Title:** Nomos Rules All
+
+**Passage or Trigger:**
+Famous anthropological set-pieces (e.g. Darius’s experiment on Greek and Indian funeral customs in Book 3 tradition): each people prefers its own *nomos*; custom is king of all. Relativism of practice under a universal observation.
+
+**Why It Qualifies:**
+Structural insight: morality and rite are cultured, not only natural. Humility before difference — without abandoning Greek narrative center.
+
+**Three-Domain Reading:**
+
+- **Theology:** Sacred practices plural.
+- **Technology:** Comparative method.
+- **Cosmology:** Human world as many laws under one sky.
+
+**Compressed Insight:**
+He watched peoples choose opposite sacred acts — and called custom the king of them all.
+
+**Confidence:** 0.91  
+**Sources:** *Histories* custom-comparisons (Darius funeral logos tradition).
+
+---
+
+## Event 07 — *The Persian Rise*
+
+**Title:** Empire as Character
+
+**Passage or Trigger:**
+Cyrus, Cambyses, Darius, Xerxes — empire built and overreaching. Persian kings as agents with virtues and hybris; the war’s “barbarian” side has internal history.
+
+**Why It Qualifies:**
+Enemy as subject of serious narrative. Power’s rise is a story with causes, not only a foil for Greek glory.
+
+**Three-Domain Reading:**
+
+- **Theology:** Hybris and fall across courts.
+- **Technology:** Imperial administration as object of report.
+- **Cosmology:** Asia and Europe as paired theaters.
+
+**Compressed Insight:**
+He wrote Persia from the inside of its kings’ choices — so the war would have two full lungs.
+
+**Confidence:** 0.92  
+**Sources:** *Histories* Books 1–7 Persian arc.
+
+---
+
+## Event 08 — *Thermopylae*
+
+**Title:** The Narrow Place
+
+**Passage or Trigger:**
+Leonidas and the Three Hundred (and allies) at Thermopylae — stand, betrayal, death. Greek memory’s moral peak inside Herodotus’s larger causal war. (Note: some topographic details criticized by moderns.)
+
+**Why It Qualifies:**
+Glory (*kleos*) the proem promised: marvelous deed preserved. Freedom’s cost in a pass.
+
+**Three-Domain Reading:**
+
+- **Theology:** Noble death as meaning.
+- **Technology:** Terrain as force multiplier — and as narrative stage.
+- **Cosmology:** Small number against empire as ethical geometry.
+
+**Compressed Insight:**
+He fixed the pass in prose — so the few who died there would outlast the many who marched.
+
+**Confidence:** 0.93  
+**Sources:** *Histories* Book 7 Thermopylae narrative.
+
+---
+
+## Event 09 — *Salamis and the Wooden Wall*
+
+**Title:** Ships as Salvation
+
+**Passage or Trigger:**
+Oracle of wooden wall; Themistocles; naval battle of Salamis — intelligence and ships over pure mass. Greek victory as strategic form.
+
+**Why It Qualifies:**
+Mind and medium (fleet) over numbers. Inquiry’s war climax in clever reading of gods and seas.
+
+**Three-Domain Reading:**
+
+- **Theology:** Oracles again — rightly read this time.
+- **Technology:** Naval power as political tech.
+- **Cosmology:** Sea as decisive element of freedom.
+
+**Compressed Insight:**
+He showed a people saved by wood and wit — when stone walls and pure courage were not enough.
+
+**Confidence:** 0.92  
+**Sources:** *Histories* Book 8 Salamis arc.
+
+---
+
+## Event 10 — *Why They Fought*
+
+**Title:** Cause as the Special Aim
+
+**Passage or Trigger:**
+Proem’s special promise: show **why** Greeks and barbarians warred. The whole work is structured as answer — from Croesus to Xerxes — not only battle list.
+
+**Why It Qualifies:**
+History as **etiology**. Glory without cause is half-work; Herodotus wants both renown and explanation.
+
+**Three-Domain Reading:**
+
+- **Theology:** Responsibility and chain of offenses across generations.
+- **Technology:** Causal narrative as analytic form.
+- **Cosmology:** War as outcome of a long braid of choices.
+
+**Compressed Insight:**
+He refused a war without a *why* — and spent nine books making the why walk.
+
+**Confidence:** 0.96  
+**Sources:** Proem; architecture of the *Histories*.
+
+---
+
+## Event 11 — *Father of History / Father of Lies*
+
+**Title:** The Double Reception
+
+**Passage or Trigger:**
+Cicero: “father of history.” Plutarch: “father of lies.” Thucydides positions against display pieces. The double title is itself a historical event about what history is allowed to be.
+
+**Why It Qualifies:**
+Meta-gnosis: storytelling richness vs hard verification. The Council holds both — wonder and error — as part of the seat.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truth-telling as contested virtue.
+- **Technology:** Genre war between inquiry-epic and austere chronicle.
+- **Cosmology:** Past as field of competing methods.
+
+**Compressed Insight:**
+He was crowned father of history and accused as father of lies — because he made inquiry large enough to include marvels that trip.
+
+**Confidence:** 0.94  
+**Sources:** Classical reception (Cicero, Plutarch, Thucydides’ posture).
+
+---
+
+## Event 12 — *Afterlife of Inquiry*
+
+**Title:** The Word Historia
+
+**Passage or Trigger:**
+The Greek *historie* becomes the name of a discipline. Every later historian, including Sima Qian in another world and Thucydides in the same, works in a field Herodotus helped open — whether by imitation or revolt.
+
+**Why It Qualifies:**
+Institutional founding. Arch History’s Hellenic root.
+
+**Three-Domain Reading:**
+
+- **Theology:** Remembrance as civilizational duty.
+- **Technology:** Prose inquiry as enduring tool.
+- **Cosmology:** Human deeds claimed against time’s blot.
+
+**Compressed Insight:**
+He named the work Inquiry — and the world still calls the whole craft by his word’s children.
+
+**Confidence:** 0.95  
+**Sources:** Etymology and disciplinary history of “history.”
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- Herodotus, *The Histories* (esp. 1.proem, 1.29–33, Books 2, 7–9)
+
+**Secondary**
+- Standard commentaries; debates on accuracy (Egypt, Thermopylae topography)
+- Sourcebooks (Fordham Croesus–Solon)
+
+**Open questions for later passes**
+- Fuller Egyptian *logos* micro-events
+- Scythian *logos* as nomad cosmology
+- Herodotus and Athenian politics of the 440s–20s
+
+---
+
+## Seat checklist
+
+- [x] Research from the *Histories* (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple text-grounded events
+- [ ] member_id: `herodotus-of-halicarnassus`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (History). Events grounded in the *Histories* and classical reception; marvels held with critical awareness.*

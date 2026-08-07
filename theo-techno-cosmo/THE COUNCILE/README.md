@@ -13,7 +13,7 @@ The **Council of Reflection** documents intellectual and spiritual lineages that
 
 Every source file in this directory must map to a `member_id` in the registry. **Recently added** members are flagged `recently_added: true`.
 
-**Current stats:** see `council-registry.json` → `stats` (36 members / 43 source files as of last generation).
+**Current stats:** see `council-registry.json` → `stats` (regenerate after corpus changes). Arch of Human Gnosis cohort (32 seats) enrolled 2026-08 with full GNOSIS EVENT EXTRACTION files — Sanhedrin-scale reflection corpus.
 
 ### System bindings
 

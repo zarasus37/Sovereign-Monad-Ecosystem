@@ -1,0 +1,361 @@
+VILHELM BJERKNES GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Natural Sciences → Earth Sciences
+**Era:** 1862–1951 (Norway / Leipzig / Bergen / Oslo)
+**Status:** Extraction complete (seating candidate) — drawn from key papers, Bergen School history, and standard scientific biography
+
+---
+
+## Contribution
+
+Geophysicist and meteorologist who reconceived weather prediction as a problem of mechanics and physics; formulated the **primitive equations** still underlying numerical weather prediction and climate modeling; founded the intellectual **Bergen School of Meteorology**; and, with Jacob Bjerknes, Halvor Solberg, Tor Bergeron and others, developed **polar front** theory — the language of air masses and fronts that still structures daily forecasting.
+
+## Key Insight
+
+The atmosphere is not a theater of omens — it is a physical system: given the state now, the laws of hydrodynamics and thermodynamics determine the state next — and the borders where air masses meet (fronts) are where weather’s violence concentrates.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Bjerknes is extracted from the scientific program, not popular weather folklore. Primary lines:
+
+1. Early work generalizing hydrodynamic circulation (with path from father’s hydrodynamics)
+2. 1904 paper: *Das Problem der Wettervorhersage, betrachtet vom Standpunkt der Mechanik und Physik* (*Meteorologische Zeitschrift*)
+3. *Dynamic Meteorology and Hydrography* (1910–1911)
+4. Bergen Geophysical Institute (from 1917) and wartime/practical forecasting shift
+5. Polar front / cyclone model (Bergen School: V. Bjerknes, J. Bjerknes, Solberg, Bergeron)
+6. *On the Dynamics of the Circular Vortex…* (1921)
+7. Primitive equations lineage into modern NWP
+
+Quotes and claims follow published papers and standard histories (NASA Earth Observatory, EGU, MacTutor weather-forecast history, scholarly retrospectives on the 1904 paper).
+
+---
+
+## Event 01 — *From Father’s Hydrodynamics into Air*
+
+**Title:** Fluid Law Climbs into the Sky
+
+**Passage or Trigger:**
+Trained in mathematics and physics (Christiania / Bonn), assisting his father Carl Anton Bjerknes in hydrodynamics. Early career elucidates interaction of fluid dynamics and thermodynamics. The move into meteorology is not abandonment of physics — it is *extension of fluid law to the atmosphere*.
+
+**Why It Qualifies:**
+Recognition that air is a fluid under gravity, rotation, heating, and moisture — therefore the same family of equations that govern water can, in principle, govern weather. Earth science becomes exact physics of a thin gas shell.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation’s atmosphere is lawful, not capricious spirit only.
+- **Technology:** Physics toolkit ported to a new medium (air).
+- **Cosmology:** Planet wrapped in a computable fluid.
+
+**Compressed Insight:**
+He refused to treat the sky as a different kind of world — it was fluid mechanics with weather’s name.
+
+**Confidence:** 0.90  
+**Sources:** Biographical standard (Wikipedia; MacTutor weather history); early hydrodynamic–meteorological path.
+
+---
+
+## Event 02 — *Circulation Theorem*
+
+**Title:** Why Vortices Live and Die
+
+**Passage or Trigger:**
+Formulation of a **circulation theorem** (often dated in accounts to the late 1890s, e.g. 1898 in popular scientific histories) describing evolution and decay of circulations in fluids — a bridge that “marks the move of Vilhelm Bjerknes into meteorology” in historical judgment (MacTutor synthesis).
+
+**Why It Qualifies:**
+Weather systems are circulations. To see their birth and death as *theorem-governed* is to replace omen with mechanism. The storm becomes a case of vorticity physics.
+
+**Three-Domain Reading:**
+
+- **Theology:** Order even in tempest — not chaos absolute.
+- **Technology:** Circulation as diagnostic and predictive quantity.
+- **Cosmology:** Atmosphere as field of birthing and dying vortices.
+
+**Compressed Insight:**
+He gave storms a life-cycle physics — birth and decay under law, not only under luck.
+
+**Confidence:** 0.88  
+**Sources:** MacTutor “Weather forecasting” history; circulation theorem historiography.
+
+---
+
+## Event 03 — *The 1904 Program*
+
+**Title:** Weather Prediction as Mechanics and Physics
+
+**Passage or Trigger:**
+January 1904, *Meteorologische Zeitschrift*: **“Das Problem der Wettervorhersage, betrachtet vom Standpunkt der Mechanik und Physik”** (“The problem of weather prediction, considered from the standpoint of mechanics and physics”). Over about seven pages Bjerknes develops a **mathematical model of atmospheric dynamics** based on physical and mechanical laws — notably **without a single formula** in the presentation, yet outlining the foundation of a forecasting model: hydrodynamics + thermodynamics + initial state → future state. Preceded by Stockholm Physics Society talk (1903) on a “rational method” for weather prediction after severe storms of 1902–03; encouraged earlier by figures such as Cleveland Abbe and Julius Hann to bring circulation ideas to meteorologists.
+
+**Why It Qualifies:**
+Central gnosis event. Against purely empirical/statistical forecasting, he asserts a **rational** path: the atmosphere is an initial-value problem of physics. That idea is the philosophical root of all later numerical weather prediction — even when computers did not yet exist to run it.
+
+**Three-Domain Reading:**
+
+- **Theology:** The future of weather is not closed prophecy; it is lawful unfolding from present state — humility and responsibility in knowing initials.
+- **Technology:** Blueprint for computational meteorology decades before machines could execute it (Richardson, Charney, etc. later).
+- **Cosmology:** Atmosphere as deterministic-enough physical system at the scale of the equations (chaos later nuances predictability; the *program* remains).
+
+**Compressed Insight:**
+He declared that tomorrow’s weather is physics applied to today’s air — and wrote the program before the computers arrived.
+
+**Confidence:** 0.96  
+**Sources:** Bjerknes 1904 *Meteorologische Zeitschrift* paper; Gramelsberger and other scholarly retrospectives; MacTutor summary with paraphrase of the vision.
+
+---
+
+## Event 04 — *Primitive Equations*
+
+**Title:** The Atmosphere’s Governing System
+
+**Passage or Trigger:**
+Formulation of the **primitive equations** — the coupled system (momentum, continuity, thermodynamic energy, equation of state / moisture treatment in later practice) still at the core of numerical weather prediction and climate models. Historical credit to Bjerknes as formulator of this governing-equation approach for atmospheric prediction.
+
+**Why It Qualifies:**
+Recognition that weather is not a list of tips — it is a *differential system*. Forecast skill becomes a problem of observation density, numerical method, and stability — not of folklore.
+
+**Three-Domain Reading:**
+
+- **Theology:** Lawful creation at the scale of fluid shells around planets.
+- **Technology:** The equation set as the longest-lived “source code” of operational meteorology.
+- **Cosmology:** Climate and weather as solutions of the same family of laws at different integration scales.
+
+**Compressed Insight:**
+He wrote the atmosphere’s operating equations — and the world still runs forecasts inside their descendants.
+
+**Confidence:** 0.94  
+**Sources:** Standard scientific biography (Wikipedia; NASA Earth Observatory; NWP histories).
+
+---
+
+## Event 05 — *Dynamic Meteorology and Hydrography*
+
+**Title:** The Treatise Bridge
+
+**Passage or Trigger:**
+*Dynamic Meteorology and Hydrography* (1910–1911), with research assistants — major early synthesis pushing dynamical methods into meteorological and oceanographic practice. Historical accounts note confluence lines and vertical mass flux ideas that germinate later frontal thinking.
+
+**Why It Qualifies:**
+Institutionalizing the 1904 vision as teachable, publishable method — not a single manifesto. The science becomes a *schoolable craft*.
+
+**Three-Domain Reading:**
+
+- **Theology:** Transmission of a way of seeing creation’s fluids.
+- **Technology:** Textbook/treatise as scaling technology for a research program.
+- **Cosmology:** Air and sea under one dynamical family.
+
+**Compressed Insight:**
+He turned a seven-page revolution into a multi-year treatise so others could calculate with him.
+
+**Confidence:** 0.90  
+**Sources:** EGU historical sketch; 1910–11 publication record.
+
+---
+
+## Event 06 — *Carnegie Support*
+
+**Title:** Thirty-Six Years of Backing a Vision
+
+**Passage or Trigger:**
+Carnegie Foundation funding of Bjerknes’s research for decades (accounts say ~36 years) after being impressed by the rational forecasting program — material condition for sustained theory and school-building.
+
+**Why It Qualifies:**
+Gnosis of *infrastructure*: ideas that remake Earth science need long patronage. The recognition is socio-technical — weather physics as a funded civilizational project.
+
+**Three-Domain Reading:**
+
+- **Theology:** Stewardship of knowledge through institutions.
+- **Technology:** Philanthropic capital as research technology.
+- **Cosmology:** Planetary science as multi-decade human commitment.
+
+**Compressed Insight:**
+The sky’s equations needed a foundation’s patience as much as a genius’s insight.
+
+**Confidence:** 0.86  
+**Sources:** MacTutor weather history note on Carnegie funding.
+
+---
+
+## Event 07 — *Bergen, 1917*
+
+**Title:** Institute on the Edge of Weather
+
+**Passage or Trigger:**
+1917: Bjerknes accepts a call to Bergen (museum / founding **Bergen Geophysical Institute**), with assistants including son **Jacob (Jack) Bjerknes** and **Halvor Solberg**; later **Tor Bergeron**. Wartime and Norwegian conditions push from pure Leipzig-style numerical ambition toward practical storm and rain warnings for fishery and agriculture; experimental weather service ~1918.
+
+**Why It Qualifies:**
+Recognition that theory must meet *sparse observations* and real users. The school is born where physics meets coastal survival. Method shifts without abandoning the lawful atmosphere.
+
+**Three-Domain Reading:**
+
+- **Theology:** Knowledge as service to those under storm.
+- **Technology:** Weather service as operational system — warnings, charts, routines.
+- **Cosmology:** North Atlantic / polar edge as laboratory of cyclones.
+
+**Compressed Insight:**
+He moved the equations to Bergen — and let fishermen’s weather force the theory to grow hands.
+
+**Confidence:** 0.93  
+**Sources:** NASA Earth Observatory; EGU; Gramelsberger on Bergen shift 1917–.
+
+---
+
+## Event 08 — *Fronts Named from War*
+
+**Title:** Battle Lines in the Air
+
+**Passage or Trigger:**
+Bergen School proposes that weather activity concentrates in relatively **narrow zones** — boundaries between warm and cold air masses. They called these zones **“fronts,”** by explicit analogy with First World War battlefronts. Polar front theory of the developing wave cyclone becomes the working model of mid-latitude weather.
+
+**Why It Qualifies:**
+Linguistic and scientific gnosis: the atmosphere’s conflicts are *surfaces of discontinuity*, not vague regions. Naming “front” imports wartime spatial intuition into physics — and it worked. Daily forecasts still speak this language.
+
+**Three-Domain Reading:**
+
+- **Theology:** Conflict as structured boundary, not pure chaos — a severe mercy of form.
+- **Technology:** Frontal analysis as chart technology still taught worldwide.
+- **Cosmology:** Planetary mid-latitudes as a war of air masses along a polar front.
+
+**Compressed Insight:**
+He and his school taught the world to see weather as fronts — battle lines of warm and cold — and the metaphor held because the physics did.
+
+**Confidence:** 0.95  
+**Sources:** NASA Earth Observatory; EGU Bergen School summary; polar front theory histories.
+
+---
+
+## Event 09 — *Life Cycle of the Cyclone*
+
+**Title:** Storms Have Stages
+
+**Passage or Trigger:**
+Bergen model of the **wave cyclone life cycle** — formation, occlusion, decay — associated with frontal structure (Jacob Bjerknes and collaborators central; Vilhelm as founder and director of the program). Weather maps become stories with phases, not static puzzles.
+
+**Why It Qualifies:**
+Same family as Gauss’s orbits and Bjerknes’s own circulation thinking: *development* under law. Forecast becomes narrative physics.
+
+**Three-Domain Reading:**
+
+- **Theology:** Tempests have beginnings and ends — not eternal punishment by sky.
+- **Technology:** Conceptual model guiding analysis when data are incomplete.
+- **Cosmology:** Mid-latitude atmosphere as factory of mortal storms.
+
+**Compressed Insight:**
+He helped give the cyclone a biography — birth, maturity, death — so forecasters could stand inside its time.
+
+**Confidence:** 0.92  
+**Sources:** Bergen School cyclone model literature; J. Bjerknes & Solberg lineage.
+
+---
+
+## Event 10 — *Circular Vortex Treatise (1921)*
+
+**Title:** Vortex as Universal Tool
+
+**Passage or Trigger:**
+*On the Dynamics of the Circular Vortex with Applications to the Atmosphere and Atmospheric Vortex and Wave Motion* (1921) — major Bergen-period book laying foundations for vortex and wave understanding in atmosphere, associated with the school’s thought-style of forecasting practice.
+
+**Why It Qualifies:**
+Codification: the vortex is not a curiosity — it is a master key for atmospheric motion. Theory and practice under one cover.
+
+**Three-Domain Reading:**
+
+- **Theology:** Form (vortex) recurring across scales — signature of lawful cosmos.
+- **Technology:** Analytic models for training a generation of meteorologists.
+- **Cosmology:** Atmosphere as hierarchy of spinning structures.
+
+**Compressed Insight:**
+He put the spinning storm at the center of a book so the next century could calculate with it.
+
+**Confidence:** 0.91  
+**Sources:** 1921 book; Wikipedia / EGU references to the work.
+
+---
+
+## Event 11 — *From Vision to Computation’s Future*
+
+**Title:** The Program Others Would Run
+
+**Passage or Trigger:**
+Historical line: Bjerknes’s rational prediction program → Lewis Fry Richardson’s numerical experiment → mid-century computer NWP (Charney et al.) → modern operational models still using primitive-equation descendants. Bjerknes did not live the full computer age of his idea, but the idea *was* the architecture.
+
+**Why It Qualifies:**
+Gnosis of delayed fulfillment: a true scientific program can wait for instruments (here: computation). The 1904 vision is vindicated retroactively every time a global model initializes.
+
+**Three-Domain Reading:**
+
+- **Theology:** Seed and harvest across generations.
+- **Technology:** Algorithms as long-term inheritance.
+- **Cosmology:** Planetary prediction as civilizational capacity.
+
+**Compressed Insight:**
+He wrote tomorrow’s forecast physics before tomorrow’s machines existed — and the machines eventually caught up.
+
+**Confidence:** 0.90  
+**Sources:** NWP intellectual history (Bjerknes–Richardson–Charney line); MacTutor weather forecasting chapter.
+
+---
+
+## Event 12 — *Oslo Return and Continuity*
+
+**Title:** The School Outlives the Stay
+
+**Passage or Trigger:**
+1926 return to University of Oslo; retirement 1932; death 9 April 1951. The Bergen School as *school of thought* continues beyond any single appointment — method, vocabulary (fronts), and equation program as durable legacy.
+
+**Why It Qualifies:**
+Institutional gnosis: science that becomes a tradition. Earth Sciences seat is not a lone paper — it is a way of seeing weather that can be taught, staffed, and internationalized.
+
+**Three-Domain Reading:**
+
+- **Theology:** Transmission of a truthful practice.
+- **Technology:** Schools as replication machinery for methods.
+- **Cosmology:** Shared planetary atmosphere studied by a shared grammar.
+
+**Compressed Insight:**
+He left a language for the sky — fronts, masses, equations — that outlasted his offices and his century’s wars.
+
+**Confidence:** 0.89  
+**Sources:** Career timeline (Wikipedia; EGU; Bergen/Oslo appointments).
+
+---
+
+## Sources / Working Notes
+
+**Primary / near-primary**
+- Bjerknes, “Das Problem der Wettervorhersage…” (1904), *Meteorologische Zeitschrift*
+- *Dynamic Meteorology and Hydrography* (1910–1911)
+- *On the Dynamics of the Circular Vortex…* (1921)
+- Bergen School papers on fronts and cyclones (V. & J. Bjerknes, Solberg, Bergeron)
+
+**Secondary**
+- NASA Earth Observatory feature on Vilhelm Bjerknes
+- EGU historical page on Bjerknes / Bergen School
+- MacTutor history of weather forecasting
+- Gramelsberger and related scholarship on the 1904 paper
+
+**Open questions for later passes**
+- Direct English translation excerpts from the 1904 German text for more quotation density
+- Bjerknes force (1906) as separate technical event
+- Relationship to Richardson’s *Weather Prediction by Numerical Process* in finer grain
+
+---
+
+## Seat checklist
+
+- [x] Research from papers and scientific history (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `vilhelm-bjerknes`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Earth Sciences). Events grounded in Bjerknes’s program and Bergen School documentation; not popular weather folklore.*

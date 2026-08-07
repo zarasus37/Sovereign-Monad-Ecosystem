@@ -1,0 +1,368 @@
+JOHN DEWEY GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Applied Sciences & Professions → Education
+**Era:** 1859–1952 (Burlington / Chicago / New York / late life)
+**Status:** Extraction complete (seating candidate) — drawn from major works and documented Laboratory School practice
+
+---
+
+## Contribution
+
+American philosopher and educator of the pragmatist tradition who made **experience** the medium of learning and democracy; who wrote *Democracy and Education* (1916) and *Experience and Education* (1938); who rejected passive “pouring in” of knowledge for active, constructive doing that demands thinking; and who treated the school as a miniature society where scientific habit and shared inquiry form citizens.
+
+## Key Insight
+
+Education is not preparation for life later — it is life now: we learn by doing work that requires thought, and by reflecting on experience, inside communities that practice democracy as a way of associated living.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Dewey is extracted from **books and school practice**, with caution on floating internet quotes (e.g. some “reflecting on experience” lines circulate with weak attribution). Primary lines:
+
+1. Chicago Laboratory School (University of Chicago years)
+2. *The School and Society* / *The Child and the Curriculum*
+3. *Democracy and Education* (1916)
+4. *Experience and Nature* (1925)
+5. *The Public and Its Problems* (1927)
+6. *The Quest for Certainty* (1929)
+7. *Experience and Education* (1938) — correction of progressive excesses
+8. *Art as Experience*
+9. Death 1952
+
+---
+
+## Event 01 — *Pragmatism as Method of Intelligence*
+
+**Title:** Ideas as Instruments
+
+**Passage or Trigger:**
+Dewey’s pragmatism (with Peirce and James in the wider movement; Dewey’s own experimentalism): ideas are tools for resolving indeterminate situations; truth tested in consequences of intelligent action, not only in correspondence to a fixed beyond.
+
+**Why It Qualifies:**
+Epistemology as **technology of inquiry**. Thought is not a mirror only — it is a hand. Philosophy reoriented toward problems of living.
+
+**Three-Domain Reading:**
+
+- **Theology:** Faith and doubt as habits of inquiry (secularized, but structural humility before consequences).
+- **Technology:** Hypothesis–test–revise as civilizational method.
+- **Cosmology:** World as field of problematic situations, not finished book.
+
+**Compressed Insight:**
+He treated ideas as tools — and the world as a workshop where tools prove themselves.
+
+**Confidence:** 0.94  
+**Sources:** Dewey’s experimental logic / pragmatist corpus; standard histories of American pragmatism.
+
+---
+
+## Event 02 — *The Laboratory School*
+
+**Title:** A School That Is a Society
+
+**Passage or Trigger:**
+University of Chicago **Laboratory School** under Dewey’s influence: children learning through occupations and projects — science, geography, making — “learning by doing” replacing rows of passive recitation. Practice as proof of theory.
+
+**Why It Qualifies:**
+Philosophy incarnate in an institution. Education becomes experimental craft, not only sermon about reform.
+
+**Three-Domain Reading:**
+
+- **Theology:** Formation of persons as sacred-civic task.
+- **Technology:** School design as social technology.
+- **Cosmology:** Classroom as microcosm of cooperative life.
+
+**Compressed Insight:**
+He built a school that was a small democracy at work — so theory would have to survive children.
+
+**Confidence:** 0.93  
+**Sources:** NEH and standard accounts of the Lab School; Dewey’s school writings.
+
+---
+
+## Event 03 — *Democracy and Education* (1916)
+
+**Title:** Twin Arts of Associated Living
+
+**Passage or Trigger:**
+*Democracy and Education*: education and democracy as mutually implicating — both require participation, growth, communication, and intelligent direction of experience. Life as more than physical survival: the whole range of experience, individual and racial (opening movement of the book’s life-concept).
+
+**Why It Qualifies:**
+Central text for the Arch seat Education. Schooling is not neutral technique; it is the method of democratic social continuity.
+
+**Three-Domain Reading:**
+
+- **Theology:** Shared life as moral good — growth toward fuller communication.
+- **Technology:** Curriculum as means of social reproduction and reform.
+- **Cosmology:** Society as organism of overlapping experiences.
+
+**Compressed Insight:**
+He braided the school and the republic until you could not educate for democracy without practicing it.
+
+**Confidence:** 0.96  
+**Sources:** *Democracy and Education* (1916).
+
+---
+
+## Event 04 — *Against Pouring In*
+
+**Title:** Telling Is Not Teaching
+
+**Passage or Trigger:**
+*Democracy and Education*: though “teaching by pouring in, learning by passive absorption” are universally condemned, they remain entrenched; education is “not an affair of ‘telling’ and being told, but an active and constructive process” — a principle “almost as generally violated in practice as conceded in theory.”
+
+**Why It Qualifies:**
+Diagnosis of institutional hypocrisy. The real enemy is passive schooling that contradicts its own aim of social intelligence.
+
+**Three-Domain Reading:**
+
+- **Theology:** Respect for the learner as agent, not vessel only.
+- **Technology:** Active construction as pedagogical method.
+- **Cosmology:** Knowledge as participation in common concerns.
+
+**Compressed Insight:**
+He named the school’s favorite sin — pouring in — and said theory already knows better while practice refuses.
+
+**Confidence:** 0.95  
+**Sources:** *Democracy and Education* (passages on telling vs constructive process).
+
+---
+
+## Event 05 — *Something to Do*
+
+**Title:** Task Before Lesson
+
+**Passage or Trigger:**
+Widely cited Dewey line (school writings / reception):
+
+> “Give the pupils something to do, not something to learn; and the doing is of such a nature as to demand thinking; learning naturally results.”
+
+**Why It Qualifies:**
+Operational maxim of experiential education. Learning is a byproduct of intelligent activity, not a separate “business” of isolated bookishness (cf. *Democracy and Education* on learning as separate conscious business undermining social spirit).
+
+**Three-Domain Reading:**
+
+- **Theology:** Work as formative — vocation begins in tasks that think.
+- **Technology:** Project method ancestry.
+- **Cosmology:** Child as doer in a world of problems.
+
+**Compressed Insight:**
+He put a real job in the child’s hands — so that thought would have to show up for work.
+
+**Confidence:** 0.92  
+**Sources:** Standard Dewey education quotation tradition; consistent with *Democracy and Education* / Lab School practice.
+
+---
+
+## Event 06 — *Education Is Life Itself*
+
+**Title:** Not a Waiting Room
+
+**Passage or Trigger:**
+Famous formulation in Dewey reception and pedagogy literature:
+
+> “Education is not preparation for life; education is life itself.”
+
+**Why It Qualifies:**
+Temporal reordering: the school years are not a deferred real world. Present experience has intrinsic educational weight. (Pair with his later warning against directionless “experience.”)
+
+**Three-Domain Reading:**
+
+- **Theology:** Present moment as site of formation — not only afterlife of career.
+- **Technology:** Curriculum timed to living interests.
+- **Cosmology:** Life as continuous educative process.
+
+**Compressed Insight:**
+He refused to treat childhood as a hallway — education is the room we are already in.
+
+**Confidence:** 0.90  
+**Sources:** Widely attributed Dewey maxim in education literature; aligned with *Democracy and Education*’s life-concept.
+
+---
+
+## Event 07 — *Experience and Nature* (1925)
+
+**Title:** Experience as Transaction with a Real World
+
+**Passage or Trigger:**
+*Experience and Nature*: experience is not a private mental film — it is organism–environment transaction within a real nature. Philosophy must start from primary experience, then refine it by inquiry without denying the world’s independence.
+
+**Why It Qualifies:**
+Metaphysical ballast for pedagogy. “Learning by doing” is not subjectivism; nature pushes back. Experience has depth and risk.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creature in a given world — not pure self-author.
+- **Technology:** Inquiry as regulated transaction.
+- **Cosmology:** Nature as partner and limit of experience.
+
+**Compressed Insight:**
+He rooted experience in nature — so doing would mean meeting a world that can say no.
+
+**Confidence:** 0.93  
+**Sources:** *Experience and Nature* (1925).
+
+---
+
+## Event 08 — *The Public and Its Problems* (1927)
+
+**Title:** Democracy as Inquiry About Shared Consequences
+
+**Passage or Trigger:**
+*The Public and Its Problems*: the public forms when indirect consequences of transactions affect others who must organize; democracy needs conditions for communication and experimental intelligence — not only voting machinery.
+
+**Why It Qualifies:**
+Political theory of education’s twin: democracy fails when publics cannot inquire together. Schools matter because republics are epistemic communities.
+
+**Three-Domain Reading:**
+
+- **Theology:** Common good as shared consequence-care.
+- **Technology:** Media and association as democratic infrastructure.
+- **Cosmology:** Modern interdependence as condition of politics.
+
+**Compressed Insight:**
+He defined the public by who gets hit by side-effects — and said democracy is learning to face those hits together.
+
+**Confidence:** 0.92  
+**Sources:** *The Public and Its Problems* (1927).
+
+---
+
+## Event 09 — *The Quest for Certainty* (1929)
+
+**Title:** Security Without the Fixed
+
+**Passage or Trigger:**
+*The Quest for Certainty*: critique of philosophy’s flight from risk into immutable certainties; experimental method as mature alternative to spectator theories of knowledge.
+
+**Why It Qualifies:**
+Courage as epistemology. The hunger for absolute guarantees is diagnosed as fear of a contingent world. Intelligence is risk management, not escape.
+
+**Three-Domain Reading:**
+
+- **Theology:** Faith without idolatry of certainty (secular key).
+- **Technology:** Experimental science as model for intelligence.
+- **Cosmology:** Contingent world demanding adaptive thought.
+
+**Compressed Insight:**
+He unmasked the lust for guaranteed truth — and offered inquiry as the adult substitute for the absolute.
+
+**Confidence:** 0.91  
+**Sources:** *The Quest for Certainty* (1929).
+
+---
+
+## Event 10 — *Experience and Education* (1938)
+
+**Title:** Experience Needs Direction
+
+**Passage or Trigger:**
+*Experience and Education*: Dewey corrects progressive excesses — not every experience educates; experiences can be miseducative; freedom is not lack of guidance. Education needs aim and organization of experience’s continuum.
+
+**Why It Qualifies:**
+Self-critical gnosis. The founder of progressive education refuses the cartoon of unstructured permissiveness. Quality of experience and its leading-on power matter.
+
+**Three-Domain Reading:**
+
+- **Theology:** Freedom ordered to growth, not whim.
+- **Technology:** Criteria for educative vs miseducative experience.
+- **Cosmology:** Learning as trajectory, not isolated fun.
+
+**Compressed Insight:**
+He told his own movement that experience without direction is not liberation — it can be a trap.
+
+**Confidence:** 0.95  
+**Sources:** *Experience and Education* (1938); NEH note on direction.
+
+---
+
+## Event 11 — *Art as Experience*
+
+**Title:** Aesthetic as Intensified Life
+
+**Passage or Trigger:**
+*Art as Experience*: art not a remote museum object only but consummatory phase of experience — doing and undergoing brought to fulfilled form. Aesthetics continuous with ordinary life refined.
+
+**Why It Qualifies:**
+Education of perception. Democracy needs not only voters but people who can feel form and meaning. Art as training of attention.
+
+**Three-Domain Reading:**
+
+- **Theology:** Beauty as fulfillment of experience — not mere luxury.
+- **Technology:** Aesthetic education as civic tech.
+- **Cosmology:** Everyday world capable of aesthetic depth.
+
+**Compressed Insight:**
+He pulled art off the pedestal only to plant it deeper in ordinary experience’s finest hours.
+
+**Confidence:** 0.90  
+**Sources:** *Art as Experience*.
+
+---
+
+## Event 12 — *Long Life of Reform*
+
+**Title:** Century’s Schoolmaster
+
+**Passage or Trigger:**
+Career across Chicago and Columbia; global influence on progressive education; loved and vilified; dies 1952 after shaping a century’s argument about what school is for.
+
+**Why It Qualifies:**
+Institutional afterlife: classrooms worldwide still fight his fights — active vs passive, democracy vs drill. The Arch seat Education has a modern founder-voice.
+
+**Three-Domain Reading:**
+
+- **Theology:** Formation of the young as perpetual moral crisis of societies.
+- **Technology:** School systems as replicators of his (and anti-his) methods.
+- **Cosmology:** Modern childhood as designed experience.
+
+**Compressed Insight:**
+He died; the argument over desks and projects did not — because he made school a philosophical problem forever.
+
+**Confidence:** 0.91  
+**Sources:** Career span; reception history of progressive education.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *Democracy and Education* (1916)
+- *Experience and Nature* (1925)
+- *The Public and Its Problems* (1927)
+- *The Quest for Certainty* (1929)
+- *Experience and Education* (1938)
+- *Art as Experience*; Lab School writings
+
+**Secondary**
+- NEH portrait of Dewey
+- Pedagogy histories of learning-by-doing
+
+**Caution**
+- Some viral Dewey quotes are misattributed; prefer book-anchored claims
+
+**Open questions for later passes**
+- China/Japan visits as democratic education diplomacy
+- Relation to Jane Addams / Hull House social learning
+- Logic: *The Theory of Inquiry* denser extraction
+
+---
+
+## Seat checklist
+
+- [x] Research from major works and school practice (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `john-dewey`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Education). Events grounded in Dewey’s books and Laboratory School legacy; viral misquotes avoided where flagged.*

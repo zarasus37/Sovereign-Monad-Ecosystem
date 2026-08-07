@@ -1,0 +1,358 @@
+ADAM SMITH GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Social Sciences → Economics / Moral Philosophy
+**Era:** 1723–1790 (Kirkcaldy / Glasgow / Oxford / France tour / London / Edinburgh Customs)
+**Status:** Extraction complete (seating candidate) — drawn from *Moral Sentiments*, *Wealth of Nations*, and Scottish Enlightenment context
+
+---
+
+## Contribution
+
+Scottish moral philosopher and political economist who wrote *The Theory of Moral Sentiments* (1759) on **sympathy** and the **impartial spectator**, and *An Inquiry into the Nature and Causes of the Wealth of Nations* (1776) on **division of labour**, markets, **absolute advantage**, and the system of **natural liberty**; who treated the wealth of nations as caused by human action, institutions, and exchange rather than divine allotment alone; and whose rare phrase **“invisible hand”** (three uses across the corpus) became — often oversimplified — the emblem of unintended social coordination.
+
+## Key Insight
+
+Moral life and market life are one human nature in two registers: we judge ourselves through an imagined impartial spectator, and we provision society when self-interest is channeled by exchange, specialization, and limited government — so prosperity has causes (labour, capital, institutions), and virtue has a psychology, not only a sermon.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Smith is extracted from **both major books as one system**, resisting the cartoon of pure greed. Credit hygiene: **physiocrats** and earlier trade theorists as precursors; **Hutcheson** as teacher; **Hume** as friend and interlocutor; “Adam Smith problem” (alleged clash of sympathy vs self-interest) treated as later scholarly tension, not as Smith’s self-understanding of contradiction. Invisible hand appears sparingly — not as a universal free-market slogan in every chapter. Primary lines:
+
+1. Kirkcaldy / Glasgow / Oxford formation
+2. Glasgow chair of moral philosophy
+3. *The Theory of Moral Sentiments* (1759; revisions to 1790)
+4. Grand Tour as tutor; French and physiocratic contact
+5. *The Wealth of Nations* (1776)
+6. Division of labour; invisible hand locus; duties of the sovereign
+7. Commissioner of Customs; death 1790
+
+---
+
+## Event 01 — *Kirkcaldy and the Scottish Enlightenment*
+
+**Title:** A Coastal Town, a Missing Father, a Public Mind
+
+**Passage or Trigger:**
+Baptised 16 June 1723 (O.S. 5 June), Kirkcaldy; father dies before birth; raised by mother. University of Glasgow under Francis Hutcheson’s influence; Balliol College, Oxford. Forms within the **Scottish Enlightenment** — reason, moral philosophy, and improvement of commercial society as one project.
+
+**Why It Qualifies:**
+Seat roots in a culture that yoked ethics to social science. Economics will emerge from a moral philosophy chair, not a counting-house alone.
+
+**Three-Domain Reading:**
+
+- **Theology:** Presbyterian and natural-law weather of Scottish thought.
+- **Technology:** University as technology of civic formation.
+- **Cosmology:** Improvement of nations as a thinkable human task.
+
+**Compressed Insight:**
+He came from a small port and a large classroom — and made the wealth of nations a moral-philosophical problem.
+
+**Confidence:** 0.93  
+**Sources:** Wikipedia life; IEP Smith; 3:16 interview life sketch.
+
+---
+
+## Event 02 — *Glasgow Chair*
+
+**Title:** The Classroom That Wrote Two Books
+
+**Passage or Trigger:**
+Professor of moral philosophy at Glasgow (succeeding in Hutcheson’s line): philosophical theology, ethics, jurisprudence. Lectures become the laboratory for *Moral Sentiments* and later political economy. Over a decade of teaching before literary fame.
+
+**Why It Qualifies:**
+Method: theory tested in lecture. Political economy is born as a branch of moral philosophy and jurisprudence, not as amoral technique.
+
+**Three-Domain Reading:**
+
+- **Theology:** Natural religion and duty in the curriculum.
+- **Technology:** Lecture as iterative publication system.
+- **Cosmology:** Society as ordered for study like nature.
+
+**Compressed Insight:**
+He taught young men how to be just — and the notes became the architecture of markets and morals.
+
+**Confidence:** 0.94  
+**Sources:** IEP on Glasgow chair and TMS composition; standard biographies.
+
+---
+
+## Event 03 — *The Theory of Moral Sentiments* (1759)
+
+**Title:** Sympathy Before the Market
+
+**Passage or Trigger:**
+1759: *The Theory of Moral Sentiments* — how moral judgment arises from **sympathy** (fellow-feeling); how we construct an **impartial spectator** to judge our own conduct; ambition, propriety, virtue, and the social mirror. Six lifetime editions; major revisions (including 1790).
+
+**Why It Qualifies:**
+First pillar. Without this book, *Wealth of Nations* is misread as pure selfishness. Smith’s human is other-regarding and self-regarding at once.
+
+**Three-Domain Reading:**
+
+- **Theology:** Conscience as internalized spectator — secular cousin of judgment.
+- **Technology:** Moral psychology as social technology of peace.
+- **Cosmology:** Human nature as intersubjective, not atom alone.
+
+**Compressed Insight:**
+He mapped the inner court where we try our own hearts — long before he mapped the market.
+
+**Confidence:** 0.96  
+**Sources:** TMS publication history (IEP); CEI / Daily Economy on TMS primacy; Wikipedia notable works.
+
+---
+
+## Event 04 — *The Impartial Spectator*
+
+**Title:** The Judge We Invent to Become Ourselves
+
+**Passage or Trigger:**
+Core TMS mechanism: we view our conduct as an impartial spectator would; moral education is learning to inhabit that gaze. Praise and blame, pride and shame, operate through imagined otherness.
+
+**Why It Qualifies:**
+Compressed insight of Smith’s ethics. Complements later economics: the same species that truck and barter also judges and is judged.
+
+**Three-Domain Reading:**
+
+- **Theology:** Accountable self without requiring constant external priest.
+- **Technology:** Internalized norm as low-cost social order.
+- **Cosmology:** Personhood as relation.
+
+**Compressed Insight:**
+He taught that we become moral by borrowing another’s eyes — and keeping them when alone.
+
+**Confidence:** 0.95  
+**Sources:** CEI impartial spectator summary; IEP TMS; standard Smith scholarship.
+
+---
+
+## Event 05 — *Tutor’s Tour and France*
+
+**Title:** The Grand Tour That Stocked the Second Book
+
+**Passage or Trigger:**
+1760s: tutor to the stepson of Charles Townshend; travel in France; contact with Enlightenment figures and **physiocrats**; conversation world that includes (in orbit) Hume, Voltaire, Franklin. Returns to write the great inquiry into wealth.
+
+**Why It Qualifies:**
+Comparative political economy begins in movement. Smith sees commercial and agricultural systems abroad before systematizing Britain’s.
+
+**Three-Domain Reading:**
+
+- **Theology:** Cosmopolitan conversation under providence of letters.
+- **Technology:** Travel as research instrument.
+- **Cosmology:** Nations as comparable experiments in prosperity.
+
+**Compressed Insight:**
+He walked Europe as a tutor and came home ready to ask why some nations are rich.
+
+**Confidence:** 0.92  
+**Sources:** Investopedia France/tutor period; 3:16 life sketch; Wikipedia career outline.
+
+---
+
+## Event 06 — *The Wealth of Nations* (1776)
+
+**Title:** An Inquiry, Not a Catechism of Greed
+
+**Passage or Trigger:**
+March 1776: *An Inquiry into the Nature and Causes of the Wealth of Nations* — comprehensive system of political economy; causes of wealth (not poverty) as the question; attack on mercantilist “commercial system of Great Britain” (Smith’s own later phrase for the book’s violence against that system). Four lifetime editions with revisions.
+
+**Why It Qualifies:**
+Central Economics seat event. Birth of modern economics as systematic science. Published the same year as American independence — twin 1776s of liberty discourse.
+
+**Three-Domain Reading:**
+
+- **Theology:** Wealth explained by natural and human causes, not fate alone.
+- **Technology:** Book as operating system for policy argument.
+- **Cosmology:** National prosperity as lawful, investigable order.
+
+**Compressed Insight:**
+He asked what makes nations rich — and answered with labour, exchange, and institutions, not gold piles alone.
+
+**Confidence:** 0.97  
+**Sources:** Wikipedia WN; IEP March 1776 and “violent attack” letter; Daily Economy 250th framing.
+
+---
+
+## Event 07 — *Division of Labour*
+
+**Title:** The Pin Factory as Cosmology of Skill
+
+**Passage or Trigger:**
+Opening of WN: division of labour multiplies productive power — famous pin-factory illustration; specialization limited by the extent of the market. Growth of wealth begins in how work is split and recombined.
+
+**Why It Qualifies:**
+Foundational micro-to-macro mechanism. Technology of production is social organization of tasks. Complements later industrial and Darwinian “division” metaphors without collapsing them.
+
+**Three-Domain Reading:**
+
+- **Theology:** Human cooperation as vocation of many gifts.
+- **Technology:** Process engineering before the name.
+- **Cosmology:** Society as organism of differentiated functions.
+
+**Compressed Insight:**
+He watched pins made by many hands and saw the wealth of nations in the split of one task.
+
+**Confidence:** 0.96  
+**Sources:** WN Book I tradition; Wikipedia division of labour; Daily Economy classical emphasis on opening sentences.
+
+---
+
+## Event 08 — *The Invisible Hand* (Used Sparingly)
+
+**Title:** Unintended Benefit — Not Magic in Every Chapter
+
+**Passage or Trigger:**
+Phrase “invisible hand” appears **three times** in Smith’s corpus: “History of Astronomy” (Jupiter’s hand); once in TMS; once in WN Book IV, Ch. II — merchant led by self-interest “in many cases” to promote social benefit without intending it. Later ideology inflates the phrase into a universal law Smith did not sloganize on every page.
+
+**Why It Qualifies:**
+Credit and hygiene event. Council keeps Smith’s restraint: spontaneous order is real and partial, not a blank check for every market outcome. Complements Hayekian afterlife without retrofitting it entirely into 1776.
+
+**Three-Domain Reading:**
+
+- **Theology:** Providence-language secularized into social mechanism — carefully.
+- **Technology:** Price and interest as coordination tech.
+- **Cosmology:** Order without single designer of every outcome.
+
+**Compressed Insight:**
+He named an invisible hand only rarely — and only as what self-interest sometimes does for the whole.
+
+**Confidence:** 0.94  
+**Sources:** Wikipedia three uses; Daily Economy WN IV.ii quote; 3:16 “in many cases” caution; popular myth-correction summaries.
+
+---
+
+## Event 09 — *Natural Liberty and the Sovereign’s Three Duties*
+
+**Title:** Free Exchange with a Fence of Public Goods
+
+**Passage or Trigger:**
+System of **natural liberty**: market largely self-governing under justice — yet the sovereign retains three duties: defense against invasion; administration of justice; and erecting **public works and institutions** individuals will not profitably build alone (WN IV.ix). Not pure anarchism; not mercantilist micromanagement.
+
+**Why It Qualifies:**
+Policy core. Prevents both libertarian cartoon and socialist erasure of Smith. Public goods and justice are inside the system.
+
+**Three-Domain Reading:**
+
+- **Theology:** Limited but real office of the magistrate.
+- **Technology:** Infrastructure and law as shared platforms.
+- **Cosmology:** Ordered liberty as political cosmology of commerce.
+
+**Compressed Insight:**
+He freed the market from the mercantile cage — and still charged the state to defend, judge, and build what none alone will build.
+
+**Confidence:** 0.95  
+**Sources:** IEP natural liberty and three duties quote (WN IV.ix); standard Smith policy summaries.
+
+---
+
+## Event 10 — *Absolute Advantage and Trade*
+
+**Title:** Why Nations Should Not Make Everything
+
+**Passage or Trigger:**
+Trade theory: nations gain by producing what they produce best and exchanging — **absolute advantage** in Smith’s framing (later Ricardian comparative advantage refines). Mercantilist hoarding of specie and restriction of trade attacked as misunderstanding of wealth.
+
+**Why It Qualifies:**
+International political economy hinge. Complements Grotius’s legal seas with economic seas of exchange.
+
+**Three-Domain Reading:**
+
+- **Theology:** Mutual benefit against zero-sum envy of treasure.
+- **Technology:** Shipping and markets as wealth engines.
+- **Cosmology:** World as trading whole, not closed bullion vaults.
+
+**Compressed Insight:**
+He taught that a nation’s wealth is what it can make and trade — not only what gold it locks away.
+
+**Confidence:** 0.93  
+**Sources:** Wikipedia absolute advantage; WN trade books; Investopedia overview.
+
+---
+
+## Event 11 — *Commissioner of Customs*
+
+**Title:** The Theorist Collects the Duty
+
+**Passage or Trigger:**
+1778: appointed Commissioner of Customs, Edinburgh; lives with mother; no further major books. Practices the revenue state he had analyzed — enforcement, tariffs, administration after having attacked the commercial system’s worst abuses.
+
+**Why It Qualifies:**
+Life irony and integrity test: political economy meets the customs house. Thought does not stay pure theory.
+
+**Three-Domain Reading:**
+
+- **Theology:** Stewardship under imperfect law.
+- **Technology:** Bureaucracy as real economy’s skeleton.
+- **Cosmology:** Enlightenment man inside the machine of state.
+
+**Compressed Insight:**
+He spent his last years taking customs — having written the book that taught nations how wealth actually grows.
+
+**Confidence:** 0.93  
+**Sources:** IEP Customs 1778 and late life; 3:16 life sketch; Wikipedia.
+
+---
+
+## Event 12 — *Death and the Two-Book Afterlife* (1790)
+
+**Title:** Moral Sentiments Still on the Desk
+
+**Passage or Trigger:**
+Dies 17 July 1790. Final TMS edition (1790) with major new material — evidence he cared for the moral book to the end. Afterlife: “father of economics/capitalism” fame often eclipses TMS until modern scholarship reunites the system; “Adam Smith problem” names the false split.
+
+**Why It Qualifies:**
+Closing gnosis: Smith wanted both books. The Council seats the whole man — spectator and pin factory, sympathy and self-interest.
+
+**Three-Domain Reading:**
+
+- **Theology:** Legacy of a unified human nature under God or nature’s laws.
+- **Technology:** Editions as living software updates to a philosophy.
+- **Cosmology:** Commercial modernity still arguing in his terms.
+
+**Compressed Insight:**
+He died polishing how we judge ourselves — while the world remembered only how we enrich ourselves.
+
+**Confidence:** 0.94  
+**Sources:** IEP death 17 July 1790 and TMS final edition; CEI on two-book unity; Wikipedia.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *The Theory of Moral Sentiments* (1759; eds. through 1790)
+- *An Inquiry into the Nature and Causes of the Wealth of Nations* (1776)
+- “History of Astronomy” (invisible hand of Jupiter)
+
+**Secondary**
+- Internet Encyclopedia of Philosophy — Adam Smith
+- Britannica / Wikipedia life and works
+- Daily Economy; CEI two-book and impartial spectator treatments
+- 3:16 interview (life + invisible hand “many cases”)
+
+**Open questions for later passes**
+- Lectures on Jurisprudence denser pass (unpublished in life, student notes)
+- Relations to Hutcheson and Hume as nested intellectual events
+- Reception in American founding and later Chicago/Austrian schools as afterlife layer
+
+---
+
+## Seat checklist
+
+- [x] Research from both major works (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (TMS+WN unity; invisible hand hygiene; precursors noted)
+- [ ] member_id: `adam-smith`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Economics / Moral Philosophy). Events grounded in Smith’s two books and life; cartoon laissez-faire and sympathy-erasure both refused.*

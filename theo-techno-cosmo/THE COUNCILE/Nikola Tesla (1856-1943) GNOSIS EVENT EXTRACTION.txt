@@ -1,0 +1,360 @@
+NIKOLA TESLA GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Applied Sciences & Professions → Engineering
+**Era:** 1856–1943 (Smiljan / Graz / Paris / New York / Colorado / New York)
+**Status:** Extraction complete (seating candidate) — drawn from patents, industrial history, and documented career (not free-energy folklore)
+
+---
+
+## Contribution
+
+Inventor-engineer who made the **polyphase alternating-current system** and **induction motor** practical, licensed to Westinghouse (1888), and whose advice and patents underwrote AC generation and distribution — including the Niagara Falls hydroelectric project — thereby setting the architecture of modern electric grids; later explored high-frequency, wireless, and remote-control experiments, with Wardenclyffe as unfinished ambition.
+
+## Key Insight
+
+Power need not stay local to the generator: a rotating magnetic field and polyphase AC make energy a thing that can travel, scale, and light cities — the cosmos of industry reorganized around transmission, not only production.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Tesla is extracted from **engineering and documented industrial history**, not internet myth (death ray as pop cult, “free energy suppressed,” etc.). Primary lines:
+
+1. AC induction motor and polyphase patents (late 1880s)
+2. Westinghouse licensing (1888) and the War of the Currents context
+3. Chicago Columbian Exposition AC demonstration (1893)
+4. Niagara Falls two-phase AC generation (contracts mid-1890s; plant era)
+5. High-frequency / Tesla coil work; radio-related and remote-control demonstrations
+6. Colorado Springs experiments (1899–1900)
+7. Wardenclyffe (early 1900s) unfinished
+8. Later penury and death in New York (1943)
+
+Claims below track patents and mainstream historical synthesis (Wikipedia, Tesla Science Center, Niagara Parks, engineering histories).
+
+---
+
+## Event 01 — *The Rotating Magnetic Field*
+
+**Title:** Motion Without Commutator Brushes
+
+**Passage or Trigger:**
+Tesla’s insight into the **rotating magnetic field** — underlying the practical AC induction motor. Related U.S. patents in the late 1880s (electromagnetic motor, polyphase systems). He did not invent “AC” as a phenomenon (Faraday lineage), but made a **system** of generation, motors, and transmission workable at industrial scale.
+
+**Why It Qualifies:**
+Recognition that magnetic fields can be made to *rotate electrically*, driving a rotor without the fragile commutator ecology of many DC designs. Form of field becomes form of work.
+
+**Three-Domain Reading:**
+
+- **Theology:** Invisible order (field) made to serve human cities.
+- **Technology:** Induction motor as durable workhorse of industry.
+- **Cosmology:** Energy coupling at a distance inside a machine — local cosmos of force.
+
+**Compressed Insight:**
+He taught magnetism to spin — and the motor followed without begging the brush for every spark.
+
+**Confidence:** 0.95  
+**Sources:** Patent record; Tesla Science Center invention summaries; standard engineering histories.
+
+---
+
+## Event 02 — *Polyphase Patents Licensed*
+
+**Title:** Westinghouse Buys the Grid’s Future
+
+**Passage or Trigger:**
+1888: **George Westinghouse** licenses Tesla’s AC motor and polyphase patents (accounts of package deals and royalties vary in popular retellings; the industrial fact of Westinghouse marketing the polyphase system on Tesla’s patent foundation is firm). Cornerstone of the system Westinghouse sells against Edison’s DC network.
+
+**Why It Qualifies:**
+Idea becomes infrastructure only when capital and manufacturing marry patents. The gnosis is socio-technical: invention without a grid is a sketch; with Westinghouse it becomes civilizational wiring.
+
+**Three-Domain Reading:**
+
+- **Theology:** Stewardship of power for the many vs monopoly of the near lamp.
+- **Technology:** Patent + firm as scaling machinery.
+- **Cosmology:** Cities reorganized around AC distribution topology.
+
+**Compressed Insight:**
+He sold the right to wire the future — and Westinghouse built the market that made AC the default sky of industry.
+
+**Confidence:** 0.94  
+**Sources:** Wikipedia / industrial histories of Westinghouse–Tesla 1888; patent cornerstone claims.
+
+---
+
+## Event 03 — *War of the Currents*
+
+**Title:** Propaganda Against the Waveform
+
+**Passage or Trigger:**
+Late 1880s–1890s: **War of the Currents** — Edison interests push DC as safer; Westinghouse (and at times complex alliances) push AC for long-distance economy. Public electrocution spectacles and pamphlet war. Engineering dispute braided with business and fear.
+
+**Why It Qualifies:**
+Recognition that energy systems are chosen under **politics of fear and capital**, not pure physics alone. Tesla’s waveform wins on transmission physics and project demonstration, not on silence in the newspapers.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truth under smear — light vs theater of danger.
+- **Technology:** AC’s long-line advantage as decisive engineering fact.
+- **Cosmology:** Competing possible electrical worlds for the same cities.
+
+**Compressed Insight:**
+He fought a war of voltages in the press and on the poles — and the physics of distance favored the alternating wave.
+
+**Confidence:** 0.93  
+**Sources:** Standard War of Currents histories; Edison vs Westinghouse documentation.
+
+---
+
+## Event 04 — *Chicago 1893*
+
+**Title:** The Fair Lights with AC
+
+**Passage or Trigger:**
+1893 World’s Columbian Exposition (Chicago): Westinghouse AC system lights the fair at scale — public proof that AC can serve a temporary city of millions of lamp-hours. Propaganda of safety meets spectacle of success.
+
+**Why It Qualifies:**
+Demonstration as gnosis for a public: not a lab bench, but a world’s fair night. The form of power becomes visible culture.
+
+**Three-Domain Reading:**
+
+- **Theology:** Festival of light as modern secular glory — still a human ordering of night.
+- **Technology:** Large-scale AC generation/distribution demo.
+- **Cosmology:** Temporary white city as microcosm of the electrified future.
+
+**Compressed Insight:**
+He and Westinghouse made a world’s fair blaze on alternating current — and the crowd saw the grid’s tomorrow.
+
+**Confidence:** 0.92  
+**Sources:** Columbian Exposition electrical history; War of Currents turning-point narratives.
+
+---
+
+## Event 05 — *Niagara*
+
+**Title:** The Falls Become a Dynamo
+
+**Passage or Trigger:**
+Mid-1890s Niagara project: Edward Dean Adams (Cataract Construction) seeks advice on transmission systems; Tesla advises a **two-phase AC** approach aligned with Westinghouse capability; Westinghouse wins generation contract; GE involved in distribution — complex multi-firm build. Niagara becomes emblematic first great AC hydroelectric success story in U.S. public memory; Tesla patents appear in station heritage lists.
+
+**Why It Qualifies:**
+Earth’s water-gravity converted to long-distance electrical order. Engineering as reading a cataract as *fuel*. The planet’s motion wired into cities.
+
+**Three-Domain Reading:**
+
+- **Theology:** Stewardship or hubris of harnessing a wonder — power from the falls as covenant with nature’s force.
+- **Technology:** Hydroelectric AC plant as template for continental grids.
+- **Cosmology:** Geology + hydrology + electromagnetism coupled into one civil system.
+
+**Compressed Insight:**
+He helped turn a waterfall into a heartbeat for distant lamps — polyphase law written on the gorge.
+
+**Confidence:** 0.94  
+**Sources:** Wikipedia Niagara consulting narrative; Niagara Parks Tesla patent notes; hydroelectric histories.
+
+---
+
+## Event 06 — *High Frequency and the Coil*
+
+**Title:** Lightning in a Lab Coat
+
+**Passage or Trigger:**
+Development of high-frequency, high-voltage apparatus popularly known as the **Tesla coil**; lectures and demonstrations of wireless lighting effects, streamers, and resonance phenomena in the 1890s. Showmanship and engineering mixed — the public sees electricity as spectacle again, but now of a different order than Edison’s DC war.
+
+**Why It Qualifies:**
+Recognition of **resonance** as a master key: circuits can be tuned; energy can be concentrated and transferred in non-obvious ways. Seeds of radio-frequency engineering (priority fights with others historically complex).
+
+**Three-Domain Reading:**
+
+- **Theology:** Human-made lightning as Promethean image — wonder and danger.
+- **Technology:** RF and resonant transformers as lineage of later wireless tech.
+- **Cosmology:** Oscillation as a universal behavior of circuits and, analogically, of nature.
+
+**Compressed Insight:**
+He tuned circuits until the air itself carried light and spark — resonance as a second nature of power.
+
+**Confidence:** 0.90  
+**Sources:** Tesla coil and lecture-demo historical record; engineering summaries.
+
+---
+
+## Event 07 — *Remote Control Boat*
+
+**Title:** Will at a Distance
+
+**Passage or Trigger:**
+1898 Madison Square Garden demonstration of a **radio-controlled boat** (teleautomaton) — early public remote control. Command without wire as visible fact.
+
+**Why It Qualifies:**
+Agency projected through signal. The operator’s will steers matter at a distance — ancestor of remote systems and a philosophical shock about presence.
+
+**Three-Domain Reading:**
+
+- **Theology:** Action at a distance without magic — word become command through air.
+- **Technology:** Teleautomation prototype.
+- **Cosmology:** Space no longer requiring mechanical linkage for control.
+
+**Compressed Insight:**
+He steered a boat with invisible orders — and the crowd saw that command need not touch what it moves.
+
+**Confidence:** 0.91  
+**Sources:** 1898 demonstration documentation in Tesla biographies and tech histories.
+
+---
+
+## Event 08 — *Colorado Springs*
+
+**Title:** The Laboratory of Extremes
+
+**Passage or Trigger:**
+1899–1900: experimental station at **Colorado Springs** — extreme high-voltage, high-frequency experiments; notes and reports of artificial lightning-scale discharges; research toward wireless transmission of power and signals. Environment of ambition at the edge of measurement and safety.
+
+**Why It Qualifies:**
+Pushing apparatus until the lab becomes a weather system. The recognition: scale changes everything — what works as a coil on a table becomes a different beast when the sky is the load.
+
+**Three-Domain Reading:**
+
+- **Theology:** Human imitation of storm — Job’s whirlwind as engineering target.
+- **Technology:** Extreme experimentation as R&D method (and PR).
+- **Cosmology:** Earth-ionosphere as conceivable circuit partner (in Tesla’s framing).
+
+**Compressed Insight:**
+He built a lab that threw lightning on purpose — to learn whether the planet itself could be a wire.
+
+**Confidence:** 0.89  
+**Sources:** Colorado Springs period in standard Tesla chronology.
+
+---
+
+## Event 09 — *Wardenclyffe*
+
+**Title:** The Unfinished Tower
+
+**Passage or Trigger:**
+Early 1900s: **Wardenclyffe** tower and laboratory (Long Island), backed then abandoned as financing collapsed (Morgan and others in the usual narrative). Vision of global wireless power/communication; physical plant never fulfilled the full dream; tower later demolished.
+
+**Why It Qualifies:**
+Gnosis of **uncompleted form**: the grid he helped build succeeded; the global wireless power commons did not — capital, physics practicality, and focus all contested. The ruin is part of the seat: not every true insight becomes infrastructure.
+
+**Three-Domain Reading:**
+
+- **Theology:** Tower of ambition — Babel risk in engineering dress.
+- **Technology:** Project failure modes (funding, scaling, competing radio paths).
+- **Cosmology:** Dream of Earth as single powered body vs patchwork grids that actually won.
+
+**Compressed Insight:**
+He raised a tower toward a wireless Earth — and the century chose cables and different radios, leaving the tower to fall.
+
+**Confidence:** 0.90  
+**Sources:** Wardenclyffe historical record; standard biographies.
+
+---
+
+## Event 10 — *The Grid as Legacy*
+
+**Title:** Cities Breathe His Waveform
+
+**Passage or Trigger:**
+Regardless of later penury, the **polyphase AC system** becomes the dominant architecture of electric power transmission and motors worldwide. Everyday civilization runs on the pattern he and Westinghouse industrialised.
+
+**Why It Qualifies:**
+Institutional afterlife: the man can die poor; the form of power remains. Engineering gnosis measured by what still turns.
+
+**Three-Domain Reading:**
+
+- **Theology:** Anonymous service — light without knowing the name.
+- **Technology:** Standards and motors as invisible inheritance.
+- **Cosmology:** Night cities as human stars powered by alternating law.
+
+**Compressed Insight:**
+The world forgot to pay him in comfort — and still pays him every time a motor starts on AC.
+
+**Confidence:** 0.95  
+**Sources:** Global AC grid history; motor ubiquity.
+
+---
+
+## Event 11 — *Late Years and Death*
+
+**Title:** The Hotel Room After the Grid
+
+**Passage or Trigger:**
+Later life in New York hotels, declining finances, continued claims and press myth-making; death 7 January 1943 in New York. FBI/Office of Alien Property interest in papers at death is documentary; content of “secret weapons” lore is not Council substance.
+
+**Why It Qualifies:**
+Creaturely end after civilizational success. Separates the engineer of record from the comic-book wizard.
+
+**Three-Domain Reading:**
+
+- **Theology:** Vanity of worldly reward vs durable work.
+- **Technology:** IP and credit fights as permanent engineering weather.
+- **Cosmology:** One life finite; systems outlive.
+
+**Compressed Insight:**
+He ended in a rented room after wiring a civilization — proof that grids can be richer than their makers.
+
+**Confidence:** 0.91  
+**Sources:** Death date and late-life circumstances in standard biographies.
+
+---
+
+## Event 12 — *Against the Folklore*
+
+**Title:** Seat Without the Cult
+
+**Passage or Trigger:**
+Posthumous internet cult: free energy, suppressed inventions, alien narratives. The Council extraction **refuses** these as sources. The real Tesla is patents, plants, demos, and failed towers — enough wonder without counterfeit.
+
+**Why It Qualifies:**
+Meta-event for the Arch: how to honor an engineer without lying. Quality of gnosis requires **source hygiene**.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truthfulness as piety toward the dead.
+- **Technology:** Distinguishing demonstrated art from wish-cast.
+- **Cosmology:** History as disciplined memory, not fanfic.
+
+**Compressed Insight:**
+He needs no invented miracles — the induction motor and the falls were miracle enough.
+
+**Confidence:** 0.93  
+**Sources:** Methodological note for Council practice; contrast with documented career.
+
+---
+
+## Sources / Working Notes
+
+**Primary / near-primary**
+- U.S. and related patent corpus (AC motors, transmission)
+- Industrial records of Westinghouse and Niagara projects
+
+**Secondary**
+- Wikipedia / Britannica-level chronologies cross-checked with engineering histories
+- Tesla Science Center invention summaries
+- Niagara Parks patent heritage notes
+- War of Currents historical literature
+
+**Open questions for later passes**
+- Closer reading of specific patent claims language
+- Relationship to radio priority disputes (Marconi et al.) as separate technical-legal event
+- Colorado Springs notes critical edition
+
+---
+
+## Seat checklist
+
+- [x] Research from patents and industrial history (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (folklore excluded)
+- [ ] member_id: `nikola-tesla`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Engineering). Events grounded in patents, grid history, and documented experiments; not free-energy cult narrative.*

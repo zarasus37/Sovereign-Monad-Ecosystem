@@ -1,0 +1,362 @@
+SIMA QIAN GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Humanities → History
+**Era:** c. 145 – c. 86 BCE (Western Han; dates approximate)
+**Status:** Extraction complete (seating candidate) — drawn from the *Shiji*, the *Letter to Ren An*, and standard documentary history
+
+---
+
+## Contribution
+
+Grand Historian (*taishi*) of the Han who completed and transformed his father Sima Tan’s project into the *Shiji* (*Records of the Grand Historian*) — a general history from the Yellow Emperor through the Han, inventing a template of annals, tables, treatises, and biographies that shaped Chinese historiography for two millennia; who chose castration over death to finish the work; and who, in the *Letter to Ren An*, articulated death’s weight as Mount Tai or a goose feather according to the use one makes of it.
+
+## Key Insight
+
+History is a debt to the dead and a gift to posterity: a man may spend his body so that the pattern of ages will not vanish — and the measure of a death is not comfort but whether the unfinished writing reaches those who come after.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Sima Qian is extracted from **text and attested court crisis**, not modern nationalist myth alone. Primary lines:
+
+1. *Shiji* (史記) — structure and scope (Yellow Emperor → Emperor Wu era)
+2. Inheritance of the project from father **Sima Tan** (d. c. 110 BCE)
+3. Li Ling affair and sentence under **Emperor Wu**
+4. Choice of castration (*gongxing*) over execution to complete the history
+5. *Letter to Ren An* (Burton Watson and other standard translations; also Columbia AFE excerpt)
+6. Posthumous transmission (daughter’s concealment; grandson’s later revelation — traditional account)
+
+English quotations of the letter follow widely used renderings (Watson / Sources of Chinese Tradition / AFE).
+
+---
+
+## Event 01 — *Father’s Charge*
+
+**Title:** The Unfinished History Becomes a Vow
+
+**Passage or Trigger:**
+Sima Tan, Grand Historian under Emperor Wu, begins a comprehensive history beyond mere calendar and omen duty. Dying (c. 110 BCE), he charges his son Sima Qian to complete the work. Sima Qian inherits both the office’s outer form and the *private* monumental project.
+
+**Why It Qualifies:**
+Recognition that official post and true vocation can diverge. The father’s unfinished form becomes the son’s absolute obligation — history as filial and civilizational debt.
+
+**Three-Domain Reading:**
+
+- **Theology:** Filial piety (*xiao*) elevated into world-historical duty.
+- **Technology:** Transmission of an unfinished research program across one death.
+- **Cosmology:** Time of the dynasty nested inside time of the ages the book will cover.
+
+**Compressed Insight:**
+He did not invent the task — he received a dying father’s unfinished map of the world and made finishing it the meaning of his life.
+
+**Confidence:** 0.92  
+**Sources:** *Shiji* autobiographical materials; standard introductions (Columbia AFE; Watson tradition).
+
+---
+
+## Event 02 — *The Shiji’s Architecture*
+
+**Title:** History as Modular Cosmos
+
+**Passage or Trigger:**
+The *Shiji* organizes the known past into interacting forms: **basic annals** (*benji*), **chronological tables**, **treatises** (*shu* — rites, music, economy, etc.), **hereditary houses**, and **ranked biographies** (*liezhuan*). Not a single chronicle line — a *system* of genres that can hold emperors, institutions, and exemplary/failed lives together.
+
+**Why It Qualifies:**
+Structural invention: the past is too multi-shaped for one narrative pipe. Sima Qian builds a multi-module machine that later dynastic histories imitate for centuries. Form *is* the insight.
+
+**Three-Domain Reading:**
+
+- **Theology:** Moral pattern across ages — rise, virtue, collapse — readable in parallel lives.
+- **Technology:** Genre architecture as historiographic OS.
+- **Cosmology:** All under Heaven’s past as one structured field from culture-hero time to Han present.
+
+**Compressed Insight:**
+He did not only write what happened — he invented the *rooms* in which Chinese history would keep happening on the page.
+
+**Confidence:** 0.95  
+**Sources:** *Shiji* structure; Nienhauser / Watson editorial traditions; historiography of the form’s influence.
+
+---
+
+## Event 03 — *From Yellow Emperor to the Reigning House*
+
+**Title:** Deep Time to Living Emperor
+
+**Passage or Trigger:**
+Scope of the *Shiji*: from the mythical/culture-hero age of the **Yellow Emperor** through successive houses down to the era of **Emperor Wu of Han** — roughly two millennia of framed time. The historian’s present is inside the book’s horizon.
+
+**Why It Qualifies:**
+Cosmological ambition: the living court is not exempt from the same moral-historical laws that judged the Xia, Shang, and Zhou in the narrative imagination. History’s eye looks *backward through* the present throne.
+
+**Three-Domain Reading:**
+
+- **Theology:** Mandate and loss of mandate as recurring judgment structure.
+- **Technology:** Periodization as cognitive tech for civilizational memory.
+- **Cosmology:** One continuous “Central States” world-story under changing houses.
+
+**Compressed Insight:**
+He stretched the record from culture’s dawn to the emperor still breathing — so no reign could pretend it stood outside the pattern.
+
+**Confidence:** 0.93  
+**Sources:** *Shiji* span; standard descriptions of coverage.
+
+---
+
+## Event 04 — *Defense of Li Ling*
+
+**Title:** The Word That Cost the Body
+
+**Passage or Trigger:**
+After General **Li Ling**’s campaign against the Xiongnu ends in disaster and surrender (Emperor Wu having failed to send effective reinforcement in the narrative), Sima Qian speaks at court in Li Ling’s defense. Emperor Wu takes this as offense; Sima Qian is sentenced to death. As a high official he may choose death or **castration**. (Family of Li Ling destroyed; Li condemned in absentia — documentary tradition.)
+
+**Why It Qualifies:**
+Speech under tyranny: truth-telling about a military catastrophe collides with imperial face. The historian’s mouth becomes a political act with bodily price. Not abstract courage — a recorded career break.
+
+**Three-Domain Reading:**
+
+- **Theology:** Integrity vs survival under a Son of Heaven who errs.
+- **Technology:** Court speech as dangerous interface between knowledge and power.
+- **Cosmology:** War on the frontier rewrites one man’s destiny at the center.
+
+**Compressed Insight:**
+He defended a defeated general with words — and the throne answered by putting his flesh on the scales.
+
+**Confidence:** 0.94  
+**Sources:** Letter to Ren An context; Columbia AFE introduction; standard *Shiji*/Han narrative of the Li Ling affair.
+
+---
+
+## Event 05 — *Choosing Castration to Finish the Book*
+
+**Title:** Body Spent for the Pattern of Ages
+
+**Passage or Trigger:**
+Rather than suicide (expected of honor under humiliation) or death, Sima Qian accepts **palace punishment** (*gongxing*) so he can complete the *Shiji*. In the *Letter to Ren An* he explains that even slaves can choose self-destruction, but he endures living in disgrace because he has not yet finished what is in his heart — ashamed that after death his literary work would not be known to posterity.
+
+**Why It Qualifies:**
+Central gnosis event of the life. The body’s integrity is sacrificed to the *form of history*. Personal shame is ranked below civilizational memory. This is not romance; it is a documented value hierarchy under torture of status.
+
+**Three-Domain Reading:**
+
+- **Theology:** Meaning denser than honor-suicide; vocation as sacred debt.
+- **Technology:** The unfinished manuscript as reason-to-live algorithm.
+- **Cosmology:** One mutilated life exchanged for two thousand years of readable past.
+
+**Compressed Insight:**
+He let the dynasty unmake his body so he could finish making the dynasty legible to all who came after.
+
+**Confidence:** 0.96  
+**Sources:** *Letter to Ren An*; Columbia AFE; Watson translation tradition; Wikipedia synthesis with Chinese text excerpts.
+
+---
+
+## Event 06 — *Mount Tai and the Goose Feather*
+
+**Title:** One Death, Two Weights
+
+**Passage or Trigger:**
+*Letter to Ren An* (standard English rendering, widely cited):
+
+> “A man has only one death. That death may be as weighty as Mount Tai, or it may be as light as a goose feather. It all depends upon the way he uses it.”
+
+Further (Watson-line substance): grief that things in the heart remain unexpressed; shame that writings might not reach posterity; ancient rich names erased, only the extraordinary remembered.
+
+**Why It Qualifies:**
+Metaphysics of mortality in one image-pair. Death is not equal; *use* creates mass. The letter becomes the earliest major Chinese autobiographical self-justification alongside the *Shiji*’s self-account.
+
+**Three-Domain Reading:**
+
+- **Theology:** Moral physics of dying — weight as ethical category.
+- **Technology:** Letter as self-archive when court will not honor the man.
+- **Cosmology:** Individual death measured against civilizational memory (Mount Tai as cosmic-geographic absolute in Chinese imagination).
+
+**Compressed Insight:**
+He taught that death’s weight is not fate’s gift — it is the sum of what you refuse to leave unfinished.
+
+**Confidence:** 0.97  
+**Sources:** *Letter to Ren An* (Watson; Columbia AFE; China Books Review popular citation of the Mount Tai line).
+
+---
+
+## Event 07 — *Zhongshuling After the Knife*
+
+**Title:** Service Continues in Altered Flesh
+
+**Passage or Trigger:**
+After release from the punishment’s imprisonment (accounts: 97/96 BCE), Sima Qian continues at court as *zhongshuling* (palace secretary / archivist role associated with eunuch status), with pay and access — and continues the history. The last contemporary documentary horizon includes the Ren An letter context (c. 91 BCE rebellion aftermath).
+
+**Why It Qualifies:**
+No pure withdrawal into hermit purity. He remains inside the machine that mutilated him, using remaining access to finish the record. Collaboration with power after injury — morally complex, historically factual.
+
+**Three-Domain Reading:**
+
+- **Theology:** Endurance without illusions of purity.
+- **Technology:** Court office as remaining instrument after the historian’s body is remade.
+- **Cosmology:** Han court still the observation deck for the age he must document.
+
+**Compressed Insight:**
+He went back into the palace that broke him — because the book still needed the palace’s air and archives.
+
+**Confidence:** 0.90  
+**Sources:** Wikipedia / standard biographies on post-castration office; Letter to Ren An dating context.
+
+---
+
+## Event 08 — *Biographies as Moral Laboratory*
+
+**Title:** Lives as Parallel Experiments
+
+**Passage or Trigger:**
+The *liezhuan* (arrayed traditions/biographies) place assassins, officials, merchants, harsh officials, wandering knights, etc., in structured comparison. Character and consequence become visible across types — history as moral-experimental theater, not only imperial chronicle.
+
+**Why It Qualifies:**
+Recognition that the past teaches through *persons as cases*. Institutions and souls illuminate each other. Later historians inherit the habit of letting lives carry doctrine.
+
+**Three-Domain Reading:**
+
+- **Theology:** Virtue and vice legible in narrative arc.
+- **Technology:** Biography genre as modular lesson engine.
+- **Cosmology:** Society as field of recurring human types under Heaven.
+
+**Compressed Insight:**
+He stocked history with lives side by side so that readers could watch patterns of honor and ruin without a single sermon.
+
+**Confidence:** 0.91  
+**Sources:** *Shiji* biographical chapters; historiographic analysis of *liezhuan*.
+
+---
+
+## Event 09 — *Treatises on the Real*
+
+**Title:** Rites, Music, Economy as History’s Bones
+
+**Passage or Trigger:**
+*Shiji* treatises on rituals, music, calendrics, waterways, economy (e.g. “Balanced Standard” / commodity chapters in the tradition) — material and institutional structures get their own books, not only battles and thrones.
+
+**Why It Qualifies:**
+Cosmology of civilization: a dynasty is rites + music + grain + money + rivers, not only the emperor’s will. Earth-and-provision enter the historical absolute.
+
+**Three-Domain Reading:**
+
+- **Theology:** Order of rites as sacred-social form.
+- **Technology:** Institutional description as analytic tech.
+- **Cosmology:** Human order embedded in land, water, and exchange.
+
+**Compressed Insight:**
+He wrote the empire’s plumbing and prayers into the same history as its wars — so the real would not be mistaken for the throne alone.
+
+**Confidence:** 0.90  
+**Sources:** *Shiji* treatise sections; standard outlines of contents.
+
+---
+
+## Event 10 — *The Historian Under Heaven’s Mandate Pattern*
+
+**Title:** Rise and Fall as Recurring Form
+
+**Passage or Trigger:**
+Across the *Shiji*, houses rise through virtue/capacity and fall through corruption, excess, and loss of support — the moral-political grammar later readers call the mandate pattern, already active in Sima’s narrative art under Han eyes.
+
+**Why It Qualifies:**
+Not flat chronicle. Time has a *shape*: achievement, pride, disaster. The historian’s job is to make that shape visible without always preaching it.
+
+**Three-Domain Reading:**
+
+- **Theology:** Heaven’s mandate as interpretive key (even when implicit).
+- **Technology:** Narrative causality as political science avant la lettre.
+- **Cosmology:** Dynastic time as wave, not pure line.
+
+**Compressed Insight:**
+He taught readers to feel a dynasty’s death in its prosperity — by arranging the past so the pattern could not hide.
+
+**Confidence:** 0.88  
+**Sources:** Narrative arc of major *Shiji* sections; later Chinese historiographic reception.
+
+---
+
+## Event 11 — *Transmission After Death*
+
+**Title:** Daughter and Grandson as Ark
+
+**Passage or Trigger:**
+Traditional account: after Sima Qian’s death, the work’s survival involves family risk — daughter’s concealment; later a grandson’s role in bringing the *Shiji* to light under subsequent reigns (BBC and standard popular-scholarly transmission narratives). Exact details vary by source; the structural point is firm: the book outlived court danger through kinship courage.
+
+**Why It Qualifies:**
+The historian’s body was not the last vessel. Family becomes the technology of cultural salvage. History’s survival is itself a historical act.
+
+**Three-Domain Reading:**
+
+- **Theology:** Loyalty to a father’s/husband’s/ancestor’s truth under risk.
+- **Technology:** Concealment and timed revelation as archival tactics.
+- **Cosmology:** Texts move through generations like a slow second life.
+
+**Compressed Insight:**
+The history that cost him his body was then guarded by his bloodline until the empire could bear to read it.
+
+**Confidence:** 0.82 (transmission outline traditional; details source-dependent)  
+**Sources:** Standard transmission accounts (e.g. BBC feature; textbook narratives).
+
+---
+
+## Event 12 — *Template of All Later Histories*
+
+**Title:** The Form That Conquered Centuries
+
+**Passage or Trigger:**
+Subsequent official dynastic histories adopt and adapt the *Shiji*’s multi-genre architecture. Sima Qian becomes “Grand Historian” not only by office but by *formal founding* — the OS of Chinese elite historical memory.
+
+**Why It Qualifies:**
+Institutional afterlife: one man’s wounded perseverance becomes a civilization’s default way of storing the past. Comparable to Aquinas’s *Summa* as curriculum — here the *Shiji* as historiographic constitution.
+
+**Three-Domain Reading:**
+
+- **Theology:** Remembering as permanent civic-religious duty of literate culture.
+- **Technology:** Template replication across dynasties.
+- **Cosmology:** Empire after empire writing itself inside his rooms.
+
+**Compressed Insight:**
+He lost the body’s honor and won the form in which China would remember itself.
+
+**Confidence:** 0.94  
+**Sources:** History of Chinese historiography; reception of *Shiji* as model.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *Shiji* (史記) — structure and selected chapters
+- *Letter to Ren An* (Chinese text; Burton Watson translation; Columbia AFE excerpt)
+
+**Secondary**
+- Columbia University Asia for Educators DBQ on the letter
+- Wikipedia / standard biographies (Li Ling affair, offices, dates)
+- Watson, Nienhauser translation projects
+- BBC and scholarly popular accounts of transmission
+
+**Open questions for later passes**
+- Fuller extraction from specific *liezhuan* (e.g. assassins, harsh officials) as nested events
+- Comparison of *Shiji* self-account with letter doublets (Eno note)
+- Astronomical/calendar duties of the Grand Historian as separate technical event
+
+---
+
+## Seat checklist
+
+- [x] Research from *Shiji*, letter, and court narrative (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `sima-qian`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (History). Events grounded in the *Shiji*, the Letter to Ren An, and documented Han court crisis; not modern nationalist folklore alone.*

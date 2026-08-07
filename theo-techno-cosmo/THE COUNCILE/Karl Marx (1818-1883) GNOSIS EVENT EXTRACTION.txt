@@ -1,0 +1,363 @@
+KARL MARX GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Social Sciences → Sociology
+**Era:** 1818–1883 (Trier / Berlin / Paris / Brussels / London)
+**Status:** Extraction complete (seating candidate) — drawn from major published works and documented career (critique held as structure, not party catechism)
+
+---
+
+## Contribution
+
+Philosopher and political economist who, with Engels, wrote *The Communist Manifesto* (1848); who spent decades on the critique of political economy culminating in *Capital* Vol. I (1867); who analyzed commodity fetishism, surplus value, and capital as self-expanding value; and who framed history as class struggle under changing modes of production — a diagnostic engine later used, abused, and argued over by movements and states.
+
+## Key Insight
+
+Social forms wear the mask of nature: commodities appear as relations between things while they are relations between people — and history moves through the conflict of classes under definite conditions of production that no generation chooses freely.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Marx is extracted from **texts and career**, not from 20th-century party states as if they were the *Manifesto* itself, and not from pure denunciation that refuses to read. Primary lines:
+
+1. Early manuscripts (alienation / estranged labor)
+2. *The German Ideology* (with Engels) — materialist conception of history
+3. *The Communist Manifesto* (1848, with Engels)
+4. *The Eighteenth Brumaire of Louis Bonaparte* (1852) — men make history under circumstances given
+5. *Capital* Vol. I (1867) — commodity, fetishism, surplus value
+6. Journalism, International Workingmen’s Association
+7. Death 1883 London; Engels’s later clarifications on “ultimately determining” production
+
+English quotations follow standard translations (Moore/Aveling *Capital*; common *Manifesto* English; widely cited Brumaire line).
+
+---
+
+## Event 01 — *Estranged Labor*
+
+**Title:** The Worker Outside the Product
+
+**Passage or Trigger:**
+Economic and Philosophic Manuscripts of 1844: analysis of **alienated / estranged labor** — the more the worker produces, the poorer he becomes in his inner life; product and activity confront him as alien powers. (Later *Capital* deepens related themes without abandoning the wound.)
+
+**Why It Qualifies:**
+Recognition that industrial work can invert maker and made. The human becomes poorer in being while richer in having (capital’s store). A spiritual-structural diagnosis inside economic language.
+
+**Three-Domain Reading:**
+
+- **Theology:** Idolatry of products; loss of expressive life (echoed in later capital-as-treasure passages).
+- **Technology:** Factory division of labor as machine that eats the worker’s form.
+- **Cosmology:** Social world inverted — dead labor ruling living.
+
+**Compressed Insight:**
+He saw that a man can build a world of objects and lose himself inside it — the less he *is*, the more he *has*.
+
+**Confidence:** 0.93  
+**Sources:** 1844 Manuscripts; related formulations in later popular quotation of alienated life vs capital-hoard.
+
+---
+
+## Event 02 — *Materialist Conception of History*
+
+**Title:** Production Before Cloud-Castle
+
+**Passage or Trigger:**
+*The German Ideology* (with Engels) and lifelong method: not ideas descending to invent life, but real individuals producing their means of subsistence — “real life” as basis. Engels later (clarifying misuse): the *ultimately* determining element is production and reproduction of real life — not a cartoon that only economy exists.
+
+**Why It Qualifies:**
+Copernican flip for social theory: start from how people get food, tools, and exchange — then law, religion, philosophy. Whether one accepts the full system, the *order of explanation* is the event.
+
+**Three-Domain Reading:**
+
+- **Theology:** Critique of ideology as inverted consciousness; religion as contested superstructure (in Marx’s frame).
+- **Technology:** Mode of production as master variable including “entire technique” (Engels).
+- **Cosmology:** History as layered process with a material floor.
+
+**Compressed Insight:**
+He demanded that thought start from how people stay alive — before it builds heavens out of phrases.
+
+**Confidence:** 0.94  
+**Sources:** *German Ideology*; Engels letters/introductions on historical materialism’s scope.
+
+---
+
+## Event 03 — *The Manifesto’s Opening*
+
+**Title:** History as Class Struggle
+
+**Passage or Trigger:**
+*Manifesto of the Communist Party* (1848), opening:
+
+> “The history of all hitherto existing society is the history of class struggles.  
+> Freeman and slave, patrician and plebeian, lord and serf, guild-master and journeyman, in a word, oppressor and oppressed, stood in constant opposition to one another, carried on an uninterrupted, now hidden, now open fight, that each time ended, either in a revolutionary reconstitution of society at large, or in the common ruin of the contending classes.”
+
+**Why It Qualifies:**
+Totalizing narrative key: social time is conflict time. Ends are dual — reconstitution or mutual ruin. A cosmology of history with a binary engine (later refined, never abandoned as slogan).
+
+**Three-Domain Reading:**
+
+- **Theology:** Secular apocalypse structure — judgment as class combat.
+- **Technology:** Political pamphlet as compressed theory-weapon.
+- **Cosmology:** Society as permanent civil war under changing masks.
+
+**Compressed Insight:**
+He wrote history as a fight that ends in new form or shared wreckage — no neutral peace of classes.
+
+**Confidence:** 0.97  
+**Sources:** *Communist Manifesto* (1848).
+
+---
+
+## Event 04 — *Bourgeoisie as Revolutionary Force*
+
+**Title:** Capital Must Revolutionize Instruments
+
+**Passage or Trigger:**
+*Manifesto*: the bourgeoisie cannot exist without constantly revolutionizing the instruments of production — and thereby relations of society. Capitalism as permanent upheaval, not static greed alone.
+
+**Why It Qualifies:**
+Double vision: the enemy class is also the most dynamic force modernity has seen. Critique that grants the opponent world-historical power.
+
+**Three-Domain Reading:**
+
+- **Theology:** Pride of a class that melts all solid things (nearby *Manifesto* image).
+- **Technology:** Innovation as survival condition of a mode of production.
+- **Cosmology:** Modernity as permanent earthquake of means.
+
+**Compressed Insight:**
+He admitted the bourgeoisie remakes the world daily — and saw that remaking as both miracle and compulsion.
+
+**Confidence:** 0.95  
+**Sources:** *Communist Manifesto*; Stanford Encyclopedia summary citations.
+
+---
+
+## Event 05 — *The Eighteenth Brumaire*
+
+**Title:** Men Make History Under Given Weights
+
+**Passage or Trigger:**
+*The Eighteenth Brumaire of Louis Bonaparte* (1852):
+
+> “Men make their own history, but they do not make it as they please; they do not make it under self-selected circumstances, but under circumstances existing already, given and transmitted from the past.”
+
+**Why It Qualifies:**
+Agency without fantasy. Structure without fatalism’s cartoon. One of the tightest formulations of constrained freedom in political prose.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creaturely freedom under inherited condition — not sovereign self-creation.
+- **Technology:** Political analysis of coup and class fraction as case study method.
+- **Cosmology:** Time as burden of dead generations on the living (the line’s wider context).
+
+**Compressed Insight:**
+He refused both the hero who invents the world and the puppet who only suffers it — history is made, but never on a blank page.
+
+**Confidence:** 0.97  
+**Sources:** *Eighteenth Brumaire* (1852).
+
+---
+
+## Event 06 — *The Commodity*
+
+**Title:** Use-Value, Exchange-Value, and the Cell Form
+
+**Passage or Trigger:**
+*Capital* Vol. I, Chapter 1: the commodity as elementary form of wealth in capitalist societies — dual character of the labor embodied; use-value vs value. Analysis begins with the everyday object on the shelf.
+
+**Why It Qualifies:**
+Method: start from the most ordinary thing and unpack a social cosmos. Microscopy of the commodity becomes telescope on the mode of production.
+
+**Three-Domain Reading:**
+
+- **Theology:** Ordinary bread and coats as sites of hidden social relations.
+- **Technology:** Abstract labor as homogenizing measure.
+- **Cosmology:** Market world built from billions of dual-natured things.
+
+**Compressed Insight:**
+He opened a coat and a yard of linen until a whole society fell out.
+
+**Confidence:** 0.96  
+**Sources:** *Capital* I, ch. 1.
+
+---
+
+## Event 07 — *Commodity Fetishism*
+
+**Title:** Relations Between People as Relations Between Things
+
+**Passage or Trigger:**
+*Capital* I, ch. 1 — **fetishism of commodities**: the value-relation between products of labor has “absolutely no connection with their physical properties”; it is a social relation between people that takes “the fantastic form of a relation between things.” Magic and necromancy of the commodity world vanish under other modes of production.
+
+**Why It Qualifies:**
+Central gnosis event: ideology is not only lies in speeches — it is **form of appearance** of everyday exchange. The market’s “naturalness” is socially produced enchantment.
+
+**Three-Domain Reading:**
+
+- **Theology:** Fetish as secular idol — human powers projected onto objects that then dominate.
+- **Technology:** Price system as interface that hides labor’s social web.
+- **Cosmology:** A world where things seem to live and move as subjects.
+
+**Compressed Insight:**
+He named the spell by which our own labor returns as a foreign power wearing a price tag.
+
+**Confidence:** 0.97  
+**Sources:** *Capital* I, ch. 1 (Marxists.org / standard translations).
+
+---
+
+## Event 08 — *Capital as Self-Expanding Value*
+
+**Title:** Value That Lays Golden Eggs
+
+**Passage or Trigger:**
+*Capital* I — capital as value in process: M–C–M′; capital as money and commodities that acquire the “occult quality of being able to add value to itself… brings forth living offspring, or, at the least, lays golden eggs.”
+
+**Why It Qualifies:**
+Personification of capital as subject — not metaphor only, but structural behavior of a social form that must grow. The system’s hunger is formalized.
+
+**Three-Domain Reading:**
+
+- **Theology:** Moloch image without leaving economic argument.
+- **Technology:** Circuit of capital as abstract machine.
+- **Cosmology:** Social world subordinated to expansion imperative.
+
+**Compressed Insight:**
+He saw capital as a vampire-formula that must keep laying golden eggs — or cease to be capital.
+
+**Confidence:** 0.95  
+**Sources:** *Capital* I, ch. on general formula of capital (ch. 4 in common numbering).
+
+---
+
+## Event 09 — *Surplus Value*
+
+**Title:** The Secret of the Working Day
+
+**Passage or Trigger:**
+*Capital* I: surplus value arising from labor-power’s unique capacity to produce more value than it costs to reproduce; absolute and relative surplus value; struggle over the working day. Exploitation stated as structural, not merely moral insult.
+
+**Why It Qualifies:**
+Core of the critique of political economy: profit’s origin relocated into the labor process under wage form. Whether one accepts the labor theory of value, the *problem* he forces — where does growth of capital come from? — remains live.
+
+**Three-Domain Reading:**
+
+- **Theology:** Justice of distribution; theft metaphors vs science of extraction.
+- **Technology:** Time-discipline, machinery, cooperation as surplus pumps.
+- **Cosmology:** Factory as center of modern social gravity.
+
+**Compressed Insight:**
+He timed the working day until unpaid minutes showed themselves as the system’s blood.
+
+**Confidence:** 0.94  
+**Sources:** *Capital* I, parts on surplus value and the working day.
+
+---
+
+## Event 10 — *London Exile and the British Museum*
+
+**Title:** The Refugee’s Factory of Critique
+
+**Passage or Trigger:**
+Decades in London after expulsions from continental centers; research in the British Museum Reading Room; chronic poverty, children’s deaths, Engels’s financial support — the material conditions of writing *Capital*.
+
+**Why It Qualifies:**
+Thought under precarity. The critique of capital written from the capital of capital, by a stateless intellectual dependent on a factory-owner friend. Irony is structural, not joke.
+
+**Three-Domain Reading:**
+
+- **Theology:** Witness from the margins of empire.
+- **Technology:** Archive + long-form book as weapons of the weak-strong.
+- **Cosmology:** Global market observed from its Victorian nerve center.
+
+**Compressed Insight:**
+He dissected capital from a library seat in its world city — poor, persistent, unfinished.
+
+**Confidence:** 0.92  
+**Sources:** Standard documentary biography (London years, Museum research).
+
+---
+
+## Event 11 — *The Incomplete Capital*
+
+**Title:** Volumes Beyond the Grave
+
+**Passage or Trigger:**
+Only *Capital* Vol. I published by Marx (1867); Vols. II–III edited by Engels from manuscripts after Marx’s death (1883). Theories of Surplus Value and other manuscripts further. The system remains a **torso**.
+
+**Why It Qualifies:**
+Like Aquinas’s unfinished *Summa*: the map of the whole mode of production exceeds one life. Reception fights over what “Marx really meant” partly because the architecture was never closed by its architect.
+
+**Three-Domain Reading:**
+
+- **Theology:** Human limit on total systems.
+- **Technology:** Posthumous editing as co-authorship problem.
+- **Cosmology:** Critique of a world-system left mid-construction.
+
+**Compressed Insight:**
+He died with capital’s full anatomy still in folders — and the century argued over the unclosed body.
+
+**Confidence:** 0.94  
+**Sources:** Publication history of *Capital*; Engels’s editorial role.
+
+---
+
+## Event 12 — *Afterlife: Theory and States*
+
+**Title:** Diagnosis Weaponized
+
+**Passage or Trigger:**
+Post-1883: parties, Internationals, revolutions, and states claim Marx; outcomes range from social democracy to totalizing regimes. The Council records that a **critical diagnostic** of capitalism is not identical with every regime that printed his face — without pretending the texts contain no revolutionary will.
+
+**Why It Qualifies:**
+Meta-event: ideas of class and crisis become historical forces with body counts and reforms both. Extraction must hold **text**, **movement**, and **state** as related but not identical layers — same hygiene as Fisher’s eugenics or Tesla’s cult.
+
+**Three-Domain Reading:**
+
+- **Theology:** Idolatry of theory vs prophetic critique of injustice.
+- **Technology:** Ideology as operating system for parties and police.
+- **Cosmology:** 20th century as field where this thought partially remade the map.
+
+**Compressed Insight:**
+He gave the world a lens that cut — and many who held the lens used it as a sword, a shield, or a throne.
+
+**Confidence:** 0.90  
+**Sources:** Reception history; distinction of Marx’s writings from later state Marxisms as historical fact.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *Communist Manifesto* (1848)
+- *Eighteenth Brumaire* (1852)
+- *Capital* Vol. I (1867)
+- 1844 Manuscripts; *German Ideology* (with Engels)
+
+**Collections**
+- marxists.org textual archive
+
+**Open questions for later passes**
+- *Grundrisse* notebook density as separate event cluster
+- Late notes on Russia / non-linear paths
+- Relationship with Proudhon, Bakunin as polemical events
+
+---
+
+## Seat checklist
+
+- [x] Research from major works (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple text-grounded events (reception held honestly)
+- [ ] member_id: `karl-marx`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Sociology). Events grounded in Marx’s texts and documented career; neither hagiography of regimes nor refusal to read the critique.*

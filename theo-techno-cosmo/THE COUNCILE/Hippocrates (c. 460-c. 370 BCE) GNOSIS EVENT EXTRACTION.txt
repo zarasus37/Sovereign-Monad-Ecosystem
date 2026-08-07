@@ -1,0 +1,363 @@
+HIPPOCRATES GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Applied Sciences & Professions → Medicine
+**Era:** c. 460 – c. 370 BCE (Cos / classical Greece; dates traditional)
+**Status:** Extraction complete (seating candidate) — drawn from the Hippocratic Corpus (multi-author tradition centered on the school of Cos)
+
+---
+
+## Contribution
+
+Name-anchor of the **Hippocratic Corpus** — classical Greek medical writings that relocate disease from pure divine curse to natural process under observation; that bind the physician by **oath** to teacher, patient, and craft limits; that read health through **airs, waters, places** and seasons; and that leave case records in the *Epidemics* as a technology of clinical memory. “Hippocrates” here means the founding figure and the school-voice the tradition gathered under his name.
+
+## Key Insight
+
+Medicine is a natural art under ethical bond: watch the patient, the season, and the site; do good and not harm; keep the craft’s secrets and debts — because the body is a world inside the larger world of climate and place.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Almost no work in the Corpus is provably by one man alone; ancient tradition links many texts to Hippocrates of Cos and the Coan school. The Council extracts **doctrines and forms** of that tradition, not a novelized biography. Primary lines:
+
+1. *The Oath* (*Horkos*)
+2. *Airs, Waters, Places*
+3. *Epidemics* (esp. I and III)
+4. *On the Sacred Disease*
+5. *Prognostic* / related predictive texts
+6. Humoral theory as school framework (blood, phlegm, yellow/black bile — classical reception)
+7. Later “Hippocratic” identity as Western medicine’s ethical and observational ancestor
+
+English passages follow standard Loeb / Jones-style translations in wide use.
+
+---
+
+## Event 01 — *The Corpus as School*
+
+**Title:** Many Hands, One Name
+
+**Passage or Trigger:**
+Hippocratic Corpus: dozens of treatises, fifth–third centuries BCE, multiple authors; nucleus often linked to a Coan library/school. The name “Hippocrates” becomes the brand of a method more than a single autograph.
+
+**Why It Qualifies:**
+Founding as **tradition**, not lone genius myth. Medicine advances by accumulated observation under a shared ethic and naturalism.
+
+**Three-Domain Reading:**
+
+- **Theology:** Hero-physician as culture hero (Asclepiad lineage claims).
+- **Technology:** Text corpus as knowledge base.
+- **Cosmology:** Greek world producing a portable medical rationality.
+
+**Compressed Insight:**
+He became a library — many physicians writing as if one mind were watching the body.
+
+**Confidence:** 0.93  
+**Sources:** Hippocratic Corpus scholarship; Wikipedia / Loeb introductions.
+
+---
+
+## Event 02 — *The Oath*
+
+**Title:** The Bond of the Art
+
+**Passage or Trigger:**
+*The Oath*: pledge to teachers as parents; to share the art with sworn pupils; to use regimens for the benefit of the sick and not for harm or injustice; confidentiality; limits on procedures (e.g. cutting for stone left to specialists in the traditional text); refusal of deadly drugs and abortive pessaries in the classical formulation. Complex, probably composite; still the landmark of medical ethics.
+
+**Why It Qualifies:**
+Central Medicine event: craft without oath is mere technique. The physician is a moral office. “Do no harm” tradition roots here even when wording is popularized later.
+
+**Three-Domain Reading:**
+
+- **Theology:** Sacredness of the teacher–pupil and healer–patient bonds.
+- **Technology:** Professional self-regulation as social tech.
+- **Cosmology:** Human vulnerability organized under a vow.
+
+**Compressed Insight:**
+He (or his school) made healing swear — so power over the body would answer to more than skill.
+
+**Confidence:** 0.96  
+**Sources:** *The Oath*; PMC / standard medical-ethics histories.
+
+---
+
+## Event 03 — *Airs, Waters, Places*
+
+**Title:** The Physician Must Read the Land
+
+**Passage or Trigger:**
+*Airs, Waters, Places*: whoever would study medicine aright must learn seasons and their differences; waters; winds; the site of a city; habits of inhabitants. A doctor entering a new district who understands these will not be lost regarding local diseases and will anticipate seasonal epidemics.
+
+**Why It Qualifies:**
+Environmental medicine as first principle. Disease is not only inside the person — it is person-in-place. Earth Sciences and Medicine shake hands.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation’s climates as real powers over flesh (without reducing all to gods of plague alone).
+- **Technology:** Epidemiological scouting as clinical method.
+- **Cosmology:** Human health nested in weather, water, and geography.
+
+**Compressed Insight:**
+He ordered the doctor to study the wind and the well — before the pulse.
+
+**Confidence:** 0.96  
+**Sources:** *Airs, Waters, Places* (Loeb/Jones tradition); Duke/ereserve style translations.
+
+---
+
+## Event 04 — *Epidemics*
+
+**Title:** The Case as Sacred Data
+
+**Passage or Trigger:**
+*Epidemics* books: case histories, constitution of seasons, courses of fevers — “the most famous of Hippocratic teachings” often linked here as prime directive of observation. Clinical narrative as science.
+
+**Why It Qualifies:**
+Memory technology of medicine: what happened to this body, under this sky, day by day. Prognosis grows from recorded particulars.
+
+**Three-Domain Reading:**
+
+- **Theology:** Attention to the sufferer as moral act.
+- **Technology:** Case record as ancestor of clinical chart.
+- **Cosmology:** Disease as process in time, not static label only.
+
+**Compressed Insight:**
+He (the school) wrote patients into time — so the next fever would meet a remembering art.
+
+**Confidence:** 0.94  
+**Sources:** *Epidemics* I & III; Hippocratic clinical tradition.
+
+---
+
+## Event 05 — *On the Sacred Disease*
+
+**Title:** Epilepsy Naturalized
+
+**Passage or Trigger:**
+*On the Sacred Disease*: argument that the so-called sacred disease (epilepsy) is not more divine than others — it has a natural cause; charlatans exploit “sacred” labels. Naturalism against magical capture of fear.
+
+**Why It Qualifies:**
+Secularizing move inside a religious culture: not atheism necessarily, but refusal to let mystery block inquiry. All diseases natural in principle; “sacred” as marketing of ignorance.
+
+**Three-Domain Reading:**
+
+- **Theology:** Divine not denied wholesale — misuse of “sacred” critiqued.
+- **Technology:** Differential diagnosis vs magic theater.
+- **Cosmology:** Brain/body events under natural law.
+
+**Compressed Insight:**
+He stripped the marketing off epilepsy — and demanded a cause you could study.
+
+**Confidence:** 0.95  
+**Sources:** *On the Sacred Disease*; Corpus scholarship on single-author clusters.
+
+---
+
+## Event 06 — *Prognosis*
+
+**Title:** Seeing the End From the Signs
+
+**Passage or Trigger:**
+*Prognostic* and related texts: reading signs to foretell course — the physician’s honor partly in knowing what will happen, including death, without false promise.
+
+**Why It Qualifies:**
+Honesty as skill. Medicine includes the courage to name likely outcomes. Time becomes clinical variable.
+
+**Three-Domain Reading:**
+
+- **Theology:** Humility before death’s approach.
+- **Technology:** Predictive semiotics of the body.
+- **Cosmology:** Illness as trajectory.
+
+**Compressed Insight:**
+He made foreknowledge a duty — so hope would not be sold as certainty.
+
+**Confidence:** 0.92  
+**Sources:** *Prognostic*; related prorrhetic texts.
+
+---
+
+## Event 07 — *Humors as System*
+
+**Title:** Balance as Health
+
+**Passage or Trigger:**
+Classical Hippocratic-Galenic reception of **four humors** (blood, phlegm, yellow bile, black bile) and qualities — health as balance, disease as imbalance. Whether every treatise agrees, the school’s long identity includes this systemic body-cosmology.
+
+**Why It Qualifies:**
+Body as microcosm of elemental tensions. A complete formal language for diagnosis before modern pathophysiology — wrong in detail later, powerful as systems thinking.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creature as ordered mixture.
+- **Technology:** Dietary and regimen interventions aimed at rebalance.
+- **Cosmology:** Human mirror of elemental world.
+
+**Compressed Insight:**
+He (the tradition) taught that health is a chord — disease a note out of tune.
+
+**Confidence:** 0.88 (school doctrine; multi-text)  
+**Sources:** Humoral theory in Hippocratic-Galenic lineage.
+
+---
+
+## Event 08 — *Regimen and Diet*
+
+**Title:** Life-Way as Medicine
+
+**Passage or Trigger:**
+Corpus emphasis on regimen — food, exercise, habits — as primary therapy. The physician as coach of living, not only cutter and drug-giver.
+
+**Why It Qualifies:**
+Prevention and lifestyle as first instruments. Medicine extends into ordinary days.
+
+**Three-Domain Reading:**
+
+- **Theology:** Stewardship of the body.
+- **Technology:** Dietetics as soft power of healing.
+- **Cosmology:** Daily life as continuous medical field.
+
+**Compressed Insight:**
+He put the kitchen and the walk on the same shelf as the knife.
+
+**Confidence:** 0.90  
+**Sources:** Regimen treatises in the Corpus; standard Hippocratic medicine surveys.
+
+---
+
+## Event 09 — *First, Benefit — Not Harm*
+
+**Title:** The Prime Directive
+
+**Passage or Trigger:**
+Ethical core often summarized from Epidemics / oath culture: benefit the sick; or at least do no harm (*primum non nocere* is later Latin slogan for a Hippocratic spirit). The art’s aim is the patient’s good under uncertainty.
+
+**Why It Qualifies:**
+Asymmetric ethics of power: the one who can hurt must aim to help. Foundation of later medical ethics even when formularies change.
+
+**Three-Domain Reading:**
+
+- **Theology:** Mercy as professional essence.
+- **Technology:** Risk–benefit as permanent clinical calculus.
+- **Cosmology:** Healer–patient as basic human dyad under mortality.
+
+**Compressed Insight:**
+He bound the hand that can cut — first to help, and never to wound for sport or gain.
+
+**Confidence:** 0.91  
+**Sources:** Oath + Epidemics ethical maxims in reception; historical caution on exact Latin slogan.
+
+---
+
+## Event 10 — *The Teacher as Parent*
+
+**Title:** Lineage of the Art
+
+**Passage or Trigger:**
+Oath’s opening: teachers as equal to parents; financial and pedagogical duties to the teacher’s line; teaching the art to one’s own children and sworn pupils.
+
+**Why It Qualifies:**
+Knowledge as kinship. Medicine reproduces through **bonded transmission**, not open dump of technique to anyone.
+
+**Three-Domain Reading:**
+
+- **Theology:** Filial piety inside the craft.
+- **Technology:** Guild structure of expertise.
+- **Cosmology:** Continuity of the art across generations of bodies.
+
+**Compressed Insight:**
+He made the teacher a second father — so the art would not be orphaned or sold cheap.
+
+**Confidence:** 0.94  
+**Sources:** *The Oath*.
+
+---
+
+## Event 11 — *Against Pure Temple Magic*
+
+**Title:** Rational Art Beside the Gods
+
+**Passage or Trigger:**
+Hippocratic naturalism (especially *Sacred Disease* and environmental texts) operates in a world that still knows temples of Asclepius — yet insists on natural causes and observation. Tension of sacred and rational is the birth-weather of Western medicine.
+
+**Why It Qualifies:**
+Not simple secular triumph narrative — a **reallocation of explanation**. Gods may remain; epilepsy still has a nature to study.
+
+**Three-Domain Reading:**
+
+- **Theology:** Limits of magical capture of disease.
+- **Technology:** Observation vs ritual as competing interventions.
+- **Cosmology:** Body in a world of both meaning and mechanism.
+
+**Compressed Insight:**
+He practiced in a world of temples — and still demanded causes you could track like weather.
+
+**Confidence:** 0.90  
+**Sources:** *On the Sacred Disease*; cultural context of Asclepiad medicine.
+
+---
+
+## Event 12 — *Afterlife of the Name*
+
+**Title:** Every Doctor’s Ancestor
+
+**Passage or Trigger:**
+“Hippocrates” becomes Western medicine’s emblematic founder — oath rewritten for modern schools, Corpus studied as origin myth and real method. The man of Cos is half person, half permanent **office** of medical conscience.
+
+**Why It Qualifies:**
+Institutional gnosis: a name that polices the craft for 2,400 years. Arch Medicine seat is this long shadow.
+
+**Three-Domain Reading:**
+
+- **Theology:** Patron saint of physicians in secular dress.
+- **Technology:** Ethical brand of the profession.
+- **Cosmology:** Continuous medical civilization narrating its start.
+
+**Compressed Insight:**
+He became less a single pulse-taker than a permanent vow — still sworn, still argued, still needed.
+
+**Confidence:** 0.92  
+**Sources:** Reception history of the Oath and “Father of Medicine” title.
+
+---
+
+## Sources / Working Notes
+
+**Primary (Corpus)**
+- *The Oath*
+- *Airs, Waters, Places*
+- *Epidemics* I & III
+- *On the Sacred Disease*
+- *Prognostic* and related
+
+**Editions**
+- Loeb Classical Library Hippocrates (W.H.S. Jones et al.)
+
+**Secondary**
+- Wikipedia Hippocratic Corpus
+- Standard histories of ancient medicine
+
+**Open questions for later passes**
+- Specific case narratives from *Epidemics* as nested micro-events
+- Coan vs Cnidian school contrasts
+- Women and slaves in Hippocratic practice (social limit dossier)
+
+---
+
+## Seat checklist
+
+- [x] Research from Corpus texts and reception (full pass)
+- [x] Contribution + key insight locked (school-tradition framed honestly)
+- [x] Multiple source-grounded events
+- [ ] member_id: `hippocrates`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Medicine). Events grounded in the Hippocratic Corpus and its school tradition; single-author biography not pretended where the texts are plural.*

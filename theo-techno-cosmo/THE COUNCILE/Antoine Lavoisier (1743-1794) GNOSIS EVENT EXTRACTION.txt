@@ -1,0 +1,360 @@
+ANTOINE LAVOISIER GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Natural Sciences → Chemistry
+**Era:** 1743–1794 (Paris; chemical revolution; Terror)
+**Status:** Extraction complete (seating candidate) — drawn from oxygen program, conservation principle, nomenclature reform, and revolutionary end
+
+---
+
+## Contribution
+
+Chemist who led the **chemical revolution**: demolished **phlogiston** theory by showing that **combustion and respiration** require a distinct air he named **oxygen**; established **conservation of mass** through quantitative closed-system experiment; co-authored modern **chemical nomenclature** (1787) and the *Traité élémentaire de chimie* (1789); and who — with collaborator **Marie-Anne Paulze Lavoisier** — made the **balance** the discipline’s central instrument — before execution under the Terror (8 May 1794) as a fermier général.
+
+## Key Insight
+
+Matter is neither created nor destroyed in chemical change — only transformed — and fire is not the release of a ghostly “phlogiston” but combination with oxygen; so chemistry becomes a science of weighed elements and named compounds, not alchemical story.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Lavoisier is extracted from **experimental program and treatises**, with credit hygiene: **Joseph Priestley** (and independently Scheele) isolated “dephlogisticated air” / oxygen first; Lavoisier’s achievement is **interpretation, naming, system**, and overthrow of phlogiston within which Priestley remained. Collaborators: **Marie-Anne** (translation, illustration, lab partnership); **Guyton de Morveau, Berthollet, Fourcroy** on nomenclature; work with **Laplace** on heat and water. Primary lines:
+
+1. Quantitative method / the balance
+2. 1772 sealed note (air in combustion/calcination)
+3. Oxygen naming and anti-phlogiston theory
+4. Conservation of mass
+5. Water composition / hydrogen
+6. *Méthode de nomenclature chimique* (1787)
+7. *Traité élémentaire de chimie* (1789)
+8. Public finance (Ferme générale); guillotine 1794
+
+---
+
+## Event 01 — *The Balance as Law*
+
+**Title:** No Claim Without Weight
+
+**Passage or Trigger:**
+Lavoisier’s method: chemistry must answer to the **balance**. Mass is the conserved, measurable property; qualitative story without closed weighing is insufficient. Empiricist discipline that turns alchemy’s residual theater into quantitative science.
+
+**Why It Qualifies:**
+Foundational technology of modern chemistry. Instrument as epistemology — the scale is not accessory; it is the court of appeal.
+
+**Three-Domain Reading:**
+
+- **Theology:** Honesty before nature’s ledger.
+- **Technology:** Precision balance as civilizational tool of truth.
+- **Cosmology:** Matter as accountable quantity in a closed world.
+
+**Compressed Insight:**
+He made the balance the conscience of chemistry — no reaction believed until mass had spoken.
+
+**Confidence:** 0.95  
+**Sources:** Science History Institute; CountryReports / quantitative method summaries; ACS landmark framing.
+
+---
+
+## Event 02 — *Sealed Note* (November 1772)
+
+**Title:** Priority Locked Against Doubt
+
+**Passage or Trigger:**
+November 1772: sealed note deposited stating that air participates chemically in combustion and calcination — idea recorded before full experimental confirmation so priority could not be denied when results arrived.
+
+**Why It Qualifies:**
+Scientific self-consciousness: theory risked in writing under seal. Shows Lavoisier’s program as deliberate revolution, not accidental observation.
+
+**Three-Domain Reading:**
+
+- **Theology:** Witness sealed before men.
+- **Technology:** Institutional priority practices of the Academy.
+- **Cosmology:** Air as chemical actor, not inert stage.
+
+**Compressed Insight:**
+He hid a sentence about air and fire so that when the world caught up, the date would still be his.
+
+**Confidence:** 0.93  
+**Sources:** CountryReports on the 1772 sealed note; standard Lavoisier chronologies.
+
+---
+
+## Event 03 — *Against Phlogiston*
+
+**Title:** The Ghost That Lost Weight
+
+**Passage or Trigger:**
+Phlogiston theory held that burning releases a subtle principle from the fuel. Metals after calcination often **gain** mass — fatal anomaly. Lavoisier shows combination with a portion of air explains the gain; phlogiston is unnecessary and false.
+
+**Why It Qualifies:**
+Paradigm kill. Centuries of chemical language reverse. Combustion becomes addition, not subtraction of a spirit.
+
+**Three-Domain Reading:**
+
+- **Theology:** Rejection of invisible substances that explain everything and weigh nothing.
+- **Technology:** Controlled calcination and gas collection as decisive experiments.
+- **Cosmology:** Fire as chemistry of atmosphere, not escape of essence.
+
+**Compressed Insight:**
+He weighed the ash and found the ghost had the wrong sign — fire takes from the air, not only from the wood.
+
+**Confidence:** 0.96  
+**Sources:** ACS Chemical Revolution landmark; Science History Institute; Britannica oxygen/combustion.
+
+---
+
+## Event 04 — *Naming Oxygen* (c. 1777–1778)
+
+**Title:** The Air That Makes Acids — And Mistakenly So Named
+
+**Passage or Trigger:**
+Priestley isolates the gas (1774) within a phlogiston frame (“dephlogisticated air”). Lavoisier recognizes a distinct element, names it **oxygen** (Greek: acid-former — a naming error in the long run, but a permanent word), and builds the oxygen theory of combustion, calcination, and respiration.
+
+**Why It Qualifies:**
+Central Chemistry event. Credit split: isolation vs systematic theory. Council names both the isolator and the namer-systematizer.
+
+**Three-Domain Reading:**
+
+- **Theology:** Naming as dominion and as risk of error.
+- **Technology:** Gasometry and reduction of mercuric oxide etc.
+- **Cosmology:** Atmosphere as mixture of active and inactive airs.
+
+**Compressed Insight:**
+Another man first held the gas; he named it and made it the hinge of fire, breath, and modern chemistry.
+
+**Confidence:** 0.95  
+**Sources:** Britannica; Science History Institute; CountryReports Priestley/Lavoisier distinction; Wikipedia known-for list.
+
+---
+
+## Event 05 — *Combustion and Respiration*
+
+**Title:** Flame and Breath Share One Chemistry
+
+**Passage or Trigger:**
+Oxygen theory unifies **burning** and **breathing**: both consume the same active air and produce analogous products (with carbonic acid / fixed air in respiration and combustion of organics). Animal heat and candle flame enter one material economy.
+
+**Why It Qualifies:**
+Life and fire under one law. Biology’s chemistry of breath begins as chemistry of combustion.
+
+**Three-Domain Reading:**
+
+- **Theology:** Life’s fire as shared gift of the air.
+- **Technology:** Calorimetry and gas measurement of respiration.
+- **Cosmology:** Organisms as open combustion systems in an oxygenated world.
+
+**Compressed Insight:**
+He saw that we burn slowly what the candle burns fast — same air, same ledger.
+
+**Confidence:** 0.94  
+**Sources:** Science History Institute; ACS; standard oxygen-theory summaries.
+
+---
+
+## Event 06 — *Conservation of Mass*
+
+**Title:** Nothing from Nothing in the Closed Vessel
+
+**Passage or Trigger:**
+Quantitative closed-system experiments: total mass of reactants equals total mass of products. Matter neither created nor destroyed in chemical reactions — only rearranged. Principle popularized and made operational for chemistry (roots also in earlier philosophy; Lavoisier’s contribution is experimental enforcement).
+
+**Why It Qualifies:**
+Chemical cosmology’s first commandment. Balanced equations later rest on this. Stoichiometry becomes possible as science.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation’s substance not casually annihilated by human fire.
+- **Technology:** Sealed vessels and precision weighing as proof architecture.
+- **Cosmology:** Material universe as conserved inventory under transformation.
+
+**Compressed Insight:**
+He closed the jar and proved the world does not cheat the scale — only changes costume.
+
+**Confidence:** 0.96  
+**Sources:** Science History Institute; Britannica; Wikipedia conservation framing; CountryReports.
+
+---
+
+## Event 07 — *Water and Hydrogen*
+
+**Title:** Water Is Not an Element
+
+**Passage or Trigger:**
+Analysis and synthesis of water: water as compound of hydrogen (inflammable air) and oxygen — not an Aristotelian element. Work in dialogue with Cavendish and with collaborators (including heat work with Laplace). Element list shrinks; compound list grows under oxygen theory.
+
+**Why It Qualifies:**
+Classical four-elements cosmos broken at water. Chemistry redefines the building blocks of the wet world.
+
+**Three-Domain Reading:**
+
+- **Theology:** Humility before composition of the familiar.
+- **Technology:** Gas combination and decomposition apparatus.
+- **Cosmology:** Everyday substance as molecular history.
+
+**Compressed Insight:**
+He took water apart and found two airs married — the ancient element was a wedding, not a simple.
+
+**Confidence:** 0.93  
+**Sources:** Standard Lavoisier water/hydrogen accounts; Britannica chemical revolution context.
+
+---
+
+## Event 08 — *Méthode de Nomenclature Chimique* (1787)
+
+**Title:** A New Language for Matter
+
+**Passage or Trigger:**
+1787: with **Louis-Bernard Guyton de Morveau**, **Claude-Louis Berthollet**, and **Antoine François de Fourcroy**, *Méthode de nomenclature chimique* — systematic names for compounds reflecting composition (oxides, acids, salts), replacing alchemical and trivial names that blocked clear thought.
+
+**Why It Qualifies:**
+Language reform as scientific revolution. Wrong words mislead experiment; right names encode theory. Collective authorship named.
+
+**Three-Domain Reading:**
+
+- **Theology:** Adamic naming renewed as scientific duty.
+- **Technology:** Nomenclature as information technology for labs.
+- **Cosmology:** Shared map of substances across Europe.
+
+**Compressed Insight:**
+They renamed the world of stuff so that the name confessed the composition — and chemistry could finally speak cleanly.
+
+**Confidence:** 0.95  
+**Sources:** Wikipedia nomenclature section; CountryReports on language reform; Britannica coauthored modern naming system.
+
+---
+
+## Event 09 — *Traité élémentaire de chimie* (1789)
+
+**Title:** The Textbook of the New Chemistry
+
+**Passage or Trigger:**
+1789: *Traité élémentaire de chimie* — elementary treatise presenting oxygen theory, conservation, instruments, and table of elements (simple substances) to a generation. Illustrations and lab practice codified; often cited as founding modern chemical textbook.
+
+**Why It Qualifies:**
+System becomes teachable. Revolution survives the man because it is written as curriculum.
+
+**Three-Domain Reading:**
+
+- **Theology:** Order out of chaos for students of matter.
+- **Technology:** Laboratory as reproducible pedagogy.
+- **Cosmology:** Periodic table’s ancestors — a finite list of simples.
+
+**Compressed Insight:**
+He put the new chemistry between covers the year France remade its politics — one revolution of matter, one of the state.
+
+**Confidence:** 0.94  
+**Sources:** Britannica; ACS landmark; standard *Traité* reception.
+
+---
+
+## Event 10 — *Marie-Anne Paulze Lavoisier*
+
+**Title:** Partner at the Bench and the Page
+
+**Passage or Trigger:**
+Marie-Anne Paulze Lavoisier: scientific collaborator, translator (English phlogiston literature into French for the lab), illustrator of apparatus, host of the scientific salon. The chemical revolution is a household as well as an Academy project.
+
+**Why It Qualifies:**
+Credit hygiene. Council refuses lone-genius erasure of the collaborator whose drawings and translations made the work travel.
+
+**Three-Domain Reading:**
+
+- **Theology:** Covenant of shared labor in truth.
+- **Technology:** Illustration as precision technology of method transfer.
+- **Cosmology:** Knowledge as household ecosystem.
+
+**Compressed Insight:**
+His chemistry had two hands at the table — hers drew the instruments and opened the English books.
+
+**Confidence:** 0.93  
+**Sources:** Science History Institute (explicit collaborator framing); Duke exhibits / standard Marie-Anne scholarship summaries.
+
+---
+
+## Event 11 — *Ferme Générale and the Public Man*
+
+**Title:** The Chemist Who Also Collected the Tax
+
+**Passage or Trigger:**
+Lavoisier as **fermier général** (shareholder in the General Farm collecting taxes for the crown); also gunpowder administration, metric-related mass standards work, Academy leadership. Wealth and public office fund the laboratory — and mark him for revolutionary justice.
+
+**Why It Qualifies:**
+Science under the old regime’s finance. The Arch does not split the chemist from the administrator; the same life enables and endangers the work.
+
+**Three-Domain Reading:**
+
+- **Theology:** Complicity and service under imperfect power.
+- **Technology:** State arsenals, standards, and labs as coupled systems.
+- **Cosmology:** Enlightenment science inside monarchical extraction.
+
+**Compressed Insight:**
+He weighed oxygen by day and belonged to the machine that weighed the people’s coin — both made him famous; one made him mortal.
+
+**Confidence:** 0.94  
+**Sources:** Britannica death and General Farm; Lehigh trial/execution note; Science History public roles.
+
+---
+
+## Event 12 — *Guillotine* (8 May 1794)
+
+**Title:** The Republic Takes the Head That Weighed the World
+
+**Passage or Trigger:**
+8 May 1794: tried and guillotined in Paris during the Reign of Terror with father-in-law and other General Farm members. Apocryphal quips aside, the documented fact is execution of the leading chemist of Europe as financier of the old order. Marie-Anne survives; the chemistry already published outlives the body.
+
+**Why It Qualifies:**
+Theology of history at maximum: modern chemistry’s founder dies by political steel. Knowledge is not armor against the state’s blade.
+
+**Three-Domain Reading:**
+
+- **Theology:** Martyrdom without sanctity claim — creaturely limit under justice and terror mixed.
+- **Technology:** Guillotine as industrial death vs balance as industrial truth.
+- **Cosmology:** Scientific cosmos continues; the man does not.
+
+**Compressed Insight:**
+They cut off the head that taught matter to balance — and the equations kept balancing without him.
+
+**Confidence:** 0.96  
+**Sources:** Britannica (8 May 1794); Lehigh special collections trial note; Wikipedia; ACS remembrance framing.
+
+---
+
+## Sources / Working Notes
+
+**Primary / near-primary**
+- Sealed note tradition (1772) and oxygen/combustion papers of the 1770s–80s
+- *Méthode de nomenclature chimique* (1787, collective)
+- *Traité élémentaire de chimie* (1789)
+
+**Secondary**
+- Britannica Antoine Lavoisier
+- Science History Institute scientific biography
+- ACS National Historic Chemical Landmark: Chemical Revolution
+- CountryReports long synthesis (Priestley credit; conservation; metric mass work)
+- Lehigh: trial and execution 8 May 1794
+
+**Open questions for later passes**
+- Gunpowder administration and war chemistry denser pass
+- Exact Laplace collaboration on heat as nested event
+- Marie-Anne’s post-Terror scientific and personal trajectory
+
+---
+
+## Seat checklist
+
+- [x] Research from chemical revolution sources (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (Priestley/Marie-Anne/nomenclature coauthors credited)
+- [ ] member_id: `antoine-lavoisier`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Chemistry). Events grounded in oxygen theory, conservation, nomenclature, and revolutionary end; isolators and collaborators named.*

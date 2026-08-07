@@ -1,0 +1,372 @@
+IMMANUEL KANT GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Humanities → Philosophy
+**Era:** 1724–1804 (Königsberg, Prussia)
+**Status:** Extraction complete (seating candidate) — drawn from the three *Critiques*, the Enlightenment essay, and standard critical-period corpus
+
+---
+
+## Contribution
+
+Philosopher who limited and secured reason in the *Critique of Pure Reason* (1781/1787); who grounded morality in the **categorical imperative** and autonomy in the *Groundwork* and *Critique of Practical Reason*; who judged aesthetic and teleological judgment in the *Critique of Judgment*; and who defined Enlightenment as emergence from self-incurred immaturity — *Sapere aude!*
+
+## Key Insight
+
+We can know appearances structured by our forms of intuition and categories — not things-in-themselves as God might know them — and we must still act under a moral law we give ourselves as rational beings: limits of knowledge and dignity of duty in one architecture.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Kant is extracted from **critical-period works**, with pre-critical career as background. Primary lines:
+
+1. “Silent decade” and turn to critical philosophy
+2. *Critique of Pure Reason* (A 1781, B 1787)
+3. *Prolegomena* (1783)
+4. *Groundwork of the Metaphysics of Morals* (1785)
+5. *What is Enlightenment?* (1784)
+6. *Critique of Practical Reason* (1788)
+7. *Critique of Judgment* (1790)
+8. *Religion within the Bounds of Bare Reason*; political essays; *Perpetual Peace*
+9. Death 1804 Königsberg
+
+English quotations follow standard academic translations (e.g. Enlightenment essay; categorical imperative formulations; starry heavens / moral law).
+
+---
+
+## Event 01 — *Pre-Critical to Critical*
+
+**Title:** The Decade That Rebuilt the House
+
+**Passage or Trigger:**
+Career divide around **1770**: pre-critical essays vs critical system after the professorship and the long silent preparation culminating in the first *Critique*. Recognition that metaphysics must be put on a new footing or abandoned to endless dispute.
+
+**Why It Qualifies:**
+Philosophical crisis as method. Not more opinions — a **tribunal of reason** for reason itself.
+
+**Three-Domain Reading:**
+
+- **Theology:** Clearing ground so faith and morals are not counterfeit knowledge claims.
+- **Technology:** Critique as quality-control system for metaphysics.
+- **Cosmology:** Human knowledge relocated inside conditions of possible experience.
+
+**Compressed Insight:**
+He stopped publishing answers long enough to invent a court that could judge every answer.
+
+**Confidence:** 0.92  
+**Sources:** Standard periodization pre-critical / critical (IEP, biographies).
+
+---
+
+## Event 02 — *Critique of Pure Reason* (1781)
+
+**Title:** The Tribunal Opens
+
+**Passage or Trigger:**
+*Kritik der reinen Vernunft* (1781; B edition 1787): How are synthetic a priori judgments possible? Transcendental aesthetic (space and time as forms of intuition); transcendental analytic (categories); dialectic (illusions of pure reason about soul, world-whole, God as objects of knowledge).
+
+**Why It Qualifies:**
+Central event of modern philosophy. Reason maps its own limits. Metaphysics as science of the conditions of experience, not tourism beyond experience.
+
+**Three-Domain Reading:**
+
+- **Theology:** God not knowable as an object among objects by pure theoretical reason — room cleared for practical faith.
+- **Technology:** Transcendental method as analysis of cognitive software.
+- **Cosmology:** Appearances (phenomena) vs things-in-themselves (noumena).
+
+**Compressed Insight:**
+He put reason on trial — and reason’s own charter became the verdict’s only law.
+
+**Confidence:** 0.97  
+**Sources:** *Critique of Pure Reason* A/B.
+
+---
+
+## Event 03 — *Thoughts and Intuitions*
+
+**Title:** Empty and Blind
+
+**Passage or Trigger:**
+Famous pairing from the first *Critique* (standard English):
+
+> “Thoughts without content are empty; intuitions without concepts are blind.”
+
+**Why It Qualifies:**
+Compact law of cognition: concept and sensible intuition must cooperate. Neither rationalist pure thought nor empiricist pure sense suffices.
+
+**Three-Domain Reading:**
+
+- **Theology:** Human knowing as finite partnership of form and given.
+- **Technology:** Data without model / model without data as failure modes.
+- **Cosmology:** Experience as structured encounter, not raw dump or pure idea.
+
+**Compressed Insight:**
+He married eye and concept — or declared both sterile when divorced.
+
+**Confidence:** 0.96  
+**Sources:** *Critique of Pure Reason* (concepts and intuitions).
+
+---
+
+## Event 04 — *Copernican Turn*
+
+**Title:** Objects Conform to Knowledge’s Forms
+
+**Passage or Trigger:**
+Kant’s “Copernican” revolution in philosophy (Preface B): instead of knowledge conforming only to objects, objects of experience conform to our a priori forms of sensibility and understanding — as stars’ apparent motion was reconceived via Earth’s motion.
+
+**Why It Qualifies:**
+Re-centering: the knower’s contribution is constitutive of appearance. Humility and power together — we legislate form, not the thing-in-itself.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creaturely knowing is not divine seeing.
+- **Technology:** Framework-dependence of all empirical science.
+- **Cosmology:** Phenomena as lawful for us; noumena as limit concept.
+
+**Compressed Insight:**
+He moved the center of epistemology — not the world revolving around bare objects, but experience revolving around our forms.
+
+**Confidence:** 0.95  
+**Sources:** CPR B Preface; standard commentary.
+
+---
+
+## Event 05 — *What is Enlightenment?* (1784)
+
+**Title:** Sapere Aude
+
+**Passage or Trigger:**
+Essay *Beantwortung der Frage: Was ist Aufklärung?*:
+
+> Enlightenment is mankind’s exit from its self-incurred immaturity. Immaturity is the inability to use one’s understanding without guidance from another. This immaturity is self-incurred when its cause lies not in lack of understanding but in lack of resolution and courage to use it without another’s guidance. *Sapere aude!* Have courage to use your own understanding! — that is the motto of enlightenment.
+
+**Why It Qualifies:**
+Public definition of an age. Freedom of public use of reason; critique of self-imposed tutelage under guardians (state, church, custom). Arch Philosophy as civic courage.
+
+**Three-Domain Reading:**
+
+- **Theology:** Conscience and reason against blind authority (within Prussian limits Kant himself navigates).
+- **Technology:** Free press / public sphere as enlightenment infrastructure.
+- **Cosmology:** History as possible maturation of a species.
+
+**Compressed Insight:**
+He named cowardice as the chain — and courage to think as the key.
+
+**Confidence:** 0.97  
+**Sources:** *What is Enlightenment?* (1784); standard translations.
+
+---
+
+## Event 06 — *Groundwork* (1785)
+
+**Title:** The Categorical Imperative
+
+**Passage or Trigger:**
+*Groundwork of the Metaphysics of Morals*: morality as pure practical reason; **categorical imperative** formulations, including:
+
+> Act only according to that maxim whereby you can at the same time will that it should become a universal law.
+
+And the humanity formulation: treat humanity in oneself and others always as an end, never merely as a means.
+
+**Why It Qualifies:**
+Ethics without appeal to happiness as ground. Duty as form of law. Dignity of rational nature as absolute constraint on action.
+
+**Three-Domain Reading:**
+
+- **Theology:** Moral law as binding all rational beings — secularized absolute that still feels sacred.
+- **Technology:** Test procedures for maxims (universalizability).
+- **Cosmology:** Kingdom of ends as ideal moral world.
+
+**Compressed Insight:**
+He wrote a moral law that needs no private loophole — if it cannot be willed universal, it cannot be yours as duty.
+
+**Confidence:** 0.97  
+**Sources:** *Groundwork* (1785); IEP / standard ethics summaries.
+
+---
+
+## Event 07 — *Critique of Practical Reason* (1788)
+
+**Title:** Freedom, Immortality, God as Postulates
+
+**Passage or Trigger:**
+Second *Critique*: primacy of practical reason; moral law as fact of reason; postulates of pure practical reason (freedom, immortality, God) for the sake of the highest good — not theoretical proofs of the first *Critique*’s forbidden kind.
+
+**Why It Qualifies:**
+Reopens what pure theory closed — on moral grounds. Faith as rational need of the practical standpoint, not superstition of the speculative.
+
+**Three-Domain Reading:**
+
+- **Theology:** God and immortality return as moral postulates.
+- **Technology:** Two standpoints (theoretical/practical) as dual OS of reason.
+- **Cosmology:** Moral world and natural world under one reason, two legislations.
+
+**Compressed Insight:**
+He denied knowledge of God as object — and required God as moral hope for the worthy of happiness.
+
+**Confidence:** 0.95  
+**Sources:** *Critique of Practical Reason* (1788).
+
+---
+
+## Event 08 — *Starry Heavens and Moral Law*
+
+**Title:** Two Things Fill the Mind
+
+**Passage or Trigger:**
+Conclusion of the *Critique of Practical Reason* (standard English):
+
+> Two things fill the mind with ever new and increasing admiration and awe, the more often and steadily we reflect upon them: the starry heavens above me and the moral law within me.
+
+**Why It Qualifies:**
+Iconic compression of Kantian cosmology and ethics: outer lawful nature and inner lawful duty. Awe without abandoning critique.
+
+**Three-Domain Reading:**
+
+- **Theology:** Dual revelation-structure without collapsing into dogmatism.
+- **Technology:** Reflection as practice that deepens awe.
+- **Cosmology:** Human between infinite sky and infinite demand.
+
+**Compressed Insight:**
+He stood between the galaxy and the conscience — and called both sources of endless awe.
+
+**Confidence:** 0.97  
+**Sources:** *Critique of Practical Reason*, conclusion.
+
+---
+
+## Event 09 — *Critique of Judgment* (1790)
+
+**Title:** Beauty and Purpose Without Possession
+
+**Passage or Trigger:**
+Third *Critique*: aesthetic judgment (beautiful, sublime) as reflective; teleological judgment regarding organisms and nature’s purposiveness — bridging nature and freedom, the gap between first and second *Critiques*.
+
+**Why It Qualifies:**
+System completion attempt. Art and living form become philosophical necessities, not hobbies. Creative Arts and biology enter the critical house.
+
+**Three-Domain Reading:**
+
+- **Theology:** Purposiveness as if designed — without proving a designer theoretically.
+- **Technology:** Aesthetic and teleological reflective judgment as cognitive tools.
+- **Cosmology:** Nature readable as art-like and organism-rich for judgment.
+
+**Compressed Insight:**
+He built a third critique so that beauty and living form would not fall between knowledge and duty as orphans.
+
+**Confidence:** 0.94  
+**Sources:** *Critique of Judgment* (1790).
+
+---
+
+## Event 10 — *Religion within the Bounds of Bare Reason*
+
+**Title:** Moral Faith Under Constraint
+
+**Passage or Trigger:**
+Religion essay: radical evil in human nature; religion interpreted through moral reason; conflict with Prussian censorship / political theology of his time. Faith moralized, not abolished.
+
+**Why It Qualifies:**
+Theology under critique’s law. Christianity read as vehicle of ethical hope; institutional religion judged by moral fruit.
+
+**Three-Domain Reading:**
+
+- **Theology:** Evil, grace, church as ethical community (in Kant’s key).
+- **Technology:** Censorship as limit condition of public reason.
+- **Cosmology:** Human species as morally tasked and flawed.
+
+**Compressed Insight:**
+He kept religion — but only inside reason’s moral walls.
+
+**Confidence:** 0.91  
+**Sources:** *Religion within the Bounds of Bare Reason*; historical censorship context.
+
+---
+
+## Event 11 — *Perpetual Peace*
+
+**Title:** Cosmopolitan Law as Project
+
+**Passage or Trigger:**
+*Toward Perpetual Peace* (1795): republican constitutions, federation of free states, hospitality — peace as architectural problem of right, not mere wish.
+
+**Why It Qualifies:**
+Politics as application of practical reason at species scale. War not natural fate but problem for juridical design.
+
+**Three-Domain Reading:**
+
+- **Theology:** Peace as moral demand on nations.
+- **Technology:** International institutions as enlightenment tech.
+- **Cosmology:** Humanity as one legal-moral community in hope.
+
+**Compressed Insight:**
+He drafted peace like a constitution — clauses against the endless emergency of war.
+
+**Confidence:** 0.92  
+**Sources:** *Zum ewigen Frieden* (1795).
+
+---
+
+## Event 12 — *Death in Königsberg* (1804)
+
+**Title:** The Clockwork Life Ends
+
+**Passage or Trigger:**
+Dies 12 February 1804 in Königsberg — the city he almost never left; legendary regularity of habits. Local life, universal system.
+
+**Why It Qualifies:**
+Paradox of the Arch: world philosophy from a fixed point. Mobility of mind without mobility of body.
+
+**Three-Domain Reading:**
+
+- **Theology:** Finite end of a legislator of reason.
+- **Technology:** Routine as condition of long systematic work.
+- **Cosmology:** One town as enough Earth for a critique of all possible experience.
+
+**Compressed Insight:**
+He barely left Königsberg — and redrew the map of what any human anywhere can claim to know and must dare to do.
+
+**Confidence:** 0.94  
+**Sources:** Death 1804; biographical regularity tradition.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *Critique of Pure Reason* (1781/87)
+- *Groundwork* (1785); *Critique of Practical Reason* (1788)
+- *Critique of Judgment* (1790)
+- *What is Enlightenment?* (1784)
+- *Religion…*; *Perpetual Peace*
+
+**Secondary**
+- Stanford Encyclopedia / IEP Kant entries
+- Standard Cambridge translations
+
+**Open questions for later passes**
+- *Opus Postumum* late drafts
+- Anthropology from a pragmatic point of view
+- Race writings as necessary critical dossier (historical harm) for fuller honesty pass
+
+---
+
+## Seat checklist
+
+- [x] Research from critical corpus (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple text-grounded events
+- [ ] member_id: `immanuel-kant`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Philosophy). Events grounded in Kant’s critical works; not textbook caricature alone.*

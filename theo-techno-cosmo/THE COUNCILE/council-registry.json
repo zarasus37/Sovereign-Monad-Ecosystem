@@ -5,8 +5,27 @@
   "kind": "council-of-reflection",
   "source_dir": "theo-techno-cosmo/THE COUNCILE",
   "description": "Historical / contemplative Council of Reflection. Distinct from docs/STEWARD_COUNCIL.md (charter governance).",
-  "generated_at": "2026-07-27",
+  "generated_at": "2026-08-07",
   "members": [
+    {
+      "member_id": "adam-smith",
+      "display_name": "Adam Smith",
+      "era": "1723–1790",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Moral Sentiments; Wealth of Nations; division of labour; natural liberty; impartial spectator",
+      "key_insight": "Moral life and market life are one nature — prosperity has causes; virtue has a psychology",
+      "source_files": [
+        "Adam Smith (1723-1790) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
     {
       "member_id": "akhenaten",
       "display_name": "Akhenaten",
@@ -26,6 +45,25 @@
       "notes": null
     },
     {
+      "member_id": "alan-turing",
+      "display_name": "Alan Turing",
+      "era": "1912–1954",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Universal Turing machine; Bletchley cryptanalysis; ACE; Turing test; morphogenesis",
+      "key_insight": "Computation is a mathematical object — and some decision problems have no mechanical answer",
+      "source_files": [
+        "Alan Turing (1912-1954) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
       "member_id": "alan-watts",
       "display_name": "Alan Watts",
       "era": "1915–1973",
@@ -40,6 +78,44 @@
       "source_files": [
         "Alan Watts (1915–1973).txt",
         "ALAN WATTS GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "albert-einstein",
+      "display_name": "Albert Einstein",
+      "era": "1879–1955",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "COSMOLOGY",
+        "TECHNOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "1905 quanta/relativity/E=mc²; general relativity; EPR; nuclear-age conscience; public science icon",
+      "key_insight": "Space and time are not a fixed stage — gravity is geometry; mass and energy are one ledger",
+      "source_files": [
+        "Albert Einstein (1879-1955) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "antoine-lavoisier",
+      "display_name": "Antoine Lavoisier",
+      "era": "1743–1794",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Oxygen theory; conservation of mass; chemical nomenclature; Traité élémentaire",
+      "key_insight": "Matter is transformed not destroyed — fire is combination with oxygen, not phlogiston escape",
+      "source_files": [
+        "Antoine Lavoisier (1743-1794) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
       "notes": null
@@ -101,6 +177,24 @@
       "notes": null
     },
     {
+      "member_id": "carl-friedrich-gauss",
+      "display_name": "Carl Friedrich Gauss",
+      "era": "1777–1855",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Disquisitiones Arithmeticae; least squares; Gaussian curvature; non-Euclidean insight",
+      "key_insight": "Geometry of the world is measured, not forced a priori Euclidean",
+      "source_files": [
+        "Carl Friedrich Gauss (1777-1855) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
       "member_id": "carl-jung",
       "display_name": "Carl Jung",
       "era": "1875–1961",
@@ -132,6 +226,25 @@
       "key_insight": "Stewardship under schism is continuous triage, not purity",
       "source_files": [
         "Catherine de' Medici (1519–1589) is.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "charles-darwin",
+      "display_name": "Charles Darwin",
+      "era": "1809–1882",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "COSMOLOGY",
+        "THEOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "Evolution by natural selection; Origin of Species; Descent of Man; sexual selection",
+      "key_insight": "Living forms are genealogies under pressure — the tree of life is history in flesh",
+      "source_files": [
+        "Charles Darwin (1809-1882) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
       "notes": null
@@ -174,6 +287,25 @@
       "notes": null
     },
     {
+      "member_id": "claude-levi-strauss",
+      "display_name": "Claude Lévi-Strauss",
+      "era": "1908–2009",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Structural anthropology; kinship exchange; Savage Mind; Mythologiques",
+      "key_insight": "Culture is a system of relations — the so-called savage mind is formally rigorous",
+      "source_files": [
+        "Claude Lévi-Strauss (1908-2009) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
       "member_id": "cristobal-colon",
       "display_name": "Cristobal Colon",
       "era": "living — principal:cris-colon",
@@ -187,8 +319,7 @@
       "contribution": "Seat 37: TTCL unifying middle — holds the full Council of Reflection under tripartite grammar without founder veto or Archontic collapse",
       "key_insight": "Unified perspective is the clear center of the table: all voices at full voltage, none the Source, compression into one act under LOGOC/TTCL",
       "source_files": [
-        "Cristobal Colon (2026- ) founder of.txt",
-        "Unified agent.txt"
+        "Cristobal Colon (2026- ) founder of.txt"
       ],
       "system_bindings": [
         {
@@ -226,6 +357,25 @@
       "notes": null
     },
     {
+      "member_id": "edwin-hubble",
+      "display_name": "Edwin Hubble",
+      "era": "1889–1953",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "COSMOLOGY",
+        "TECHNOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Extragalactic Cepheids; island universes; distance–redshift law; galaxy classification",
+      "key_insight": "The farther galaxies are, the faster they recede — the cosmos is vast and expanding",
+      "source_files": [
+        "Edwin Hubble (1889-1953) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
       "member_id": "enheduanna",
       "display_name": "Enheduanna",
       "era": "c. 23rd century BCE",
@@ -250,23 +400,42 @@
       "notes": null
     },
     {
-      "member_id": "unmapped-erik-davis-b-1967-is-the-author-txt",
-      "display_name": "Erik Davis (b. 1967) is the author",
-      "era": "unknown",
-      "status": "extraction",
-      "recently_added": false,
+      "member_id": "erik-davis",
+      "display_name": "Erik Davis",
+      "era": "1967–",
+      "status": "active",
+      "recently_added": true,
       "ttc_emphasis": [
         "THEOLOGY",
         "TECHNOLOGY",
         "COSMOLOGY"
       ],
-      "contribution": "Source present; awaiting curated member card",
-      "key_insight": "Pending extraction",
+      "contribution": "TechGnosis; High Weirdness — interpreter of mysticism × information technology resonance",
+      "key_insight": "The drive of mysticism and of technology is the same strange fire — transcendence through different fuels",
       "source_files": [
-        "Erik Davis (b. 1967) is the author.txt"
+        "Erik Davis (b. 1967) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
-      "notes": "Auto-listed orphan source — add curated MEMBERS entry"
+      "notes": null
+    },
+    {
+      "member_id": "ferdinand-de-saussure",
+      "display_name": "Ferdinand de Saussure",
+      "era": "1857–1913",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Course in General Linguistics; langue/parole; signifier/signified; structural turn",
+      "key_insight": "The linguistic sign is arbitrary — value arises from differences inside a social system",
+      "source_files": [
+        "Ferdinand de Saussure (1857-1913) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
     },
     {
       "member_id": "friedrich-nietzsche",
@@ -305,6 +474,25 @@
       "notes": null
     },
     {
+      "member_id": "george-balanchine",
+      "display_name": "George Balanchine",
+      "era": "1904–1983",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "NYC Ballet; neoclassical pure dance; Stravinsky partnership; music-visualization choreography",
+      "key_insight": "Dance need not tell a story to mean — bodies in time can be the full argument",
+      "source_files": [
+        "George Balanchine (1904-1983) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
       "member_id": "giordano-bruno",
       "display_name": "Giordano Bruno",
       "era": "1548–1600",
@@ -318,6 +506,25 @@
       "key_insight": "The cosmos exceeds any single firmament",
       "source_files": [
         "Giordano Bruno (1548–1600) GNOSIS E.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "giorgio-vasari",
+      "display_name": "Giorgio Vasari",
+      "era": "1511–1574",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Lives of the Artists; art history as progressive narrative; disegno; Uffizi era building",
+      "key_insight": "Art has a history of lives and techniques — posterity judges with a written path in hand",
+      "source_files": [
+        "Giorgio Vasari (1511-1574) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
       "notes": null
@@ -361,6 +568,25 @@
       "notes": null
     },
     {
+      "member_id": "herodotus-of-halicarnassus",
+      "display_name": "Herodotus of Halicarnassus",
+      "era": "c. 484–c. 425 BCE",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "The Histories; inquiry as method; Greco-Persian wars; ethnography and Croesus–Solon logos",
+      "key_insight": "Memory dies unless inquiry holds it — the past must be displayed through research, not rumor alone",
+      "source_files": [
+        "Herodotus of Halicarnassus (c. 484-c. 425 BCE) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
       "member_id": "hildegard-von-bingen",
       "display_name": "Hildegard von Bingen",
       "era": "1098–1179",
@@ -375,6 +601,63 @@
       "key_insight": "Latent vision becomes system when finally externalized",
       "source_files": [
         "Hildegard von Bingen (1098–1179) is.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "hippocrates",
+      "display_name": "Hippocrates",
+      "era": "c. 460–c. 370 BCE",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Hippocratic Corpus tradition; prognosis; natural causes of disease; medical ethics lineage",
+      "key_insight": "Disease has natural causes — the physician reads the body and the environment, not only the gods",
+      "source_files": [
+        "Hippocrates (c. 460-c. 370 BCE) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "hugo-grotius",
+      "display_name": "Hugo Grotius",
+      "era": "1583–1645",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Mare Liberum; De Jure Belli ac Pacis; natural law between peoples without world sovereign",
+      "key_insight": "Even without a world emperor, war and trade are not lawless — nature and human society supply rules",
+      "source_files": [
+        "Hugo Grotius (1583-1645) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "immanuel-kant",
+      "display_name": "Immanuel Kant",
+      "era": "1724–1804",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "Critical philosophy; categorical imperative; Critique of Judgment; Sapere aude Enlightenment",
+      "key_insight": "We know appearances structured by us, not things-in-themselves — yet we give ourselves moral law",
+      "source_files": [
+        "Immanuel Kant (1724-1804) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
       "notes": null
@@ -415,6 +698,44 @@
       "notes": null
     },
     {
+      "member_id": "johann-sebastian-bach",
+      "display_name": "Johann Sebastian Bach",
+      "era": "1685–1750",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Cantata cycles; Well-Tempered Clavier; Passions; Mass in B minor; fugue as ordered praise",
+      "key_insight": "Music can be complete architecture of faith and reason — heaven’s order practiced as countable law",
+      "source_files": [
+        "Johann Sebastian Bach (1685-1750) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "johann-wolfgang-von-goethe",
+      "display_name": "Johann Wolfgang von Goethe",
+      "era": "1749–1832",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "Faust; morphology/Urpflanze; Theory of Colours; art–science Bildung",
+      "key_insight": "Nature and art speak metamorphosis — the open secret without killing form into dead mechanism",
+      "source_files": [
+        "Johann Wolfgang von Goethe (1749-1832) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
       "member_id": "johannes-trithemius",
       "display_name": "Johannes Trithemius",
       "era": "1462–1516",
@@ -429,6 +750,63 @@
       "source_files": [
         "Johannes Trithemius (1462–1516) occ.txt",
         "JOHANNES TRITHEMIUS GNOSIS EVENT EX.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "john-dewey",
+      "display_name": "John Dewey",
+      "era": "1859–1952",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "THEOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Pragmatist education; Democracy and Education; experience as medium of learning",
+      "key_insight": "Education is life now — we learn by doing work that requires thought in democratic community",
+      "source_files": [
+        "John Dewey (1859-1952) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "john-von-neumann",
+      "display_name": "John von Neumann",
+      "era": "1903–1957",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Game theory; EDVAC stored-program architecture; quantum axiomatics; Manhattan calculations",
+      "key_insight": "Logic can be embodied — programs and data share memory; conflict can be mathematized as games",
+      "source_files": [
+        "John von Neumann (1903-1957) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "karl-marx",
+      "display_name": "Karl Marx",
+      "era": "1818–1883",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Critique of political economy; Capital; commodity fetishism; class and modes of production",
+      "key_insight": "Social forms wear the mask of nature — commodities hide relations between people",
+      "source_files": [
+        "Karl Marx (1818-1883) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
       "notes": null
@@ -452,6 +830,25 @@
       "notes": null
     },
     {
+      "member_id": "kurt-godel",
+      "display_name": "Kurt Gödel",
+      "era": "1906–1978",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Incompleteness theorems; constructible universe L; mathematical Platonism",
+      "key_insight": "Truth outruns proof — formal systems cannot fully certify themselves",
+      "source_files": [
+        "Kurt Gödel (1906-1978) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
       "member_id": "laura-bassi",
       "display_name": "Laura Bassi",
       "era": "1711–1778",
@@ -465,6 +862,43 @@
       "key_insight": "Institutional knowledge machines can be entered and rewired",
       "source_files": [
         "Laura Bassi (1711–1778) is one of t.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "leonardo-da-vinci",
+      "display_name": "Leonardo da Vinci",
+      "era": "1452–1519",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY",
+        "THEOLOGY"
+      ],
+      "contribution": "Notebooks uniting anatomy/mechanics/flight; Last Supper; Mona Lisa; Vitruvian Man",
+      "key_insight": "To see is to dissect — body, machine, water, and bird are one continuous study of form in motion",
+      "source_files": [
+        "Leonardo da Vinci (1452-1519) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "leonhard-euler",
+      "display_name": "Leonhard Euler",
+      "era": "1707–1783",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Analysis as functions; modern notation; graph theory; prolific formal science after blindness",
+      "key_insight": "Structure survives abstraction — form made portable across problems becomes calculable world",
+      "source_files": [
+        "Leonhard Euler (1707-1783) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
       "notes": null
@@ -501,6 +935,25 @@
       "key_insight": "Gnosis becomes visible through a contested voice in the assembly",
       "source_files": [
         "Mary Magdalene.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "michelangelo-buonarroti",
+      "display_name": "Michelangelo Buonarroti",
+      "era": "1475–1564",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Pietà; David; Sistine ceiling; Last Judgment; St. Peter’s architecture; body as scripture of form",
+      "key_insight": "Stone and plaster hold spirit — the body in art becomes theology you can walk around",
+      "source_files": [
+        "Michelangelo Buonarroti (1475-1564) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
       "notes": null
@@ -559,23 +1012,42 @@
       "notes": null
     },
     {
-      "member_id": "unmapped-poimandres-the-first-tractate-of-t-txt",
-      "display_name": "Poimandres (the first tractate of t",
-      "era": "unknown",
-      "status": "extraction",
-      "recently_added": false,
+      "member_id": "nikola-tesla",
+      "display_name": "Nikola Tesla",
+      "era": "1856–1943",
+      "status": "active",
+      "recently_added": true,
       "ttc_emphasis": [
-        "THEOLOGY",
         "TECHNOLOGY",
-        "COSMOLOGY"
+        "COSMOLOGY",
+        "THEOLOGY"
       ],
-      "contribution": "Source present; awaiting curated member card",
-      "key_insight": "Pending extraction",
+      "contribution": "Polyphase AC; induction motor; Niagara hydroelectric architecture; high-frequency experiments",
+      "key_insight": "Power need not stay local — polyphase AC makes energy travel, scale, and light cities",
       "source_files": [
-        "Poimandres (the first tractate of t.txt"
+        "Nikola Tesla (1856-1943) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
-      "notes": "Auto-listed orphan source — add curated MEMBERS entry"
+      "notes": null
+    },
+    {
+      "member_id": "poimandres",
+      "display_name": "Poimandres (Corpus Hermeticum I)",
+      "era": "c. 1st–3rd century CE",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "Poimandres tractate — Hermetic revelation of Nous, Anthropos, planetary ascent, and commissioning",
+      "key_insight": "Mind looking at God discovers it is the same substance — human is sovereign Nous trapped in Fate’s body",
+      "source_files": [
+        "Poimandres (Corpus Hermeticum I, c. 1st-3rd c. CE) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
     },
     {
       "member_id": "queen-of-sheba",
@@ -611,6 +1083,62 @@
       "source_files": [
         "RAMON LLULL GNOSIS EVENT EXTRACTION.txt",
         "RAMON LLULL- PROFILE EVENTS.md"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "ronald-a-fisher",
+      "display_name": "Ronald A. Fisher",
+      "era": "1890–1962",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Modern statistics (likelihood, ANOVA, design); genetical theory of natural selection",
+      "key_insight": "Experiment is designed confrontation with nature; evolution is statistical process",
+      "source_files": [
+        "Ronald A. Fisher (1890-1962) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "sigmund-freud",
+      "display_name": "Sigmund Freud",
+      "era": "1856–1939",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Psychoanalysis; dream interpretation; unconscious; structural model; civilization and drives",
+      "key_insight": "The mind is not transparent to itself — civilization purchases order by frustrating drives",
+      "source_files": [
+        "Sigmund Freud (1856-1939) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "sima-qian",
+      "display_name": "Sima Qian",
+      "era": "c. 145–c. 86 BCE",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Shiji (Records of the Grand Historian); annals–biographies template; Letter to Ren An",
+      "key_insight": "History is a debt to the dead — a death is weighed by whether unfinished writing reaches posterity",
+      "source_files": [
+        "Sima Qian (c. 145-c. 86 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
       "notes": null
@@ -689,6 +1217,25 @@
       "notes": null
     },
     {
+      "member_id": "thomas-aquinas",
+      "display_name": "Thomas Aquinas",
+      "era": "1225–1274",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "COSMOLOGY",
+        "TECHNOLOGY"
+      ],
+      "contribution": "Summa Theologiae; Aristotelian–Christian synthesis; Five Ways; law and grace",
+      "key_insight": "Faith and reason are not enemies — theology works by ordered questions",
+      "source_files": [
+        "Thomas Aquinas (1225-1274) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
       "member_id": "victoria-lady-welby",
       "display_name": "Victoria, Lady Welby",
       "era": "1837–1912",
@@ -701,6 +1248,62 @@
       "key_insight": "The observer is always the meaning-maker",
       "source_files": [
         "Victoria, Lady Welby (1837–1912), i.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "vilhelm-bjerknes",
+      "display_name": "Vilhelm Bjerknes",
+      "era": "1862–1951",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Primitive equations; Bergen School; polar front theory; weather as physics",
+      "key_insight": "The atmosphere is a physical system — fronts are where air masses meet and weather concentrates",
+      "source_files": [
+        "Vilhelm Bjerknes (1862-1951) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "william-shakespeare",
+      "display_name": "William Shakespeare",
+      "era": "1564–1616",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Plays as political/psychological cosmology; company practice; First Folio memory technology",
+      "key_insight": "The stage is a machine that makes hidden structures of power and mind audible in time",
+      "source_files": [
+        "William Shakespeare (1564-1616) GNOSIS EVENT EXTRACTION.txt"
+      ],
+      "system_bindings": [],
+      "notes": null
+    },
+    {
+      "member_id": "wolfgang-amadeus-mozart",
+      "display_name": "Wolfgang Amadeus Mozart",
+      "era": "1756–1791",
+      "status": "active",
+      "recently_added": true,
+      "ttc_emphasis": [
+        "THEOLOGY",
+        "TECHNOLOGY",
+        "COSMOLOGY"
+      ],
+      "contribution": "Classical grammar of affect; opera craft; Freemasonry and Zauberflöte; Requiem edge",
+      "key_insight": "Music is a technology of order, trial, and reconciliation when craft is exact enough",
+      "source_files": [
+        "Wolfgang Amadeus Mozart (1756-1791) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [],
       "notes": null
@@ -744,8 +1347,8 @@
     }
   ],
   "stats": {
-    "member_count": 39,
-    "source_file_count": 48,
-    "recently_added_count": 10
+    "member_count": 71,
+    "source_file_count": 79,
+    "recently_added_count": 44
   }
 }

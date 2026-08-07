@@ -1,0 +1,359 @@
+MICHELANGELO BUONARROTI GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Performance Arts → Visual Arts
+**Era:** 1475–1564 (Caprese / Florence / Rome)
+**Status:** Extraction complete (seating candidate) — drawn from works, letters, Vasari, and Condivi
+
+---
+
+## Contribution
+
+Sculptor, painter, architect, and poet who treated the human body as the primary scripture of form; who carved the *Pietà* and *David*, painted the Sistine ceiling and *Last Judgment*, and shaped St. Peter’s in late architectural service; and who left letters, poems, and rival contemporary biographies (Vasari, Condivi) that make his self-understanding unusually legible for a Renaissance maker.
+
+## Key Insight
+
+Stone and plaster can be forced to hold spirit: the body in art becomes theology you can walk around — creation, judgment, mercy, and pride made visible in muscle, gesture, and vault.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Michelangelo is extracted from **works + near-contemporary lives + letters**, with Vasari handled as lively but anecdote-prone (Condivi as counter-voice he partly sponsored). Primary lines:
+
+1. *Pietà* (St. Peter’s, c. 1498–99) and the signature story (Vasari)
+2. *David* (1501–04)
+3. Sistine Chapel ceiling (1508–12) under Julius II
+4. Medici tombs / Laurentian architecture
+5. *Last Judgment* (1536–41) under Paul III
+6. Late architecture (Capitoline, St. Peter’s dome responsibility)
+7. Poems and letters (including complaints of bodily strain on the ceiling)
+8. Vasari *Lives* (1550, rev. 1568); Condivi *Life* (1553)
+
+---
+
+## Event 01 — *Wet-Nurse of Stone*
+
+**Title:** Chisel in the Milk
+
+**Passage or Trigger:**
+Vasari records Michelangelo joking that any intelligence he has came from Arezzo’s air and from taking “the hammer and chisels… from my wet-nurse’s milk” — she being a stonecutter’s wife at Settignano, land of quarries.
+
+**Why It Qualifies:**
+Origin myth as craft truth: form-sense begins in childhood material culture. Stone is not later specialty — it is first environment.
+
+**Three-Domain Reading:**
+
+- **Theology:** Vocation seeded early — almost providential placement among quarries.
+- **Technology:** Tool-use as second nature before theory.
+- **Cosmology:** Landscape (Settignano stone) as destiny of hands.
+
+**Compressed Insight:**
+He claimed he drank the chisel with the milk — art as inheritance of place and labor.
+
+**Confidence:** 0.85 (Vasari anecdote; characteristic even if polished)  
+**Sources:** Vasari, *Life of Michelangelo*.
+
+---
+
+## Event 02 — *The Pietà*
+
+**Title:** Mercy in Marble
+
+**Passage or Trigger:**
+Rome, late 1490s: *Pietà* for St. Peter’s — Virgin holding the dead Christ, polished to flesh-like finish. Vasari: after overhearing the work attributed to another, Michelangelo carves his name on the sash — **first and only signed sculpture** in the usual account.
+
+**Why It Qualifies:**
+Theology of the body: death and compassion made touchable. The signature event (even if Vasari heightens it) marks the artist’s claim: *this form is mine before God and the crowd*.
+
+**Three-Domain Reading:**
+
+- **Theology:** Incarnation and pietà devotion — grief of the Mother as public doctrine in stone.
+- **Technology:** Marble finish as persuasion of life in dead rock.
+- **Cosmology:** Sacred body at the center of Christian space (St. Peter’s).
+
+**Compressed Insight:**
+He made sorrow hold its shape in stone — and signed the mercy so the world could not misname its maker.
+
+**Confidence:** 0.94  
+**Sources:** *Pietà* in situ tradition; Vasari signature story; Britannica.
+
+---
+
+## Event 03 — *David*
+
+**Title:** The Republic’s Body
+
+**Passage or Trigger:**
+Florence, 1501–04: colossal *David* from a damaged block — not the boy after victory only, but tensed readiness before Goliath. Placed as civic emblem of the Republic.
+
+**Why It Qualifies:**
+Political theology in marble: the free city’s courage given a naked, vigilant body. Scale itself is meaning — the human form as fortress of virtue.
+
+**Three-Domain Reading:**
+
+- **Theology:** Biblical hero as moral exemplum.
+- **Technology:** Carving a compromised block into unity — constraint as spur.
+- **Cosmology:** City identity projected into a single standing man.
+
+**Compressed Insight:**
+He gave Florence a giant who has not yet thrown the stone — freedom as readiness, not triumph pose alone.
+
+**Confidence:** 0.95  
+**Sources:** *David* commission history; Accademia placement tradition; Britannica.
+
+---
+
+## Event 04 — *Sculptor Forced to Paint*
+
+**Title:** The Reluctant Ceiling
+
+**Passage or Trigger:**
+1508–12: Julius II commissions the **Sistine Chapel ceiling**. Michelangelo resists — he considers himself primarily a sculptor, not a fresco painter. He accepts under papal pressure and works standing on scaffolding, neck craned (not lying flat as tourist myth sometimes has it). Letters home complain of physical toll.
+
+**Why It Qualifies:**
+Vocation under coercion becomes destiny. The medium he did not want becomes the image civilization cannot forget. Constraint again as engine.
+
+**Three-Domain Reading:**
+
+- **Theology:** Service under papal authority — art as obedience and struggle.
+- **Technology:** Buon fresco learning curve; cartoons then freer painting as mastery grows (Britannica).
+- **Cosmology:** Ceiling as sky of sacred history over the chapel’s liturgical ground.
+
+**Compressed Insight:**
+He painted a heaven he did not want to paint — and the refusal became part of the work’s force.
+
+**Confidence:** 0.94  
+**Sources:** Commission history; letters on strain; Britannica on technique and posture.
+
+---
+
+## Event 05 — *Genesis on the Vault*
+
+**Title:** Creation of Adam and the Program of Beginnings
+
+**Passage or Trigger:**
+Sistine ceiling program: scenes from Genesis, prophets, sibyls, ignudi, ancestors — climaxing for modern eyes in the *Creation of Adam*, the near-touch of divine and human hand. Narrative of origins spanning the vault.
+
+**Why It Qualifies:**
+Cosmology in paint: the world’s beginning staged as bodily drama. God and man almost meet — the gap between fingers is the theological voltage of the whole Renaissance.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation, fall, and hope compressed into one chapel sky.
+- **Technology:** Large-scale fresco narrative architecture.
+- **Cosmology:** Human body as measure of sacred story.
+
+**Compressed Insight:**
+He painted the second before the first touch of God and man — and left a gap the size of all theology.
+
+**Confidence:** 0.96  
+**Sources:** Sistine ceiling iconography; standard art-historical program readings.
+
+---
+
+## Event 06 — *Mastery as Labor*
+
+**Title:** If They Knew How Hard
+
+**Passage or Trigger:**
+Attributed Michelangelo remark (widely transmitted): if people knew how hard he worked to achieve mastery, it would not seem so wonderful. Matches the documented grind of the ceiling years and lifelong labor identity.
+
+**Why It Qualifies:**
+Anti-miracle self-understanding. Genius framed as **work**. Aligns with Council preference for process over magic (cf. Gauss on learning).
+
+**Three-Domain Reading:**
+
+- **Theology:** Gift perfected by ascesis of practice.
+- **Technology:** Skill as accumulated technique, not only talent.
+- **Cosmology:** Art as human response to a hard world of matter.
+
+**Compressed Insight:**
+He insisted the wonder was sweat — mastery as hours, not spell.
+
+**Confidence:** 0.80 (attribution traditional; spirit confirmed by letters and career)  
+**Sources:** Common quotation tradition; ceiling labor documentation.
+
+---
+
+## Event 07 — *The Last Judgment*
+
+**Title:** The Wall That Judges the Chapel
+
+**Passage or Trigger:**
+1536–41: *Last Judgment* on the Sistine altar wall under Paul III — Christ as judge, saved and damned in a storm of bodies, Michelangelo’s own face sometimes read in flayed skin (St. Bartholomew) by later viewers. Controversies over nudity and decorum follow.
+
+**Why It Qualifies:**
+Eschatology in paint: the end of personal and cosmic time. The body remains the grammar even of damnation and glory. Late style more turbulent than the ceiling’s High Renaissance calm.
+
+**Three-Domain Reading:**
+
+- **Theology:** Final judgment as public doctrine on the altar wall.
+- **Technology:** Huge fresco as immersive moral machine.
+- **Cosmology:** History’s end staged as a single vortex of flesh and light.
+
+**Compressed Insight:**
+He turned the altar wall into the last day — so that every Mass would stand under painted judgment.
+
+**Confidence:** 0.95  
+**Sources:** *Last Judgment* commission and reception; Britannica.
+
+---
+
+## Event 08 — *Architecture: Order for the City and the Dome*
+
+**Title:** Stone Becomes Path and Cupola
+
+**Passage or Trigger:**
+Architectural work: Laurentian Library vestibule (revolutionary staircase/space), Capitoline Hill redesign, and late responsibility for **St. Peter’s** (dome design lineage completed after him). Sculptor’s mass-sense becomes urban and ecclesiastical space.
+
+**Why It Qualifies:**
+Recognition that form is not only figure — it is **path, load, and skyline**. The same mind that frees David from a block organizes how bodies move through sacred and civic space.
+
+**Three-Domain Reading:**
+
+- **Theology:** Church as built cosmos; approach to the holy structured by stairs and dome.
+- **Technology:** Structural and spatial design as engineering-adjacent art.
+- **Cosmology:** City and basilica as human-ordered worlds under heaven.
+
+**Compressed Insight:**
+He stopped only at the statue — he bent stair and dome until walking itself became composition.
+
+**Confidence:** 0.91  
+**Sources:** Architectural commissions in standard monographs; St. Peter’s history.
+
+---
+
+## Event 09 — *Poems*
+
+**Title:** The Sonnet as Second Chisel
+
+**Passage or Trigger:**
+Hundreds of poems — spiritual, erotic, artistic self-reflection — preserved more fully than for most contemporaries. Verse as parallel workshop to marble and paint.
+
+**Why It Qualifies:**
+Interior speech of the maker. Desire, faith, art theory in meter. Confirms that the visual work rose from a verbal-spiritual struggle, not mute craft alone.
+
+**Three-Domain Reading:**
+
+- **Theology:** Poems of divine love and unworthiness.
+- **Technology:** Language as another material of form.
+- **Cosmology:** Self as battlefield of flesh and spirit.
+
+**Compressed Insight:**
+He carved also in lines — because stone was not enough for what the soul needed to admit.
+
+**Confidence:** 0.90  
+**Sources:** Michelangelo’s *Rime*; editorial collections.
+
+---
+
+## Event 10 — *Two Lives While Living*
+
+**Title:** Vasari and Condivi
+
+**Passage or Trigger:**
+Vasari’s *Lives* (1550) crowns Michelangelo as living perfection of art; Michelangelo, not wholly pleased, has **Ascanio Condivi** publish a *Life* (1553) closer to how he wished to appear; Vasari’s 1568 edition rebuts. First Western artist with competing contemporary biographies while alive (Britannica).
+
+**Why It Qualifies:**
+Self-fashioning as historical event. The artist becomes a **public legend under his own partial control**. Fame itself is a medium.
+
+**Three-Domain Reading:**
+
+- **Theology:** Glory and humility in tension — saint of art vs servant.
+- **Technology:** Biography as reputation tech.
+- **Cosmology:** The maker enters the canon before death.
+
+**Compressed Insight:**
+He lived long enough to argue with his own myth — and left us two mirrors instead of one.
+
+**Confidence:** 0.93  
+**Sources:** Vasari 1550/1568; Condivi 1553; Britannica on rival lives.
+
+---
+
+## Event 11 — *Non-Finito*
+
+**Title:** The Block That Remains Alive
+
+**Passage or Trigger:**
+Late sculptures often **non-finito** — forms emerging from rough stone, process left visible (e.g. captive/slave figures, late *Pietà* variants). Incompletion as aesthetic and spiritual statement.
+
+**Why It Qualifies:**
+Opposite of early polished *Pietà*: truth may live in the **struggle of emergence**. The cosmos of the block is not always meant to be fully civilized into finish.
+
+**Three-Domain Reading:**
+
+- **Theology:** Soul still half-released from matter — sanctification unfinished.
+- **Technology:** Process made visible as part of the work’s information.
+- **Cosmology:** Creation as ongoing, not only completed artifact.
+
+**Compressed Insight:**
+He learned to stop before the stone was “done” — so that becoming would stay part of the being.
+
+**Confidence:** 0.92  
+**Sources:** Late sculpture corpus; art-historical non-finito literature.
+
+---
+
+## Event 12 — *Death at Eighty-Eight*
+
+**Title:** The Long Hand
+
+**Passage or Trigger:**
+Dies 18 February 1564 in Rome, age 88 — after *David* in youth, ceiling in middle life, *Last Judgment* in sixties, architecture into old age. Body returned to Florence for burial at Santa Croce in the civic-artistic cult of the master.
+
+**Why It Qualifies:**
+Duration as medium: one life spans High Renaissance into Mannerism’s edge. The hand that signed the *Pietà* still shapes the Roman skyline’s destiny at the end.
+
+**Three-Domain Reading:**
+
+- **Theology:** Long stewardship of gift.
+- **Technology:** Cumulative mastery across media.
+- **Cosmology:** Art history’s “ages” lived inside one biography.
+
+**Compressed Insight:**
+He outlived styles — and left a city and a chapel that still teach what a human body can mean under God.
+
+**Confidence:** 0.94  
+**Sources:** Death date; burial tradition; career span in Britannica.
+
+---
+
+## Sources / Working Notes
+
+**Primary / near-primary**
+- Works: *Pietà*, *David*, Sistine ceiling, *Last Judgment*, architectural projects
+- Letters and poems
+- Vasari, *Lives* (1550, 1568)
+- Condivi, *Life of Michelangelo* (1553)
+
+**Secondary**
+- Britannica “Michelangelo”
+- Standard monographs (e.g. Gayford and scholarly literature)
+- Critical caution on Vasari’s anecdotes
+
+**Open questions for later passes**
+- Deeper letter citations on Sistine bodily strain (Italian text)
+- Medici chapel theology as separate event cluster
+- Relationship with Vittoria Colonna for spiritual-poetic arc
+
+---
+
+## Seat checklist
+
+- [x] Research from works, letters, Vasari/Condivi (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `michelangelo-buonarroti`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Visual Arts). Events grounded in works and contemporary lives; Vasari anecdotes marked at appropriate confidence.*

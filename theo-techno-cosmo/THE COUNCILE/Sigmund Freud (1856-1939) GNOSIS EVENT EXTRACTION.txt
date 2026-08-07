@@ -1,0 +1,369 @@
+SIGMUND FREUD GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Social Sciences → Psychology
+**Era:** 1856–1939 (Freiberg / Vienna / London)
+**Status:** Extraction complete (seating candidate) — drawn from major published works and standard documentary career
+
+---
+
+## Contribution
+
+Founder of psychoanalysis who mapped the mind as a conflicted system of conscious and unconscious processes; who made dream interpretation a method (*Die Traumdeutung*, 1899/1900); who theorized repression, the Oedipus complex, drive renunciation, and the structural model (id–ego–superego); and who, in *Civilization and Its Discontents*, described culture as built on non-satisfaction of powerful drives — with guilt as the tax of order.
+
+## Key Insight
+
+The mind is not transparent to itself: dreams are a royal road into an unconscious that is as real and as imperfectly reported as the external world through the senses — and civilization purchases its order by frustrating the drives that animate us.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Freud is extracted from **published theoretical works**, not couch gossip or later pop-Freudianism. Primary lines:
+
+1. *The Interpretation of Dreams* (*Die Traumdeutung*, dated 1900; issued late 1899)
+2. Papers on the unconscious, repression, and technique
+3. *Three Essays on the Theory of Sexuality*
+4. *Totem and Taboo*
+5. *Beyond the Pleasure Principle* (death drive / repetition)
+6. *The Ego and the Id* (structural model)
+7. *Civilization and Its Discontents* (*Das Unbehagen in der Kultur*, 1930)
+8. Exile from Vienna (1938) and death in London (1939)
+
+English quotations follow standard translations in wide scholarly use (Strachey *Standard Edition* tradition for many lines; commonly cited dream and culture passages). Confidence marks textual tightness vs. school-formation afterlife.
+
+---
+
+## Event 01 — *The Unconscious as the Real Psychic*
+
+**Title:** Consciousness Is Not the Whole Mind
+
+**Passage or Trigger:**
+*The Interpretation of Dreams* — on the status of the unconscious (standard English rendering):
+
+> “Properly speaking, the unconscious is the real psychic; its inner nature is just as unknown to us as the reality of the external world, and it is just as imperfectly reported to us through the data of consciousness as is the external world through the indications of our sensory organs.”
+
+**Why It Qualifies:**
+Copernican shift for psychology: the ego’s daylight is not the whole territory. Consciousness becomes a *report*, not the substance. The mind has a dark continent with its own laws.
+
+**Three-Domain Reading:**
+
+- **Theology:** Humility of self-knowledge; confession meets a depth model of sin and desire.
+- **Technology:** Methodological license to treat slips, symptoms, and dreams as data channels.
+- **Cosmology:** Person as layered world — surface report over deeper weather.
+
+**Compressed Insight:**
+He demoted waking self-certainty — consciousness is weather report, not the climate itself.
+
+**Confidence:** 0.96  
+**Sources:** *The Interpretation of Dreams*; widely cited translation of the “real psychic” passage.
+
+---
+
+## Event 02 — *Royal Road*
+
+**Title:** Dreams as Method, Not Noise
+
+**Passage or Trigger:**
+*The Interpretation of Dreams* — programmatic claim (standard rendering):
+
+> “The interpretation of dreams is the royal road to a knowledge of the unconscious activities of the mind.”
+
+(Often shortened in reception to “Dreams are the royal road to the unconscious.”)
+
+**Why It Qualifies:**
+Dreams cease to be waste or pure prophecy. They become a **technique of access** — distorted, censored, but decipherable. Night becomes laboratory.
+
+**Three-Domain Reading:**
+
+- **Theology:** Night visions reclassified from omen to psychic text.
+- **Technology:** Free association + dream-work analysis as clinical instruments.
+- **Cosmology:** Sleep as a second regime of meaning inside one organism.
+
+**Compressed Insight:**
+He turned the dream from rubbish or oracle into a road — and walked it with a method.
+
+**Confidence:** 0.97  
+**Sources:** *The Interpretation of Dreams*; standard quotation tradition.
+
+---
+
+## Event 03 — *Censorship and Dream-Work*
+
+**Title:** The Mind Edits Itself
+
+**Passage or Trigger:**
+*Traumdeutung* theory of dream-work: condensation, displacement, considerations of representability, secondary revision; censorship between systems so that latent wish appears only in distorted manifest content. Forgetting of dreams tied to ongoing censorship.
+
+**Why It Qualifies:**
+Recognition that the psyche has an **internal editor**. Truth of desire is not simply hidden — it is *transformed* by formal operations. The mind is a workshop of disguise.
+
+**Three-Domain Reading:**
+
+- **Theology:** Confession faces not only silence but *camouflage* of the heart.
+- **Technology:** Analytic decoding of transformations — a cryptography of the self.
+- **Cosmology:** Inner world has regimes of law (primary vs secondary process).
+
+**Compressed Insight:**
+He found that the soul does not only hide — it rewrites, and the rewrite has rules.
+
+**Confidence:** 0.95  
+**Sources:** *Interpretation of Dreams* chapters on dream-work and censorship.
+
+---
+
+## Event 04 — *Primary and Secondary Process*
+
+**Title:** Two Modes of Mental Functioning
+
+**Passage or Trigger:**
+Distinction (already seeded in the 1895 *Project* and central to *Traumdeutung*) between **primary process** (unconscious: timeless, contradiction-tolerant, wish-driven) and **secondary process** (conscious/preconscious: bound, reality-tested, logical). Momentous discovery emphasized in standard editorial apparatus of the dream book.
+
+**Why It Qualifies:**
+Not one rationality with noise — **two operating systems** in one skull. Civilization’s daytime logic is not the native tongue of the depths.
+
+**Three-Domain Reading:**
+
+- **Theology:** “Heart” vs “mind” given a dual-process model without leaving naturalism.
+- **Technology:** Diagnostic frame for symptoms as primary-process eruptions into secondary life.
+- **Cosmology:** Human creature as double-coded machine.
+
+**Compressed Insight:**
+He split mental life into two regimes — and showed that the night’s rules still run under the day’s speech.
+
+**Confidence:** 0.94  
+**Sources:** *Interpretation of Dreams*; editorial histories noting the primary/secondary distinction.
+
+---
+
+## Event 05 — *Repression*
+
+**Title:** Forgetting as Active Defense
+
+**Passage or Trigger:**
+Theory of **repression** (*Verdrängung*): ideas and wishes incompatible with the ego’s standards are actively kept from consciousness — not mere passive forgetting. Resistance in analysis is the living edge of that defense.
+
+**Why It Qualifies:**
+Memory politics inside the person. The self *works* to not know. Illness can be the cost of successful not-knowing.
+
+**Three-Domain Reading:**
+
+- **Theology:** Sin and buried knowledge; the examined life hits a force field.
+- **Technology:** Resistance as clinical signal, not patient stubbornness only.
+- **Cosmology:** Personal history as contested archive.
+
+**Compressed Insight:**
+He taught that some forgetting is labor — the mind spends energy to stay ignorant of itself.
+
+**Confidence:** 0.95  
+**Sources:** Metapsychological papers on repression; clinical theory in the *Standard Edition* tradition.
+
+---
+
+## Event 06 — *Oedipus Complex*
+
+**Title:** The Family Triangle as Psychic Fate
+
+**Passage or Trigger:**
+Formulation of the **Oedipus complex** — child’s desire and rivalry structured around parental figures; “dissolution” and identification shaping superego and later love. Named via the Greek tragedy as structural myth of the nursery.
+
+**Why It Qualifies:**
+Domestic cosmos becomes the first political theater of desire and law. Whether accepted in full later or revised, the recognition that early family form imprints adult love and guilt is a durable structural claim.
+
+**Three-Domain Reading:**
+
+- **Theology:** Original “fall” relocated into kinship and wish — secularized inheritance of guilt.
+- **Technology:** Developmental schema for reading adult conflict.
+- **Cosmology:** Household as microcosm of law and desire.
+
+**Compressed Insight:**
+He put the nursery on the same stage as Oedipus — and made family the first city of the drives.
+
+**Confidence:** 0.93  
+**Sources:** *Interpretation of Dreams*; *Three Essays*; later technical papers on the complex.
+
+---
+
+## Event 07 — *Totem and Taboo*
+
+**Title:** Law Born from the Primal Crime
+
+**Passage or Trigger:**
+*Totem and Taboo* (1912–13): speculative anthropological reconstruction — primal band, killing of the father, totemic restrictions as first “right,” incest taboo as foundational mutilation of erotic life. Freud links phylogenetic myth to individual Oedipal structure.
+
+**Why It Qualifies:**
+Civilization’s law narrated as aftermath of violence and remorse. Whether ethnographically false in detail, the *structural* claim is that moral order carries a memory of force and guilt.
+
+**Three-Domain Reading:**
+
+- **Theology:** Original crime and totemic sacred as proto-religion.
+- **Technology:** Myth as theory-machine for social origins.
+- **Cosmology:** Culture founded on a crime it must both remember and forbid.
+
+**Compressed Insight:**
+He told a story in which the first law is the sons’ treaty after the father’s blood — and saw every later conscience in that shadow.
+
+**Confidence:** 0.88 (text firm; anthropological speculation historically contested)  
+**Sources:** *Totem and Taboo*; cross-reference in *Civilization and Its Discontents*.
+
+---
+
+## Event 08 — *Beyond the Pleasure Principle*
+
+**Title:** Repetition and the Death Drive
+
+**Passage or Trigger:**
+*Beyond the Pleasure Principle* (1920): war neuroses, fort-da, compulsion to repeat — leading to the hypothesis of a **death drive** (*Todestrieb*) alongside Eros; organisms pulled not only toward pleasure but toward an earlier inorganic state.
+
+**Why It Qualifies:**
+Breaks the simple hedonistic model of the psyche. Trauma returns; the organism can aim at zero. A darker cosmology of life’s motors.
+
+**Three-Domain Reading:**
+
+- **Theology:** Evil and self-destruction without reducing them to “bad pleasure.”
+- **Technology:** Clinical attention to repetition compulsion as law-like.
+- **Cosmology:** Life tensed between binding love and unbinding death.
+
+**Compressed Insight:**
+He admitted that the mind does not only seek pleasure — it can march, repeating, toward its own undoing.
+
+**Confidence:** 0.94  
+**Sources:** *Beyond the Pleasure Principle* (1920).
+
+---
+
+## Event 09 — *Id, Ego, Superego*
+
+**Title:** The Mind as Civil War with a Prefect
+
+**Passage or Trigger:**
+*The Ego and the Id* (1923): structural model — **id** (drives), **ego** (reality interface, facade), **superego** (internalized authority, heir of Oedipus). Ego “continued inwards” into id without sharp border (*Civilization* later restates the facade image).
+
+**Why It Qualifies:**
+Political anatomy of the person. Self-government is negotiation among agencies, not a single sovereign will. Guilt has an office.
+
+**Three-Domain Reading:**
+
+- **Theology:** Conscience as internal court — secularized but structurally severe.
+- **Technology:** Map for locating conflict (symptom as compromise formation).
+- **Cosmology:** Person as miniature polity under tension.
+
+**Compressed Insight:**
+He redrew the soul as a three-way government — and put guilt in a permanent ministry.
+
+**Confidence:** 0.95  
+**Sources:** *The Ego and the Id*; restatements in *Civilization and Its Discontents*.
+
+---
+
+## Event 10 — *Civilization and Its Discontents*
+
+**Title:** Culture as Organized Frustration
+
+**Passage or Trigger:**
+*Das Unbehagen in der Kultur* (1930). Core thesis in standard renderings: civilization is built to a large extent on **non-satisfaction of powerful drives** — by suppression, repression, or other means; “cultural frustration” as the price of order; guilt (conscious or unconscious) as the currency of that tax; extreme unconscious guilt feeding neurosis.
+
+Also: ego-feeling as deceptive unity; oceanic feeling discussed in opening engagement with Romain Rolland; love and necessity as twin foundations of communal life (work compulsion + erotic binding).
+
+**Why It Qualifies:**
+Macro-gnosis: the city and the psyche share one economy of renunciation. Progress is not pure gain — it purchases security with instinctual loss. The book is a cosmology of why we are uneasy inside our own achievements.
+
+**Three-Domain Reading:**
+
+- **Theology:** Guilt as structural, not only personal sin-accounting; religion read partly as longing for the father’s protection.
+- **Technology:** Social institutions as drive-management systems.
+- **Cosmology:** Human world built by subtracting from the animal full demand.
+
+**Compressed Insight:**
+He measured civilization’s bill — and found it itemized in frustrated drives and unpaid guilt.
+
+**Confidence:** 0.96  
+**Sources:** *Civilization and Its Discontents* (1930); standard English translations and scholarly summaries of the renunciation thesis.
+
+---
+
+## Event 11 — *Symptom as Compromise*
+
+**Title:** Illness Speaks a Bargain
+
+**Passage or Trigger:**
+Clinical theory across the case studies and papers: neurotic symptoms as **compromise formations** between wish and defense — not random breakage but meaningful, expensive settlements.
+
+**Why It Qualifies:**
+Suffering gains semantics. The symptom is a text. Treatment aims at re-negotiating the bargain, not merely silencing the noise.
+
+**Three-Domain Reading:**
+
+- **Theology:** Affliction as meaningful (dangerous if over-moralized; powerful if taken as call to truth).
+- **Technology:** Interpretation as therapeutic tech.
+- **Cosmology:** Body and speech as one conflict field.
+
+**Compressed Insight:**
+He refused to call the symptom nonsense — it was a bad treaty the mind signed with itself.
+
+**Confidence:** 0.93  
+**Sources:** Case studies (*Dora*, *Wolf Man*, etc.) and technical papers on symptom formation.
+
+---
+
+## Event 12 — *Exile and Death*
+
+**Title:** The Analyst Under History’s Boot
+
+**Passage or Trigger:**
+Anschluss 1938: Freud leaves Vienna for London with aid (including Marie Bonaparte and others in the historical rescue network). Dies in London 23 September 1939, after long illness (cancer), in the first weeks of the Second World War. Books burned earlier by Nazis as “un-German.”
+
+**Why It Qualifies:**
+The theorist of culture’s discontents becomes a refugee from a culture in criminal regression. Theory meets history’s refusal of the analytic couch. Finite body after infinite claims about mind.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creature under persecution; limits of insight against mass violence.
+- **Technology:** Exile networks as survival tech for knowledge-bearers.
+- **Cosmology:** Europe’s political weather ends one Viennese laboratory of the soul.
+
+**Compressed Insight:**
+He mapped civilization’s unease — then civilization’s worst form expelled him, and death closed the case in a foreign city.
+
+**Confidence:** 0.94  
+**Sources:** Documentary biography of 1938 emigration and 1939 death; standard Freud chronologies.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *The Interpretation of Dreams* (1900)
+- *Three Essays on the Theory of Sexuality*
+- *Totem and Taboo*
+- *Beyond the Pleasure Principle* (1920)
+- *The Ego and the Id* (1923)
+- *Civilization and Its Discontents* (1930)
+
+**Editions**
+- *Standard Edition of the Complete Psychological Works of Sigmund Freud* (Strachey)
+
+**Open questions for later passes**
+- *Moses and Monotheism* as separate late theological-historical event
+- Technical papers on transference as pure method event
+- Breaks with Adler, Jung, Ferenczi as school-formation history (secondary)
+
+---
+
+## Seat checklist
+
+- [x] Research from major works (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple text-grounded events
+- [ ] member_id: `sigmund-freud`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Psychology). Events grounded in Freud’s published works and documented late life; not pop-Freudian folklore.*

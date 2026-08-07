@@ -1,0 +1,363 @@
+FERDINAND DE SAUSSURE GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Humanities → Linguistics
+**Era:** 1857–1913 (Geneva / Leipzig / Paris / Geneva)
+**Status:** Extraction complete (seating candidate) — drawn from the *Cours de linguistique générale* (posthumous) and Indo-European scholarship
+
+---
+
+## Contribution
+
+Linguist who redirected the study of language from only historical sound-change toward **language as a system of signs**; whose Geneva lectures, edited by students as the *Course in General Linguistics* (1916), defined **langue** vs **parole**, the **signifier/signified** bond, and the **arbitrariness of the linguistic sign**; and who thereby founded the structuralist turn that remade twentieth-century humanities.
+
+## Key Insight
+
+Meaning is not a natural glue between sound and thing: the sign is arbitrary and value arises from differences inside a social system (*langue*) that individual speech (*parole*) only samples.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Saussure’s most famous book is **posthumous and student-edited** (Bally & Sechehaye from lecture notes, 1916) — not a manuscript he published as final. The Council treats the *Cours* as the effective founding text of structural linguistics while noting that editorial medium. Primary lines:
+
+1. Early Indo-European work (*Mémoire* on the primitive vowel system)
+2. Paris / Geneva teaching career
+3. Geneva courses in general linguistics (1907–1911)
+4. *Cours de linguistique générale* (1916)
+5. Sign theory; langue/parole; synchrony/diachrony; value by difference
+6. Death 1913; structuralist afterlife (Lévi-Strauss, Barthes, etc.)
+
+English: Wade Baskin translation tradition and standard textbook quotations.
+
+---
+
+## Event 01 — *Indo-European Strictness*
+
+**Title:** Sound Laws Before the System
+
+**Passage or Trigger:**
+Early career: rigorous historical-comparative work on Indo-European — including the famous *Mémoire* on the primitive system of vowels. Philology as exact science of change.
+
+**Why It Qualifies:**
+Before structure-as-system, Saussure is already a master of **diachronic** discipline. The later turn does not erase history; it relativizes its monopoly.
+
+**Three-Domain Reading:**
+
+- **Theology:** Order in the deep past of tongues.
+- **Technology:** Comparative method as reconstruction tech.
+- **Cosmology:** Language families as trees of time.
+
+**Compressed Insight:**
+He earned the right to rethink language by first mastering how sounds die and transform across centuries.
+
+**Confidence:** 0.92  
+**Sources:** Early publications; standard Saussure biographies.
+
+---
+
+## Event 02 — *The Course, Not the Book He Wrote*
+
+**Title:** Teaching Becomes the Canon
+
+**Passage or Trigger:**
+1907–1911 Geneva lectures on general linguistics; after his death (1913), students **Charles Bally** and **Albert Sechehaye** compile the *Cours de linguistique générale* (1916) from notes. The founding text is a **classroom reconstruction**.
+
+**Why It Qualifies:**
+Knowledge transmission event: the teacher’s voice outlives him as edited system. Parallel to other Council “unfinished / mediated” masterworks — with unique twist that the masterwork *is* the mediation.
+
+**Three-Domain Reading:**
+
+- **Theology:** Apostolic notes — risk and gift of disciples’ memory.
+- **Technology:** Lecture + edition as publication pipeline.
+- **Cosmology:** Ideas as social products even at origin.
+
+**Compressed Insight:**
+He never published the book that founded a science — his students had to become the book.
+
+**Confidence:** 0.96  
+**Sources:** *Cours* publication history; Wikipedia *Course in General Linguistics*.
+
+---
+
+## Event 03 — *Langue and Parole*
+
+**Title:** System Versus Act
+
+**Passage or Trigger:**
+*Cours*: distinction between **langue** (language as social system of conventions, homogeneous, classifiable) and **parole** (individual speaking acts, heterogeneous). *Langage* as the broad human faculty; *langue* as the social product that makes speech possible.
+
+**Why It Qualifies:**
+Central cut. Science needs an object; Saussure gives it **the system**, not the infinite mess of utterances alone. Sociology of the tongue.
+
+**Three-Domain Reading:**
+
+- **Theology:** Shared word as covenant-structure of a people.
+- **Technology:** System vs instance as software architecture metaphor avant la lettre.
+- **Cosmology:** Speech events floating on a deeper social sea of rules.
+
+**Compressed Insight:**
+He split the ocean of talk into the chart (langue) and the waves (parole) — and told science to map the chart.
+
+**Confidence:** 0.97  
+**Sources:** *Cours*; EBSCO / standard expositions of langue/parole.
+
+---
+
+## Event 04 — *The Sign as Two-Sided*
+
+**Title:** Sound-Image and Concept
+
+**Passage or Trigger:**
+Linguistic **sign** as double entity: **signifier** (sound-pattern / signal — psychological, not mere noise) and **signified** (concept). Inseparable like two sides of a sheet of paper. Not a name stuck on a thing only — a bond inside the mind’s semiotic system.
+
+**Why It Qualifies:**
+Breaks naive naming theory. Language is not a list of labels for pre-given objects; it is a structure of paired faces.
+
+**Three-Domain Reading:**
+
+- **Theology:** Word and meaning as joined mystery — not bare pointers to creation.
+- **Technology:** Semiotic unit as base data structure of culture analysis.
+- **Cosmology:** Human world as woven of two-sided signs.
+
+**Compressed Insight:**
+He cut the sign open and found not a thing but a marriage of sound-image and concept.
+
+**Confidence:** 0.97  
+**Sources:** *Cours*, nature of the linguistic sign; Baskin translation tradition.
+
+---
+
+## Event 05 — *Arbitrariness of the Sign*
+
+**Title:** No Natural Glue
+
+**Passage or Trigger:**
+Principle I of the *Cours* (standard English):
+
+> “The bond between the signifier and the signified is arbitrary. … the linguistic sign is arbitrary.”
+
+Evidence: different languages (*bœuf* / *Ochs* for ox); no inner link between sound sequence and idea of “sister,” etc.
+
+**Why It Qualifies:**
+Central gnosis of modern linguistics and structuralism. Convention, not nature, assigns the bond — within a language the system is binding, but across languages the pairing is unmotivated.
+
+**Three-Domain Reading:**
+
+- **Theology:** Babel as structure, not only punishment — many lawful pairings.
+- **Technology:** Coding systems as arbitrary-but-conventional.
+- **Cosmology:** Human meaning as social fact, not cosmic onomatopoeia (except limited motivated cases).
+
+**Compressed Insight:**
+He proved the word and the idea are married by custom, not by nature’s necessity — and custom is still law.
+
+**Confidence:** 0.98  
+**Sources:** *Cours* ch. on arbitrary nature of the sign; UMSL / textbook quotations.
+
+---
+
+## Event 06 — *Value by Difference*
+
+**Title:** Identity Is What Others Are Not
+
+**Passage or Trigger:**
+Signs have **value** through relations of difference within the system — not through positive substance alone. A term means by what it is not (the chess-piece analogy in the *Cours* tradition).
+
+**Why It Qualifies:**
+Structuralism’s engine. Meaning is differential. Network before atom.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation as articulated differences (secular structural rhyme).
+- **Technology:** Systems analysis — nodes defined by relations.
+- **Cosmology:** Language as field of oppositions.
+
+**Compressed Insight:**
+He taught that a word’s being is its difference — identity as the shadow of the whole system.
+
+**Confidence:** 0.95  
+**Sources:** *Cours* on value and difference; structuralist reception.
+
+---
+
+## Event 07 — *Synchrony and Diachrony*
+
+**Title:** The Chess Game Now vs the History of Moves
+
+**Passage or Trigger:**
+Priority of **synchronic** study (system at a moment) alongside **diachronic** (change over time). Historical linguistics remains valid but must not erase the need to describe the living system’s state.
+
+**Why It Qualifies:**
+Method dualism. Time’s story and structure’s snapshot both real; confusing them muddles science.
+
+**Three-Domain Reading:**
+
+- **Theology:** Eternal vs temporal — structured carefully for language.
+- **Technology:** Two research modes as complementary tools.
+- **Cosmology:** Language as both organism-in-time and crystal-in-a-slice.
+
+**Compressed Insight:**
+He split time’s movie from the still frame — and said both are needed to know a tongue.
+
+**Confidence:** 0.95  
+**Sources:** *Cours* on synchronic vs diachronic linguistics.
+
+---
+
+## Event 08 — *Linearity of the Signifier*
+
+**Title:** Sound Unfolds in Time
+
+**Passage or Trigger:**
+Principle of the **linear** character of the signifier — auditory signifiers unfold in a single temporal line (unlike visual diagrams that can be simultaneous in space).
+
+**Why It Qualifies:**
+Constraint of the medium. Speech’s physics shapes language’s possible forms. Technology of the voice as limit of the system.
+
+**Three-Domain Reading:**
+
+- **Theology:** Word as temporal event — incarnate in sequence.
+- **Technology:** Serialization as design constraint.
+- **Cosmology:** Time as grammar’s necessary weather.
+
+**Compressed Insight:**
+He reminded us that spoken signs must march single file — time is their only road.
+
+**Confidence:** 0.93  
+**Sources:** *Cours* principles of the sign.
+
+---
+
+## Event 09 — *Language as Social Fact*
+
+**Title:** The System Belongs to No One Speaker
+
+**Passage or Trigger:**
+*Langue* as social product of the speech faculty — conventions adopted by a social body; the individual cannot freely rewrite the system. Homogeneous object for science because it is collective.
+
+**Why It Qualifies:**
+Sociology of language avant Durkheim-adjacent framing in the *Cours*. Meaning is never private property alone.
+
+**Three-Domain Reading:**
+
+- **Theology:** Shared word as communal bond.
+- **Technology:** Standards as enabling constraint.
+- **Cosmology:** Society as condition of sense.
+
+**Compressed Insight:**
+He located language in the group — so no single mouth owns the rules that make mouths mean.
+
+**Confidence:** 0.94  
+**Sources:** *Cours* definitions of langue as social.
+
+---
+
+## Event 10 — *Semiology’s Horizon*
+
+**Title:** Signs Beyond Speech
+
+**Passage or Trigger:**
+Language as system of signs comparable to writing, rites, formulas, military signals — project of a general **semiology** (science of signs in social life) of which linguistics would be the master part.
+
+**Why It Qualifies:**
+Expansion of the Arch: Linguistics becomes mother-method for culture studies. Lévi-Strauss and others later take the invitation.
+
+**Three-Domain Reading:**
+
+- **Theology:** Ritual and word as kin sign-systems.
+- **Technology:** Cross-domain semiotic toolkit.
+- **Cosmology:** Human world as dense with structured signals.
+
+**Compressed Insight:**
+He sketched a science of all social signs — with language as the clearest case to reverse-engineer the rest.
+
+**Confidence:** 0.92  
+**Sources:** *Cours* on semiology; structuralist afterlife (Lévi-Strauss already on Council pending/done path).
+
+---
+
+## Event 11 — *Against Pure Naming-Lists*
+
+**Title:** Not a Nomenclature
+
+**Passage or Trigger:**
+Critique of the view that language is merely a list of words each corresponding to a pre-given thing — the nomenclaturist error. System and concept-cutting precede simple labeling.
+
+**Why It Qualifies:**
+Epistemological hygiene. Worlds are articulated by languages, not only labeled after the fact.
+
+**Three-Domain Reading:**
+
+- **Theology:** Limits of Adamic naming fantasy as complete model.
+- **Technology:** Ontology design — categories are system-relative.
+- **Cosmology:** Reality-for-us shaped by differential nets.
+
+**Compressed Insight:**
+He refused the dictionary-as-universe — words are not stickers on a finished world.
+
+**Confidence:** 0.93  
+**Sources:** *Cours* opening critique of naming-process only.
+
+---
+
+## Event 12 — *Death and Structuralist Century* (1913/1916)
+
+**Title:** The System Outlives the Teacher
+
+**Passage or Trigger:**
+Dies 1913; *Cours* appears 1916; twentieth-century structuralism, semiotics, and large parts of anthropology, literary theory, and cultural studies run on Saussurean rails (and on misreadings). The man is brief; the system is long.
+
+**Why It Qualifies:**
+Institutional afterlife of a mediated book. Arch Linguistics’ modern founding myth is a posthumous course.
+
+**Three-Domain Reading:**
+
+- **Theology:** Word’s power beyond the speaker’s life.
+- **Technology:** Edition as world-historical accident and gift.
+- **Cosmology:** Humanities reorganized by one Geneva classroom’s echo.
+
+**Compressed Insight:**
+He stopped teaching; the century kept taking his course — often without knowing the notes were not his hand.
+
+**Confidence:** 0.94  
+**Sources:** Death 1913; *Cours* 1916; structuralist reception history.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *Cours de linguistique générale* (1916; student edition)
+- Early Indo-European *Mémoire*
+
+**Translations**
+- Wade Baskin *Course in General Linguistics*
+
+**Secondary**
+- Wikipedia *Course in General Linguistics*
+- Standard textbooks on signifier/signified, langue/parole
+
+**Open questions for later passes**
+- Manuscript notes vs published *Cours* divergences (critical edition work)
+- Anagram studies / late unpublished notebooks
+- Relation to Peirce’s semiotics (already on Council) as parallel system
+
+---
+
+## Seat checklist
+
+- [x] Research from *Cours* and career (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (posthumous edition noted)
+- [ ] member_id: `ferdinand-de-saussure`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Linguistics). Events grounded in the *Cours* tradition and Indo-European work; student-edited status of the founding book held honestly.*

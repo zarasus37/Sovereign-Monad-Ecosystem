@@ -1,0 +1,360 @@
+JOHANN WOLFGANG VON GOETHE GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Humanities → Creative Arts
+**Era:** 1749–1832 (Frankfurt / Weimar / Italy / Weimar)
+**Status:** Extraction complete (seating candidate) — drawn from literary works, *Italian Journey*, morphology, and *Theory of Colours*
+
+---
+
+## Contribution
+
+German poet, dramatist, novelist, statesman, and natural investigator whose *Faust* stages the modern bargain of knowledge and desire; who sought the **Urpflanze** (primal plant) in morphology; who wrote *Theory of Colours* as a phenomenological science of seeing against purely mathematical optics; and who treated art, administration, and nature-study as one long Bildung of a person toward form.
+
+## Key Insight
+
+Nature and art speak one language of metamorphosis: the plant’s leaf, the poem’s figure, and the eye’s color-play are transformations of living form — and the human task is to see the open secret (*offenbares Geheimnis*) without killing it into dead mechanism alone.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Goethe is extracted from **works and scientific writings**, not only the “universal genius” label. Primary lines:
+
+1. *Die Leiden des jungen Werthers* (1774)
+2. Weimar administrative and court life under Carl August
+3. Italian Journey (1786–88) — art, body, Urpflanze
+4. *Faust* (Part I 1808; Part II 1832)
+5. Morphological essays / plant metamorphosis
+6. *Zur Farbenlehre* (*Theory of Colours*, 1810)
+7. *Wilhelm Meister*, *Elective Affinities*, lyric corpus
+8. Death 1832 Weimar
+
+---
+
+## Event 01 — *Werther*
+
+**Title:** Feeling as World-Weather
+
+**Passage or Trigger:**
+*The Sorrows of Young Werther* (1774): epistolary novel of love, nature-identification, and suicide; European sensation. Subjective storm becomes public literary climate (Werther-fieber).
+
+**Why It Qualifies:**
+Recognition that interior passion can reorganize a culture’s emotional grammar. Dangerous: art as contagion. The Creative Arts seat begins in a book that treated feeling as fate.
+
+**Three-Domain Reading:**
+
+- **Theology:** Idolatry of emotion; limits of self as absolute.
+- **Technology:** Novel as mass affective technology.
+- **Cosmology:** Nature as mirror of the heart’s weather.
+
+**Compressed Insight:**
+He released a hero who died of feeling — and Europe briefly lived as if that weather were climate.
+
+**Confidence:** 0.94  
+**Sources:** *Werther* (1774); reception history.
+
+---
+
+## Event 02 — *Weimar Service*
+
+**Title:** Poet as Administrator
+
+**Passage or Trigger:**
+Goethe’s long service in Weimar — mining, finance, theater direction, practical state work under Duke Carl August. Art and governance share one life.
+
+**Why It Qualifies:**
+Creative Arts not as pure bohemia. Form-sense applied to institutions. The same eye that seeks Urpflanze also counts mines and stages plays.
+
+**Three-Domain Reading:**
+
+- **Theology:** Vocation in the world — not only flight from it.
+- **Technology:** Court theater and administration as social crafts.
+- **Cosmology:** Small state as laboratory of culture.
+
+**Compressed Insight:**
+He ran a duchy’s practical engines while writing eternity — proving form serves both ledgers and lyrics.
+
+**Confidence:** 0.91  
+**Sources:** Weimar career documentation; standard biographies.
+
+---
+
+## Event 03 — *Italian Journey*
+
+**Title:** Rebirth Under Southern Light
+
+**Passage or Trigger:**
+Italian journey 1786–88 (*Italienische Reise*, published later 1816): encounter with classical art, climate, plant life; self-described rebirth of artistic and scientific seeing. Letters and diaries record observations that seed morphology and color studies.
+
+**Why It Qualifies:**
+Bildung as geography. Travel as method. The North’s abstraction meets the South’s body and light — and a new Goethe crystallizes.
+
+**Three-Domain Reading:**
+
+- **Theology:** Pilgrimage without leaving nature-religion’s edge.
+- **Technology:** Travel journal as research instrument.
+- **Cosmology:** Climate and art as educators of perception.
+
+**Compressed Insight:**
+He fled to Italy to be remade — and came back with eyes trained on plant, marble, and color as one school.
+
+**Confidence:** 0.93  
+**Sources:** *Italian Journey*; correspondence of the Italian years.
+
+---
+
+## Event 04 — *Urpflanze*
+
+**Title:** The Primal Plant
+
+**Passage or Trigger:**
+During and after Italy: search for the **Urpflanze** — the archetypal plant that would exhibit the fundamental organization of all plants. Letter tone to Herder: near the secret of generation and organization of plants under southern skies. Later reflection: he sought the Urpflanze unaware he sought the *idea/concept* by which we develop it for ourselves (to Nees von Esenbeck). Fear that none would recognize the plant world therein.
+
+**Why It Qualifies:**
+Morphological gnosis: diversity as metamorphosis of one type. Not Linnaean list only — living idea. Seeds of later evolutionary-adjacent thinking without reducing Goethe to Darwin.
+
+**Three-Domain Reading:**
+
+- **Theology:** Archetype as intelligible form in nature (Platonizing instinct).
+- **Technology:** Comparative morphology as method.
+- **Cosmology:** Plant kingdom as variations on a secret theme.
+
+**Compressed Insight:**
+He hunted one plant that was all plants — and found he was hunting the eye that can see metamorphosis.
+
+**Confidence:** 0.94  
+**Sources:** Italian journey plant letters; later published reflections on Urpflanze; scholarly morphology literature.
+
+---
+
+## Event 05 — *Metamorphosis of Plants*
+
+**Title:** Leaf Becomes All
+
+**Passage or Trigger:**
+Essayistic science of plant metamorphosis: organs as transformed leaves in a sequence of expansion and contraction — developmental morphology as Goethean signature.
+
+**Why It Qualifies:**
+Time enters form. The plant is a process, not a static stamp. Creative Arts and natural science fuse in one grammar of becoming.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation as ongoing formation.
+- **Technology:** Serial observation and comparative drawing.
+- **Cosmology:** Life as lawful transformation.
+
+**Compressed Insight:**
+He watched the leaf until flower and fruit confessed they were its destinies.
+
+**Confidence:** 0.93  
+**Sources:** Morphological essays; *Metamorphosis of Plants* tradition.
+
+---
+
+## Event 06 — *Theory of Colours* (1810)
+
+**Title:** Color as Deed of Light and Dark
+
+**Passage or Trigger:**
+*Zur Farbenlehre* (1810): massive treatise Goethe ranked among his most important works. Sparked in Italy when artists had rules for most elements of painting except color. Color as arising in the interplay of light and darkness for the eye; physiological, physical, and chemical dimensions; polemic against a purely Newtonian prism reduction as the whole story of color-for-humans. Painters (e.g. Runge) take interest.
+
+**Why It Qualifies:**
+Science of **perception** against science of rays alone. Whether physics judges him “wrong” on spectrum mechanics, the phenomenological claim stands: color is an event for living eyes in a world of light/dark boundaries. Creative Arts demands a theory of seeing.
+
+**Three-Domain Reading:**
+
+- **Theology:** Sensible glory — color as gift to creatures with eyes.
+- **Technology:** Rules for artistic coloring; observational protocols.
+- **Cosmology:** Light and darkness as generative polarity (not only wavelengths).
+
+**Compressed Insight:**
+He wrote four hundred pages so painters and eyes would not surrender color entirely to the prism’s abstract victory.
+
+**Confidence:** 0.94  
+**Sources:** *Theory of Colours* (1810); Wikipedia/Britannica context; Italian origin of the question.
+
+---
+
+## Event 07 — *Faust I*
+
+**Title:** The Bargain for Unlimited Striving
+
+**Passage or Trigger:**
+*Faust* Part I (1808): scholar’s despair, pact with Mephistopheles, Gretchen tragedy. Striving (*streben*) as modern fate; knowledge and pleasure purchased at spiritual cost.
+
+**Why It Qualifies:**
+Myth of modernity. The Creative Arts seat’s central European drama of infinite want. Not moral cartoon — structural tragedy of Enlightenment hunger.
+
+**Three-Domain Reading:**
+
+- **Theology:** Salvation, damnation, grace beyond the bargain (foreshadowed toward Part II).
+- **Technology:** Knowledge as power that unmoors.
+- **Cosmology:** Human as being who cannot rest in limits.
+
+**Compressed Insight:**
+He gave the modern soul a contract with the devil — and made striving itself the dangerous good.
+
+**Confidence:** 0.96  
+**Sources:** *Faust* Part I (1808).
+
+---
+
+## Event 08 — *Faust II*
+
+**Title:** Empire, Helen, and the Unfinished Ending
+
+**Passage or Trigger:**
+*Faust* Part II (published 1832): broader historical-mythic stages — court, classical Helen, land reclamation, final salvation paradox. Completed near death; cosmic scale beyond the Gretchen chamber.
+
+**Why It Qualifies:**
+Expansion of the bargain into civilization-building and classical beauty. The striving self tries to found worlds — and still needs grace beyond calculation.
+
+**Three-Domain Reading:**
+
+- **Theology:** “Whoever strives…” tradition of salvation beyond strict desert.
+- **Technology:** Faust as engineer of land and state.
+- **Cosmology:** History and myth as stages of one soul’s path.
+
+**Compressed Insight:**
+He stretched Faust across empires and ages — then refused to let the ledger of sin have the last word alone.
+
+**Confidence:** 0.94  
+**Sources:** *Faust* Part II (1832).
+
+---
+
+## Event 09 — *Wilhelm Meister*
+
+**Title:** Bildung as Path
+
+**Passage or Trigger:**
+*Wilhelm Meister’s Apprenticeship* (and later *Journeyman Years*): the Bildungsroman — formation through error, theater, love, and society toward a usable self.
+
+**Why It Qualifies:**
+Creative Arts as pedagogy of life. The novel becomes a technology of self-formation — cousin to Dewey’s educative experience, in another key.
+
+**Three-Domain Reading:**
+
+- **Theology:** Soul’s education in the world.
+- **Technology:** Novel form as formative device.
+- **Cosmology:** Society as school of the person.
+
+**Compressed Insight:**
+He wrote becoming as a plot — so readers could apprentice themselves to growth.
+
+**Confidence:** 0.92  
+**Sources:** *Wilhelm Meister* novels.
+
+---
+
+## Event 10 — *Elective Affinities*
+
+**Title:** Chemistry of Souls
+
+**Passage or Trigger:**
+*Elective Affinities* (*Die Wahlverwandtschaften*, 1809): human relations modeled on chemical elective affinities — attraction, recombination, catastrophe of form.
+
+**Why It Qualifies:**
+Natural science metaphor becomes moral tragedy. The same mind that seeks Urpflanze stages human bonds as lawful and lethal.
+
+**Three-Domain Reading:**
+
+- **Theology:** Desire under law and broken covenant.
+- **Technology:** Scientific analogy as narrative engine.
+- **Cosmology:** Human and chemical worlds rhyme.
+
+**Compressed Insight:**
+He let chemistry explain marriage — and marriage revealed chemistry’s cruelty.
+
+**Confidence:** 0.91  
+**Sources:** *Elective Affinities* (1809).
+
+---
+
+## Event 11 — *Lyric and the Moment*
+
+**Title:** The Instant Held
+
+**Passage or Trigger:**
+Lyric corpus — from early Sturm und Drang through late poetry: nature lyrics, love, aging, the demand to hold the moment (*Verweile doch* as Faustian and lyric problem).
+
+**Why It Qualifies:**
+Creative Arts at cellular scale: the short form that trains attention. Time’s pressure answered by song.
+
+**Three-Domain Reading:**
+
+- **Theology:** Praise and lament as basic speech before the world.
+- **Technology:** Meter and image as compression.
+- **Cosmology:** Instant as doorway to whole.
+
+**Compressed Insight:**
+He packed worlds into stanzas — because some truths only visit as moments.
+
+**Confidence:** 0.90  
+**Sources:** Goethe’s lyric collections across periods.
+
+---
+
+## Event 12 — *Death in Weimar (1832)*
+
+**Title:** More Light? — The Legend and the Life
+
+**Passage or Trigger:**
+Dies 22 March 1832 in Weimar. Popular last words “more light” are contested anecdote; firm fact is the end of a life that joined poetry, science, and statecraft in one long formal education of Europe’s German tongue.
+
+**Why It Qualifies:**
+Closure of a culture-hero life. Whether or not he asked for light, he spent decades teaching eyes to see plant, color, and moral form.
+
+**Three-Domain Reading:**
+
+- **Theology:** Finite end of a striver.
+- **Technology:** National literature as durable infrastructure.
+- **Cosmology:** One person as weather system for a language’s modern climate.
+
+**Compressed Insight:**
+He ended in Weimar after making German a world language of form — plant, color, and Faust still arguing in his name.
+
+**Confidence:** 0.91 (death date firm; last words soft)  
+**Sources:** Death 1832; standard biographies; caution on “mehr Licht.”
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *Werther*; *Faust* I & II
+- *Italian Journey*
+- Morphological writings / plant metamorphosis
+- *Theory of Colours* (1810)
+- *Wilhelm Meister*; *Elective Affinities*; lyrics
+
+**Secondary**
+- Scholarship on Urpflanze and Italian journey
+- Histories of *Farbenlehre* vs Newton
+- Standard literary biographies
+
+**Open questions for later passes**
+- Scientific correspondence denser citation
+- *West-östlicher Divan* as cross-cultural event
+- Administrative files as “practical form” dossier
+
+---
+
+## Seat checklist
+
+- [x] Research from literary and scientific works (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `johann-wolfgang-von-goethe`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Creative Arts). Events grounded in Goethe’s literary and scientific writings; not genius-mythology alone.*

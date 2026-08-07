@@ -1,0 +1,362 @@
+CHARLES DARWIN GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Natural Sciences → Biology
+**Era:** 1809–1882 (Shrewsbury / Edinburgh / Cambridge / HMS Beagle / Down House)
+**Status:** Extraction complete (seating candidate) — drawn from voyage record, published works, and standard evolutionary history
+
+---
+
+## Contribution
+
+Naturalist who, after the five-year voyage of **HMS Beagle** (1831–1836), formulated **evolution by natural selection** and published its decisive public form in *On the Origin of Species* (1859); who extended the program to human origins and **sexual selection** in *The Descent of Man* (1871); and who made **common descent with modification** the organizing principle of modern biology — without erasing co-discoverer Alfred Russel Wallace or predecessors such as Lyell’s deep time and Malthus’s struggle for existence.
+
+## Key Insight
+
+Living forms are not fixed types but genealogies under pressure: heritable variation plus differential survival and reproduction produces adaptation and branching diversity — so the tree of life is history written in flesh, not a static catalog of kinds.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Darwin is extracted from **voyage, notebooks, and major books**, with credit hygiene: **Wallace** co-arrives at natural selection (1858 Linnean presentation); **Malthus** supplies struggle-for-existence pressure; **Lyell** supplies deep geological time; **Lamarck** is a prior transformist with a different mechanism (not Darwin’s selection). Primary lines:
+
+1. HMS Beagle voyage (1831–1836) and Galápagos
+2. Transmutation notebooks; 1838 Malthus insight
+3. Long private development; barnacle monographs
+4. 1858 Wallace letter; joint Linnean communication
+5. *On the Origin of Species* (1859) and later editions
+6. *Variation under Domestication*; orchids / coevolution
+7. *The Descent of Man* (1871); *Expression of the Emotions*
+8. Death 1882; burial Westminster Abbey
+
+---
+
+## Event 01 — *Formation of the Naturalist*
+
+**Title:** From Medicine and Orders to Specimens
+
+**Passage or Trigger:**
+Born 12 February 1809, Shrewsbury. Edinburgh medicine (from 1825) and Cambridge for Anglican orders (Christ’s College, from 1828); exposure to natural history, collecting, and mentors (including Henslow) who recommend him for the *Beagle* as gentleman naturalist-companion.
+
+**Why It Qualifies:**
+The seat begins in failed professional tracks that free a different vocation. Biology’s founding theorist is not trained as a professional biologist in the modern sense — he is formed by ships, rocks, and beetles.
+
+**Three-Domain Reading:**
+
+- **Theology:** Clerical path abandoned without abandoning wonder.
+- **Technology:** Collecting kit and field practice as first instruments.
+- **Cosmology:** Young mind set loose on a planet’s full sample.
+
+**Compressed Insight:**
+He was meant for pulpit or surgery — the voyage chose specimen and theory instead.
+
+**Confidence:** 0.93  
+**Sources:** Darwin Project timeline; Britannica biography; standard early-life summaries.
+
+---
+
+## Event 02 — *HMS Beagle* (1831–1836)
+
+**Title:** Five Years of the Moving Laboratory
+
+**Passage or Trigger:**
+December 1831–October 1836: voyage under Captain Robert FitzRoy. South America, Pacific, Australia, Atlantic return. Geology, fossils, living fauna, island biotas — continuous notebook science at global scale.
+
+**Why It Qualifies:**
+Arch Biology’s foundational fieldwork. Theory later rests on a body that has seen variation across continents and islands with its own eyes and hands.
+
+**Three-Domain Reading:**
+
+- **Theology:** Pilgrimage of observation around a created (or creatable) world.
+- **Technology:** Ship, chronometer, specimen barrels, lettered correspondence networks.
+- **Cosmology:** Earth as single connected experiment in form and time.
+
+**Compressed Insight:**
+He circled the world until local kinds became one problem — how life diversifies under place and time.
+
+**Confidence:** 0.96  
+**Sources:** Voyage histories; *Journal of Researches* / *Voyage of the Beagle*; Darwin Project.
+
+---
+
+## Event 03 — *Galápagos* (1835)
+
+**Title:** Islands That Would Not Stay Separate in the Mind
+
+**Passage or Trigger:**
+September 1835: *Beagle* at the Galápagos. Island-by-island differences among tortoises, mockingbirds, and later-famous finches; post-voyage realization that geographic isolation and variation demand explanation beyond fixed creation of each form in place.
+
+**Why It Qualifies:**
+Civilizational image of Darwin’s insight — not that he “saw evolution” in a flash on the beach, but that island faunas became the emblem of modification and descent in the later argument.
+
+**Three-Domain Reading:**
+
+- **Theology:** Providence without needing a separate fiat for every island’s bird.
+- **Technology:** Comparative collecting across islands as method.
+- **Cosmology:** Archipelagos as natural experiments in speciation.
+
+**Compressed Insight:**
+The islands taught him that place writes on bloodlines — and that kinds can fork.
+
+**Confidence:** 0.94  
+**Sources:** BBC / standard Galápagos accounts; voyage chronology; later *Origin* biogeography.
+
+---
+
+## Event 04 — *Transmutation Notebooks* (1837–1839)
+
+**Title:** The Private Tree Takes Root
+
+**Passage or Trigger:**
+After return (1836), private notebooks on transmutation of species. By 1837–39 the branching-tree image of descent with modification is active; July–October 1838 Notebook D period coincides with crystallization of natural selection as “my theory,” after reading Malthus on population pressure.
+
+**Why It Qualifies:**
+Discovery date is notebook, not bookshop. The two-decade delay begins here: mechanism found privately long before public *Origin*.
+
+**Three-Domain Reading:**
+
+- **Theology:** Conscience under a theory that will shock orthodoxy.
+- **Technology:** Notebook as scientific instrument of delayed publication.
+- **Cosmology:** Life as historical process, not eternal type.
+
+**Compressed Insight:**
+He knew the tree before he dared the world — selection was a secret he carried for years.
+
+**Confidence:** 0.94  
+**Sources:** Ayala / PMC on Notebook D and “my theory”; standard notebook scholarship summaries.
+
+---
+
+## Event 05 — *Malthus and the Struggle*
+
+**Title:** Surplus Life Meets Scarce Place
+
+**Passage or Trigger:**
+Reading of Malthus on population: organisms produce more offspring than can survive; competition for limited resources. Darwin applies this pressure to heritable variation — those slightly better fitted leave more descendants.
+
+**Why It Qualifies:**
+Mechanism hinge. Without differential survival under scarcity, “modification” lacks engine. Economics of population becomes biology of adaptation.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation under constraint, not endless plenitude without cost.
+- **Technology:** Import of social science into natural history method.
+- **Cosmology:** Biosphere as economy of limited seats.
+
+**Compressed Insight:**
+He borrowed the struggle of populations and made it the sculptor of form.
+
+**Confidence:** 0.95  
+**Sources:** Standard Darwin–Malthus accounts; Notebook period historiography.
+
+---
+
+## Event 06 — *The Long Delay*
+
+**Title:** Twenty Years of Evidence Before the Leap
+
+**Passage or Trigger:**
+1830s–1850s: marriage to Emma Wedgwood; life at Down House; illness; massive correspondence; barnacle monographs; slow accumulation of facts for a “big book.” Theory held while reputation as careful naturalist is built.
+
+**Why It Qualifies:**
+Method as virtue and cost. The Council values not only the idea but the discipline of evidence under fear of premature claim — and the human price of silence.
+
+**Three-Domain Reading:**
+
+- **Theology:** Patience, scruple, and domestic conscience under a world-shaking idea.
+- **Technology:** Specimen work and monographs as credibility infrastructure.
+- **Cosmology:** Time spent matching the deep time the theory requires.
+
+**Compressed Insight:**
+He waited until the evidence could carry the heresy — and almost waited too long.
+
+**Confidence:** 0.93  
+**Sources:** Britannica on private formulation then late publication; standard Down House biographies.
+
+---
+
+## Event 07 — *Wallace and the Linnean* (1858)
+
+**Title:** Two Minds, One Mechanism, One Evening
+
+**Passage or Trigger:**
+1858: Alfred Russel Wallace sends Darwin an essay from the Malay Archipelago outlining natural selection independently. Joint communication of Darwin’s and Wallace’s papers to the Linnean Society of London (1 July 1858) — co-discovery protocol under crisis.
+
+**Why It Qualifies:**
+Credit hygiene event. Natural selection is not sole-property myth. Darwin’s priority of long development meets Wallace’s independent arrival; both names belong in the Arch story.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truth larger than one ego.
+- **Technology:** Scientific societies as priority and publication machines.
+- **Cosmology:** Same law found at empire’s edge and at Down’s desk.
+
+**Compressed Insight:**
+A letter from the islands forced the secret open — selection had two discoverers, not one.
+
+**Confidence:** 0.96  
+**Sources:** Standard 1858 Linnean / Wallace histories; Darwin Project context.
+
+---
+
+## Event 08 — *On the Origin of Species* (1859)
+
+**Title:** The Abstract That Remade Biology
+
+**Passage or Trigger:**
+24 November 1859: John Murray publishes *On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life* — an “abstract” of the larger unfinished work; first edition ~1,500 copies; subsequent editions through 1872.
+
+**Why It Qualifies:**
+Central Biology seat event. Common descent + natural selection enter public science and public metaphysics at once. Civilizational hinge for natural history, theology of nature, and later genetics synthesis.
+
+**Three-Domain Reading:**
+
+- **Theology:** Special creation of each species displaced as scientific default.
+- **Technology:** Book as vector of paradigm change.
+- **Cosmology:** Life as branching historical process on a deep-time Earth.
+
+**Compressed Insight:**
+He published an abstract and the living world gained a history — kinds became kin.
+
+**Confidence:** 0.97  
+**Sources:** Darwin Project timeline; publication histories; Ayala overview.
+
+---
+
+## Event 09 — *Domestication and Artificial Selection*
+
+**Title:** The Breeder’s Hand as Proof of Principle
+
+**Passage or Trigger:**
+Pigeon fanciers, livestock, cultivated plants — artificial selection as accessible model of what nature does without a human chooser. Extended in *The Variation of Animals and Plants under Domestication* (1868).
+
+**Why It Qualifies:**
+Argument architecture: readers already know selection works under human hands; *Origin* asks them to grant the same logic to wild struggle over geological time.
+
+**Three-Domain Reading:**
+
+- **Theology:** Stewardship of breeds as analogy for nature’s impersonal craft.
+- **Technology:** Agriculture and hobby breeding as experimental evidence.
+- **Cosmology:** Continuity of process from farmyard to fossil record.
+
+**Compressed Insight:**
+He showed the farmer’s selection and said nature does the same — slower, ruder, without a face.
+
+**Confidence:** 0.94  
+**Sources:** *Origin* early chapters; *Variation under Domestication*; standard expositions.
+
+---
+
+## Event 10 — *The Descent of Man* (1871)
+
+**Title:** The Human Animal Without Exemption
+
+**Passage or Trigger:**
+February–March 1871: *The Descent of Man, and Selection in Relation to Sex* — human evolution from earlier forms; sexual selection as major co-mechanism; continuity of mind and morals with animal life argued without surrendering moral seriousness.
+
+**Why It Qualifies:**
+Theology–biology collision at maximum intensity. Species law applied to the species that reads it. Complements *Origin*’s careful near-silence on man with full treatment.
+
+**Three-Domain Reading:**
+
+- **Theology:** Imago Dei debates under evolutionary continuity.
+- **Technology:** Comparative anatomy, ethnography, and behavior as data.
+- **Cosmology:** Humanity as one late branch of the same tree.
+
+**Compressed Insight:**
+He brought the ape into the family album — and sexual choice into the engine of form.
+
+**Confidence:** 0.95  
+**Sources:** Darwin Project; Britannica; BBC summary of *Descent*.
+
+---
+
+## Event 11 — *Expression, Orchids, Earthworms*
+
+**Title:** Continuity Written in Face, Flower, and Soil
+
+**Passage or Trigger:**
+Later program: *The Expression of the Emotions in Man and Animals* (1872); *On the Various Contrivances by Which British and Foreign Orchids Are Fertilised by Insects* (1862) — coevolution; late earthworm work on soil as living agency. Mind, plant–insect coupling, and ground itself under evolutionary and naturalist gaze.
+
+**Why It Qualifies:**
+Darwin is not only *Origin*. The full naturalist shows continuity of method across emotion, botany, and geology’s living surface.
+
+**Three-Domain Reading:**
+
+- **Theology:** Emotion and care as evolved yet meaningful.
+- **Technology:** Careful observation of pollination machinery.
+- **Cosmology:** Biosphere as coupled systems — flower and insect, worm and soil.
+
+**Compressed Insight:**
+He followed selection into the face’s muscles and the orchid’s trap — life’s craft is everywhere continuous.
+
+**Confidence:** 0.92  
+**Sources:** Work titles and standard late-career surveys; Wikipedia notable works list.
+
+---
+
+## Event 12 — *Death and Abbey* (1882)
+
+**Title:** Buried Among Poets, Having Remade Nature’s Story
+
+**Passage or Trigger:**
+Dies 19 April 1882 at Down; buried in Westminster Abbey — national honor for a man whose theory had been called blasphemy. Afterlife of the Modern Synthesis (genetics + selection) still to come; Fisher already on Council as later quantitative heir.
+
+**Why It Qualifies:**
+Institutional afterlife. The culture that feared him interred him at the center — biology’s founder as civilizational ancestor.
+
+**Three-Domain Reading:**
+
+- **Theology:** Reconciliation unfinished; honor and argument both continue.
+- **Technology:** Museum, textbook, and lab as Darwin’s true monuments.
+- **Cosmology:** Evolutionary worldview becomes default scientific cosmos of life.
+
+**Compressed Insight:**
+He died under a steeple after teaching that life’s cathedral is a tree — and the nation kept both.
+
+**Confidence:** 0.94  
+**Sources:** Death and burial standard; Ayala on acceptance by end of life of evolution as fact (mechanism slower).
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *Journal of Researches* / *Voyage of the Beagle*
+- Transmutation notebooks (esp. Notebook D period)
+- *On the Origin of Species* (1859; later editions)
+- *The Variation of Animals and Plants under Domestication* (1868)
+- *The Descent of Man* (1871)
+- *The Expression of the Emotions* (1872); orchid and earthworm works
+
+**Secondary**
+- Darwin Project timeline (darwinproject.ac.uk)
+- Britannica Charles Darwin
+- Ayala, “Darwin at 200” (PMC) on notebooks and *Origin* structure
+- Standard Wallace 1858 accounts
+
+**Open questions for later passes**
+- Emma’s religious conscience letters denser pass
+- Geological chapters of *Beagle* / *Coral Reefs* as nested events
+- Reception by Huxley, Wilberforce, and American Protestantism as public gnosis layer
+
+---
+
+## Seat checklist
+
+- [x] Research from voyage and major works (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (Wallace/Malthus/Lyell credit noted)
+- [ ] member_id: `charles-darwin`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Biology). Events grounded in Darwin’s voyage, notebooks, and books; co-discovery and intellectual debts named.*

@@ -1,0 +1,357 @@
+﻿EDWIN HUBBLE GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Natural Sciences → Space Sciences
+**Era:** 1889–1953 (Missouri / Chicago / Mount Wilson / later life)
+**Status:** Extraction complete (seating candidate) — drawn from Mount Wilson observations, published results, and standard astronomical history
+
+---
+
+## Contribution
+
+Astronomer who, with the 100-inch Hooker Telescope at Mount Wilson, identified **Cepheid variables** (notably V1) in the Andromeda “nebula,” proving it a separate galaxy far beyond the Milky Way; who classified nebulae/galaxies and established the **distance–redshift relation** (Hubble’s law, 1929) showing recessional velocity increases with distance — foundational evidence for an **expanding universe**; and whose name the Space Telescope carries as civilizational memorial.
+
+## Key Insight
+
+The Milky Way is not the whole: spiral “nebulae” are island universes, and the farther they are, the faster they recede — so the cosmos is vastly larger than one galaxy and is not static.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Hubble is extracted from **observational achievements and papers**, with credit to predecessors: **Henrietta Swan Leavitt**’s period–luminosity relation for Cepheids made the distance ladder step possible; redshift work builds on Vesto Slipher and others. Primary lines:
+
+1. Mount Wilson 100-inch Hooker Telescope
+2. 1923 plate of Andromeda Cepheid V1 (“VAR!”)
+3. 1924–29 extragalactic distance results
+4. Galaxy classification (tuning-fork scheme)
+5. 1929 velocity–distance relation / Hubble’s law
+6. Hubble constant (historical value later revised; concept durable)
+7. Death 1953; HST naming afterlife
+
+---
+
+## Event 01 — *Hooker Telescope*
+
+**Title:** The Largest Eye on Earth
+
+**Passage or Trigger:**
+Mount Wilson Observatory’s **100-inch Hooker Telescope** — then the world’s largest — becomes Hubble’s primary instrument for resolving stars in “spiral nebulae.”
+
+**Why It Qualifies:**
+Cosmology waits on aperture. Technology of glass and mountain air enables a new scale of world.
+
+**Three-Domain Reading:**
+
+- **Theology:** Seeing farther as human vocation of wonder.
+- **Technology:** Large reflector as civilizational instrument.
+- **Cosmology:** Observational reach defines known universe size.
+
+**Compressed Insight:**
+He needed the biggest eye available — because the truth was outside the old sky’s map.
+
+**Confidence:** 0.94  
+**Sources:** Mount Wilson / Hooker histories; CSIRO education summaries.
+
+---
+
+## Event 02 — *Leavitt’s Candle*
+
+**Title:** Borrowed Ladder Rung
+
+**Passage or Trigger:**
+**Henrietta Swan Leavitt**’s period–luminosity relation for Cepheid variables: longer period → intrinsically brighter. Hubble applies this “standard candle” method to extragalactic targets.
+
+**Why It Qualifies:**
+Honest genealogy of discovery. Hubble’s leap stands on a woman’s Harvard work. Council names the rung he climbed.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truth as cooperative across overlooked laborers.
+- **Technology:** Standard candles as metrology of deep space.
+- **Cosmology:** Brightness–period law as cosmic measuring tape.
+
+**Compressed Insight:**
+He measured galaxies with a rule another mind had carved — Leavitt’s Cepheids made his distances speak.
+
+**Confidence:** 0.95  
+**Sources:** Kirshner and standard Hubble histories citing Leavitt.
+
+---
+
+## Event 03 — *V1 / “VAR!”* (1923)
+
+**Title:** The Plate That Broke the Island
+
+**Passage or Trigger:**
+October 1923: on a Mount Wilson plate of Andromeda (M31), Hubble marks a star first as nova (“N”), then crosses out and writes **“VAR!”** — recognizing a **Cepheid variable** (V1). Period (~31 days classically associated) yields distance placing Andromeda far outside the Milky Way (historical figure ~900,000 light-years in early Hubble estimates; modern value higher, method same in spirit).
+
+**Why It Qualifies:**
+Central Space Sciences event. The “nebula” is a galaxy. Universe multiplies. The handwritten excitement is documentary theater of recognition.
+
+**Three-Domain Reading:**
+
+- **Theology:** Humility — our island is not the all.
+- **Technology:** Photographic plate + variable-star analysis.
+- **Cosmology:** Island-universe model confirmed observationally.
+
+**Compressed Insight:**
+He crossed out “nova,” wrote “VAR!,” and the Milky Way stopped being the whole creation.
+
+**Confidence:** 0.97  
+**Sources:** Smithsonian / NASA / ESA accounts of V1 plate; 1923 discovery narrative.
+
+---
+
+## Event 04 — *Island Universes Confirmed*
+
+**Title:** Spirals as Galaxies
+
+**Passage or Trigger:**
+1924–29: Cepheids in Andromeda, Triangulum, and other systems prove many “nebulae” are extragalactic galaxies — ending (for most) the Great Debate’s island-universe question in favor of a vast multi-galaxy cosmos. Formal publication of Andromeda results in peer-reviewed form by 1929.
+
+**Why It Qualifies:**
+World-size revision. Astronomy’s object becomes the universe of galaxies, not one stellar system’s foggy edges.
+
+**Three-Domain Reading:**
+
+- **Theology:** Scale of creation exploded.
+- **Technology:** Repeatable distance method across targets.
+- **Cosmology:** Cosmos as archipelago of galaxies.
+
+**Compressed Insight:**
+He stacked enough distant Cepheids that “nebula” had to mean galaxy — again and again.
+
+**Confidence:** 0.96  
+**Sources:** Wikipedia Hubble; CSIRO; peer-review timeline notes.
+
+---
+
+## Event 05 — *Galaxy Classification*
+
+**Title:** The Tuning Fork of Forms
+
+**Passage or Trigger:**
+Hubble’s morphological classification of galaxies (ellipticals, spirals, barred spirals — the **tuning-fork** diagram tradition) — order imposed on the new zoo of island universes.
+
+**Why It Qualifies:**
+Taxonomy as first science after discovery. Form language for a new kingdom of objects.
+
+**Three-Domain Reading:**
+
+- **Theology:** Naming the host of heavens.
+- **Technology:** Classification scheme as research OS.
+- **Cosmology:** Galaxies as typed populations, not one blur.
+
+**Compressed Insight:**
+He gave the new universe a grammar of shapes — so comparison could begin.
+
+**Confidence:** 0.93  
+**Sources:** Hubble classification scheme; standard textbooks.
+
+---
+
+## Event 06 — *Redshift and Distance* (1929)
+
+**Title:** The Farther, the Faster
+
+**Passage or Trigger:**
+1929: relation between galaxy distance and recessional velocity (redshift) — **Hubble’s law**: velocity increases with distance. Foundational empirical law of modern cosmology (building on Slipher’s redshifts and distance work). Later refined; the linear expansion signature remains.
+
+**Why It Qualifies:**
+Static cosmos dies. Expansion (or its kinematic signature) enters as data. Space Sciences seat’s second thunderclap after island universes.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation as dynamic — not a finished frozen vault.
+- **Technology:** Spectroscopy + distance ladder as joint instrument.
+- **Cosmology:** Expanding universe paradigm.
+
+**Compressed Insight:**
+He plotted speed against distance — and the universe would not sit still on the graph.
+
+**Confidence:** 0.97  
+**Sources:** 1929 velocity–distance paper tradition; Wikipedia Hubble’s law; Carnegie Science summaries.
+
+---
+
+## Event 07 — *Hubble Constant*
+
+**Title:** The Number That Ages the Cosmos
+
+**Passage or Trigger:**
+The slope of the velocity–distance relation — **Hubble constant** H₀ — implies an expansion timescale / age estimate. Hubble’s early numerical value was high (universe “too young” vs stellar ages); later revisions fixed the tension’s first form. Concept endures; number improves.
+
+**Why It Qualifies:**
+Metrology of becoming. One parameter ties sky data to cosmic time. Error is historical; the *move* to quantify expansion rate is the event.
+
+**Three-Domain Reading:**
+
+- **Theology:** Time-depth of creation as measurable claim.
+- **Technology:** Constant as calibration target for generations of instruments.
+- **Cosmology:** Age of the universe as scientific object.
+
+**Compressed Insight:**
+He gave expansion a number — and forced cosmology to argue in years, not only myths of origin.
+
+**Confidence:** 0.94  
+**Sources:** Hubble constant history; Kirshner on modern vs early H₀.
+
+---
+
+## Event 08 — *Not Alone in the Work*
+
+**Title:** Credit’s Full Field
+
+**Passage or Trigger:**
+Historical honesty: Leavitt’s Cepheids; Slipher’s redshifts; theoretical expansion contexts (Friedmann, Lemaître) parallel and interact with Hubble’s observational synthesis. Hubble is linchpin observer, not sole author of the expanding universe idea.
+
+**Why It Qualifies:**
+Council hygiene: greatness without erasure of the network. Space science is cumulative.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truth as common work.
+- **Technology:** Observation–theory relay.
+- **Cosmology:** Discovery as social process.
+
+**Compressed Insight:**
+He stood on Leavitt’s ladder and Slipher’s shifts — and still changed what “universe” meant.
+
+**Confidence:** 0.93  
+**Sources:** Standard multi-credit cosmology histories.
+
+---
+
+## Event 09 — *From Law to Observatory Culture*
+
+**Title:** Mount Wilson as Factory of Distance
+
+**Passage or Trigger:**
+Institutional life of Mount Wilson observing runs, plates, reductions — industrial rhythm of night science producing epochal numbers.
+
+**Why It Qualifies:**
+Discovery as **scheduled labor** under a mountain’s sky, not only eureka myth.
+
+**Three-Domain Reading:**
+
+- **Theology:** Vigil as scientific vocation.
+- **Technology:** Observatory pipeline.
+- **Cosmology:** Knowledge extracted on human night-cycles from inhuman distances.
+
+**Compressed Insight:**
+He mined the dark with a hundred-inch glass — night after night until the plate said “farther.”
+
+**Confidence:** 0.88  
+**Sources:** Observatory practice in Hubble biographies.
+
+---
+
+## Event 10 — *Public Cosmos Shift*
+
+**Title:** The Newspaper Universe
+
+**Passage or Trigger:**
+1920s–30s public reception: island universes and expansion enter general culture — the sky’s story rewritten for non-specialists.
+
+**Why It Qualifies:**
+Cosmology becomes public metaphysics. Arch Space Sciences as civilizational news.
+
+**Three-Domain Reading:**
+
+- **Theology:** Humility and awe in popular form.
+- **Technology:** Press as amplifier of science.
+- **Cosmology:** Shared mental model of a vast expanding all.
+
+**Compressed Insight:**
+He forced the public sky to grow — one galaxy was no longer enough for the mind.
+
+**Confidence:** 0.87  
+**Sources:** Popular science reception histories.
+
+---
+
+## Event 11 — *Death 1953*
+
+**Title:** Before the Namesake Mirror
+
+**Passage or Trigger:**
+Dies 28 September 1953 — before the space telescope that bears his name. Legacy outruns lifespan.
+
+**Why It Qualifies:**
+Finite observer; infinite program of looking he helped start.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creaturely limit.
+- **Technology:** Naming of later instruments as memorial tech.
+- **Cosmology:** Continuity of the expansion program.
+
+**Compressed Insight:**
+He died; the measuring of recession did not — and a telescope in vacuum took his name aloft.
+
+**Confidence:** 0.93  
+**Sources:** Death date; HST naming afterlife.
+
+---
+
+## Event 12 — *Hubble Space Telescope*
+
+**Title:** The Eye That Keeps His Law
+
+**Passage or Trigger:**
+NASA/ESA **Hubble Space Telescope** — named for him; continues Cepheid and deep-field work refining the universe he opened. Centennial commemorations of V1 restage the founding plate.
+
+**Why It Qualifies:**
+Institutional afterlife at maximum: an orbiting observatory as living footnote to 1923.
+
+**Three-Domain Reading:**
+
+- **Theology:** Perpetual praise of the heavens through better seeing.
+- **Technology:** Space astronomy as heir of Mount Wilson.
+- **Cosmology:** Expansion and deep time still under measurement.
+
+**Compressed Insight:**
+The century put his name above the atmosphere — so the expansion he charted would keep being refined.
+
+**Confidence:** 0.94  
+**Sources:** NASA HST naming and V1 commemorations.
+
+---
+
+## Sources / Working Notes
+
+**Primary / near-primary**
+- Hubble’s Andromeda Cepheid work (1923–29 publications)
+- 1929 velocity–distance relation
+- Classification papers
+
+**Secondary**
+- Smithsonian Air & Space; NASA; ESA/Hubble; CSIRO education
+- Kirshner on Hubble diagram
+- Wikipedia Edwin Hubble
+
+**Open questions for later passes**
+- Exact 1929 paper quantitative reread
+- Relationship with Humason’s spectroscopy in finer grain
+- Personal papers / war service as secondary biography
+
+---
+
+## Seat checklist
+
+- [x] Research from observations and standard history (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (Leavitt/Slipher credit noted)
+- [ ] member_id: `edwin-hubble`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Space Sciences). Events grounded in Mount Wilson results and cosmology history; predecessors credited.*

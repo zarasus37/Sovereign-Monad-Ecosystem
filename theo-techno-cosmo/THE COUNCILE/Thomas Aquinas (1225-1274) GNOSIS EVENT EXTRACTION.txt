@@ -1,0 +1,367 @@
+THOMAS AQUINAS GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Humanities → Theology
+**Era:** 1225–1274 (Aquino / Naples / Paris / Cologne / Italy)
+**Status:** Extraction complete (seating candidate) — drawn from *Summa Theologiae*, *Summa contra Gentiles*, and documented Dominican career
+
+---
+
+## Contribution
+
+Dominican friar and scholastic theologian who built a systematic synthesis of Christian doctrine with Aristotelian philosophy; whose *Summa Theologiae* became the standard architecture of Catholic theology; who articulated the *quinque viae* (Five Ways) as ordered paths of reason from world to God; and who treated grace, law, and intellect as structured powers within a lawful cosmos ordered to the First Cause and Final End.
+
+## Key Insight
+
+Faith and reason are not enemies: the created world is intelligible enough that natural reason can rise to the existence of God, while revelation completes what reason cannot exhaust — and the proper work of theology is ordered *questions*, not scattered opinion.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Aquinas is extracted from the **works and the scholastic method**, not hagiographic legend alone (speaking crucifix, etc., only if critically framed). Primary lines:
+
+1. *Summa Theologiae* (unfinished; *Prima Pars* Q.2 on God’s existence — Five Ways)
+2. *Summa contra Gentiles*
+3. Aristotelian reception via Albert the Great / Paris
+4. Treatises on law (*lex aeterna*, natural law, human law), grace, and sacraments
+5. Death 1274 en route to Second Council of Lyon; later Doctor of the Church
+
+English quotations of the *Summa* follow the Fathers of the English Dominican Province translation (standard New Advent / Christian Classics line).
+
+---
+
+## Event 01 — *Aristotle Baptized into the Schools*
+
+**Title:** The Philosopher Enters Sacred Doctrine
+
+**Passage or Trigger:**
+Mid-13th century Paris and Dominican formation under **Albertus Magnus**: Thomas takes Aristotle’s corpus (physics, metaphysics, ethics, soul) as a *usable instrument* for Christian theology, against both pure rejection of the Philosopher and pure Averroist autonomy of philosophy. Commentaries and theological use of act/potency, four causes, and substance follow.
+
+**Why It Qualifies:**
+Recognition that pagan exact thought can serve sacred doctrine without owning it. The structure of the world Aristotle mapped becomes scaffolding for grace and creation — a technology of synthesis, not syncretism of equal gods.
+
+**Three-Domain Reading:**
+
+- **Theology:** Nature and grace ordered — nature real, grace elevating.
+- **Technology:** Scholastic commentary as knowledge tech for integrating corpora.
+- **Cosmology:** One created cosmos intelligible to both pagan science and Christian faith.
+
+**Compressed Insight:**
+He refused to burn Aristotle — and refused to crown him pope — so philosophy could serve theology without ruling it.
+
+**Confidence:** 0.91  
+**Sources:** Career under Albert; Aristotelian commentaries and use throughout the *Summae*.
+
+---
+
+## Event 02 — *The Summa as Architecture*
+
+**Title:** Theology Built as Ordered Questions
+
+**Passage or Trigger:**
+*Summa Theologiae*: vast unfinished summa organized as **questions and articles** — objections, *sed contra*, response (*respondeo*), replies to objections. Sacred doctrine treated as a *science* with proper order (God, creation, human acts, Christ, sacraments).
+
+**Why It Qualifies:**
+Methodological gnosis: truth is not a pile of authorities. It is a **navigable structure** where objections are stated at full strength, then answered. The form *is* the ethics of thought — charity toward the objector, rigor toward the conclusion.
+
+**Three-Domain Reading:**
+
+- **Theology:** Doctrine as *scientia* ordered to God as end.
+- **Technology:** Article format as reusable engine of argument (still imitated).
+- **Cosmology:** Knowledge of all things under God as hierarchical map.
+
+**Compressed Insight:**
+He built a cathedral of questions so that every objection would have a room — and an exit toward truth.
+
+**Confidence:** 0.95  
+**Sources:** *Summa Theologiae* structure; standard introductions to scholastic method.
+
+---
+
+## Event 03 — *The First Way: Motion*
+
+**Title:** From Moved to Unmoved Mover
+
+**Passage or Trigger:**
+*Summa Theologiae* I, q. 2, a. 3 — first of the Five Ways:
+
+> “The first and more manifest way is the argument from motion. It is certain, and evident to our senses, that in the world some things are in motion. Now whatever is in motion is put in motion by another… But this cannot go on to infinity… Therefore it is necessary to arrive at a first mover, put in motion by no other; and this everyone understands to be God.”
+
+(Dominican Fathers translation.)
+
+**Why It Qualifies:**
+Sensible change becomes a ladder. Potentiality reduced to act only by what is already in act — infinite regress of movers blocked — First Mover. Cosmology of motion opens into theology without abandoning the senses.
+
+**Three-Domain Reading:**
+
+- **Theology:** God as pure act of moving without being moved.
+- **Technology:** Causal chain analysis as proof technology.
+- **Cosmology:** World of change requires a source not itself among the changed.
+
+**Compressed Insight:**
+He watched the world move — and refused to let the chain of movers hang with no first hand.
+
+**Confidence:** 0.97  
+**Sources:** ST I.2.3; New Advent text.
+
+---
+
+## Event 04 — *The Second Way: Efficient Cause*
+
+**Title:** No Cause of Itself
+
+**Passage or Trigger:**
+ST I, q. 2, a. 3 — second way:
+
+> “In the world of sense we find there is an order of efficient causes. There is no case known (neither is it, indeed, possible) in which a thing is found to be the efficient cause of itself; for so it would be prior to itself, which is impossible… Therefore it is necessary to admit a first efficient cause, to which everyone gives the name of God.”
+
+**Why It Qualifies:**
+Agency and production cannot loop into self-creation. The world’s making-structure demands a first maker. Same ladder, different rung: *cause*, not only *motion*.
+
+**Three-Domain Reading:**
+
+- **Theology:** God as uncaused cause of all causal series.
+- **Technology:** Causal graphs must have roots — a constraint on explanation.
+- **Cosmology:** Existence of effects implies a first productive source.
+
+**Compressed Insight:**
+Nothing explains itself into being — so the chain of makers stops at one who is not made.
+
+**Confidence:** 0.97  
+**Sources:** ST I.2.3.
+
+---
+
+## Event 05 — *The Third Way: Contingency*
+
+**Title:** Possible Beings Need the Necessary
+
+**Passage or Trigger:**
+ST I, q. 2, a. 3 — third way:
+
+> “We find in nature things that are possible to be and not to be, since they are found to be generated, and to corrupt… Therefore, if everything is possible not to be, then at one time there could have been nothing in existence… Therefore we cannot but postulate the existence of some being having of itself its own necessity… This all men speak of as God.”
+
+**Why It Qualifies:**
+Contingent cosmos cannot ground itself. If all things might not be, pure possibility cannot explain present existence. Necessary being enters as structural requirement of a world of generation and corruption.
+
+**Three-Domain Reading:**
+
+- **Theology:** God as necessary existence *a se*.
+- **Technology:** Modal analysis (possible/necessary) as metaphysical tool.
+- **Cosmology:** A universe of corruptible things is not self-sufficient.
+
+**Compressed Insight:**
+He saw that a world which can fail to be cannot be the full explanation of why anything is.
+
+**Confidence:** 0.96  
+**Sources:** ST I.2.3.
+
+---
+
+## Event 06 — *Fourth and Fifth Ways*
+
+**Title:** Degrees and Ends
+
+**Passage or Trigger:**
+ST I, q. 2, a. 3 — fourth way (gradation of perfections: more/less true, good, noble → maximum as cause); fifth way (governance of natural things toward ends — “design” / teleology of unintelligent things directed as by intelligence).
+
+**Why It Qualifies:**
+Value hierarchy and purpose in nature become paths to God. Not only physics of motion, but axiology and teleology of the cosmos.
+
+**Three-Domain Reading:**
+
+- **Theology:** God as maximal good and intelligent director of natures.
+- **Technology:** Comparison to maximum as scale; final causality as explanatory form.
+- **Cosmology:** World ordered by ends, not only by pushes.
+
+**Compressed Insight:**
+He read the world’s better-and-worse and its aim-seeking natures as two more roads to the same First.
+
+**Confidence:** 0.95  
+**Sources:** ST I.2.3; standard expositions of *quinque viae*.
+
+---
+
+## Event 07 — *Grace Does Not Destroy Nature*
+
+**Title:** Elevation, Not Erasure
+
+**Passage or Trigger:**
+Throughout the *Summa*: the axiom often summarized as *gratia non tollit naturam, sed perficit* — grace does not destroy nature but perfects it. Human powers (intellect, will) remain real; grace heals and elevates toward supernatural end.
+
+**Why It Qualifies:**
+Structural peace treaty between creation and salvation. Nature is not garbage to be discarded; it is the substrate grace completes. Against dualisms that hate the body or reason.
+
+**Three-Domain Reading:**
+
+- **Theology:** Economy of salvation respects created form.
+- **Technology:** Moral and sacramental life builds on natural virtues and habits.
+- **Cosmology:** One continuous human creature under two orders of end (natural/supernatural).
+
+**Compressed Insight:**
+He refused a grace that burns the world down — grace finishes what creation began.
+
+**Confidence:** 0.93  
+**Sources:** ST treatment of grace and nature; classical Thomistic axiom.
+
+---
+
+## Event 08 — *Eternal Law and Natural Law*
+
+**Title:** The Law Written in Things
+
+**Passage or Trigger:**
+ST I-II on law: *lex aeterna* (eternal law in God’s mind), *lex naturalis* (natural law as rational creature’s participation in eternal law), human law as determination of natural law. Famous line of tradition: natural law’s first precept — good is to be done and pursued, evil avoided.
+
+**Why It Qualifies:**
+Moral cosmos is not arbitrary decree alone. Rational natures *participate* in the ordering mind of God. Ethics becomes readable in the structure of human practical reason.
+
+**Three-Domain Reading:**
+
+- **Theology:** God as legislator whose wisdom is imitable by reason.
+- **Technology:** Jurisprudence grounded in participation, not only command.
+- **Cosmology:** Moral order continuous with cosmic order.
+
+**Compressed Insight:**
+He taught that the good is not only commanded from above — it is already whispered in the grain of practical reason.
+
+**Confidence:** 0.94  
+**Sources:** ST I-II, qq. on law (esp. 90–97 tradition).
+
+---
+
+## Event 09 — *Summa contra Gentiles*
+
+**Title:** Argument for Those Outside the Household
+
+**Passage or Trigger:**
+*Summa contra Gentiles* — systematic work aimed at presenting Christian truth with arguments available where shared Scriptural authority is not assumed (addressing “Gentiles,” philosophers, non-Christians). Reason carries farther before appeal to revelation.
+
+**Why It Qualifies:**
+Missional epistemology: different audiences require different proof-loads. Truth is one; the *path of persuasion* adjusts. A technology of dialogue without surrender of doctrine.
+
+**Three-Domain Reading:**
+
+- **Theology:** Apologetics as ordered charity of intellect.
+- **Technology:** Two-summa strategy (pedagogy for schools vs. engagement outward).
+- **Cosmology:** One truth under different entry ramps.
+
+**Compressed Insight:**
+He built a second summa so that those who did not share the Bible could still be walked toward the same God by the world’s light.
+
+**Confidence:** 0.90  
+**Sources:** *Summa contra Gentiles*; standard purpose statements in Thomistic introductions.
+
+---
+
+## Event 10 — *The End of the Summa*
+
+**Title:** Straw After the Vision?
+
+**Passage or Trigger:**
+Traditional account (reported in lives of Thomas): after a mystical experience near the end of his life (often linked to December 1273), Thomas ceased writing; when urged to continue the *Summa*, he replied in substance that all he had written seemed as **straw** compared to what had been revealed to him. He died 7 March 1274 at Fossanova, traveling toward the Second Council of Lyon. The *Summa* remains unfinished.
+
+**Why It Qualifies:**
+Whether every hagiographic detail is pressed, the structural fact stands: the greatest system-builder of the age **stopped** and left the cathedral incomplete. Recognition that discursive theology is not the beatific vision — maps are not the city.
+
+**Three-Domain Reading:**
+
+- **Theology:** Vision outruns summae; silence as theological act.
+- **Technology:** Unfinished masterwork as limit of method.
+- **Cosmology:** Human systems end; God does not.
+
+**Compressed Insight:**
+He built the largest theological machine of his century — then treated it as straw beside a light he would not put into more articles.
+
+**Confidence:** 0.84 (cessation and unfinished *Summa* firm; “straw” saying via traditional lives)  
+**Sources:** Documentary/hagiographic tradition of 1273–74; unfinished state of ST; death at Fossanova 1274.
+
+---
+
+## Event 11 — *Analogical Naming of God*
+
+**Title:** Neither Univocal nor Purely Equivocal
+
+**Passage or Trigger:**
+ST I on divine names: creaturely words said of God are not in exactly the same sense as of creatures (univocal) nor sheer puns (equivocal) but **analogical** — ordered reference from effects to cause. God is good, but not as creatures are good.
+
+**Why It Qualifies:**
+Language-technology of theology. Protects transcendence without silencing speech. A middle path that keeps philosophy and prayer both honest.
+
+**Three-Domain Reading:**
+
+- **Theology:** God beyond genus, yet truly nameable.
+- **Technology:** Analogy as semantic tech for metaphysics.
+- **Cosmology:** Creatures as real but deficient mirrors of first perfection.
+
+**Compressed Insight:**
+He taught us how to talk about God without shrinking God to a creature or reducing speech to noise.
+
+**Confidence:** 0.93  
+**Sources:** ST I, questions on divine names / simplicity / perfection.
+
+---
+
+## Event 12 — *Doctor of the Church (Reception)*
+
+**Title:** The System Becomes Tradition
+
+**Passage or Trigger:**
+Posthumous reception: Thomas’s authority rises through Dominican and wider Catholic tradition; declared Doctor of the Church (1567 by Pius V in the historical line of honors); *Summa* becomes curriculum architecture for centuries of formation.
+
+**Why It Qualifies:**
+Institutional gnosis: a method and a map *outlive* the man and become the default operating system of a civilization’s theology. Not only personal insight — transmissible form.
+
+**Three-Domain Reading:**
+
+- **Theology:** Magisterial and scholastic reception of Thomism.
+- **Technology:** Curriculum as replication of a thought-engine.
+- **Cosmology:** Christendom’s intellectual weather long shaped by one Dominican’s order of questions.
+
+**Compressed Insight:**
+The unfinished summa became the finished school of half a millennium.
+
+**Confidence:** 0.90  
+**Sources:** History of Thomism; Doctor of the Church designation tradition.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *Summa Theologiae* (esp. I.2.3 Five Ways; law; grace; divine names)
+- *Summa contra Gentiles*
+- Aristotelian commentaries
+
+**Translations**
+- Fathers of the English Dominican Province (*Summa Theologica*)
+
+**Secondary**
+- Standard lives and introductions to Thomism
+- New Advent *Summa* text
+
+**Open questions for later passes**
+- Deeper *De ente et essentia* extraction
+- Eucharist / real presence articles as separate events
+- Conflict with 1277 condemnations as historical episode
+
+---
+
+## Seat checklist
+
+- [x] Research from *Summae* and career (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `thomas-aquinas`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Theology). Events grounded in Aquinas’s texts and documented career; not pious legend alone.*

@@ -1,0 +1,358 @@
+﻿CLAUDE LÉVI-STRAUSS GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Social Sciences → Anthropology
+**Era:** 1908–2009 (Belgium / France / Brazil fieldwork / New York / Collège de France / long late life)
+**Status:** Extraction complete (seating candidate) — drawn from major books and structural-anthropology program
+
+---
+
+## Contribution
+
+Anthropologist who founded **structural anthropology**, applying linguistic-style analysis of relations to kinship, myth, and classification; who wrote *The Elementary Structures of Kinship* (1949), *Tristes Tropiques* (1955), *Structural Anthropology*, *The Savage Mind*, and the *Mythologiques* cycle beginning with *The Raw and the Cooked*; and who treated the **incest prohibition** as the hinge from nature to culture and exchange of spouses as the elementary social fact.
+
+## Key Insight
+
+Culture is a system of relations, not a pile of customs: kinship, myth, and classification work like languages — structures of difference and exchange — so the “savage mind” is as formally rigorous as the engineer’s, only aimed at different objects.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Lévi-Strauss is extracted from **major works**, with Saussurean kinship (already on Council) as method source he later fully activates. Primary lines:
+
+1. Brazil fieldwork (1930s) — Nambikwara, Caduveo, etc.
+2. New York exile years; writing *Elementary Structures*
+3. *Les Structures élémentaires de la parenté* (1949)
+4. *Tristes Tropiques* (1955)
+5. *Anthropologie structurale*; *La Pensée sauvage* (*The Savage Mind*, 1962)
+6. *Mythologiques* — *Le Cru et le cuit* (*The Raw and the Cooked*, 1964) and sequels
+7. Collège de France; death 2009 at 100
+
+---
+
+## Event 01 — *Brazil Fieldwork*
+
+**Title:** The Tropics as Mirror and Loss
+
+**Passage or Trigger:**
+1930s fieldwork in Brazil among indigenous peoples — later reworked in *Tristes Tropiques* as travel, ethnography, and meditation on contact, destruction, and the anthropologist’s position.
+
+**Why It Qualifies:**
+Experience base for theory. Structure is not armchair only — it is distilled from encounters already marked by colonial weather.
+
+**Three-Domain Reading:**
+
+- **Theology:** Witness to vanishing worlds.
+- **Technology:** Fieldwork as method under imperfect conditions.
+- **Cosmology:** Multiple human worlds under one species.
+
+**Compressed Insight:**
+He walked the tropics and came back with structures — and with grief for what contact unmade.
+
+**Confidence:** 0.92  
+**Sources:** *Tristes Tropiques*; career fieldwork record.
+
+---
+
+## Event 02 — *New York Exile*
+
+**Title:** Structures Written in Wartime
+
+**Passage or Trigger:**
+WWII years in New York; composition of what becomes *The Elementary Structures of Kinship* — major work written before full European Saussure revival fully blooms, yet structural in method.
+
+**Why It Qualifies:**
+Theory under displacement. Anthropology’s structural turn drafted in exile libraries and wartime America.
+
+**Three-Domain Reading:**
+
+- **Theology:** Thought surviving catastrophe of Europe.
+- **Technology:** Comparative kinship datasets as raw material.
+- **Cosmology:** Global war as backdrop to mapping marriage systems.
+
+**Compressed Insight:**
+He wrote kinship’s algebra in a city of refugees — structure as order seized from chaos.
+
+**Confidence:** 0.91  
+**Sources:** Publication history of *Elementary Structures* (NY composition notes in scholarship).
+
+---
+
+## Event 03 — *Elementary Structures of Kinship* (1949)
+
+**Title:** Alliance Over Descent Alone
+
+**Passage or Trigger:**
+*Les Structures élémentaires de la parenté* (1949): **alliance theory** — incest prohibition as positive demand to marry out; elementary structures as positive marriage rules (spouse from a prescribed category); **restricted exchange** (two groups exchanging) vs **generalized exchange**; reduction of diverse systems to formal types of reciprocity.
+
+**Why It Qualifies:**
+Central Anthropology event. Society begins not only in bloodlines but in **exchange of spouses**. Incest taboo as nature/culture threshold.
+
+**Three-Domain Reading:**
+
+- **Theology:** Prohibition as founding cultural act — sacred boundary.
+- **Technology:** Exchange models as social OS.
+- **Cosmology:** Human groups as networks of giving and taking partners.
+
+**Compressed Insight:**
+He reread the incest rule as a command to give — culture starts when the group must marry outward.
+
+**Confidence:** 0.96  
+**Sources:** *Elementary Structures of Kinship*; Britannica alliance theory; literariness.org summaries.
+
+---
+
+## Event 04 — *Incest Taboo as Hinge*
+
+**Title:** Where Nature Ends and Culture Begins
+
+**Passage or Trigger:**
+Core thesis: incest prohibition marks the passage from nature to culture — not only biological hygiene story, but structural inauguration of social exchange.
+
+**Why It Qualifies:**
+Founding binary of his anthropology. Culture is not “extra” on top of nature — it is a break that creates human society as such.
+
+**Three-Domain Reading:**
+
+- **Theology:** Law as human distinctiveness.
+- **Technology:** Taboo as generative constraint (like formal systems).
+- **Cosmology:** Species split between instinct and rule.
+
+**Compressed Insight:**
+He located culture’s birth in a ban — the no that forces the gift of the other group’s kin.
+
+**Confidence:** 0.95  
+**Sources:** *Elementary Structures*; secondary expositions of nature/culture hinge.
+
+---
+
+## Event 05 — *Tristes Tropiques* (1955)
+
+**Title:** The Anthropologist’s Confession
+
+**Passage or Trigger:**
+*Tristes Tropiques*: travelogue-philosophy — “I hate travelling and explorers” opening shock; Caduveo face painting as structural art; melancholy of modernity’s erasure of other worlds; science that is also literature.
+
+**Why It Qualifies:**
+Form event: anthropology as **written experience** that questions its own detachment. Structure appears in myth and face-paint; the writer doubts pure objectivity.
+
+**Three-Domain Reading:**
+
+- **Theology:** Loss and nostalgia as moral weather.
+- **Technology:** Hybrid genre as knowledge vehicle.
+- **Cosmology:** Planet of disappearing differences under one industrial climate.
+
+**Compressed Insight:**
+He wrote a book that is fieldwork, myth, and mourning — and admitted the anthropologist is never only a camera.
+
+**Confidence:** 0.94  
+**Sources:** *Tristes Tropiques* (1955); Caduveo sections in reception.
+
+---
+
+## Event 06 — *Structural Anthropology*
+
+**Title:** Linguistics Enters the Tribe
+
+**Passage or Trigger:**
+Essays collected as *Structural Anthropology*: method transfer from structural linguistics (Saussure, Jakobson) to kinship, totemism, myth — relations over substances; unconscious structures of the mind.
+
+**Why It Qualifies:**
+Methodological fusion across Arch seats (Linguistics already extracted). Culture readable as language-like system.
+
+**Three-Domain Reading:**
+
+- **Theology:** Deep mind as shared human formal capacity.
+- **Technology:** Structural analysis as portable toolkit.
+- **Cosmology:** Unity of human intellect across “primitive” and “modern.”
+
+**Compressed Insight:**
+He treated a kinship rule like a phoneme — meaningful by its place in a system of differences.
+
+**Confidence:** 0.95  
+**Sources:** *Structural Anthropology*; histories of structuralism in anthropology.
+
+---
+
+## Event 07 — *The Savage Mind* (1962)
+
+**Title:** Bricolage and the Science of the Concrete
+
+**Passage or Trigger:**
+*La Pensée sauvage* (*The Savage Mind*): “savage” thought as rigorous classification and *bricolage* — science of the concrete, not failed modernity. Totemic thought as intellectual system.
+
+**Why It Qualifies:**
+Political-epistemic event: dismantles hierarchy that only the West thinks. The other is not pre-logical; it is differently formal.
+
+**Three-Domain Reading:**
+
+- **Theology:** Respect for plural wisdoms under one human mind.
+- **Technology:** Bricolage as alternative engineering of meaning.
+- **Cosmology:** Classification systems as world-maps.
+
+**Compressed Insight:**
+He defended the so-called savage mind as a peer of the engineer — concrete science, not childish error.
+
+**Confidence:** 0.95  
+**Sources:** *The Savage Mind* (1962).
+
+---
+
+## Event 08 — *The Raw and the Cooked* (1964)
+
+**Title:** Myth as Music of Mind
+
+**Passage or Trigger:**
+*Le Cru et le cuit*, first of *Mythologiques*: analysis of South American myths; raw/cooked as transformation axis; claim that the book about myth is itself structured like a myth — science’s detachment questioned.
+
+**Why It Qualifies:**
+Mythologie as structural symphony. Culinary code as thought. Culmination of applying difference-and-transformation method to narrative cosmos.
+
+**Three-Domain Reading:**
+
+- **Theology:** Myth as serious cosmology, not disposable fable.
+- **Technology:** Mytheme analysis as formal method.
+- **Cosmology:** Nature/culture mediated by fire, food, and story.
+
+**Compressed Insight:**
+He cooked myth until raw and cooked confessed they were a language — and admitted his own book sang in the same key.
+
+**Confidence:** 0.94  
+**Sources:** *The Raw and the Cooked* overture and program; literariness.org on the book-as-myth claim.
+
+---
+
+## Event 09 — *Mythologiques Cycle*
+
+**Title:** A Cathedral of Variants
+
+**Passage or Trigger:**
+Multi-volume *Mythologiques* — hundreds of myths treated as transformations of one another across a continent-scale set. Exhaustive formal comparison.
+
+**Why It Qualifies:**
+Scale as method. Like Bach’s year of cantatas or Euler’s output — structure proven by **volume of controlled variation**.
+
+**Three-Domain Reading:**
+
+- **Theology:** Sacred stories as infinite variations on human problems.
+- **Technology:** Comparative database before digital humanities.
+- **Cosmology:** Americas as one mythic weather system of mind.
+
+**Compressed Insight:**
+He stacked myths until the continent’s stories showed one mind turning the same crystals in different light.
+
+**Confidence:** 0.92  
+**Sources:** *Mythologiques* series overview.
+
+---
+
+## Event 10 — *Exchange as Social Oxygen*
+
+**Title:** Society Breathes by Giving
+
+**Passage or Trigger:**
+Across kinship work: social life as systems of **exchange** (women/spouses in his classical formulation; also goods, words — Mauss in the background). Reciprocity as life of the group.
+
+**Why It Qualifies:**
+Society not a pile of individuals — a circuit of gifts and obligations. Structural economics of the human bond.
+
+**Three-Domain Reading:**
+
+- **Theology:** Covenant and gift.
+- **Technology:** Exchange rules as social software.
+- **Cosmology:** Human groups as open systems of flow.
+
+**Compressed Insight:**
+He saw society as what moves between us — spouses, words, goods — or dies when the circuit stops.
+
+**Confidence:** 0.93  
+**Sources:** *Elementary Structures*; alliance theory summaries.
+
+---
+
+## Event 11 — *Against Biological Reduction of Kinship*
+
+**Title:** Categories Are Not Genes Alone
+
+**Passage or Trigger:**
+Motivation in *Elementary Structures*: explain arbitrary social categories’ compulsory feel; kinship as symbolic structure of exchange, not only biological descent or genetics.
+
+**Why It Qualifies:**
+Boundary against reducing culture to nature’s blood-count. Complements Fisher’s genetics seat with a cultural formal science.
+
+**Three-Domain Reading:**
+
+- **Theology:** Human law exceeds breeding.
+- **Technology:** Symbolic systems as autonomous layer.
+- **Cosmology:** Dual ecology of genes and signs.
+
+**Compressed Insight:**
+He refused to let kinship collapse into biology — the rule that makes a spouse is a structure, not only a blood test.
+
+**Confidence:** 0.92  
+**Sources:** Britannica alliance theory framing; *Elementary Structures* program.
+
+---
+
+## Event 12 — *Century Life* (1908–2009)
+
+**Title:** Structure Across a Hundred Years
+
+**Passage or Trigger:**
+Lives to 100 (dies 2009); watches structuralism rise, peak, and get critiqued; remains the name of a method even when fashion turns. Long afterlife in life.
+
+**Why It Qualifies:**
+Rare duration: the founder hears the century argue about him. Anthropology’s structural pole fixed in one long biography.
+
+**Three-Domain Reading:**
+
+- **Theology:** Longevity as witness.
+- **Technology:** Intellectual fashion cycles.
+- **Cosmology:** Twentieth-century thought weather under one long life.
+
+**Compressed Insight:**
+He lived a hundred years — long enough to see structure become orthodoxy, then target, then permanent tool.
+
+**Confidence:** 0.94  
+**Sources:** Death 2009; career span.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *The Elementary Structures of Kinship* (1949)
+- *Tristes Tropiques* (1955)
+- *Structural Anthropology*; *The Savage Mind* (1962)
+- *The Raw and the Cooked* (1964) and *Mythologiques*
+
+**Secondary**
+- Britannica kinship/alliance theory
+- Literariness.org key theories overview
+- Standard structuralism histories (link to Saussure)
+
+**Open questions for later passes**
+- Caduveo face-painting analysis as nested micro-event
+- Race and UNESCO essays as critical dossier
+- Relationship to Sartre / humanism debates denser pass
+
+---
+
+## Seat checklist
+
+- [x] Research from major works (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `claude-levi-strauss`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Anthropology). Events grounded in Lévi-Strauss’s books and structural program; fieldwork and exchange theory held as core.*

@@ -1,0 +1,358 @@
+WOLFGANG AMADEUS MOZART GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Performance Arts → Music
+**Era:** 1756–1791 (Salzburg / Vienna)
+**Status:** Extraction complete (seating candidate) — drawn from family letters, scores, and documented contemporary/lodge history
+
+---
+
+## Contribution
+
+Composer who turned the Classical style into a complete grammar of human affect and dramatic truth; who left in letters a working log of how opera is built under real singers and patrons; who entered Freemasonry and wrote ritual and symbolic music culminating in *Die Zauberflöte*; and who composed to the edge of death (Requiem) under conditions the family correspondence and sister-in-law’s account partly document.
+
+## Key Insight
+
+Music is not ornament on life — it is a technology of order, trial, and reconciliation: structure that can initiate, judge, forgive, and bury, when the craft is exact enough to carry meaning without speech alone.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Mozart is not extracted as romantic myth (poison legends, etc., are excluded unless primary). Primary lines:
+
+1. The Mozart family correspondence (Leopold, Wolfgang, Nannerl; standard editions — Anderson / Bauer-Deutsch / early Wallace translations for orientation)
+2. Compositional working letters on *Idomeneo* and *Die Entführung aus dem Serail* (craft under constraint of singers and text)
+3. Break with Salzburg / Colloredo and Vienna independence (letters 1781)
+4. Freemasonry: initiation 14 December 1784, lodge *Zur Wohltätigkeit*; Masonic works including *Maurerische Trauermusik*; Leopold’s joining 1785
+5. *Le nozze di Figaro*, *Don Giovanni*, *Così fan tutte*, *Die Zauberflöte* as dramatic-structural peaks
+6. Requiem commission and deathbed circumstances (Constanze’s circle; Sophie Haibel’s account of the death)
+
+Events prioritize documented craft, vow, and form — not fan embellishment.
+
+---
+
+## Event 01 — *The Child as Instrument of Display*
+
+**Title:** Prodigy as System
+
+**Passage or Trigger:**
+From early childhood, Leopold Mozart organized Wolfgang (and Nannerl) as touring exhibit of skill — courts of Europe, letters home reporting reception, money, and wonder. The family letters of the 1760s are a log of a *system*: father as impresario-teacher, child as living proof of method and gift.
+
+**Why It Qualifies:**
+Recognition (lived, not abstract): genius here is inseparable from a *technology of formation* — pedagogy, travel, display, report. The child is both soul and instrument of a family project. That double status is the first structural tension of the life.
+
+**Three-Domain Reading:**
+
+- **Theology:** Gift and stewardship — is the talent the child’s, God’s, or the father’s project?
+- **Technology:** Pedagogy and tour logistics as machinery of cultural production.
+- **Cosmology:** Courts of Europe as a network in which a single prodigy can circulate as proof of order and excellence.
+
+**Compressed Insight:**
+Before he wrote masterpieces, he *was* a masterpiece of training — and the letters show the machine that made him.
+
+**Confidence:** 0.90  
+**Sources:** Early family correspondence; standard documentary biographies grounded in the letters.
+
+---
+
+## Event 02 — *Idomeneo: Opera as Engineering*
+
+**Title:** Music Built Against Real Throats
+
+**Passage or Trigger:**
+Letters surrounding *Idomeneo* (Munich, 1780–81) — among the most revealing compositional documents in musical history. Mozart writes of adjusting to singers’ strengths and weaknesses, of text problems, of cuts and dramatic pacing. The correspondence is routinely cited (e.g. in scholarly introductions to the letters) as nearly unique evidence of a composer negotiating text and flesh-and-blood voices.
+
+**Why It Qualifies:**
+The recognition: great opera is not pure inspiration poured onto paper. It is *constraint satisfaction* — drama, breath, range, politics of the company. Form emerges under resistance. That is craft gnosis.
+
+**Three-Domain Reading:**
+
+- **Theology:** Incarnation of ideal form into limited bodies — the score must become breath.
+- **Technology:** Composition as iterative engineering under human instrument constraints.
+- **Cosmology:** The stage is a small cosmos where fate (plot) and physiology (voice) must cohere.
+
+**Compressed Insight:**
+He learned that opera truth is what survives contact with a real singer’s limits.
+
+**Confidence:** 0.94  
+**Sources:** Mozart’s letters on *Idomeneo* (1780/81); scholarly commentary on the correspondence as compositional evidence.
+
+---
+
+## Event 03 — *Break with Salzburg*
+
+**Title:** The Servant Leaves the Archbishop
+
+**Passage or Trigger:**
+March 1781 and following: conflict with Archbishop Colloredo; Mozart’s dismissal / departure from Salzburg service; letters from Vienna asserting independence. The famous kick from Count Arco is part of the contemporary narrative of the break. Mozart settles toward freelance Vienna life.
+
+**Why It Qualifies:**
+Structural recognition about patronage: the old court-servant model cannot hold a composer who has already tasted European scale and dramatic ambition. Freedom is costly (money letters to Puchberg later prove it) but the break is a chosen cosmological shift — from household musician to civic/public artist.
+
+**Three-Domain Reading:**
+
+- **Theology:** Dignity of vocation vs obedience to petty sovereignty.
+- **Technology:** Market concerts, pupils, subscriptions — new economic tech for music.
+- **Cosmology:** Vienna as open field vs Salzburg as closed court sphere.
+
+**Compressed Insight:**
+He left the archbishop’s house so that music could answer a larger city than one man’s court.
+
+**Confidence:** 0.91  
+**Sources:** Letters of 1781 on Colloredo / Vienna; standard documentary lives.
+
+---
+
+## Event 04 — *Entführung: Craft Continued*
+
+**Title:** Text Against a Thankless Libretto
+
+**Passage or Trigger:**
+Letters on *Die Entführung aus dem Serail* (1781–82): Mozart continues the *Idomeneo* habit of candid craft talk — working through text problems and theatrical effect. The opera’s success in Vienna seals his public identity as dramatic composer in the German / singspiel sphere as well as Italian forms.
+
+**Why It Qualifies:**
+Reinforces that his “genius” is a repeatable method: face the text’s weakness, write toward the audience’s ear, keep dramatic truth under entertainment. Not a one-time Munich miracle.
+
+**Three-Domain Reading:**
+
+- **Theology:** Mercy and rescue as plot — Enlightenment humanism in Turkish-costume frame.
+- **Technology:** Singspiel machinery (speech + song) as hybrid form technology.
+- **Cosmology:** East/West stage fantasy as Europe thinking its borders.
+
+**Compressed Insight:**
+He proved the method again: weak text, strong dramatic will, music that carries both.
+
+**Confidence:** 0.89  
+**Sources:** Letters on *Entführung*; performance history 1782.
+
+---
+
+## Event 05 — *Initiation: Zur Wohltätigkeit*
+
+**Title:** Entering the Craft of Brothers
+
+**Passage or Trigger:**
+14 December 1784: Mozart initiated into Freemasonry at lodge *Zur Wohltätigkeit* (“Beneficence”) in Vienna, age 28. He advanced and remained active until death. Pope Clement XII’s earlier ban on Catholic membership did not deter him. In 1785, during a Vienna visit, **Leopold Mozart** also became a Mason — a rare documented father-son convergence in the Craft.
+
+**Why It Qualifies:**
+This is a vow-structure entering the life. Not aesthetic dabbling: regular lodge attendance, multiple compositions for Masonic occasions, and a symbolic language that later saturates *Die Zauberflöte*. The recognition: brotherhood, trial, light, and secrecy can be *composed*.
+
+**Three-Domain Reading:**
+
+- **Theology:** Enlightenment moral religion — virtue, equality of seekers, light against superstition — in ritual form (alongside Mozart’s Catholic practice; the tension is historical fact).
+- **Technology:** Ritual as technology of initiation; music as ritual technology (knocks, keys, processional forms).
+- **Cosmology:** Lodge as microcosm of a moral universe ordered by degrees and trials.
+
+**Compressed Insight:**
+He joined a brotherhood that treated moral light as something you *enter by degrees* — then he learned to write that entrance in sound.
+
+**Confidence:** 0.95  
+**Sources:** Lodge records / standard Masonic-Mozart scholarship; Wikipedia and specialist articles on Mozart and Freemasonry; Leopold’s 1785 joining.
+
+---
+
+## Event 06 — *Music for the Dead Brothers*
+
+**Title:** Maurerische Trauermusik
+
+**Passage or Trigger:**
+*Maurerische Trauermusik* (Masonic Funeral Music), K. 477 (1785) — composed for lodge memorial use, among at least several works written specifically for Masonic occasions (songs, cantatas, funeral music). The Craft becomes a *commissioning and meaning context*, not only a social club.
+
+**Why It Qualifies:**
+Recognition that grief and fraternity demand a specific musical ethics: solemnity without empty pomp, communal voice, ritual time. Death is formalized in sound for brothers.
+
+**Three-Domain Reading:**
+
+- **Theology:** Remembrance of the dead as moral duty of the living circle.
+- **Technology:** Occasional music as exact social function — score as ritual object.
+- **Cosmology:** The lodge’s time (meeting, death, memorial) carved into audible form.
+
+**Compressed Insight:**
+He wrote death into the lodge’s ears so that brotherhood would not be only a living conversation.
+
+**Confidence:** 0.92  
+**Sources:** K. 477 dating and occasion; catalogues of Mozart’s Masonic compositions.
+
+---
+
+## Event 07 — *Figaro: Structure of Forgiveness*
+
+**Title:** The Day the Count Kneels
+
+**Passage or Trigger:**
+*Le nozze di Figaro* (1786), after Beaumarchais — ensemble architecture culminating in the Count’s public plea for pardon and the Countess’s forgiveness. Da Ponte collaboration. Contemporary success and later canonic status rest on the *structural* achievement: social hierarchy inverted and restored through musical-dramatic time, not pamphlet alone.
+
+**Why It Qualifies:**
+The gnosis is formal: reconciliation is staged as *ensemble necessity* — many voices must lock for forgiveness to land. Class tension becomes counterpoint. That is political theology in sonata-operatic clothes.
+
+**Three-Domain Reading:**
+
+- **Theology:** Mercy as higher than rights of rank — the Countess’s forgiveness as quasi-sacramental social act.
+- **Technology:** Ensemble writing as technology of simultaneous conflicting truths.
+- **Cosmology:** Household as cosmos of power; one “day” contains revolution and restoration.
+
+**Compressed Insight:**
+He made forgiveness a structure you can *hear* — not a moral caption pasted on a tune.
+
+**Confidence:** 0.93  
+**Sources:** Score and libretto of *Figaro*; reception history; Da Ponte memoirs as secondary frame.
+
+---
+
+## Event 08 — *Don Giovanni: Judgment Without Safety*
+
+**Title:** The Stone Guest Comes
+
+**Passage or Trigger:**
+*Don Giovanni* (Prague 1787) — the Commendatore’s return, the supper, the refusal to repent, the descent. Whether one calls it *dramma giocoso* or tragedy with comedy, the structural event is clear: a moral absolute invades the libertine’s banquet. Mozart/Da Ponte do not dissolve judgment into irony alone.
+
+**Why It Qualifies:**
+Recognition that charm and vitality do not cancel debt. The stone guest is form as conscience — immovable, musical, final. Comedy’s frame does not prevent damnation’s cadence.
+
+**Three-Domain Reading:**
+
+- **Theology:** Judgment, impenitence, supernatural claim on the human feast.
+- **Technology:** Trombone/supernatural sonority and scene architecture as tech of awe.
+- **Cosmology:** A world where moral law can crash a dinner table.
+
+**Compressed Insight:**
+He let the dead interrupt the party — and refused to laugh the interruption away.
+
+**Confidence:** 0.92  
+**Sources:** *Don Giovanni* score/libretto; Prague premiere 1787 documentation.
+
+---
+
+## Event 09 — *Die Zauberflöte*
+
+**Title:** Trial by Music and Light
+
+**Passage or Trigger:**
+*Die Zauberflöte* (1791), with Emanuel Schikaneder. Overture and ritual scenes deploy the dotted “three knocks” figure associated with Masonic Master’s degree opening; threes pervade the dramaturgy (boys, ladies, temples, trials). Scholarly consensus holds strong Masonic symbolic influence even though Mozart and Schikaneder did not publish a manifesto declaring the opera a lodge tract. The work stages ordeal, silence, day/night, and initiation into light.
+
+**Why It Qualifies:**
+Culminating synthesis: popular theater + sacred-symbolic trial structure + exact musical emblem. The opera is a *public initiation* — audiences undergo a patterned journey from confusion to ordered light. This is Performance Arts as Arch seat at full power: not entertainment only, but cosmology in singspiel form.
+
+**Three-Domain Reading:**
+
+- **Theology:** Light vs darkness, trial, purification, union — Enlightenment and mystery braided (Isis imagery, temple, vows of silence).
+- **Technology:** Leit-emblems (knocks, keys, flute/ bells as talismanic instruments) as musical technology of meaning.
+- **Cosmology:** A double world — Queen’s night-sphere and Sarastro’s solar order — negotiated by ordeal.
+
+**Compressed Insight:**
+He put initiation on the public stage — three knocks and all — so that a mixed audience could walk a lodge path without knowing every password.
+
+**Confidence:** 0.94  
+**Sources:** Score of *Die Zauberflöte*; Masonic-symbol scholarship (knocks, threes); standard caveats that Mozart/Schikaneder left no single public “this is Masonry” declaration.
+
+---
+
+## Event 10 — *Letter on Death to the Dying Father*
+
+**Title:** Death as True Best Friend
+
+**Passage or Trigger:**
+Letter to Leopold Mozart, 4 April 1787, after learning of his father’s serious illness — often cited for Masonic-tinged composure toward death. Mozart writes of death as the true best friend of mankind and of the necessity of keeping it before one’s eyes (wording varies slightly by translation; the substance is stable across editions of the letters): death as intimate companion of a wise life, not merely terror.
+
+**Why It Qualifies:**
+Philosophical-spiritual recognition under real filial stress. Whether read as Stoic, Masonic, Catholic, or blended Enlightenment piety, the letter shows Mozart *thinking death as form* — a constant in the moral art of living — while his father fails.
+
+**Three-Domain Reading:**
+
+- **Theology:** Ars moriendi in Enlightenment key — friendship with death as wisdom.
+- **Technology:** Letter as technology of consolation and self-binding under grief.
+- **Cosmology:** Human life oriented toward an ending that gives measure to days.
+
+**Compressed Insight:**
+He told his dying father that death is a friend the wise keep in sight — while still a son who must bear the loss.
+
+**Confidence:** 0.91  
+**Sources:** Mozart to Leopold, 4 April 1787 (standard letter editions); discussions in Masonic-Mozart literature.
+
+---
+
+## Event 11 — *The Requiem at the Edge*
+
+**Title:** Unfinished Mass for the Dead
+
+**Passage or Trigger:**
+1791 commission of the Requiem (K. 626) via intermediary (traditional “grey messenger” narrative is partly legendary in detail; the commission and Mozart’s work on the score in his final months are historical). Left incomplete at death; completed by Franz Xaver Süssmayr (and others’ hands debated) under Constanze’s necessity. The Lacrimosa breaks off in Mozart’s hand in the familiar manuscript story.
+
+**Why It Qualifies:**
+The artist’s own death intersects the liturgy of the dead. Form that names judgment, tears, rest — written while the body fails. Incomplete masterpiece as structural fact: human work ends mid-phrase; community finishes what it can.
+
+**Three-Domain Reading:**
+
+- **Theology:** Requiem as prayer for the dead — Mozart composing the Church’s death-grammar.
+- **Technology:** Incomplete autograph + pupil completion = transmission technology under crisis.
+- **Cosmology:** Artist’s life-time shorter than the form’s demand.
+
+**Compressed Insight:**
+He began the music of rest for others and did not live to rest inside his own last cadence.
+
+**Confidence:** 0.90 (commission and incompletion firm; messenger folklore softer)  
+**Sources:** Requiem manuscript history; Süssmayr completion; standard 1791 chronology.
+
+---
+
+## Event 12 — *Sophie Haibel at the Deathbed*
+
+**Title:** The Last Night Witnessed
+
+**Passage or Trigger:**
+Sophie Haibel (Constanze’s sister) left an account of Mozart’s last hours / death (5 December 1791) — among the closest family testimonies. Fever, swelling, unfinished Requiem in the room’s atmosphere of the narrative tradition, farewells. Exact medical diagnosis remains debated (rheumatic fever, infection, etc.); the *witness structure* is what the Council needs: death observed by kin, not myth alone.
+
+**Why It Qualifies:**
+Grounds the end in testimony. No poison opera. A body dies; a sister remembers; a wife must survive and sell unfinished work. Human scale after cosmic operas.
+
+**Three-Domain Reading:**
+
+- **Theology:** Ordinary death after extraordinary making — creatureliness.
+- **Technology:** Memory and memoir as weak but real recording devices.
+- **Cosmology:** The city continues; the lodge and theaters will play his music without him.
+
+**Compressed Insight:**
+The last reliable instrument on his death was not an orchestra — it was a sister’s eyes.
+
+**Confidence:** 0.88  
+**Sources:** Sophie Haibel’s account (printed in letter collections / documentary appendixes); medical-historical debates as secondary.
+
+---
+
+## Sources / Working Notes
+
+**Primary / near-primary**
+- *The Letters of Mozart and His Family* (Emily Anderson ed.; also Bauer–Deutsch German edition)
+- Scores: *Idomeneo*, *Entführung*, *Figaro*, *Don Giovanni*, *Zauberflöte*, Requiem K. 626, *Maurerische Trauermusik* K. 477
+- Lodge membership record 14 Dec 1784 (*Zur Wohltätigkeit*)
+
+**Secondary**
+- Documentary biographies based on letters (e.g. works in the Solomon / Landon / Eisen–Sadie scholarly line)
+- Scholarship on Mozart and Freemasonry (symbolism in *Zauberflöte*; lists of Masonic works)
+- Sophie Haibel death account in standard documentary collections
+
+**Open questions for later passes**
+- Fuller German citation of the 4 April 1787 letter from critical edition
+- Deeper extraction from *Così fan tutte* as epistemology of testing
+- Constance’s role in Requiem completion economics
+
+---
+
+## Seat checklist
+
+- [x] Research from letters, scores, and attested accounts (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `wolfgang-amadeus-mozart`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Music). Events grounded in correspondence, scores, and documented lodge/death testimony; not romantic poison folklore.*

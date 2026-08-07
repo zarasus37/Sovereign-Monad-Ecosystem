@@ -1,0 +1,360 @@
+JOHN VON NEUMANN GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Formal Sciences → Computer Science
+**Era:** 1903–1957 (Budapest / Berlin / Princeton / Los Alamos / Washington)
+**Status:** Extraction complete (seating candidate) — drawn from major papers, the EDVAC draft, game theory, and documented wartime work
+
+---
+
+## Contribution
+
+Mathematician and polymath who proved the **minimax theorem** (1928) and co-founded modern **game theory** (*Theory of Games and Economic Behavior*, 1944, with Morgenstern); who wrote the *First Draft of a Report on the EDVAC* (1945) that crystallized **stored-program computer architecture** (von Neumann / Princeton architecture); who axiomatized parts of quantum mechanics; and who contributed calculations and design insight to the **Manhattan Project** — placing formal mind at the center of computation, conflict, and nuclear force.
+
+## Key Insight
+
+Logic can be embodied: programs and data share memory; conflict can be mathematized as games with optimal strategies; and the same formal power that builds computers also steers weapons — so the architecture of mind-machines is never only technical.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+von Neumann is extracted from **published mathematics, the EDVAC draft, and documented projects**, with credit hygiene on the computer: the *First Draft* synthesizes and formalizes work of the Moore School group (Eckert, Mauchly, et al.) and circulated largely under his name — the architecture’s fame is “von Neumann” while the labor was plural. Primary lines:
+
+1. Minimax theorem / parlor games paper (1928)
+2. *Mathematical Foundations of Quantum Mechanics* (1932 German; English later)
+3. IAS / Princeton years; Operator algebras, rings of operators
+4. *Theory of Games and Economic Behavior* (1944, with Oskar Morgenstern)
+5. Manhattan Project / Los Alamos consulting; implosion calculations
+6. ENIAC discussions; *First Draft of a Report on the EDVAC* (1945)
+7. IAS computer project; cellular automata / self-reproduction ideas
+8. H-bomb / weapons advising; AEC; death 1957
+
+---
+
+## Event 01 — *Minimax (1928)*
+
+**Title:** The Best of the Worst in a Zero-Sum World
+
+**Passage or Trigger:**
+1928 paper on the theory of parlor games: proof of the **minimax theorem** for two-person zero-sum games — under mixed strategies, there exist optimal strategies such that each player can guarantee a value against best opposition. Foundation stone of **game theory** as mathematics.
+
+**Why It Qualifies:**
+Conflict becomes *calculable equilibrium*, not only narrative cunning. Rationality under opposition gets a theorem. The board and the battlefield share a formal skeleton.
+
+**Three-Domain Reading:**
+
+- **Theology:** Limits of unilateral will — the other’s strategy is real.
+- **Technology:** Optimization under adversarial constraint.
+- **Cosmology:** Social conflict as structured game-space.
+
+**Compressed Insight:**
+He proved that in a pure contest of gain and loss, there is a value you can force — if you accept chance as strategy.
+
+**Confidence:** 0.96  
+**Sources:** 1928 minimax paper; Stanford/game-theory historical summaries.
+
+---
+
+## Event 02 — *Theory of Games and Economic Behavior*
+
+**Title:** Economy as Game
+
+**Passage or Trigger:**
+1944 book with **Oskar Morgenstern**: *Theory of Games and Economic Behavior* — extends game-theoretic tools toward economics, coalitions, utility — launching a field that remakes social science modeling.
+
+**Why It Qualifies:**
+Markets and bargains enter the same formal universe as parlor games. Strategy becomes a language for prices, threats, and coalitions.
+
+**Three-Domain Reading:**
+
+- **Theology:** Human choice under interdependence — no isolated Adam.
+- **Technology:** Modeling toolkit for economics and political science.
+- **Cosmology:** Society as multi-player game with rules and payoffs.
+
+**Compressed Insight:**
+He and Morgenstern taught economists to see trade as a game — and strategy never left the curriculum.
+
+**Confidence:** 0.95  
+**Sources:** von Neumann & Morgenstern 1944; field histories.
+
+---
+
+## Event 03 — *Quantum Foundations*
+
+**Title:** Hilbert Space as Physics’ Grammar
+
+**Passage or Trigger:**
+*Mathematische Grundlagen der Quantenmechanik* (1932): rigorous operator / Hilbert-space formulation of quantum mechanics; measurement and foundations treated with mathematical severity. Shapes how physicists speak quantum theory formally.
+
+**Why It Qualifies:**
+Physics receives a **logical architecture**. Uncertainty and measurement are not only lab poetry — they sit inside operator algebras.
+
+**Three-Domain Reading:**
+
+- **Theology:** Limits of classical knowing at nature’s root.
+- **Technology:** Mathematical OS for quantum theory.
+- **Cosmology:** Microworld as non-classical state space.
+
+**Compressed Insight:**
+He put quantum theory into Hilbert’s house — so mystery would still have axioms.
+
+**Confidence:** 0.94  
+**Sources:** 1932 *Grundlagen*; histories of quantum formalism.
+
+---
+
+## Event 04 — *Princeton / IAS*
+
+**Title:** The Permanent Seminar of Formal Power
+
+**Passage or Trigger:**
+Institute for Advanced Study and Princeton years — operator theory, continuous geometry, consulting across fields; node in the mid-century American mathematical brain. Friendship and intellectual traffic with Einstein’s generation at IAS (distinct from Gödel’s intimacy, but same campus cosmos).
+
+**Why It Qualifies:**
+Institutional form: pure mathematics adjacent to war and machine. The academy as switchboard.
+
+**Three-Domain Reading:**
+
+- **Theology:** Vocation of mind in a century of weapons.
+- **Technology:** Research institute as concentration of talent.
+- **Cosmology:** Transatlantic science after Europe’s fracture.
+
+**Compressed Insight:**
+He made Princeton a workshop where pure form and applied crisis shared a corridor.
+
+**Confidence:** 0.90  
+**Sources:** Career timeline; IAS histories.
+
+---
+
+## Event 05 — *Manhattan Project*
+
+**Title:** Calculation for Implosion
+
+**Passage or Trigger:**
+Los Alamos consulting: heavy computational demand for weapons design; von Neumann’s contributions to **implosion** lens calculations and mathematical modeling for the atomic bomb program. Formal mind inside the bomb’s birth.
+
+**Why It Qualifies:**
+Same intelligence that builds game theory and computers **enables apocalyptic force**. Council extraction holds the dual use without celebration: the Arch seat is Computer Science, but the biography includes fire.
+
+**Three-Domain Reading:**
+
+- **Theology:** Knowledge of good and evil as engineering fact — power to end cities.
+- **Technology:** Scientific computation as war-critical infrastructure.
+- **Cosmology:** Human species gains a new extinction pathway.
+
+**Compressed Insight:**
+He helped the equations that compressed plutonium into a sun — and the century never unlearned the light.
+
+**Confidence:** 0.93  
+**Sources:** Manhattan Project histories; documented Los Alamos role in implosion math.
+
+---
+
+## Event 06 — *ENIAC and the Turn to Machines*
+
+**Title:** The Bomb Demands a Brain of Tubes
+
+**Passage or Trigger:**
+Wartime and immediate postwar: involvement with **ENIAC** milieu at Moore School; recognition that electronic computation must replace slower methods for the equations war and science now pose. Path into EDVAC discussions with Eckert and Mauchly.
+
+**Why It Qualifies:**
+Practical gnosis: theory’s bottleneck is *calculation throughput*. The mind invents a mind of hardware.
+
+**Three-Domain Reading:**
+
+- **Theology:** Human thought externalized into artifact.
+- **Technology:** Electronic digital computing as civilizational leap.
+- **Cosmology:** Speed of thought becomes a geopolitical variable.
+
+**Compressed Insight:**
+He saw that the equations of the age outran human clerks — so the age needed a new kind of clerk made of pulses.
+
+**Confidence:** 0.92  
+**Sources:** ENIAC/EDVAC historical narratives; von Neumann’s entry via computation needs.
+
+---
+
+## Event 07 — *First Draft of a Report on the EDVAC (1945)*
+
+**Title:** Stored Program, Shared Memory
+
+**Passage or Trigger:**
+*First Draft of a Report on the EDVAC* (1945): logical design description of a stored-program electronic computer — **program and data in the same addressable memory**. Circulated widely (often with von Neumann as sole named author though based on group work including **Eckert and Mauchly**). Becomes template known as **von Neumann architecture** (also Princeton architecture). Inspired machines such as EDSAC and the broad family of subsequent computers.
+
+**Why It Qualifies:**
+Central Computer Science event for this Arch seat. The computer becomes a **universal formal device** whose behavior is rewritten by contents of memory, not by rewiring alone. Credit is historically shared; the *report’s form* still names the paradigm.
+
+**Three-Domain Reading:**
+
+- **Theology:** Word and world in one store — instructions as just another kind of data (humility and danger of self-modifying systems).
+- **Technology:** The dominant blueprint of digital computers for decades.
+- **Cosmology:** A new species of artifact that can simulate many worlds of process.
+
+**Compressed Insight:**
+He wrote (with a team behind the curtain) that the machine should hold its orders beside its numbers — and nearly every computer since has obeyed.
+
+**Confidence:** 0.96  
+**Sources:** *First Draft… EDVAC* (1945); Wikipedia von Neumann architecture; IEEE Annals reprint tradition; credit caveats for Eckert/Mauchly.
+
+---
+
+## Event 08 — *IAS Machine*
+
+**Title:** Building the Blueprint
+
+**Passage or Trigger:**
+Institute for Advanced Study computer project under von Neumann’s leadership — physical realization and further design influence spreading the stored-program paradigm into research practice.
+
+**Why It Qualifies:**
+From draft to machine. Theory insists on becoming metal and mercury delay lines (or successor memories).
+
+**Three-Domain Reading:**
+
+- **Theology:** Incarnation of logic.
+- **Technology:** Research computer as prototype factory for a world industry.
+- **Cosmology:** Academia as birth canal of the digital age.
+
+**Compressed Insight:**
+He did not only describe the architecture — he midwifed machines that proved the draft was a world.
+
+**Confidence:** 0.91  
+**Sources:** IAS computer project histories.
+
+---
+
+## Event 09 — *Self-Reproduction and Automata*
+
+**Title:** Life as Construction Rule
+
+**Passage or Trigger:**
+Work on **cellular automata** and theoretical **self-reproducing automata** — logic of machines that construct copies of themselves; influence on later artificial life and complexity science (published/edited strands posthumously in part).
+
+**Why It Qualifies:**
+Biology approached as engineering of information and construction. Life’s replication cast as a formal possibility proof for machines.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creaturely life’s copy-mystery entered as design problem.
+- **Technology:** Automata theory lineage.
+- **Cosmology:** Organisms and machines under one constructive logic.
+
+**Compressed Insight:**
+He asked whether a machine could beget a machine — and made the question mathematical.
+
+**Confidence:** 0.88  
+**Sources:** von Neumann’s automata work; later ALife histories.
+
+---
+
+## Event 10 — *Cold War Advisor*
+
+**Title:** Strategy After the Sun
+
+**Passage or Trigger:**
+Postwar: weapons advising, hydrogen bomb debates, Atomic Energy Commission, strategic consulting — game theory and computation braided into deterrence culture. The formalist becomes a state intellect of the nuclear age.
+
+**Why It Qualifies:**
+Continuation of Event 05 at civilizational scale. Optimal strategies for nations holding extinction tools. The Council marks the ethical weather without simplifying to cartoon villain or savior.
+
+**Three-Domain Reading:**
+
+- **Theology:** Judgment day as policy variable.
+- **Technology:** Strategy and simulation as governance tech.
+- **Cosmology:** Bipolar world as grim game matrix.
+
+**Compressed Insight:**
+He carried minimax into a world where the payoff matrix included cities.
+
+**Confidence:** 0.90  
+**Sources:** Biographical record of AEC / weapons advising; Cold War science histories.
+
+---
+
+## Event 11 — *Speed of Mind*
+
+**Title:** The Legend of Instant Formalization
+
+**Passage or Trigger:**
+Contemporaries’ accounts of extraordinary mental calculation and rapid formalization (anecdotal layer) — less important than the *structural* fact of polymath range: quantum, games, computers, bombs, economics. The legend points to a real integration of fields.
+
+**Why It Qualifies:**
+Symbol of mid-century faith that one formal intelligence could span pure and applied apocalypse. The myth is reception; the range is documentable.
+
+**Three-Domain Reading:**
+
+- **Theology:** Talent as burden of many altars.
+- **Technology:** Cross-domain transfer as innovation method.
+- **Cosmology:** Knowledge map compressed into one biography.
+
+**Compressed Insight:**
+He lived as if mathematics were one country — and war, market, and machine were its provinces.
+
+**Confidence:** 0.84 (anecdote soft; polymath range hard)  
+**Sources:** Biographical anecdotes; CV of fields.
+
+---
+
+## Event 12 — *Death (1957)*
+
+**Title:** Cancer Closes the Circuit
+
+**Passage or Trigger:**
+Dies 8 February 1957 (cancer). Leaves unfinished projects and a world already running on stored-program machines and nuclear strategies he helped shape.
+
+**Why It Qualifies:**
+Finite end after architectures that outlive him daily. Every phone and laptop as involuntary memorial; every nuclear protocol as darker memorial.
+
+**Three-Domain Reading:**
+
+- **Theology:** Mortality amid godlike tools.
+- **Technology:** Legacy as installed base.
+- **Cosmology:** Century remade by a few formal minds — then they die.
+
+**Compressed Insight:**
+The man ended; the architecture did not — we still live inside his draft and his games.
+
+**Confidence:** 0.93  
+**Sources:** Death date; legacy of von Neumann architecture and game theory.
+
+---
+
+## Sources / Working Notes
+
+**Primary / near-primary**
+- 1928 minimax / parlor games work
+- *Mathematische Grundlagen der Quantenmechanik* (1932)
+- von Neumann & Morgenstern, *Theory of Games and Economic Behavior* (1944)
+- *First Draft of a Report on the EDVAC* (1945)
+- Automata / self-reproduction materials
+
+**Secondary**
+- Wikipedia von Neumann architecture (credit to Eckert/Mauchly noted)
+- MacTutor / Stanford game-theory project pages
+- Manhattan Project and computing histories
+
+**Open questions for later passes**
+- Operator algebras / rings of operators deeper extraction
+- Monte Carlo method associations
+- Detailed H-bomb advisory timeline ethics dossier
+
+---
+
+## Seat checklist
+
+- [x] Research from papers, EDVAC draft, game theory, wartime role (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (plural credit on EDVAC noted)
+- [ ] member_id: `john-von-neumann`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Computer Science). Events grounded in von Neumann’s mathematics, the EDVAC draft, and documented wartime/computing history; architecture fame held with Eckert–Mauchly credit hygiene.*

@@ -1,0 +1,357 @@
+GIORGIO VASARI GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Humanities → Art History
+**Era:** 1511–1574 (Arezzo / Florence / Rome)
+**Status:** Extraction complete (seating candidate) — drawn from *Le Vite* (1550, 1568) and documented Medici career
+
+---
+
+## Contribution
+
+Painter, architect, and writer who authored *The Lives of the Most Excellent Painters, Sculptors, and Architects* (1550; enlarged 1568) — widely received as the first great book of art history; who narrated art’s rebirth from Cimabue through the perfection of Michelangelo; who organized technique prefaces and artist biographies into a progressive cosmos of *disegno*; and who built (Uffizi, etc.) while writing the canon that still trains how the West remembers Renaissance makers.
+
+## Key Insight
+
+Art has a history: not only works, but lives, techniques, and a path from “rude” beginnings to classical recovery and modern perfection — and that path can be written so that posterity judges with a story in hand.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Vasari is extracted from **the *Vite* and career**, with open eyes: he is Tuscan-biased, anecdote-prone, sometimes wrong on facts — and still foundational. Primary lines:
+
+1. *Le Vite* first edition (Torrentino, Florence, 1550)
+2. Second edition (Giunti, 1568) — expanded, portraits, revised Michelangelo
+3. Prefaces on materials and techniques of architecture, sculpture, painting
+4. Three-age scheme of art’s rebirth and perfection
+5. Life of Michelangelo as culmination (and Condivi rivalry)
+6. Medici service; Uffizi / architectural works
+7. Death 1574
+
+---
+
+## Event 01 — *The Lives as Genre Invention*
+
+**Title:** Artists Become a Literature
+
+**Passage or Trigger:**
+1550: *Le vite de’ più eccellenti pittori, scultori, e architettori* — series of artist biographies from Cimabue forward, with prefaces. Described in later scholarship as first important book of art history; most influential single text for Renaissance art’s story.
+
+**Why It Qualifies:**
+Arch Art History seat’s founding act: makers of images get a **collective written life**. Art leaves pure workshop silence and enters history as narrative discipline.
+
+**Three-Domain Reading:**
+
+- **Theology:** Fame as secular immortality of makers.
+- **Technology:** Biography series as knowledge architecture.
+- **Cosmology:** Art as progressive time, not eternal present of objects only.
+
+**Compressed Insight:**
+He gave painters and sculptors a book of lives — so the hand’s work would keep a human face in memory.
+
+**Confidence:** 0.97  
+**Sources:** *Vite* 1550; Wikipedia / standard art-historiography.
+
+---
+
+## Event 02 — *Technique Prefaces*
+
+**Title:** How Art Is Made, Written Down
+
+**Passage or Trigger:**
+Prefatory sections on materials and techniques of architecture, sculpture, and painting — background so readers understand the crafts before the lives.
+
+**Why It Qualifies:**
+Art history as **techne-literacy**. Not only genius stories — media, tools, procedures. The Council’s Technology axis inside Art History.
+
+**Three-Domain Reading:**
+
+- **Theology:** Respect for material creation.
+- **Technology:** Technical writing as part of aesthetic knowledge.
+- **Cosmology:** Art nested in physical processes (lime, marble, pigment).
+
+**Compressed Insight:**
+He refused to tell only who was great — he told how plaster and stone take form.
+
+**Confidence:** 0.94  
+**Sources:** Prefaces to the *Vite*; Oxford edition structure.
+
+---
+
+## Event 03 — *Three Ages of Rebirth*
+
+**Title:** From Rude to Perfect
+
+**Passage or Trigger:**
+Vasari’s historical scheme: art’s recovery after “dark” ages — first steps (Cimabue, Giotto…), improvement, perfection culminating in the moderns, especially Michelangelo. Progressive teleology of *disegno*.
+
+**Why It Qualifies:**
+Cosmology of art-time: history has direction toward excellence. Dangerous bias (Tuscan, teleological) — and massively formative for how Europe told the Renaissance story.
+
+**Three-Domain Reading:**
+
+- **Theology:** Fall and rebirth narrative applied to art.
+- **Technology:** Periodization as cognitive tool.
+- **Cosmology:** Culture as climbing arc toward a peak.
+
+**Compressed Insight:**
+He drew a ladder from Cimabue to Michelangelo — and made centuries walk it in the reader’s mind.
+
+**Confidence:** 0.95  
+**Sources:** Prefaces to the three parts of the *Vite*; Arezzo/Vasari reception summaries.
+
+---
+
+## Event 04 — *Cimabue and Giotto*
+
+**Title:** The First Step Out of Stiffness
+
+**Passage or Trigger:**
+Opening lives: Cimabue begins to leave Byzantine stiffness; Giotto brings nature and life — Vasari’s origin myth of Italian painting’s rebirth.
+
+**Why It Qualifies:**
+Founding pair of the story. Whether simplified, the recognition is that style **changes in time** through named agents.
+
+**Three-Domain Reading:**
+
+- **Theology:** Nature as teacher recovering divine creation’s look.
+- **Technology:** Naturalism as technical-moral advance.
+- **Cosmology:** Art history has a Genesis couple.
+
+**Compressed Insight:**
+He started the rebirth with two names — so the long road to perfection would have a first mile.
+
+**Confidence:** 0.92  
+**Sources:** Lives of Cimabue and Giotto in the *Vite*.
+
+---
+
+## Event 05 — *Michelangelo as Living Summit* (1550)
+
+**Title:** Perfection Still Breathing
+
+**Passage or Trigger:**
+1550 *Vite*: Michelangelo is the only living artist given full crowning treatment as culmination surpassing all before — explicit peak of the arc.
+
+**Why It Qualifies:**
+Canon-making while the subject lives. Art history as **present tense judgment**. Power and risk of the critic who crowns a contemporary god.
+
+**Three-Domain Reading:**
+
+- **Theology:** Near-sanctification of the artist.
+- **Technology:** Biography as fame engine.
+- **Cosmology:** Present age as possible perfection, not only past golden age.
+
+**Compressed Insight:**
+He wrote the end of art’s story while Michelangelo still held a chisel — perfection with a pulse.
+
+**Confidence:** 0.96  
+**Sources:** 1550 Michelangelo life; Britannica on living biography.
+
+---
+
+## Event 06 — *Condivi and the 1568 Rebuttal*
+
+**Title:** The Summit Talks Back
+
+**Passage or Trigger:**
+Michelangelo, not wholly pleased, sponsors **Ascanio Condivi**’s *Life* (1553); Vasari’s 1568 edition revises and rebuts. Contest over who owns the master’s image.
+
+**Why It Qualifies:**
+Art history as argument. Sources multiply; the “truth” of a life is fought over. Council already holds this in Michelangelo’s extraction — Vasari’s side is the institutional narrator under pressure.
+
+**Three-Domain Reading:**
+
+- **Theology:** Humility vs glory in representation of a near-saint of art.
+- **Technology:** Rival biographies as correction mechanism.
+- **Cosmology:** Fame as contested field.
+
+**Compressed Insight:**
+He learned the summit could edit him — and answered with a second, thicker book.
+
+**Confidence:** 0.94  
+**Sources:** Condivi 1553; Vasari 1568; Michelangelo extraction cross-reference.
+
+---
+
+## Event 07 — *Giuntina Edition* (1568)
+
+**Title:** The Definitive Machine
+
+**Passage or Trigger:**
+1568 Giunti edition: revised, enlarged, three books, artist portraits — becomes the standard *Vite* of reception, praised by contemporaries, endlessly reprinted and translated.
+
+**Why It Qualifies:**
+Version control of a canon. The second edition is the OS most later centuries boot from.
+
+**Three-Domain Reading:**
+
+- **Theology:** Memorial completeness as duty.
+- **Technology:** Print, portrait, expansion as media strategy.
+- **Cosmology:** Renaissance self-image stabilized in one expandable book.
+
+**Compressed Insight:**
+He rebuilt the *Lives* until the book itself became infrastructure — the default memory of the arts.
+
+**Confidence:** 0.95  
+**Sources:** 1568 Giuntina; Oxford intro; Arezzo cultural pages.
+
+---
+
+## Event 08 — *Anecdote as Method*
+
+**Title:** The Entertaining Fact
+
+**Passage or Trigger:**
+Vasari’s lives mix attributions, technical notes, and **private anecdotes** — entertaining, sometimes false, always sticky. Popular ideas of artists often run on Vasari’s stories even when scholars wince.
+
+**Why It Qualifies:**
+Double-edged gnosis: narrative glue that preserves interest **and** transmits error. Art history’s original sin and original power.
+
+**Three-Domain Reading:**
+
+- **Theology:** Gossip vs hagiography — moral risk of the charming lie.
+- **Technology:** Anecdote as mnemonic tech.
+- **Cosmology:** Artists as characters in a human comedy of making.
+
+**Compressed Insight:**
+He made artists memorable with stories — and forced every later historian to fact-check the charm.
+
+**Confidence:** 0.93  
+**Sources:** Critical consensus on Vasari’s anecdotal method; scholarly cautions.
+
+---
+
+## Event 09 — *Disegno*
+
+**Title:** Design as the Father of the Arts
+
+**Passage or Trigger:**
+Vasari’s elevation of *disegno* (drawing/design) as unifying principle of painting, sculpture, architecture — intellectual form before color and mass. Florentine theoretical flag.
+
+**Why It Qualifies:**
+Metaphysics of art: one generative faculty behind three arts. Hierarchy and unity in one word.
+
+**Three-Domain Reading:**
+
+- **Theology:** Idea preceding matter — art as almost creation.
+- **Technology:** Drawing as master skill.
+- **Cosmology:** Arts as one family under design.
+
+**Compressed Insight:**
+He crowned *disegno* king — so three arts would answer to one mind’s line.
+
+**Confidence:** 0.92  
+**Sources:** Theoretical passages in the *Vite* prefaces; Renaissance art theory.
+
+---
+
+## Event 10 — *Medici Service and Building*
+
+**Title:** Writer Who Also Builds
+
+**Passage or Trigger:**
+Vasari as Medici court artist and architect — including work associated with the **Uffizi** and other Florentine projects; practical *disegno* in stone and administration while writing lives.
+
+**Why It Qualifies:**
+Not armchair critic only. The historian of art shapes the city that houses art. Practice and narrative in one career.
+
+**Three-Domain Reading:**
+
+- **Theology:** Patronage as condition of cultural order.
+- **Technology:** Architecture and bureaucracy of culture.
+- **Cosmology:** Florence as self-curating capital of the story he tells.
+
+**Compressed Insight:**
+He wrote the Renaissance and helped build rooms to keep its works — memory with walls.
+
+**Confidence:** 0.90  
+**Sources:** Architectural career summaries; Medici service.
+
+---
+
+## Event 11 — *Tuscan Center of Gravity*
+
+**Title:** The Map Tilts Toward Florence
+
+**Passage or Trigger:**
+The *Vite*’s geographic and qualitative bias: Tuscany as heart of the rebirth; Venetian and other schools sometimes secondary. Canon politics.
+
+**Why It Qualifies:**
+Honesty event for Art History: every founding narrative has a capital. Vasari’s Florence-centrism is a feature to name, not only a bug to mock.
+
+**Three-Domain Reading:**
+
+- **Theology:** Chosen-people temptation in culture.
+- **Technology:** Canon as power tool.
+- **Cosmology:** Plural Italies under one storyteller’s weather.
+
+**Compressed Insight:**
+He made Florence the sun of art’s solar system — and later centuries had to rediscover the other planets.
+
+**Confidence:** 0.91  
+**Sources:** Historiographic critique of Vasari’s bias.
+
+---
+
+## Event 12 — *Death and the Permanent Textbook* (1574)
+
+**Title:** The Book Outlives the Brush
+
+**Passage or Trigger:**
+Dies 1574; the *Vite* remain “the most-read work of the older literature of art” in many scholarly judgments — still the gateway drug to Renaissance artists for general readers.
+
+**Why It Qualifies:**
+Afterlife: Art History’s first bestseller becomes permanent infrastructure. The Arch seat is this long shadow.
+
+**Three-Domain Reading:**
+
+- **Theology:** Memorial success as secular salvation of names.
+- **Technology:** Print canon as durable medium.
+- **Cosmology:** Modern art history still orbits a 16th-century Arezzo mind.
+
+**Compressed Insight:**
+He died; the *Lives* did not — every museum still half-speaks Vasari whether it admits it or not.
+
+**Confidence:** 0.94  
+**Sources:** Death 1574; reception claims in Wikipedia and art-historiography.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- Vasari, *Le Vite* (1550 Torrentino; 1568 Giuntina)
+- Prefaces on technique and periodization
+- Life of Michelangelo (both editions)
+
+**Secondary**
+- Wikipedia *Lives of the Artists*
+- Oxford World’s Classics introductions
+- Scholarship on Vasari vs Condivi; Tuscan bias
+
+**Open questions for later passes**
+- Vasari’s own paintings as parallel dossier
+- Network of informants and errors catalog
+- Influence on later academies’ curricula
+
+---
+
+## Seat checklist
+
+- [x] Research from the *Vite* and career (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (bias and anecdote marked)
+- [ ] member_id: `giorgio-vasari`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Art History). Events grounded in the *Vite* and documented Medici career; anecdote and Tuscan tilt held with open eyes.*

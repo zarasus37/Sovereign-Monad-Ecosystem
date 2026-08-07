@@ -1,0 +1,360 @@
+ALAN TURING GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Formal Sciences → Computer Science / Logic (with Mathematical Biology)
+**Era:** 1912–1954 (London / Sherborne / King’s Cambridge / Princeton / Bletchley / NPL / Manchester)
+**Status:** Extraction complete (seating candidate) — drawn from computability paper, wartime cryptanalysis, machine design, AI test, morphogenesis, and state persecution
+
+---
+
+## Contribution
+
+Mathematician and logician who, in “On Computable Numbers, with an Application to the *Entscheidungsproblem*” (1936), defined the **universal Turing machine** and proved that no general decision procedure exists for arithmetic/logic in Hilbert’s sense — founding **computability theory** and the abstract model of the digital computer; who at **Bletchley Park** led cryptanalytic work against Enigma (Ultra); who specified the **ACE** stored-program computer and posed the **imitation game** (Turing test); who opened **reaction–diffusion** morphogenesis (1952); and who was prosecuted for homosexual acts (1952), died by cyanide (1954), and was posthumously pardoned (2014).
+
+## Key Insight
+
+Computation is a precise mathematical object: what can be effectively calculated is what a universal machine can do by reading, writing, and moving on a tape — and some well-posed questions about mathematics itself have no mechanical answer; so mind, code, and living pattern all become subjects of formal and machine science.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Turing is extracted from **papers, wartime record, and machine designs**, with credit hygiene: **Alonzo Church** independently reached undecidability via λ-calculus (Church–Turing thesis as later synthesis); **Gödel** incompleteness (already on Council) is the prior shock to Hilbert’s program that Turing’s machine proof joins; Bletchley is collective (Welchman, Newman, Hut colleagues, Polish cryptologic inheritance). Primary lines:
+
+1. King’s College; 1936 computable numbers paper
+2. Princeton PhD under Church (1938)
+3. Bletchley Park / Enigma / bombe
+4. ACE design (NPL); Manchester computing
+5. “Computing Machinery and Intelligence” (1950) — Turing test
+6. “The Chemical Basis of Morphogenesis” (1952)
+7. 1952 prosecution; death 7 June 1954; 2014 pardon
+
+---
+
+## Event 01 — *King’s College Formation*
+
+**Title:** Probability, Fellowship, and the Decision Problem
+
+**Passage or Trigger:**
+Cambridge mathematics from 1931; elected Fellow of King’s College (1935) on probability research; under Max Newman’s guidance works Hilbert’s *Entscheidungsproblem* — is there an effective method to decide provability in a formal system?
+
+**Why It Qualifies:**
+The seat’s origin is pure math under Hilbert’s dream. The machine will be invented to answer a logic question, not to sell a product.
+
+**Three-Domain Reading:**
+
+- **Theology:** Quest for complete mechanical certainty about truth.
+- **Technology:** Paper methods before electronics.
+- **Cosmology:** Mathematics as a world that might or might not be fully decidable.
+
+**Compressed Insight:**
+He asked whether proof could be a machine’s job — and built the machine in order to say no.
+
+**Confidence:** 0.94  
+**Sources:** Britannica early career; King’s College Cambridge exhibition; Advanced Science News pioneer profile.
+
+---
+
+## Event 02 — *On Computable Numbers* (1936)
+
+**Title:** The Universal Machine on a Tape
+
+**Passage or Trigger:**
+1936 paper: defines computable numbers via an abstract machine (read/write head, infinite tape, finite table of states); introduces the **universal computing machine** that can simulate any other; applies the construction to show the *Entscheidungsproblem* has no general solution. Recommended for publication with Church’s related result in view.
+
+**Why It Qualifies:**
+Founding event of computer science as theory. Every stored-program computer is a physical cousin of this abstraction. Complements Gödel: incompleteness of formal systems meets uncomputability of decision.
+
+**Three-Domain Reading:**
+
+- **Theology:** Limits on what finite creatures can decide by rule alone.
+- **Technology:** Blueprint of general-purpose computation before the hardware exists.
+- **Cosmology:** Effective procedure as a law of the possible.
+
+**Compressed Insight:**
+He turned “what can be calculated” into a machine — then proved some questions never halt into yes or no.
+
+**Confidence:** 0.97  
+**Sources:** Britannica on 1936 paper and Turing machine; King’s College; Advanced Science News; Wikipedia known-for.
+
+---
+
+## Event 03 — *Church and the Thesis*
+
+**Title:** Two Proofs, One Frontier
+
+**Passage or Trigger:**
+Church publishes related undecidability via λ-calculus; Turing goes to Princeton for PhD under Church (completed 1938). Later “Church–Turing thesis”: the intuitive notion of effective calculability coincides with Turing-computability (and equivalent formalisms).
+
+**Why It Qualifies:**
+Credit hygiene. Undecidability is not sole property. Turing’s distinctive gift is the **machine model** that engineers can almost touch.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truth approached by plural formal paths.
+- **Technology:** Equivalence of models as engineering confidence.
+- **Cosmology:** One limit on mechanism, many notations.
+
+**Compressed Insight:**
+Church wrote functions; he wrote a machine — same mountain, two maps, one summit of limit.
+
+**Confidence:** 0.95  
+**Sources:** Britannica Church parallel and Princeton; standard Church–Turing accounts.
+
+---
+
+## Event 04 — *Bletchley Park*
+
+**Title:** Ultra as Civilizational Computation
+
+**Passage or Trigger:**
+WWII: Government Code and Cypher School at Bletchley Park. Turing central to cryptanalysis of German **Enigma** (and related work); **bombe** electromechanical aid to key search; Ultra intelligence. Work secret for decades; lives shortened war in historical estimates debated but strategic impact widely affirmed.
+
+**Why It Qualifies:**
+Technology under existential war. Abstract computability becomes concrete against a cipher machine. Collective labor — Polish bomb inheritance, Hut teams, Welchman improvements — must be named beside the icon.
+
+**Three-Domain Reading:**
+
+- **Theology:** Knowledge used to end slaughter; secrecy as moral weight.
+- **Technology:** Cryptanalysis as applied state machines and statistics.
+- **Cosmology:** Information as a domain of war equal to steel.
+
+**Compressed Insight:**
+He turned logic into a weapon against the cipher — and helped a free world keep reading the enemy’s night.
+
+**Confidence:** 0.94  
+**Sources:** Wikipedia Bletchley/Ultra; Historic England; Britannica wartime career; standard Bletchley histories.
+
+---
+
+## Event 05 — *The Bombe*
+
+**Title:** Machines Against Machines
+
+**Passage or Trigger:**
+Design and deployment of **bombes** — electromechanical devices searching Enigma settings under crib and logical constraints. Human insight plus industrial-scale automated trial; multiplication of units across the war.
+
+**Why It Qualifies:**
+Bridge from Turing machine ideal to wartime hardware. Pattern: human problem reduced to mechanical search under theory.
+
+**Three-Domain Reading:**
+
+- **Theology:** Cunning of reason under necessity.
+- **Technology:** Special-purpose computers before general ones.
+- **Cosmology:** Cipher space as searchable landscape.
+
+**Compressed Insight:**
+He built engines that walked the space of keys — so that thought could outrun the rotor.
+
+**Confidence:** 0.93  
+**Sources:** Standard Enigma/bombe technical histories; Britannica cryptanalysis context.
+
+---
+
+## Event 06 — *ACE* (NPL, 1945–)
+
+**Title:** The Stored Program Fully Specified
+
+**Passage or Trigger:**
+Postwar National Physical Laboratory: Turing’s design for the **Automatic Computing Engine (ACE)** — early complete specification of an electronic stored-program all-purpose digital computer; ambitious memory and speed. Colleagues judge full ACE too hard; **Pilot Model ACE** (1950) built smaller. Later Manchester Ferranti Mark I work.
+
+**Why It Qualifies:**
+From abstract universal machine to engineering brief. Von Neumann architecture era is a multi-site race; ACE is Turing’s British line (credit also Eckert/Mauchly/von Neumann network already noted on Council for EDVAC lineage).
+
+**Three-Domain Reading:**
+
+- **Theology:** Vision larger than the institution will fund.
+- **Technology:** Stored program as practical universal machine.
+- **Cosmology:** Computation as national infrastructure of mind.
+
+**Compressed Insight:**
+He specified a full electronic brain — and watched a pilot fly where the full ship was refused.
+
+**Confidence:** 0.94  
+**Sources:** Britannica ACE; King’s College NPL; Advanced Science News ACE note.
+
+---
+
+## Event 07 — *Computing Machinery and Intelligence* (1950)
+
+**Title:** The Imitation Game
+
+**Passage or Trigger:**
+1950 *Mind* paper: replaces “Can machines think?” with the **imitation game** (Turing test) — can a machine’s text answers be indistinguishable from a human’s in controlled interrogation? Discusses learning machines, objections, and future of AI.
+
+**Why It Qualifies:**
+Founding AI philosophy event. Operational criterion for mind-like behavior; still contested, still generative. Complements von Neumann’s computer seat with the question of **intelligence**.
+
+**Three-Domain Reading:**
+
+- **Theology:** Image of mind without requiring soul-substance first.
+- **Technology:** Dialogue protocol as evaluation instrument.
+- **Cosmology:** Intelligence as possible property of organized matter.
+
+**Compressed Insight:**
+He refused the metaphysics quarrel and asked only: can you tell the voice from the code?
+
+**Confidence:** 0.96  
+**Sources:** Britannica AI/test; Wikipedia Turing test; standard 1950 paper reception.
+
+---
+
+## Event 08 — *Morphogenesis* (1952)
+
+**Title:** Chemistry That Paints the Leopard
+
+**Passage or Trigger:**
+“The Chemical Basis of Morphogenesis” (*Philosophical Transactions of the Royal Society*, 1952): reaction–diffusion equations; how homogeneous tissue can break symmetry into spots, stripes, and structures (**Turing patterns**). Models run on Manchester’s Ferranti Mark I. Predicts oscillating chemical dynamics later seen (e.g. Belousov–Zhabotinsky class phenomena).
+
+**Why It Qualifies:**
+Second life of genius: from logic/machines to living form. Mathematical biology seat-adjacent; computer used to grow virtual organisms. Complements Darwin’s tree with a mechanism of spatial pattern.
+
+**Three-Domain Reading:**
+
+- **Theology:** Form arising from law, not only fiat stamp.
+- **Technology:** Digital simulation of continuous chemistry.
+- **Cosmology:** Body plans as solutions of equations in space and time.
+
+**Compressed Insight:**
+He asked how the embryo paints itself — and answered with chemicals that run and diffuse until pattern appears.
+
+**Confidence:** 0.95  
+**Sources:** Wikipedia morphogenesis; Britannica 1952 paper and Mark I; Royal Society paper lineage; Advanced Science News.
+
+---
+
+## Event 09 — *Prosecution* (1952)
+
+**Title:** The State Criminalizes the Man
+
+**Passage or Trigger:**
+1952: prosecuted for homosexual acts under then-British law (relationship with Arnold Murray); conviction; offered hormone “treatment” (chemical castration) as alternative to prison. Security clearance and career damaged at peak of scientific power.
+
+**Why It Qualifies:**
+Theology of justice inverted: the codebreaker criminalized by the code of the age. Council records persecution as part of the gnosis — not only the theorems.
+
+**Three-Domain Reading:**
+
+- **Theology:** Law that punishes love as sin of the polity.
+- **Technology:** Medicalization of punishment (hormones as control).
+- **Cosmology:** Mid-century state’s power over the private body.
+
+**Compressed Insight:**
+The mind that cracked Enigma was broken by a statute — desire made a crime, genius made a patient.
+
+**Confidence:** 0.96  
+**Sources:** Wikipedia 1952 prosecution; Oxford DNB trial summary; Historic England; Advanced Science News pardon context.
+
+---
+
+## Event 10 — *Death* (7 June 1954)
+
+**Title:** Cyanide and the Unfinished Work
+
+**Passage or Trigger:**
+Dies 7 June 1954, Wilmslow, age 41; cyanide poisoning; inquest: suicide. Alternative hypotheses exist in popular discussion; official finding stands in standard biographies. Morphogenesis and computing programs cut short.
+
+**Why It Qualifies:**
+Finite life against infinite program. The seat’s tragedy is civilizational: what further machines, proofs, and biological models were lost.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creaturely end under unjust history.
+- **Technology:** Half-built futures of AI and biomathematics.
+- **Cosmology:** One mind’s death does not erase the universal machine.
+
+**Compressed Insight:**
+He left at forty-one — tape still infinite, pattern still forming, law still cruel.
+
+**Confidence:** 0.93  
+**Sources:** Wikipedia death; Britannica; standard biographies (suicide inquest).
+
+---
+
+## Event 11 — *Pardon and Afterlife* (2013–2014)
+
+**Title:** The Crown Rewrites the Record Too Late
+
+**Passage or Trigger:**
+Royal pardon (2013 process culminating August 2014 posthumous pardon) overturning the 1952 conviction; broader “Alan Turing law” clemency for others follows in spirit. Cultural apotheosis: name on buildings, prizes, banknotes, films — **Turing** as synonym for computability and LGBTQ STEM memory.
+
+**Why It Qualifies:**
+Institutional repentance. Gnosis includes the century’s delayed apology — honor without resurrection.
+
+**Three-Domain Reading:**
+
+- **Theology:** Justice after death as partial repair.
+- **Technology:** Naming rights as soft infrastructure of memory.
+- **Cosmology:** Legacy as living standard of the digital age.
+
+**Compressed Insight:**
+They pardoned a ghost and put his name on the age of computers — mercy that could not return the years.
+
+**Confidence:** 0.94  
+**Sources:** Advanced Science News Queen’s pardon 2014; public legacy record.
+
+---
+
+## Event 12 — *The Thesis That Runs the World*
+
+**Title:** Every Phone Is a Tape in Disguise
+
+**Passage or Trigger:**
+Civilizational afterlife of the universal machine: programming languages, complexity theory, cryptography, AI, and the smartphone all inherit the 1936 abstraction. “Turing-complete” becomes engineers’ everyday metaphysical claim about systems.
+
+**Why It Qualifies:**
+Maximum Arch impact. Formal science becomes the operating system of modernity. Complements von Neumann hardware lineage with logical essence.
+
+**Three-Domain Reading:**
+
+- **Theology:** Human making of general intellective tools.
+- **Technology:** Universality as design goal.
+- **Cosmology:** Information processing as a fundamental layer of culture.
+
+**Compressed Insight:**
+He defined what a computer is before computers existed — and then the world filled with his tape.
+
+**Confidence:** 0.95  
+**Sources:** Cumulative reception of computability and universal machine in CS; Britannica significance framing.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- “On Computable Numbers, with an Application to the *Entscheidungsproblem*” (1936)
+- Bletchley wartime work (declassified historical record)
+- ACE design papers / NPL period
+- “Computing Machinery and Intelligence” (1950)
+- “The Chemical Basis of Morphogenesis” (1952)
+
+**Secondary**
+- Britannica Alan Turing
+- King’s College Cambridge Turing exhibition
+- Wikipedia known-for and life outline
+- Advanced Science News pioneer profile; Oxford DNB trial note
+
+**Open questions for later passes**
+- Delilah speech encryption project as nested wartime event
+- Exact relationship of ACE to other early machines denser engineering pass
+- Morphogenesis numerical methods on Mark I finer grain
+
+---
+
+## Seat checklist
+
+- [x] Research from papers and standard history (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (Church/Bletchley collective/Gödel link noted)
+- [ ] member_id: `alan-turing`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Computer Science / Logic). Events grounded in computability, war cryptanalysis, AI, morphogenesis, and persecution; co-discoverers and teams named.*

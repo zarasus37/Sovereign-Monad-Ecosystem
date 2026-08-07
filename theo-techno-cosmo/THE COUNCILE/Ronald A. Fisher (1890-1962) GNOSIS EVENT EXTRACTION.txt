@@ -1,0 +1,361 @@
+RONALD A. FISHER GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Formal Sciences → Statistics
+**Era:** 1890–1962 (London / Rothamsted / London / Adelaide)
+**Status:** Extraction complete (seating candidate) — drawn from major books, papers, and documented scientific controversies
+
+---
+
+## Contribution
+
+Statistician and geneticist who rebuilt modern statistical practice (likelihood, ANOVA, experimental design, randomization) and mathematically fused Mendelian genetics with Darwinian selection in *The Genetical Theory of Natural Selection* (1930); whose tools still underwrite agricultural trials, clinical inference, and population genetics — and whose later public fight over smoking and lung cancer, plus eugenic writings, remain part of the historical record that any honest seat must carry.
+
+## Key Insight
+
+Uncertain evidence can be made rigorous: experiment is not mere observation but a designed confrontation with nature — and evolution itself is a statistical process in which selection’s force on gene ratios can be stated with mathematical exactness.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Fisher is extracted from **scientific works and attested controversies**, without hagiography and without erasing the hard parts. Primary lines:
+
+1. *Statistical Methods for Research Workers* (1925 ff.)
+2. *The Design of Experiments* (1935)
+3. *The Genetical Theory of Natural Selection* (1930) — including the fundamental theorem of natural selection
+4. Maximum likelihood; analysis of variance; randomization; fiducial inference
+5. Rothamsted Experimental Station agricultural statistics
+6. Synthesis of Mendelism and Darwinism (modern evolutionary synthesis lineage)
+7. Public dispute with Doll–Hill on smoking and lung cancer (1950s)
+8. Eugenic commitments in *Genetical Theory* and related writings (historical fact for the Council to hold, not celebrate)
+
+Confidence scores mark textual/scientific firmness; moral evaluation of eugenics is not laundered into “insight.”
+
+---
+
+## Event 01 — *Rothamsted: Dirt Becomes Data*
+
+**Title:** The Field as Laboratory
+
+**Passage or Trigger:**
+Fisher’s years at **Rothamsted Experimental Station** (from 1919): agricultural plots, yields, fertilizers — messy real-world variation. He develops methods that turn field noise into analyzable structure. Statistics leaves the pure table and enters soil.
+
+**Why It Qualifies:**
+Recognition that nature’s mess is not the enemy of science if **design and analysis** match the mess. Earth science of crops becomes a statistical cosmos.
+
+**Three-Domain Reading:**
+
+- **Theology:** Stewardship of land through measured trial, not only tradition.
+- **Technology:** Plot layout and analysis as food-security tech.
+- **Cosmology:** Living yield under weather and treatment as lawful-enough for inference.
+
+**Compressed Insight:**
+He taught the field to speak in numbers — so that fertilizer and seed could be judged without self-deception.
+
+**Confidence:** 0.92  
+**Sources:** Rothamsted career; standard scientific biographies (Yates & Mather Royal Society memoir line).
+
+---
+
+## Event 02 — *Statistical Methods for Research Workers*
+
+**Title:** The Handbook That Remade Labs
+
+**Passage or Trigger:**
+*Statistical Methods for Research Workers* (first ed. 1925; many later editions) — practical bible for applying small-sample methods, significance testing, and analysis tools to real research. Spreads Fisherian practice across biology and beyond.
+
+**Why It Qualifies:**
+Method becomes portable. A generation learns to ask nature questions with a shared grammar of uncertainty. That is civilizational tech for empirical science.
+
+**Three-Domain Reading:**
+
+- **Theology:** Humility formalized — conclusions carry residual doubt.
+- **Technology:** Textbook as replication engine for method.
+- **Cosmology:** Empirical world approached through sampling models.
+
+**Compressed Insight:**
+He put a common language of uncertainty into the researcher’s pocket — and labs began to talk alike.
+
+**Confidence:** 0.94  
+**Sources:** *Statistical Methods for Research Workers* (1925–); reception history.
+
+---
+
+## Event 03 — *Maximum Likelihood*
+
+**Title:** Choosing the World That Makes the Data Least Surprising
+
+**Passage or Trigger:**
+Development and championing of **maximum likelihood** estimation — choose parameter values that maximize the probability of the observed data under the model. Becomes a pillar of modern statistical estimation.
+
+**Why It Qualifies:**
+Epistemic rule: belief about hidden structure is scored by how well it would have generated what we saw. Inference as optimization under a model of the world.
+
+**Three-Domain Reading:**
+
+- **Theology:** Fitting mind to creation’s traces without claiming certainty.
+- **Technology:** Estimators as algorithms still running in software worldwide.
+- **Cosmology:** Data as sample from a generative order.
+
+**Compressed Insight:**
+He taught us to prefer the hidden world in which our observations would have been least miraculous.
+
+**Confidence:** 0.95  
+**Sources:** Fisher’s papers on likelihood; textbook canon of maximum likelihood.
+
+---
+
+## Event 04 — *Analysis of Variance*
+
+**Title:** Partitioning the World’s Variation
+
+**Passage or Trigger:**
+**ANOVA** — decomposition of total variation into assignable sources (treatments, blocks, residual error). Makes multifactor agricultural and biological experiments readable.
+
+**Why It Qualifies:**
+Structural vision: outcome scatter is not one lump. It has **rooms** — some causal, some noise. Seeing the partition is seeing the experiment’s soul.
+
+**Three-Domain Reading:**
+
+- **Theology:** Discernment of causes amid confusion.
+- **Technology:** Workhorse of experimental science and industry.
+- **Cosmology:** Effects nested in hierarchies of variation.
+
+**Compressed Insight:**
+He split the noise until the treatment’s voice could be heard against the field’s weather.
+
+**Confidence:** 0.96  
+**Sources:** ANOVA in Fisher’s Rothamsted work and *Statistical Methods* / design books.
+
+---
+
+## Event 05 — *The Design of Experiments*
+
+**Title:** Randomization as Moral of Inquiry
+
+**Passage or Trigger:**
+*The Design of Experiments* (1935) — principles of **randomization**, replication, blocking, factorial design. The lady tasting tea example enters scientific lore as illustration of exact experimental logic. Experiment is not passive watching; it is **intervention under controlled chance**.
+
+**Why It Qualifies:**
+Gnosis of method: without randomization, bias wears the mask of effect. Design is ethics of claiming knowledge about causes. The book is a constitution for empirical confrontation.
+
+**Three-Domain Reading:**
+
+- **Theology:** Honesty before nature — refuse rigged trials.
+- **Technology:** Randomization as anti-bias technology still non-negotiable in trials.
+- **Cosmology:** Causal order revealed only when we stop letting hidden confounders choose the sample.
+
+**Compressed Insight:**
+He made chance a servant of truth — randomize, or your “cause” may be a ghost.
+
+**Confidence:** 0.97  
+**Sources:** *The Design of Experiments* (1935); lady-tasting-tea illustration tradition.
+
+---
+
+## Event 06 — *The Genetical Theory of Natural Selection*
+
+**Title:** Mendel Meets Darwin in Mathematics
+
+**Passage or Trigger:**
+*The Genetical Theory of Natural Selection* (1930) — most comprehensive early mathematical fusion of **Mendelian genetics** with **Darwinian natural selection**. Shows selection can be strong and creative on gene ratios; completes a decisive strand of the modern evolutionary synthesis. Royal Society memoir: the book “completed the reconciliation of Darwinian ideas on natural selection with Mendelian genetics.”
+
+**Why It Qualifies:**
+Two great 19th-century biological insights become one 20th-century calculus. Evolution is not vague “struggle” only — it is change in gene frequencies under measurable forces.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation’s living forms under historical law (for theistic readers: secondary causes given math).
+- **Technology:** Population-genetic models as prediction/explanation engines.
+- **Cosmology:** Life’s history as a genetic bookkeeping of selection.
+
+**Compressed Insight:**
+He wrote the marriage contract of Mendel and Darwin in equations — and selection walked out stronger than many had dared believe.
+
+**Confidence:** 0.96  
+**Sources:** *The Genetical Theory of Natural Selection* (1930); Yates & Mather memoir; Wikipedia synthesis of Fisher’s genetics role.
+
+---
+
+## Event 07 — *Fundamental Theorem of Natural Selection*
+
+**Title:** Fitness’s Rate as Mathematical Fact
+
+**Passage or Trigger:**
+In *Genetical Theory*, Fisher states the **fundamental theorem of natural selection** — in his framing, the rate of increase in fitness due to changes in gene frequency equals the genetic variance in fitness (wording and later interpretations debated; the *event* is the attempt to give selection a clean dynamical identity in a few lines of math).
+
+**Why It Qualifies:**
+Ambition to state evolution’s core as precisely as a physical law. Even amid later interpretive wars, the gesture is pure Fisher: biology deserves theorems.
+
+**Three-Domain Reading:**
+
+- **Theology:** Order in life’s change — not pure chaos of forms.
+- **Technology:** Theorem as compact generator of research programs.
+- **Cosmology:** Populations as systems with measurable “progress” under selection (carefully: technical fitness, not moral progress).
+
+**Compressed Insight:**
+He tried to give natural selection a conservation-style clarity — fitness changing at the speed of its own genetic variance.
+
+**Confidence:** 0.90 (statement historical; exact modern interpretation contested)  
+**Sources:** *Genetical Theory*; secondary literature on the fundamental theorem’s meaning.
+
+---
+
+## Event 08 — *Fiducial Inference*
+
+**Title:** Probability Talks Back from Data to Parameters
+
+**Passage or Trigger:**
+Fisher’s **fiducial argument** — attempt to pass from data to probability statements about parameters without full Bayesian priors. Controversial then and now; part of his war with Neyman–Pearson and with inverse-probability traditions.
+
+**Why It Qualifies:**
+Metaphysics of inference made technical: what may we say we “know” about the world’s constants after a sample? Fisher refuses both naive certainty and, in his way, some Bayesian habits — seeking a third path.
+
+**Three-Domain Reading:**
+
+- **Theology:** Limits of inductive leap — how far from sample to reality.
+- **Technology:** Inferential schools as competing OS for science.
+- **Cosmology:** Parameters as real features approached by data.
+
+**Compressed Insight:**
+He fought for a way to let data speak about the world’s constants without smuggling a full prior cosmos into every problem.
+
+**Confidence:** 0.88  
+**Sources:** Fisher’s fiducial papers; history of 20th-c. statistical wars.
+
+---
+
+## Event 09 — *P-Values and Significance*
+
+**Title:** The Rare Event as Alarm
+
+**Passage or Trigger:**
+Fisherian significance testing: the **p-value** as index of how extreme data are under a null model; “significance” as practical decision aid in research (later misused as bright-line idol — the misuse is reception history; the invention is Fisher’s milieu).
+
+**Why It Qualifies:**
+A technology for being surprised on purpose. Nature is allowed to shock the hypothesis. The danger of reification does not erase the original epistemic tool.
+
+**Three-Domain Reading:**
+
+- **Theology:** Humility — results can fail to impress the null.
+- **Technology:** Ubiquitous (and abused) metric of modern papers.
+- **Cosmology:** Data as capable of contradicting a model of the world.
+
+**Compressed Insight:**
+He gave researchers a number for “how awkward is this for my null?” — and the century both used and worshiped it.
+
+**Confidence:** 0.91  
+**Sources:** *Statistical Methods*; design book; history of significance testing.
+
+---
+
+## Event 10 — *Eugenics in the Same Book as Selection Theory*
+
+**Title:** The Shadow Chapter
+
+**Passage or Trigger:**
+*The Genetical Theory of Natural Selection* (1930) includes extended **eugenic** argumentation — population quality, differential fertility, civilizational decline themes — historically documented as part of Fisher’s project, not a marginal footnote. Later readers must hold the mathematical achievement and the eugenic program as **co-present** in the same mind and volume.
+
+**Why It Qualifies (as Council extraction, not endorsement):**
+Gnosis of *danger*: tools that clarify natural selection in fruit flies and fields can be turned toward coercive dreams about human breeding. The seat records that formal power without moral constraint is a live historical pattern. This event is **warning-structure**, not celebration.
+
+**Three-Domain Reading:**
+
+- **Theology:** Image of God / human dignity vs reduction of persons to breeding value — a live conflict the Council must not erase.
+- **Technology:** Same math serves agriculture and can tempt political abuse.
+- **Cosmology:** Human societies are not only gene pools; treating them as such is a category crime with body counts in the wider 20th century.
+
+**Compressed Insight:**
+He wrote selection with diamond clarity — and in the same breath applied it to human hierarchies the Council refuses to baptize as wisdom.
+
+**Confidence:** 0.93 (presence of eugenic material in GTNS and Fisher’s commitments well documented)  
+**Sources:** *Genetical Theory of Natural Selection*; historical studies of Fisher and eugenics.
+
+---
+
+## Event 11 — *Smoking, Cancer, and Causal Scruple*
+
+**Title:** Correlation Is Not Yet the Torch
+
+**Passage or Trigger:**
+1950s: Fisher publicly opposes the firm causal conclusion of **Doll and Hill** that smoking causes lung cancer, stressing that **correlation is not causation**, exploring genetic confounding (twin smoking concordance), and consulting for tobacco interests (biographers Yates & Mather defend motive as anti-puritan and scientific scruple; critics note pipe-smoking and industry ties). The episode is a classic case study in causal inference politics.
+
+**Why It Qualifies:**
+Double-edged event: (1) legitimate methodological demand for stronger causal design; (2) historical misjudgment relative to the accumulating evidence and public health. The Council holds both — Fisher’s lifelong causal hygiene and the cost of being wrong when the fire is real.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truth-seeking vs attachment (including to tobacco and to being the smartest skeptic in the room).
+- **Technology:** Causal inference criteria under observational data — still a live science.
+- **Cosmology:** Bodies in a chemical environment; genes and habits entangled.
+
+**Compressed Insight:**
+He refused to let a correlation crown itself king — and on smoking, the kingdom’s evidence eventually crowned it anyway.
+
+**Confidence:** 0.92  
+**Sources:** Wikipedia / Priceonomics / historical accounts of Fisher–Doll–Hill controversy; Yates & Mather on motives.
+
+---
+
+## Event 12 — *Death and the Toolkit’s Afterlife*
+
+**Title:** The Methods Outlive the Man
+
+**Passage or Trigger:**
+Fisher dies 1962 in Adelaide. ANOVA, likelihood, experimental design, and population-genetic math continue as default infrastructure of biology, medicine, and agriculture — independent of agreement with his every opinion.
+
+**Why It Qualifies:**
+Institutional gnosis: a thinker’s **instruments** can become civilization’s while his **errors and ideologies** remain contestable. Separating tool from idol is the Council’s task.
+
+**Three-Domain Reading:**
+
+- **Theology:** Judge the fruit of method without canonizing the whole man.
+- **Technology:** Open-source inheritance of algorithms and designs.
+- **Cosmology:** Science as cumulative craft beyond single biographies.
+
+**Compressed Insight:**
+The field still harvests with his tools — and must still argue with his ghosts.
+
+**Confidence:** 0.90  
+**Sources:** Career end; ongoing centrality of Fisherian methods in curricula.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- *Statistical Methods for Research Workers* (1925–)
+- *The Design of Experiments* (1935)
+- *The Genetical Theory of Natural Selection* (1930)
+- Papers on likelihood, ANOVA, fiducial inference
+
+**Secondary**
+- F. Yates & K. Mather, Royal Society biographical memoir
+- Histories of the modern evolutionary synthesis
+- Histories of the smoking–cancer controversy
+
+**Open questions for later passes**
+- Deeper primary quotation from GTNS fundamental theorem exact wording
+- Fiducial vs Neyman–Pearson as extended philosophical event
+- Fisher’s genetics of dominance and sex as technical cluster
+
+---
+
+## Seat checklist
+
+- [x] Research from major works and controversies (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (including shadow events held honestly)
+- [ ] member_id: `ronald-a-fisher`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Statistics). Events grounded in Fisher’s books, methods, and documented disputes; eugenics and the smoking controversy recorded without whitewash or cheap denunciation-as-substitute-for-history.*

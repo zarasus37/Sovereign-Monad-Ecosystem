@@ -1,0 +1,359 @@
+LEONARDO DA VINCI GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Applied Sciences & Professions → Engineering
+**Era:** 1452–1519 (Vinci / Florence / Milan / Rome / France)
+**Status:** Extraction complete (seating candidate) — drawn from paintings, notebooks, and documented career
+
+---
+
+## Contribution
+
+Painter-engineer whose notebooks fuse anatomy, mechanics, hydraulics, flight, and military design with observational drawing; who painted the *Last Supper* and *Mona Lisa*; who drew the *Vitruvian Man* as human measure of cosmic proportion; and who practiced **mirror writing** across thousands of pages that preserve a mind treating art and engineering as one investigation of nature.
+
+## Key Insight
+
+To see is to dissect: the world yields to a hand that draws what the eye learns — body, machine, water, and bird are one continuous study of how form moves and holds.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Leonardo is extracted from **works and notebooks**, not “secret inventions of the future” fan catalogs. Primary lines:
+
+1. Notebooks (mirror script, anatomy, machines, water, flight) — personal working archive
+2. *Vitruvian Man* (c. 1490) and Vitruvius’s proportions
+3. *Last Supper* (Santa Maria delle Grazie, Milan)
+4. *Mona Lisa* / portrait practice and sfumato
+5. Anatomical campaigns (dissections, organ and muscle studies)
+6. Military and civil engineering studies for patrons (Sforza, Borgia, etc.)
+7. Flight studies and “flying machines” as research program
+8. Late years in France under Francis I; death 1519
+9. Transmission of notebooks via pupil (published widely only centuries later)
+
+---
+
+## Event 01 — *Mirror Writing*
+
+**Title:** The Hand That Writes Backward
+
+**Passage or Trigger:**
+Across the notebooks: **mirror writing** (right-to-left, reversed letterforms), consistent with left-handed practice that avoids smudging; also a private working code. Contemporaries noted left-handedness; he wrote normally when text was meant for others.
+
+**Why It Qualifies:**
+Cognition made visible as **technique of self**. The page is a lab bench oriented to the body that uses it. Privacy and ergonomics become part of knowledge’s form.
+
+**Three-Domain Reading:**
+
+- **Theology:** Inner speech protected — thoughts not automatically public liturgy.
+- **Technology:** Writing system adapted to the tool-user (hand).
+- **Cosmology:** Page as personal cosmos with its own direction of time.
+
+**Compressed Insight:**
+He reversed the river of ink so the left hand could think at full speed without staining the thought.
+
+**Confidence:** 0.95  
+**Sources:** Notebook practice; V&A / museum commentary; Britannica on mirror writing.
+
+---
+
+## Event 02 — *The Notebooks as Method*
+
+**Title:** One Mind, Thousand Pages
+
+**Passage or Trigger:**
+Thousands of pages: sketches, diagrams, “musings,” anatomical plates, machine studies — not a published encyclopedia but a **continuous research log**. Left to a pupil; published systematically only from the 19th century after changing hands. Good paper preserved the hand five centuries.
+
+**Why It Qualifies:**
+Recognition that inquiry is **cumulative personal archive**. Art and science are not separate careers — they are one notebook habit. The method is the message.
+
+**Three-Domain Reading:**
+
+- **Theology:** Stewardship of attention — life as recorded looking.
+- **Technology:** Notebook as portable laboratory and memory prosthesis.
+- **Cosmology:** Nature approached as drawable system.
+
+**Compressed Insight:**
+He refused to finish a single book for the public — and left a library of looking instead.
+
+**Confidence:** 0.96  
+**Sources:** Notebook corpus history; Carnegie / museum accounts of preservation and publication.
+
+---
+
+## Event 03 — *Vitruvian Man*
+
+**Title:** The Body as Measure of the World
+
+**Passage or Trigger:**
+*Vitruvian Man* (c. 1490): male figure in circle and square, notes engaging **Vitruvius** on ideal proportions. Human body as geometric key to temple and cosmos.
+
+**Why It Qualifies:**
+Microcosm doctrine drawn, not only preached. The human form is an instrument for reading universal proportion — engineering, architecture, and sacred geometry in one ink.
+
+**Three-Domain Reading:**
+
+- **Theology:** Imago Dei as measurable harmony (Renaissance Christian-humanist frame).
+- **Technology:** Anthropometry as design standard.
+- **Cosmology:** Man as scale-model of ordered world.
+
+**Compressed Insight:**
+He put a man inside circle and square until the body confessed it was a ruler for the cosmos.
+
+**Confidence:** 0.96  
+**Sources:** *Vitruvian Man* drawing and notes; Vitruvius reception.
+
+---
+
+## Event 04 — *Anatomy by Dissection*
+
+**Title:** The Body Opened to Be Known
+
+**Passage or Trigger:**
+Anatomical notebook campaigns: bones, muscles, vessels, organs — new illustrative techniques, layered understanding of movement and structure. Knowledge bought by presence at dissection when law and custom allowed or could be navigated.
+
+**Why It Qualifies:**
+Empiricism as piety of accuracy. Painting’s truth of flesh requires the knife’s truth of structure. Engineering of the body precedes engineering of machines.
+
+**Three-Domain Reading:**
+
+- **Theology:** Incarnate creature studied without shame of matter.
+- **Technology:** Visual explanation systems for anatomy.
+- **Cosmology:** Human as most intimate machine of nature.
+
+**Compressed Insight:**
+He cut to draw truly — so that painted flesh would rest on known scaffolding.
+
+**Confidence:** 0.94  
+**Sources:** Anatomical sheets in the notebooks; museum anatomy exhibitions/scholarship.
+
+---
+
+## Event 05 — *The Last Supper*
+
+**Title:** Instant of Betrayal Fixed in Paint
+
+**Passage or Trigger:**
+*Last Supper* (Santa Maria delle Grazie, Milan, 1490s): Christ announces betrayal; apostles react in grouped waves of gesture. Experimental technique (not durable pure fresco) leads to early decay — ambition of psychological narrative over material permanence.
+
+**Why It Qualifies:**
+Theology of the table: covenant, betrayal, and human shock in one architectural room. Drama of souls as compositional problem. The ruin of the surface is part of the history — form risked for expression.
+
+**Three-Domain Reading:**
+
+- **Theology:** Eucharist’s night made visible — word that fractures the room.
+- **Technology:** Experimental binders/technique vs traditional fresco longevity.
+- **Cosmology:** Sacred meal as center of human cosmos of loyalty and treason.
+
+**Compressed Insight:**
+He froze the second after the words of betrayal — and paid with a painting that began dying while still teaching.
+
+**Confidence:** 0.95  
+**Sources:** *Last Supper* commission and condition history; standard art history.
+
+---
+
+## Event 06 — *Mona Lisa / Sfumato*
+
+**Title:** The Face That Will Not Finish Speaking
+
+**Passage or Trigger:**
+*Mona Lisa* (early 1500s, carried into France): portrait as infinite psychological depth; **sfumato** — smoke-soft transitions without hard line. Smile as unresolved event.
+
+**Why It Qualifies:**
+Recognition that the human face is not a diagram. Soft edge becomes metaphysics: identity as gradient. Painting as technology of permanent almost-presence.
+
+**Three-Domain Reading:**
+
+- **Theology:** Person as mystery exceeding outline.
+- **Technology:** Sfumato as optical-psychological tool.
+- **Cosmology:** Intimate human world as inexhaustible object.
+
+**Compressed Insight:**
+He dissolved the outline until a face could keep a secret in public forever.
+
+**Confidence:** 0.94  
+**Sources:** *Mona Lisa*; sfumato in Leonardo scholarship.
+
+---
+
+## Event 07 — *Water*
+
+**Title:** The Engineer of Flow
+
+**Passage or Trigger:**
+Notebook studies of **hydraulics**, eddies, river management, canal schemes, deluges — water drawn as living geometry of motion. Civil engineering imagination for Lombardy and beyond.
+
+**Why It Qualifies:**
+Earth Sciences instinct inside an engineer-painter: fluid as teacher of form. Same eye that draws hair curls draws whirlpools.
+
+**Three-Domain Reading:**
+
+- **Theology:** Flood and provision — water as blessing and threat.
+- **Technology:** Hydraulic engineering sketches as proto-proposals.
+- **Cosmology:** Landscape as dynamic system, not static backdrop.
+
+**Compressed Insight:**
+He studied water until curls of hair and curls of current spoke the same language of flow.
+
+**Confidence:** 0.92  
+**Sources:** Notebook water studies; engineering project notes in the corpus.
+
+---
+
+## Event 08 — *Flight*
+
+**Title:** The Bird as Machine Lesson
+
+**Passage or Trigger:**
+Extensive studies of bird flight and designs for **flying machines** / ornithopter-like devices — research program more than single “invention of the airplane.” Nature as patent library.
+
+**Why It Qualifies:**
+Biomimetics avant la lettre. The sky is not forbidden; it is a problem of weight, surface, and motion to be reverse-engineered from living flyers.
+
+**Three-Domain Reading:**
+
+- **Theology:** Aspiration — human limit and longing (Icarus shadow without the myth alone).
+- **Technology:** Observational reverse engineering.
+- **Cosmology:** Air as navigable medium in principle.
+
+**Compressed Insight:**
+He apprenticed himself to birds — because flight was a theorem with feathers for a proof.
+
+**Confidence:** 0.91  
+**Sources:** Flight notebook folios; standard Leonardo engineering surveys.
+
+---
+
+## Event 09 — *War Machines for Patrons*
+
+**Title:** Design Under the Condottiere Sky
+
+**Passage or Trigger:**
+Studies of fortification, artillery, tanks/covered vehicles, siege devices for Sforza, Borgia, and other patrons — military R&D as employment reality of the Renaissance engineer.
+
+**Why It Qualifies:**
+Ambiguous gnosis: the same genius serves beauty and killing efficiency. Council holds the tension — applied science under princes is never pure.
+
+**Three-Domain Reading:**
+
+- **Theology:** Peace and violence competing for the maker’s hand.
+- **Technology:** Dual-use design as permanent ethical structure.
+- **Cosmology:** Politics as climate in which invention grows.
+
+**Compressed Insight:**
+He drew machines of war for pay — proof that genius rents itself to power unless a higher law intervenes.
+
+**Confidence:** 0.90  
+**Sources:** Military notebook studies; patronage history (Milan, etc.).
+
+---
+
+## Event 10 — *Unfinished Works*
+
+**Title:** The Mind Faster Than the Commission
+
+**Passage or Trigger:**
+Pattern of **unfinished** paintings and projects — not laziness alone but a mind that moves to the next problem of nature while patrons wait. Process over delivery as structural habit.
+
+**Why It Qualifies:**
+Same family as Michelangelo’s non-finito and Gauss’s withheld results: completion is not the only virtue. Inquiry’s velocity exceeds the market’s clock.
+
+**Three-Domain Reading:**
+
+- **Theology:** Contemplation vs duty to finish for others.
+- **Technology:** R&D culture vs product shipping.
+- **Cosmology:** Time of discovery ≠ time of contract.
+
+**Compressed Insight:**
+He left altars waiting because the next page of the world had already turned in his hand.
+
+**Confidence:** 0.89  
+**Sources:** Career pattern of incomplete commissions; standard biographies.
+
+---
+
+## Event 11 — *France and Francis I*
+
+**Title:** The Last Patron
+
+**Passage or Trigger:**
+Late invitation to France under **Francis I**; residence at Clos Lucé near Amboise; dies 2 May 1519 in France. *Mona Lisa* and notebooks travel in his orbit; royal patronage as final shelter.
+
+**Why It Qualifies:**
+Knowledge crosses Alps. The engineer-painter becomes European inheritance, not only Florentine or Milanese property.
+
+**Three-Domain Reading:**
+
+- **Theology:** Exile/sojourn as late chapter of vocation.
+- **Technology:** Cross-border transmission of notebooks and art.
+- **Cosmology:** Courts as nodes of a wider Renaissance field.
+
+**Compressed Insight:**
+He ended under a French king’s roof — and the notebooks kept Italy’s eyes open in another land.
+
+**Confidence:** 0.92  
+**Sources:** Death 1519; Clos Lucé tradition; Francis I patronage.
+
+---
+
+## Event 12 — *Notebooks After Death*
+
+**Title:** The Pupil as Ark
+
+**Passage or Trigger:**
+Notebooks left to apprentice (**Francesco Melzi** in the usual account); change hands; large-scale publication only centuries later. Survival of the method depends on fragile custody chains.
+
+**Why It Qualifies:**
+Like Sima Qian’s family ark: genius requires **transmitters**. Private mirror-script becomes public science only through long stewardship.
+
+**Three-Domain Reading:**
+
+- **Theology:** Faithfulness of disciples to a master’s paper body.
+- **Technology:** Archive risk and recovery.
+- **Cosmology:** Knowledge’s second life across centuries.
+
+**Compressed Insight:**
+He wrote for himself in reverse — and the future, centuries late, learned to hold a mirror to read him forward.
+
+**Confidence:** 0.91  
+**Sources:** Notebook provenance histories; Melzi transmission tradition.
+
+---
+
+## Sources / Working Notes
+
+**Primary / near-primary**
+- Paintings: *Last Supper*, *Mona Lisa*, major panels
+- Notebooks (anatomy, machines, water, flight, mirror script)
+- *Vitruvian Man*
+
+**Secondary**
+- Britannica “Leonardo da Vinci”
+- Museum commentary (V&A, etc.) on notebooks and mirror writing
+- Standard monographs on Leonardo as engineer-anatomist
+
+**Open questions for later passes**
+- Specific folio citations for key anatomical plates
+- Treatise on painting reconstructed from pupils
+- Relation to Pacioli / mathematical humanism
+
+---
+
+## Seat checklist
+
+- [x] Research from works and notebooks (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `leonardo-da-vinci`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Engineering). Events grounded in notebooks, paintings, and documented career; not modern “secret inventor” catalogs.*

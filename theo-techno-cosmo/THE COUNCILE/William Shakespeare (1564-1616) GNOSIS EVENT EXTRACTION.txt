@@ -1,0 +1,372 @@
+WILLIAM SHAKESPEARE GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Performance Arts → Theater
+**Era:** 1564–1616 (Stratford-upon-Avon / London)
+**Status:** Extraction complete (seating candidate) — drawn from the plays (quartos/Folio), Sonnets, and documentary theatrical history
+
+---
+
+## Contribution
+
+Dramatist and poet whose plays form a working encyclopedia of political form, psychological fracture, and staged cosmology; whose company practice (Lord Chamberlain’s / King’s Men) and the posthumous *First Folio* (1623) made theater a durable technology of cultural memory; whose major tragedies and late romances map sovereignty, conscience, illusion, and renunciation in forms still liveable as performance.
+
+## Key Insight
+
+The stage is not a mirror only — it is a machine that makes hidden structures of power, mind, and world *audible and visible* in time, so that audiences can undergo recognition without leaving the body of the playhouse.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Shakespeare is extracted from **texts and company history**, not authorship conspiracies or romantic biography-as-novel. Primary lines:
+
+1. Plays in early quartos and the *First Folio* (1623; Heminges & Condell)
+2. Sonnets (1609 quarto)
+3. Documented company affiliations (Chamberlain’s / King’s Men); Globe / Blackfriars era
+4. Structural peaks: *Hamlet*, *King Lear*, *Macbeth*, *Othello*, *The Tempest*, major histories and problem plays
+5. Death 23 April 1616 (traditional dating); burial Holy Trinity, Stratford
+
+Quotes from the plays use standard modern-spelling renderings of Folio/quarto text for readability; the *events* are recognitions *in* the dramaturgy, not invented life anecdotes. Confidence marks how tightly each event is tied to the text vs. documentary frame.
+
+---
+
+## Event 01 — *The History Machine*
+
+**Title:** Chronicle Becomes Form
+
+**Passage or Trigger:**
+Early and mid-career history plays (*Henry VI* cycle, *Richard III*, *Richard II*, *Henry IV* 1–2, *Henry V*, etc.) convert English chronicle material into sequential political drama. Crowns pass, rebels rise, rhetoric legitimates and unmasks power. The sequence is not mere pageant: it is a technology for thinking succession, legitimacy, and national memory in public.
+
+**Why It Qualifies:**
+Recognition that a people can *rehearse* its political unconscious on stage. History is not only what happened; it is what can be *shaped into actable cause and consequence* before a paying crowd.
+
+**Three-Domain Reading:**
+
+- **Theology:** Providence, curse, and sacred kingship contested in secular theater.
+- **Technology:** Five-act chronicle architecture as civic memory tech.
+- **Cosmology:** England as a world-model of rise and fall under time.
+
+**Compressed Insight:**
+He turned the nation’s past into a repeatable machine for seeing how power eats its young.
+
+**Confidence:** 0.91  
+**Sources:** History plays as corpus; performance company context (Chamberlain’s Men).
+
+---
+
+## Event 02 — *To Be, or Not to Be*
+
+**Title:** Consciousness Stages Itself
+
+**Passage or Trigger:**
+*Hamlet* (c. 1600–01; Q1 “bad” quarto 1603, Q2 1604/5, Folio 1623 — textual plurality itself is part of the history). The third-act soliloquy:
+
+> “To be, or not to be, that is the question:  
+> Whether ’tis nobler in the mind to suffer  
+> The slings and arrows of outrageous fortune,  
+> Or to take arms against a sea of troubles…”
+
+**Why It Qualifies:**
+Not a slogan — a structural event: the mind *becomes the stage* of its own dilemma. Action, suicide, dream, conscience, and fear of “the undiscovered country” are laid out as a decision tree under incomplete knowledge. The play forces the audience inside recursive self-awareness.
+
+**Three-Domain Reading:**
+
+- **Theology:** Judgment after death as brake on suicide; conscience as theological organ.
+- **Technology:** Soliloquy as tech of interiority made public without breaking the fiction.
+- **Cosmology:** A world where thought can loop on itself longer than plot can wait.
+
+**Compressed Insight:**
+He made the audience hear a mind trying to decide whether existence itself is worth the cost of consciousness.
+
+**Confidence:** 0.96  
+**Sources:** *Hamlet* Q2/F texts; textual history of the soliloquy across Q1/Q2/F.
+
+---
+
+## Event 03 — *The Play Within the Play*
+
+**Title:** Truth by Mousetrap
+
+**Passage or Trigger:**
+*Hamlet* II–III: the “Mousetrap” / *Murder of Gonzago* performed to “catch the conscience of the king.” Hamlet’s explicit theory: drama can force hidden guilt into visible symptom.
+
+**Why It Qualifies:**
+Meta-theatrical gnosis: theater is not only entertainment — it is an *epistemic instrument*. Representation can pressure reality until truth twitches. The play knows it is a play and uses that knowledge as weapon.
+
+**Three-Domain Reading:**
+
+- **Theology:** Confession forced by image rather than sacrament — secular cousin of examination of conscience.
+- **Technology:** Nested performance as diagnostic device.
+- **Cosmology:** Reality and representation layered; truth leaks across the layers.
+
+**Compressed Insight:**
+He proved that a false story, rightly aimed, can make a real king flinch.
+
+**Confidence:** 0.95  
+**Sources:** *Hamlet* play-within-play scenes.
+
+---
+
+## Event 04 — *King Lear: Nothing and the Storm*
+
+**Title:** Sovereignty Stripped
+
+**Passage or Trigger:**
+*King Lear* (performed by 1606; Q 1608 as chronicle history; F 1623 as tragedy — substantial textual divergence). Lear’s division of the kingdom, Cordelia’s “Nothing,” the heath storm, the stripped king among the mad and poor:
+
+> “Is man no more than this?”
+
+and the recognition of bare creatureliness under weather and folly.
+
+**Why It Qualifies:**
+Political form collapses into exposure. Love that will not flatter is cast out; authority without wisdom becomes outdoor suffering. The storm is cosmology as judgment — nature does not care for the title “king.”
+
+**Three-Domain Reading:**
+
+- **Theology:** Judgment on pride; “nothing” as spiritual and economic abyss; possible redemption late and costly.
+- **Technology:** Double plot (Lear/Gloucester) as structural amp of blindness and insight.
+- **Cosmology:** Human order is thin against sky and storm; the body is the last title.
+
+**Compressed Insight:**
+He took a king apart until only a wet animal with a name left — and asked what “man” still meant.
+
+**Confidence:** 0.95  
+**Sources:** *King Lear* Q/F; documentary notes on 1606 court performance tradition; textual scholarship on Q vs F.
+
+---
+
+## Event 05 — *Edmund’s Nature*
+
+**Title:** Bastardy as Metaphysics
+
+**Passage or Trigger:**
+*King Lear* I.ii — Edmund’s soliloquy against “legitimate” custom, invoking Nature as goddess and rejecting the plague of custom that brands him base.
+
+**Why It Qualifies:**
+A counter-theology of Nature against inheritance law. The play lets the illegitimate voice articulate a modern-sounding revolt — then shows where pure “Nature” without bond leads. Structure holds both the revolt and its horror.
+
+**Three-Domain Reading:**
+
+- **Theology:** Nature vs custom; law vs blood; evil given a lucid creed.
+- **Technology:** Soliloquy as tech of villainous self-justification.
+- **Cosmology:** Social cosmos built on legitimacy can be attacked at the root word.
+
+**Compressed Insight:**
+He gave the bastard a philosophy — then refused to let that philosophy win clean.
+
+**Confidence:** 0.93  
+**Sources:** *King Lear* I.ii.
+
+---
+
+## Event 06 — *Macbeth: Time and the Deed*
+
+**Title:** Murder Collapses the Clock
+
+**Passage or Trigger:**
+*Macbeth* (c. 1606): prophecy, murder of Duncan, “If it were done when ’tis done,” Banquo’s ghost, “Tomorrow, and tomorrow, and tomorrow.” Time becomes sticky, recursive, emptied of meaning after the crime.
+
+**Why It Qualifies:**
+Recognition that a single political murder rewrites temporal experience — future and past infect each other. Ambition hacks succession; the cosmos answers with sleeplessness and moving woods (order restored only by violence answering violence).
+
+**Three-Domain Reading:**
+
+- **Theology:** Damnation in advance; prayer stuck in the throat; evil as sterile repetition.
+- **Technology:** Prophecy and equivocation as language weapons.
+- **Cosmology:** Scotland as body politic sickened; nature disordered (darkness, horses).
+
+**Compressed Insight:**
+He showed that after the forbidden deed, tomorrow stops being a path and becomes a syllable on a stage.
+
+**Confidence:** 0.94  
+**Sources:** *Macbeth* Folio text; Jacobean succession/context scholarship as frame.
+
+---
+
+## Event 07 — *Othello: The Handkerchief and the Ear*
+
+**Title:** Evidence as Weapon
+
+**Passage or Trigger:**
+*Othello* (c. 1604): Iago’s manipulation of ocular “proof,” the handkerchief, the ear as portal of poison. Tragedy built from *interpretive capture* — a mind convinced by arranged signs.
+
+**Why It Qualifies:**
+Epistemic tragedy: not fate alone, but *broken evidence procedures*. Love is destroyed by a technology of suggestion. The play is a manual of how testimony and tokens can be gamed.
+
+**Three-Domain Reading:**
+
+- **Theology:** Envy as spiritual structure; innocence unprotected by good intention.
+- **Technology:** Props and rumors as information weapons.
+- **Cosmology:** Domestic space as battlefield of meaning.
+
+**Compressed Insight:**
+He proved a marriage can be murdered with a handkerchief and a well-tuned lie.
+
+**Confidence:** 0.93  
+**Sources:** *Othello* text.
+
+---
+
+## Event 08 — *The Sonnets: Fair, Dark, and Time*
+
+**Title:** Love Against Clock and Copy
+
+**Passage or Trigger:**
+*Shake-speares Sonnets* (1609). Cycles of procreation argument, rival poet, dark lady, fair youth; Time as devourer; poetry as brief immortality tech (“So long as men can breathe or eyes can see…”).
+
+**Why It Qualifies:**
+Lyric laboratory of desire, shame, idealization, and decay. The sonnet sequence is a formal engine for holding contradiction without theatrical plot.
+
+**Three-Domain Reading:**
+
+- **Theology:** Idolatry of the beloved; beauty as almost sacred and always mortal.
+- **Technology:** Fourteen-line form as compression algorithm for passion.
+- **Cosmology:** Human love inside cosmic Time that erodes faces and fame.
+
+**Compressed Insight:**
+He bet that patterned speech could outrun death a little — and called that bet poetry.
+
+**Confidence:** 0.92  
+**Sources:** 1609 Sonnets quarto; standard sequence structure.
+
+---
+
+## Event 09 — *The Tempest: Art Laid Down*
+
+**Title:** Drowning the Book
+
+**Passage or Trigger:**
+*The Tempest* (c. 1611; opening of First Folio 1623). Prospero’s magic, island laboratory of power, then renunciation:
+
+> “I’ll break my staff…  
+> And deeper than did ever plummet sound  
+> I’ll drown my book.”
+
+Epilogue asks the audience’s breath for pardon — art depending on communal release.
+
+**Why It Qualifies:**
+Late recognition: sovereignty-by-art must end. The magus who controlled spirits chooses mercy and dispossession. Theater itself bows — the play cannot free Prospero without the audience. Meta-craft and ethics fuse.
+
+**Three-Domain Reading:**
+
+- **Theology:** Mercy over vengeance; renunciation as spiritual act.
+- **Technology:** Magic as figure for theatrical tech; staff/book as instruments voluntarily broken.
+- **Cosmology:** Island as total world-model; storm as opening cosmic violence tamed into plot.
+
+**Compressed Insight:**
+He wrote a magician who gives up absolute control — and asked the crowd to finish the release with applause.
+
+**Confidence:** 0.95  
+**Sources:** *The Tempest* F text; Folio placement; company late-romance context.
+
+---
+
+## Event 10 — *The First Folio*
+
+**Title:** Friends Against Oblivion
+
+**Passage or Trigger:**
+1623: *Mr. William Shakespeares Comedies, Histories, & Tragedies* — the **First Folio**, assembled by fellow actors **John Heminges** and **Henry Condell**, ~18 plays that had never appeared in print preserved (including *The Tempest*, *Macbeth*, *Twelfth Night*, *Julius Caesar*, etc.). Prefatory matter presents the book as rescue of the texts from loss and bad copies.
+
+**Why It Qualifies:**
+Posthumous structural event: *company memory becomes book*. Without this technology of collection, half the corpus vanishes. The gnosis is institutional — art survives through brothers of the craft, not only solitary genius.
+
+**Three-Domain Reading:**
+
+- **Theology:** Commemoration as duty to the dead maker.
+- **Technology:** Folio format, editing from quartos and playhouse sources — imperfect but decisive archival tech.
+- **Cosmology:** A nation’s imaginative cosmos stabilized in paper.
+
+**Compressed Insight:**
+His fellow players did what no single manuscript could: they refused to let half his worlds die with him.
+
+**Confidence:** 0.96  
+**Sources:** First Folio 1623; Folger / standard bibliographic history; Heminges & Condell prefatory claims.
+
+---
+
+## Event 11 — *All the World’s a Stage*
+
+**Title:** Life as Theater Grammar
+
+**Passage or Trigger:**
+*As You Like It* — Jaques’s speech on the seven ages of man: “All the world’s a stage…” Life parsed as entrances, exits, and stock roles from infant to oblivion.
+
+**Why It Qualifies:**
+Cosmology in comic pastoral: existence itself wears theatrical structure. The insight is double-edged — lucid and reductive — and the play holds it as one voice among others, not absolute dogma.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creaturely ages toward “mere oblivion.”
+- **Technology:** Role theory avant la lettre — social life as casting.
+- **Cosmology:** World = theater; history = repertoire.
+
+**Compressed Insight:**
+He let a melancholic say the universe is a playhouse — and then kept the comedy moving anyway.
+
+**Confidence:** 0.92  
+**Sources:** *As You Like It* II.vii.
+
+---
+
+## Event 12 — *Death in Stratford*
+
+**Title:** Return to the Parish
+
+**Passage or Trigger:**
+Died Stratford-upon-Avon, 23 April 1616 (age 52 by traditional reckoning); buried in the sanctuary of Holy Trinity Church. Will and property record a successful man of theater and town — not a mythic exile.
+
+**Why It Qualifies:**
+Grounds the corpus in a finite life. The worlds he built outlived the parish body. Creatureliness after cosmology.
+
+**Three-Domain Reading:**
+
+- **Theology:** Christian burial; monument and curse on moving bones (epitaph tradition).
+- **Technology:** Legal will as end-of-life tech.
+- **Cosmology:** Local earth after global stage.
+
+**Compressed Insight:**
+The maker of infinite rooms on stage took one grave in one church — and left the rest to paper and players.
+
+**Confidence:** 0.93  
+**Sources:** Parish/burial tradition; Shakespeare Birthplace Trust / documentary biography summaries.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- Plays: early quartos + *First Folio* (1623)
+- *Shake-speares Sonnets* (1609)
+- Prefaces of Heminges & Condell
+
+**Documentary / secondary**
+- Folger Shakespeare Library materials on Folio and documented life
+- Shakespeare Birthplace Trust biography pages
+- Textual scholarship on *Hamlet* and *King Lear* Q/F divergence
+
+**Open questions for later passes**
+- Deeper pass on problem plays (*Measure for Measure*, *Troilus*)
+- Roman plays as political theology cluster
+- Collaborative late work (*Henry VIII*, *Two Noble Kinsmen*)
+
+---
+
+## Seat checklist
+
+- [x] Research from plays, Folio history, documentary life (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple text-grounded events
+- [ ] member_id: `william-shakespeare`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Theater). Events grounded in the dramatic texts and company/Folio history; not authorship speculation or romantic biography-novel.*

@@ -1,0 +1,361 @@
+ALBERT EINSTEIN GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Natural Sciences → Physics
+**Era:** 1879–1955 (Ulm / Munich / Zurich / Bern patent office / Berlin / Princeton)
+**Status:** Extraction complete (seating candidate) — drawn from 1905 papers, general relativity, quantum debates, public ethics, and standard physics history
+
+---
+
+## Contribution
+
+Physicist who, in the **annus mirabilis** of 1905, published papers on the **photoelectric effect** (light quanta), **Brownian motion** (atoms made operational), **special relativity**, and **mass–energy equivalence** (*E* = *mc*²); who completed **general relativity** (1915–16), recasting gravity as spacetime curvature and founding modern relativistic cosmology; who received the **1921 Nobel Prize** for the photoelectric law (not relativity); and who became the century’s emblem of scientific mind — while arguing with quantum completeness (EPR), warning Roosevelt about nuclear fission (with Szilárd), and spending late years at Princeton on unified-field hopes and public ethics.
+
+## Key Insight
+
+Space and time are not a fixed stage separate from matter and light: the speed of light is invariant, simultaneity is relative, mass and energy are one ledger, and gravity is geometry — so the cosmos is a dynamical spacetime whose laws can be written as equations a patent clerk (and then a world) can check against the sky.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Einstein is extracted from **published papers and standard reception**, with credit hygiene: **Lorentz** transformations and **Poincaré** insights precede full special-relativity synthesis; **Minkowski** geometrizes the spacetime Einstein made physical; **Hilbert** works general relativity in parallel (priority nuanced); light quanta build on **Planck**; nuclear letter co-shaped by **Leo Szilárd**; expanding-universe observations later force Einstein to abandon the cosmological constant he inserted (and later regretted) — **Hubble** seat already covers the observational expansion line. Primary lines:
+
+1. Formation; Bern patent office
+2. 1905 annus mirabilis (four papers + *E* = *mc*² note)
+3. General relativity 1915–16; 1919 eclipse
+4. Nobel 1921 (photoelectric)
+5. Quantum debates; EPR 1935
+6. Emigration; Princeton IAS
+7. Roosevelt letter / nuclear age conscience
+8. Death 1955; civilizational afterlife
+
+---
+
+## Event 01 — *Formation and the Patent Office*
+
+**Title:** The Clerk Who Had Time to Think
+
+**Passage or Trigger:**
+Born 14 March 1879, Ulm; Swiss education (ETH Zurich); technical expert third class at the **Swiss Patent Office**, Bern (from 1902). “Miracle year” work done largely outside university posts — thought experiments and Annalen papers from a desk that reviewed other people’s inventions.
+
+**Why It Qualifies:**
+Gnosis of institution: discovery not only from chairs. The Arch Physics seat begins in bureaucratic daylight and private night calculation.
+
+**Three-Domain Reading:**
+
+- **Theology:** Vocation under ordinary labor.
+- **Technology:** Patent office as exposure to electromagnetic devices and priority claims.
+- **Cosmology:** Quiet room where the cosmos’s frame was rewritten.
+
+**Compressed Insight:**
+He stamped other men’s machines by day — and rebuilt space and time between applications.
+
+**Confidence:** 0.94  
+**Sources:** Standard early-life and Bern patent-office biographies; annus mirabilis context (LOC, Wikipedia).
+
+---
+
+## Event 02 — *Photoelectric Effect* (1905)
+
+**Title:** Light as Countable Quanta
+
+**Passage or Trigger:**
+1905 *Annalen der Physik* paper: light arrives in discrete energy packets *E* = *hf*; explains photoelectric threshold and energy of ejected electrons. Builds on Planck’s quantization of oscillators; radicalizes it for radiation itself. **Only discovery named in the 1921 Nobel citation.**
+
+**Why It Qualifies:**
+Quantum door Einstein opens even as he later resists full quantum orthodoxy. Wave–particle tension born as physical law, not metaphor.
+
+**Three-Domain Reading:**
+
+- **Theology:** Light as created packet and wave — mystery kept precise.
+- **Technology:** Foundation of photodiodes, solar cells, quantum optics lineage.
+- **Cosmology:** Radiation as grainy as matter’s atoms.
+
+**Compressed Insight:**
+He made light countable — and won the Nobel for a quantum he would never fully love.
+
+**Confidence:** 0.97  
+**Sources:** Annus mirabilis papers (Wikipedia; LOC guide); Nobel citation standard fact.
+
+---
+
+## Event 03 — *Brownian Motion* (1905)
+
+**Title:** Atoms Forced into the Laboratory
+
+**Passage or Trigger:**
+1905 paper on motion of small particles in fluids: molecular-kinetic theory predicts observable jitter; relation linking diffusion and mobility. Helps compel acceptance of **atoms** as real, countable entities — not mere calculation aids.
+
+**Why It Qualifies:**
+Matter’s discreteness secured statistically. Complements Lavoisier’s mass conservation and Fisher’s later genetics with physical atomism made measurable.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation’s dust made visible in a microscope’s tremble.
+- **Technology:** Statistical mechanics as instrument of proof.
+- **Cosmology:** Continuum fluids as swarms of invisible bodies.
+
+**Compressed Insight:**
+He watched pollen dance and read the atoms underneath — motion as census of the unseen.
+
+**Confidence:** 0.95  
+**Sources:** Annus mirabilis lists; LOC Brownian-motion summary; standard atomic-acceptance histories.
+
+---
+
+## Event 04 — *Special Relativity* (1905)
+
+**Title:** No Ether Stage — One Invariant *c*
+
+**Passage or Trigger:**
+“On the Electrodynamics of Moving Bodies”: principle of relativity + constancy of light speed in vacuum; derives Lorentz transformations from postulates; relativizes simultaneity; length contraction and time dilation as physical geometry of measurement, not ether wind. Lorentz, Poincaré, and others supply precursor mathematics; Einstein’s synthesis makes the kinematics and electrodynamics of moving bodies a new physical world-picture.
+
+**Why It Qualifies:**
+Central Physics event. Absolute time dies. Complements Galileo/Newton seats with a successor frame that keeps local physics and kills the universal clock.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creaturely time not God’s absolute stopwatch.
+- **Technology:** Electrodynamics of moving bodies as engineering truth at high *v*.
+- **Cosmology:** Spacetime (soon Minkowski’s) as single arena.
+
+**Compressed Insight:**
+He kept light’s speed fixed and let clocks and rulers bend — so the ether could finally be unemployed.
+
+**Confidence:** 0.97  
+**Sources:** Annus mirabilis paper 3; Britannica/standard SR; credit notes on Lorentz/Poincaré.
+
+---
+
+## Event 05 — *E = mc²* (1905)
+
+**Title:** Mass Is a Form of Energy
+
+**Passage or Trigger:**
+Short follow-on: “Does the Inertia of a Body Depend upon Its Energy Content?” — rest energy equals mass times *c* squared. Most famous equation in civilizational memory; later nuclear release makes the ledger brutal and concrete.
+
+**Why It Qualifies:**
+Unity of mass and energy. Cosmology of stars and bombs both drink from this identity. Technology of reactors and weapons is historical afterlife, not 1905 intent.
+
+**Three-Domain Reading:**
+
+- **Theology:** Substance and fire under one conservation deeper than either alone.
+- **Technology:** Energy accounting at the root of matter.
+- **Cosmology:** Stars shine by mass-debt paid as light.
+
+**Compressed Insight:**
+He wrote that a little mass is a treasury of light — and the century spent the treasury in war and power.
+
+**Confidence:** 0.96  
+**Sources:** LOC mass–energy paper summary; annus mirabilis fourth paper tradition; standard *E* = *mc*² history.
+
+---
+
+## Event 06 — *General Relativity* (1915–1916)
+
+**Title:** Gravity as Curved Spacetime
+
+**Passage or Trigger:**
+Culmination of equivalence principle and field equations: gravity is not a force in Newton’s sense but **curvature of spacetime** sourced by energy–momentum. Mercury perihelion; light deflection; gravitational redshift as classical tests. Hilbert’s concurrent work requires nuanced priority; Einstein’s physical path and public theory dominate the seat narrative.
+
+**Why It Qualifies:**
+Maximum cosmological rewrite since Newton. Geometry becomes physics. Modern black holes, gravitational waves, and relativistic cosmology stand on this.
+
+**Three-Domain Reading:**
+
+- **Theology:** The heavens’ law as elegant necessity, not occult action at a distance alone.
+- **Technology:** Tensor calculus and precision astronomy as instruments of a new gravity.
+- **Cosmology:** Universe as dynamical geometry.
+
+**Compressed Insight:**
+He taught mass how to tell space how to curve — and space how to tell mass how to move.
+
+**Confidence:** 0.96  
+**Sources:** Standard GR histories; 1915–16 field equations reception; Hilbert parallel noted in scholarship.
+
+---
+
+## Event 07 — *Eclipse of 1919*
+
+**Title:** The Sky Confirms the Equation
+
+**Passage or Trigger:**
+1919 solar eclipse expeditions (Eddington and others): measured deflection of starlight by the Sun matches GR over Newtonian expectation. Global press apotheosis — Einstein becomes public myth of genius overnight.
+
+**Why It Qualifies:**
+Science as public ritual of confirmation. Cosmology enters newspapers. Technology of expedition + photography judges a theory of the whole.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creation’s light bent as predicted — wonder as verification.
+- **Technology:** Eclipse logistics as experimental physics at planetary scale.
+- **Cosmology:** Spacetime curvature made visible at the Sun’s limb.
+
+**Compressed Insight:**
+A dark sun and a careful plate told the world his geometry was not only beautiful but true.
+
+**Confidence:** 0.95  
+**Sources:** Standard 1919 Eddington eclipse narrative; popular and scientific reception histories.
+
+---
+
+## Event 08 — *Nobel Prize* (1921)
+
+**Title:** Honored for Quanta, Not for Relativity
+
+**Passage or Trigger:**
+Nobel Prize in Physics 1921 (awarded 1922): citation for the **photoelectric effect** and services to theoretical physics — relativity still contested or cautious in committee politics. Irony fixed in history: the work that remade cosmology is not the prize line; the quantum paper is.
+
+**Why It Qualifies:**
+Institutional gnosis. Committees lag revolutions. Einstein’s public identity and the Academy’s citation diverge — Council records both.
+
+**Three-Domain Reading:**
+
+- **Theology:** Honor imperfectly aimed, still real.
+- **Technology:** Prize as soft power of science’s hierarchy.
+- **Cosmology:** Relativity already remaking the cosmos while medals look elsewhere.
+
+**Compressed Insight:**
+They crowned him for the light quantum — while space and time had already changed under his other hand.
+
+**Confidence:** 0.96  
+**Sources:** Nobel citation standard; annus mirabilis photoelectric note; Britannica prize context.
+
+---
+
+## Event 09 — *Quantum Debates and EPR* (1935)
+
+**Title:** “God Does Not Play Dice” — and Spooky Action
+
+**Passage or Trigger:**
+Lifelong tension with completeness of quantum mechanics (Bohr debates); 1935 **EPR** paper (Einstein–Podolsky–Rosen) argues quantum description is incomplete if locality and reality criteria hold. “Spooky action at a distance” enters the language; later Bell tests and entanglement technology outrun Einstein’s hope for a fuller classical-like completion — yet the questions remain generative.
+
+**Why It Qualifies:**
+Theology–physics of chance and locality. Complements Gödel/Turing limits in formal science with limits and riddles in physical description. Honesty: he helped found quantum and then fought its orthodoxy.
+
+**Three-Domain Reading:**
+
+- **Theology:** Providence, chance, and the intelligibility of law.
+- **Technology:** Entanglement later becomes resource (quantum info) he did not seek.
+- **Cosmology:** Separability of distant systems as philosophical–physical stake.
+
+**Compressed Insight:**
+He lit the quantum lamp, then argued the room was still too dark — completeness refused to come on his terms.
+
+**Confidence:** 0.94  
+**Sources:** Standard Bohr–Einstein and EPR histories; Wikipedia known quantum stance; textbook reception.
+
+---
+
+## Event 10 — *Emigration and Princeton*
+
+**Title:** Exile of the Cosmopolitan Mind
+
+**Passage or Trigger:**
+Rise of Nazism; Einstein leaves Germany; settles at the **Institute for Advanced Study**, Princeton. American years: research (unified field attempts), public intellectual life, Zionism and pacifism in complex mix, U.S. citizenship. Stateless and multi-national identity as modern scientific type.
+
+**Why It Qualifies:**
+Politics of knowledge. The century’s greatest physicist is a refugee. Arch Physics seat includes the cost of racial and political persecution of science.
+
+**Three-Domain Reading:**
+
+- **Theology:** Exile and hospitality; people of the book under threat.
+- **Technology:** IAS as monastery of pure theory.
+- **Cosmology:** Universal laws written by a man without a safe nation.
+
+**Compressed Insight:**
+He carried spacetime across an ocean — because a regime had no room for his blood or his mind.
+
+**Confidence:** 0.94  
+**Sources:** Standard emigration and Princeton IAS biographies.
+
+---
+
+## Event 11 — *Letter to Roosevelt* (1939)
+
+**Title:** Warning That Unlocked the Nuclear Age
+
+**Passage or Trigger:**
+August 1939 letter to President Franklin D. Roosevelt (drafted with **Leo Szilárd**, signed by Einstein) warning that uranium chain reaction might yield “extremely powerful bombs” and that Germany might pursue them — catalytic toward U.S. nuclear research (Manhattan Project lineage). Einstein himself not a bomb designer; later regrets and anti-nuclear advocacy complicate the legacy.
+
+**Why It Qualifies:**
+Maximum Technology–Theology collision. *E* = *mc*²’s afterlife becomes policy. Credit hygiene: Szilárd’s initiative central; Einstein’s name opens the door.
+
+**Three-Domain Reading:**
+
+- **Theology:** Knowledge of good and evil as energy release.
+- **Technology:** Fission as civilizational hinge.
+- **Cosmology:** Stellar power brought to Earth as weapon and reactor.
+
+**Compressed Insight:**
+He signed a letter so the free world would not be last to the fire — and spent years wishing fire had stayed in the stars.
+
+**Confidence:** 0.95  
+**Sources:** Standard Roosevelt letter / Szilárd histories; Manhattan Project context; Einstein’s later nuclear stance in biographies.
+
+---
+
+## Event 12 — *Death and Civilizational Afterlife* (1955)
+
+**Title:** The Face of Modern Physics
+
+**Passage or Trigger:**
+Dies 18 April 1955, Princeton. Brain studied; image becomes global icon (tongue photograph, wild hair). Equations enter every curriculum; GPS must correct for relativity; gravitational waves (2015 detection) and black-hole imaging fulfill GR predictions decades later. Failed unified-field dream remains unfinished homework for successors.
+
+**Why It Qualifies:**
+Afterlife at maximum density. Name = genius in popular speech. Scientific program continues without him — as with Newton, Darwin, Turing.
+
+**Three-Domain Reading:**
+
+- **Theology:** Creaturely limit; fame as secular sainthood.
+- **Technology:** Relativity inside phones and satellites.
+- **Cosmology:** Twentieth-century world-picture still Einsteinian at large scales.
+
+**Compressed Insight:**
+He died; the curved cosmos did not — and every GPS tick still pays rent to his spacetime.
+
+**Confidence:** 0.95  
+**Sources:** Death date standard; GR experimental afterlife (GPS, waves); public iconography.
+
+---
+
+## Sources / Working Notes
+
+**Primary**
+- 1905 *Annalen der Physik* papers (photoelectric; Brownian motion; electrodynamics of moving bodies; mass–energy)
+- General relativity papers 1915–16
+- EPR 1935
+- Roosevelt letter 1939 (with Szilárd)
+
+**Secondary**
+- Wikipedia annus mirabilis papers
+- Library of Congress Einstein annus mirabilis guide
+- Britannica Einstein biography (career arc)
+- Standard GR 1919 eclipse and Nobel citation histories
+- Szilárd–Einstein letter documentation
+
+**Open questions for later passes**
+- Cosmological constant history denser pass (static universe assumption → regret)
+- Mileva Marić collaboration debates — careful archival pass if seated dossier expands
+- Unified field equations late program technical inventory
+
+---
+
+## Seat checklist
+
+- [x] Research from papers and standard history (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events (Lorentz/Poincaré/Hilbert/Szilárd credit noted)
+- [ ] member_id: `albert-einstein`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Physics). Events grounded in 1905, general relativity, quantum debate, and nuclear-age conscience; precursors and co-actors named.*

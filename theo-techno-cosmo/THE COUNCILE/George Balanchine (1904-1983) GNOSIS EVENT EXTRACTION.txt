@@ -1,0 +1,355 @@
+GEORGE BALANCHINE GNOSIS EVENT EXTRACTION —
+**Council Corpus Build | Theology · Technology · Cosmology**
+**Arch of Human Gnosis:** Performance Arts → Dance & Choreography
+**Era:** 1904–1983 (St. Petersburg / Europe / New York)
+**Status:** Extraction complete (seating candidate) — drawn from repertory, NYCB history, and documented Stravinsky collaboration
+
+---
+
+## Contribution
+
+Choreographer who co-founded **New York City Ballet** and defined a modernist classical vocabulary often called “neoclassical”; who de-emphasized plot in favor of music-visualization and pure dance architecture; who created enduring works from *Apollo* (1928, Ballets Russes) through *Agon* (1957) and beyond; and who made the Stravinsky–Balanchine partnership a century’s model of composer–choreographer cosmos.
+
+## Key Insight
+
+Dance need not tell a story to mean: bodies in time can be the full argument — music made visible, plot optional, the stage a geometry of force, line, and partnership.
+
+## TTC Emphasis
+
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note
+
+Balanchine is extracted from **works and company practice**, not only celebrity. Primary lines:
+
+1. Imperial Ballet School / early Soviet years; departure west
+2. Diaghilev’s Ballets Russes — *Apollon musagète* (*Apollo*, 1928)
+3. American years: School of American Ballet; New York City Ballet (with Lincoln Kirstein)
+4. Stravinsky collaborations (*Apollo*, *Orpheus*, *Agon*, many others)
+5. “Black and white” / leotard ballets; plotless aesthetic
+6. Death 1983; company as living archive of the style
+
+---
+
+## Event 01 — *Petersburg Training*
+
+**Title:** The Imperial Body School
+
+**Passage or Trigger:**
+Training at the Imperial Ballet School, St. Petersburg — classical vocabulary as first language. Later American neoclassicism stands on this Russian classical grammar.
+
+**Why It Qualifies:**
+Craft inheritance. Innovation requires a completed technique to bend. Dance seat begins in the barre’s discipline.
+
+**Three-Domain Reading:**
+
+- **Theology:** Ascesis of the body as vocation.
+- **Technology:** Classical syllabus as reproducible tech.
+- **Cosmology:** Court-theater tradition as world-form.
+
+**Compressed Insight:**
+He carried an empire’s classroom in his muscles — then rebuilt ballet’s skyline in New York.
+
+**Confidence:** 0.91  
+**Sources:** Standard Balanchine biography / NYCB history.
+
+---
+
+## Event 02 — *Westward*
+
+**Title:** Exile Becomes Style
+
+**Passage or Trigger:**
+Departure from the Soviet sphere; work in Europe with Diaghilev’s Ballets Russes — the young choreographer on the international modernist stage.
+
+**Why It Qualifies:**
+History forces mobility; form survives transplant. Russian training + European modernism → later American synthesis.
+
+**Three-Domain Reading:**
+
+- **Theology:** Vocation under political weather.
+- **Technology:** Company hopping as R&D network.
+- **Cosmology:** Ballet as transnational language.
+
+**Compressed Insight:**
+He left one capital of dance and helped invent another — without dropping the classical sentence.
+
+**Confidence:** 0.90  
+**Sources:** Career chronology Ballets Russes period.
+
+---
+
+## Event 03 — *Apollo* (1928)
+
+**Title:** The Young God Learns the Muses
+
+**Passage or Trigger:**
+*Apollon musagète* (*Apollo*), created for Diaghilev’s Ballets Russes (1928), music by **Igor Stravinsky** — oldest Balanchine ballet still in NYCB repertory. Birth of a choreographic voice: clarity, classical line, myth without clutter.
+
+**Why It Qualifies:**
+Founding masterpiece of the Balanchine–Stravinsky axis. Order, pedagogy of the god, muses as partners in form — dance as education of power into art.
+
+**Three-Domain Reading:**
+
+- **Theology:** Apollo as order against chaos — art as civilizing force.
+- **Technology:** Stripped classical vocabulary as modern instrument.
+- **Cosmology:** Stage as birth-place of a god’s craft.
+
+**Compressed Insight:**
+At twenty-four he taught a god to dance — and found his own mature grammar in the lesson.
+
+**Confidence:** 0.95  
+**Sources:** NYCB *Apollo* repertory notes; PNB and standard dance histories.
+
+---
+
+## Event 04 — *School of American Ballet / NYCB*
+
+**Title:** An American Classical House
+
+**Passage or Trigger:**
+With **Lincoln Kirstein**, founding of School of American Ballet and **New York City Ballet** — institution-building so a style can reproduce dancers, not only premieres.
+
+**Why It Qualifies:**
+Gnosis of infrastructure: choreography dies without a school and company. Arch Dance seat requires pedagogy and repertory machinery.
+
+**Three-Domain Reading:**
+
+- **Theology:** Transmission of a way of the body across generations.
+- **Technology:** Company + school as dual OS of a style.
+- **Cosmology:** New York as new capital of classical modern dance.
+
+**Compressed Insight:**
+He did not only make ballets — he made a house that could keep making Balanchine bodies.
+
+**Confidence:** 0.94  
+**Sources:** NYCB official history; SAB founding narrative.
+
+---
+
+## Event 05 — *Plot Optional*
+
+**Title:** Ballet Without Story First
+
+**Passage or Trigger:**
+Balanchine’s general de-emphasis of plot — works that trust music and movement architecture over narrative synopsis (*Agon*, many “leotard” ballets; also story works exist, but the signature is often plotless or plot-light). NYCB: ranging from *Agon* to *La Valse*, *Apollo*, *Scotch Symphony*.
+
+**Why It Qualifies:**
+Central aesthetic gnosis: meaning in dance is not borrowed from novel or libretto alone. The body-in-time is sufficient argument.
+
+**Three-Domain Reading:**
+
+- **Theology:** Form as revelation without parable.
+- **Technology:** Choreographic structure as primary text.
+- **Cosmology:** Stage as pure event-space of forces.
+
+**Compressed Insight:**
+He trusted steps more than plots — and proved audiences could follow music with their eyes alone.
+
+**Confidence:** 0.95  
+**Sources:** NYCB historical description of Balanchine’s aesthetic; *Agon* “no story” reception.
+
+---
+
+## Event 06 — *Stravinsky Partnership*
+
+**Title:** Composer and Choreographer as Twin Legislators
+
+**Passage or Trigger:**
+Long collaboration with **Igor Stravinsky** — scores written for or inseparable from Balanchine’s staging (*Apollo*, *Orpheus*, *Agon*, others). Mutual modernism: rhythmic complexity answered by bodily counterpoint.
+
+**Why It Qualifies:**
+Model of inter-art cosmos. Music not wallpaper; dance not illustration — joint construction of time.
+
+**Three-Domain Reading:**
+
+- **Theology:** Ordered polyphony of arts.
+- **Technology:** Collaboration protocol across media.
+- **Cosmology:** Twentieth-century modernism as shared weather.
+
+**Compressed Insight:**
+He and Stravinsky built ballets the way architects share a plan — neither art the servant.
+
+**Confidence:** 0.96  
+**Sources:** Kennedy Center / NYCB Stravinsky–Balanchine materials; festival repertory.
+
+---
+
+## Event 07 — *Agon* (1957)
+
+**Title:** Contest in Black and White
+
+**Passage or Trigger:**
+*Agon* (1957), music by Stravinsky; cast of twelve; no story; black-and-white leotard aesthetic; movements modeled/named after French court dances. Hallmark of NYCB repertory; “contest” (*agon*) as pure formal drama.
+
+**Why It Qualifies:**
+Peak statement of plotless modern classical ballet. Court-dance memory under serial/modern sound — tradition and rupture in one body of work.
+
+**Three-Domain Reading:**
+
+- **Theology:** Agon as struggle without narrative villain — pure trial of form.
+- **Technology:** Leotard ballet as lab conditions (line visible, costume minimal).
+- **Cosmology:** Stage as arena of abstract forces.
+
+**Compressed Insight:**
+He named a ballet Contest and removed the plot — so the only war left was music against muscle, perfectly timed.
+
+**Confidence:** 0.96  
+**Sources:** NYCB *Agon* notes; 1957 premiere reception; Stravinsky collaboration histories.
+
+---
+
+## Event 08 — *Speed, Attack, Musicality*
+
+**Title:** The American Tempo
+
+**Passage or Trigger:**
+Balanchine style markers in reception: speed, clarity, off-balance energy, extreme musical responsiveness — classical steps accelerated and angled for a New World company physique and audience.
+
+**Why It Qualifies:**
+National-cultural technology of the body. Classicism not frozen museum — living dialect.
+
+**Three-Domain Reading:**
+
+- **Theology:** Energy as affirmation of life in form.
+- **Technology:** Training that produces a distinct attack.
+- **Cosmology:** New York time signature written into ballet.
+
+**Compressed Insight:**
+He taught classical steps to run at city speed — without dropping the grammar.
+
+**Confidence:** 0.90  
+**Sources:** Critical consensus on Balanchine technique/style.
+
+---
+
+## Event 09 — *Partnering as Architecture*
+
+**Title:** Two Bodies as One Sentence
+
+**Passage or Trigger:**
+Pas de deux and ensemble architecture across the repertory — balance, support, and independence redesigned; women often given formidable technical centrality in the Balanchine aesthetic.
+
+**Why It Qualifies:**
+Social form onstage: partnership as structural, not only romantic plot. Gendered labor of dance made visible as design.
+
+**Three-Domain Reading:**
+
+- **Theology:** Relation as created order.
+- **Technology:** Partnering vocabulary as engineering of weight.
+- **Cosmology:** Duet as miniature society of forces.
+
+**Compressed Insight:**
+He wrote sentences for two bodies — grammar of trust under extreme balance.
+
+**Confidence:** 0.89  
+**Sources:** Repertory analysis tradition; company practice.
+
+---
+
+## Event 10 — *Repertory as Living Scripture*
+
+**Title:** The Company as Canon
+
+**Passage or Trigger:**
+NYCB’s identity as keeper of Balanchine works — restaging, coaching, style transmission after his death. Choreography as unstable text needing living bodies.
+
+**Why It Qualifies:**
+Unlike a score alone, dance’s survival is **continuous incarnation**. Institution as afterlife technology.
+
+**Three-Domain Reading:**
+
+- **Theology:** Apostolic succession of style.
+- **Technology:** Coaching lineage as version control.
+- **Cosmology:** Time threatens every ballet; company fights time.
+
+**Compressed Insight:**
+He left ballets that only exist when danced — so the company became the book.
+
+**Confidence:** 0.92  
+**Sources:** NYCB as Balanchine house; repertory practice.
+
+---
+
+## Event 11 — *Music Visualization Credo*
+
+**Title:** See the Orchestra
+
+**Passage or Trigger:**
+Balanchine’s oft-cited orientation: choreography as response to musical structure — dancers make audible form visible. (Popular paraphrases vary; the practice is consistent across Stravinsky works and beyond.)
+
+**Why It Qualifies:**
+Doctrine of the seat: dance’s first loyalty is often **to the score’s architecture**, not the program note.
+
+**Three-Domain Reading:**
+
+- **Theology:** Order shared between ear and eye.
+- **Technology:** Analytic listening as choreographic method.
+- **Cosmology:** Time arts as one family.
+
+**Compressed Insight:**
+He choreographed so the audience could see the music thinking.
+
+**Confidence:** 0.91  
+**Sources:** Stravinsky collaborations; critical descriptions of musicality.
+
+---
+
+## Event 12 — *Death 1983*
+
+**Title:** The Master Leaves the Barre
+
+**Passage or Trigger:**
+Dies 30 April 1983; NYCB and the School continue the style. Twentieth-century ballet’s dominant American classical voice ends as person, continues as system.
+
+**Why It Qualifies:**
+Finite life; infinite restagings. Arch Dance’s modern pole fixed.
+
+**Three-Domain Reading:**
+
+- **Theology:** Mortality of the maker.
+- **Technology:** Institutional survival of form.
+- **Cosmology:** New York’s dance weather permanently shifted.
+
+**Compressed Insight:**
+He stopped counting — and the company kept counting his tempos for him.
+
+**Confidence:** 0.93  
+**Sources:** Death date; company continuity.
+
+---
+
+## Sources / Working Notes
+
+**Primary / near-primary**
+- Repertory: *Apollo*, *Agon*, Stravinsky ballets, NYCB canon
+- Company and school institutional record
+
+**Secondary**
+- NYCB official history pages
+- Kennedy Center education materials on Balanchine & *Agon*
+- Standard dance biographies
+
+**Open questions for later passes**
+- Specific dancer-creation stories (Tallchief, Farrell, etc.) as nested events
+- Broadway/Hollywood work as American vernacular dossier
+- Relationship to Petipa lineage in finer technical grain
+
+---
+
+## Seat checklist
+
+- [x] Research from repertory and company history (full pass)
+- [x] Contribution + key insight locked
+- [x] Multiple source-grounded events
+- [ ] member_id: `george-balanchine`
+- [ ] Registry enrollment when ready
+- [x] PENDING scaffold replaced by full extraction
+
+---
+
+*Council of Reflection — Arch of Human Gnosis (Dance & Choreography). Events grounded in works and NYCB/Stravinsky documentation; not celebrity gossip.*
