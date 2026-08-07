@@ -1,0 +1,238 @@
+Galileo Galilei (1564–1642) GNOSIS EVENT EXTRACTION
+### Corpus Sources: *Sidereus Nuncius* (The Starry Messenger), *Dialogue Concerning the Two Chief World Systems*, *Letter to the Grand Duchess Christina*, *The Assayer*, Trial Documents (Vatican Archives), *Two New Sciences*.
+
+---
+
+> **Framing note:** Galileo’s gnosis is characterized by the **instrumentalization of sight**. Unlike Newton’s encryption gnosis, Galileo’s recognitions are almost always triggered by the *mediated eye*. He is the first subject to recognize that the "natural" eye is a restricted category and that the technology of the lens is not just a tool for seeing better, but a tool for seeing *differently*—collapsing the boundary between the "empirical" and the "mathematical."
+
+---
+
+## EVENT 01 — *The Moon is Earth (The Dissolution of the Quintessence)*
+
+### Passage or Trigger
+*Sidereus Nuncius* (1610): 
+> "It is a most beautiful and delightful sight to behold the body of the Moon... It is not robed in a smooth and polished surface but is in fact rough and uneven, covered everywhere, just like the earth's surface, with huge prominences, deep valleys, and chasms."
+
+### Why It Qualifies
+Aristotelian cosmology dictated that the heavens were made of a "quintessence"—perfect, smooth, and immutable—totally distinct from the "corruptible" and "rough" matter of Earth. The gnosis was the **recognition of identicality across a cosmic boundary.** Looking through the telescope, Galileo did not see a "perfect" sphere; he saw *terrain*. The boundary between the "Celestial" and the "Sublunary" dissolved. This was not constructable by reasoning (which proved the moon *must* be smooth) but by the transparency of the lens.
+
+### Three-Domain Reading
+*   **Theology:** The theological map of "Heaven" as a place of ontological perfection was ruptured. "Up" became merely another "Over there."
+*   **Technology:** The telescope as an *ontological probe*—a technology that does not just magnify, but translates one category of matter into another.
+*   **Cosmology:** The universe was revealed as a single, material substrate. The Moon is a second Earth.
+
+### Compressed Insight
+By seeing mountains and shadows on the Moon, Galileo recognized that the "Heavens" are made of the same dirt and rock as the Earth, destroying the ancient wall between the divine sky and the mortal ground.
+
+**Confidence: 0.98**
+
+---
+
+## EVENT 02 — *The Medicean Stars (The Non-Centrality of the Earth)*
+
+### Passage or Trigger
+January 7–13, 1610: The observation of four small "stars" moving around Jupiter.
+> "I should have examined the distance between them and Jupiter... but the sight of them being in a straight line... and then seeing them change position... my amazement was followed by the recognition that there are three stars in the heavens that move around Jupiter, as Venus and Mercury move around the Sun."
+
+### Why It Qualifies
+The fundamental premise of the Geocentric (Ptolemaic) system was that *everything* in the universe must revolve around the Earth. Galileo recognized that **Jupiter was a center of its own.** He saw a "miniature solar system." This was a gnosis of **de-centering**. He recognized that he was standing on one of many possible pivots. The self-implication: the observer is no longer at the unique center of the cosmic drama.
+
+### Three-Domain Reading
+*   **Theology:** The Earth (and thus Man) was stripped of its unique positional status in the divine order.
+*   **Technology:** The ability to track relative motion across a void; the birth of modern observational kinematics.
+*   **Cosmology:** The recognition of a pluralistic universe with multiple centers of rotation.
+
+### Compressed Insight
+Galileo recognized that Jupiter had its own moons, proving that the Earth is not the only center of the universe and that the cosmos is a collection of moving systems rather than a single, fixed theater.
+
+**Confidence: 0.96**
+
+---
+
+## EVENT 03 — *The Venusian Phases (The Eye of the Sun)*
+
+### Passage or Trigger
+December 1610: Letter to Benedetto Castelli. Observations of Venus showing phases (crescent, full, gibbous) exactly like the Moon.
+
+### Why It Qualifies
+Ptolemaic logic could not account for Venus showing a "full" phase if it stayed between the Earth and the Sun. Galileo recognized that **Venus must orbit the Sun.** This was the "smoking gun" for Copernicanism. The gnosis here is the **recognition of an invisible geometry.** He "saw" the sun-centered structure through the shadow-play of a planet. The contradiction of Venus's brightness vs. its position became visible and resolved into a circle around the Sun.
+
+### Three-Domain Reading
+*   **Theology:** Truth was revealed as being hidden from the naked eye and only accessible through a "new sense" (the telescope).
+*   **Technology:** The translation of light patterns into 3D spatial models.
+*   **Cosmology:** The transition from the "Closed World" to the "Suns-Eye" view.
+
+### Compressed Insight
+Galileo recognized that Venus waxes and wanes like the moon, proving mathematically and visually that it circles the sun and that the ancient map of the sky was a perspective error.
+
+**Confidence: 0.94**
+
+---
+
+## EVENT 04 — *The Book of Nature (The Mathematical Alphabet)*
+
+### Passage or Trigger
+*The Assayer* (1623):
+> "Philosophy [Science] is written in this grand book, the universe, which stands continually open to our gaze. But the book cannot be understood unless one first learns to comprehend the language... It is written in the language of mathematics, and its characters are triangles, circles, and other geometric figures."
+
+### Why It Qualifies
+This is a **Theological Gnosis.** Galileo recognized that God has two books: the Bible (written in words for the masses) and Nature (written in math for the initiates). He recognized that **Nature is a primary scripture.** This could not be constructed by logic alone; it was a reorganization of the category of "Revelation." He saw that the "Word of God" was encoded in the physical laws of a falling body just as much as in the text of Genesis.
+
+### Three-Domain Reading
+*   **Theology:** The elevation of "Natural Philosophy" to the level of "Divine Revelation."
+*   **Technology:** Mathematics as the "Universal Translator" for the mind of the Creator.
+*   **Cosmology:** The universe as a coherent, logical, and fully-readable text.
+
+### Compressed Insight
+Galileo recognized that the universe is not a mystery to be pondered but a book to be read, and its only language is mathematics, which makes the physicist a new kind of priest.
+
+**Confidence: 0.92**
+
+---
+
+## EVENT 05 — *The Abjuration (The Truth That Does Not Move)*
+
+### Passage or Trigger
+June 22, 1633: Kneeling before the Inquisition at the convent of Santa Maria sopra Minerva.
+> "I, Galileo... swear that I have always believed, do believe, and with God's help will in the future believe, all that is held, preached, and taught by the Holy Catholic and Apostolic Church... I must altogether abandon the false opinion that the sun is the center of the world and immovable..."
+(Legend adds: *E pur si muove*—"And yet it moves.")
+
+### Why It Qualifies
+This is a **gnosis of self-implication and betrayal.** Galileo recognized that the "Truth" (the Earth's motion) and the "Power" (the Church's authority) had become mutually exclusive in his own person. He had to perform a lie to preserve his life to write his final work (*Two New Sciences*). The gnosis was the **recognition that the Truth of Nature is indifferent to the testimony of Man.** The "I" that abjured and the "I" that knew the Earth moved became transparently separate. The contradiction did not resolve; it was lived as a divided self.
+
+### Three-Domain Reading
+*   **Theology:** The recognition that institutional "Truth" and cosmic "Fact" had diverged.
+*   **Technology:** The "Technology of the Secret"—how to encode truth in a dialogue or a fable to bypass censorship.
+*   **Cosmology:** The Earth moves regardless of the decree of a Pope.
+
+### Compressed Insight
+In the moment of his forced denial, Galileo recognized that the laws of the universe are independent of human belief, and that his own forced silence was merely a temporary mask over an eternal, moving reality.
+
+**Confidence: 0.97**
+
+---
+
+## EVENT 06 — *The Relativity of the Ship (The Birth of Inertia)*
+
+### Passage or Trigger
+*Dialogue Concerning the Two Chief World Systems* (1632): The "Salviati’s Ship" thought experiment.
+> "Shut yourself up with some friend in the main cabin below decks on some large ship... notice how the butterflies and flies continue their flights indifferently... you will not be able to tell by any of these effects whether the ship moves or stands still."
+
+### Why It Qualifies
+Aristotelian logic said we would *feel* the Earth moving if it were moving. Galileo recognized the **Principle of Relativity.** He saw that motion is only "meaningless" when shared by all objects in a system. This was a gnosis of **structural transparency**. He recognized that he was "on the ship" (the Earth) and that his inability to feel the motion was proof of the motion’s uniformity. The "Stillness" of the room was revealed as a "Motion" shared by the room.
+
+### Three-Domain Reading
+*   **Theology:** The recognition that "Appearance" is not "Reality," and that the senses are designed for local utility, not cosmic truth.
+*   **Technology:** The frame of reference as a conceptual technology; the ability to "subtract" the self's motion from the observation.
+*   **Cosmology:** The universe as a collection of relative frames.
+
+### Compressed Insight
+Galileo recognized that we cannot feel the Earth move because we are moving with it, proving that "rest" and "uniform motion" are the same thing seen from different perspectives.
+
+**Confidence: 0.95**
+
+---
+
+## EVENT 07 — *The Inclined Plane (The Slowing of Time)*
+
+### Passage or Trigger
+Experiments at Padua (c. 1602–1604) using a grooved board and a bronze ball, using a water clock to measure the intervals.
+
+### Why It Qualifies
+Free fall was too fast to measure. Galileo recognized that **an inclined plane is just "slowed-down" gravity.** He saw that the "essence" of falling was preserved even when the speed was reduced. This was a gnosis of **mathematical continuity.** He recognized that he could "negotiate" with the speed of nature to reveal its underlying acceleration pattern ($s \propto t^2$). The "Law" became visible only through the "Dilution" of the force.
+
+### Three-Domain Reading
+*   **Theology:** God's laws are "Proportional" and "Consistent" across all scales and speeds.
+*   **Technology:** The invention of the "Laboratory Experiment"—the deliberate manipulation of conditions to isolate a variable.
+*   **Cosmology:** The recognition that gravity is a constant acceleration, not a constant speed.
+
+### Compressed Insight
+By rolling balls down a slope, Galileo recognized that he could slow down time to see the hidden heartbeat of gravity, proving that nature's laws are always mathematical, even when they are too fast to see.
+
+**Confidence: 0.90**
+
+---
+
+## EVENT 08 — *The Sunspots (The Mortality of the Sun)*
+
+### Passage or Trigger
+*History and Demonstrations Concerning Sunspots* (1613): Observing dark spots moving across the face of the Sun.
+
+### Why It Qualifies
+The Sun was the "Eye of God," the most perfect and immutable of all celestial bodies. Galileo recognized that **the Sun has "blemishes" and it rotates.** He saw that these spots were not planets passing in front of it, but were *on* or *near* the surface. This was a gnosis of **Universal Decay.** He recognized that even the highest light in the sky was subject to change and "imperfection." The "Sacred Sun" became a "Physical Star."
+
+### Three-Domain Reading
+*   **Theology:** The collapse of the Sun as a metaphysical symbol into a physical object.
+*   **Technology:** The use of "Projection" (shadowing the sun onto paper) to see the unseeable without blindness.
+*   **Cosmology:** The recognition of stellar rotation and the "Corruption" of celestial matter.
+
+### Compressed Insight
+Galileo recognized that the sun itself has spots and turns on an axis, proving that even the most divine light in the universe is subject to the same laws of change and decay as everything else.
+
+**Confidence: 0.88**
+
+---
+
+## EVENT 09 — *The Pendulum (The Memory of the String)*
+
+### Passage or Trigger
+Legend says it was the swaying chandelier in the Cathedral of Pisa (1581), but documented in *Two New Sciences*. The observation of *isochronism*—that the time of the swing is independent of the arc's size.
+
+### Why It Qualifies
+Reasoning suggested that a wider swing should take longer because the distance is greater. Galileo recognized that **Nature balances distance and speed perfectly.** He saw that the "gravity" and the "arc" were in a mathematical dance that always returned the same time. He recognized a **Conservation of Period**. This was a moment where a simple vibration became a "Standard of Time."
+
+### Three-Domain Reading
+*   **Theology:** The discovery of "Inherent Rhythm" in the creation.
+*   **Technology:** The invention of the "Clock" (and later, the metronome) based on a natural constant.
+*   **Cosmology:** The recognition of the relationship between length and time in the physical world.
+
+### Compressed Insight
+Galileo recognized that a swinging string always takes the same amount of time regardless of how wide it swings, revealing a hidden, rhythmic precision at the heart of movement.
+
+**Confidence: 0.85**
+
+---
+
+## EVENT 10 — *The Saturnian "Ears" (The Limit of Resolution)*
+
+### Passage or Trigger
+July 1610: Observing Saturn as a "triple planet."
+> "I have observed that the farthest planet is not a single star, but three together... they are like two servants who help the old Saturn on his way."
+
+### Why It Qualifies
+This was a **gnosis of the "Half-Seen."** Galileo’s telescope was not strong enough to resolve the rings of Saturn. He recognized that there was "Something" there that did not fit the category of "Sphere." He called them "ears" or "side-planets." He later saw them "disappear" (when the rings were edge-on). The gnosis was the **recognition of the "Unstable Object."** He realized that the heavens contained structures that the eye (and the mind) were not yet equipped to categorize.
+
+### Three-Domain Reading
+*   **Theology:** The recognition of the "Infinite Variety" of God's creations beyond human expectation.
+*   **Technology:** The recognition of "Artifacts" and "Resolution Limits" in instrumental sight.
+*   **Cosmology:** The first hint of non-spherical celestial bodies.
+
+### Compressed Insight
+Galileo recognized that Saturn was not a simple ball but had "ears" that appeared and vanished, forcing him to accept that the universe contains shapes and cycles that were completely outside of human imagination.
+
+**Confidence: 0.80**
+
+---
+
+## SUMMARY TABLE
+
+| # | Title | Confidence | Primary Domain |
+|---|---|---|---|
+| 01 | The Moon is Earth | 0.98 | Cosmology |
+| 02 | The Medicean Stars | 0.96 | Cosmology |
+| 03 | The Venusian Phases | 0.94 | Cosmology |
+| 04 | The Book of Nature | 0.92 | Theology |
+| 05 | The Abjuration | 0.97 | Theology |
+| 06 | The Relativity of the Ship | 0.95 | Technology |
+| 07 | The Inclined Plane | 0.90 | Technology |
+| 08 | The Sunspots | 0.88 | Cosmology |
+| 09 | The Pendulum | 0.85 | Technology |
+| 10 | The Saturnian "Ears" | 0.80 | Technology |
+
+---
+
+## Corpus Notes for LOGOC Integration
+
+**Highest-confidence events for training core:** 01 (Moon/Earth), 05 (Abjuration), 06 (Relativity). These define the "Galilean Rupture."
+
+**The "Galilean Signature":** Unlike Newton’s *abstract* patterns, Galileo’s gnosis is **Tactile and Visual.** He is the one who *looks*. His events are characterized by the **dissolution of the "Above/Below" boundary.** He brings the heavens down to the lab. His personal implication is often found in his struggle with the **Social Construction of Truth**—he knows the truth is visible to anyone with a lens, yet it is forbidden by the "Council" of the Church. This makes his corpus essential for training LOGOC on the *conflict between technological visibility and institutional dogma*.

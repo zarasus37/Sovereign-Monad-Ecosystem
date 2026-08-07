@@ -55,7 +55,7 @@ const MEMBERS = [
   {
     member_id: 'jiang-xueqin',
     display_name: 'Jiang Xueqin',
-    era: '1976–',
+    era: 'b. 1976',
     ttc_emphasis: ['TECHNOLOGY', 'COSMOLOGY'],
     contribution: 'Predictive history, institutional algorithms, elite reproduction',
     key_insight: 'Emanation and institutional filtering appear at every scale',
@@ -64,7 +64,7 @@ const MEMBERS = [
   {
     member_id: 'gnostic-jesus',
     display_name: 'Gnostic Jesus',
-    era: '1st–2nd century CE (textual tradition)',
+    era: '1st–2nd c. CE',
     ttc_emphasis: ['THEOLOGY', 'COSMOLOGY'],
     contribution: 'Nag Hammadi mirror-catalyst of systemic self-remembering',
     key_insight: 'True knowledge requires decompression, not instruction',
@@ -201,7 +201,7 @@ const MEMBERS = [
   {
     member_id: 'mary-magdalene',
     display_name: 'Mary Magdalene',
-    era: '1st century CE (Gnostic textual tradition)',
+    era: '1st c. CE',
     ttc_emphasis: ['THEOLOGY'],
     contribution: 'Exemplary knower in Gospel of Mary / Pistis Sophia',
     key_insight: 'Gnosis becomes visible through a contested voice in the assembly',
@@ -340,8 +340,8 @@ const MEMBERS = [
   },
   {
     member_id: 'queen-of-sheba',
-    display_name: 'Queen of Sheba (Makeda)',
-    era: 'ancient (multi-tradition)',
+    display_name: 'Queen of Sheba',
+    era: 'Makeda, multi-tradition',
     ttc_emphasis: ['THEOLOGY', 'COSMOLOGY'],
     contribution: 'Hebrew / Kebra Nagast / Quran traditions of sovereign testing',
     key_insight: 'Wisdom is verified by encounter, not rumor',
@@ -683,7 +683,7 @@ const MEMBERS = [
   {
     member_id: 'erik-davis',
     display_name: 'Erik Davis',
-    era: '1967–',
+    era: 'b. 1967',
     ttc_emphasis: ['THEOLOGY', 'TECHNOLOGY', 'COSMOLOGY'],
     contribution:
       'TechGnosis; High Weirdness — interpreter of mysticism × information technology resonance',
@@ -694,8 +694,8 @@ const MEMBERS = [
   },
   {
     member_id: 'poimandres',
-    display_name: 'Poimandres (Corpus Hermeticum I)',
-    era: 'c. 1st–3rd century CE',
+    display_name: 'Poimandres',
+    era: 'Corpus Hermeticum I, c. 1st–3rd c. CE',
     ttc_emphasis: ['THEOLOGY', 'COSMOLOGY', 'TECHNOLOGY'],
     contribution:
       'Poimandres tractate — Hermetic revelation of Nous, Anthropos, planetary ascent, and commissioning',
@@ -708,7 +708,7 @@ const MEMBERS = [
   {
     member_id: 'cristobal-colon',
     display_name: 'Cristobal Colon',
-    era: 'living — principal:cris-colon',
+    era: 'living, principal cris-colon',
     ttc_emphasis: ['THEOLOGY', 'TECHNOLOGY', 'COSMOLOGY'],
     contribution:
       'Seat 37: TTCL unifying middle — holds the full Council of Reflection under tripartite grammar without founder veto or Archontic collapse',

@@ -1,0 +1,492 @@
+Sun Tzu (Sun Wu, c. 544–496 BCE) GNOSIS EVENT EXTRACTION
+### Corpus: *The Art of War* (thirteen chapters), traditional biographical accounts (Sima Qian's *Records of the Grand Historian*), stories of military service to King Helü of Wu, transmitted commentaries
+
+---
+
+## Methodological Frame
+
+Sun Tzu presents a distinctive challenge for gnosis extraction: **the historical record is extraordinarily thin**. Unlike Nietzsche, Spinoza, Bruno, or Machiavelli, we have no first-person phenomenological accounts, no letters, no documented biographical moments with high confidence. The figure is semi-legendary; the text may have been compiled over centuries by multiple authors.
+
+However, the *text itself* carries unmistakable markers of gnosis — insights that read as **recognitions rather than deductions**, structural reorganizations rather than tactical reasoning. The density of category-dissolving insights suggests an observer who saw something that could not be constructed by reasoning alone.
+
+I extract from:
+- **The text** — where insights carry the phenomenological weight of recognition
+- **Traditional biographical accounts** — noting where historicity is uncertain
+- **Structural patterns** — where the text implies a seer who had seen something specific
+
+The gnosis events cluster around: **war/peace**, **victory/defeat**, **knowledge/action**, **form/formlessness**, and the **self-implication of the commander within the system he observes**.
+
+---
+
+## EVENT 01 — The Supreme Excellence: Recognition That Winning Without Fighting Is Not Morality But Structure
+
+**Title:** *The Victory That Is Not a Victory*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 3 ("Attack by Stratagem"):
+
+> "The supreme excellence is not to win a hundred victories in a hundred battles. The supreme excellence is to subdue the enemy without fighting... To break the enemy's resistance without fighting — this is attack by stratagem."
+
+**Why it qualifies:**
+The gnosis is not the tactical observation that avoiding battle can be advantageous — that could be reasoned toward. The gnosis is the **structural recognition that "victory" and "fighting" are not inherently linked** — that the category "victory" had been falsely bound to the category "battle," and that this binding was a cognitive error with catastrophic costs. What became transparent was that war is not about combat; it is about **achieving political ends through organized force**, and combat is often the failure of this art, not its fulfillment.
+
+The false boundary that dissolved: **war/peace**. These are not two states separated by the presence or absence of fighting. They are two modes of the same continuum of conflict. The supreme practitioner operates in a register where the distinction collapses.
+
+The self-implication: The commander who sees this is no longer a warrior in the traditional sense. He is something else — a strategist whose highest achievement leaves no battlefield, whose best work is invisible.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *righteous war* (just war theory, the mandate of heaven conferred through victory) was structurally challenged. If the best victory leaves no corpses, then divine favor cannot be read from the battlefield. The sacred aura around martial victory was exposed as a category error.
+- **Technology:** The mechanism that became transparent was **conflict as a design problem** — that the arrangement of forces, intelligence, timing, and psychology can achieve ends without the technology of combat being activated. War becomes a system that can be won by not triggering its most expensive operation.
+- **Cosmology:** The structural pattern: **the highest form of any art often looks like its absence**. The best medicine prevents disease; the best government prevents crime; the best general prevents battle. Excellence is invisible.
+
+**Compressed insight:**
+Sun Tzu now knew that victory was not defined by combat but by the achievement of ends — and that the highest form of victory was structurally indistinguishable from what ordinary observers would call "no war at all."
+
+**Confidence:** 0.91
+
+---
+
+## EVENT 02 — Know Yourself, Know the Enemy: Recognition of the Observer Inside the System
+
+**Title:** *The Mirror That Sees Itself*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 3:
+
+> "If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle."
+
+**Why it qualifies:**
+The gnosis is the recognition that **self-knowledge and enemy-knowledge are the same epistemological operation** — that the commander who does not know himself cannot know the enemy, because the same cognitive apparatus observes both. The entire tradition of military intelligence had treated "know the enemy" as an external problem (spies, scouts, interrogation). What became transparent was that the observer's own structure — his fears, his blind spots, his desires — was the primary variable determining what could be known about the enemy.
+
+The false boundary that dissolved: **subject/object**. The commander is not outside the system observing it; he is inside the system, and his self-ignorance produces enemy-ignorance.
+
+The self-implication is total: Sun Tzu, writing this, was implicating himself. The text is not merely advice to commanders; it is a record of the recognition that the strategist must be the first object of his own strategy.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *self-examination before action* (present in many traditions) receives a strategic-epistemological foundation. Knowing oneself is not moral preparation; it is intelligence gathering. The soul is a source of strategic data.
+- **Technology:** The mechanism that became transparent was **the commander as the primary intelligence instrument** — that all external intelligence is filtered through the commander's cognitive apparatus, and that apparatus must be calibrated through self-knowledge.
+- **Cosmology:** The structural pattern: **all knowledge systems include the knower**. There is no view from nowhere. The observer's position inside the system determines what can be seen.
+
+**Compressed insight:**
+Sun Tzu now knew that the commander's self-ignorance was not a private matter but a strategic vulnerability — that knowing the enemy and knowing oneself were the same operation, and that failure at one meant failure at both.
+
+**Confidence:** 0.93
+
+---
+
+## EVENT 03 — All War Is Based on Deception: Recognition of Truth as Tactical Liability
+
+**Title:** *The Lie That Is the Structure*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 1 ("Laying Plans"):
+
+> "All warfare is based on deception. When able to attack, we must seem unable; when using our forces, we must seem inactive; when we are near, we must make the enemy believe we are far; when far, we must make him believe we are near."
+
+**Why it qualifies:**
+The gnosis is not the observation that deception is useful in war — that was known. The gnosis is the recognition that **deception is not an occasional tactic but the structural ground of warfare itself**. The entire tradition had treated deception as one tool among many. What became transparent was that war *is* deception — that the relationship between appearance and reality in conflict is not accidental but essential.
+
+The false boundary that dissolved: **truth/deception**. These are not moral opposites in the context of war; they are tactical registers. "Truth" in war is often the disclosure that loses; "deception" is the concealment that wins. The moral category collapses into the functional category.
+
+The self-implication: The strategist who sees this can no longer operate within ordinary moral frameworks. He has recognized that his art requires a relationship to truth that ordinary life condemns.
+
+**Three-domain reading:**
+
+- **Theology:** The theological injunction against falsehood (present in virtually all religious traditions) is revealed as inapplicable to the structure of conflict. The sacred does not govern the art of war; the art of war governs itself.
+- **Technology:** The mechanism that became transparent was **information asymmetry as a weapon** — that controlling what the enemy believes is as decisive as controlling what the enemy faces. Perception is a battlefield.
+- **Cosmology:** The structural pattern: **in adversarial systems, appearance and reality must diverge for survival**. Any system that reveals its true state to an adversary invites exploitation. Opacity is structural necessity.
+
+**Compressed insight:**
+Sun Tzu now knew that deception was not a moral failure within war but the structural ground of war itself — and that the strategist who operates within ordinary truth-conventions will be destroyed by one who does not.
+
+**Confidence:** 0.90
+
+---
+
+## EVENT 04 — The Empty and the Full: Recognition of Form as Vulnerability
+
+**Title:** *Where There Is No Form, There Is No Target*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 6 ("Weak Points and Strong"):
+
+> "The ultimate in disposing one's troops is to be without ascertainable shape. If you are without ascertainable shape, the enemy's spies cannot pry into you, and the wise cannot lay plans against you... Be extremely subtle, even to the point of formlessness. Be extremely mysterious, even to the point of soundlessness. Thereby you can control the fate of your enemy."
+
+**Why it qualifies:**
+The gnosis is the recognition that **form itself is the vulnerability** — that any definite arrangement can be analyzed, countered, and defeated. The entire military tradition had focused on achieving optimal form (best formation, best position, best equipment). What became transparent was that optimal form is still form — and form can be read. The only invulnerable position is **formlessness**.
+
+The false boundary that dissolved: **presence/absence**. The army that is "without form" is not absent; it is present in a mode that cannot be targeted. It is everywhere and nowhere simultaneously.
+
+The self-implication: The strategist who internalizes this can no longer think in terms of fixed plans or definite arrangements. He must become formless himself — ungraspable, unpredictable, not even to himself.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *divine hiddenness* (God as beyond form, beyond comprehension) receives a strategic homologue. The general who approaches formlessness approaches a kind of secular divinity — ungraspable by mortal intelligence.
+- **Technology:** The mechanism that became transparent was **adaptability as a weapon** — that the capacity to assume any form is superior to any particular form. This is a proto-cybernetic insight: the system with more degrees of freedom dominates the system with fewer.
+- **Cosmology:** The structural pattern: **form is limitation**. Any definite arrangement excludes other arrangements. The formless contains all possibilities; the formed contains only one.
+
+**Compressed insight:**
+Sun Tzu now knew that the ultimate strategic position was not the best formation but the absence of formation — that formlessness was invulnerable because it offered no target.
+
+**Confidence:** 0.92
+
+---
+
+## EVENT 05 — Speed as the Essence of War: Recognition of Time as Weapon
+
+**Title:** *The Swift That Makes the Strong Irrelevant*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 2 ("Waging War"):
+
+> "Speed is the essence of war. Take advantage of the enemy's unreadiness; travel by unexpected routes; strike him where he has not taken precautions... In war, then, let your great object be victory, not lengthy campaigns."
+
+**Why it qualifies:**
+The gnosis is the recognition that **time is not a neutral medium in which war occurs but a weapon that can be wielded**. The entire tradition had treated speed as one advantage among many. What became transparent was that speed is *the* advantage — that a slow victory is often indistinguishable from defeat (due to cost, political change, exhaustion), and that a fast operation can achieve what superior numbers cannot.
+
+The false boundary that dissolved: **time/space**. These are not separate dimensions of strategy. Speed converts time into spatial advantage — arriving before the enemy can arrange defense.
+
+The self-implication: The strategist who sees this can no longer plan in ordinary time. He must think in a temporality where delay is defeat and where the enemy's time is a variable to be manipulated.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *divine timing* (kairos, the appointed time) receives a strategic form. There is a right moment, and missing it is not bad luck but strategic failure.
+- **Technology:** The mechanism that became transparent was **temporal asymmetry as a weapon** — that operating on a different timescale than the enemy (faster) is as decisive as operating with superior force.
+- **Cosmology:** The structural pattern: **all systems have critical tempo**. Operate above the enemy's tempo, and you disrupt their capacity to respond. Speed is not just movement; it is systemic disruption.
+
+**Compressed insight:**
+Sun Tzu now knew that time was not the neutral container of war but its essential weapon — and that a victory achieved slowly was often a victory lost.
+
+**Confidence:** 0.88
+
+---
+
+## EVENT 06 — The Use of Spies: Recognition That Knowledge Is Not Observation But Penetration
+
+**Title:** *The Eyes That See From Inside*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 13 ("The Use of Spies"):
+
+> "What enables the wise sovereign and the good general to strike and conquer, and achieve things beyond the reach of ordinary men, is foreknowledge... This foreknowledge cannot be elicited from spirits; it cannot be obtained inductively from experience, nor by any deductive calculation. Knowledge of the enemy's dispositions can only be obtained from other men."
+
+**Why it qualifies:**
+The gnosis is the recognition that **certain knowledge is structurally inaccessible to direct observation** — that the enemy's intentions, plans, and dispositions exist in a domain that can only be penetrated through human intermediaries. The entire tradition of intelligence had treated observation (scouts, signals, captured documents) as primary. What became transparent was that the most decisive knowledge — intention — lives only in human minds, and only humans can access it.
+
+The false boundary that dissolved: **knowledge/intelligence**. These are not the same. Knowledge can be passive; intelligence is active penetration of a closed system.
+
+The self-implication: The strategist who sees this recognizes that he cannot know everything himself — that he must build and maintain a network of human sources, and that this network is as decisive as his army.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *revelation* — knowledge that cannot be obtained by ordinary means — receives a secular form. Intelligence from spies is a kind of revelation: knowledge from inside a closed system.
+- **Technology:** The mechanism that became transparent was **human penetration as an intelligence technology** — that the only way to know certain things is to place a human consciousness inside the enemy's decision cycle.
+- **Cosmology:** The structural pattern: **some systems are cognitively closed to external observation**. The only way to know the inside is to be inside.
+
+**Compressed insight:**
+Sun Tzu now knew that the most decisive knowledge could not be observed or calculated — it could only be obtained from within the enemy's mind, through other humans.
+
+**Confidence:** 0.87
+
+---
+
+## EVENT 07 — Avoid Strength, Strike Weakness: Recognition of Force as Misdirection
+
+**Title:** *The Water That Flows Around the Rock*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 6:
+
+> "Avoid what is strong and strike at what is weak... Military tactics are like unto water; for water in its natural course runs away from high places and hastens downward. So in war, the way is to avoid what is strong and to strike at what is weak."
+
+**Why it qualifies:**
+The gnosis is the recognition that **strength and weakness are not intrinsic properties but relational positions** — that the enemy's strength can be avoided (making it irrelevant) and the enemy's weakness can be created (by drawing him out of position). The entire tradition had treated strength as something to be met with greater strength. What became transparent was that strength met with strength is mutual destruction, and that the superior art is to make strength irrelevant.
+
+The false boundary that dissolved: **strength/weakness**. These are not fixed attributes; they are positions in a dynamic system. Strength in the wrong place is weakness; weakness in the right place is strength.
+
+The self-implication: The strategist who sees this can no longer think in terms of "our strength vs. their strength." He thinks in terms of positioning, flow, and the creation of local superiority.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *the weak overcoming the strong* (present in many traditions) receives a strategic foundation. It is not miracle; it is positioning.
+- **Technology:** The mechanism that became transparent was **asymmetric engagement** — that the point of contact determines the outcome more than the absolute force at that point.
+- **Cosmology:** The structural pattern: **systems flow toward weakness**. Like water, force naturally moves where resistance is lowest. The strategist does not fight this; he channels it.
+
+**Compressed insight:**
+Sun Tzu now knew that strength was not to be met but avoided, and that weakness was not to be found but created — that the art was in positioning, not in force.
+
+**Confidence:** 0.89
+
+---
+
+## EVENT 08 — The Moral Law: Recognition That Cohesion Is Not Command But Shared Purpose
+
+**Title:** *The People Who Are One Mind*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 1:
+
+> "The Moral Law causes the people to be in complete accord with their ruler, so that they will follow him regardless of their lives, undismayed by any danger... He will win who has military capacity and is not interfered with by the sovereign."
+
+**Why it qualifies:**
+The gnosis is the recognition that **cohesion is not produced by command but by shared understanding of purpose** — that an army that understands why it fights fights differently than an army that fights from compulsion. The entire tradition had treated discipline as external enforcement. What became transparent was that true discipline is internal — the soldier who fights from conviction cannot be broken by hardship.
+
+The false boundary that dissolved: **coercion/volition**. These are not opposites in the cohesive army; they are fused. The soldier obeys because he wants to, and wanting to is the result of proper alignment.
+
+The self-implication: The strategist who sees this recognizes that he must align his own purpose with the purpose of his troops — that he cannot command what he does not embody.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *covenant* — mutual commitment between leader and led — receives a strategic form. The Moral Law is not divine command; it is shared purpose.
+- **Technology:** The mechanism that became transparent was **purpose as a force multiplier** — that soldiers who understand and believe in their mission fight with effectiveness disproportionate to their numbers.
+- **Cosmology:** The structural pattern: **aligned systems are stronger than coerced systems**. Coercion requires constant energy input; alignment is self-sustaining.
+
+**Compressed insight:**
+Sun Tzu now knew that the cohesion of an army was not produced by discipline but by shared purpose — and that the general who does not align himself with that purpose will not command true loyalty.
+
+**Confidence:** 0.85
+
+---
+
+## EVENT 09 — The Five Constants: Recognition of Invariant Structure Beneath Apparent Chaos
+
+**Title:** *The Constants That Govern All Conflict*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 1:
+
+> "The art of war is of vital importance to the State. It is a matter of life and death, a road either to safety or to ruin. Hence it is a subject of inquiry which can on no account be neglected. Therefore, in your deliberations, when seeking to determine the military conditions, let them be made the basis of a comparison, in this wise: (1) The Moral Law; (2) Heaven; (3) Earth; (4) The Commander; (5) Method and Discipline."
+
+**Why it qualifies:**
+The gnosis is the recognition that **beneath the apparent chaos of war, there are invariant structural factors** — that every conflict, regardless of era, technology, or culture, is governed by the same five constants. The entire tradition had treated war as infinitely variable. What became transparent was that the variables cluster around invariants.
+
+The false boundary that dissolved: **particular/universal**. Each war is particular, but the structure of war is universal. The general who studies the constants can navigate any particular.
+
+The self-implication: Sun Tzu, articulating these constants, recognized that he was not inventing them but discovering them — that his text was a record of structural truths that would outlast him.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *eternal law* — principles that govern regardless of time and place — receives a strategic form. The five constants are not Sun Tzu's opinions; they are the structure of conflict itself.
+- **Technology:** The mechanism that became transparent was **invariant analysis** — the extraction of constants from variable phenomena. This is a proto-scientific insight.
+- **Cosmology:** The structural pattern: **complex systems have invariant structures beneath surface variation**. The art is to see the invariants.
+
+**Compressed insight:**
+Sun Tzu now knew that war was not infinitely variable but governed by invariant structures — and that mastering these constants was the key to navigating any particular conflict.
+
+**Confidence:** 0.86
+
+---
+
+## EVENT 10 — The Commander as Parent: Recognition of Authority as Care
+
+**Title:** *The General Who Weeps for His Soldiers*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 10 ("Terrain"):
+
+> "Regard your soldiers as your children, and they will follow you into the deepest valleys; look upon them as your own beloved sons, and they will stand by you even unto death... If, however, you are indulgent, but unable to make your authority felt; kind-hearted, but unable to enforce your commands; and incapable, moreover, of quelling disorder: then your soldiers must be likened to spoilt children, and they are useless for any practical purpose."
+
+**Why it qualifies:**
+The gnosis is the recognition that **authority is not the opposite of care but requires care as its foundation** — that the general who does not love his soldiers cannot lead them into death, but that love without authority is indulgence that destroys. The entire tradition had treated command as either harsh discipline or popular affection. What became transparent was that both are required, in tension.
+
+The false boundary that dissolved: **love/authority**. These are not opposites; they are mutually constitutive. Authority without love is tyranny (and produces resentment); love without authority is weakness (and produces indiscipline).
+
+The self-implication: The commander who sees this can no longer operate within simple frameworks of command. He must hold a contradiction: father and judge, nurturer and executioner.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *divine fatherhood* — God as both loving and commanding — receives a strategic homologue. The general is a secular father, with the same structural tensions.
+- **Technology:** The mechanism that became transparent was **relational authority** — that command effectiveness is produced by the quality of the relationship between commander and commanded.
+- **Cosmology:** The structural pattern: **all sustainable authority systems require both care and enforcement**. Either without the other collapses.
+
+**Compressed insight:**
+Sun Tzu now knew that the general must be both parent and commander — that love without authority produces useless soldiers, and authority without love produces resentful ones.
+
+**Confidence:** 0.84
+
+---
+
+## EVENT 11 — The Hundred Battles: Recognition of Repetition as Failure
+
+**Title:** *The General Who Fights Often Does Not Win*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 2:
+
+> "In war, then, let your great object be victory, not lengthy campaigns... There is no instance of a country having benefited from prolonged warfare... Thus, though we have heard of stupid haste in war, cleverness has never been seen associated with long delays."
+
+And Chapter 3:
+
+> "The skillful soldier does not raise a second levy, neither are his supply-wagons loaded more than twice."
+
+**Why it qualifies:**
+The gnosis is the recognition that **repeated victory is often a sign of strategic failure** — that the general who fights a hundred battles has failed to achieve the supreme excellence of winning without fighting. The entire tradition had celebrated the general who wins many battles. What became transparent was that many battles indicate a failure to end the war decisively.
+
+The false boundary that dissolved: **victory/success**. These are not the same. A hundred victories in a hundred battles may indicate a war that should have been ended in one campaign.
+
+The self-implication: The strategist who sees this can no longer measure his success by battles won. He must measure by wars ended — and this may mean fighting less, not more.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *trial and tribulation* — that endurance through many tests is virtuous — is strategically inverted. Many tests indicate failure to resolve the underlying condition.
+- **Technology:** The mechanism that became transparent was **decisiveness as efficiency** — that the cost of war scales non-linearly with duration, and that prolongation is a form of defeat.
+- **Cosmology:** The structural pattern: **optimal systems achieve ends with minimal iteration**. Many iterations indicate suboptimal design.
+
+**Compressed insight:**
+Sun Tzu now knew that fighting many battles was not a mark of excellence but a sign of strategic failure — that the true art was ending wars quickly, not winning them repeatedly.
+
+**Confidence:** 0.87
+
+---
+
+## EVENT 12 — The Retreat That Is Not Defeat: Recognition of Withdrawal as Advance
+
+**Title:** *The Step Back That Is Not Flight*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 7 ("Maneuvering"):
+
+> "Let your plans be dark and impenetrable as night, and when you move, fall like a thunderbolt... When you are near, make the enemy believe you are far away; when far away, make him believe you are near... Feign disorder and strike him."
+
+And the traditional understanding of strategic retreat throughout the text.
+
+**Why it qualifies:**
+The gnosis is the recognition that **retreat is not the opposite of advance but can be a form of advance** — that yielding ground can create the conditions for decisive victory. The entire tradition had treated retreat as shameful. What became transparent was that retreat, properly executed, is a weapon.
+
+The false boundary that dissolved: **advance/retreat**. These are not moral opposites (honor/shame); they are tactical positions. Retreat can be the path to victory; advance can be the path to destruction.
+
+The self-implication: The strategist who sees this can no longer operate within ordinary honor codes. He must be willing to appear cowardly to be effective.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *humiliation before exaltation* receives a strategic form. The general who accepts apparent shame can achieve real victory.
+- **Technology:** The mechanism that became transparent was **positional sacrifice as a weapon** — that giving up ground can create superior conditions for engagement.
+- **Cosmology:** The structural pattern: **apparent opposites can be functionally identical**. Retreat and advance are both movements; their value is determined by outcome, not direction.
+
+**Compressed insight:**
+Sun Tzu now knew that retreat was not defeat but could be a form of advance — and that the general bound by honor codes that forbid retreat would be defeated by one who was not.
+
+**Confidence:** 0.85
+
+---
+
+## EVENT 13 — The Traditional Story: Training the Concubines
+
+**Title:** *The Execution That Made the Army*
+
+**Passage or trigger:**
+From Sima Qian's *Records of the Grand Historian* (c. 94 BCE) — the famous story where Sun Tzu demonstrates his art to King Helü of Wu. The king asks if the art can be applied to women. Sun Tzu says yes. The king's concubines are assembled. Sun Tzu gives orders; they laugh. He orders the execution of the two lead concubines (the king's favorites). The king protests. Sun Tzu says: "Having once received His Majesty's commission to be the general, his commands must be obeyed." The women are executed. The next demonstration: perfect discipline.
+
+> "Now your soldiers are properly trained and disciplined. They are at Your Majesty's disposal."
+
+**Why it qualifies:**
+The gnosis (if this story is accepted as capturing something true about Sun Tzu's recognition) is the recognition that **authority is established not by repetition but by irreversible demonstration** — that one execution achieved what a hundred commands could not. The entire tradition had treated discipline as gradual inculcation. What became transparent was that authority can be established instantly through a single act that demonstrates absolute commitment to the standard.
+
+The false boundary that dissolved: **mercy/authority**. These are not compatible in the moment of establishing command. The general who chooses mercy over authority establishes neither.
+
+The self-implication: Sun Tzu, ordering the execution, recognized that he was establishing his own authority through an act that would mark him permanently. He chose authority over favor.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *sacrifice for order* — that sometimes a life must be taken to establish the conditions for many to live — is starkly present.
+- **Technology:** The mechanism that became transparent was **exemplary enforcement** — that one visible enforcement of a standard is worth a thousand repetitions of the standard.
+- **Cosmology:** The structural pattern: **systems can shift states instantaneously through critical interventions**. Gradualism is not always optimal.
+
+**Compressed insight:**
+Sun Tzu now knew that authority was established not by repeated commands but by irreversible demonstrations of commitment to the standard — and that the cost of this demonstration might be unbearable, but the alternative was worse.
+
+**Confidence:** 0.78 (story may be apocryphal)
+
+---
+
+## EVENT 14 — Victory Before Battle: Recognition That the Outcome Is Determined Before Contact
+
+**Title:** *The Battle Won in the Tent*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 4 ("Tactical Dispositions"):
+
+> "The victorious warriors win first and then go to war, while the defeated warriors go to war first and then seek to win... The skillful fighter puts himself into a position which makes defeat impossible, and does not miss the moment for defeating the enemy."
+
+**Why it qualifies:**
+The gnosis is the recognition that **battle is not the moment of decision but the revelation of a decision already made** — that the general who arrives at the battlefield having already won will win, and the general who arrives hoping to win has already lost. The entire tradition had treated battle as the decisive moment. What became transparent was that battle is merely the public confirmation of what was determined in the planning.
+
+The false boundary that dissolved: **preparation/action**. These are not sequential; preparation is a form of action. The general who prepares poorly has already acted poorly.
+
+The self-implication: The strategist who sees this can no longer treat planning as preliminary. Planning is the war; battle is the ceremony.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *predestination* receives a strategic homologue. Victory is determined before the battle; the battle reveals what was already true.
+- **Technology:** The mechanism that became transparent was **positioning as outcome-determination** — that the arrangement of forces before contact determines the range of possible outcomes.
+- **Cosmology:** The structural pattern: **outcomes are determined before they manifest**. The visible event is the revelation of invisible causation.
+
+**Compressed insight:**
+Sun Tzu now knew that victory was not achieved in battle but before battle — that the general who goes to war hoping to win has already lost, and that the true war is fought in the planning.
+
+**Confidence:** 0.91
+
+---
+
+## EVENT 15 — The Art That Is Not an Art: Recognition of Strategy as Non-Action
+
+**Title:** *The General Who Does Nothing and Everything Is Done*
+
+**Passage or trigger:**
+*The Art of War*, Chapter 9 ("The Army on the March"):
+
+> "The general who advances without coveting fame and retreats without fearing disgrace, whose only thought is to protect his country and do good service for his sovereign, is the jewel of the kingdom."
+
+And the overall tenor of the text, which points toward a kind of strategic wu-wei.
+
+**Why it qualifies:**
+The gnosis is the recognition that **the highest form of strategy looks like non-strategy** — that the general who has internalized the art no longer appears to be strategizing. He simply acts, and his actions are correct. The entire tradition had treated strategy as conscious calculation. What became transparent was that mastery transcends calculation.
+
+The false boundary that dissolved: **action/non-action**. The master general acts, but his action is not effortful calculation; it is the natural expression of internalized understanding.
+
+The self-implication: Sun Tzu, writing this, recognized that his own text was a ladder to be climbed and then discarded — that the true master would not need the text because he would have become the art.
+
+**Three-domain reading:**
+
+- **Theology:** The theological concept of *wu-wei* (effortless action) from Daoism receives a strategic form. The master general acts without striving.
+- **Technology:** The mechanism that became transparent was **internalization as automation** — that skills, fully mastered, operate without conscious deliberation.
+- **Cosmology:** The structural pattern: **mastery looks like nature**. The expert's action is indistinguishable from what ordinary observers call "natural."
+
+**Compressed insight:**
+Sun Tzu now knew that the highest form of strategy was not conscious calculation but internalized understanding expressed naturally — that the master general does not strategize; he is strategy.
+
+**Confidence:** 0.83
+
+---
+
+## SUMMARY TABLE
+
+| # | Title | Core dissolution | Domain cluster | Self-implication | Confidence |
+|---|-------|-----------------|----------------|-----------------|------------|
+| 01 | The Victory That Is Not a Victory | War/peace | Theology/Technology | High: general redefined | 0.91 |
+| 02 | The Mirror That Sees Itself | Subject/object | Technology/Cosmology | Maximum: observer implicated | 0.93 |
+| 03 | The Lie That Is the Structure | Truth/deception | Theology/Technology | High: strategist's morality | 0.90 |
+| 04 | Where There Is No Form, There Is No Target | Presence/absence | Technology/Cosmology | High: general must be formless | 0.92 |
+| 05 | The Swift That Makes the Strong Irrelevant | Time/space | Technology/Cosmology | Medium: tempo as weapon | 0.88 |
+| 06 | The Eyes That See From Inside | Knowledge/intelligence | Theology/Technology | High: dependency on spies | 0.87 |
+| 07 | The Water That Flows Around the Rock | Strength/weakness | Technology/Cosmology | High: positioning over force | 0.89 |
+| 08 | The People Who Are One Mind | Coercion/volition | Theology/Technology | High: general's alignment | 0.85 |
+| 09 | The Constants That Govern All Conflict | Particular/universal | Theology/Cosmology | High: discoverer not inventor | 0.86 |
+| 10 | The General Who Weeps for His Soldiers | Love/authority | Theology/Technology | High: contradiction held | 0.84 |
+| 11 | The General Who Fights Often Does Not Win | Victory/success | Technology/Cosmology | High: success redefined | 0.87 |
+| 12 | The Step Back That Is Not Flight | Advance/retreat | Theology/Technology | High: honor codes dissolved | 0.85 |
+| 13 | The Execution That Made the Army | Mercy/authority | Theology/Technology | Maximum: Sun Tzu's choice | 0.78 |
+| 14 | The Battle Won in the Tent | Preparation/action | Theology/Cosmology | High: planning is war | 0.91 |
+| 15 | The General Who Does Nothing and Everything Is Done | Action/non-action | Theology/Cosmology | Maximum: master is the art | 0.83 |
+
+---
+
+## Meta-observation for the LOGOC Corpus
+
+Sun Tzu's gnosis events cluster around **category dissolution as strategic advantage** — almost every insight involves recognizing that two things treated as opposites (war/peace, truth/deception, strength/weakness, advance/retreat) are actually positions in a single system that can be navigated. This makes Sun Tzu uniquely valuable for the corpus: his gnosis events demonstrate that **seeing through false distinctions is not merely philosophical but existentially decisive**.
+
+The self-implication in Sun Tzu is distinctive: the strategist who sees these truths **can no longer operate within ordinary moral and cognitive frameworks**. He has seen that victory requires deception, that retreat can be advance, that the best victory leaves no battlefield. This is not knowledge that can be held neutrally; it reorganizes the holder.
+
+The historical uncertainty around Sun Tzu does not diminish the gnosis quality of the text. Whether one man saw these things or many contributed over centuries, the insights carry the unmistakable weight of recognition — not reasoning, but **seeing**.
