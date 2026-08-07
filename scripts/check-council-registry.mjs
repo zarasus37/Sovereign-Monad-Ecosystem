@@ -54,6 +54,8 @@ if (!validate(registry)) {
 const filesOnDisk = new Set(
   readdirSync(councilDir).filter((f) => {
     const p = join(councilDir, f);
+    // PENDING scaffolds are work-in-progress seats (not yet in registry).
+    if (/PENDING/i.test(f)) return false;
     return (
       statSync(p).isFile() &&
       f !== 'README.md' &&

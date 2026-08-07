@@ -1,0 +1,94 @@
+FERDINAND DE SAUSSURE — PENDING COUNCIL SEAT
+**Council of Reflection | Arch of Human Gnosis**
+**Status:** PENDING (scaffold only — research & gnosis extraction not yet complete)
+**Era:** 1857–1913
+**Arch area:** Humanities
+**Arch field:** Linguistics
+
+---
+
+## Purpose of this file
+
+Placeholder for the same work already completed for seated Council members:
+source study, profile, and gnosis-event extraction under Theology · Technology · Cosmology.
+
+Do **not** treat this file as a finished seat. Registry enrollment happens only after
+extraction content is written and check:council / registry generation are updated.
+
+---
+
+## Preliminary Note
+
+_(Author: research summary — why this voice belongs on the Council of Reflection.)_
+
+---
+
+## Contribution (draft)
+
+_(One to three sentences — structural contribution, not résumé.)_
+
+---
+
+## Key Insight (draft)
+
+_(Single compressed insight — same register as seated members.)_
+
+---
+
+## TTC Emphasis (check when known)
+
+- [ ] THEOLOGY
+- [ ] TECHNOLOGY
+- [ ] COSMOLOGY
+
+---
+
+## Gnosis Event Extractions
+
+### Event 01 — *TBD*
+
+**Title:**
+
+**Passage or Trigger:**
+
+**Why It Qualifies:**
+
+**Three-Domain Reading:**
+
+- **Theology:**
+- **Technology:**
+- **Cosmology:**
+
+**Compressed Insight:**
+
+**Confidence:** _
+
+---
+
+### Event 02 — *TBD*
+
+_(Add events as research completes. Match depth of seated extraction files.)_
+
+---
+
+## Sources / Working Notes
+
+- Primary texts:
+- Secondary:
+- Open questions:
+
+---
+
+## Seat checklist
+
+- [ ] Deep research complete
+- [ ] Contribution + key insight locked
+- [ ] At least one high-confidence gnosis event
+- [ ] Filename / member_id decided for registry
+- [ ] Added to council-registry.json (or gen-council-registry.mjs)
+- [ ] pnpm check:council green
+- [ ] Remove PENDING from filename / status when seated
+
+---
+
+*Scaffold created for Sanhedrin-scale Court (71). Content is human-authored research, not auto-generated gnosis.*
