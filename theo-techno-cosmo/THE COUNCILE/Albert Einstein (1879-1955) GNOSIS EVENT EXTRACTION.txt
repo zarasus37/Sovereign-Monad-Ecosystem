@@ -1,361 +1,483 @@
 ALBERT EINSTEIN GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Natural Sciences → Physics
-**Era:** 1879–1955 (Ulm / Munich / Zurich / Bern patent office / Berlin / Princeton)
-**Status:** Extraction complete (seating candidate) — drawn from 1905 papers, general relativity, quantum debates, public ethics, and standard physics history
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Cosmos / law / life — invariant light; relative simultaneity; mass–energy; light quanta; gravity as geometry
+**Era:** 1879–1955 (Ulm / Zurich / Bern patent office / Berlin / Princeton)
+**Status:** Garden + quotation depth — **Einstein’s own sentences only** at full sense-units. Soft paraphrase is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Credit hygiene: Lorentz transformations and Poincaré insights precede full special-relativity synthesis; Minkowski geometrizes spacetime; Hilbert works GR in parallel (priority nuanced); light quanta build on Planck; EPR coauthored with Podolsky and Rosen; nuclear letter co-shaped by Szilárd.
 
 ---
 
 ## Contribution
 
-Physicist who, in the **annus mirabilis** of 1905, published papers on the **photoelectric effect** (light quanta), **Brownian motion** (atoms made operational), **special relativity**, and **mass–energy equivalence** (*E* = *mc*²); who completed **general relativity** (1915–16), recasting gravity as spacetime curvature and founding modern relativistic cosmology; who received the **1921 Nobel Prize** for the photoelectric law (not relativity); and who became the century’s emblem of scientific mind — while arguing with quantum completeness (EPR), warning Roosevelt about nuclear fission (with Szilárd), and spending late years at Princeton on unified-field hopes and public ethics.
+I published the 1905 papers on light quanta, Brownian motion, special relativity, and mass–energy; completed general relativity (1915–16), recasting gravity through the metric of spacetime; received the 1921 Nobel for the photoelectric law; and argued that the quantum-mechanical description of physical reality given by wave functions is not complete.
 
 ## Key Insight
 
-Space and time are not a fixed stage separate from matter and light: the speed of light is invariant, simultaneity is relative, mass and energy are one ledger, and gravity is geometry — so the cosmos is a dynamical spacetime whose laws can be written as equations a patent clerk (and then a world) can check against the sky.
+The phenomena of electrodynamics and mechanics possess no properties corresponding to absolute rest; light propagates in empty space with a definite velocity *c* independent of the motion of the emitting body; simultaneity is defined by light-signal clocks and has no absolute signification; the mass of a body is a measure of its energy-content; light consists of finite energy quanta absorbed or generated only as a whole; and the laws of physics must remain valid for any system of co-ordinates moving in any manner — the *g*στ describing the gravitation-field and the metrical properties of the four-dimensional region.
 
 ## TTC Emphasis
 
-- THEOLOGY
-- TECHNOLOGY
 - COSMOLOGY
+- TECHNOLOGY
+- THEOLOGY
 
 ---
 
-## Preliminary Note
+## D-check (diligence / fact hygiene — before quotation garden)
 
-Einstein is extracted from **published papers and standard reception**, with credit hygiene: **Lorentz** transformations and **Poincaré** insights precede full special-relativity synthesis; **Minkowski** geometrizes the spacetime Einstein made physical; **Hilbert** works general relativity in parallel (priority nuanced); light quanta build on **Planck**; nuclear letter co-shaped by **Leo Szilárd**; expanding-universe observations later force Einstein to abandon the cosmological constant he inserted (and later regretted) — **Hubble** seat already covers the observational expansion line. Primary lines:
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| Patent-office romance as primary voice | **Secondary.** Work done while technical expert third class, Bern — situating act only; voice from published papers. |
+| “E = mc²” as exact 1905 sentence | **Notation later.** 1905: *If a body gives off the energy L in the form of radiation, its mass diminishes by L/c²*; mass is measure of energy-content. Modern E = mc² is equivalent rewrite (Perrett/Jeffery edition note). |
+| Nobel “for relativity” | **False.** 1921 Prize for services to theoretical physics, especially photoelectric law. |
+| God / dice as continuous primary | **Popular shorthand.** Not elevated as continuous public primary in this pass; EPR 1935 incompleteness argument is the locked quantum voice if needed later. |
+| Cosmological constant “biggest blunder” | **Secondary legend.** Not continuous Einstein sentence here; Hubble seat carries observational expansion line. |
+| Sole author of nuclear age | **Overclaim.** Szilárd co-shaped Roosevelt letter; act + co-credit, not sole primary monologue. |
+| Ether “abolished by fiat” without postulates | **Soft.** He raises two postulates; introduction of luminiferous ether proves superfluous for the theory developed. |
 
-1. Formation; Bern patent office
-2. 1905 annus mirabilis (four papers + *E* = *mc*² note)
-3. General relativity 1915–16; 1919 eclipse
-4. Nobel 1921 (photoelectric)
-5. Quantum debates; EPR 1935
-6. Emigration; Princeton IAS
-7. Roosevelt letter / nuclear age conscience
-8. Death 1955; civilizational afterlife
+**Dates:** Born 14 March 1879 (Ulm). Death 18 April 1955 (Princeton). Special relativity paper dated 30 June 1905; inertia/energy note 27 Sept 1905; light-quantum paper March 1905; GR foundation 1916 *Annalen*.
 
 ---
 
-## Event 01 — *Formation and the Patent Office*
+## Preliminary Note (source hygiene)
 
-**Title:** The Clerk Who Had Time to Think
+| Priority | Material |
+|----------|----------|
+| **1** | “On the Electrodynamics of Moving Bodies” (30 June 1905) — Perrett & Jeffery English (*The Principle of Relativity*, 1923) |
+| **1** | “Does the Inertia of a Body Depend upon Its Energy-Content?” (27 Sept 1905) — same English carrier |
+| **1** | “On a Heuristic Point of View about the Creation and Conversion of Light” (17 March 1905) — Wikisource English of German original |
+| **1** | “The Foundation of the Generalised Theory of Relativity” (1916) — Bose English (Calcutta 1920), Einstein notation restored |
+| **2** | EPR 1935 (*Phys. Rev.*); popular essays; letters — later tighten |
+| **3** | Soft biography / patent-desk myth / “blunder” anecdotes — **not** voice |
 
-**Passage or Trigger:**
-Born 14 March 1879, Ulm; Swiss education (ETH Zurich); technical expert third class at the **Swiss Patent Office**, Bern (from 1902). “Miracle year” work done largely outside university posts — thought experiments and Annalen papers from a desk that reviewed other people’s inventions.
+**Carriers used:** Fourmilab Perrett/Jeffery special relativity + E/L note; Wikisource light-quantum translation; Wikisource Bose GR foundation §§1–4 continuous.
 
-**Why It Qualifies:**
-Gnosis of institution: discovery not only from chairs. The Arch Physics seat begins in bureaucratic daylight and private night calculation.
+---
+
+## Event 01 — *Asymmetries which do not appear to be inherent*
+
+**Title:** Two postulates; ether superfluous
+
+**What I did / What was made:**
+I opened the electrodynamics of moving bodies from the magnet–conductor asymmetry and raised the principle of relativity and the constancy of *c* to postulates.
+
+**What I wrote / said (direct — full passage):**
+
+> It is known that Maxwell’s electrodynamics—as usually understood at the present time—when applied to moving bodies, leads to asymmetries which do not appear to be inherent in the phenomena. Take, for example, the reciprocal electrodynamic action of a magnet and a conductor. The observable phenomenon here depends only on the relative motion of the conductor and the magnet, whereas the customary view draws a sharp distinction between the two cases in which either the one or the other of these bodies is in motion. For if the magnet is in motion and the conductor at rest, there arises in the neighbourhood of the magnet an electric field with a certain definite energy, producing a current at the places where parts of the conductor are situated. But if the magnet is stationary and the conductor in motion, no electric field arises in the neighbourhood of the magnet. In the conductor, however, we find an electromotive force, to which in itself there is no corresponding energy, but which gives rise—assuming equality of relative motion in the two cases discussed—to electric currents of the same path and intensity as those produced by the electric forces in the former case.
+>
+> Examples of this sort, together with the unsuccessful attempts to discover any motion of the earth relatively to the “light medium,” suggest that the phenomena of electrodynamics as well as of mechanics possess no properties corresponding to the idea of absolute rest. They suggest rather that, as has already been shown to the first order of small quantities, the same laws of electrodynamics and optics will be valid for all frames of reference for which the equations of mechanics hold good. We will raise this conjecture (the purport of which will hereafter be called the “Principle of Relativity”) to the status of a postulate, and also introduce another postulate, which is only apparently irreconcilable with the former, namely, that light is always propagated in empty space with a definite velocity *c* which is independent of the state of motion of the emitting body. These two postulates suffice for the attainment of a simple and consistent theory of the electrodynamics of moving bodies based on Maxwell’s theory for stationary bodies. The introduction of a “luminiferous ether” will prove to be superfluous inasmuch as the view here to be developed will not require an “absolutely stationary space” provided with special properties, nor assign a velocity-vector to a point of the empty space in which electromagnetic processes take place.
+>
+> The theory to be developed is based—like all electrodynamics—on the kinematics of the rigid body, since the assertions of any such theory have to do with the relationships between rigid bodies (systems of co-ordinates), clocks, and electromagnetic processes. Insufficient consideration of this circumstance lies at the root of the difficulties which the electrodynamics of moving bodies at present encounters.
+
+— A. Einstein, “On the Electrodynamics of Moving Bodies” (30 June 1905), opening continuous. German *Annalen der Physik*; English Perrett & Jeffery in *The Principle of Relativity* (Methuen 1923). Fourmilab public-domain carrier.
+
+**How I see it (from inside, in action):**
+The magnet and the conductor show one phenomenon under relative motion, not two theories. Absolute rest is not in the phenomena. I raise two postulates and make the ether superfluous for what follows.
+
+**Why it qualifies as gnosis:**
+Electrodynamics and mechanics rewritten from postulates without absolute rest.
 
 **Three-Domain Reading:**
 
-- **Theology:** Vocation under ordinary labor.
-- **Technology:** Patent office as exposure to electromagnetic devices and priority claims.
-- **Cosmology:** Quiet room where the cosmos’s frame was rewritten.
+- **Theology:** Law without privileged absolute rest as creaturely stage-setting.
+- **Technology:** Clocks, rigid bodies, and co-ordinates as the instruments of theory.
+- **Cosmology:** Empty space not assigned a velocity-vector; light’s *c* independent of emitter.
 
 **Compressed Insight:**
-He stamped other men’s machines by day — and rebuilt space and time between applications.
+Two postulates suffice — and the luminiferous ether proves superfluous.
 
-**Confidence:** 0.94  
-**Sources:** Standard early-life and Bern patent-office biographies; annus mirabilis context (LOC, Wikipedia).
+**Confidence:** 0.99  
+**Sources:** 1905 electrodynamics opening continuous (Perrett/Jeffery).
 
 ---
 
-## Event 02 — *Photoelectric Effect* (1905)
+## Event 02 — *Judgments of simultaneous events*
 
-**Title:** Light as Countable Quanta
+**Title:** Time defined by synchronized clocks
 
-**Passage or Trigger:**
-1905 *Annalen der Physik* paper: light arrives in discrete energy packets *E* = *hf*; explains photoelectric threshold and energy of ejected electrons. Builds on Planck’s quantization of oscillators; radicalizes it for radiation itself. **Only discovery named in the 1921 Nobel citation.**
+**What I did / What was made:**
+I defined “time” and simultaneity for distant places by light-signal synchronism of stationary clocks.
 
-**Why It Qualifies:**
-Quantum door Einstein opens even as he later resists full quantum orthodoxy. Wave–particle tension born as physical law, not metaphor.
+**What I wrote / said (direct — full passage):**
+
+> If a material point is at rest relatively to this system of co-ordinates, its position can be defined relatively thereto by the employment of rigid standards of measurement and the methods of Euclidean geometry, and can be expressed in Cartesian co-ordinates.
+>
+> If we wish to describe the *motion* of a material point, we give the values of its co-ordinates as functions of the time. Now we must bear carefully in mind that a mathematical description of this kind has no physical meaning unless we are quite clear as to what we understand by “time.” We have to take into account that all our judgments in which time plays a part are always judgments of *simultaneous events*. If, for instance, I say, “That train arrives here at 7 o’clock,” I mean something like this: “The pointing of the small hand of my watch to 7 and the arrival of the train are simultaneous events.”
+>
+> It might appear possible to overcome all the difficulties attending the definition of “time” by substituting “the position of the small hand of my watch” for “time.” And in fact such a definition is satisfactory when we are concerned with defining a time exclusively for the place where the watch is located; but it is no longer satisfactory when we have to connect in time series of events occurring at different places, or—what comes to the same thing—to evaluate the times of events occurring at places remote from the watch.
+>
+> …
+>
+> If at the point A of space there is a clock, an observer at A can determine the time values of events in the immediate proximity of A by finding the positions of the hands which are simultaneous with these events. If there is at the point B of space another clock in all respects resembling the one at A, it is possible for an observer at B to determine the time values of events in the immediate neighbourhood of B. But it is not possible without further assumption to compare, in respect of time, an event at A with an event at B. We have so far defined only an “A time” and a “B time.” We have not defined a common “time” for A and B, for the latter cannot be defined at all unless we establish *by definition* that the “time” required by light to travel from A to B equals the “time” it requires to travel from B to A. Let a ray of light start at the “A time” *t*A from A towards B, let it at the “B time” *t*B be reflected at B in the direction of A, and arrive again at A at the “A time” *t'*A.
+>
+> In accordance with definition the two clocks synchronize if
+>
+> *t*B − *t*A = *t'*A − *t*B.
+>
+> We assume that this definition of synchronism is free from contradictions, and possible for any number of points; and that the following relations are universally valid:—
+>
+> 1. If the clock at B synchronizes with the clock at A, the clock at A synchronizes with the clock at B.
+> 2. If the clock at A synchronizes with the clock at B and also with the clock at C, the clocks at B and C also synchronize with each other.
+>
+> Thus with the help of certain imaginary physical experiments we have settled what is to be understood by synchronous stationary clocks located at different places, and have evidently obtained a definition of “simultaneous,” or “synchronous,” and of “time.” The “time” of an event is that which is given simultaneously with the event by a stationary clock located at the place of the event, this clock being synchronous, and indeed synchronous for all time determinations, with a specified stationary clock.
+>
+> In agreement with experience we further assume the quantity
+>
+> 2AB / (*t'*A − *t*A) = *c*,
+>
+> to be a universal constant—the velocity of light in empty space.
+>
+> It is essential to have time defined by means of stationary clocks in the stationary system, and the time now defined being appropriate to the stationary system we call it “the time of the stationary system.”
+
+— Einstein, “On the Electrodynamics of Moving Bodies” (1905), §1 Definition of Simultaneity continuous. Perrett & Jeffery.
+
+**How I see it (from inside, in action):**
+“7 o’clock” is two events together. Common time for A and B is not found in nature ready-made; I establish it by definition that light’s out-and-back times are equal.
+
+**Why it qualifies as gnosis:**
+Time becomes operational synchronism of clocks, not absolute backdrop.
 
 **Three-Domain Reading:**
 
-- **Theology:** Light as created packet and wave — mystery kept precise.
-- **Technology:** Foundation of photodiodes, solar cells, quantum optics lineage.
-- **Cosmology:** Radiation as grainy as matter’s atoms.
+- **Theology:** Judgments of simultaneous events as the form of temporal speech.
+- **Technology:** Watches, light signals, rigid rods as definitional instruments.
+- **Cosmology:** *c* as universal constant of empty space under the definition.
 
 **Compressed Insight:**
-He made light countable — and won the Nobel for a quantum he would never fully love.
+We have not defined a common “time” for A and B unless light’s time A→B equals B→A — by definition.
 
-**Confidence:** 0.97  
-**Sources:** Annus mirabilis papers (Wikipedia; LOC guide); Nobel citation standard fact.
+**Confidence:** 0.99  
+**Sources:** 1905 §1 continuous.
 
 ---
 
-## Event 03 — *Brownian Motion* (1905)
+## Event 03 — *No absolute signification to simultaneity*
 
-**Title:** Atoms Forced into the Laboratory
+**Title:** Relativity of lengths and times
 
-**Passage or Trigger:**
-1905 paper on motion of small particles in fluids: molecular-kinetic theory predicts observable jitter; relation linking diffusion and mobility. Helps compel acceptance of **atoms** as real, countable entities — not mere calculation aids.
+**What I did / What was made:**
+From the two principles I showed that clocks synchronized in the stationary system are not synchronous for observers moving with the rod — and that simultaneity has no absolute signification.
 
-**Why It Qualifies:**
-Matter’s discreteness secured statistically. Complements Lavoisier’s mass conservation and Fisher’s later genetics with physical atomism made measurable.
+**What I wrote / said (direct — full passage):**
+
+> The following reflexions are based on the principle of relativity and on the principle of the constancy of the velocity of light. These two principles we define as follows:—
+>
+> 1. The laws by which the states of physical systems undergo change are not affected, whether these changes of state be referred to the one or the other of two systems of co-ordinates in uniform translatory motion.
+> 2. Any ray of light moves in the “stationary” system of co-ordinates with the determined velocity *c*, whether the ray be emitted by a stationary or by a moving body. …
+>
+> …
+>
+> We imagine further that at the two ends A and B of the rod, clocks are placed which synchronize with the clocks of the stationary system, that is to say that their indications correspond at any instant to the “time of the stationary system” at the places where they happen to be. These clocks are therefore “synchronous in the stationary system.”
+>
+> We imagine further that with each clock there is a moving observer, and that these observers apply to both clocks the criterion established in §1 for the synchronization of two clocks. Let a ray of light depart from A at the time *t*A, let it be reflected at B at the time *t*B, and reach A again at the time *t'*A. Taking into consideration the principle of the constancy of the velocity of light we find that
+>
+> *t*B − *t*A = *r*AB / (*c* − *v*) and *t'*A − *t*B = *r*AB / (*c* + *v*)
+>
+> where *r*AB denotes the length of the moving rod—measured in the stationary system. Observers moving with the moving rod would thus find that the two clocks were not synchronous, while observers in the stationary system would declare the clocks to be synchronous.
+>
+> So we see that we cannot attach any *absolute* signification to the concept of simultaneity, but that two events which, viewed from a system of co-ordinates, are simultaneous, can no longer be looked upon as simultaneous events when envisaged from a system which is in motion relatively to that system.
+
+— Einstein, “On the Electrodynamics of Moving Bodies” (1905), §2 continuous (postulates + rod-clock conclusion). Perrett & Jeffery.
+
+**How I see it (from inside, in action):**
+Same light, same definition — different verdicts of synchronism for the two systems. Simultaneity is relative to the co-ordinate system.
+
+**Why it qualifies as gnosis:**
+Absolute simultaneous “now” across distance is dissolved by the postulates themselves.
 
 **Three-Domain Reading:**
 
-- **Theology:** Creation’s dust made visible in a microscope’s tremble.
-- **Technology:** Statistical mechanics as instrument of proof.
-- **Cosmology:** Continuum fluids as swarms of invisible bodies.
+- **Theology:** No absolute cosmic “now” as hidden stage.
+- **Technology:** Moving observers applying the same light criterion get different results.
+- **Cosmology:** Events simultaneous in one frame not simultaneous in another in relative motion.
 
 **Compressed Insight:**
-He watched pollen dance and read the atoms underneath — motion as census of the unseen.
+We cannot attach any absolute signification to the concept of simultaneity.
 
-**Confidence:** 0.95  
-**Sources:** Annus mirabilis lists; LOC Brownian-motion summary; standard atomic-acceptance histories.
+**Confidence:** 0.99  
+**Sources:** 1905 §2 continuous.
 
 ---
 
-## Event 04 — *Special Relativity* (1905)
+## Event 04 — *Sphere becomes ellipsoid; travelled clock lags*
 
-**Title:** No Ether Stage — One Invariant *c*
+**Title:** Physical meaning for rigid bodies and clocks
 
-**Passage or Trigger:**
-“On the Electrodynamics of Moving Bodies”: principle of relativity + constancy of light speed in vacuum; derives Lorentz transformations from postulates; relativizes simultaneity; length contraction and time dilation as physical geometry of measurement, not ether wind. Lorentz, Poincaré, and others supply precursor mathematics; Einstein’s synthesis makes the kinematics and electrodynamics of moving bodies a new physical world-picture.
+**What I did / What was made:**
+I stated the contraction of the moving sphere’s X-dimension and the lag of a clock moved in a closed curve — including the equatorial balance-clock.
 
-**Why It Qualifies:**
-Central Physics event. Absolute time dies. Complements Galileo/Newton seats with a successor frame that keeps local physics and kills the universal clock.
+**What I wrote / said (direct — full passage):**
+
+> We envisage a rigid sphere of radius R, at rest relatively to the moving system *k*, and with its centre at the origin of co-ordinates of *k*. The equation of the surface of this sphere moving relatively to the system K with velocity *v* is
+>
+> ξ² + η² + ζ² = R².
+>
+> The equation of this surface expressed in *x*, *y*, *z* at the time *t* = 0 is
+>
+> *x*² / (√(1 − *v*²/*c*²))² + *y*² + *z*² = R².
+>
+> A rigid body which, measured in a state of rest, has the form of a sphere, therefore has in a state of motion—viewed from the stationary system—the form of an ellipsoid of revolution with the axes
+>
+> R√(1 − *v*²/*c*²), R, R.
+>
+> Thus, whereas the Y and Z dimensions of the sphere (and therefore of every rigid body of no matter what form) do not appear modified by the motion, the X dimension appears shortened in the ratio 1 : √(1 − *v*²/*c*²), i.e. the greater the value of *v*, the greater the shortening. For *v* = *c* all moving objects—viewed from the “stationary” system—shrivel up into plane figures. For velocities greater than that of light our deliberations become meaningless; we shall, however, find in what follows, that the velocity of light in our theory plays the part, physically, of an infinitely great velocity.
+>
+> …
+>
+> Therefore,
+>
+> τ = *t* √(1 − *v*²/*c*²) = *t* − (1 − √(1 − *v*²/*c*²))*t*
+>
+> whence it follows that the time marked by the clock (viewed in the stationary system) is slow by 1 − √(1 − *v*²/*c*²) seconds per second, or—neglecting magnitudes of fourth and higher order—by ½*v*²/*c*².
+>
+> From this there ensues the following peculiar consequence. If at the points A and B of K there are stationary clocks which, viewed in the stationary system, are synchronous; and if the clock at A is moved with the velocity *v* along the line AB to B, then on its arrival at B the two clocks no longer synchronize, but the clock moved from A to B lags behind the other which has remained at B by ½*t v*²/*c*² (up to magnitudes of fourth and higher order), *t* being the time occupied in the journey from A to B.
+>
+> …
+>
+> If we assume that the result proved for a polygonal line is also valid for a continuously curved line, we arrive at this result: If one of two synchronous clocks at A is moved in a closed curve with constant velocity until it returns to A, the journey lasting *t* seconds, then by the clock which has remained at rest the travelled clock on its arrival at A will be ½*t v*²/*c*² second slow. Thence we conclude that a balance-clock at the equator must go more slowly, by a very small amount, than a precisely similar clock situated at one of the poles under otherwise identical conditions.
+
+— Einstein, “On the Electrodynamics of Moving Bodies” (1905), §4 continuous. Perrett & Jeffery.
+
+**How I see it (from inside, in action):**
+Motion shortens the X-measure of the rigid body and slows the moved clock. Light’s *c* is the physical limit; the equatorial clock is already a laboratory of the effect.
+
+**Why it qualifies as gnosis:**
+Kinematics of rods and clocks made predictive and measurable.
 
 **Three-Domain Reading:**
 
-- **Theology:** Creaturely time not God’s absolute stopwatch.
-- **Technology:** Electrodynamics of moving bodies as engineering truth at high *v*.
-- **Cosmology:** Spacetime (soon Minkowski’s) as single arena.
+- **Theology:** Finite creatures under a universal speed that plays the part of infinitely great velocity.
+- **Technology:** Balance-clocks, rods, equatorial–polar comparison as test.
+- **Cosmology:** Geometry of moving bodies depends on state of motion relative to the system.
 
 **Compressed Insight:**
-He kept light’s speed fixed and let clocks and rulers bend — so the ether could finally be unemployed.
+A rest-sphere is an ellipsoid in motion — and the travelled clock returns slow.
 
-**Confidence:** 0.97  
-**Sources:** Annus mirabilis paper 3; Britannica/standard SR; credit notes on Lorentz/Poincaré.
+**Confidence:** 0.99  
+**Sources:** 1905 §4 continuous.
 
 ---
 
-## Event 05 — *E = mc²* (1905)
+## Event 05 — *Mass is a measure of energy-content*
 
-**Title:** Mass Is a Form of Energy
+**Title:** Radiation carries inertia
 
-**Passage or Trigger:**
-Short follow-on: “Does the Inertia of a Body Depend upon Its Energy Content?” — rest energy equals mass times *c* squared. Most famous equation in civilizational memory; later nuclear release makes the ledger brutal and concrete.
+**What I did / What was made:**
+From the previous investigation I deduced that emission of energy L as radiation diminishes mass by L/*c*², and that radiation conveys inertia between emitting and absorbing bodies.
 
-**Why It Qualifies:**
-Unity of mass and energy. Cosmology of stars and bombs both drink from this identity. Technology of reactors and weapons is historical afterlife, not 1905 intent.
+**What I wrote / said (direct — full passage):**
+
+> The results of the previous investigation lead to a very interesting conclusion, which is here to be deduced.
+>
+> I based that investigation on the Maxwell-Hertz equations for empty space, together with the Maxwellian expression for the electromagnetic energy of space, and in addition the principle that:—
+>
+> *The laws by which the states of physical systems alter are independent of the alternative, to which of two systems of coordinates, in uniform motion of parallel translation relatively to each other, these alterations of state are referred (principle of relativity).*
+>
+> …
+>
+> From this equation it directly follows that:—
+>
+> *If a body gives off the energy L in the form of radiation, its mass diminishes by L/c².* The fact that the energy withdrawn from the body becomes energy of radiation evidently makes no difference, so that we are led to the more general conclusion that
+>
+> The mass of a body is a measure of its energy-content; if the energy changes by L, the mass changes in the same sense by L/9 × 10²⁰, the energy being measured in ergs, and the mass in grammes.
+>
+> It is not impossible that with bodies whose energy-content is variable to a high degree (e.g. with radium salts) the theory may be successfully put to the test.
+>
+> If the theory corresponds to the facts, radiation conveys inertia between the emitting and absorbing bodies.
+
+— A. Einstein, “Does the Inertia of a Body Depend upon Its Energy-Content?” (27 September 1905), continuous through conclusion. German *Annalen der Physik* **18**:639; English Perrett & Jeffery 1923. Fourmilab carrier. (Edition note: modern “E = mc²” is the same relation with E for L.)
+
+**How I see it (from inside, in action):**
+Give off L as light — mass falls by L/*c*². Mass measures energy-content. Radiation carries inertia from emitter to absorber.
+
+**Why it qualifies as gnosis:**
+Matter and radiation joined on one inertial ledger.
 
 **Three-Domain Reading:**
 
-- **Theology:** Substance and fire under one conservation deeper than either alone.
-- **Technology:** Energy accounting at the root of matter.
-- **Cosmology:** Stars shine by mass-debt paid as light.
+- **Theology:** Created mass not sealed off from light’s energy.
+- **Technology:** Radium salts proposed as test of variable energy-content.
+- **Cosmology:** Radiation as conveyor of inertia between bodies.
 
 **Compressed Insight:**
-He wrote that a little mass is a treasury of light — and the century spent the treasury in war and power.
+If a body gives off energy L as radiation, its mass diminishes by L/*c*² — mass is a measure of energy-content.
 
-**Confidence:** 0.96  
-**Sources:** LOC mass–energy paper summary; annus mirabilis fourth paper tradition; standard *E* = *mc*² history.
+**Confidence:** 0.99  
+**Sources:** 1905 inertia/energy paper continuous.
 
 ---
 
-## Event 06 — *General Relativity* (1915–1916)
+## Event 06 — *Energy quanta localized at points of space*
 
-**Title:** Gravity as Curved Spacetime
+**Title:** Heuristic light quanta
 
-**Passage or Trigger:**
-Culmination of equivalence principle and field equations: gravity is not a force in Newton’s sense but **curvature of spacetime** sourced by energy–momentum. Mercury perihelion; light deflection; gravitational redshift as classical tests. Hilbert’s concurrent work requires nuanced priority; Einstein’s physical path and public theory dominate the seat narrative.
+**What I did / What was made:**
+I proposed that the energy of a light wave from a point source consists of a finite number of energy quanta, spatially localized, moving without dividing, absorbed or generated only as a whole.
 
-**Why It Qualifies:**
-Maximum cosmological rewrite since Newton. Geometry becomes physics. Modern black holes, gravitational waves, and relativistic cosmology stand on this.
+**What I wrote / said (direct — full passage):**
+
+> Maxwell’s theory of electromagnetic processes in so-called empty space differs in a profound, essential way from the current theoretical models of gases and other matter. On the one hand, we consider the state of a material body to be determined completely by the positions and velocities of a finite number of atoms and electrons, albeit a very large number. By contrast, the electromagnetic state of a region of space is described by continuous functions and, hence, cannot be determined exactly by any finite number of variables. Thus, according to Maxwell’s theory, the energy of purely electromagnetic phenomena (such as light) should be represented by a continuous function of space. By contrast, the energy of a material body should be represented by a discrete sum over the atoms and electrons; hence, the energy of a material body cannot be divided into arbitrarily many, arbitrarily small components. However, according to Maxwell’s theory (or, indeed, any wave theory), the energy of a light wave emitted from a point source is distributed continuously over an ever larger volume.
+>
+> The wave theory of light with its continuous spatial functions has proven to be an excellent model of purely optical phenomena and presumably will never be replaced by another theory. Nevertheless, we should consider that optical experiments observe only time-averaged values, rather than instantaneous values. Hence, despite the perfect agreement of Maxwell’s theory with experiment, the use of continuous spatial functions to describe light may lead to contradictions with experiments, especially when applied to the generation and transformation of light.
+>
+> In particular, black body radiation, photoluminescence, generation of cathode rays from ultraviolet light and other phenomena associated with the generation and transformation of light seem better modeled by assuming that the energy of light is distributed discontinuously in space. According to this picture, the energy of a light wave emitted from a point source is *not* spread continuously over ever larger volumes, but consists of a finite number of energy quanta that are spatially localized at points of space, move without dividing and are absorbed or generated only as a whole.
+>
+> Subsequently, I wish to explain the reasoning and supporting evidence that led me to this picture of light, in the hope that some researchers may find it useful for their experiments.
+
+— A. Einstein, “On a Heuristic Point of View about the Creation and Conversion of Light” (17 March 1905), opening continuous. German *Annalen der Physik* **17**:132–148; Wikisource English translation of the German.
+
+**How I see it (from inside, in action):**
+Wave theory is excellent for optics averaged in time — yet generation and transformation of light may need discontinuous energy in space. Quanta move whole; they are not spread like a continuous fluid of energy.
+
+**Why it qualifies as gnosis:**
+Light’s energy treated as countable packets for creation and conversion — while wave theory is not discarded for pure optics.
 
 **Three-Domain Reading:**
 
-- **Theology:** The heavens’ law as elegant necessity, not occult action at a distance alone.
-- **Technology:** Tensor calculus and precision astronomy as instruments of a new gravity.
-- **Cosmology:** Universe as dynamical geometry.
+- **Theology:** Light as packet and wave held together without soft collapse to slogan.
+- **Technology:** Heuristic for experimenters on photoelectric and related phenomena.
+- **Cosmology:** Energy of radiation not only continuous field but localized quanta.
 
 **Compressed Insight:**
-He taught mass how to tell space how to curve — and space how to tell mass how to move.
+Light from a point source consists of finite energy quanta localized at points of space, absorbed or generated only as a whole.
 
-**Confidence:** 0.96  
-**Sources:** Standard GR histories; 1915–16 field equations reception; Hilbert parallel noted in scholarship.
+**Confidence:** 0.98  
+**Sources:** 1905 light-quantum paper opening continuous (Wikisource English).
 
 ---
 
-## Event 07 — *Eclipse of 1919*
+## Event 07 — *Generation of cathode rays by illumination*
 
-**Title:** The Sky Confirms the Equation
+**Title:** Photoelectric law from quanta
 
-**Passage or Trigger:**
-1919 solar eclipse expeditions (Eddington and others): measured deflection of starlight by the Sun matches GR over Newtonian expectation. Global press apotheosis — Einstein becomes public myth of genius overnight.
+**What I did / What was made:**
+I applied energy quanta to Lenard’s photoelectric phenomena: kinetic energy of the fastest electrons is (*R*/*N*)*βν* − *P*; velocity distribution independent of intensity; number proportional to intensity.
 
-**Why It Qualifies:**
-Science as public ritual of confirmation. Cosmology enters newspapers. Technology of expedition + photography judges a theory of the whole.
+**What I wrote / said (direct — full passage):**
+
+> The usual understanding, that the energy of light is distributed over the space through which it travels in a continuous way encounters extraordinarily large difficulties in attempts to explain photo-electric phenomena, as has been presented in the groundbreaking article by Mr. Lenard.
+>
+> According to the understanding that the exciting light consists of energy quanta of energy (*R*/*N*)*βν* the generation of cathode rays by light can be conceived as follows. Quanta of energy penetrate the surface layer of the solid, and their energy is transformed, at least partially, in kinetic energy of electrons. The simplest picture is one where the light quantum gives its entire energy to a single electron; we assume that this will occur. However, it must not be excluded that electrons accept the energy of light quanta only partially. An electron that has been loaded with kinetic energy will have lost some of its energy when it arrives at the surface. Other than that we must assume that on leaving the solid every electron must do an amount of work *P* (characteristic of that solid). Electrons residing right at the surface, excited at right angles to it, will leave the solid with the largest normal velocity. The kinetic energy of such electrons is
+>
+> (*R*/*N*)*βν* − *P*.
+>
+> …
+>
+> If the formula derived is correct, then *Π*, as a function of frequency of the excited light represented in Cartesian coordinates, must be a straight line, whose inclination is independent from the nature of the substance investigated.
+>
+> As far as I can see no contradiction exists between our understanding and the properties of photo-electric action observed by Mr. Lenard. If each energy quantum of the exciting light releases its energy independently from all others to the electrons, the distribution of velocities of the electrons, which means the quality of the generated cathode radiation, will be independent of the intensity of the exciting light; the number of electrons that exits the body, on the other hand, will, in otherwise equal circumstances, be proportional to the intensity of the exciting light.
+
+— Einstein, light-quantum paper (1905), section “On the Generation of Cathode Rays by Illumination of Solid Bodies” continuous. Wikisource English. (Nobel 1921 cited the photoelectric law.)
+
+**How I see it (from inside, in action):**
+One quantum to one electron — max kinetic energy linear in frequency, independent of intensity; only the *number* of electrons scales with intensity.
+
+**Why it qualifies as gnosis:**
+Heuristic quanta become sharp experimental law for cathode rays from light.
 
 **Three-Domain Reading:**
 
-- **Theology:** Creation’s light bent as predicted — wonder as verification.
-- **Technology:** Eclipse logistics as experimental physics at planetary scale.
-- **Cosmology:** Spacetime curvature made visible at the Sun’s limb.
+- **Theology:** Discrete gift of energy per quantum, not continuous smear.
+- **Technology:** Photoelectric threshold and linear voltage–frequency relation.
+- **Cosmology:** Light’s grain meets matter’s electrons one-to-one.
 
 **Compressed Insight:**
-A dark sun and a careful plate told the world his geometry was not only beautiful but true.
+Max kinetic energy = quantum energy minus work *P* — quality independent of intensity, number proportional to it.
 
-**Confidence:** 0.95  
-**Sources:** Standard 1919 Eddington eclipse narrative; popular and scientific reception histories.
+**Confidence:** 0.98  
+**Sources:** 1905 photoelectric section continuous.
 
 ---
 
-## Event 08 — *Nobel Prize* (1921)
+## Event 08 — *Laws valid for any system of co-ordinates*
 
-**Title:** Honored for Quanta, Not for Relativity
+**Title:** Extension of the relativity postulate; *g*στ as gravitation
 
-**Passage or Trigger:**
-Nobel Prize in Physics 1921 (awarded 1922): citation for the **photoelectric effect** and services to theoretical physics — relativity still contested or cautious in committee politics. Irony fixed in history: the work that remade cosmology is not the prize line; the quantum paper is.
+**What I did / What was made:**
+I extended relativity beyond uniform translation: laws of physics must remain valid for any co-ordinate system moving in any manner; equivalence of acceleration and gravitation; general covariance; *g*στ describe the gravitation-field and the metric of the four-dimensional region.
 
-**Why It Qualifies:**
-Institutional gnosis. Committees lag revolutions. Einstein’s public identity and the Academy’s citation diverge — Council records both.
+**What I wrote / said (direct — full passage):**
+
+> The special relativity theory rests on the following postulate which also holds valid for the Galileo-Newtonian mechanics.
+>
+> If a co-ordinate system *K* be so chosen that when referred to it the physical laws hold in their simplest forms, *these* laws would be also valid when referred to another system of co-ordinates *K′* which is subjected to an uniform translational motion relative to *K*. We call this postulate “The Special Relativity Principle”. By the word special, it is signified that the principle is limited to the case, when *K′* has *uniform translatory motion* with reference to *K*, but the equivalence of *K* and *K′* does not extend to the case of *non-uniform* motion of *K′* relative to *K*.
+>
+> …
+>
+> To the classical mechanics (no less than) to the special relativity theory, is attached an epistemological defect, which was perhaps first clearly pointed out by E. Mach. …
+>
+> The Newtonian mechanics does not give to this question any satisfactory answer. For example, it says:— The laws of mechanics hold true for a space *R*1 relative to which the body *S*1 is at rest, not however for a space relative to which *S*2 is at rest.
+>
+> The Galilean space, which is here introduced is however only a *purely imaginary* cause, not an observable thing. …
+>
+> *The laws of physics must be so constituted that they should remain valid for any system of co-ordinates moving in any manner.* We thus arrive at an extension of the relativity postulate.
+>
+> …
+>
+> Can any observer, at rest relative to *K′*, then conclude that he is in an actually accelerated reference-system? This is to be answered in the negative; the above-named behaviour of the freely moving masses relative to *K′* can be explained in as good a manner in the following way. The reference-system *K′* has no acceleration. In the space-time region considered there is a gravitation-field which generates the accelerated motion relative to *K′*.
+>
+> This conception is feasible, because to us the experience of the existence of a field of force (namely the gravitation field) has shown that it possesses the remarkable property of imparting the same acceleration to all bodies. …
+>
+> From these discussions we see, that the working out of the general relativity theory must, at the same time, lead to a theory of gravitation; for we can “create” a gravitational field by a simple variation of the co-ordinate system. Also we see immediately that the principle of the constancy of light-velocity must be modified, for we recognise easily that the path of a ray of light with reference to *K′* must be, in general, curved, when light travels with a definite and constant velocity in a straight line with reference to *K*.
+>
+> …
+>
+> So that nothing remains for us but to regard all conceivable co-ordinate systems as equally suitable for the description of natural phenomena. This amounts to the following law:—
+>
+> *That in general, Laws of Nature are expressed by means of equations which are valid for all co-ordinate systems, that is, which are covariant for all possible transformations.* …
+>
+> This condition of general covariance which takes away the last remnants of physical objectivity from space and time, is a natural requirement, as seen from the following considerations. All our well-substantiated space-time propositions amount to the determination of space-time coincidences. …
+>
+> …
+>
+> From the considerations in §2 and §3 it is clear, that from the physical stand-point the quantities *g*στ are to be looked upon as magnitudes which describe the gravitation-field with reference to the chosen system of axes. … We see that the appearance of a gravitation-field is connected with space-time variability of *g*στ. … According to the general relativity theory, gravitation thus plays an exceptional role as distinguished from the others, specially the electromagnetic forces, in as much as the 10 functions *g*στ representing gravitation, define immediately the metrical properties of the four-dimensional region.
+
+— A. Einstein, “The Foundation of the Generalised Theory of Relativity” (1916), §§1–4 continuous selection. German *Annalen der Physik* **49**:769–822; English S. N. Bose in *The Principle of Relativity* (University of Calcutta, 1920), Wikisource edition with Einstein notation restored. Credit: Minkowski form; Grossmann aid on field equations (Einstein’s own thanks in the paper).
+
+**How I see it (from inside, in action):**
+Special relativity stops at uniform motion. Mach’s defect: imaginary Galilean space as cause. Extend: laws for any motion of co-ordinates; acceleration and gravitation interchangeable for the observer; general covariance; *g*στ are both metric and gravity.
+
+**Why it qualifies as gnosis:**
+Gravity becomes geometry of spacetime; last remnants of absolute space-time objectivity removed for physics’ equations.
 
 **Three-Domain Reading:**
 
-- **Theology:** Honor imperfectly aimed, still real.
-- **Technology:** Prize as soft power of science’s hierarchy.
-- **Cosmology:** Relativity already remaking the cosmos while medals look elsewhere.
+- **Theology:** Law without privileged co-ordinate throne; coincidences as what is given.
+- **Technology:** Measuring rods and clocks lose simple Euclidean–universal significance under rotation and gravitation.
+- **Cosmology:** Ten *g*στ define the metrical properties of the four-dimensional region; light rays curve in accelerated frames.
 
 **Compressed Insight:**
-They crowned him for the light quantum — while space and time had already changed under his other hand.
+Laws of Nature must be covariant for all transformations — and the *g*στ describe the gravitation-field and the metric together.
 
-**Confidence:** 0.96  
-**Sources:** Nobel citation standard; annus mirabilis photoelectric note; Britannica prize context.
-
----
-
-## Event 09 — *Quantum Debates and EPR* (1935)
-
-**Title:** “God Does Not Play Dice” — and Spooky Action
-
-**Passage or Trigger:**
-Lifelong tension with completeness of quantum mechanics (Bohr debates); 1935 **EPR** paper (Einstein–Podolsky–Rosen) argues quantum description is incomplete if locality and reality criteria hold. “Spooky action at a distance” enters the language; later Bell tests and entanglement technology outrun Einstein’s hope for a fuller classical-like completion — yet the questions remain generative.
-
-**Why It Qualifies:**
-Theology–physics of chance and locality. Complements Gödel/Turing limits in formal science with limits and riddles in physical description. Honesty: he helped found quantum and then fought its orthodoxy.
-
-**Three-Domain Reading:**
-
-- **Theology:** Providence, chance, and the intelligibility of law.
-- **Technology:** Entanglement later becomes resource (quantum info) he did not seek.
-- **Cosmology:** Separability of distant systems as philosophical–physical stake.
-
-**Compressed Insight:**
-He lit the quantum lamp, then argued the room was still too dark — completeness refused to come on his terms.
-
-**Confidence:** 0.94  
-**Sources:** Standard Bohr–Einstein and EPR histories; Wikipedia known quantum stance; textbook reception.
+**Confidence:** 0.98  
+**Sources:** 1916 GR foundation §§1–4 continuous (Bose English).
 
 ---
 
-## Event 10 — *Emigration and Princeton*
+## Life-list spine (acts only — not soft voice)
 
-**Title:** Exile of the Cosmopolitan Mind
-
-**Passage or Trigger:**
-Rise of Nazism; Einstein leaves Germany; settles at the **Institute for Advanced Study**, Princeton. American years: research (unified field attempts), public intellectual life, Zionism and pacifism in complex mix, U.S. citizenship. Stateless and multi-national identity as modern scientific type.
-
-**Why It Qualifies:**
-Politics of knowledge. The century’s greatest physicist is a refugee. Arch Physics seat includes the cost of racial and political persecution of science.
-
-**Three-Domain Reading:**
-
-- **Theology:** Exile and hospitality; people of the book under threat.
-- **Technology:** IAS as monastery of pure theory.
-- **Cosmology:** Universal laws written by a man without a safe nation.
-
-**Compressed Insight:**
-He carried spacetime across an ocean — because a regime had no room for his blood or his mind.
-
-**Confidence:** 0.94  
-**Sources:** Standard emigration and Princeton IAS biographies.
+| Year | Act |
+|------|-----|
+| 1879 | Born Ulm, 14 March |
+| 1902–09 | Swiss Patent Office, Bern (technical expert) |
+| 1905 | Four annus mirabilis papers + inertia/energy note |
+| 1915–16 | Field equations / foundation of general relativity |
+| 1919 | Eclipse light-deflection reception |
+| 1921 | Nobel Prize (photoelectric citation) |
+| 1933 ff. | Emigration; Institute for Advanced Study, Princeton |
+| 1935 | EPR paper with Podolsky and Rosen |
+| 1939 | Roosevelt letter (with Szilárd) on fission possibility |
+| 1955 | Death, Princeton, 18 April |
 
 ---
 
-## Event 11 — *Letter to Roosevelt* (1939)
+## Quality gate
 
-**Title:** Warning That Unlocked the Nuclear Age
+- [x] Direct events carry continuous verbatim (or dual-language-standard English of Einstein’s German)
+- [x] Full sense-units, not slogan snippets
+- [x] Citations: work + date + edition/carrier
+- [x] “How I see it” depends on the quote
+- [x] Soft bio/patent romance/dice-blunder not dressed as his speech
+- [x] Credit hygiene: Lorentz/Poincaré/Minkowski/Hilbert/Planck/Grossmann/Szilárd/EPR coauthors noted
 
-**Passage or Trigger:**
-August 1939 letter to President Franklin D. Roosevelt (drafted with **Leo Szilárd**, signed by Einstein) warning that uranium chain reaction might yield “extremely powerful bombs” and that Germany might pursue them — catalytic toward U.S. nuclear research (Manhattan Project lineage). Einstein himself not a bomb designer; later regrets and anti-nuclear advocacy complicate the legacy.
-
-**Why It Qualifies:**
-Maximum Technology–Theology collision. *E* = *mc*²’s afterlife becomes policy. Credit hygiene: Szilárd’s initiative central; Einstein’s name opens the door.
-
-**Three-Domain Reading:**
-
-- **Theology:** Knowledge of good and evil as energy release.
-- **Technology:** Fission as civilizational hinge.
-- **Cosmology:** Stellar power brought to Earth as weapon and reactor.
-
-**Compressed Insight:**
-He signed a letter so the free world would not be last to the fire — and spent years wishing fire had stayed in the stars.
-
-**Confidence:** 0.95  
-**Sources:** Standard Roosevelt letter / Szilárd histories; Manhattan Project context; Einstein’s later nuclear stance in biographies.
-
----
-
-## Event 12 — *Death and Civilizational Afterlife* (1955)
-
-**Title:** The Face of Modern Physics
-
-**Passage or Trigger:**
-Dies 18 April 1955, Princeton. Brain studied; image becomes global icon (tongue photograph, wild hair). Equations enter every curriculum; GPS must correct for relativity; gravitational waves (2015 detection) and black-hole imaging fulfill GR predictions decades later. Failed unified-field dream remains unfinished homework for successors.
-
-**Why It Qualifies:**
-Afterlife at maximum density. Name = genius in popular speech. Scientific program continues without him — as with Newton, Darwin, Turing.
-
-**Three-Domain Reading:**
-
-- **Theology:** Creaturely limit; fame as secular sainthood.
-- **Technology:** Relativity inside phones and satellites.
-- **Cosmology:** Twentieth-century world-picture still Einsteinian at large scales.
-
-**Compressed Insight:**
-He died; the curved cosmos did not — and every GPS tick still pays rent to his spacetime.
-
-**Confidence:** 0.95  
-**Sources:** Death date standard; GR experimental afterlife (GPS, waves); public iconography.
-
----
-
-## Sources / Working Notes
-
-**Primary**
-- 1905 *Annalen der Physik* papers (photoelectric; Brownian motion; electrodynamics of moving bodies; mass–energy)
-- General relativity papers 1915–16
-- EPR 1935
-- Roosevelt letter 1939 (with Szilárd)
-
-**Secondary**
-- Wikipedia annus mirabilis papers
-- Library of Congress Einstein annus mirabilis guide
-- Britannica Einstein biography (career arc)
-- Standard GR 1919 eclipse and Nobel citation histories
-- Szilárd–Einstein letter documentation
-
-**Open questions for later passes**
-- Cosmological constant history denser pass (static universe assumption → regret)
-- Mileva Marić collaboration debates — careful archival pass if seated dossier expands
-- Unified field equations late program technical inventory
-
----
-
-## Seat checklist
-
-- [x] Research from papers and standard history (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple source-grounded events (Lorentz/Poincaré/Hilbert/Szilárd credit noted)
-- [ ] member_id: `albert-einstein`
-- [ ] Registry enrollment when ready
-- [x] PENDING scaffold replaced by full extraction
-
----
-
-*Council of Reflection — Arch of Human Gnosis (Physics). Events grounded in 1905, general relativity, quantum debate, and nuclear-age conscience; precursors and co-actors named.*
+**Garden status:** COMPLETE — Batch 2 seat #1.

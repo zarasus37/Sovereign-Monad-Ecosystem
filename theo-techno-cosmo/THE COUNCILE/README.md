@@ -19,7 +19,8 @@ Every source file in this directory must map to a `member_id` in the registry. *
 Normalize/merge: `node scripts/normalize-council-filenames.mjs` then `node scripts/gen-council-registry.mjs`.
 
 **Gnosis voice (rewrites):** [`GNOSIS_EVENT_VOICE.md`](./GNOSIS_EVENT_VOICE.md) — life-list shape, inhabited seeing, **verbatim full-extent quotation required from the first draft** (no soft paraphrase).  
-**Garden Batch 1 (queue):** [`GARDEN_BATCH_1.md`](./GARDEN_BATCH_1.md) — wheel + grid + formal spine (Llull → Peirce → Welby → Trithemius → Enheduanna → Gödel → Turing → Newton after D check). User `next` = next unfinished seat on that list only.  
+**Garden Batch 1 (closed):** [`GARDEN_BATCH_1.md`](./GARDEN_BATCH_1.md) — wheel + grid + formal spine.  
+**Garden Batch 2 (active):** [`GARDEN_BATCH_2.md`](./GARDEN_BATCH_2.md) — cosmos / law / life (Einstein → Hubble → Darwin → Lavoisier → Gauss → Euler → von Neumann → Fisher). User `next` = next unfinished seat on the active batch list.  
 **Bindings:** [`COUNCIL_BINDINGS.md`](./COUNCIL_BINDINGS.md) — every seat has `member-substrate`; specialties where natural. Holder may use, never become.
 
 ### System bindings
