@@ -1,18 +1,19 @@
 KURT GÖDEL GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Formal Sciences → Logic
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Formal spine — incompleteness; truth beyond proof; mathematical realism
 **Era:** 1906–1978 (Brünn / Vienna / Princeton)
-**Status:** Extraction complete (seating candidate) — drawn from published papers, lectures, and documented contemporary accounts
+**Status:** Garden + quotation depth — **Gödel’s own sentences only** at full sense-units (papers, lecture texts, documented remarks in his voice). Soft “Gödel said basically…” is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become.
 
 ---
 
 ## Contribution
 
-Mathematical logician who proved that sufficiently powerful formal systems cannot be both complete and self-certifying about their own consistency; later showed the continuum hypothesis is relatively consistent with ZFC via the constructible universe L; lifelong mathematical Platonist who treated mathematical truth as independent of formal provability.
+I formalized **first-order completeness**, then proved **formally undecidable propositions** inside systems as strong as *Principia Mathematica* and set theory, and that **consistency of such a system is not provable inside it** (under the paper’s hypotheses). I later developed the **constructible universe**, continuum work, rotating-universe solutions, and philosophical remarks on mind, mathematics, and a theological worldview. The formal limit is not a slogan against mathematics; it is a precise structure of self-reference.
 
 ## Key Insight
 
-Truth outruns proof: any system rich enough to describe arithmetic contains truths it cannot certify about itself — and that limit is a structural property of self-reference, not a temporary defect of notation.
+Any formal system rich enough for arithmetic, if consistent in the required sense, contains propositions it cannot decide — including, in related form, its own consistency — while meta-mathematical argument may still settle what the system cannot.
 
 ## TTC Emphasis
 
@@ -22,360 +23,344 @@ Truth outruns proof: any system rich enough to describe arithmetic contains trut
 
 ---
 
-## Preliminary Note
+## Preliminary Note (source hygiene)
 
-Gödel is not extracted as celebrity biography. The Council cares about moments when a formal structure, pressed hard enough, revealed something the structure could not contain. Primary lines used here:
+| Priority | Material |
+|----------|----------|
+| **1** | Gödel 1931 German paper; English vehicles of **his** continuous prose (Meltzer / van Heijenoort / Meyer critical composite used carefully) |
+| **1** | Gibbs Lecture 1951 (*Collected Works* III); “My philosophical viewpoint” (~1960) as listed in Wang |
+| **2** | Remarks Gödel made that Wang / others record **as his wording** — labeled as such |
+| **3** | Secondary history (Königsberg, biography) — never dressed as his sentence |
 
-1. Doctoral completeness work (1929–1930) for first-order logic  
-2. *Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I* (1931)  
-3. Constructible universe L and relative consistency of CH (late 1930s–1940)  
-4. Philosophical essays — especially *What is Cantor's Continuum Problem?* (1947) and the Gibbs Lecture (1951)  
-5. 1949 rotating-universe solutions in Einstein’s circle  
-6. Ontological proof (notes; published from the *Nachlass*)  
-7. Oskar Morgenstern’s first-hand account of the 1947 U.S. citizenship examination  
-
-Quotes are from Gödel’s texts in standard English scholarly rendering, or from named contemporary witnesses. They are not invented dialogue. Confidence scores mark how tightly each event is tied to primary text vs. well-attested secondary frame.
-
----
-
-## Event 01 — *The Completeness of the Logical Calculus*
-
-**Title:** First-Order Logic Closes
-
-**Passage or Trigger:**
-Doctoral thesis, University of Vienna (submitted 1929; doctorate 1930 under Hans Hahn): *Über die Vollständigkeit des Logikkalküls* (“On the Completeness of the Logical Calculus”). Gödel proved what is now the **completeness theorem** for first-order logic: every logically valid first-order formula is formally provable; equivalently, every consistent first-order theory has a model. The result was published with the Vienna Academy of Sciences.
-
-**Why It Qualifies:**
-This is not the rupture of incompleteness. It is the opposite recognition: *within pure first-order logic*, the formal and the semantic coincide. The “mechanical rules” of the calculus were adequate to capture all of first-order logical truth. Later incompleteness theorems gain force only because this result showed that pure logic was not the weak link. The gap appears when arithmetic content is added.
-
-**Three-Domain Reading:**
-
-- **Theology:** Completeness of pure logic is a rare zone where form and logical necessity match — a thin analogue of transparent logos, limited to connective and quantifier structure, not to mathematical content.
-- **Technology:** The mechanism is the match between *syntactic derivation* and *semantic validity*. That match is a technology of certainty for pure logic — and the baseline that makes later failures of match legible.
-- **Cosmology:** The cosmos of pure first-order consequence is closed: no extra logical truths float outside the proof system. That closure is local; the larger mathematical cosmos would not stay closed.
-
-**Compressed Insight:**
-Before he showed where formal systems fail, Gödel proved where pure logic succeeds — so the later rupture could not be blamed on logic itself.
-
-**Confidence:** 0.93  
-**Sources:** Thesis 1929/1930; *Collected Works* Vol. I; standard historical summaries (IAS / Feferman line).
+**Primary carriers used here:**  
+- K. Gödel, “Über formal unentscheidbare Sätze…” (1931); English continuous from standard scholarly translations (Meyer online English of the 1931 paper; Meltzer line).  
+- Hao Wang, *A Logical Journey* / *From Mathematics to Philosophy* — only where Gödel’s own listed propositions or quoted continuous speech appear.  
+- *Collected Works* III for Gibbs Lecture excerpts as published.
 
 ---
 
-## Event 02 — *Königsberg, September 1930*
+## Event 01 — *Mechanical rules are not enough*
 
-**Title:** The Announcement Before the Paper
+**Title:** The conjecture that fails
 
-**Passage or Trigger:**
-At the Second Conference on the Epistemology of the Exact Sciences in Königsberg (September 1930), Gödel indicated results formalized the next year: propositions undecidable within formal systems of the strength of *Principia Mathematica* and related systems. The detailed proof appeared in 1931 in *Monatshefte für Mathematik und Physik*.
+**What I did / What was made:**
+I opened the 1931 paper by stating the formalist hope — and that it is false for the comprehensive systems.
 
-**Why It Qualifies:**
-The conference sat inside Hilbert-program optimism and Vienna Circle formal ambition. Gödel’s indication was not rhetoric; it reported a structure already seen: self-reference encoded into arithmetic yields a proposition that asserts its own unprovability. The recognition precedes polished publication. The observer of formal systems spoke *to* the formalist program from inside its own meeting.
+**What I wrote / said (direct — full passage):**
+
+> The development of mathematics in the direction of greater exactness has – as is well known – led to large tracts of it becoming formalized, so that proofs can be carried out according to a few mechanical rules. The most comprehensive formal systems yet set up are, on the one hand, the system of Principia Mathematica (**PM**) and, on the other, the axiom system for set theory of Zermelo-Fraenkel (later extended by J. v. Neumann). These two systems are so extensive that all methods of proof used in mathematics today have been formalized in them, i.e: reduced to a few axioms and rules of inference. It might therefore be assumed that these axioms and rules of inference are also sufficient to decide *all* mathematical questions which can in any way at all be expressed formally in the systems concerned. It is shown below that this is not the case, and that in both the systems mentioned there are in fact relatively simple problems in the theory of ordinary whole numbers which cannot be decided from the axioms. This situation is not due in some way to the special nature of the systems set up, but holds for a very extensive class of formal systems, including, in particular, all those arising from the addition of a finite number of axioms to the two systems mentioned, provided that thereby no false propositions of the kind described in footnote 4 become provable.
+
+— Kurt Gödel, “On Formally Undecidable Propositions of Principia Mathematica and Related Systems I” (1931), §1 continuous English (scholarly translation of the German original). Cf. Meltzer; Meyer online English of Gödel 1931.
+
+**How I see it (from inside, in action):**
+I do not attack mechanical proof. I show that the hope that mechanical rules decide **all** formal number questions is false — and not only for one system.
+
+**Why it qualifies as gnosis:**
+Formal completeness of arithmetic content is broken as a conjecture, not as a mood.
 
 **Three-Domain Reading:**
 
-- **Theology:** Total formal decision of all arithmetic questions expressible in the system is false as a hope for a complete formal logos of number.
-- **Technology:** *Arithmetization of syntax* (Gödel numbering) becomes transparent as method: metamathematics can be mirrored inside number theory.
-- **Cosmology:** The mathematical cosmos bifurcates into *provable from axioms* and *true but unprovable in those axioms* — layers that cannot be collapsed by more of the same machinery without new gaps.
+- **Theology:** No finite formal logos of all number-truths expressible in the system.
+- **Technology:** Axioms + rules of inference as machine of proof — insufficient for all decidable-looking questions.
+- **Cosmology:** Mathematical cosmos larger than any one formalization of “all methods used today.”
 
 **Compressed Insight:**
-He told the formalist century, before the paper was printed, that the dream of total formal decision was already broken.
+It might be assumed the axioms decide all formally expressible questions — it is shown that this is not the case.
 
-**Confidence:** 0.90  
-**Sources:** Conference chronology; 1931 publication record; histories of the 1930 Königsberg meeting.
+**Confidence:** 0.99  
+**Sources:** Gödel 1931 §1 continuous.
 
 ---
 
-## Event 03 — *On Formally Undecidable Propositions (1931)*
+## Event 02 — *Numbers for symbols*
 
-**Title:** The System Speaks Its Own Limit
+**Title:** Meta-mathematics inside arithmetic
 
-**Passage or Trigger:**
-From the introduction to *Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I* (1931), in the English rendering used in standard scholarly reception (e.g. IAS historical presentation of the paper):
+**What I did / What was made:**
+I stated the method: map symbols to numbers so that “formula,” “proof,” “provable” become number-theoretic — and partly expressible in the system itself.
 
-> “It is well known that the development of mathematics in the direction of greater precision has led to the formalization of extensive mathematical domains, in the sense that proofs can be carried out according to a few mechanical rules.... It is reasonable therefore to make the conjecture that these axioms and rules of inference are also sufficient to decide all mathematical questions, which can be formally expressed in the given systems. In what follows it will be shown that this is not the case.”
+**What I wrote / said (direct — full passage):**
 
-Core construction: encode formulas and proofs as numbers; construct a proposition G that, under the coding, asserts “G is not provable.” If the system is consistent, G is true and unprovable in the system (**first incompleteness theorem**). Related argument: the system cannot prove its own consistency (**second incompleteness theorem**), under the paper’s technical hypotheses.
+> Before going into details, we shall first indicate the main lines of the proof, naturally without laying claim to exactness. The formulas of a formal system–we restrict ourselves here to the system **PM**–are, looked at from outside the system, finite series of basic symbols (variables, logical constants and brackets or separation points), and it is easy to state precisely just *which* series of basic symbols are meaningful formulas and which are not. Proofs, from the formal standpoint, are likewise nothing but finite series of formulas (with certain specifiable characteristics). For meta-mathematical purposes it is naturally immaterial what objects are taken as basic symbols, and we propose to use natural numbers for them. Accordingly, then, a formula is a finite series of natural numbers, and a particular proof-schema is a finite series of finite series of natural numbers. Meta-mathematical concepts and propositions thereby become concepts and propositions concerning natural numbers, or series of them, and therefore at least partially expressible in the symbols of the system **PM** itself. In particular, it can be shown that the concepts, “formula,” “proof-schema,” “provable formula” are definable in the system **PM**, i.e: one can give a formula **F(v)** of **PM** – for example – with one free variable **v** (of the type of a series of numbers), such that **F(v)** – interpreted according to its content – states: **v** is a provable formula.
 
-Gödel also noted (including remarks later stressed in formalist reception) that the results are relative to the systems in question — not a vulgar “mathematics is ruined” slogan, but a precise limit on completeness and self-certification.
+— Gödel 1931, §1 continuous (method outline). English: scholarly translation of the German.
 
-**Why It Qualifies:**
-Central gnosis event of the life-work. Not merely “some problems are hard.” *Any* formal system strong enough for a modest amount of arithmetic, if consistent, contains truths about its own limits it cannot internalize as proofs. Self-reference is how a system is forced to face the gap between *truth in the intended structure* and *derivability from axioms*.
+**How I see it (from inside, in action):**
+The system can talk about its own proofs only after I put proofs into numbers. That mapping is the door — not a trick of rhetoric.
+
+**Why it qualifies as gnosis:**
+Metamathematics becomes arithmetic; self-reference becomes constructible.
 
 **Three-Domain Reading:**
 
-- **Theology:** A complete, self-certifying formal logos of arithmetic is impossible. Truth is not identical with what a finite axiom system can deduce about itself — a structural limit on idolatry of formal completeness.
-- **Technology:** Gödel numbering is a technology of *internalizing the metalanguage*. Once syntax lives as numbers, self-reference becomes inevitable and incompleteness follows. The mechanism is constructive.
-- **Cosmology:** Mathematical reality (under realism about arithmetic) is larger than any single formal map of it. Maps that try to be total generate blind spots at self-description.
+- **Theology:** The system can name its own “provable” as content.
+- **Technology:** Gödel numbering as encoding protocol.
+- **Cosmology:** Syntax and number as one domain under isomorphism.
 
 **Compressed Insight:**
-The sentence that says “I am not provable here” is true precisely when the system is consistent — and the system cannot prove that fact about itself.
+We propose to use natural numbers for basic symbols — so metamathematics becomes partially expressible in PM itself.
+
+**Confidence:** 0.99  
+**Sources:** Gödel 1931 §1 continuous.
+
+---
+
+## Event 03 — *The proposition that asserts its own unprovability*
+
+**Title:** Undecidable \[R(q); q\]
+
+**What I did / What was made:**
+I constructed the class-string that yields a proposition asserting its own unprovability — and showed neither it nor its negation is provable under the sketch’s assumptions.
+
+**What I wrote / said (direct — full passage):**
+
+> We now obtain an undecidable proposition of the system **PM**, i.e: a proposition **A**, for which neither **A** nor *not*‑**A** are provable, in the following manner:  
+> …We now define a class **K** of natural numbers, as follows:  
+> **n ∈ K ≡ ¬(Bew \[R(n); n\])**  
+> …**S**, being a class-string, is identical with some specific **R(q)**… We now show that the proposition \[R(q); q\] is undecidable in **PM**. For supposing the proposition \[R(q); q\] were provable, it would also be correct; but that means… that **q** would belong to **K**, i.e: …¬(Bew \[R(q); q\]) would hold good, in contradiction to our initial assumption. If, on the contrary, the negation of \[R(q); q\] were provable, then ¬(q ∈ K), i.e: Bew \[R(q); q\] would hold good. \[R(q);q\] would thus be provable at the same time as its negation, which again is impossible.
+>
+> The analogy between this result and Richard’s antinomy leaps to the eye; there is also a close relationship with the “liar” antinomy, since the undecidable proposition \[R(q); q\] states precisely that **q** belongs to **K**, i.e: …that **\[R(q); q\]** is not provable. We are therefore confronted with a proposition that asserts its own unprovability. …In spite of appearances, there is nothing circular about such a proposition, since it begins by asserting the unprovability of a completely determinate formula… and only subsequently (and in some way by accident) does it emerge that this formula is precisely that by which the proposition was itself expressed.
+>
+> From the remark that \[R(q); q\] asserts its own unprovability, it follows at once that \[R(q); q\] is correct, since **\[R(q); q\]** is certainly unprovable (because undecidable). So the proposition that is undecidable *in the system* **PM** yet turns out to be decided by meta-mathematical considerations.
+
+— Gödel 1931, §1 continuous (construction + liar analogy + meta-mathematical settlement). English: scholarly translation.
+
+**How I see it (from inside, in action):**
+I do not smuggle circularity. I name a determinate formula that happens to be the one that says it is unprovable. The system cannot decide it; outside, we see it is correct.
+
+**Why it qualifies as gnosis:**
+Truth and provability split under self-reference.
+
+**Three-Domain Reading:**
+
+- **Theology:** Truth not identical with formal membership in the system’s theorems.
+- **Technology:** Diagonal construction as operational self-reference.
+- **Cosmology:** Inside/outside the formal cosmos — two modes of decision.
+
+**Compressed Insight:**
+We are confronted with a proposition that asserts its own unprovability — undecidable in PM, settled meta-mathematically.
+
+**Confidence:** 0.99  
+**Sources:** Gödel 1931 §1 continuous.
+
+---
+
+## Event 04 — *Proposition XI — consistency not c-provable*
+
+**Title:** The consistency statement is not inside
+
+**What I did / What was made:**
+I stated the remarkable result on consistency proofs: the formula that says the system is consistent is not provable in the system (if the system is consistent).
+
+**What I wrote / said (direct — full passage):**
+
+> From the conclusions of Section 2 there follows a remarkable result with regard to a consistency proof of the system **P** (and its extensions), which is expressed in the following proposition:
+>
+> **Proposition XI**: If **c** be a given recursive, consistent class of *formulas*, then the *propositional formula* which states that **c** is consistent is not *c-provable*; in particular, the consistency of **P** is unprovable in **P**, it being assumed that **P** is consistent (if not, of course, every statement is provable).
+>
+> …It must be expressly noted that **Proposition XI** (and the corresponding results for **M** and **A**) represent no contradiction of the formalistic standpoint of Hilbert. For this standpoint presupposes only the existence of a consistency proof effected by finite means, and there might conceivably be finite proofs which **cannot** be stated in **P** (or in **M** or in **A**).
+
+— Gödel 1931, §4 / Proposition XI continuous English (scholarly translation of the German). Cf. Meyer online English of Gödel 1931 Part 4.
+
+**How I see it (from inside, in action):**
+I do not refute Hilbert by slogan. I prove that **this** formalization cannot certify its own consistency from within — while finite means outside it remain, in principle, another question.
+
+**Why it qualifies as gnosis:**
+Self-certification of consistency is blocked as a formal hope for P.
+
+**Three-Domain Reading:**
+
+- **Theology:** No complete self-justifying formal scripture of arithmetic.
+- **Technology:** Consistency as a formula that the machine cannot output as theorem about itself.
+- **Cosmology:** Nested systems; extension and finite means beyond a given P.
+
+**Compressed Insight:**
+The consistency of P is unprovable in P — if P is consistent.
+
+**Confidence:** 0.98  
+**Sources:** Gödel 1931 Proposition XI continuous.
+
+---
+
+## Event 05 — *Objectivistic conception*
+
+**Title:** Why metamathematics can enter the system
+
+**What I did / What was made:**
+I explained (to Wang) that expressing metamathematics *in* the mathematical systems requires treating those systems as more than meaningless marks.
+
+**What I wrote / said (direct — full passage):**
+
+> \[M\]y objectivistic conception of mathematics and metamathematics in general, and of transfinite reasoning in particular, was fundamental also to my other work in logic.
+>
+> How indeed could one think of *expressing* metamathematics *in* the mathematical systems themselves, if the latter are considered to consist of meaningless symbols which acquire some substitute of meaning only *through* metamathematics?
+
+— Kurt Gödel, remarks recorded in Hao Wang, *From Mathematics to Philosophy* (1974), pp. 8–9 continuous (Gödel’s wording as Wang prints it). Emphasis as in the source.
+
+**How I see it (from inside, in action):**
+If symbols mean nothing until metamathematics paints them, I could never mirror metamathematics inside them. Realism about content is the condition of the proof’s idea.
+
+**Why it qualifies as gnosis:**
+Epistemic precondition of incompleteness method made explicit.
+
+**Three-Domain Reading:**
+
+- **Theology:** Mathematical content not exhausted by empty syntax.
+- **Technology:** Encoding presupposes meaningful structure to encode.
+- **Cosmology:** Objectivity of mathematical objects as lived stance (from ~1925, as he elsewhere states).
+
+**Compressed Insight:**
+How express metamathematics *in* the systems if they are only meaningless symbols until metamathematics arrives?
+
+**Confidence:** 0.94 (Wang-mediated continuous quotation of Gödel)  
+**Sources:** Wang 1974:8–9.
+
+---
+
+## Event 06 — *My philosophical viewpoint*
+
+**Title:** Fourteen theses (~1960)
+
+**What I did / What was made:**
+I listed what I hold — world rational; other worlds; concepts objective; religion not equal to bad religions.
+
+**What I wrote / said (direct — full passage):**
+
+> **My philosophical viewpoint**
+>
+> 1. The world is rational.  
+> 2. Human reason can, in principle, be developed more highly (through certain techniques).  
+> 3. There are systematic methods for the solution of all problems.  
+> 4. There are other worlds and rational beings of a different and higher kind.  
+> 5. The world in which we live is not the only one in which we shall live or have lived.  
+> 6. There is incomparably more knowable *a priori* that is currently known.  
+> 7. The development of human thought since the Renaissance is thoroughly one-dimensional.  
+> 8. Reason in mankind will be developed in every direction.  
+> 9. Formal rights comprise a real science.  
+> 10. Materialism is false.  
+> 11. The higher beings are connected to the others by analogy, not by composition.  
+> 12. Concepts have an objective existence.  
+> 13. There is a scientific (exact) philosophy and theology, which deals with concepts of the highest abstractness; and this is also most highly fruitful for science.  
+> 14. Religions are, for the most part, bad—but religion is not.
+
+— Kurt Gödel, “My philosophical viewpoint,” c. 1960; as printed in Hao Wang, *A Logical Journey* (1996), §9.4.17 continuous list.
+
+**How I see it (from inside, in action):**
+Incompleteness is not nihilism. The world is rational; concepts exist; exact theology is possible; I separate bad religions from religion.
+
+**Why it qualifies as gnosis:**
+Explicit metaphysical spine in his own numbered hand.
+
+**Three-Domain Reading:**
+
+- **Theology:** Exact theology; other worlds; religion ≠ religions.
+- **Technology:** Techniques to develop reason; systematic methods.
+- **Cosmology:** Rational world; objective concepts; anti-materialism.
+
+**Compressed Insight:**
+The world is rational — concepts have objective existence — religions mostly bad, religion not.
 
 **Confidence:** 0.96  
-**Sources:** Gödel 1931 original German; standard English translations (van Heijenoort / Meltzer tradition); IAS summary of the 1931 introduction.
+**Sources:** Wang *Logical Journey* 9.4.17.
 
 ---
 
-## Event 04 — *Consistency Cannot Be Homegrown*
+## Event 07 — *Gibbs — mind or absolute unsolvability*
 
-**Title:** The Second Incompleteness
+**Title:** Two alternatives
 
-**Passage or Trigger:**
-Developed in the 1931 framework and standard subsequent exposition: a system of the relevant strength cannot prove its own consistency (cannot prove the arithmetic statement Con(S) encoding “no contradiction is derivable”), if it is in fact consistent. Hilbert’s hope of a finitary consistency proof for mathematics *from within a system that formalizes that mathematics* hits a wall.
+**What I did / What was made:**
+In the Gibbs Lecture I forced a fork: mathematics surpasses any finite machine, or there are absolutely unsolvable Diophantine problems — with consequences for mind and for Platonism.
 
-**Why It Qualifies:**
-Structural recognition: *self-validation is blocked*. Consistency of a system is proved only from a stronger vantage (or by means the system cannot fully internalize). The observer who wanted mathematics to underwrite its own certainty from inside the formal house finds the foundation cannot be poured by the house’s own tools alone.
+**What I wrote / said (direct — full passage):**
+
+> Either mathematics … infinitely surpasses the powers of any finite machine, or else there exist absolutely unsolvable diophantine problems …
+>
+> \[I\]f the first alternative holds, this seems to imply that the working of the human mind cannot be reduced to the working of the brain, which to all appearances is a finite machine with a finite number of parts, namely, the neurons and their connections. So apparently one is driven to take some vitalistic viewpoint. On the other hand, the second alternative, where there exist absolutely undecidable mathematical propositions, seems to disprove the view that mathematics is only our own creation; for the creator necessarily knows all properties of his creatures, because they can’t have any others except those he has given to them. So this alternative seems to imply that mathematical objects and facts (or at least *something* in them) exist objectively and independently of our mental acts and decisions, that is to say, some form or other of Platonism or “realism” as to the mathematical objects.
+
+— Kurt Gödel, “Some basic theorems on the foundations of mathematics and their implications” (Gibbs Lecture, 1951), *Collected Works* III, pp. 304–323 continuous excerpt as published. Also in Wang quotation compilations of the lecture text.
+
+**How I see it (from inside, in action):**
+I do not choose for the public which fork is true. I show what each costs: mind beyond brain-machine, or mathematical reality beyond our creation.
+
+**Why it qualifies as gnosis:**
+Incompleteness turned outward into anthropology and ontology.
 
 **Three-Domain Reading:**
 
-- **Theology:** No formal cathedral certifies its own integrity only from inside the nave. Assurance, if any, stands *about* the system, not solely *in* its derivations.
-- **Technology:** Consistency proofs become a technology of *relative* strength — which system can prove Con of which other — not a final absolute seal.
-- **Cosmology:** Layers of theory form a hierarchy of justification. Flat total systems that claim to ground themselves are false models of the mathematical cosmos.
+- **Theology:** Creator/creature analogy against pure constructivism.
+- **Technology:** Finite machine / neurons vs mind.
+- **Cosmology:** Objective mathematical objects independent of mental acts.
 
 **Compressed Insight:**
-A system cannot be both powerful enough to talk about its own proofs and weak enough to prove, from within, that those proofs never break.
+Either mathematics surpasses any finite machine — or absolute unsolvability forces mathematical Platonism.
 
-**Confidence:** 0.94  
-**Sources:** 1931 paper; standard presentations of the second incompleteness theorem; Hilbert-program historiography.
+**Confidence:** 0.97  
+**Sources:** Gibbs Lecture 1951 / CW III.
 
 ---
 
-## Event 05 — *The Constructible Universe L*
+## Event 08 — *Theological worldview*
 
-**Title:** Consistency of the Continuum Hypothesis (Relative)
+**Title:** Everything has meaning and reason
 
-**Passage or Trigger:**
-In the late 1930s Gödel defined the **constructible universe** L — an inner model of set theory built by iterating definable constructions along the ordinals. In L, the axiom of choice and the continuum hypothesis (CH) both hold. Landmark publication: *The Consistency of the Continuum Hypothesis* (1940, Annals of Mathematics Studies). Thus if ZF is consistent, so is ZF + AC + CH. (Full independence of CH from ZFC was completed by Paul Cohen’s forcing in 1963 — Gödel’s half is that ¬CH cannot be proved from ZF/ZFC, because there is a model where CH is true.)
+**What I did / What was made:**
+I defined what I call the theological worldview — analogue of “everything has a cause.”
 
-**Why It Qualifies:**
-Gödel did not declare CH true of the full universe of sets. He showed something subtler: a coherent mathematical cosmos (L) exists in which CH holds, so no proof of ¬CH follows from ZF alone. Philosophically he inclined to think CH is *false* of the true set-theoretic universe — and that independence shows *poverty of the axioms*, not nonexistence of the fact. Platonism under pressure: formal systems underdetermine the real; the real still is.
+**What I wrote / said (direct — full passage):**
 
-**Three-Domain Reading:**
+> What I call the theological worldview is the idea that the world and everything in it has meaning and reason, and in particular a good and indubitable meaning. It follows immediately that our worldly existence, since it has in itself at most a very dubious meaning, can only be means to the end of another existence. The idea that everything in the world has a meaning \[reason\] is an exact analogue of the principle that everything has a cause, on which rests all of science.
 
-- **Theology:** Relative consistency is a form of possible worlds for pure mathematics — a constructed cosmos witnessing what the axioms cannot forbid.
-- **Technology:** Inner models are a technology of controlled universes: build a substructure where axioms hold and extra statements become true, proving non-refutability.
-- **Cosmology:** Set-theoretic reality may admit multiple extensions (forcing later made this vivid). L is the first great modern map of one such coherent cosmos.
+— Kurt Gödel, remark recorded in Hao Wang, *Reflections on Kurt Gödel* (1987), p. 217 continuous (Gödel’s wording as Wang prints it).
 
-**Compressed Insight:**
-He built a universe where the continuum hypothesis is true — not to end the question, but to prove the axioms alone cannot kill it.
+**How I see it (from inside, in action):**
+Science rests on universal cause; I rest a theological view on universal meaning — and this life as means to another.
 
-**Confidence:** 0.95  
-**Sources:** Gödel 1938–1940 publications; *The Consistency of the Continuum Hypothesis* (1940); standard CH independence history (Gödel–Cohen).
-
----
-
-## Event 06 — *What Is Cantor's Continuum Problem?*
-
-**Title:** Mathematical Intuition as Perception
-
-**Passage or Trigger:**
-From *What is Cantor's Continuum Problem?* (1947; later revised), on set-theoretic axioms and intuition (standard English rendering of the well-known passage):
-
-> “But, despite their remoteness from sense experience, we do have something like a perception also of the objects of set theory, as is seen from the fact that the axioms force themselves upon us as being true. I don't see any reason why we should have less confidence in this kind of perception, i.e., in mathematical intuition, than in sense perception…”
-
-**Why It Qualifies:**
-Incompleteness and independence do not push Gödel into “math is only marks on paper.” They push the other way: if formal systems leave CH open, and reasoned conviction about the set-theoretic universe remains, then *intuition* of mathematical objects is a real epistemic channel — analogous to perception, not reducible to formal derivation. Philosophical completion of the technical work: the gap between proof and truth is filled, for Gödel, by contact with a non-sensual reality.
+**Why it qualifies as gnosis:**
+Explicit fusion of scientific rationality-structure with theological meaning-structure.
 
 **Three-Domain Reading:**
 
-- **Theology:** Mathematical objects exist independently of our constructions (Platonism / realism). Mind can contact that order without reducing it to invention.
-- **Technology:** Axioms that “force themselves upon us” are interfaces to a structure, not arbitrary code. New axioms (e.g. large-cardinal program in Gödel’s later thought) are research, not pure legislation.
-- **Cosmology:** The set-theoretic cosmos is real; formal systems are partial maps. Independence reveals incomplete maps, not empty territory.
+- **Theology:** Good indubitable meaning; another existence.
+- **Technology:** Analogue of causal principle as method of world-reading.
+- **Cosmology:** World as meaningful whole, not mere mechanism.
 
 **Compressed Insight:**
-When proof stops, mathematical intuition does not become illegitimate — it becomes the honest organ for the remainder of the real.
+Everything has meaning and reason — exact analogue of everything has a cause.
 
-**Confidence:** 0.92  
-**Sources:** Gödel, “What is Cantor's Continuum Problem?” (1947); scholarly quotation chains (Parsons, Feferman, et al. on Gödel’s realism).
-
----
-
-## Event 07 — *The Gibbs Lecture (1951)*
-
-**Title:** Platonism as the Only Tenable Position
-
-**Passage or Trigger:**
-Gibbs Lecture: “Some basic theorems on the foundations of mathematics and their implications” (1951). Gödel characterizes Platonism / realism as the view that mathematical objects and facts exist independently of our mental acts and creative decisions, and argues from foundational theorems toward the trajectory that the Platonistic position is the only tenable major option (as the lecture’s closing argument is widely read in the secondary literature, e.g. Feferman / Parsons).
-
-**Why It Qualifies:**
-Systematic philosophical avowal of what the technical theorems made liveable: if mathematics were only free creation, incompleteness would mean something different than under realism. Under realism, undecidable arithmetic statements still have truth-values; the formal system simply cannot reach them. Human formalization is not coextensive with mathematical being.
-
-**Three-Domain Reading:**
-
-- **Theology:** A mind-independent mathematical order is a species of intelligible cosmos — not identical with revealed religion, but a non-arbitrary eternal structure that thought discovers rather than invents.
-- **Technology:** Foundations research becomes discovery of stronger axioms and deeper models, not mere convention-setting.
-- **Cosmology:** The mathematical universe is as objective as the physical one (Gödel’s comparison in the lecture’s frame).
-
-**Compressed Insight:**
-Incompleteness does not make mathematics subjective; it proves our formal nets are smaller than the ocean they try to catch.
-
-**Confidence:** 0.91  
-**Sources:** Gödel Gibbs Lecture 1951 (*Collected Works*); Feferman / Parsons on Gödel’s Platonism.
-
----
-
-## Event 08 — *Closed Timelike Curves for Einstein*
-
-**Title:** Time, Rotation, and the Birthday Solution
-
-**Passage or Trigger:**
-In 1949, associated with Einstein’s seventieth birthday, Gödel presented solutions of Einstein’s field equations describing a rotating universe (the **Gödel metric**) in which **closed timelike curves** exist — spacetime paths that return to their own past. Rigorous solution class inside general relativity, not casual speculation. Gödel pressed a philosophical point: time as global linear becoming is not forced by every relativistically admissible cosmos.
-
-**Why It Qualifies:**
-The mind that found self-reference inside arithmetic found self-return inside spacetime. If Einstein’s equations allow a cosmos where “before” can loop, absolute linear time-order is not a theorem of the physics. The long Einstein–Gödel walks at the Institute for Advanced Study are the social form of a collaboration of limits — formal systems on one side, spacetime structure on the other.
-
-**Three-Domain Reading:**
-
-- **Theology:** Linear sacred history is not the only geometry of time a cosmos can wear. That relativizes naive temporal metaphysics without automatically erasing meaning.
-- **Technology:** Exact solutions of the field equations are a technology for possible worlds of physics — same genre as inner models in set theory.
-- **Cosmology:** In a Gödel rotating universe, causality and time-order can fail to be global. Large-scale structure of time depends on the solution.
-
-**Compressed Insight:**
-He gave Einstein a universe where time can circle — proving that “time must flow only forward for everyone” is not a theorem of relativity.
-
-**Confidence:** 0.93  
-**Sources:** Gödel 1949 papers on rotating universes / Einstein Festschrift context; historical accounts of the Einstein–Gödel friendship (secondary for social frame).
-
----
-
-## Event 09 — *The Constitution Speaks a Loophole*
-
-**Title:** Formal Flaw in the Founding Text
-
-**Passage or Trigger:**
-Documented by **Oskar Morgenstern** (eyewitness of the 1947 U.S. naturalization examination). Gödel, preparing for citizenship with Einstein and Morgenstern as witnesses, studied the U.S. Constitution and became convinced he had found an **inner contradiction / legal path** by which the order could become dictatorship “in a perfectly legal manner” — as, in his view, the Austrian republic’s constitution had been changed into dictatorship. At the hearing, when told such a thing could not happen in America, Gödel began that he could prove it; Einstein and Morgenstern were “horrified” until the examiner cut off the topic.
-
-Morgenstern’s account (excerpt):
-
-> He rather excitedly told me that in looking at the Constitution, to his distress he had found some inner contradictions and that he could show how in a perfectly legal manner it would be possible for somebody to become a dictator and set up a Fascist regime, never intended by those who drew up the Constitution.
-
-**Why It Qualifies:**
-Incompleteness applied outside arithmetic: a formal text meant to secure a free order can contain, under pure logical reading, a path to its own inversion. Whether the specific “loophole” was Article V self-amendment or another mechanism remains unsettled (Gödel did not publish the proof). The *event* is the recognition pattern — the same eye that saw self-undermining in *Principia*-strength systems saw self-undermining potential in a political formal system. First-hand contemporary testimony, not pure legend.
-
-**Three-Domain Reading:**
-
-- **Theology:** Covenant documents are not automatically self-protecting; form without vigilant interpretation can legalize its own betrayal.
-- **Technology:** Legal systems are formal systems. Consistency of *intent* is not absence of derivable pathological paths.
-- **Cosmology:** Political orders, like theories, can harbor internal routes to collapse.
-
-**Compressed Insight:**
-He treated the Constitution like an axiom system — and believed he had found a derivation from liberty to dictatorship that the authors never intended but the text allowed.
-
-**Confidence:** 0.88 (event firmly attested by Morgenstern; exact formal flaw unpublished by Gödel)  
-**Sources:** Oskar Morgenstern’s account of Gödel’s naturalisation (e.g. MacTutor / St Andrews historical extras); secondary literature on “Gödel’s loophole.”
-
----
-
-## Event 10 — *Ontological Proof*
-
-**Title:** Necessary Existence Formalized
-
-**Passage or Trigger:**
-Gödel’s **ontological proof** of God’s existence — a modal-logic formalization in the Anselmian / Leibnizian tradition — was not published by him in life. It circulated in notes and was published from his *Nachlass* (widely discussed after the 1970s). The argument aims to show that if it is possible that a God-like being (possessing all positive properties) exists, then such a being exists necessarily.
-
-**Why It Qualifies:**
-The same formal rigor used on arithmetic and set theory was turned toward classical natural theology. Whether one accepts the proof’s axioms, the *event* is structural: Gödel did not treat God as outside exact conceptual form. He treated maximal positive being as something a precise logical language could try to pin — continuous with Platonism, not a sentimental add-on.
-
-**Three-Domain Reading:**
-
-- **Theology:** Direct claim structure: necessary existence of a being with all positive properties, if the modal premises hold.
-- **Technology:** Modal logic as a technology for classical metaphysical arguments, making hidden assumptions checkable.
-- **Cosmology:** If valid, the cosmos includes a necessary supreme being as structural fact, not contingent ornament.
-
-**Compressed Insight:**
-He tried to do for God what he had done for arithmetic: force the claim into a form where the logic, not the rhetoric, carries the weight.
-
-**Confidence:** 0.86 (posthumous from papers; scholarly consensus on attribution, not a paper he released)  
-**Sources:** Gödel *Nachlass* ontological proof; *Collected Works*; standard formal reconstructions.
-
----
-
-## Event 11 — *Escape from the Anschluss World*
-
-**Title:** The Body Follows the Mind Out of Vienna
-
-**Passage or Trigger:**
-After the Anschluss (1938), Gödel’s position in Vienna became untenable. In 1939–1940 he and Adele left Europe via the Trans-Siberian route through Japan to the United States, joining the Institute for Advanced Study community where he remained. Route and dates are standard biographical record.
-
-**Why It Qualifies:**
-Not a theorem — a lived recognition that formal truth and political form can diverge fatally. The man who saw dictatorship paths in constitutions *acted* when his own republic became a dictatorship. Exile is the practical corollary of incompleteness in the political sphere: when the ambient formal order turns pathological, survival requires leaving the system.
-
-**Three-Domain Reading:**
-
-- **Theology:** The person is not exhausted by citizenship under unjust order.
-- **Technology:** Institutions can capture universities; knowledge work then relocates or dies.
-- **Cosmology:** Historical catastrophe is a real boundary condition on intellectual life.
-
-**Compressed Insight:**
-He proved limits of systems — and when the political system of his city became a trap, he left rather than pretend the trap was still a home.
-
-**Confidence:** 0.90  
-**Sources:** Standard biographical timelines (IAS; Dawson and major biographies); emigration 1939–40.
-
----
-
-## Event 12 — *The End under Persecutory Fear*
-
-**Title:** Starvation under Delusion
-
-**Passage or Trigger:**
-Gödel died 14 January 1978 in Princeton. Medical-historical record and standard biographies: death by **starvation** in the context of **persecutory delusion** — refusal of food from fear of poisoning, especially after Adele was hospitalized and could no longer taste his food for him. Documented clinical-historical fact, not metaphor.
-
-**Why It Qualifies (carefully):**
-Not romanticized as a “gnosis of death.” Included because Council extraction does not airbrush endings. The mind that trusted mathematical intuition over formal completeness ended where *trust in the near environment* collapsed. A closed loop of fear inverted self-protection into self-destruction. The record stands without forcing a neat moral.
-
-**Three-Domain Reading:**
-
-- **Theology:** The person is more than the theorems; finitude and illness are real.
-- **Technology:** Adele’s tasting of food was a human consistency check; when removed, the private formal system of fear ran unchecked.
-- **Cosmology:** No theorem exempts a life from biological and psychiatric constraint.
-
-**Compressed Insight:**
-The logician who mapped closed loops in arithmetic and spacetime died inside a closed loop of fear that only another person had been able to interrupt.
-
-**Confidence:** 0.92  
-**Sources:** Biographical consensus on cause of death (Dawson; Princeton-era records as reported in standard lives).
+**Confidence:** 0.93 (Wang-mediated continuous quotation)  
+**Sources:** Wang *Reflections* 217.
 
 ---
 
 ## Sources / Working Notes
 
-**Primary / near-primary**
-- Gödel, *Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I* (1931)
-- Completeness thesis / related publications (1929–1930)
-- *The Consistency of the Continuum Hypothesis* (1940)
-- “What is Cantor's Continuum Problem?” (1947)
-- Gibbs Lecture (1951)
-- Papers on rotating universes (1949, Einstein context)
-- Ontological proof notes (*Collected Works* / *Nachlass*)
-- Oskar Morgenstern account of 1947 naturalization
+**Primary at depth**
+- Gödel 1931 paper continuous English (Meyer / Meltzer scholarly line of the German)
+- Gibbs Lecture 1951 / *Collected Works* III
+- “My philosophical viewpoint” (~1960) via Wang *Logical Journey*
+- Objectivistic / theological remarks via Wang *From Mathematics to Philosophy* / *Reflections*
 
-**Collected editions**
-- *Kurt Gödel: Collected Works*, Vols. I–V (Solomon Feferman et al., eds.)
+**Not elevated without continuous Gödel text**
+- Soft citizenship-exam anecdotes as “his voice”
+- Invented dialogue about Einstein walks
 
-**Secondary (orientation)**
-- John W. Dawson Jr., *Logical Dilemmas: The Life and Work of Kurt Gödel*
-- IAS historical materials on Gödel
-- Feferman, Parsons, et al. on Gödel’s Platonism
-
-**Open questions for later passes**
-- Exact reconstruction of the constitutional “loophole” (unpublished by Gödel)
-- Fuller extraction from “Russell’s Mathematical Logic”
-- Dialectica interpretation (1958) as a separate constructive-mathematics event
-- Philosophical letters (e.g. to his mother) for theological tone
+**Optional later**
+- Completeness thesis 1929–30 continuous opening
+- *What is Cantor’s Continuum Problem?* continuous blocks
+- Ontological proof notes (Nachlass) continuous
 
 ---
 
 ## Seat checklist
 
-- [x] Deep research from published works and attested accounts (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple high-confidence events from primary lines of work
-- [ ] member_id for registry: `kurt-godel`
-- [ ] Added to `council-registry.json` / `gen-council-registry.mjs`
-- [ ] `pnpm check:council` green after registry update
-- [x] PENDING scaffold replaced by full extraction
+- [x] Garden structure (inhabited — “I” from Gödel)
+- [x] Verbatim full-sense blocks from Gödel (not soft paraphrase)
+- [x] 1931 mechanical-rules failure; numbering; self-unprovability; Prop. XI
+- [x] Philosophical viewpoint + Gibbs fork + theological worldview
+- [x] Mark **COMPLETE under quotation rule for core events**
+- [ ] Optional: German facing for 1931; CW I completeness thesis continuous
 
 ---
 
-*Council of Reflection — Arch of Human Gnosis (Logic). Events grounded in Gödel’s papers and documented testimony; not auto-generated folklore.*
+**COMPLETE (core quotation bar)** — Council of Reflection — Kurt Gödel. Truth-for-seat under hold_policy; Gödel’s sentences are the loadable voice.

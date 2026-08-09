@@ -10,7 +10,7 @@
 | 3 | Victoria, Lady Welby | COMPLETE (quotation bar) |
 | 4 | Johannes Trithemius | COMPLETE (quotation bar) |
 | 5 | Enheduanna | COMPLETE (quotation bar) |
-| 6 | Kurt Gödel | pending |
+| 6 | Kurt Gödel | COMPLETE (quotation bar) |
 | 7 | Alan Turing | pending |
 | 8 | Sir Isaac Newton | pending — **after D check** |
 
