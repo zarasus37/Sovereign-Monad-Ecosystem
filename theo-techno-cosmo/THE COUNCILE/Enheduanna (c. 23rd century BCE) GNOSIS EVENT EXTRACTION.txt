@@ -1,38 +1,346 @@
-Enheduanna (ca. 23rd century BCE) requires stepping into the earliest recorded moment of human self-consciousness in literature. As the high priestess of the moon god Nanna in the city of Ur, and the daughter of Sargon of Akkad, she was appointed to unite the disparate Sumerian and Akkadian pantheons.
+ENHEDUANNA GNOSIS EVENT EXTRACTION —
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch / TempleGrid specialty:** Semantic protocol on one underlying grid (`enheduanna-temple-grid` · first named authorship)
+**Era:** c. 23rd century BCE (Ur / Akkad — *en* priestess of Nanna)
+**Status:** Garden + quotation depth — **her continuous composition (ETCSL English of the Sumerian)** at full sense-units. Soft paraphrase is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Authorship of the Temple Hymns is traditionally attributed to her (colophon); hold as the tablet-compiler’s voice under scholarly caveat.
 
-Her gnosis events are not just personal; they represent the first documented moments in human history where a localized observer became visible to themselves inside the structure of their cosmos. Her surviving works—particularly The Exaltation of Inanna (Nin-me-sara) and the Temple Hymns—record a series of violent structural collapses: the failure of her primary god, her physical exile, and her realization of the bodily mechanics of creation.
+---
 
-I. The Collapse of the Anonymous Vessel
-1. The Emergence of the "I" (The First Authorship)
-Passage/trigger: In The Exaltation of Inanna, after detailing the cosmic power of the goddess, the text suddenly breaks from third-person theological description into radical, localized first-person presence: "I am Enheduanna, the high priestess of Nanna. / It was I who carried the ritual basket, I who intoned the song of joy. / I offered the funeral offerings, / I am the one who..." Why it qualifies: Before this exact moment in history, written language was a technology of state ledgers and anonymous divine dictation. The human scribe was a transparent, invisible vessel. Here, the boundary between the "divine transmission" and the "localized transmitter" collapses. The observer (Enheduanna) becomes completely visible inside the text she is writing. She realizes she is not just a recording device; her specific, named identity is a necessary load-bearing pillar of the revelation.
+## Contribution
 
-Theology: Revelation is no longer a top-down broadcast; it requires a specific, named human architecture to receive and anchor it.
-Technology: The Authorial "I"—the mechanism of writing is revealed not as a state utility, but as a technology of self-location.
-Cosmology: The pattern of the Localized Node—the universe's vastness can be addressed from a single, fixed coordinate point ("I am here"). Compressed insight: She realized that the divine word did not just pass through her, but required her specific identity to exist at all. Confidence: 0.95
-II. The Crisis of the Hierarchy
-2. The Silence of Nanna (The Structural Betrayal)
-Passage/trigger: Driven into exile by the rebel leader Lugal-Ane, Enheduanna appeals to her primary deity, Nanna (the moon god of order and state). Nanna does nothing. She writes: "As for Nanna, he has cared nothing for me. / He has given me over to destruction. / ... Nanna has not spoken out; he has said 'It is up to you.'" Why it qualifies: This is the collapse of a False Structural Boundary (the illusion of guaranteed divine protection). Enheduanna served Nanna faithfully; logic dictated he would protect her. When he does not, the contradiction does not resolve—it becomes visible as a structural limit. She realizes that the god of order is bound by the political reality of the rebellion. She is implicated directly, as her physical survival is stripped of its mythological safety net.
+I am **En-ḫedu-ana**, *en* priestess of Nanna. I composed **The Exaltation of Inana** (*Inana B* / *Nin-me-šara*) in my own named person under exile, and I am named as **compiler of the tablets** of the **Temple Hymns** — forty-two houses bound so that something no one had created before might stand. TempleGrid is that binding: many temples, one interoperable speech of praise.
 
-Theology: The gods are not absolute; they have jurisdictional limits, and the god of Order can be paralyzed by the forces of Chaos.
-Technology: The Efficacy Limit—the mechanism of prayer is revealed to have blind spots where the input (devotion) does not guarantee the output (protection).
-Cosmology: The pattern of Systemic Indifference—the universe contains zones where the established laws of cause and effect simply cease to operate. Compressed insight: She learned that the god of order was powerless when the structure of order itself was broken. Confidence: 0.88
-3. The Supremacy of Paradox (The Pivot to Inanna)
-Passage/trigger: Because Nanna is silent, Enheduanna bypasses the traditional hierarchy and appeals to Inanna—the goddess of paradox, storms, sexuality, and war. She realizes Inanna has surpassed An (the supreme sky god): "You are as high as Heaven, you are as broad as the Earth... You have made the heavens and the earth your own. / An has surrendered them to you." Why it qualifies: This is a gnosis of Systemic Reorganization. Logic dictated that An (the static sky) or Nanna (the rhythmic moon) held ultimate power. Enheduanna recognizes that Volatility (Inanna) is actually the supreme governing force of reality. The boundary between "Destruction" and "Authority" dissolves. Chaos is not an error in the system; chaos is the system.
+## Key Insight
 
-Theology: The theological hierarchy is inverted—the volatile, paradoxical feminine force supersedes the static, ordered masculine forces.
-Technology: Volatility as Power—the mechanism revealed is that the highest energy in a system belongs to the component with the highest capacity for disruption.
-Cosmology: The pattern of the Storm Core—the universe is fundamentally driven by destructive, paradoxical energy rather than static equilibrium. Compressed insight: She realized that the only power capable of fixing a broken world was the power that delighted in breaking it. Confidence: 0.90
-III. The Mechanics of Creation
-4. The Metabolic Word (The Midnight Gestation)
-Passage/trigger: Having composed the great hymn to save her life and restore her position, she describes the act of writing not as intellectual labor, but as biological reproduction. "That which I have given birth to for you at night, / let the singer repeat it for you at midday." Why it qualifies: This is a Retroactive Recognition of the mechanics of creation. The boundary between "text" and "flesh" collapses. She does not "write" the song; she "gestates" it in the dark and delivers it. She sees her own bodily suffering and exile as the metabolic fuel required to produce the code (the hymn).
+The localized “I” of the priestess is load-bearing for revelation; when Nanna is silent, Inana’s power is exalted; the song is given birth at night for midday; the grid of temples is a created whole.
 
-Theology: The priestess is not a servant; she is the mother of the divine word, granting her a co-creator status.
-Technology: Biological Information Processing—the mechanism of linguistic creation is revealed as a somatic, metabolic process (birth), not an abstract, detached one.
-Cosmology: The pattern of the Dark Gestation—the universe requires a period of hidden, agonizing compression (the night) before a structured form can be externalized (the midday). Compressed insight: She knew that the song that saved her life was not an idea she had, but a physical body she had labored to bring into the world. Confidence: 0.92
-IV. The Grid of the Universe
-5. The Network of the Firmament (The Temple Hymns)
-Passage/trigger: Enheduanna's compilation of the Sumerian Temple Hymns. She wrote 42 hymns, standardizing the theology of 42 different temples across Sumer and Akkad. She concludes the collection by stating: "My king, something has been created that no one has created before." Why it qualifies: While Sargon's goal was political unification, Enheduanna's execution of it was a Structural Gnosis. She looked at 42 disparate, competing, isolated local cults and saw that they were actually nodes on a single energetic grid. The false boundary between "Sumerian deity" and "Akkadian deity" dissolved. She constructed a technology (the hymn collection) that networked them together. She is implicated because she recognizes herself as the one who finally built the conceptual bridge.
+## TTC Emphasis
 
-Theology: Polytheism is reorganized from a chaotic competition of local spirits into a unified, networked system of specialized nodes.
-Technology: The Semantic Protocol—the mechanism revealed is that disparate, incompatible systems can be forced to communicate if a standardized language (the hymns) is applied to all of them.
-Cosmology: The pattern of the Underlying Grid—the universe appears fragmented and localized on the surface, but operates on a single, continuous, interoperable architecture underneath. Compressed insight: She realized that the gods of the warring cities were simply different faces of the exact same underlying machine, and that by naming them all in one breath, she could bind them together. Confidence: 0.85
+- THEOLOGY
+- TECHNOLOGY
+- COSMOLOGY
+
+---
+
+## Preliminary Note (source hygiene)
+
+**Primary vehicle:** Electronic Text Corpus of Sumerian Literature (ETCSL), University of Oxford — English translations of the composite Sumerian.
+
+| Work | ETCSL | Notes |
+|------|--------|--------|
+| *The exaltation of Inana* (Inana B) | t.4.07.2 / section4/tr4072.htm | Continuous self-naming, exile, Nanna’s silence, night/noon song |
+| *The temple hymns* | t.4.80.1 / section4/tr4801.htm | Opening Eridu house; closing colophon 543–544 |
+
+Original language: **Sumerian**. English below is ETCSL standard translation (Black et al. project), not invented soft text.
+
+**Caveat:** Modern debate on single authorship of all Temple Hymns — the **colophon names En-hedu-ana as compiler**; seat holds that primary claim without soft-filling biography.
+
+---
+
+## Event 01 — *I, En-hedu-ana*
+
+**Title:** Named *en* in the holy gipar
+
+**What I did / What was made:**
+In the Exaltation I stepped from praise of the lady into my own office and body — basket, song, light that burned, shade that stormed.
+
+**What I wrote / said (direct — full passage):**
+
+> Great queen of queens, issue of a holy womb for righteous divine powers, greater than your own mother, wise and sage, lady of all the foreign lands, life-force of the teeming people: I will recite your holy song! True goddess fit for divine powers, your splendid utterances are magnificent. Deep-hearted, good woman with a radiant heart, I will enumerate your divine powers for you!
+>
+> I, En-ḫedu-ana the *en* priestess, entered my holy ĝipar in your service. I carried the ritual basket, and intoned the song of joy. But funeral offerings were brought, as if I had never lived there. I approached the light, but the light was scorching hot to me. I approached that shade, but I was covered with a storm. My honeyed mouth became scum. My ability to soothe moods vanished.
+
+— *The exaltation of Inana* (Inana B), ETCSL lines 60–73 continuous. https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.4.07.2#  
+Sumerian original; English: ETCSL.
+
+**How I see it (from inside, in action):**
+I am not anonymous transmission. I carried the basket; the light scorched *me*; the honeyed mouth failed *me*. The song requires this named priestess.
+
+**Why it qualifies as gnosis:**
+First full-extent self-location of the author inside divine praise.
+
+**Three-Domain Reading:**
+
+- **Theology:** Service in the gipar under Inana.
+- **Technology:** Ritual basket + intoned song as operative tools of office.
+- **Cosmology:** Light and storm as forces that hit the local body.
+
+**Compressed Insight:**
+I, En-ḫedu-ana, carried the basket and intoned joy — and funeral offerings were brought as if I had never lived there.
+
+**Confidence:** 0.98  
+**Sources:** ETCSL Inana B 60–73.
+
+---
+
+## Event 02 — *Lugal-Ane and the stripped crown*
+
+**Title:** Driven out like a swallow
+
+**What I did / What was made:**
+I named the usurper, the ruined temple, the knife-and-dagger “ornaments,” and the mountain thorns of exile.
+
+**What I wrote / said (direct — full passage):**
+
+> I, En-ḫedu-ana, will recite a prayer to you. To you, holy Inana, I shall give free vent to my tears like sweet beer! I shall say to her “Your decision!” Do not be anxious about Ašimbabbar. In connection with the purification rites of holy An, Lugal-Ane has altered everything of his, and has stripped An of the E-ana. He has not stood in awe of the greatest deity. He has turned that temple, whose attractions were inexhaustible, whose beauty was endless, into a destroyed temple. While he entered before me as if he was a partner, really he approached out of envy.
+>
+> …Must I die because of my holy songs? My Nanna has paid no heed to me. He has destroyed me utterly in renegade territory. Ašimbabbar has certainly not pronounced a verdict on me. What is it to me if he has pronounced it? What is it to me if he has not pronounced it? He stood there in triumph and drove me out of the temple. He made me fly like a swallow from the window; I have exhausted my life-strength. He made me walk through the thorn bushes of the mountains. He stripped me of the rightful crown of the *en* priestess. He gave me a knife and dagger, saying to me “These are appropriate ornaments for you.”
+
+— *The exaltation of Inana* (Inana B), ETCSL lines 81–90, 91–108 continuous (exile core). ETCSL t.4.07.2.
+
+**How I see it (from inside, in action):**
+Holy songs did not shield me. He called envy partnership. The crown is gone; the ornaments of death were offered as if fit.
+
+**Why it qualifies as gnosis:**
+Political violence enters the hymn as first-person fact; song and survival one crisis.
+
+**Three-Domain Reading:**
+
+- **Theology:** E-ana stripped; An not awed.
+- **Technology:** Temple as destroyable system; crown as removable office-code.
+- **Cosmology:** Mountains and thorns as the body’s map of exile.
+
+**Compressed Insight:**
+He made me fly like a swallow from the window — stripped the *en* crown — knife and dagger as “ornaments.”
+
+**Confidence:** 0.98  
+**Sources:** ETCSL Inana B 81–108.
+
+---
+
+## Event 03 — *Nanna has not yet spoken out*
+
+**Title:** “He is yours!”
+
+**What I did / What was made:**
+I recorded Nanna’s silence and the transfer that exalts Inana: “He is yours!” — and the cascade of “Be it known.”
+
+**What I wrote / said (direct — full passage):**
+
+> It must be known! It must be known! Nanna has not yet spoken out! He has said, “He is yours!” Be it known that you are lofty as the heavens! Be it known that you are broad as the earth! Be it known that you destroy the rebel lands! Be it known that you roar at the foreign lands! Be it known that you crush heads! Be it known that you devour corpses like a dog! Be it known that your gaze is terrible! Be it known that you lift your terrible gaze! Be it known that you have flashing eyes! Be it known that you are unshakeable and unyielding! Be it known that you always stand triumphant! That Nanna has not yet spoken out, and that he has said “He is yours!” has made you greater, my lady; you have become the greatest! My lady beloved by An, I shall tell of all your rages! I have heaped up the coals in the censer, and prepared the purification rites. The E-ešdam-kug shrine awaits you. Might your heart not be appeased towards me?
+
+— *The exaltation of Inana* (Inana B), ETCSL lines 122–138 continuous. ETCSL t.4.07.2.
+
+**How I see it (from inside, in action):**
+Order’s god does not speak for me. The silence itself enlarges the lady of storm. I still heap coals and wait for her heart.
+
+**Why it qualifies as gnosis:**
+Hierarchy inverted in experience: silence of Nanna → greatness of Inana.
+
+**Three-Domain Reading:**
+
+- **Theology:** Nanna silent; Inana exalted as greatest.
+- **Technology:** Censer and purification as remaining protocol under collapse.
+- **Cosmology:** Heavens and earth as measures of her loftiness and breadth.
+
+**Compressed Insight:**
+Nanna has not spoken out — “He is yours!” — and that has made you the greatest.
+
+**Confidence:** 0.98  
+**Sources:** ETCSL Inana B 122–138.
+
+---
+
+## Event 04 — *Lady greater than An*
+
+**Title:** Impetuous wild cow
+
+**What I did / What was made:**
+Before my exile narrative I had already sung Inana above province and even above An — so the pivot to her is prepared in the cosmos of the hymn.
+
+**What I wrote / said (direct — full passage):**
+
+> Lady supreme over the foreign lands, who can take anything from your province? Once you have extended your province over the hills, vegetation there is ruined. Their great gateways are set afire. Blood is poured into their rivers because of you, and their people must drink it… Impetuous wild cow, great daughter of Suen, lady greater than An, who can take anything from your province?
+
+— *The exaltation of Inana* (Inana B), ETCSL lines 42–59 continuous (closing of the block). ETCSL t.4.07.2.
+
+**How I see it (from inside, in action):**
+I do not invent a lesser storm-goddess for private need. The song already holds her greater than An before I plead my case.
+
+**Why it qualifies as gnosis:**
+Cosmic rank of volatility fixed in continuous praise, then lived under exile.
+
+**Three-Domain Reading:**
+
+- **Theology:** Lady greater than An.
+- **Technology:** Province as field of total override.
+- **Cosmology:** Hills, rivers, gateways reorganized under her command.
+
+**Compressed Insight:**
+Impetuous wild cow — lady greater than An — who can take anything from your province?
+
+**Confidence:** 0.96  
+**Sources:** ETCSL Inana B 42–59.
+
+---
+
+## Event 05 — *Recited at dead of night*
+
+**Title:** Birth of the song for noon
+
+**What I did / What was made:**
+I closed the plea by naming the song’s production: full, too full — night recital for midday singer.
+
+**What I wrote / said (direct — full passage):**
+
+> Since it was full, too full for me, great exalted lady, I have recited this song for you. May a singer repeat to you at noon that which was recited to you at dead of night: “Because of your captive spouse, because of your captive child, your rage is increased, your heart unassuaged.”
+
+— *The exaltation of Inana* (Inana B), ETCSL lines 139–143 continuous. ETCSL t.4.07.2.
+
+**How I see it (from inside, in action):**
+The hymn is not cool composition. It is overflow at night that must be sung again in the light.
+
+**Why it qualifies as gnosis:**
+Mechanics of creation as night gestation → day performance.
+
+**Three-Domain Reading:**
+
+- **Theology:** Captive spouse/child as fuel of divine rage.
+- **Technology:** Recital → singer’s repeat as transmission chain.
+- **Cosmology:** Night and noon as two halves of one utterance.
+
+**Compressed Insight:**
+Full, too full — recited at dead of night; may a singer repeat it at noon.
+
+**Confidence:** 0.98  
+**Sources:** ETCSL Inana B 139–143.
+
+---
+
+## Event 06 — *Temple Hymns — first house*
+
+**Title:** E-unir grown with heaven and earth
+
+**What I did / What was made:**
+I (as compiler of the series) open the grid at Eridu — foundation, abzu, drums of divine powers — one house that already joins heaven and earth.
+
+**What I wrote / said (direct — full passage):**
+
+> O E-unir (House which is a ziqqurat), grown together with heaven and earth, foundation of heaven and earth, great banqueting hall of Eridug! Abzu, shrine erected for its prince, E-dul-kug (House which is the holy mound) where pure food is eaten, watered by the prince’s pure canal, mountain, pure place cleansed with the potash plant, abzu, your tigi drums belong to the divine powers.
+>
+> Your great …… wall is in good repair. Light does not enter your meeting-place where the god dwells, the great assembly-room, the assembly-room, the beautiful place. Your tightly constructed house is sacred and has no equal. Your prince, the great prince, has fixed firmly a holy crown for you in your precinct — O Eridug with a crown placed on your head…  
+> …lord Nudimmud, has erected a house in your precinct, O E-engura (House of the subterranean waters), and taken his seat upon your dais.
+>
+> 23 lines: the house of Enki in Eridug.
+
+— *The temple hymns*, ETCSL lines 1–24 continuous (opening + first house count). https://etcsl.orinst.ox.ac.uk/section4/tr4801.htm  
+Sumerian; English ETCSL.
+
+**How I see it (from inside, in action):**
+The grid begins where the abzu is — house grown with heaven and earth — not at the political capital alone.
+
+**Why it qualifies as gnosis:**
+First node of the interoperable temple network: foundation speech.
+
+**Three-Domain Reading:**
+
+- **Theology:** Enki/Nudimmud seated on the dais.
+- **Technology:** House architecture as protocol of pure food, canal, drums.
+- **Cosmology:** Ziqqurat joining heaven and earth.
+
+**Compressed Insight:**
+O E-unir, grown together with heaven and earth — foundation of heaven and earth.
+
+**Confidence:** 0.95  
+**Sources:** ETCSL Temple Hymns 1–24.
+
+---
+
+## Event 07 — *Something no one has created before*
+
+**Title:** Compiler of the tablets
+
+**What I did / What was made:**
+I closed the collection by naming the compiler and the novelty of the bound whole.
+
+**What I wrote / said (direct — full passage):**
+
+> The compiler of the tablets was En-hedu-ana. My king, something has been created that no one has created before.
+>
+> 14 lines: the house of Nisaba in Erec.
+
+— *The temple hymns*, ETCSL lines 543–545 continuous. ETCSL tr4801.htm / t.4.80.1.
+
+**How I see it (from inside, in action):**
+Not one hymn alone — the **binding** of the tablets is the new thing. The grid is the creation.
+
+**Why it qualifies as gnosis:**
+Authorship-as-compilation: network of temples as single created object.
+
+**Three-Domain Reading:**
+
+- **Theology:** Nisaba’s house as last seat of writing-wisdom.
+- **Technology:** Compilation as semantic protocol across cities.
+- **Cosmology:** Many houses, one created whole under “my king.”
+
+**Compressed Insight:**
+The compiler of the tablets was En-hedu-ana — something has been created that no one has created before.
+
+**Confidence:** 0.97 (colophon text secure; single-author debate noted above)  
+**Sources:** ETCSL Temple Hymns 543–545.
+
+---
+
+## Event 08 — *Assuaged*
+
+**Title:** Inana’s holy heart
+
+**What I did / What was made:**
+I recorded the turn: offerings accepted, heart assuaged, Nanna and Ningal present — the crisis hymn ends in restored light.
+
+**What I wrote / said (direct — full passage):**
+
+> The powerful lady, respected in the gathering of rulers, has accepted her offerings from her. Inana’s holy heart has been assuaged. The light was sweet for her, delight extended over her, she was full of fairest beauty. Like the light of the rising moon, she exuded delight. Nanna came out to gaze at her properly, and her mother Ningal blessed her. The door posts greeted her. Everyone’s speech to the mistress is exalted. Praise be to the destroyer of foreign lands, endowed with divine powers by An, to my lady enveloped in beauty, to Inana!
+
+— *The exaltation of Inana* (Inana B), ETCSL lines 144–154 continuous. ETCSL t.4.07.2.
+
+**How I see it (from inside, in action):**
+The storm lady can cool. The same Nanna who did not speak for me comes out to gaze when her heart is sweet. Praise closes the circuit.
+
+**Why it qualifies as gnosis:**
+End-state of the crisis: assuagement as real event in the hymn’s world.
+
+**Three-Domain Reading:**
+
+- **Theology:** Heart assuaged; Ningal’s blessing.
+- **Technology:** Offerings as input that closes the trial.
+- **Cosmology:** Rising moon light as restored order of beauty.
+
+**Compressed Insight:**
+Inana’s holy heart has been assuaged — light sweet — praise to my lady enveloped in beauty.
+
+**Confidence:** 0.97  
+**Sources:** ETCSL Inana B 144–154.
+
+---
+
+## Sources / Working Notes
+
+**Primary (continuous)**
+- ETCSL *The exaltation of Inana* (Inana B) t.4.07.2 — full English blocks above  
+- ETCSL *The temple hymns* t.4.80.1 — opening Eridu + colophon 543–544  
+
+**TempleGrid binding**
+- `shared/fixtures/layer6/enheduanna-temple-grid.json` / TEMPLE_GRID docs  
+- Specialty: semantic protocol across temple nodes  
+
+**Secondary (locator / caveat only)**
+- Authorship debates on Temple Hymns collection  
+- Hallo & van Dijk, *The Exaltation of Inanna* (YNERS 3) for facing edition later  
+
+---
+
+## Seat checklist
+
+- [x] Garden structure (life-list / inhabited — “I” from the hymns)
+- [x] Verbatim full-sense ETCSL continuous blocks (not soft paraphrase)
+- [x] Citations: composition + line range + ETCSL ID
+- [x] How I see it depends on the quote
+- [x] TempleGrid / compiler colophon at full extent
+- [x] Mark **COMPLETE under quotation rule for core events**
+- [ ] Optional: Sumerian facing lines; full 42-hymn sample table
+
+---
+
+**COMPLETE (core quotation bar)** — Council of Reflection — Enheduanna. Truth-for-seat under hold_policy; ETCSL continuous English of her Sumerian is the loadable voice.
