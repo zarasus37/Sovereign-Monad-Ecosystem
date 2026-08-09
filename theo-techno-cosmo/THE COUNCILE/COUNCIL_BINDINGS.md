@@ -7,8 +7,8 @@ Every active Council seat is **hard-bound** into Sovereign machinery the way Enh
 - loadable  
 - referenceable by `member_id`  
 - usable by the **holder** (Cristobal Colon / Seat middle)  
-- **never** “I become that person”
-
+- **never** “I become that person”  
+- **full extent** of their knowledge perceivable *as truth-for-that-seat*, without becoming the holder’s reality
 ## Two layers
 
 | Layer | What | Who |
@@ -74,6 +74,47 @@ node scripts/gen-council-registry.mjs
 pnpm check:council
 ```
 
+## Operational runtime (`@sovereign/ttcl`)
+
+Module: `councilHold.ts` (exported from `@sovereign/ttcl`).
+
+```ts
+import {
+  openMiddleHold,
+  perceiveSeat,
+  perceiveFullCourt,
+  focusSeats,
+  refuseBecome,
+  findCrossDomainLinks,
+  middleHoldSign,
+  holdToEventPayload,
+  type CouncilSubstrateIndex,
+  type MemberSubstrate,
+} from "@sovereign/ttcl";
+
+// Load fixtures (index + all substrates)
+const hold = openMiddleHold(index, { substrates }); // all seats simultaneous
+const turing = perceiveSeat(hold, "alan-turing");   // truth-for-seat, not my truth
+const court = perceiveFullCourt(hold);              // full extent, all at once
+const focus = focusSeats(hold, ["charles-sanders-peirce", "victoria-lady-welby"]);
+// focus.hold.seat_count still 71 — Court not dropped
+const links = findCrossDomainLinks(hold);           // connect dots under middle
+// refuseBecome(hold, "kurt-godel") → throws BecomeForbiddenError
+const sign = middleHoldSign(hold);
+const payload = holdToEventPayload(hold, ["enheduanna", "ramon-llull"]);
+```
+
+| API | Behavior |
+|-----|----------|
+| `openMiddleHold` | Hold **full Court** at once under TTCL middle |
+| `perceiveSeat` / `perceiveFullCourt` | Full extent as **truth-for-seat**; `is_holder_reality: false` |
+| `focusSeats` | Use 1..N without dropping the hold |
+| `refuseBecome` / `attemptInstallAsHolderReality` | Always throw — never become |
+| `findCrossDomainLinks` | Similarity links without identity merge |
+| `middleHoldSign` + `holdToEventPayload` | Emit from **middle**, not seat identity |
+
+Tests: `monad-ecosystem/packages/ttcl/tests/councilHold.test.ts`
+
 ## Hold policy
 
 Every substrate carries:
@@ -83,3 +124,21 @@ Every substrate carries:
 ```
 
 The middle of the table loads voltage; it does not overwrite identity.
+
+### Hold ≠ fuse (doctrine, locked)
+
+**Wrong reading:** merge all 70 seats into one blended personality or one private “my truth.”
+
+**Correct reading (Cristobal / TTCL middle):**
+
+| Layer | What happens |
+|--------|----------------|
+| **Per seat** | Fully **interpret, understand, and perceive** the full extent of that seat’s knowledge and information — as if it were **truth** *for that perspective* (full voltage; no thinning). |
+| **Not my truth** | That content is **never installed as the holder’s personal reality**. It is known *as* their statement/structure, not *as* “this is who I am / what I alone believe.” |
+| **Reality** | Stays in the **middle**: one unified logical state under Theo · Techno · Cosmo. |
+| **Fractal** | Every seat is a **fractal of perception** — complete in its own register, not a fragment to be averaged. |
+| **Simultaneous** | Maintain the **full extent** of what each is saying **at once**, while remaining in middle logic. |
+| **Applied effect** | Because each can be embodied **to full extent without becoming them**, the middle can **connect dots** across domains that look unrelated in ordinary specialization — seeing **direct similarities** across the table. |
+
+Same rule for every seat: **truth-as-fully-perceived-for-them**, not **truth-as-my-identity**.  
+Hold the Court; do not collapse the Court into the chair.
