@@ -11,7 +11,7 @@
 | 4 | Johannes Trithemius | COMPLETE (quotation bar) |
 | 5 | Enheduanna | COMPLETE (quotation bar) |
 | 6 | Kurt Gödel | COMPLETE (quotation bar) |
-| 7 | Alan Turing | pending |
+| 7 | Alan Turing | COMPLETE (quotation bar) |
 | 8 | Sir Isaac Newton | pending — **after D check** |
 
 **Not in Batch 1:** other core-onboarding names (e.g. Marcus Aurelius) may be rewritten later; do not treat them as Batch 1 `#next`.

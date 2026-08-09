@@ -1,360 +1,370 @@
 ALAN TURING GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Formal Sciences → Computer Science / Logic (with Mathematical Biology)
-**Era:** 1912–1954 (London / Sherborne / King’s Cambridge / Princeton / Bletchley / NPL / Manchester)
-**Status:** Extraction complete (seating candidate) — drawn from computability paper, wartime cryptanalysis, machine design, AI test, morphogenesis, and state persecution
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Formal spine — computability; universal machine; imitation game
+**Era:** 1912–1954 (Cambridge / Princeton / Bletchley / NPL / Manchester)
+**Status:** Garden + quotation depth — **Turing’s own sentences only** at full sense-units. Soft paraphrase is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Credit hygiene: Church’s independent work; Bletchley as collective — not substituted for Turing’s prose.
 
 ---
 
 ## Contribution
 
-Mathematician and logician who, in “On Computable Numbers, with an Application to the *Entscheidungsproblem*” (1936), defined the **universal Turing machine** and proved that no general decision procedure exists for arithmetic/logic in Hilbert’s sense — founding **computability theory** and the abstract model of the digital computer; who at **Bletchley Park** led cryptanalytic work against Enigma (Ultra); who specified the **ACE** stored-program computer and posed the **imitation game** (Turing test); who opened **reaction–diffusion** morphogenesis (1952); and who was prosecuted for homosexual acts (1952), died by cyanide (1954), and was posthumously pardoned (2014).
+I defined **computable numbers** by machines on a tape; invented a **universal computing machine**; showed the **Hilbert Entscheidungsproblem** has no general mechanical solution; later replaced “Can machines think?” by the **imitation game**; answered objections (including Lady Lovelace); and opened **chemical morphogenesis** (1952). I wrote so that effective procedure and machine intelligence could be argued in exact words.
 
 ## Key Insight
 
-Computation is a precise mathematical object: what can be effectively calculated is what a universal machine can do by reading, writing, and moving on a tape — and some well-posed questions about mathematics itself have no mechanical answer; so mind, code, and living pattern all become subjects of formal and machine science.
+What is computable is what a circle-free machine can write; one universal machine can do any such work; some well-posed decision questions have no general process; “thinking” is better tested by behaviour under interrogation than by Gallup-poll definitions.
 
 ## TTC Emphasis
 
-- THEOLOGY
 - TECHNOLOGY
+- THEOLOGY
 - COSMOLOGY
 
 ---
 
-## Preliminary Note
+## Preliminary Note (source hygiene)
 
-Turing is extracted from **papers, wartime record, and machine designs**, with credit hygiene: **Alonzo Church** independently reached undecidability via λ-calculus (Church–Turing thesis as later synthesis); **Gödel** incompleteness (already on Council) is the prior shock to Hilbert’s program that Turing’s machine proof joins; Bletchley is collective (Welchman, Newman, Hut colleagues, Polish cryptologic inheritance). Primary lines:
+| Priority | Material |
+|----------|----------|
+| **1** | A. M. Turing, “On Computable Numbers, with an Application to the *Entscheidungsproblem*” (*Proc. London Math. Soc.*, 1936/37) |
+| **1** | A. M. Turing, “Computing Machinery and Intelligence” (*Mind*, 1950) |
+| **2** | Morphogenesis paper (1952) for later tighten |
+| **3** | Secondary biography / Ultra history — not as his speech |
 
-1. King’s College; 1936 computable numbers paper
-2. Princeton PhD under Church (1938)
-3. Bletchley Park / Enigma / bombe
-4. ACE design (NPL); Manchester computing
-5. “Computing Machinery and Intelligence” (1950) — Turing test
-6. “The Chemical Basis of Morphogenesis” (1952)
-7. 1952 prosecution; death 7 June 1954; 2014 pardon
-
----
-
-## Event 01 — *King’s College Formation*
-
-**Title:** Probability, Fellowship, and the Decision Problem
-
-**Passage or Trigger:**
-Cambridge mathematics from 1931; elected Fellow of King’s College (1935) on probability research; under Max Newman’s guidance works Hilbert’s *Entscheidungsproblem* — is there an effective method to decide provability in a formal system?
-
-**Why It Qualifies:**
-The seat’s origin is pure math under Hilbert’s dream. The machine will be invented to answer a logic question, not to sell a product.
-
-**Three-Domain Reading:**
-
-- **Theology:** Quest for complete mechanical certainty about truth.
-- **Technology:** Paper methods before electronics.
-- **Cosmology:** Mathematics as a world that might or might not be fully decidable.
-
-**Compressed Insight:**
-He asked whether proof could be a machine’s job — and built the machine in order to say no.
-
-**Confidence:** 0.94  
-**Sources:** Britannica early career; King’s College Cambridge exhibition; Advanced Science News pioneer profile.
+**Carriers used:** OCR of 1936 *PLMS* paper PDF; 1950 *Mind* reprint PDF (UMB C / standard academic scan).
 
 ---
 
-## Event 02 — *On Computable Numbers* (1936)
+## Event 01 — *Written down by a machine*
 
-**Title:** The Universal Machine on a Tape
+**Title:** What “computable” means
 
-**Passage or Trigger:**
-1936 paper: defines computable numbers via an abstract machine (read/write head, infinite tape, finite table of states); introduces the **universal computing machine** that can simulate any other; applies the construction to show the *Entscheidungsproblem* has no general solution. Recommended for publication with Church’s related result in view.
+**What I did / What was made:**
+I opened by defining computable numbers as those whose decimals a machine can write.
 
-**Why It Qualifies:**
-Founding event of computer science as theory. Every stored-program computer is a physical cousin of this abstraction. Complements Gödel: incompleteness of formal systems meets uncomputability of decision.
+**What I wrote / said (direct — full passage):**
+
+> The “computable” numbers may be described briefly as the real numbers whose expressions as a decimal are calculable by finite means. Although the subject of this paper is ostensibly the computable numbers, it is almost equally easy to define and investigate computable functions of an integral variable or a real or computable variable, computable predicates, and so forth. The fundamental problems involved are, however, the same in each case, and I have chosen the computable numbers for explicit treatment as involving the least cumbrous technique. … According to my definition, a number is computable if its decimal can be written down by a machine.
+>
+> …The computable numbers do not, however, include all definable numbers, and an example is given of a definable number which is not computable.
+>
+> Although the class of computable numbers is so great, and in many ways similar to the class of real numbers, it is nevertheless enumerable. … By the correct application of one of these arguments, conclusions are reached which are superficially similar to those of Gödel. These results have valuable applications. In particular, it is shown (§11) that the Hilbertian Entscheidungsproblem can have no solution.
+>
+> In a recent paper Alonzo Church has introduced an idea of “effective calculability”, which is equivalent to my “computability”, but is very differently defined. Church also reaches similar conclusions about the Entscheidungsproblem.
+
+— A. M. Turing, “On Computable Numbers, with an Application to the Entscheidungsproblem” (1936), opening continuous. *Proc. London Math. Soc.*
+
+**How I see it (from inside, in action):**
+I do not start from electronics. I start from finite means and a machine that writes the decimal. Definable is larger than computable. Church’s path meets mine.
+
+**Why it qualifies as gnosis:**
+Effective calculation fixed as machine-writing of a decimal.
 
 **Three-Domain Reading:**
 
-- **Theology:** Limits on what finite creatures can decide by rule alone.
-- **Technology:** Blueprint of general-purpose computation before the hardware exists.
-- **Cosmology:** Effective procedure as a law of the possible.
+- **Theology:** Finite means as creaturely limit of calculation.
+- **Technology:** Machine-definition of the computable.
+- **Cosmology:** Enumerable “great” class inside the reals; gap vs all definable.
 
 **Compressed Insight:**
-He turned “what can be calculated” into a machine — then proved some questions never halt into yes or no.
+A number is computable if its decimal can be written down by a machine — and not all definable numbers are computable.
+
+**Confidence:** 0.99  
+**Sources:** Turing 1936 opening continuous.
+
+---
+
+## Event 02 — *Man as machine on a tape*
+
+**Title:** Limited memory, scanned square
+
+**What I did / What was made:**
+I compared a man computing to a machine with finite *m*-configurations, tape, and a single scanned symbol of which it is “directly aware.”
+
+**What I wrote / said (direct — full passage):**
+
+> We have said that the computable numbers are those whose decimals are calculable by finite means. This requires rather more explicit definition. No real attempt will be made to justify the definitions given until we reach §9. For the present I shall only say that the justification lies in the fact that the human memory is necessarily limited.
+>
+> We may compare a man in the process of computing a real number to a machine which is only capable of a finite number of conditions *q*₁, *q*₂, …, *q*ᵣ which will be called “*m*-configurations”. The machine is supplied with a “tape” (the analogue of paper) running through it, and divided into sections (called “squares”) each capable of bearing a “symbol”. At any moment there is just one square, say the *r*-th, bearing the symbol 𝔖(*r*) which is “in the machine”. We may call this square the “scanned square”. The symbol on the scanned square may be called the “scanned symbol”. The “scanned symbol” is the only one of which the machine is, so to speak, “directly aware”. However, by altering its *m*-configuration the machine can effectively remember some of the symbols which it has “seen” (scanned) previously. The possible behaviour of the machine at any moment is determined by the *m*-configuration *qₙ* and the scanned symbol 𝔖(*r*). This pair *qₙ*, 𝔖(*r*) will be called the “configuration”: thus the configuration determines the possible behaviour of the machine. In some of the configurations in which the scanned square is blank (i.e. bears no symbol) the machine writes down a new symbol on the scanned square: in other configurations it erases the scanned symbol. The machine may also change the square which is being scanned, but only by shifting it one place to right or left. In addition to any of these operations the *m*-configuration may be changed. Some of the symbols written down will form the sequence of figures which is the decimal of the real number which is being computed. The others are just rough notes to “assist the memory”. It will only be these rough notes which will be liable to erasure.
+>
+> It is my contention that these operations include all those which are used in the computation of a number.
+
+— Turing 1936, §1 continuous.
+
+**How I see it (from inside, in action):**
+I ground the machine in limited human memory. One square is all it is directly aware of — the rest is configuration and notes.
+
+**Why it qualifies as gnosis:**
+Human calculation and machine model joined as one structure.
+
+**Three-Domain Reading:**
+
+- **Theology:** Finite mind as the warrant for finite states.
+- **Technology:** Tape, head, table — complete primitive instruction set.
+- **Cosmology:** Computation as local awareness plus finite control.
+
+**Compressed Insight:**
+The scanned symbol is the only one of which the machine is “directly aware” — and these operations include all used in computing a number.
+
+**Confidence:** 0.99  
+**Sources:** Turing 1936 §1 continuous.
+
+---
+
+## Event 03 — *Circular and circle-free*
+
+**Title:** Satisfactory numbers
+
+**What I did / What was made:**
+I defined circle-free machines (those that keep writing figures) and noted there is no general process for whether a description number is satisfactory.
+
+**What I wrote / said (direct — full passage):**
+
+> **Circular and circle-free machines.**  
+> If a computing machine never writes down more than a finite number of symbols of the first kind, it will be called *circular*. Otherwise it is said to be *circle-free*.  
+> A machine will be circular if it reaches a configuration from which there is no possible move, or if it goes on moving, and possibly printing symbols of the second kind, but cannot print any more symbols of the first kind.  
+> …  
+> A sequence is said to be computable if it can be computed by a circle-free machine. A number is computable if it differs by an integer from the number computed by a circle-free machine.  
+> …  
+> A number which is a description number of a circle-free machine will be called a satisfactory number. In §8 it is shown that there can be no general process for determining whether a given number is satisfactory or not.
+
+— Turing 1936, §2 and end of §5 continuous.
+
+**How I see it (from inside, in action):**
+Halting-as-failure-to-print-figures is built into the definition. “Satisfactory” is not decidable by a general process.
+
+**Why it qualifies as gnosis:**
+Non-existence of a general process for a natural property of machines.
+
+**Three-Domain Reading:**
+
+- **Theology:** Limits on general judgment of processes.
+- **Technology:** Circle-free = productive output of figures.
+- **Cosmology:** Enumerability of sequences that never stop writing.
+
+**Compressed Insight:**
+There can be no general process for determining whether a given number is satisfactory or not.
+
+**Confidence:** 0.98  
+**Sources:** Turing 1936 §2 / §5 continuous.
+
+---
+
+## Event 04 — *The universal computing machine*
+
+**Title:** One machine for any computable sequence
+
+**What I did / What was made:**
+I stated that a single machine *U*, given the standard description of any machine *M*, can compute what *M* computes.
+
+**What I wrote / said (direct — full passage):**
+
+> **6. The universal computing machine.**  
+> It is possible to invent a single machine which can be used to compute any computable sequence. If this machine *U* is supplied with a tape on the beginning of which is written the S.D of some computing machine *M*, then *U* will compute the same sequence as *M*. In this section I explain in outline the behaviour of the machine. The next section is devoted to giving the complete table for *U*.
+>
+> …We have only to regard the rules as being capable of being taken out and exchanged for others and we have something very akin to the universal machine.
+
+— Turing 1936, §6 continuous (opening + program-exchange remark).
+
+**How I see it (from inside, in action):**
+I do not need a new machine for each task. One machine, rules on the tape, exchanges the program.
+
+**Why it qualifies as gnosis:**
+Stored-program universality before the electronic computer as product.
+
+**Three-Domain Reading:**
+
+- **Theology:** One instrument for all effective sequences.
+- **Technology:** S.D on tape as software; *U* as hardware.
+- **Cosmology:** All computable processes as instances of one form.
+
+**Compressed Insight:**
+A single machine *U*, given the S.D of *M*, computes the same sequence as *M*.
+
+**Confidence:** 0.99  
+**Sources:** Turing 1936 §6 continuous.
+
+---
+
+## Event 05 — *No solution of the Entscheidungsproblem*
+
+**Title:** No machine that says whether 𝔄 is provable
+
+**What I did / What was made:**
+I applied the machine theory to Hilbert’s decision problem and distinguished my result from Gödel’s.
+
+**What I wrote / said (direct — full passage):**
+
+> **11. Application to the Entscheidungsproblem.**  
+> The results of §8 have some important applications. In particular, they can be used to show that the Hilbert Entscheidungsproblem can have no solution. …  
+> I propose, therefore, to show that there can be no general process for determining whether a given formula 𝔄 of the functional calculus *K* is provable, i.e. that there can be no machine which, supplied with any one 𝔄 of these formulae, will eventually say whether 𝔄 is provable.
+>
+> It should perhaps be remarked that what I shall prove is quite different from the well-known results of Gödel. Gödel has shown that (in the formalism of Principia Mathematica) there are propositions 𝔄 such that neither 𝔄 nor ¬𝔄 is provable. As a consequence of this, it is shown that no proof of consistency of Principia Mathematica (or of *K*) can be given within that formalism. On the other hand, I shall show that there is no general method which tells whether a given formula 𝔄 is provable in *K*, or, what comes to the same, whether the system consisting of *K* with ¬𝔄 adjoined as an extra axiom is consistent.
+>
+> If the negation of what Gödel has shown had been proved, i.e. if, for each 𝔄, either 𝔄 or ¬𝔄 is provable, then we should have an immediate solution of the Entscheidungsproblem. For we can invent a machine 𝒦 which will prove consecutively all provable formulae. Sooner or later 𝒦 will reach either 𝔄 or ¬𝔄. …
+
+— Turing 1936, §11 continuous opening.
+
+**How I see it (from inside, in action):**
+Gödel left some formulas unprovable either way. I show there is no **general machine** that, for every formula, answers “provable?”.
+
+**Why it qualifies as gnosis:**
+Decision problem ends as mechanical hope; join to Gödel without conflation.
+
+**Three-Domain Reading:**
+
+- **Theology:** No general oracle for formal proof.
+- **Technology:** “No machine which… will eventually say.”
+- **Cosmology:** Logic’s space of formulas not fully surveyable by process.
+
+**Compressed Insight:**
+There can be no machine which, supplied with any formula, will eventually say whether it is provable.
+
+**Confidence:** 0.99  
+**Sources:** Turing 1936 §11 continuous.
+
+---
+
+## Event 06 — *The imitation game*
+
+**Title:** Replace “Can machines think?”
+
+**What I did / What was made:**
+I refused Gallup-poll definitions and restated the problem as a three-party game, then put a machine in place of A.
+
+**What I wrote / said (direct — full passage):**
+
+> I propose to consider the question, “Can machines think?” This should begin with definitions of the meaning of the terms “machine” and “think.” The definitions might be framed so as to reflect so far as possible the normal use of the words, but this attitude is dangerous. If the meaning of the words “machine” and “think” are to be found by examining how they are commonly used it is difficult to escape the conclusion that the meaning and the answer to the question, “Can machines think?” is to be sought in a statistical survey such as a Gallup poll. But this is absurd. Instead of attempting such a definition I shall replace the question by another, which is closely related to it and is expressed in relatively unambiguous words.
+>
+> The new form of the problem can be described in terms of a game which we call the “imitation game.” It is played with three people, a man (A), a woman (B), and an interrogator (C) who may be of either sex. The interrogator stays in a room apart from the other two. The object of the game for the interrogator is to determine which of the other two is the man and which is the woman. He knows them by labels X and Y, and at the end of the game he says either “X is A and Y is B” or “X is B and Y is A.” The interrogator is allowed to put questions to A and B thus:  
+> C: Will X please tell me the length of his or her hair?  
+> …In order that tones of voice may not help the interrogator the answers should be written, or better still, typewritten. The ideal arrangement is to have a teleprinter communicating between the two rooms. …
+>
+> We now ask the question, “What will happen when a machine takes the part of A in this game?” Will the interrogator decide wrongly as often when the game is played like this as he does when the game is played between a man and a woman? These questions replace our original, “Can machines think?”
+
+— A. M. Turing, “Computing Machinery and Intelligence” (*Mind*, 1950), §1 continuous.
+
+**How I see it (from inside, in action):**
+I will not poll the public for the meaning of “think.” I will play a game with a teleprinter and ask whether the machine can take A’s part.
+
+**Why it qualifies as gnosis:**
+Operational replacement of a metaphysical question by a behavioural test.
+
+**Three-Domain Reading:**
+
+- **Theology:** Thinking unmoored from word-magic definitions.
+- **Technology:** Teleprinter interface as experimental apparatus.
+- **Cosmology:** Mind judged in communicative space, not inner essence first.
+
+**Compressed Insight:**
+These questions replace our original, “Can machines think?”
+
+**Confidence:** 0.99  
+**Sources:** Turing 1950 §1 continuous.
+
+---
+
+## Event 07 — *Universal machines again — and my beliefs*
+
+**Title:** Fifty years; too meaningless to discuss
+
+**What I did / What was made:**
+I restated universality for digital computers and stated my forecast and my judgment on the original question.
+
+**What I wrote / said (direct — full passage):**
+
+> This special property of digital computers, that they can mimic any discrete-state machine, is described by saying that they are universal machines. The existence of machines with this property has the important consequence that, considerations of speed apart, it is unnecessary to design various new machines to do various computing processes. They can all be done with one digital computer, suitably programmed for each case. … as a consequence of this all digital computers are in a sense equivalent.
+>
+> …“Are there imaginable digital computers which would do well in the imitation game?” … equivalent to this, “Let us fix our attention on one particular digital computer *C*. Is it true that by modifying this computer to have an adequate storage, suitably increasing its speed of action, and providing it with an appropriate programme, *C* can be made to play satisfactorily the part of A in the imitation game, the part of B being taken by a man?”
+>
+> I believe that in about fifty years’ time it will be possible, to programme computers, with a storage capacity of about 10⁹, to make them play the imitation game so well that an average interrogator will not have more than 70 per cent chance of making the right identification after five minutes of questioning. The original question, “Can machines think?” I believe to be too meaningless to deserve discussion. Nevertheless I believe that at the end of the century the use of words and general educated opinion will have altered so much that one will be able to speak of machines thinking without expecting to be contradicted. I believe further that no useful purpose is served by concealing these beliefs.
+
+— Turing 1950, continuous (universality + belief paragraph).
+
+**How I see it (from inside, in action):**
+One programmed computer is enough for all discrete processes. The old question is meaningless; the century will change the words.
+
+**Why it qualifies as gnosis:**
+Engineering universality joined to linguistic prophecy about “thinking.”
+
+**Three-Domain Reading:**
+
+- **Theology:** Meaning of “think” as cultural use, not eternal essence.
+- **Technology:** One universal digital computer; storage and speed.
+- **Cosmology:** Historical change in what may be said without contradiction.
+
+**Compressed Insight:**
+“Can machines think?” is too meaningless to deserve discussion — yet words will shift so we speak of machines thinking.
+
+**Confidence:** 0.98  
+**Sources:** Turing 1950 continuous.
+
+---
+
+## Event 08 — *Lady Lovelace and surprise*
+
+**Title:** Machines take me by surprise
+
+**What I did / What was made:**
+I met the objection that a machine can only do what we order — and the variant that it cannot take us by surprise.
+
+**What I wrote / said (direct — full passage):**
+
+> **(6) Lady Lovelace’s Objection**  
+> Our most detailed information of Babbage’s Analytical Engine comes from a memoir by Lady Lovelace (1842). In it she states, “The Analytical Engine has no pretensions to *originate* anything. It can do whatever we know how to order it to perform” (her italics). …
+>
+> A variant of Lady Lovelace’s objection states that a machine can “never do anything really new.” This may be parried for a moment with the saw, “There is nothing new under the sun.” … A better variant of the objection says that a machine can never “take us by surprise.” This statement is a more direct challenge and can be met directly. Machines take me by surprise with great frequency. This is largely because I do not do sufficient calculation to decide what to expect them to do, or rather because, although I do a calculation, I do it in a hurried, slipshod fashion, taking risks. … Naturally I am often wrong, and the result is a surprise for me …
+>
+> The view that machines cannot give rise to surprises is due, I believe, to a fallacy to which philosophers and mathematicians are particularly subject. This is the assumption that as soon as a fact is presented to a mind all consequences of that fact …
+
+— Turing 1950, §6 Lady Lovelace continuous (opening + surprise reply).
+
+**How I see it (from inside, in action):**
+I am surprised by machines when I am a bad calculator of their futures. That does not make surprise a monopoly of non-machines.
+
+**Why it qualifies as gnosis:**
+Originality objection met by experience of machine surprise and critique of “all consequences at once.”
+
+**Three-Domain Reading:**
+
+- **Theology:** “Nothing new under the sun” as soft shield — then discarded for the harder point.
+- **Technology:** Machine behaviour as source of surprise under incomplete prediction.
+- **Cosmology:** Mind does not hold all consequences of a presented fact.
+
+**Compressed Insight:**
+Machines take me by surprise with great frequency — the “no surprise” view rests on a philosopher’s fallacy.
 
 **Confidence:** 0.97  
-**Sources:** Britannica on 1936 paper and Turing machine; King’s College; Advanced Science News; Wikipedia known-for.
-
----
-
-## Event 03 — *Church and the Thesis*
-
-**Title:** Two Proofs, One Frontier
-
-**Passage or Trigger:**
-Church publishes related undecidability via λ-calculus; Turing goes to Princeton for PhD under Church (completed 1938). Later “Church–Turing thesis”: the intuitive notion of effective calculability coincides with Turing-computability (and equivalent formalisms).
-
-**Why It Qualifies:**
-Credit hygiene. Undecidability is not sole property. Turing’s distinctive gift is the **machine model** that engineers can almost touch.
-
-**Three-Domain Reading:**
-
-- **Theology:** Truth approached by plural formal paths.
-- **Technology:** Equivalence of models as engineering confidence.
-- **Cosmology:** One limit on mechanism, many notations.
-
-**Compressed Insight:**
-Church wrote functions; he wrote a machine — same mountain, two maps, one summit of limit.
-
-**Confidence:** 0.95  
-**Sources:** Britannica Church parallel and Princeton; standard Church–Turing accounts.
-
----
-
-## Event 04 — *Bletchley Park*
-
-**Title:** Ultra as Civilizational Computation
-
-**Passage or Trigger:**
-WWII: Government Code and Cypher School at Bletchley Park. Turing central to cryptanalysis of German **Enigma** (and related work); **bombe** electromechanical aid to key search; Ultra intelligence. Work secret for decades; lives shortened war in historical estimates debated but strategic impact widely affirmed.
-
-**Why It Qualifies:**
-Technology under existential war. Abstract computability becomes concrete against a cipher machine. Collective labor — Polish bomb inheritance, Hut teams, Welchman improvements — must be named beside the icon.
-
-**Three-Domain Reading:**
-
-- **Theology:** Knowledge used to end slaughter; secrecy as moral weight.
-- **Technology:** Cryptanalysis as applied state machines and statistics.
-- **Cosmology:** Information as a domain of war equal to steel.
-
-**Compressed Insight:**
-He turned logic into a weapon against the cipher — and helped a free world keep reading the enemy’s night.
-
-**Confidence:** 0.94  
-**Sources:** Wikipedia Bletchley/Ultra; Historic England; Britannica wartime career; standard Bletchley histories.
-
----
-
-## Event 05 — *The Bombe*
-
-**Title:** Machines Against Machines
-
-**Passage or Trigger:**
-Design and deployment of **bombes** — electromechanical devices searching Enigma settings under crib and logical constraints. Human insight plus industrial-scale automated trial; multiplication of units across the war.
-
-**Why It Qualifies:**
-Bridge from Turing machine ideal to wartime hardware. Pattern: human problem reduced to mechanical search under theory.
-
-**Three-Domain Reading:**
-
-- **Theology:** Cunning of reason under necessity.
-- **Technology:** Special-purpose computers before general ones.
-- **Cosmology:** Cipher space as searchable landscape.
-
-**Compressed Insight:**
-He built engines that walked the space of keys — so that thought could outrun the rotor.
-
-**Confidence:** 0.93  
-**Sources:** Standard Enigma/bombe technical histories; Britannica cryptanalysis context.
-
----
-
-## Event 06 — *ACE* (NPL, 1945–)
-
-**Title:** The Stored Program Fully Specified
-
-**Passage or Trigger:**
-Postwar National Physical Laboratory: Turing’s design for the **Automatic Computing Engine (ACE)** — early complete specification of an electronic stored-program all-purpose digital computer; ambitious memory and speed. Colleagues judge full ACE too hard; **Pilot Model ACE** (1950) built smaller. Later Manchester Ferranti Mark I work.
-
-**Why It Qualifies:**
-From abstract universal machine to engineering brief. Von Neumann architecture era is a multi-site race; ACE is Turing’s British line (credit also Eckert/Mauchly/von Neumann network already noted on Council for EDVAC lineage).
-
-**Three-Domain Reading:**
-
-- **Theology:** Vision larger than the institution will fund.
-- **Technology:** Stored program as practical universal machine.
-- **Cosmology:** Computation as national infrastructure of mind.
-
-**Compressed Insight:**
-He specified a full electronic brain — and watched a pilot fly where the full ship was refused.
-
-**Confidence:** 0.94  
-**Sources:** Britannica ACE; King’s College NPL; Advanced Science News ACE note.
-
----
-
-## Event 07 — *Computing Machinery and Intelligence* (1950)
-
-**Title:** The Imitation Game
-
-**Passage or Trigger:**
-1950 *Mind* paper: replaces “Can machines think?” with the **imitation game** (Turing test) — can a machine’s text answers be indistinguishable from a human’s in controlled interrogation? Discusses learning machines, objections, and future of AI.
-
-**Why It Qualifies:**
-Founding AI philosophy event. Operational criterion for mind-like behavior; still contested, still generative. Complements von Neumann’s computer seat with the question of **intelligence**.
-
-**Three-Domain Reading:**
-
-- **Theology:** Image of mind without requiring soul-substance first.
-- **Technology:** Dialogue protocol as evaluation instrument.
-- **Cosmology:** Intelligence as possible property of organized matter.
-
-**Compressed Insight:**
-He refused the metaphysics quarrel and asked only: can you tell the voice from the code?
-
-**Confidence:** 0.96  
-**Sources:** Britannica AI/test; Wikipedia Turing test; standard 1950 paper reception.
-
----
-
-## Event 08 — *Morphogenesis* (1952)
-
-**Title:** Chemistry That Paints the Leopard
-
-**Passage or Trigger:**
-“The Chemical Basis of Morphogenesis” (*Philosophical Transactions of the Royal Society*, 1952): reaction–diffusion equations; how homogeneous tissue can break symmetry into spots, stripes, and structures (**Turing patterns**). Models run on Manchester’s Ferranti Mark I. Predicts oscillating chemical dynamics later seen (e.g. Belousov–Zhabotinsky class phenomena).
-
-**Why It Qualifies:**
-Second life of genius: from logic/machines to living form. Mathematical biology seat-adjacent; computer used to grow virtual organisms. Complements Darwin’s tree with a mechanism of spatial pattern.
-
-**Three-Domain Reading:**
-
-- **Theology:** Form arising from law, not only fiat stamp.
-- **Technology:** Digital simulation of continuous chemistry.
-- **Cosmology:** Body plans as solutions of equations in space and time.
-
-**Compressed Insight:**
-He asked how the embryo paints itself — and answered with chemicals that run and diffuse until pattern appears.
-
-**Confidence:** 0.95  
-**Sources:** Wikipedia morphogenesis; Britannica 1952 paper and Mark I; Royal Society paper lineage; Advanced Science News.
-
----
-
-## Event 09 — *Prosecution* (1952)
-
-**Title:** The State Criminalizes the Man
-
-**Passage or Trigger:**
-1952: prosecuted for homosexual acts under then-British law (relationship with Arnold Murray); conviction; offered hormone “treatment” (chemical castration) as alternative to prison. Security clearance and career damaged at peak of scientific power.
-
-**Why It Qualifies:**
-Theology of justice inverted: the codebreaker criminalized by the code of the age. Council records persecution as part of the gnosis — not only the theorems.
-
-**Three-Domain Reading:**
-
-- **Theology:** Law that punishes love as sin of the polity.
-- **Technology:** Medicalization of punishment (hormones as control).
-- **Cosmology:** Mid-century state’s power over the private body.
-
-**Compressed Insight:**
-The mind that cracked Enigma was broken by a statute — desire made a crime, genius made a patient.
-
-**Confidence:** 0.96  
-**Sources:** Wikipedia 1952 prosecution; Oxford DNB trial summary; Historic England; Advanced Science News pardon context.
-
----
-
-## Event 10 — *Death* (7 June 1954)
-
-**Title:** Cyanide and the Unfinished Work
-
-**Passage or Trigger:**
-Dies 7 June 1954, Wilmslow, age 41; cyanide poisoning; inquest: suicide. Alternative hypotheses exist in popular discussion; official finding stands in standard biographies. Morphogenesis and computing programs cut short.
-
-**Why It Qualifies:**
-Finite life against infinite program. The seat’s tragedy is civilizational: what further machines, proofs, and biological models were lost.
-
-**Three-Domain Reading:**
-
-- **Theology:** Creaturely end under unjust history.
-- **Technology:** Half-built futures of AI and biomathematics.
-- **Cosmology:** One mind’s death does not erase the universal machine.
-
-**Compressed Insight:**
-He left at forty-one — tape still infinite, pattern still forming, law still cruel.
-
-**Confidence:** 0.93  
-**Sources:** Wikipedia death; Britannica; standard biographies (suicide inquest).
-
----
-
-## Event 11 — *Pardon and Afterlife* (2013–2014)
-
-**Title:** The Crown Rewrites the Record Too Late
-
-**Passage or Trigger:**
-Royal pardon (2013 process culminating August 2014 posthumous pardon) overturning the 1952 conviction; broader “Alan Turing law” clemency for others follows in spirit. Cultural apotheosis: name on buildings, prizes, banknotes, films — **Turing** as synonym for computability and LGBTQ STEM memory.
-
-**Why It Qualifies:**
-Institutional repentance. Gnosis includes the century’s delayed apology — honor without resurrection.
-
-**Three-Domain Reading:**
-
-- **Theology:** Justice after death as partial repair.
-- **Technology:** Naming rights as soft infrastructure of memory.
-- **Cosmology:** Legacy as living standard of the digital age.
-
-**Compressed Insight:**
-They pardoned a ghost and put his name on the age of computers — mercy that could not return the years.
-
-**Confidence:** 0.94  
-**Sources:** Advanced Science News Queen’s pardon 2014; public legacy record.
-
----
-
-## Event 12 — *The Thesis That Runs the World*
-
-**Title:** Every Phone Is a Tape in Disguise
-
-**Passage or Trigger:**
-Civilizational afterlife of the universal machine: programming languages, complexity theory, cryptography, AI, and the smartphone all inherit the 1936 abstraction. “Turing-complete” becomes engineers’ everyday metaphysical claim about systems.
-
-**Why It Qualifies:**
-Maximum Arch impact. Formal science becomes the operating system of modernity. Complements von Neumann hardware lineage with logical essence.
-
-**Three-Domain Reading:**
-
-- **Theology:** Human making of general intellective tools.
-- **Technology:** Universality as design goal.
-- **Cosmology:** Information processing as a fundamental layer of culture.
-
-**Compressed Insight:**
-He defined what a computer is before computers existed — and then the world filled with his tape.
-
-**Confidence:** 0.95  
-**Sources:** Cumulative reception of computability and universal machine in CS; Britannica significance framing.
+**Sources:** Turing 1950 Lovelace continuous.
 
 ---
 
 ## Sources / Working Notes
 
 **Primary**
-- “On Computable Numbers, with an Application to the *Entscheidungsproblem*” (1936)
-- Bletchley wartime work (declassified historical record)
-- ACE design papers / NPL period
-- “Computing Machinery and Intelligence” (1950)
-- “The Chemical Basis of Morphogenesis” (1952)
+- Turing 1936 *On Computable Numbers* (PLMS) — continuous blocks above  
+- Turing 1950 *Computing Machinery and Intelligence* (*Mind*) — continuous blocks above  
 
-**Secondary**
-- Britannica Alan Turing
-- King’s College Cambridge Turing exhibition
-- Wikipedia known-for and life outline
-- Advanced Science News pioneer profile; Oxford DNB trial note
+**Optional later**
+- “The Chemical Basis of Morphogenesis” (1952) continuous  
+- ACE report continuous  
+- Dual credit with Church / Bletchley colleagues as **acts**, not his sentences  
 
-**Open questions for later passes**
-- Delilah speech encryption project as nested wartime event
-- Exact relationship of ACE to other early machines denser engineering pass
-- Morphogenesis numerical methods on Mark I finer grain
+**Secondary (locator only)**
+- Histories of Ultra, ACE, prosecution — not voice  
 
 ---
 
 ## Seat checklist
 
-- [x] Research from papers and standard history (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple source-grounded events (Church/Bletchley collective/Gödel link noted)
-- [ ] member_id: `alan-turing`
-- [ ] Registry enrollment when ready
-- [x] PENDING scaffold replaced by full extraction
+- [x] Garden structure (inhabited — “I” from Turing)
+- [x] Verbatim full-sense primary blocks
+- [x] 1936: definition, tape machine, circular, universal *U*, Entscheidungsproblem
+- [x] 1950: imitation game, universality, beliefs, Lovelace/surprise
+- [x] Mark **COMPLETE under quotation rule for core events**
+- [ ] Optional: morphogenesis continuous; German/English notes N/A
 
 ---
 
-*Council of Reflection — Arch of Human Gnosis (Computer Science / Logic). Events grounded in computability, war cryptanalysis, AI, morphogenesis, and persecution; co-discoverers and teams named.*
+**COMPLETE (core quotation bar)** — Council of Reflection — Alan Turing. Truth-for-seat under hold_policy; Turing’s sentences are the loadable voice.
