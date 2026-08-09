@@ -10,7 +10,7 @@
 | 2 | Alan Turing | Arch — Batch 1 | COMPLETE |
 | 3 | Albert Einstein | Arch — Batch 2 | COMPLETE |
 | 4 | Antoine Lavoisier | Arch — Batch 2 | COMPLETE |
-| 5 | Aristotle | Large; catalog-leaning | pending |
+| 5 | Aristotle | Large; catalog-leaning | COMPLETE |
 | 6 | Basilides of Alexandria | Thin (~9 KB) — rewrite and deepen | pending |
 | 7 | Carl Friedrich Gauss | Arch — Batch 2 | COMPLETE |
 | 8 | Charles Darwin | Arch — Batch 2 | COMPLETE |
