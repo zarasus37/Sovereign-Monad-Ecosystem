@@ -14,7 +14,7 @@
 | 6 | Basilides of Alexandria | Thin (~9 KB) — rewrite and deepen | COMPLETE |
 | 7 | Carl Friedrich Gauss | Arch — Batch 2 | COMPLETE |
 | 8 | Charles Darwin | Arch — Batch 2 | COMPLETE |
-| 9 | Claude Lévi-Strauss | Arch | pending |
+| 9 | Claude Lévi-Strauss | Arch | COMPLETE |
 | 10 | Edwin Hubble | Arch — Batch 2 | COMPLETE |
 | 11 | Ferdinand de Saussure | Arch | pending |
 | 12 | George Balanchine | Arch | pending |
