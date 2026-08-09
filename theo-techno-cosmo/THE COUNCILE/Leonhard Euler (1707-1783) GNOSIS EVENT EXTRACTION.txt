@@ -1,361 +1,346 @@
 LEONHARD EULER GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Formal Sciences → Mathematics
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Cosmos / law / life — analysis of functions; geometry of position; exponential–circular link
 **Era:** 1707–1783 (Basel / St. Petersburg / Berlin / St. Petersburg)
-**Status:** Extraction complete (seating candidate) — drawn from major works, the Königsberg analysis, and standard scientific biography
+**Status:** Garden + quotation depth — **Euler’s own sentences only** at full sense-units (English carriers of his Latin). Soft paraphrase is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Credit hygiene: **Leibniz** named for *geometria situs*; Bernoulli tradition of “function”; **Cotes** earlier complex-log link to trig (not his sole discovery of every complex identity); blindness and academy career are acts, not soft “prolific meme” as voice.
 
 ---
 
 ## Contribution
 
-Most prolific mathematician of the modern era, who rebuilt analysis as a systematic science of functions (*Introductio in analysin infinitorum*), standardized much of modern mathematical notation (e, f(x), Σ, i, …), founded graph theory with the Seven Bridges of Königsberg (1736), advanced number theory, mechanics, fluid dynamics, astronomy, and optics, and continued producing mathematics after near-total blindness — a living proof that formal vision need not depend on physical sight.
+I referred the Königsberg bridge problem to **geometry of position** and gave a general rule when a walk can cross each bridge once; I made the **function** the central object of analysis in the *Introductio in analysin infinitorum* (1748); I fixed the base **e** of natural logarithms as an infinite series and the exponential *e*^z as series; and I showed how **imaginary exponential quantities** reduce to the sine and cosine of real arcs — *e*^(+*v*√−1) = cos *v* + √−1 · sin *v*.
 
 ## Key Insight
 
-Structure survives abstraction: when a city’s bridges are stripped to vertices and edges, when a sum is named Σ, when a base of natural growth is named e — the world becomes calculable because form has been made portable across problems.
+Position without quantity yields a rule of parity for bridges; a function is an analytic expression of a variable; natural growth’s base *e* is a series; and the circle and the exponential meet when the exponent is imaginary.
 
 ## TTC Emphasis
 
-- THEOLOGY
 - TECHNOLOGY
 - COSMOLOGY
+- THEOLOGY
 
 ---
 
-## Preliminary Note
+## D-check (diligence / fact hygiene — before quotation garden)
 
-Euler is extracted from **published mathematics and documented career**, not from the “Euler did everything” meme alone. Primary lines:
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| “Euler invented everything” as voice | **Soft meme.** Continuous work: *geometria situs*, *Introductio* function/series/*e*/formula. |
+| *e*^(*i*π) + 1 = 0 as 1748 slogan sentence | **Modern identity form.** Primary continuous: *e*^(+*v*√−1) = cos *v* + √−1 · sin *v* (and conjugate). *i* for √−1 later standardization; he uses √−1. |
+| Sole inventor of the function concept | **Overclaim.** Bernoulli: quantity formed with variable and constants; Euler makes function central to analysis as analytic expression. |
+| Graph theory as modern terminology in his mouth | **Anachronism.** He speaks **geometry of position**, regions, bridges, letter series — not “graph/vertex/edge” modern English. |
+| Blindness as mystical source of insight | **Soft.** Documented career fact; not substituted for mathematical sentences. |
 
-1. Seven Bridges of Königsberg / *Solutio problematis ad geometriam situs pertinentis* (1736) — graph theory
-2. *Introductio in analysin infinitorum* (1748)
-3. *Institutiones calculi differentialis* / *integralis* — calculus systematization
-4. Number theory (Euler’s totient, work on primes, Fermat’s little theorem generalizations)
-5. Euler’s identity / formula linking e, i, π
-6. Mechanics, lunar theory, fluid mechanics (*Scientia navalis*, etc.)
-7. Academy life: St. Petersburg (under Catherine’s Russia), Berlin (Frederick the Great), return to St. Petersburg
-8. Blindness (right eye early; near-total later) and continued dictation of work
-9. Death 1783 St. Petersburg
+**Dates:** Born 15 April 1707 (Basel). Bridges paper presented 1735, published 1736/1741. *Introductio* 1748. Death 18 Sept 1783 (St. Petersburg).
 
 ---
 
-## Event 01 — *The Seven Bridges*
+## Preliminary Note (source hygiene)
 
-**Title:** The City Becomes a Graph
+| Priority | Material |
+|----------|----------|
+| **1** | *Solutio problematis ad geometriam situs pertinentis* (1736/1741) — English continuous (cantab/maze republication of the Latin paper) |
+| **1** | *Introductio in analysin infinitorum* Book I (1748) — Blanton English (function; Ch. 7 series for *e*); Bruce English (Ch. 8 circular / imaginary exponential) |
+| **2** | *Elements of Algebra*; *Letters to a German Princess*; number-theory memoirs — later tighten |
+| **3** | Soft “most beautiful equation” tourism without continuous locus — not voice |
 
-**Passage or Trigger:**
-Königsberg (Pregel river): seven bridges linking four land masses. Popular puzzle: walk each bridge exactly once (and return). **Euler (1735–36)** proves **impossibility** by abstracting land masses to **vertices** and bridges to **edges**, then analyzing **degrees** (how many bridges meet each land). A connected graph admits an Eulerian circuit only under parity conditions on vertex degrees; Königsberg has four odd-degree vertices — hence no such tour. Founding theorem of **graph theory**; foreshadowing of *analysis situs* / topology.
+**Carriers used:** Full continuous English of E53 (bridges); Blanton Ch. 7 (MathFest continuous); Ian Bruce Ch. 8 continuous; Blanton function definition via continuous scholarly carrier of the Latin.
 
-**Why It Qualifies:**
-Decisive gnosis of **abstraction**: drop distances, angles, scenery — keep only connection. Geometry of position without metric. A civic riddle becomes the birth of a mathematical cosmos of networks.
+---
+
+## Event 01 — *Geometry of position*
+
+**Title:** Another part of geometry, still quite unknown
+
+**What I did / What was made:**
+I opened the Königsberg paper by placing the problem under Leibniz’s *geometria situs* — determination of position without calculation of quantities.
+
+**What I wrote / said (direct — full passage):**
+
+> Besides that part of geometry which is concerned with quantities, and has at all times been studied with the greatest zeal, there is another part, still quite unknown, of which Leibnitz was the first to make mention and which he called *geometria situs*, the geometry of position. This part is defined by him as being concerned only with the determination of position, and with drawing out the properties of position; in which business quantities are not considered, nor is calculation with quantites employed. But what kinds of problem belong to this geometry of position, and what kind of method is suitable for solving them, is not adequately defined. So, since mention was recently made of a certain problem, which clearly had something to do with geometry, but was presented in such a way that it neither required the determination of quantities, nor did calculation with quantities help towards its solution, I did not hesitate to refer it to the geometry of position: especially because in its solution only position is considered; there is no need at all for [geometrical] calculation. Therefore I have decided to publish here my method that I have found for solving problems of this kind, as a typical example of the geometry of position.
+
+— Leonhard Euler, “Solution of a problem in the geometry of position,” continuous opening. Latin *Solutio problematis ad geometriam situs pertinentis*, *Commentarii academiae scientiarum Petropolitanae* **8** (1736/1741). English continuous republication of the paper.
+
+**How I see it (from inside, in action):**
+Not magnitudes — position. Leibniz named the part; the problem fits it; I publish a method as example of that geometry.
+
+**Why it qualifies as gnosis:**
+Topology/graph theory seed stated as geometry without quantity.
 
 **Three-Domain Reading:**
 
-- **Theology:** Truth independent of sensory clutter — essence of relation.
-- **Technology:** Networks (roads, chips, web) still speak Euler’s language of vertices and edges.
-- **Cosmology:** Cities and any linked system as pure connectivity structures.
+- **Theology:** Form of connection as object of knowledge, not only measure.
+- **Technology:** Method for a class of position problems, not one civic puzzle alone.
+- **Cosmology:** Space of relations among regions independent of metric size.
 
 **Compressed Insight:**
-He erased the city until only dots and lines remained — and proved the walk was impossible before anyone finished walking.
+*Geometria situs* concerns position alone — quantities not considered; the bridge problem belongs there.
 
-**Confidence:** 0.97  
-**Sources:** Euler 1736 paper tradition; Wikipedia / Britannica Königsberg; standard graph-theory histories.
+**Confidence:** 0.99  
+**Sources:** E53 English continuous §1.
 
 ---
 
-## Event 02 — *Analysis of Position*
+## Event 02 — *Seven bridges of Königsberg*
 
-**Title:** Geometry Without Measure
+**Title:** Whether each bridge once only
 
-**Passage or Trigger:**
-Euler’s bridge work and later remarks feed what 19th-century mathematicians call *analysis situs* — analysis of position. Features irrelevant to connection are discarded. Topology’s ancestry.
+**What I did / What was made:**
+I stated the problem of the seven bridges and the general question for any river and any number of bridges.
 
-**Why It Qualifies:**
-Recognition that “shape” has layers: metric shape vs connective shape. A new dimension of mathematical being.
+**What I wrote / said (direct — full passage):**
+
+> This problem, then, which was described to me as quite well known, was as follows: At Königsberg in Prussia there is an island A called *der Kneiphof*, and the river around it is divided into two branches, as shown in the figure; and the branches of this river are crossed by seven bridges *a*, *b*, *c*, *d*, *e*, *f*, and *g*. The following question was now raised concerning these bridges: whether someone could arrange a walk in such a way as to travel over every bridge once and not more than once. Some people (I was told) deny that this is possible, and others doubt it; but nobody asserts it. From this I set myself the following quite general problem: whatever the form of the river and its distribution into branches, and whatever the number of bridges, to find whether it is possible for each bridge to be crossed only once, or not.
+
+— Euler, geometry of position paper, §2 continuous.
+
+**How I see it (from inside, in action):**
+Not only Königsberg — any form of waters and bridges. Possible or not, decided by method.
+
+**Why it qualifies as gnosis:**
+Local riddle raised to general positional problem.
 
 **Three-Domain Reading:**
 
-- **Theology:** Form beyond appearance.
-- **Technology:** Abstraction as method for hard problems.
-- **Cosmology:** Multiple geometries of the same world.
+- **Theology:** Civic order of paths as lawful question.
+- **Technology:** General problem statement before enumeration.
+- **Cosmology:** Network of regions and crossings as pure form.
 
 **Compressed Insight:**
-He taught that some truths of a place care nothing for length — only for how parts touch.
+Seven bridges — can each be crossed once only? And the same for any form of river and any number of bridges.
 
-**Confidence:** 0.92  
-**Sources:** Historical linkage of Königsberg work to combinatorial topology.
+**Confidence:** 0.99  
+**Sources:** E53 §2 continuous.
 
 ---
 
-## Event 03 — *Introductio in analysin infinitorum* (1748)
+## Event 03 — *Letters for crossings*
 
-**Title:** Functions as the Objects of Analysis
+**Title:** Notation AB, ABD, eight letters for seven bridges
 
-**Passage or Trigger:**
-*Introductio in analysin infinitorum* — systematic presentation of elementary functions, infinite series, and the conceptual shift toward **function** as central object of analysis. Prepares the ground for Euler’s calculus treatises.
+**What I did / What was made:**
+I based the method on denoting regions by capital letters and successive crossings by strings of those letters.
 
-**Why It Qualifies:**
-Analysis becomes a **science of functions**, not only of geometric curves. The mental furniture of modern calculus is rearranged.
+**What I wrote / said (direct — full passage):**
+
+> Now my whole method is based on a suitable way of denoting individual crossings of bridges, in which I use capital letters A, B, C, D applied to the individual regions that are separated by the river. Thus if someone crosses from region A into region B by bridge *a* or *b*, I denote this crossing by the letters AB, of which the first shows the region from which the traveller left, and the second gives the region in which he arrives after crossing the bridge. If the traveller next goes out of region B into region D by bridge *f*, this crossing is represented by the letters BD; but these two crossings AB and BD, if made in succession, I denote by only three letters ABD, for the middle one B denotes both the region in which he arrived on the first crossing, and the region from which he left on the second crossing.
+>
+> Similarly, if the traveller continues from region D into region C by bridge *g*, these three crossings, made in succession, I shall denote by the four letters ABDC. … So then a crossing over seven bridges requires eight letters to represent it.
+>
+> In this notation I do not take account of the bridges by which the crossing is made, but if the same crossing from one region to another can be made by several bridges, it is just the same whichever one he crosses by, as long as he arrives in the designated region. From which it is understood that, if a walk across the seven bridges of the figure can be so arranged that each is crossed once and none twice, this walk can be represented by eight letters, and that those letters must be so arranged that the letters A and B occur together twice… Similarly the letters A and C must also occur together twice… next the letters A and D will occur together once; and similarly it is necessary that the letters B and D, as also C and D, shall occur together once.
+
+— Euler, geometry of position paper, §§4–6 continuous.
+
+**How I see it (from inside, in action):**
+Drop which bridge — keep which regions join. Seven bridges → eight letters with prescribed pair-counts. That is the whole walk.
+
+**Why it qualifies as gnosis:**
+Abstraction to combinatorial string — birth move of network mathematics.
 
 **Three-Domain Reading:**
 
-- **Theology:** Infinite approached with ordered rules — not chaos.
-- **Technology:** Series and function language as toolkit still taught.
-- **Cosmology:** Continuous change as primary object of study.
+- **Theology:** Identity of path as succession of places.
+- **Technology:** Letter calculus as instrument replacing exhaustive enumeration.
+- **Cosmology:** Structure of connection independent of river scenery.
 
 **Compressed Insight:**
-He put the function at the center of analysis — so infinity could be handled as law, not fog.
+Crossings denoted by letters of regions — seven bridges require eight letters with prescribed pairings.
 
-**Confidence:** 0.94  
-**Sources:** *Introductio* (1748); histories of analysis.
+**Confidence:** 0.99  
+**Sources:** E53 §§4–6 continuous.
 
 ---
 
-## Event 04 — *Notation as World-Software*
+## Event 04 — *Cannot be achieved at all*
 
-**Title:** Naming the Invisible Operators
+**Title:** Odd bridges and the letter count
 
-**Passage or Trigger:**
-Euler’s role in stabilizing modern notation: **f(x)** for functions, **e** for base of natural logarithms, **Σ** for summation, **i** for √−1 (among other standardizations he popularized or introduced). Notation is not cosmetics — it is cognitive technology.
+**What I did / What was made:**
+I proved Königsberg impossible: five bridges into A force letter A three times; three into each of B, C, D force each twice — impossible in eight letters — and gave the general rule by odd/even bridge counts.
 
-**Why It Qualifies:**
-Gnosis of **symbolic infrastructure**. Once named, operations travel. A civilization of calculation becomes possible when marks mean the same across academies.
+**What I wrote / said (direct — full passage):**
+
+> In order to find such a rule I consider a single region A, into which lead any number of bridges *a*, *b*, *c*, *d* etc. … If, say, three bridges *a*, *b*, *c* lead into region A, and the traveller crosses by all three, then in the record of his travels the letter A will occur twice, whether he starts his walk at A or not. In the same way if five bridges lead into A, in the record of crossing them all the letter A must occur three times. And if the number of bridges is any odd number, then if it is increased by one, its half will give the number of places in which the letter A must occur.
+>
+> In the case therefore of the bridges that have to be crossed at Königsberg, since five bridges *a*, *b*, *c*, *d*, *e* lead into the island A it is necessary that in the record of crossing by these bridges the letter A shall occur three times. Next the letter B, since three bridges lead into region B, must occur twice, similarly the letter D must occur twice, and again the letter C twice. Therefore in the series of eight letters by which the crossing of the seven bridges would have to be recorded, the letter A would have to be present three times, and each of the letters B, C, D twice; which in a series of eight letters cannot be done at all. From which it is clear that such a crossing of the seven Königsberg bridges cannot be achieved.
+>
+> …
+>
+> Therefore in any given case it will be very easy to decide straightaway whether a crossing by each bridge once only can be planned or not, with the help of the following rule. If there are more than two regions with an odd number of bridges leading into them, then it can safely be stated that there is no such crossing. And if there are exactly two regions with an odd number of bridges leading into them, then the crossing can be done, provided the walk is started in one of these two regions. Finally, if there is no region at all with an odd number of bridges leading into it, then the crossing can be planned in the desired way, and the start of the walking can be placed in any region. Therefore the rule just given fully satisfies the statement of the problem.
+
+— Euler, geometry of position paper, §§8–9 and §20 continuous.
+
+**How I see it (from inside, in action):**
+Odd degree forces letter frequency. Königsberg has four odd regions — more than two — so no tour. Zero or two odds: possible under start rules.
+
+**Why it qualifies as gnosis:**
+Euler’s theorem on paths in continuous early form (parity of incidences).
 
 **Three-Domain Reading:**
 
-- **Theology:** Logos as nameable structure — the word that makes thought shareable.
-- **Technology:** Notation as the deepest API of mathematics.
-- **Cosmology:** Shared symbols as a common mental sky for Europe’s science.
+- **Theology:** Impossibility as rigorous knowledge, not opinion.
+- **Technology:** Decision rule before constructing the walk.
+- **Cosmology:** Network law independent of particular map.
 
 **Compressed Insight:**
-He wrote the alphabet that later centuries still use to speak infinity and change.
+More than two regions with an odd number of bridges — no such crossing; Königsberg has four odds — cannot be achieved at all.
 
-**Confidence:** 0.93  
-**Sources:** Standard histories of mathematical notation; Euler’s textbooks’ influence.
+**Confidence:** 0.99  
+**Sources:** E53 §§8–9, §20 continuous.
 
 ---
 
-## Event 05 — *e, i, π — The Identity*
+## Event 05 — *A function of a variable quantity*
 
-**Title:** The Most Compressed Miracle of Form
+**Title:** Analytic expression as object of analysis
 
-**Passage or Trigger:**
-**Euler’s formula** e^{ix} = cos x + i sin x, and the identity **e^{iπ} + 1 = 0** (Euler’s identity) — uniting exponential, trigonometric, and imaginary structure in one equation celebrated as emblematic of mathematical unity.
+**What I did / What was made:**
+In the *Introductio* I defined a function as an analytic expression composed of the variable and constants, and allowed the variable to include zero and complex numbers.
 
-**Why It Qualifies:**
-Recognition that domains thought separate (growth, rotation, imaginary unit, circle constant) are **one organism**. Beauty here is not decoration — it is symptom of deep isomorphism.
+**What I wrote / said (direct — full passage):**
+
+> A function of a variable quantity is an analytic expression composed in any way whatsoever of the variable quantity and numbers or constant quantities.
+>
+> […] Even zero and complex numbers are not excluded from the signification of a variable quantity.
+
+— Leonhard Euler, *Introductio in analysin infinitorum* Book I (1748), Ch. 1 continuous. English John D. Blanton, *Introduction to Analysis of the Infinite* (Springer 1988); continuous scholarly carrier of Blanton’s translation of the Latin.
+
+**How I see it (from inside, in action):**
+Analysis studies functions, not only curves of geometry. Variable ranges widely — even complex. Expression is the object.
+
+**Why it qualifies as gnosis:**
+Modern analysis’s central object fixed in continuous definition.
 
 **Three-Domain Reading:**
 
-- **Theology:** Unity of truth under diverse appearances — almost a creed in symbols.
-- **Technology:** Complex exponential as workhorse of physics and engineering.
-- **Cosmology:** One law beneath oscillation and growth.
+- **Theology:** Variable magnitude under law of expression.
+- **Technology:** Formula as portable object across problems.
+- **Cosmology:** Quantity including complex in the domain of analysis.
 
 **Compressed Insight:**
-He wrote an equation where growth, rotation, nothing, and unity shake hands — and the handshake still holds.
+A function is an analytic expression of a variable quantity — and zero and complex are not excluded from the variable.
 
-**Confidence:** 0.95  
-**Sources:** Euler’s work on complex exponentials; standard textbook attribution of the identity.
+**Confidence:** 0.98  
+**Sources:** *Introductio* I.1 Blanton continuous.
 
 ---
 
-## Event 06 — *Number Theory Hands*
+## Event 06 — *The symbol e*
 
-**Title:** Primes, Totients, and Fermat’s Seed
+**Title:** Base of natural or hyperbolic logarithms
 
-**Passage or Trigger:**
-Deep work in number theory: Euler’s **totient function** φ(n), proofs and extensions around Fermat’s little theorem, contributions feeding later prime theory and algebraic number thought. Arithmetic as Euler’s playground alongside analysis.
+**What I did / What was made:**
+I chose the base so that *k* = 1, obtained the series for that base, named it *e*, and wrote *e*^z as infinite series.
 
-**Why It Qualifies:**
-Integers as an infinite structured world — not only continuum analysis. Complements Gauss’s later *Disquisitiones* reign; Euler is a principal prior cartographer.
+**What I wrote / said (direct — full passage):**
+
+> Since we are free to choose the base *a* for the system of logarithms, we now choose *a* in such a way that *k* = 1. Suppose now that *k* = 1; then the series found above in section 116, 1 + 1/1 + 1/(1·2) + 1/(1·2·3) + 1/(1·2·3·4) + ··· , is equal to *a*. If the terms are represented as decimal fractions and summed, we obtain the value for
+>
+> *a* = 2.71828182845904523536028··· .
+>
+> When this base is chosen, the logarithms are called natural or hyperbolic. The latter name is used since the quadrature of a hyperbola can be expressed through these logarithms. For the sake of brevity for this number 2.718281828459··· we will use the symbol *e*, which will denote the base of the natural or hyperbolic logarithms, which corresponds to the value *k* = 1, and *e* represents the sum of the infinite series 1 + 1/1 + 1/(1·2) + 1/(1·2·3) + 1/(1·2·3·4) + ··· .
+>
+> Natural logarithms have the property that the logarithm of 1 + *ω* is equal to *ω*, where *ω* is an infinitely small quantity. From this it follows that *k* = 1, and the natural logarithms of all numbers can be found. Let *e* stand for the number found above, then
+>
+> *e*^z = 1 + *z*/1 + *z*²/(1·2) + *z*³/(1·2·3) + *z*⁴/(1·2·3·4) + ··· ,
+>
+> and the natural logarithms themselves can be found from these series…
+
+— Euler, *Introductio* Book I, Ch. 7 continuous (Blanton English; MathFest continuous carrier of §§122–123). Note: section numbers follow Blanton’s chapter structure.
+
+**How I see it (from inside, in action):**
+Choose *k* = 1; the series *is* the base; call it *e*; then *e*^z is the matching series. Natural log of 1+*ω* is *ω* when *ω* is infinitely small.
+
+**Why it qualifies as gnosis:**
+Base of continuous growth fixed as series and symbol.
 
 **Three-Domain Reading:**
 
-- **Theology:** Eternal patterns in discrete creation.
-- **Technology:** Number-theoretic functions as later crypto/compute ancestors.
-- **Cosmology:** Discrete cosmos beside continuous cosmos.
+- **Theology:** Natural measure of growth and hyperbole’s quadrature.
+- **Technology:** Symbol *e* and series as calculational instruments.
+- **Cosmology:** Exponential law as infinite sum of factorial denominators.
 
 **Compressed Insight:**
-He counted the integers’ secret officers — φ(n) and kin — so arithmetic would have a civil service of theorems.
+*e* is the base of natural logarithms — sum of 1 + 1/1 + 1/(1·2) + 1/(1·2·3) + ··· — and *e*^z is the same series in powers of *z*.
 
-**Confidence:** 0.92  
-**Sources:** Euler’s number-theory papers; standard number-theory histories.
+**Confidence:** 0.99  
+**Sources:** *Introductio* I Blanton Ch. 7 continuous.
 
 ---
 
-## Event 07 — *Mechanics and the Heavens*
+## Event 07 — *Imaginary exponential quantities*
 
-**Title:** Calculus Goes to Sea and Sky
+**Title:** *e*^(+*v*√−1) = cos *v* + √−1 · sin *v*
 
-**Passage or Trigger:**
-Treatises on mechanics, **lunar theory**, naval science (*Scientia navalis*), fluid resistance — analysis applied to ships, planets, and fluids. Euler as house mathematician of empires that needed prediction.
+**What I did / What was made:**
+From infinite forms of sine and cosine I reduced imaginary exponentials to real circular functions — and conversely.
 
-**Why It Qualifies:**
-Same mind that abstracted bridges calculates the moon’s stubborn motion. Pure form returns as power over matter in motion.
+**What I wrote / said (direct — full passage):**
+
+> After logarithms and exponential quantities have been considered, circular arcs and the sines and cosines of these must be considered; not only because they constitute another kind of transcending quantity, but also because of the logarithms and exponentials of these that arise when they are involved with imaginary quantities, which will become clearer below.
+>
+> Therefore we may put the radius of the circle or the whole sine to be 1 and it is clear enough that the periphery of this circle cannot be expressed exactly in rational numbers; but by approximations the semi-circumference of this circle has been found… for which number for the sake of brevity I may write as *π*, thus so that there shall be *π* = semi-circumference of the circle, whose radius = 1…
+>
+> …
+>
+> But in the preceding chapter we have seen that
+>
+> (1 + *z*/*i*)^i = *e*^z
+>
+> with *e* denoting the base of hyperbolic logarithms; therefore for *z* in one part I write +*v*√−1 and for the other part −*v*√−1, and there becomes…
+>
+> From which it is understood, how imaginary exponential quantities may be reduced to the sine and cosine of real arcs. Truly there will be
+>
+> *e*^(+*v*√−1) = cos *v* + √−1 · sin *v*
+>
+> and
+>
+> *e*^(−*v*√−1) = cos *v* − √−1 · sin *v*.
+
+— Euler, *Introductio in analysin infinitorum* Book I, Ch. 8 continuous (Ian Bruce English of the Latin §§126–138 sense-unit; formula as in Bruce §138). Modern *e*^{*iv*} = cos *v* + *i* sin *v* is the same with *i* = √−1.
+
+**How I see it (from inside, in action):**
+Circle and exponential meet through imaginary. *π* names the semi-circumference for radius 1. The exponential of ±*v*√−1 *is* cos ± √−1 sin.
+
+**Why it qualifies as gnosis:**
+Unification of circular and exponential transcendents under one analytic expression.
 
 **Three-Domain Reading:**
 
-- **Theology:** Ordered heavens and seas under law.
-- **Technology:** Ballistics, navigation, ship design math.
-- **Cosmology:** Solar system as integrable-enough machine (within limits).
+- **Theology:** One law spanning growth and rotation.
+- **Technology:** Imaginary unit as bridge between series and arc measures.
+- **Cosmology:** Circle’s *π* and base *e* in one equation-family.
 
 **Compressed Insight:**
-He lent infinity’s calculus to captains and astronomers — so ships and moons would both answer equations.
+Imaginary exponential quantities reduce to sine and cosine: *e*^(+*v*√−1) = cos *v* + √−1 · sin *v*.
 
-**Confidence:** 0.91  
-**Sources:** Euler’s mechanics and astronomy corpus; academy commissions.
-
----
-
-## Event 08 — *Basel, Bernoulli, Departure*
-
-**Title:** From the Rhine School Outward
-
-**Passage or Trigger:**
-Born Basel 1707; trained in the **Bernoulli** orbit; leaves for **St. Petersburg Academy** (Peter the Great’s scientific project) — first great transplantation of his career. Mathematics becomes a mobile imperial resource.
-
-**Why It Qualifies:**
-Science as vocation across borders. The Swiss mind becomes Russian academy engine — knowledge as transferable power.
-
-**Three-Domain Reading:**
-
-- **Theology:** Calling beyond hometown.
-- **Technology:** Academies as factories of formal talent.
-- **Cosmology:** Europe’s scientific network as one field.
-
-**Compressed Insight:**
-He carried Basel’s rigor to the Neva — and the academy became a second homeland for theorems.
-
-**Confidence:** 0.90  
-**Sources:** Standard biography (Basel → St. Petersburg).
+**Confidence:** 0.99  
+**Sources:** *Introductio* I.8 Bruce continuous §138 (with §126 *π* setup).
 
 ---
 
-## Event 09 — *Berlin Years*
+## Life-list spine (acts only — not soft voice)
 
-**Title:** Frederick’s Academy
-
-**Passage or Trigger:**
-Berlin period under **Frederick the Great** — enormous output, institutional science, correspondence across Europe. Later return to St. Petersburg under Catherine’s Russia. Two empires, one pen.
-
-**Why It Qualifies:**
-Politics of patronage without stopping the flood of papers. The mathematician as permanent secretary of the invisible empire of analysis.
-
-**Three-Domain Reading:**
-
-- **Theology:** Work as steadiness under princes.
-- **Technology:** Institutional science production model.
-- **Cosmology:** Courts as nodes of a continental brain.
-
-**Compressed Insight:**
-He served kings without letting kings set the axioms — output outran any single capital.
-
-**Confidence:** 0.89  
-**Sources:** Career timeline Berlin / St. Petersburg.
+| Year | Act |
+|------|-----|
+| 1707 | Born Basel, 15 April |
+| 1735–41 | Königsberg / *geometria situs* paper (E53) |
+| 1741–66 | Berlin Academy period (among other works) |
+| 1748 | *Introductio in analysin infinitorum* |
+| 1766–83 | Return to St. Petersburg; late productivity under near-blindness |
+| 1783 | Death, St. Petersburg, 18 September |
 
 ---
 
-## Event 10 — *Blindness*
+## Quality gate
 
-**Title:** Sight Lost, Vision Intact
+- [x] Direct events carry continuous primary (E53 English; *Introductio* Blanton/Bruce)
+- [x] Full sense-units, not slogan snippets
+- [x] Citations: work + section + translator
+- [x] “How I see it” depends on the quote
+- [x] Soft *e*^(*i*π)+1=0 tourism and “invented everything” not dressed as his continuous sentence
+- [x] Credit hygiene: Leibniz *geometria situs*; Bernoulli function tradition noted in D-check
 
-**Passage or Trigger:**
-Euler loses useful vision in one eye relatively early; later approaches near-total blindness, yet continues massive production by **dictation** and memory — calculating and composing treatises in the dark. Documented wonder of scientific biography.
-
-**Why It Qualifies:**
-Embodied gnosis: mathematical seeing is not retinal. The formal cosmos remains navigable when the physical light fails. Opposite of romantic tragic genius alone — it is **discipline under constraint**.
-
-**Three-Domain Reading:**
-
-- **Theology:** Interior light; vocation persevering through affliction.
-- **Technology:** Dictation, assistants, memory as production system.
-- **Cosmology:** Mind’s world independent of eye’s world.
-
-**Compressed Insight:**
-He went blind and kept writing infinity — proof that analysis lives behind the eyes.
-
-**Confidence:** 0.94  
-**Sources:** Standard scientific biographies of Euler’s blindness and late productivity.
-
----
-
-## Event 11 — *Volume of Output*
-
-**Title:** The Library That Was One Man
-
-**Passage or Trigger:**
-Euler’s published corpus is among the largest in mathematical history — hundreds of memoirs and books spanning pure and applied fields. Quantity here is quality’s companion: a life spent making domains *systematic*.
-
-**Why It Qualifies:**
-Recognition that a field advances not only by single theorems but by **complete expositions** that others can inhabit. Euler builds cities of text, not only monuments.
-
-**Three-Domain Reading:**
-
-- **Theology:** Stewardship of talent as long labor.
-- **Technology:** Treatise as scalable teaching machine.
-- **Cosmology:** Mathematics as expandable world needing many maps.
-
-**Compressed Insight:**
-He wrote so much that later centuries still mine one life as if it were a school.
-
-**Confidence:** 0.93  
-**Sources:** Euler archive / Opera Omnia scale; historical consensus on productivity.
-
----
-
-## Event 12 — *Death in St. Petersburg (1783)*
-
-**Title:** The Calculation Ends
-
-**Passage or Trigger:**
-Dies 18 September 1783 in St. Petersburg — traditional anecdotes of last day (calculating, tea, stroke) vary in polish; the firm fact is death after a life of almost continuous formal production in imperial Russia.
-
-**Why It Qualifies:**
-Finite body after infinite-seeming output. The academy continues; the man stops mid-stream of a life that treated every day as a theorem’s due date.
-
-**Three-Domain Reading:**
-
-- **Theology:** Creaturely limit.
-- **Technology:** Succession of science beyond the individual.
-- **Cosmology:** Time ends even for those who mastered its series.
-
-**Compressed Insight:**
-The man who named e and mapped bridges met the one sum that does not extend — a life’s series closed.
-
-**Confidence:** 0.90  
-**Sources:** Death date; standard biographies (anecdotal last-day details at lower confidence).
-
----
-
-## Sources / Working Notes
-
-**Primary / near-primary**
-- Euler 1736 Königsberg / *geometriam situs* paper tradition
-- *Introductio in analysin infinitorum* (1748)
-- Calculus *Institutiones*
-- Number theory and mechanics memoirs
-- *Opera Omnia* (modern edition project)
-
-**Secondary**
-- Britannica Königsberg problem
-- Standard histories of graph theory, analysis, notation
-- Scientific biographies of Euler’s career and blindness
-
-**Open questions for later passes**
-- Closer primary quotation from 1736 Latin paper
-- Fluid mechanics and the Euler equations as dedicated event
-- Correspondence with contemporaries for theological/philosophical tone
-
----
-
-## Seat checklist
-
-- [x] Research from major works and Königsberg analysis (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple source-grounded events
-- [ ] member_id: `leonhard-euler`
-- [ ] Registry enrollment when ready
-- [x] PENDING scaffold replaced by full extraction
-
----
-
-*Council of Reflection — Arch of Human Gnosis (Mathematics). Events grounded in Euler’s mathematics and documented career; not productivity folklore alone.*
+**Garden status:** COMPLETE — Batch 2 seat #6.

@@ -10,7 +10,7 @@
 | 3 | Charles Darwin | COMPLETE |
 | 4 | Antoine Lavoisier | COMPLETE |
 | 5 | Carl Friedrich Gauss | COMPLETE |
-| 6 | Leonhard Euler | pending |
+| 6 | Leonhard Euler | COMPLETE |
 | 7 | John von Neumann | pending |
 | 8 | Ronald A. Fisher | pending |
 
