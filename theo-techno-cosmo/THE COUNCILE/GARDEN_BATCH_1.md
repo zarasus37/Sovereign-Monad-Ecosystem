@@ -12,9 +12,11 @@
 | 5 | Enheduanna | COMPLETE (quotation bar) |
 | 6 | Kurt Gödel | COMPLETE (quotation bar) |
 | 7 | Alan Turing | COMPLETE (quotation bar) |
-| 8 | Sir Isaac Newton | pending — **after D check** |
+| 8 | Sir Isaac Newton | COMPLETE (quotation bar) — **D-check done** (apple/soft occult/purity inverted; primary Scholium + Opticks) |
 
-**Not in Batch 1:** other core-onboarding names (e.g. Marcus Aurelius) may be rewritten later; do not treat them as Batch 1 `#next`.
+**Batch 1 status: CLOSED** (all 8 seats core quotation bar complete).
+
+**Not in Batch 1:** other seats (e.g. Marcus Aurelius off-list) may be rewritten later; do not treat them as Batch 1 `#next` unless a new batch list is filed.
 
 **Clusters:**  
 - 1–4 wheel (`wheel-registry` / significs–steganography–Art)  

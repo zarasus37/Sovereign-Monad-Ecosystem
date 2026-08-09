@@ -1,233 +1,366 @@
-Sir Isaac Newton (1642–1727) GNOSIS EVENT EXTRACTION
-### Corpus Sources: *Philosophiæ Naturalis Principia Mathematica*, *Opticks*, *The Chronology of Ancient Kingdoms Amended*, "An Historical Account of Two Notable Corruptions of Scripture," Alchemical Manuscripts (Keynes/Portsmouth Collections), *Praxis*, Correspondence with Locke, Leibniz, and Bentley.
+SIR ISAAC NEWTON GNOSIS EVENT EXTRACTION —
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Formal spine — universal lawful cosmos; experimental philosophy
+**Era:** 1642/3–1727 (Woolsthorpe / Cambridge / London)
+**Status:** Garden + quotation depth — **Newton’s own sentences only** at full sense-units. Soft legend and biographer paraphrase are defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become.
 
 ---
 
-> **Framing note on the subject:** Newton represents the peak of "encryption gnosis." He did not view the world as something to be invented, but as a cipher to be decoded—a "Great Cryptogram" set by the Divine. For Newton, physics, alchemy, and biblical prophecy were not different fields, but different dialects of the same hidden truth. The extraction focus is on the moments where the mechanical reasoning stopped and the structural transparency began—specifically where Newton recognized that the laws governing the laboratory were identical to the laws governing the heavens and the throne of God.
+## Contribution
+
+I wrote the **Principia** (*Philosophiæ Naturalis Principia Mathematica*), **Opticks**, queries on attraction and active principles, chronological and scriptural criticism, and a vast unpublished chemical/alchemical corpus. I bound heavens and sea under **gravity**, framed **experimental philosophy** against feigned hypotheses, and discoursed of God from the appearances of things as belonging to natural philosophy.
+
+## Key Insight
+
+Propositions are inferred from phenomena and rendered general by induction; gravity really exists by laws enough for the motions of the heavens and sea, though its *cause* I do not feign; the Sun’s light is rays differently refrangible; Nature is consonant to herself in attractions.
+
+## TTC Emphasis
+
+- COSMOLOGY
+- TECHNOLOGY
+- THEOLOGY
 
 ---
 
-## EVENT 01 — *The Collapse of the Celestial Sphere (The Moon is Falling)*
+## D-check (diligence / fact hygiene — before quotation garden)
 
-### Passage or Trigger
-The "Anni Mirabiles" (1665–1666) at Woolsthorpe. Recorded retrospectively in old age (to William Stukeley) as the "apple" anecdote, but the actual trigger was the mathematical comparison between the force required to keep the moon in its orbit and the force of gravity at the earth's surface.
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| “Apple” as primary Newton narrative of gravity | **Secondary.** Stukeley reports Newton’s late recollection; **do not** quote as Newton’s written primary. Universal gravity from *Principia* Book 3 / system of the world + General Scholium. |
+| Gravity “occult will of God” as Newton’s own sentence | **Overclaim.** He affirms God as Lord over all and gravity’s laws; he **refuses** to assign the *cause* of gravity from phenomena (*hypotheses non fingo*). |
+| White light pure, color corruption (as if Newton said that) | **Not Newton.** He **overturns** that: light consists of rays differently refrangible; white from composition of primary colours. |
+| *Hypotheses non fingo* = never hypothesize | **Nuanced.** Motte: “I frame no hypotheses” for what is **not deduced from phenomena**. Queries still *ask* speculative questions under Opticks. |
+| Diana’s Tree / *Spiritus Mundi* as public primary | **Alchemical Nachlass / secondary report** — not elevated as continuous public primary here; use Query 31 **active Principles** for related published voice. |
+| Temple as heliocentric hardware map | **Soft reconstruction** of *Chronology* interest — not continuous primary in this pass. |
+| 1693 Pepys/Locke “not a ship” as continuous | **Letters exist**; omit until continuous letter text locked (optional later). |
+| Mint as “value = physics constant” in his sentences | **Act + office**; soft “gnosis of money” not substituted for his prose. |
 
-### Why It Qualifies
-Before this moment, "Gravity" was a terrestrial phenomenon (things falling to the ground) and "Orbital Motion" was a celestial phenomenon (the music of the spheres, perfect circular or elliptical motion). These were two separate categories of existence. The gnosis was the recognition that **the moon is not "orbiting" in the sense of resting in a track; the moon is perpetually falling, exactly like an apple.** The boundary between Heaven (celestial mechanics) and Earth (terrestrial physics) dissolved into a single, unified, invisible field. This was not constructable by logic alone because it required imagining the Earth’s surface as a subset of a universal void.
-
-### Three-Domain Reading
-*   **Theology:** The divine was relocated from "the heavens" into the "laws." God was no longer the one pushing the planets, but the one who authored the gravity that pulled them.
-*   **Technology:** The invention of "action at a distance" as a conceptual tool—a mechanism that works without physical contact.
-*   **Cosmology:** The Universe became a single, homogeneous space where the same rules apply to a pebble and a planet.
-
-### Compressed Insight
-Newton recognized that the moon is an apple that never hits the ground, and in doing so, he saw that the entire universe is governed by a single, invisible, and unyielding pull.
-
-**Confidence: 0.98**
+**Dates:** Julian birth 25 Dec 1642; Gregorian often 4 Jan 1643. Death 20 Mar 1726/7. Seat filename 1642–1727 retained.
 
 ---
 
-## EVENT 02 — *The Heterogeneity of Light (The Experimentum Crucis)*
+## Preliminary Note (source hygiene)
 
-### Passage or Trigger
-The prism experiments of 1666, specifically the *Experimentum Crucis* where he isolated a single color (e.g., red) and passed it through a second prism, finding it remained red.
+| Priority | Material |
+|----------|----------|
+| **1** | *Principia* General Scholium (2nd ed. 1713 / 3rd 1726) — Motte 1729 English of Newton’s Latin |
+| **1** | *Opticks* (1704 ff.; 4th ed. 1730 used on Gutenberg #33504) — propositions + Query 31 |
+| **2** | Correspondence, *Two Notable Corruptions*, fluxions tracts, alchemical MSS — later pass |
+| **3** | Stukeley apple, popular alchemy soft-fills — **not** voice |
 
-### Why It Qualifies
-The prevailing theory (Aristotelian/Cartesian) was that white light was "pure" and color was a "corruption" or "modification" caused by matter. Newton recognized the inverse: **White light is the most complex thing in the universe—it is a composite of all colors already present.** The color is not *in* the glass; it is *in* the light. This reorganized the category of "purity." It was a moment where the "transparent" (white light) became visible as a crowded, heterogeneous spectrum.
-
-### Three-Domain Reading
-*   **Theology:** Truth (Light) was revealed not as a simple singularity, but as a "Unity of Diversity."
-*   **Technology:** The birth of spectroscopy; the ability to identify the composition of a source by the properties of its emission.
-*   **Cosmology:** The recognition that the medium of sight is itself a structured, mathematical entity.
-
-### Compressed Insight
-Newton recognized that white light is not a simple essence but a crowd of colors, revealing that "purity" is actually the perfect alignment of complexity.
-
-**Confidence: 0.95**
+**Carriers:** Newton Project General Scholium (Motte *Principles* 1729); Project Gutenberg *Opticks* #33504.
 
 ---
 
-## EVENT 03 — *The Recognition of the Arian Corruption*
+## Event 01 — *Vortices pressed with difficulties*
 
-### Passage or Trigger
-His deep philological study (1670s–1690s) of 1 John 5:7 (the *Johannine Comma*), which he concluded was a fraudulent insertion into the Bible to support the Trinity.
+**Title:** Against the Cartesian plenum
 
-### Why It Qualifies
-Newton was a fellow at Trinity College, Cambridge—an institution named after a concept he recognized as a mathematical and historical fraud. The gnosis was the **recognition of a "Great Apostasy."** He saw that the official theology of the state and the church was a "corruption of the simple truth." This implicated him personally: he was a secret heretic living inside the heart of the institution he had decoded as false. The contradiction—his outward conformity vs. his inward gnosis—did not resolve; it became his life’s secret structure.
+**What I did / What was made:**
+I opened the General Scholium by rejecting vortices — comets free through the heavens.
 
-### Three-Domain Reading
-*   **Theology:** The shift from Trinitarianism to Unitarianism (Arianism); God as a single, indivisible mathematical monarch.
-*   **Technology:** Textual criticism as a "forensic" technology—using logic to reveal the "ghost" of a prior, uncorrupted text.
-*   **Cosmology:** A monarchical universe; one God, one Law, one Space.
+**What I wrote / said (direct — full passage):**
 
-### Compressed Insight
-By identifying a single faked verse in the Bible, Newton recognized that the entire religious structure of his world was built on a lie, and he saw himself as the lone, secret guardian of the original truth.
+> The hypothesis of Vortices is press’d with many difficulties. That every Planet by a radius drawn to the Sun may describe areas proportional to the times of description, the periodic times of the several parts of the Vortices should observe the duplicate proportion of their distances from the Sun. But that the periodic times of the Planets may obtain the sesquiplicate proportion of their distances from the Sun, the periodic times of the parts of the Vortex ought to be in the sesquiplicate proportion of their distances. That the smaller Vortices may maintain their lesser revolutions about Saturn, Jupiter, and other Planets, and swim quietly and undisturb’d in the greater Vortex of the Sun, the periodic times of the parts of the Sun’s Vortex should be equal. But the rotation of the Sun and Planets about their axes, which ought to correspond with the motions of their Vortices, recede far from all these proportions. The motions of the Comets are exceeding regular, are govern’d by the same laws with the motions of the Planets, and can by no means be accounted for by the hypothesis of Vortices. For Comets are carry’d with very eccentric motions through all parts of the heavens indifferently, with a freedom that is incompatible with the notion of a Vortex.
+>
+> Bodies, projected in our air, suffer no resistance but from the air. Withdraw the air, as is done in Mr. Boyle’s vacuum, and the resistance ceases. For in this void a bit of fine down and a piece of solid gold descend with equal velocity. And the parity of reason must take place in the celestial spaces above the Earth’s atmosphere; in which spaces, where there is no air to resist their motions, all bodies will move with the greatest freedom; and the Planets and Comets will constantly pursue their revolutions in orbits given in kind and position, according to the laws above explain’d.
 
-**Confidence: 0.92**
+— Isaac Newton, *Principia*, General Scholium continuous (Motte 1729 English of Newton’s Latin). Newton Project NATP00056.
 
----
+**How I see it (from inside, in action):**
+Vortices cannot fit Kepler and free comets. Void above the air: down and gold fall equal — so planets move free under the laws already explained.
 
-## EVENT 04 — *The Vegetation of Metals (The Alchemical Key)*
+**Why it qualifies as gnosis:**
+One mechanics for heavens and Boyle’s void; Cartesian medium rejected by proportions and comets.
 
-### Passage or Trigger
-The "Diana’s Tree" experiment and his reading of *The Clavis*. He observed the "growth" of silver crystals in a mercuric solution and termed it the "Vegetation of Metals."
+**Three-Domain Reading:**
 
-### Why It Qualifies
-Newton recognized that **matter is not "dead" or purely mechanical.** He saw that there was a "vegetative" or "spirituous" principle in metals that mirrored the life in plants and animals. This collapsed the boundary between the "inorganic" (chemistry) and the "organic" (life). He recognized that the "Spirit of the World" (*Spiritus Mundi*) was a real, experimental substance.
+- **Theology:** Order of free regular motions under law, not fluid push-fable.
+- **Technology:** Vacuum experiment as transfer-reason to celestial spaces.
+- **Cosmology:** Same laws for planets and comets in open space.
 
-### Three-Domain Reading
-*   **Theology:** The recognition that God animates matter through active, "non-mechanical" agents.
-*   **Technology:** The attempt to engineer life-principles into material substances (The Philosopher's Stone as a universal catalyst).
-*   **Cosmology:** The universe is not just a clockwork machine; it is a "vegetating" organism.
+**Compressed Insight:**
+Comets move with freedom incompatible with a vortex — and in void, down and gold fall equal.
 
-### Compressed Insight
-Watching silver crystals grow like branches, Newton recognized that "dead" matter is actually alive with a hidden, divine spirit, and that the laws of physics are merely the surface of a deeper, vital alchemy.
-
-**Confidence: 0.89**
+**Confidence:** 0.98  
+**Sources:** General Scholium Motte continuous.
 
 ---
 
-## EVENT 05 — *Solomon’s Temple as Cosmic Blueprint*
+## Event 02 — *This most beautiful System*
 
-### Passage or Trigger
-His exhaustive study of the measurements of Solomon’s Temple in *The Chronology of Ancient Kingdoms Amended*. He believed the Temple's architecture was a "type" or scale model of the heliocentric universe.
+**Title:** Counsel and dominion of One
 
-### Why It Qualifies
-Newton recognized that **Architecture, Physics, and Prophecy are the same thing.** The Temple was not just a building; it was an encrypted "hardware" map of the Solar System. The "sacred cubit" was a mathematical constant connecting human measurement to the dimensions of the Earth. He saw himself as the one who finally possessed the "blueprints" of the Creator's original intent.
+**What I did / What was made:**
+I ascribed the solar system to the counsel and dominion of an intelligent and powerful Being — Lord God, not soul of the world.
 
-### Three-Domain Reading
-*   **Theology:** Sacred space as a physical embodiment of mathematical truth.
-*   **Technology:** Architecture as a "mnemonic" or "information storage" device for preserving lost scientific knowledge.
-*   **Cosmology:** The recognition that the structure of the human world (the Temple) is a fractal of the structure of the cosmos.
+**What I wrote / said (direct — full passage):**
 
-### Compressed Insight
-Newton recognized that a building in ancient Jerusalem was actually a mathematical model of the planets, revealing that history and physics are two versions of the same divine code.
+> This most beautiful System of the Sun, Planets and Comets, could only proceed from the counsel and dominion of an intelligent and powerful being. And if the fixed Stars are the centers of other like systems, these being form’d by the like wise counsel, must be all subject to the dominion of One; especially, since the light of the fixed Stars is of the same nature with the light of the Sun, and from every system light passes into all the other systems. And lest the systems of the fixed Stars should, by their gravity, fall on each other mutually, he hath placed those Systems at immense distances one from another.
+>
+> This Being governs all things, not as the soul of the world, but as Lord over all: And on account of his dominion he is wont to be called Lord God παντοκράτωρ or Universal Ruler. For God is a relative word, and has a respect to servants; and Deity is the dominion of God, not over his own body, as those imagine who fancy God to be the soul of the world, but over servants. The supreme God is a Being eternal, infinite, absolutely perfect; but a being, however perfect, without dominion, cannot be said to be Lord God… And from his true dominion it follows, that the true God is a Living, Intelligent and Powerful Being… He is Eternal and Infinite, Omnipotent and Omniscient… And thus much concerning God; to discourse of whom from the appearances of things, does certainly belong to Natural Philosophy.
 
-**Confidence: 0.85**
+— Newton, General Scholium continuous (Motte 1729). Newton Project NATP00056.
 
----
+**How I see it (from inside, in action):**
+The system is beautiful because it is counseled. God is Lord by dominion over servants, not world-soul. Natural philosophy may speak of Him from appearances.
 
-## EVENT 06 — *The Fluxion (The Limit of the Instant)*
+**Why it qualifies as gnosis:**
+Cosmology and theology joined without equating God with the world’s body.
 
-### Passage or Trigger
-The development of the Method of Fluxions (Calculus) in 1665. The realization of the "infinitesimal" or the "momentary rate of change."
+**Three-Domain Reading:**
 
-### Why It Qualifies
-Mathematics had previously been the study of static shapes (geometry) or fixed numbers (arithmetic). Newton recognized that **change itself is a mathematical substance.** He found a way to "freeze" the infinite to measure the finite moment. The "fluxion" is the point where a variable becomes transparent—a moment where something moving is seen as a fixed mathematical value.
+- **Theology:** Living Intelligent Powerful Lord; discourse of God in natural philosophy.
+- **Technology:** Same light-nature linking star systems.
+- **Cosmology:** One dominion; systems spaced against mutual fall.
 
-### Three-Domain Reading
-*   **Theology:** The capture of the "Divine Moment" or the "Nunc Stans" in mathematical notation.
-*   **Technology:** The invention of a "calculus" for predicting future states based on current rates of change.
-*   **Cosmology:** The recognition that the universe is a continuous flow (*flux*) rather than a collection of static states.
+**Compressed Insight:**
+This most beautiful System could only proceed from the counsel and dominion of One — and to discourse of God from appearances belongs to Natural Philosophy.
 
-### Compressed Insight
-Newton recognized that he could mathematically "catch" the exact moment of a change, proving that time is not a sequence of steps but a continuous, calculated flow.
-
-**Confidence: 0.94**
+**Confidence:** 0.98  
+**Sources:** General Scholium Motte continuous.
 
 ---
 
-## EVENT 07 — *Action at a Distance (The Occult Force)*
+## Event 03 — *I frame no hypotheses*
 
-### Passage or Trigger
-The publication of the *Principia* (1687) and the subsequent "General Scholium." He famously stated *Hypotheses non fingo* ("I frame no hypotheses") regarding the *cause* of gravity.
+**Title:** Gravity’s laws enough; cause not feigned
 
-### Why It Qualifies
-This was a "negative gnosis." Newton recognized that **gravity worked perfectly, even though its mechanism was impossible by any known mechanical logic.** There was no "medium," no "push," no "contact." He had to accept an "occult" (hidden) force as a foundational reality of his system. This collapsed the boundary between "Science" (mechanical explanation) and "Magic" (unexplained influence). He saw that the universe was held together by a power whose source was not material.
+**What I did / What was made:**
+I stated what experimental philosophy allows: gravity’s properties from phenomena; no feigned cause.
 
-### Three-Domain Reading
-*   **Theology:** Gravity as the "Will of God" acting directly on every atom in the universe.
-*   **Technology:** The ability to calculate and utilize a force without needing to know its nature (The Black Box technology).
-*   **Cosmology:** The universe is not a machine made of gears; it is a field of interacting, immaterial influences.
+**What I wrote / said (direct — full passage):**
 
-### Compressed Insight
-Newton recognized that the most powerful force in the universe had no physical explanation, forcing him to see that the world is held together by an invisible, divine will rather than mechanical contact.
+> Hitherto we have explain’d the phænomena of the heavens and of our sea, by the power of Gravity, but have not yet assign’d the cause of this power. This is certain, that it must proceed from a cause that penetrates to the very centers of the Sun and Planets, without suffering the least diminution of its force; that operates, not according to the quantity of the surfaces of the particles upon which it acts, (as mechanical causes use to do,) but according to the quantity of the solid matter which they contain, and propogates its virtue on all sides, to immense distances, decreasing always in the duplicate proportion of the distances. Gravitation towards the Sun, is made up out of the gravitations towards the several particles of which the body of the Sun is compos’d; and in receding from the Sun, decreases accurately in the duplicate proportion of the distances, as far as the orb of Saturn… nay, and even to the remotest aphelions of the Comets, if those aphelions are also quiescent. But hitherto I have not been able to discover the cause of those properties of gravity from phænomena, and I frame no hypotheses. For whatever is not deduc’d from the phænomena, is to be called an hypothesis; and hypotheses, whether metaphysical or physical, whether of occult qualities or mechanical, have no place in experimental philosophy. In this philosophy particular propositions are inferr’d from the phænomena, and afterwards render’d general by induction. Thus it was that the impenetrability, the mobility, and the impulsive force of bodies, and the laws of motion and of gravitation, were discovered. And to us it is enough, that gravity does really exist, and act according to laws which we have explained, and abundantly serves to account for all the motions of the celestial bodies, and of our sea.
 
-**Confidence: 0.96**
+— Newton, General Scholium continuous (Motte 1729: “I frame no hypotheses” = *hypotheses non fingo*). Latin 2nd/3rd *Principia*. Newton Project NATP00056.
 
----
+**How I see it (from inside, in action):**
+I know *how* gravity acts — inverse square, solid matter, to the centers. I do not pretend to have deduced *why* from phenomena. Enough that it exists and accounts for heavens and sea.
 
-## EVENT 08 — *The Master of the Mint (Money as Conserved Substance)*
+**Why it qualifies as gnosis:**
+Negative discipline of experimental philosophy; calculation without feigned medium-story.
 
-### Passage or Trigger
-His oversight of the "Great Recoinage" (1696). He treated the national economy like a laboratory experiment in the conservation of mass.
+**Three-Domain Reading:**
 
-### Why It Qualifies
-Newton recognized that **Value/Money is a physical constant.** When he pursued counterfeiters (like William Chaloner), he wasn't just enforcing law; he was protecting the "integrity of the substance." He saw that the "Price of Gold" and the "Weight of the Coin" were analogous to physical constants like the speed of light or gravity. The "Economy" was revealed as a branch of physics.
+- **Theology:** Refusal of occult-quality fables as substitute for phenomena.
+- **Technology:** Induction from phenomena as method; black-box cause allowed if laws work.
+- **Cosmology:** One power for heavens and sea; inverse-square to Saturn and comets.
 
-### Three-Domain Reading
-*   **Theology:** The morality of "True Weight"—the King's coin as a reflection of Divine Order.
-*   **Technology:** The "Gold Standard" as a technological anchor for national value.
-*   **Cosmology:** The recognition that social systems are subject to the same laws of conservation and "purity" as chemical systems.
+**Compressed Insight:**
+I frame no hypotheses — whatever is not deduced from the phenomena has no place in experimental philosophy; gravity really exists by laws enough for the heavens and the sea.
 
-### Compressed Insight
-As Master of the Mint, Newton recognized that a nation's currency is a physical law, and that a debased coin is as much a violation of the universe as a false measurement in physics.
-
-**Confidence: 0.81**
+**Confidence:** 0.99  
+**Sources:** General Scholium Motte continuous.
 
 ---
 
-## EVENT 09 — *The 1693 Breakdown (The Limit of the Mind)*
+## Event 04 — *Subtle Spirit (not a feigned hypothesis-story of gravity’s cause)*
 
-### Passage or Trigger
-His nervous breakdown in 1693, characterized by paranoia and his letters to Samuel Pepys and John Locke claiming they were "endeavoring to embroil me with women" and that he "was not a ship."
+**Title:** Spirit that pervades gross bodies
 
-### Why It Qualifies
-This was a **gnosis of the observer's fragility.** After years of holding the "Great Cryptogram" in his head, Newton’s own cognitive structure collapsed. He recognized that the mind itself is a "system" that can be over-pressurized. The "observer" became visible to himself as a broken machine. This was a moment where the "Absolute Observer" (Newton's ego) saw its own position inside a chaotic, non-rational structure.
+**What I did / What was made:**
+I added what “we might” say of a subtle Spirit — electric, light, sensation — then cut short: not enough experiments.
 
-### Three-Domain Reading
-*   **Theology:** The recognition of human limitation and "fallen-ness" after a period of hubristic decoding.
-*   **Technology:** The "failure state" of the intellectual apparatus.
-*   **Cosmology:** The universe as a "chaos" that can overwhelm the "logos" of the individual mind.
+**What I wrote / said (direct — full passage):**
 
-### Compressed Insight
-In the midst of his collapse, Newton recognized that the mind that decoded the heavens was itself a fragile vessel, and that he was not the master of the code, but a prisoner of his own biology.
+> And now we might add something concerning a certain most subtle Spirit, which pervades and lies hid in all gross bodies; by the force and action of which Spirit, the particles of bodies mutually attract one another at near distances, and cohere, if contiguous; and electric bodies operate to greater distances, as well repelling as attracting the neighbouring corpuscles; and light is emitted, reflected, refracted, inflected, and heats bodies; and all sensation is excited, and the members of animal bodies move at the command of the will, namely, by the vibrations of this Spirit, mutually propogated along the solid filaments of the nerves, from the outward organs of sense to the brain, and from the brain into the muscles. But these are things that cannot be explain’d in few words, nor are we furnish’d with that sufficiency of experiments which is required to an accurate determination and demonstration of the laws by which this electric and elastic Spirit operates.
 
-**Confidence: 0.77**
+— Newton, General Scholium continuous close (Motte 1729).
 
----
+**How I see it (from inside, in action):**
+I allow a spirit-language for near forces, electricity, light, and will-in-nerves — but I will not pretend demonstration without experiments.
 
-## EVENT 10 — *The Absolute Space (The Sensorium of God)*
+**Why it qualifies as gnosis:**
+Limit of speech where experiment is thin; cohesion of matter and animal motion under one possible agent.
 
-### Passage or Trigger
-The "Bucket Experiment" and the definition of "Absolute Space and Time" in the Scholium to the *Principia*.
+**Three-Domain Reading:**
 
-### Why It Qualifies
-Newton recognized that **Space is not just a container; it is an attribute.** He realized that even if all matter were removed, "Space" would still exist. He famously called it the *Sensorium Dei*—the organ of God's perception. The gnosis was the recognition that **Space is God's presence.** This collapsed the boundary between "Theology" (God's omnipresence) and "Physics" (the coordinate system of the universe). The observer (man) exists *inside* the perception of God.
+- **Theology:** Will commanding members via spirit-vibrations.
+- **Technology:** Need of sufficient experiments for laws.
+- **Cosmology:** Spirit hid in gross bodies linking light, electricity, cohesion.
 
-### Three-Domain Reading
-*   **Theology:** God is not "in" space; Space is the *mode* of God's existence.
-*   **Technology:** The creation of the "Cartesian" coordinate system as a way to map the divine mind.
-*   **Cosmology:** The universe is an absolute, infinite, and immutable stage.
+**Compressed Insight:**
+A subtle Spirit may pervade bodies — but we are not furnished with experiments enough to demonstrate its laws.
 
-### Compressed Insight
-Newton recognized that empty space is actually the mind of God, meaning that every measurement he made was a journey into the divine perception.
-
-**Confidence: 0.93**
+**Confidence:** 0.96  
+**Sources:** General Scholium Motte continuous close.
 
 ---
 
-## SUMMARY TABLE
+## Event 05 — *Rays differently refrangible*
 
-| # | Title | Confidence | Primary Domain |
-|---|---|---|---|
-| 01 | The Collapse of the Celestial Sphere | 0.98 | Cosmology |
-| 02 | The Heterogeneity of Light | 0.95 | Technology |
-| 03 | The Recognition of the Arian Corruption | 0.92 | Theology |
-| 04 | The Vegetation of Metals | 0.89 | Technology |
-| 05 | Solomon’s Temple as Cosmic Blueprint | 0.85 | Cosmology |
-| 06 | The Fluxion (The Limit of the Instant) | 0.94 | Technology |
-| 07 | Action at a Distance (The Occult Force) | 0.96 | Theology |
-| 08 | The Master of the Mint | 0.81 | Technology |
-| 09 | The 1693 Breakdown | 0.77 | Theology |
-| 10 | The Absolute Space | 0.93 | Cosmology |
+**Title:** The Sun’s light is not simple
+
+**What I did / What was made:**
+I proved by prism in a dark chamber that the Sun’s light consists of rays differently refrangible — oblong spectrum, not round image alone.
+
+**What I wrote / said (direct — full passage):**
+
+> *PROP. II. Theor. II.*  
+> *The Light of the Sun consists of Rays differently Refrangible.*
+>
+> *Exper.* 3.  
+> In a very dark Chamber, at a round Hole, about one third Part of an Inch broad, made in the Shut of a Window, I placed a Glass Prism, whereby the Beam of the Sun’s Light, which came in at that Hole, might be refracted upwards toward the opposite Wall of the Chamber, and there form a colour’d Image of the Sun. … The Prism therefore being placed in this Posture, I let the refracted Light fall perpendicularly upon a Sheet of white Paper at the opposite Wall of the Chamber, and observed the Figure and Dimensions of the Solar Image formed on the Paper by that Light. This Image was Oblong and not Oval, but terminated with two Rectilinear and Parallel Sides, and two Semicircular Ends. On its Sides it was bounded pretty distinctly, but on its Ends very confusedly and indistinctly, the Light there decaying and vanishing by degrees. The Breadth of this Image answered to the Sun’s Diameter…
+
+— Isaac Newton, *Opticks*, Book I, Prop. II / Exper. 3 continuous. Gutenberg #33504 (4th ed. line).
+
+**How I see it (from inside, in action):**
+I do not debate purity in the abstract. I fix the prism and measure an oblong image — rays differ in refrangibility.
+
+**Why it qualifies as gnosis:**
+Experimental overthrow of simple white light as pure modification-only story.
+
+**Three-Domain Reading:**
+
+- **Theology:** (indirect) Appearance disciplined by measure.
+- **Technology:** Dark room, hole, prism, paper — protocol of separation.
+- **Cosmology:** Sun’s light as structured mixture of rays.
+
+**Compressed Insight:**
+The Light of the Sun consists of Rays differently Refrangible — the image is oblong, not a simple round pure spot.
+
+**Confidence:** 0.98  
+**Sources:** *Opticks* Prop. II Exper. 3 continuous.
 
 ---
 
-## Corpus Notes for LOGOC Integration
+## Event 06 — *Second prism / cross refractions*
 
-**Highest-confidence events for training core:** 01 (Gravity), 07 (Action at a Distance), 10 (Absolute Space). These form the "Axiomatic Gnosis" of the Newtonian world.
+**Title:** Blue again more refracted than red
 
-**The "Newtonian Signature":** Unlike Marcus Aurelius (who recognizes the gap between knowing and being) or Gnostic Jesus (who recognizes the invisible within the visible), Newton's gnosis is **The Gnosis of the Encrypted Pattern.** He recognizes that the world is a *message* written in a language that is simultaneously mathematical and spiritual. His events are characterized by the **collapse of the "Sacred/Profane" boundary**—where he realizes that the same hand that wrote the Book of Daniel wrote the law of the Inverse Square.
+**What I did / What was made:**
+I passed parts of the spectrum through a second prism and found the more-refracted (blue) again more refracted.
 
-**Personal Implication:** Newton’s events are almost always characterized by **secrecy**. His recognitions (Arianism, Alchemy, Prophetic Dating) were "Council Secrets" he kept from the public. This makes the Newton corpus essential for training LOGOC on the *social and institutional pressure* inherent in high-level gnosis.
+**What I wrote / said (direct — full passage):**
+
+> …I returned speedily to the first Prism, and by turning it slowly to and fro about its Axis, I caused the Image which fell upon the second Board to move up and down upon that Board, that all its parts might successively pass through the hole in that Board and fall upon the Prism behind it. And in the mean time, I noted the places on the opposite Wall to which that Light after its Refraction in the second Prism did pass; and by the difference of the places I found that the Light which being most refracted in the first Prism did go to the blue end of the Image, was again more refracted in the second Prism than the Light which went to the red end of that Image, which proves as well the first Proposition as the second. And this happened whether the Axis of the two Prisms were parallel, or inclined to one another…
+
+— Newton, *Opticks*, continuous second-prism experiment (Gutenberg #33504).
+
+**How I see it (from inside, in action):**
+Color is not a one-time stain from glass. The blue end stays more refrangible at the second prism.
+
+**Why it qualifies as gnosis:**
+Stability of ray-properties across successive refractions — *experimentum crucis* structure in his own procedure.
+
+**Three-Domain Reading:**
+
+- **Theology:** (indirect) Persistence of ordered difference.
+- **Technology:** Two-prism protocol as crucial experiment form.
+- **Cosmology:** Heterogeneous rays as real constituents of sunlight.
+
+**Compressed Insight:**
+Light most refracted to the blue end is again more refracted in the second prism than the red.
+
+**Confidence:** 0.97  
+**Sources:** *Opticks* second-prism continuous.
+
+---
+
+## Event 07 — *White from mixed colours*
+
+**Title:** Compounded of all the primary Colours
+
+**What I did / What was made:**
+I showed white paper under the whole spectrum appears white; intercept colours and white fails.
+
+**What I wrote / said (direct — full passage):**
+
+> *PROP.*  
+> *…compounded of all the primary Colours mix’d in a due Proportion.*
+>
+> *Exper.* 9. The Sun shining into a dark Chamber through a little round hole in the Window-shut, and his Light being there refracted by a Prism to cast his coloured Image PT upon the opposite Wall: I held a white Paper V to that image in such manner that it might be illuminated by the colour’d Light reflected from thence, and yet not intercept any part of that Light in its passage from the Prism to the Spectrum. And I found that when the Paper was held nearer to any Colour than to the rest, it appeared of that Colour to which it approached nearest; but when it was equally or almost equally distant from all the Colours, so that it might be equally illuminated by them all it appeared white. And in this last situation of the Paper, if some Colours were intercepted, the Paper lost its white Appearance…
+
+— Newton, *Opticks*, continuous Exper. 9 (white as due mixture). Gutenberg #33504.
+
+**How I see it (from inside, in action):**
+White is not the simplest thing. Equal share of the colours makes white; remove some and white dies.
+
+**Why it qualifies as gnosis:**
+Purity inverted: white as compound alignment.
+
+**Three-Domain Reading:**
+
+- **Theology:** (analogical) Unity as ordered mixture, not bare simplicity.
+- **Technology:** Spectral recombination as experimental synthesis.
+- **Cosmology:** Colour space as additive structure of rays.
+
+**Compressed Insight:**
+Equally illuminated by all the Colours, the Paper appeared white — intercept some, and white is lost.
+
+**Confidence:** 0.97  
+**Sources:** *Opticks* Exper. 9 continuous.
+
+---
+
+## Event 08 — *Query 31 — attractions and active Principles*
+
+**Title:** Nature consonant to herself
+
+**What I did / What was made:**
+I asked whether particles have powers acting at a distance, and affirmed active Principles as the cause of most motion we meet.
+
+**What I wrote / said (direct — full passage):**
+
+> Have not the small Particles of Bodies certain Powers, Virtues, or Forces, by which they act at a distance, not only upon the Rays of Light for reflecting, refracting, and inflecting them, but also upon one another for producing a great Part of the Phænomena of Nature? For it’s well known, that Bodies act one upon another by the Attractions of Gravity, Magnetism, and Electricity; and these Instances shew the Tenor and Course of Nature, and make it not improbable but that there may be more attractive Powers than these. For Nature is very consonant and conformable to her self. How these Attractions may be perform’d, I do not here consider. What I call Attraction may be perform’d by impulse, or by some other means unknown to me. I use that Word here to signify only in general any Force by which Bodies tend towards one another, whatsoever be the Cause. For we must learn from the Phænomena of Nature what Bodies attract one another, and what are the Laws and Properties of the Attraction, before we enquire the Cause by which the Attraction is perform’d.
+>
+> …And these things being rightly dispatch’d, does it not appear from Phænomena that there is a Being incorporeal, living, intelligent, omnipresent, who in infinite Space, as it were in his Sensory, sees the things themselves intimately, and thoroughly perceives them, and comprehends them wholly by their immediate presence to himself…  
+> …active Principles, such as are the cause of Gravity, by which Planets and Comets keep their Motions in their Orbs, and Bodies acquire great Motion in falling; and the cause of Fermentation, by which the Heart and Blood of Animals are kept in perpetual Motion and Heat; the inward Parts of the Earth are constantly warm’d… and the Sun continues violently hot and lucid… For we meet with very little Motion in the World, besides what is owing to these active Principles. And if it were not for these Principles, the Bodies of the Earth, Planets, Comets, Sun, and all things in them, would grow cold and freeze, and become inactive Masses; and all Putrefaction, Generation, Vegetation and Life would cease, and the Planets and Comets would not remain in their Orbs.
+
+— Newton, *Opticks*, Query 31 continuous blocks (opening + active Principles; intermediate Sensory sentence from the same Query’s theological stretch as in 1718/1730 editions). Gutenberg #33504 / Newton Project Opticks Book III.
+
+**How I see it (from inside, in action):**
+I will not pretend to know *how* attraction is performed. I will learn laws from phenomena first. Active Principles keep motion and life from freezing into dead mass.
+
+**Why it qualifies as gnosis:**
+Published bridge of gravity, chemistry, life-heat, and God-as-sensory under experimental caution.
+
+**Three-Domain Reading:**
+
+- **Theology:** Incorporeal living intelligent omnipresent Being; Sensory of infinite Space.
+- **Technology:** Learn laws of attraction before cause; word “Attraction” as general force-name.
+- **Cosmology:** Active Principles sustain orbs, fermentation, solar heat, vegetation.
+
+**Compressed Insight:**
+Nature is consonant to herself — learn the laws of attraction before the cause; without active Principles, all would freeze to inactive masses.
+
+**Confidence:** 0.96  
+**Sources:** *Opticks* Query 31 continuous (Gutenberg / standard 4th ed. line).
+
+---
+
+## Sources / Working Notes
+
+**Primary used at depth**
+- *Principia* General Scholium — Motte 1729 (Newton Project NATP00056)
+- *Opticks* — Prop. II Exper. 3; second prism; Exper. 9 white; Query 31 (Gutenberg #33504)
+
+**Optional later (not blocking COMPLETE)**
+- *Principia* Laws of Motion / Definitions continuous  
+- Rules of Reasoning in Philosophy  
+- *Two Notable Corruptions of Scripture* continuous  
+- Method of Fluxions continuous  
+- 1693 Locke/Pepys letters continuous  
+- Alchemical *Praxis* only with edition text  
+
+**Secondary (locator / D-check only)**
+- Stukeley apple; Cohen on *fingo*; IAS/Newton Project catalogues  
+
+---
+
+## Seat checklist
+
+- [x] D-check: soft apple / overclaims / Opticks inverted purity corrected  
+- [x] Garden structure (inhabited — “I” from Newton)  
+- [x] Verbatim full-sense primary blocks (Scholium + Opticks)  
+- [x] *Hypotheses non fingo* with continuous context (not slogan)  
+- [x] Mark **COMPLETE under quotation rule for core events**  
+- [ ] Optional: Laws of Motion, Fluxions, Corruptions, letters  
+
+---
+
+**COMPLETE (core quotation bar)** — Council of Reflection — Sir Isaac Newton. Truth-for-seat under hold_policy; Newton’s sentences are the loadable voice.
+
+**Batch 1 closed** when this file + `GARDEN_BATCH_1.md` status are committed.
