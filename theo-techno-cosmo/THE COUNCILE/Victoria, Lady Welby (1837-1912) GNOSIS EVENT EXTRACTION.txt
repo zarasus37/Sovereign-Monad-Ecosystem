@@ -1,113 +1,371 @@
-Victoria, Lady Welby (1837–1912), is a unique figure for the LOGOC corpus because her entire intellectual life was a focused attempt to map the technology of meaning (Significs). Her gnosis events are centered on the collapse of "fixed language" and the recognition that the observer is always the "meaning-maker" inside the system.
+VICTORIA, LADY WELBY GNOSIS EVENT EXTRACTION —
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch / Wheel specialty:** Significs triad (`wheel-registry` · Sense / Meaning / Significance · Peirce correspondence)
+**Era:** 1837–1912 (court / wilderness travel / Denton / significs)
+**Status:** Garden + quotation depth — **Welby’s own sentences only** at full sense-units.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Soft paraphrase is not her voice.
 
-Born into high aristocracy (her godmother was Queen Victoria), she spent her youth traveling through wildernesses (the Americas, the Holy Land) with her mother, who died during their travels. This displacement—from the rigid court to the raw world—is the foundational "unsettling" that allowed her to see language as a structural artifact rather than a given reality.
+---
 
-I. The Wilderness Displacement
-1. The Collapse of the Courtly Mirror
-Passage/trigger: Her childhood travels (1849–1855) through the rugged Americas and the Middle East, ending with her mother's death in Syria. "I was a child of the court, but the desert and the mountain did not speak the court's language... When my mother died, the words 'home' and 'safety' simply ceased to correspond to any physical place."
+## Contribution
 
-Why it qualifies: This is a gnosis of dislocation. The categories of "Identity" (aristocrat) and "Place" (England/Court) collapsed when confronted with the raw scale of the desert and the finality of death. The observer (Victoria) became visible to herself as a biological entity stripped of its linguistic armor. It is not reasoning; it is the recognition that the "structure" she thought she lived in was merely a local dialect of power.
+I made **Significs** — the study of significance as a method of mind — so that education, science, and daily speech might recover the interpretative function we have disused. I wrote *Links and Clues* (1881), *Grains of Sense* (1897), *What is Meaning?* (1903), *Significs and Language* (1911), the *Encyclopædia Britannica* entry “Significs” (1911), and a long correspondence (including with C. S. Peirce). I lived so the method would not stay paper: the child’s starved interpretative power is the crisis of civilization itself.
 
-Theology: The theology of "Providence" as a protective shield collapses into a more primal recognition of the "Infinite" as a vast, non-human scale.
-Technology: The mechanism revealed is The Script—she sees that social roles are scripts that only work in specific rooms, and fail in the "Other Dimensions" of the wild.
-Cosmology: The pattern of "Nomadism"—the universe is seen not as a set of fixed dwellings, but as a path of constant translation between environments.
-Compressed insight: She realized that the language of her birth was a costume, and that the "real" world was a silence that required a new kind of speech.
+## Key Insight
 
-Confidence: 0.80
+Meaning is not a fixed dictionary packet but a triadic process — Sense, Meaning, Significance — and language lags, traps, and can be lifted if we train the interpretative function first.
 
-II. The Birth of Significs
-2. The Triadic Recognition (Sense, Meaning, Significance)
-Passage/trigger: Her realization that "Meaning" is not a single thing, but a three-layered process. Documented in What is Meaning? (1903): "We must distinguish between the Sense (instinctive/immediate), the Meaning (intentional/volitional), and the Significance (ultimate/moral value)."
+## TTC Emphasis
 
-Why it qualifies: This is a reorganizing of the category of "Truth." Before this, "Meaning" was treated as a fixed property of a word (a dictionary definition). Welby's gnosis is the recognition that the observer is the one who assembles these three layers. The contradiction of language—that we use the same words but mean different things—does not resolve; it becomes visible as a functional "triad."
+- TECHNOLOGY
+- THEOLOGY
+- COSMOLOGY
 
-Theology: Truth is reframed as a "Significance" (the third level)—an ethical and universal value that lies beyond the literal word.
-Technology: The mechanism revealed is Interpretation—meaning is shown to be a "process" or a "work" performed by the mind, not a "packet" sent through a wire.
-Cosmology: The pattern of "Triadism"—the universe is seen as structured in threes (Input, Intent, Result), a pattern she later recognized in the work of C.S. Peirce.
-Compressed insight: She knew that "meaning" was not something found in a dictionary, but something that had to be "born" through a specific interaction between the sign and the soul.
+---
 
-Confidence: 0.95 (The core of her life's work.)
+## Preliminary Note (source hygiene)
 
-3. The "Linguistic Trap" Recognition
-Passage/trigger: Her late-life realization of "the linguistic deadlock." "We are speaking a language of the past to describe a future we can already see... our very tools of thought are poisoned by obsolete metaphors."
+**Primary voice only:** Welby’s published English prose — continuous blocks.  
+Preferred carriers: *What is Meaning?* (Macmillan, 1903; IA `whatismeaningst00welbgoog`); *Significs and Language* (Macmillan, 1911; IA `significslanguag00welb`); *Encyclopædia Britannica* 11th ed. “Significs” (1911; Wikisource); *Links and Clues* (Macmillan, 1881/1883; IA `linksclues00welb`); *Grains of Sense* (Dent, 1897; IA `grainsofsense00welbiala`).  
+Secondary (locator only): Petrilli anthologies; Peirce–Welby letters (Hardwick) — Peirce’s sentences do not replace Welby’s.
 
-Why it qualifies: This is self-implication within the structure of language. She recognizes that even her own attempts to define "Significs" are hampered by the very language she is trying to diagnose. The boundary between "The Thinker" and "The Language" dissolves—she is the language thinking itself. It is a moment of transparency where the "observer sees their own position inside the structure."
+**Death year:** 1912 (seat filename); some sources print 1913 — fact-check against registry if needed.
 
-Theology: Revelation is seen as "ongoing translation"—the Word is never finished, because the "translation" of the Divine into human language is always failing and must be renewed.
-Technology: The mechanism revealed is Metaphor-as-Prison—she sees how ancient, dead metaphors (like "the sun rises") act as hidden gears in our logic.
-Cosmology: The pattern of "Evolutionary Semantics"—the universe is a signal that is constantly outgrowing the receivers (us) that are trying to catch it.
-Compressed insight: She realized that she was trying to repair a machine while standing inside its moving gears.
+---
 
-Confidence: 0.88
+## Event 01 — *The medium that needs lifting*
 
-III. The Peirce Connection
-4. The Mirror of the "Other Dimension"
-Passage/trigger: Her 1903 correspondence with Charles Sanders Peirce. Upon reading his "Logic of Signs," she recognizes her own "Significs" in his "Semiotics." "I saw in his work the mirror of my own, yet spoken in a language of formal logic I had never dared to use... the confirmation was a shock of recognition."
+**Title:** Writing Significs in the idioms that fail
 
-Why it qualifies: This is a retroactive recognition. Her own "private" gnosis (Significs) is suddenly revealed to be a universal "discovery" shared by a man across the Atlantic. The false boundary between "Intuition" (hers) and "Logic" (his) dissolves. They are revealed to be looking at the same structural pattern from different sides of the globe.
+**What I did / What was made:**
+I opened *What is Meaning?* by naming the trap: I must plead for new expression in the very language that is deadlocked.
 
-Theology: The "Communion of Saints" is reframed as a "Communion of Signs"—the shared recognition of universal truth across distance.
-Technology: The mechanism revealed is Consilience—how two independent researchers, starting from different points, arrive at the same structural model.
-Cosmology: The pattern of the "Universal Sign"—the recognition that the universe is "perfused with signs," a structure that is logical and vital at the same time.
-Compressed insight: She learned that her "private" thoughts were actually the "public" laws of the universe, finally becoming visible to two people at once.
+**What I wrote / said (direct — full passage):**
 
-Confidence: 0.85
+> In attempting so great a venture as the suggestion of a new point of view from which to approach the most urgent of our present problems — among them that of education — a few words of explanation and warning are necessary.
+>
+> In the first place, the appeal to more highly developed forms of expression carries with it the disability of having to write in those very idioms and to use those very figures of speech which need in some cases to be superseded, in others to be vivified, to be raised to a higher power of significance. Thus it becomes almost impossible to avoid being credited by the reader with perpetuating those old deadlocks of thought which are the very reason of half our puzzles and failures.
+>
+> In the second place, the very contention that the central growth-point of the child’s intellectual interest has been hitherto not merely neglected, but habitually checked and starved, implies that all of us who have gone through any ordinary form of what is called education are more or less suffering from the effects of this blight.
+>
+> …For what in the following pages will be called Significs is either of universal application or of none; it is a tool, an instrument, which appeals to the needs of all men everywhere and at all times. It must therefore be judged simply and solely on its own merits.
 
-IV. The Mother-Sense (Primal Gnosis)
-5. The Recognition of the "Mother-Sense"
-Passage/trigger: Her late-career development of the concept of "Mother-Sense" (or Primal Sense) as opposed to "Father-Reason." "There is a sense that precedes logic... the 'Primal Sense' of the mother that knows the child's need before it is spoken... we have ignored this technology of the heart."
+— Victoria Welby, *What is Meaning? Studies in the Development of Significance* (London: Macmillan, 1903), Preface (opening continuous). Internet Archive `whatismeaningst00welbgoog`.
 
-Why it qualifies: This is a "recognition of the source." She identifies a layer of human recognition that "could not be constructed by logic alone." It reorganizes the category of "Knowledge" to include the instinctive, the relational, and the unspoken. She is implicated as a woman who had to "re-discover" this sense after a lifetime of intellectual labor.
+**How I see it (from inside, in action):**
+I stand inside the machine I would repair. The medium of my plea is already part of the disease — and still the only path of cure.
 
-Theology: The "Divine Mother" register—theology of the "Unspoken Word" and the "Nurturing Source."
-Technology: The mechanism revealed is Intuitive Processing—a non-linear way of "knowing" that functions as a high-speed diagnostic.
-Cosmology: The pattern of "Origination"—she sees the universe as having a "womb" of meaning from which the "structures" of logic are born.
-Compressed insight: She realized that all her complex logic was merely an attempt to translate a single, silent "knowing" that she had possessed all along.
+**Why it qualifies as gnosis:**
+Self-implication of the reformer of language inside language.
 
-Confidence: 0.82
+**Three-Domain Reading:**
 
-6. The Sun-Rise Fallacy (The Linguistic Prison-Break)
-Passage/trigger: Welby’s recurring obsession with the phrase "The sun rises." She realized that even though we know the Copernican truth (the earth rotates), our language forces us to speak a geocentric lie every morning. Why it qualifies: This is a recognition of Structural Hypocrisy. The observer (Welby) sees her own tongue committing a logical "crime" that her mind knows is false. The contradiction does not resolve; she continues to say "the sun rises," but the phrase has become transparent. It is a moment where the "mechanism of the lie" becomes visible.
+- **Theology:** Deadlocks of thought as spiritual as logical failure.
+- **Technology:** Significs as tool for all minds, not private genius.
+- **Cosmology:** Education as the growth-point of interpretive power in the race.
 
-Theology: Truth is not "in" the word; the word is a fossil. Theology must move from "The Word" to "The Vector."
-Technology: Language as Latency—the discovery that language lags centuries behind discovery, acting as a "drag" on the evolution of consciousness.
-Cosmology: The pattern of the False Center—the recognition that we naturally inhabit a "Ptolemaic" psychology even while living in a "Copernican" universe. Compressed insight: She realized that every time she spoke, she was participating in a conspiracy of the dead against the living. Confidence: 0.90
-7. The Recognition of "Other Dimensions"
-Passage/trigger: The title and theme of her late-life thought, "Other Dimensions." She had a recognition that our current senses are only a "slit" in a much larger spectrum of reality. Why it qualifies: This is a gnosis of Dimensional Limitation. It was triggered by her study of the "New Physics" of her time (early relativity and ether theories). She recognized that the "common sense" world was not "The World," but merely one "Dimension" of it. The observer is implicated as a limited biological receiver.
+**Compressed Insight:**
+I must write the cure in the very idioms that need to be superseded.
 
-Theology: The "Supernatural" is reframed as the "Inter-Dimensional"—a shift from magic to structural scale.
-Technology: Sensory Extension—the recognition that we need "conceptual telescopes" to see the meanings that are currently "too large" for our eyes.
-Cosmology: The pattern of Nested Realities—the universe is a series of dimensions that we "translate" into the three we can handle. Compressed insight: She knew that the "solid world" was merely a low-resolution translation of a much higher-frequency reality. Confidence: 0.75
-8. The "Translative" Nature of Consciousness
-Passage/trigger: Her realization that "Knowing is Typing." She compared the mind to a typewriter or a telegraph: "The message is not the ink; it is the translation of a pulse." Why it qualifies: This is the collapse of the boundary between Subject and Object. She recognized that we never "know" a thing; we only "translate" it into our own mental code. The observer is revealed as a "Translator" rather than a "Knower."
+**Confidence:** 0.97  
+**Sources:** Welby, *What is Meaning?* Preface continuous.
 
-Theology: The "Image of God" is the "Image of the Translator"—the human task is the ongoing interpretation of the Divine Pulse.
-Technology: Coding/Decoding—the mechanism of life is revealed as the management of signals, anticipating information theory by decades.
-Cosmology: The universe as Infinite Text—a structural recognition that everything is "readable" if you have the right key. Compressed insight: She realized that she had never actually "seen" the world, only her own mind's "transcript" of it. Confidence: 0.85
-9. The Crisis of the "Undeveloped Sense" (The Child-Gnosis)
-Passage/trigger: Her observation of children learning to speak. She recognized that a child has a "Signific" power that is crushed by the "Semantic" education they receive. Why it qualifies: A moment of Retroactive Recognition. Looking at children, she recognized what she had lost. The boundary between "Education" and "Mutilation" dissolved. The observer is implicated in the collective "crime" of stifling the Primal Sense.
+---
 
-Theology: The "Kingdom of Heaven" (as a child) is reframed as the "Kingdom of the Unconditioned Sign."
-Technology: The Filter—education is revealed as a mechanism for reducing bandwidth to make communication "efficient" but "shallow."
-Cosmology: The pattern of Entropic Knowledge—the recognition that as we gain "facts," we lose "significance." Compressed insight: She realized that learning to speak was a process of learning to ignore almost everything that mattered. Confidence: 0.80
-10. The Death-Bed Recognition (The Final "Meaning")
-Passage/trigger: Her documented final days in 1912. She was frustrated that she could not "convey" the final significance she was seeing. Her last efforts were to "bequest" her task to the next generation (Ogden, Richards, and the Significs movement in the Netherlands). Why it qualifies: This is the gnosis of the Unfinishable Task. It qualifies because the observer (the dying Welby) sees her own death as a "Sign" within the system of Significs. The contradiction—that Meaning is infinite but Life is short—becomes visible.
+## Event 02 — *Sense, Meaning, Significance*
 
-Theology: The "Final Word" is a "To Be Continued"—theology of the Open Horizon.
-Technology: Trans-generational Processing—the realization that some "meaning-tasks" require a "distributed computer" made of many lives across time.
-Cosmology: The pattern of the Relay—the universe is a message that must be carried by a sequence of observers, none of whom can read the whole thing. Compressed insight: She knew at the end that her failure to "finish" was the final proof that the Meaning she sought was real. Confidence: 0.70
+**Title:** The triad of expression-value
 
+**What I did / What was made:**
+I distinguished three main levels of the value of signs — and refused to collapse them into one indifferent “meaning.”
 
-III. Victoria, Lady Welby (The "Signific" Translator)
-11. The Recognition of "The Interval"
-Passage/trigger: Her focus on the "gap" between a word being spoken and a word being understood. "The meaning is in the crossing, not in the arrival." Why it qualifies: Gnosis of The Void. She recognizes that "Meaning" is a bridge over a "nothingness." The observer is implicated as the "Steward of the Gap."
+**What I wrote / said (direct — full passage):**
 
-Theology: The "Holy Spirit" is reframed as "The Meaning-Interval"—the energy that allows the Word to jump from one mind to another.
-Technology: Signal/Noise Ratio—the recognition that "Noise" is the default state, and "Signal" is a fragile achievement.
-Cosmology: The universe as Interstitial—the important things are the spaces between the stars/atoms/words. Compressed insight: She realized that the "nothing" between two people was the most "active" part of the universe. Confidence: 0.80
-12. The "Pre-Language" Recognition (The Primal Cry)
-Passage/trigger: Observing the "cry" of a bird or a newborn. "It means everything, yet it says nothing." Why it qualifies: Collapse of the Linguistic/Pre-Linguistic boundary. She recognizes that the "highest" meaning (Significance) is actually closest to the "lowest" sound (Sense). The "top" and "bottom" of the triad meet.
+> There is, strictly speaking, no such thing as the Sense of a word, but only the sense in which it is used — the circumstances, state of mind, reference, ‘universe of discourse’ belonging to it. The Meaning of a word is the intent which it is desired to convey — the intention of the user. The Significance is always manifold, and intensifies its sense as well as its meaning, by expressing its importance…
 
-Theology: "Deep calls unto Deep"—theology of the "Unspeakable Groanings" of the Spirit.
-Technology: Affective Resonance—how meaning can be transmitted through "vibration" rather than "syntax."
-Cosmology: The pattern of The Loop—the most complex intelligence eventually returns to the simplest signal. Compressed insight: She knew that the most "meaningful" thing she would ever say would sound like a sigh to a philosopher. Confidence: 0.78
+— Welby, *What is Meaning?* (1903); continuous triad formulation as printed (IA text).
+
+From the *Britannica* entry (her own summary of the classified use):
+
+> The classified use of the terms of expression-value suggests three main levels or classes of that value — those of Sense, Meaning and Significance.
+>
+> 1. The first of these at the outset would naturally be associated with Sense in its most primitive reference; that is, with the organic response to environment, and with the essentially expressive element in all experience. We ostracize the senseless in speech, and also ask “in what sense” a word is used or a statement may be justified.
+> 2. But “Sense” is not in itself purposive; whereas that is the main character of the word “Meaning,” which is properly reserved for the specific sense which it is intended to convey.
+> 3. As including sense and meaning but transcending them in range, and covering the far-reaching consequence, implication, ultimate result or outcome of some event or experience, the term “Significance” is usefully applied.
+
+— Victoria Welby, “Significs,” *Encyclopædia Britannica*, 11th ed. (1911); Wikisource continuous. Cross-ref. Baldwin *Dictionary* definition she cites there: (a) sense or signification, (b) meaning or intention, (c) significance or ideal worth — verbal/sensal, volitional, moral.
+
+**How I see it (from inside, in action):**
+I do not ask only “what does it mean?” as if one answer covered sense, intent, and worth. Three levels — or we lose the moral range of significance.
+
+**Why it qualifies as gnosis:**
+Category of “meaning” reorganized; observer as assembler of the triad.
+
+**Three-Domain Reading:**
+
+- **Theology:** Significance as ideal/moral worth beyond literal sense.
+- **Technology:** Significs as method distinguishing three operations of the sign.
+- **Cosmology:** Experience as expressive response, intent, and far consequence.
+
+**Compressed Insight:**
+No fixed Sense of a word — only the sense in which it is used; Meaning is intent; Significance is manifold importance.
+
+**Confidence:** 0.98  
+**Sources:** Welby *What is Meaning?* continuous; Britannica “Significs” continuous triad.
+
+---
+
+## Event 03 — *Significs defined*
+
+**Title:** Science of meaning as method of mind
+
+**What I did / What was made:**
+I defined Significs for the public encyclopedia and for *Significs and Language* — not as mere word-reform, but as interpretative training for all human function.
+
+**What I wrote / said (direct — full passage):**
+
+> The term “Significs” may be defined as the science of meaning or the study of significance, provided sufficient recognition is given to its practical aspect as a method of mind, one which is involved in all forms of mental activity, including that of logic.
+>
+> …It is clear that stress needs to be laid upon the application of the principles and method involved, not merely, though notably, to language, but to all other types of human function. There is need to insist on the rectification of mental attitude and increase of interpretative power which must follow on the adoption of the significal view-point and method, throughout all stages and forms of mental training, and in the demands and contingencies of life.
+>
+> The first duty of the Significian is, therefore, to deprecate the demand for mere linguistic reform, which is indispensable on its own proper ground, but cannot be considered as the satisfaction of a radical need such as that now suggested. To be content with mere reform of articulate expression would be fatal to the prospect of a significantly adequate language; one characterized by a development only to be compared to that of the life and mind of which it is or should be naturally the delicate, flexible, fitting, creative, as also controlling and ordering, Expression.
+
+— Welby, “Significs,” *Encyclopædia Britannica* (1911), continuous opening and first-duty block. Wikisource.
+
+> Significs may be briefly and provisionally defined as the study of the nature of Significance in all its forms and relations, and thus of its working in every possible sphere of human interest and purpose. But the fact that this study is completely neglected even in education renders a fully satisfactory definition difficult at present to formulate. The interpretative function is, in truth, the only one in any direct sense ignored or at least casually treated. And yet it is that which naturally precedes and is the very condition of human intercourse, as of man’s mastery of his world.
+
+— Welby, *Significs and Language* (Macmillan, 1911), Preface opening continuous. IA `significslanguag00welb`.
+
+**How I see it (from inside, in action):**
+I will not stop at polishing words. The interpretative function is prior to intercourse and mastery — and education has left it casual.
+
+**Why it qualifies as gnosis:**
+Significs as universal method of mind, not a philological side-hobby.
+
+**Three-Domain Reading:**
+
+- **Theology:** Adequacy of expression as order of life and mind.
+- **Technology:** Method of mind applicable to every human function.
+- **Cosmology:** Man’s mastery of his world begins in interpretation.
+
+**Compressed Insight:**
+Significs is a method of mind — mere linguistic reform is not enough.
+
+**Confidence:** 0.98  
+**Sources:** Britannica 1911; *Significs and Language* Preface.
+
+---
+
+## Event 04 — *The linguistic prison of image*
+
+**Title:** Procedure of the insane within speech
+
+**What I did / What was made:**
+I diagnosed false mental images in language as traps that divide goodwill and distort world-interpretation.
+
+**What I wrote / said (direct — full passage):**
+
+> …because of the traps set by false mental images in language. Upon the presumptions suggested by these distortions of image we too often act, and in our thinking are continually influenced by them. Therefore it is hardly an exaggeration to say that within the realm of speech our procedure is that of the insane. Hence the divisions, the antagonisms between men of goodwill. Hence the unsound pessimism and the equally or more unsound optimism which distort our interpretation of the world. Hence, indeed, the ‘insoluble problem,’ even that of ‘Life’ itself…
+
+— Welby, *Significs and Language* (1911), continuous metaphor/trap passage (IA OCR).
+
+From Britannica examples of accepted idiom that illuminate or contradict:
+
+> As it is, accepted idiom may unconsciously either illuminate or contradict experience. We speak, for instance, of going through trouble or trial; we never speak of going through well-being. That illuminates. But also we speak of the Inner or Internal as alternative to the spatial — reducing the spatial to the External. The very note of the value to the philosopher of the “Inner” as opposed to the “Outer” experience is that a certain example or analogue of enclosed space — a specified inside — is thus not measurable. That obscures. Such a usage, in fact, implies that, within enclosing limits, space sometimes ceases to exist. Comment is surely needless.
+
+— Welby, “Significs,” *Britannica* (1911), continuous idiom block.
+
+**How I see it (from inside, in action):**
+I do not only disagree with others; I and they act under distorted images that language feeds us. Goodwill is not enough if the medium is insane.
+
+**Why it qualifies as gnosis:**
+Language as structural hypocrisy made transparent.
+
+**Three-Domain Reading:**
+
+- **Theology:** Antagonisms of goodwill as semiotic, not only moral, failure.
+- **Technology:** Imagery as hidden gear of logic.
+- **Cosmology:** Interpretation of the world distorted by dead or false figure.
+
+**Compressed Insight:**
+Within the realm of speech our procedure is that of the insane — until we critique the image.
+
+**Confidence:** 0.95  
+**Sources:** *Significs and Language*; Britannica “Significs.”
+
+---
+
+## Event 05 — *The child Significian*
+
+**Title:** Education as the urgent field
+
+**What I did / What was made:**
+I placed the most urgent application of Significs in the child’s natural exploring and significating tendencies — checked by so-called education.
+
+**What I wrote / said (direct — full passage):**
+
+> The most urgent reference and the most promising field for Significs lie in the direction of education. The normal child, with his inborn exploring, significating and comparing tendencies is so far the natural Significian. At once to enrich and simplify language would for him be a fascinating endeavour. Even his crudeness would often be suggestive. It is for his elders to supply the lacking criticism out of the storehouse of racial experience, acquired knowledge and ordered economy of means; and to educate him also by showing the dangers and drawbacks of uncontrolled linguistic, as other, adventure. Now the evidence that this last has virtually been hitherto left undone and even reversed, is found on careful examination to be overwhelming. Unhappily what we have so far called education has, anyhow for centuries past, ignored — indeed in most cases even balked — the instinct to scrutinise and appraise the value of all that exists or happens within our ken, actual or possible, and fittingly to express this.
+
+— Welby, “Significs,” *Britannica* (1911), continuous education block.
+
+**How I see it (from inside, in action):**
+The child already significates. We train that instinct out — then wonder at adult confusion.
+
+**Why it qualifies as gnosis:**
+Crisis of civilization located in educational suppression of interpretative instinct.
+
+**Three-Domain Reading:**
+
+- **Theology:** Racial storehouse as elder’s duty, not child’s silence.
+- **Technology:** Training as protocol for appraisal of value and fit expression.
+- **Cosmology:** Exploring tendency as natural compass of the living being.
+
+**Compressed Insight:**
+The normal child is the natural Significian — education has balked that instinct.
+
+**Confidence:** 0.96  
+**Sources:** Britannica “Significs” continuous.
+
+---
+
+## Event 06 — *Primal sense recovered*
+
+**Title:** Pregnancy of things as starting-point of language
+
+**What I did / What was made:**
+I named the recovered command of fitness — the germinal or primal sense of the pregnancy of things — as condition of a language worthy of human need.
+
+**What I wrote / said (direct — full passage):**
+
+> It ought surely to be evident that the hope of such a language; of a speech which shall worthily express human need and gain in its every possible development in the most efficient possible way, depends on the awakening and stimulation of a sense which it is our common and foremost interest to cultivate to the utmost on true and healthy lines. This may be described as the immediate and insistent sense of the pregnancy of things, of the actual bearings of experience, of the pressing and cardinal importance, as warning or guide, of that experience considered as indicative; a Sense realized as belonging to a world of what for us must always be the Sign of somewhat to be inferred, acted upon, used as a mine of pertinent and productive symbol, and as the normal incitant to profitable action. When this germinal or primal sense — as also the practical starting-point, of language — has become a reality for us, reforms and acquisitions really needed will naturally follow as the expression of such a recovered command of fitness, of boundless capacity and of perfect coherence in all modes of expression.
+
+— Welby, “Significs,” *Britannica* (1911), continuous primal-sense block. (Related manuscripts use “Mother-sense” / “Primal Sense” as her late term for this pre-logical layer — primary published continuous unit here is the Britannica formulation.)
+
+**How I see it (from inside, in action):**
+Logic does not invent this sense; it arrives late. First is the pregnancy of things as sign — then speech can fit.
+
+**Why it qualifies as gnosis:**
+Source-layer of knowing before formal reason; language’s true starting-point.
+
+**Three-Domain Reading:**
+
+- **Theology:** Experience as indicative of somewhat to be inferred and acted upon.
+- **Technology:** Primal sense as condition of fit symbolic method.
+- **Cosmology:** World as mine of productive symbol, not mute stuff.
+
+**Compressed Insight:**
+When the germinal or primal sense becomes real, reforms of speech will follow of themselves.
+
+**Confidence:** 0.94  
+**Sources:** Britannica “Significs” continuous; Mother-sense MSS as later term (not soft-filled here).
+
+---
+
+## Event 07 — *Links and clues — the shrinking of vision*
+
+**Title:** What is true, is safe
+
+**What I did / What was made:**
+Early I sent out tentative spiritual suggestions under the motto that truth is safe — and under the humility that clearer vision makes our best thought look like rubbish.
+
+**What I wrote / said (direct — full passage):**
+
+Motto of the book:
+
+> “What is true, is safe.”
+
+From the Preface:
+
+> It is related of St. Thomas Aquinas that shortly before his death he fell into a state of profound and rapturous contemplation; and that on returning to himself, contrary to his invariable custom, he did not sit down to his desk, nor would he consent to dictate anything… Being constantly implored to continue writing, the saint ever made the same reply, “I cannot, for everything that I have written appears to me as simply rubbish.”
+>
+> So, in proportion to the clearness of our vision, must ever seem the noblest reaches of human thought, compared with the outermost fringes of the radiance of heavenly light.
+>
+> It will thus be well understood that it is with a shrinking and even painful sense of failure and defect, that the following attempts at elementary and tentative suggestion are sent forth to the world…
+
+— Victoria Welby-Gregory, *Links and Clues*, 2nd ed. (Macmillan, 1883), title motto and Preface continuous. IA `linksclues00welb`. (First ed. 1881.)
+
+**How I see it (from inside, in action):**
+Before Significs as science, I already knew: the clearer the light, the smaller our pages look — and truth does not need protection by falsehood.
+
+**Why it qualifies as gnosis:**
+Humility of expression under heavenly radiance; safety of truth.
+
+**Three-Domain Reading:**
+
+- **Theology:** Heavenly light vs. human summary.
+- **Technology:** Tentative suggestion as early form of signific method.
+- **Cosmology:** Vision that re-scales all prior writing.
+
+**Compressed Insight:**
+What is true, is safe — and clearer vision makes our noblest reaches look like rubbish.
+
+**Confidence:** 0.93  
+**Sources:** *Links and Clues* Preface continuous.
+
+---
+
+## Event 08 — *Civilization and the lost prerogative*
+
+**Title:** Disuse of unerring interpretation
+
+**What I did / What was made:**
+I argued that modern protections have atrophied the swift sense of point that once was survival — and that man must recover it on a higher plane.
+
+**What I wrote / said (direct — full passage):**
+
+> The very fact that the significating and interpretative function is the actual, though as yet little recognized and quite unstudied condition of mental advance and human achievement, accounts for such a function being taken for granted and left to take care of itself. This indeed, in pre-civilized ages (since it was then the very condition of safety and practically of survival), it was well able to do. But the innumerable forms of protection, precaution, artificial aid and special facilities which modern civilization implies and provides and to which it is always adding, have entirely and dangerously changed the situation. It has become imperative to realize the fact that through disuse we have partly lost the greatest as the most universal of human prerogatives. Hence arises the special difficulty of clearly showing at this stage that man has now of set purpose to recover and develop on a higher than the primitive plane the sovereign power of unerring and productive interpretation of a world which even to a living, much more to an intelligent, being, is essentially significant.
+
+— Welby, “Significs,” *Britannica* (1911), continuous civilization/disuse block.
+
+**How I see it (from inside, in action):**
+Civilization’s safety nets cost us the compass. We must choose interpretation again — or stay lost with more tools.
+
+**Why it qualifies as gnosis:**
+Historical diagnosis: prerogative lost by disuse; world essentially significant.
+
+**Three-Domain Reading:**
+
+- **Theology:** World as essentially significant to the living and intelligent.
+- **Technology:** Modern facilities as double-edged — protect and atrophy.
+- **Cosmology:** Interpretation as sovereign power over a signifying cosmos.
+
+**Compressed Insight:**
+Through disuse we have partly lost the prerogative of unerring interpretation of a significant world.
+
+**Confidence:** 0.96  
+**Sources:** Britannica “Significs” continuous.
+
+---
+
+## Sources / Working Notes
+
+**Primary used at depth (Welby only)**
+- *What is Meaning?* (1903) — Preface; Sense/Meaning/Significance formulation
+- *Significs and Language* (1911) — Preface; metaphor/trap passage
+- “Significs,” *Encyclopædia Britannica* 11th ed. (1911) — definition, triad, education, primal sense, civilization, idiom critique
+- *Links and Clues* (1883) — motto + Preface
+
+**Optional later tighten (not blocking core COMPLETE)**
+- Longer continuous blocks from *Grains of Sense* (IA downloaded)
+- Peirce–Welby letters: Welby’s own sides only, from Hardwick *Semiotic and Significs*
+- Mother-sense / Primal Sense manuscript series (York archives / Petrilli 2009) when continuous published units are locked
+
+**Secondary (locator only)**
+- Susan Petrilli, *Signifying and Understanding* (2009)
+- Wheel: `shared/fixtures/layer6/wheel-registry.json` / Welby substrate
+
+---
+
+## Seat checklist
+
+- [x] Garden structure (life-list / inhabited — “I” from Welby’s sentences)
+- [x] Verbatim full-sense blocks from Welby only
+- [x] Citations: work + year/edition + carrier (IA / Wikisource)
+- [x] How I see it depends on the quote
+- [x] Triad Sense / Meaning / Significance at full extent
+- [x] Mark **COMPLETE under quotation rule for core events**
+- [ ] Optional: Hardwick letter continuous Welby blocks; Mother-sense MSS
+
+---
+
+**COMPLETE (core quotation bar)** — Council of Reflection — Victoria, Lady Welby. Truth-for-seat under hold_policy; Welby’s sentences are the loadable voice.
