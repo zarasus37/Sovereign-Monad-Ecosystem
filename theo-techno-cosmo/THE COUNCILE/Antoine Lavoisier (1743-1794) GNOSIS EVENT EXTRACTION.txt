@@ -1,360 +1,369 @@
 ANTOINE LAVOISIER GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Natural Sciences → Chemistry
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Cosmos / law / life — conservation of matter; oxygen; chemical nomenclature
 **Era:** 1743–1794 (Paris; chemical revolution; Terror)
-**Status:** Extraction complete (seating candidate) — drawn from oxygen program, conservation principle, nomenclature reform, and revolutionary end
+**Status:** Garden + quotation depth — **Lavoisier’s own sentences only** (Kerr English of the *Traité*) at full sense-units. Soft paraphrase is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Credit hygiene: **Priestley** and **Scheele** isolate the respirable air independently (named by him); **de Morveau, Berthollet, Fourcroy** co-author nomenclature (1787); **Marie-Anne Paulze Lavoisier** lab partner / translator / illustrator — hold, do not erase; execution 1794 is act, not his continuous scientific voice.
 
 ---
 
 ## Contribution
 
-Chemist who led the **chemical revolution**: demolished **phlogiston** theory by showing that **combustion and respiration** require a distinct air he named **oxygen**; established **conservation of mass** through quantitative closed-system experiment; co-authored modern **chemical nomenclature** (1787) and the *Traité élémentaire de chimie* (1789); and who — with collaborator **Marie-Anne Paulze Lavoisier** — made the **balance** the discipline’s central instrument — before execution under the Terror (8 May 1794) as a fermier général.
+I wrote the *Traité élémentaire de chimie* (*Elements of Chemistry*, 1789): restrained reasoning to experiment; defined elements as the last point analysis can reach; named **oxygen** and **azote**; showed atmospheric air as two elastic fluids; made combustion and acid-formation combination with oxygen’s base; decomposed water and named **hydrogen**; and laid down as axiom that in all operations of art and nature **nothing is created** — equal quantity of matter before and after.
 
 ## Key Insight
 
-Matter is neither created nor destroyed in chemical change — only transformed — and fire is not the release of a ghostly “phlogiston” but combination with oxygen; so chemistry becomes a science of weighed elements and named compounds, not alchemical story.
+We must trust to nothing but facts; elements are what analysis cannot further separate; the respirable base of air is oxygen, which forms acids and supports combustion; water is not an element but oxygen plus hydrogen; and an equal quantity of matter exists both before and after every experiment.
 
 ## TTC Emphasis
 
-- THEOLOGY
 - TECHNOLOGY
 - COSMOLOGY
+- THEOLOGY
 
 ---
 
-## Preliminary Note
+## D-check (diligence / fact hygiene — before quotation garden)
 
-Lavoisier is extracted from **experimental program and treatises**, with credit hygiene: **Joseph Priestley** (and independently Scheele) isolated “dephlogisticated air” / oxygen first; Lavoisier’s achievement is **interpretation, naming, system**, and overthrow of phlogiston within which Priestley remained. Collaborators: **Marie-Anne** (translation, illustration, lab partnership); **Guyton de Morveau, Berthollet, Fourcroy** on nomenclature; work with **Laplace** on heat and water. Primary lines:
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| “Nothing is lost, nothing is created, everything is transformed” as exact sentence | **Popular paraphrase.** Primary (Kerr): “nothing is created; an equal quantity of matter exists both before and after the experiment… nothing takes place beyond changes and modifications in the combination of these elements.” |
+| Sole discoverer of oxygen | **False.** He writes: discovered almost at the same time by Priestley, Scheele, and himself. |
+| Phlogiston “overthrown in one letter” as continuous voice | **Soft.** Continuous voice is oxygen system + weights in the *Traité*, not a soft myth monologue. |
+| Guillotine quip as his last words | **Secondary legend** (often attributed to others about him) — **not** his scientific voice. |
+| Conservation “proved” only by slogan without balance | **Incomplete.** Axiom + phosphorus combustion weights + fermentation equality of elements. |
+| Marie-Anne erased | **Defect of soft drafts.** Named in hold/credit; her continuous voice is separate if seated later. |
 
-1. Quantitative method / the balance
-2. 1772 sealed note (air in combustion/calcination)
-3. Oxygen naming and anti-phlogiston theory
-4. Conservation of mass
-5. Water composition / hydrogen
-6. *Méthode de nomenclature chimique* (1787)
-7. *Traité élémentaire de chimie* (1789)
-8. Public finance (Ferme générale); guillotine 1794
+**Dates:** Born 26 Aug 1743. *Méthode de nomenclature chimique* 1787. *Traité* 1789 (Kerr English Edinburgh 1790 used here). Guillotined 8 May 1794.
 
 ---
 
-## Event 01 — *The Balance as Law*
+## Preliminary Note (source hygiene)
 
-**Title:** No Claim Without Weight
+| Priority | Material |
+|----------|----------|
+| **1** | *Traité élémentaire de chimie* (Paris 1789) — Robert Kerr, *Elements of Chemistry* (Edinburgh 1790), Project Gutenberg #30775 |
+| **2** | Academy memoirs on air, water, heat (Laplace collaboration) — later tighten |
+| **3** | Soft “father of chemistry” bios, Terror anecdotes as his speech — **not** voice |
 
-**Passage or Trigger:**
-Lavoisier’s method: chemistry must answer to the **balance**. Mass is the conserved, measurable property; qualitative story without closed weighing is insufficient. Empiricist discipline that turns alchemy’s residual theater into quantitative science.
+**Carrier used:** Gutenberg plain text of Kerr translation (public domain).
 
-**Why It Qualifies:**
-Foundational technology of modern chemistry. Instrument as epistemology — the scale is not accessory; it is the court of appeal.
+---
+
+## Event 01 — *Trust to nothing but facts*
+
+**Title:** Method of the *Elements*
+
+**What I did / What was made:**
+I opened by binding chemistry to the maxim of proceeding from known to unknown, and to facts alone against supposition and self-love.
+
+**What I wrote / said (direct — full passage):**
+
+> It is a maxim universally admitted in geometry, and indeed in every branch of knowledge, that, in the progress of investigation, we should proceed from known facts to what is unknown. In early infancy, our ideas spring from our wants; the sensation of want excites the idea of the object by which it is to be gratified. In this manner, from a series of sensations, observations, and analyses, a successive train of ideas arises, so linked together, that an attentive observer may trace back to a certain point the order and connection of the whole sum of human knowledge.
+>
+> When we begin the study of any science, we are in a situation, respecting that science, similar to that of children; and the course by which we have to advance is precisely the same which Nature follows in the formation of their ideas. In a child, the idea is merely an effect produced by a sensation; and, in the same manner, in commencing the study of a physical science, we ought to form no idea but what is a necessary consequence, and immediate effect, of an experiment or observation. …
+>
+> In the study and practice of the sciences it is quite different; the false judgments we form neither affect our existence nor our welfare; and we are not forced by any physical necessity to correct them. Imagination, on the contrary, which is ever wandering beyond the bounds of truth, joined to self-love and that self-confidence we are so apt to indulge, prompt us to draw conclusions which are not immediately derived from facts; so that we become in some measure interested in deceiving ourselves. Hence it is by no means to be wondered, that, in the science of physics in general, men have often made suppositions, instead of forming conclusions. These suppositions, handed down from one age to another, acquire additional weight from the authorities by which they are supported, till at last they are received, even by men of genius, as fundamental truths.
+>
+> The only method of preventing such errors from taking place, and of correcting them when formed, is to restrain and simplify our reasoning as much as possible. This depends entirely upon ourselves, and the neglect of it is the only source of our mistakes. We must trust to nothing but facts: These are presented to us by Nature, and cannot deceive. We ought, in every instance, to submit our reasoning to the test of experiment…
+
+— Antoine-Laurent Lavoisier, *Elements of Chemistry* (Kerr trans. of *Traité élémentaire de chimie*, 1789/1790), Preface continuous.
+
+**How I see it (from inside, in action):**
+Science has no pain-tutor as childhood has. Self-love invents systems. Only experiment can break inherited suppositions.
+
+**Why it qualifies as gnosis:**
+Epistemology of modern chemistry stated as method, not slogan.
 
 **Three-Domain Reading:**
 
-- **Theology:** Honesty before nature’s ledger.
-- **Technology:** Precision balance as civilizational tool of truth.
-- **Cosmology:** Matter as accountable quantity in a closed world.
+- **Theology:** Truth as restraint of self-love before Nature’s facts.
+- **Technology:** Experiment as the test that corrects reasoning.
+- **Cosmology:** Order of knowledge built from observation upward, not authority downward.
 
 **Compressed Insight:**
-He made the balance the conscience of chemistry — no reaction believed until mass had spoken.
+We must trust to nothing but facts — Nature presents them and cannot deceive.
 
-**Confidence:** 0.95  
-**Sources:** Science History Institute; CountryReports / quantitative method summaries; ACS landmark framing.
+**Confidence:** 0.99  
+**Sources:** *Elements* Preface continuous (Kerr).
 
 ---
 
-## Event 02 — *Sealed Note* (November 1772)
+## Event 02 — *Elements as last point of analysis*
 
-**Title:** Priority Locked Against Doubt
+**Title:** What we may call simple
 
-**Passage or Trigger:**
-November 1772: sealed note deposited stating that air participates chemically in combustion and calcination — idea recorded before full experimental confirmation so priority could not be denied when results arrived.
+**What I did / What was made:**
+I defined elements operationally: not metaphysical atoms, but the last point analysis can reach — simple for us until experiment proves composition.
 
-**Why It Qualifies:**
-Scientific self-consciousness: theory risked in writing under seal. Shows Lavoisier’s program as deliberate revolution, not accidental observation.
+**What I wrote / said (direct — full passage):**
+
+> I shall therefore only add upon this subject, that if, by the term *elements*, we mean to express those simple and indivisible atoms of which matter is composed, it is extremely probable we know nothing at all about them; but, if we apply the term *elements*, or *principles of bodies*, to express our idea of the last point which analysis is capable of reaching, we must admit, as elements, all the substances into which we are capable, by any means, to reduce bodies by decomposition. Not that we are entitled to affirm, that these substances we consider as simple may not be compounded of two, or even of a greater number of principles; but, since these principles cannot be separated, or rather since we have not hitherto discovered the means of separating them, they act with regard to us as simple substances, and we ought never to suppose them compounded until experiment and observation has proved them to be so.
+
+— Lavoisier, *Elements* (Kerr), Preface continuous (elements definition).
+
+**How I see it (from inside, in action):**
+I do not claim absolute atoms. Element means where analysis stops *for us now*. Do not invent composition without experiment.
+
+**Why it qualifies as gnosis:**
+Table of simple substances grounded in analytic limit, not alchemy’s fixed four.
 
 **Three-Domain Reading:**
 
-- **Theology:** Witness sealed before men.
-- **Technology:** Institutional priority practices of the Academy.
-- **Cosmology:** Air as chemical actor, not inert stage.
+- **Theology:** Humility about ultimate indivisibles.
+- **Technology:** Decomposition as the operational definition of simplicity.
+- **Cosmology:** Bodies reduced to principles that act as simple until further means appear.
 
 **Compressed Insight:**
-He hid a sentence about air and fire so that when the world caught up, the date would still be his.
+Elements are the last point analysis can reach — simple for us until experiment proves them compounded.
 
-**Confidence:** 0.93  
-**Sources:** CountryReports on the 1772 sealed note; standard Lavoisier chronologies.
+**Confidence:** 0.99  
+**Sources:** *Elements* Preface continuous.
 
 ---
 
-## Event 03 — *Against Phlogiston*
+## Event 03 — *Nomenclature of simple bodies*
 
-**Title:** The Ghost That Lost Weight
+**Title:** Words that carry determinate ideas
 
-**Passage or Trigger:**
-Phlogiston theory held that burning releases a subtle principle from the fuel. Metals after calcination often **gain** mass — fatal anomaly. Lavoisier shows combination with a portion of air explains the gain; phlogiston is unnecessary and false.
+**What I did / What was made:**
+With de Morveau, Berthollet, and Fourcroy I reformed names: simple terms for simple bodies; Greek where old names taught false ideas.
 
-**Why It Qualifies:**
-Paradigm kill. Centuries of chemical language reverse. Combustion becomes addition, not subtraction of a spirit.
+**What I wrote / said (direct — full passage):**
+
+> The foregoing reflections upon the progress of chemical ideas naturally apply to the words by which these ideas are to be expressed. Guided by the work which, in the year 1787, Messrs de Morveau, Berthollet, de Fourcroy, and I composed upon the Nomenclature of Chemistry, I have endeavoured, as much as possible, to denominate simple bodies by simple terms, and I was naturally led to name these first. It will be recollected, that we were obliged to retain that name of any substance by which it had been long known in the world, and that in two cases only we took the liberty of making alterations; first, in the case of those which were but newly discovered, and had not yet obtained names, or at least which had been known but for a short time, and the names of which had not yet received the sanction of the public; and, secondly, when the names which had been adopted, whether by the ancients or the moderns, appeared to us to express evidently false ideas, when they confounded the substances, to which they were applied, with others possessed of different, or perhaps opposite qualities. We made no scruple, in this case, of substituting other names in their room, and the greatest number of these were borrowed from the Greek language. We endeavoured to frame them in such a manner as to express the most general and the most characteristic quality of the substances; and this was attended with the additional advantage both of assisting the memory of beginners, who find it difficult to remember a new word which has no meaning, and of accustoming them early to admit no word without connecting with it some determinate idea.
+>
+> To those bodies which are formed by the union of several simple substances we gave new names, compounded in such a manner as the nature of the substances directed…
+
+— Lavoisier, *Elements* (Kerr), Preface continuous (nomenclature).
+
+**How I see it (from inside, in action):**
+False names teach false chemistry. New names must mean the characteristic quality — no empty word.
+
+**Why it qualifies as gnosis:**
+Language reform as condition of experimental science (co-authored, not lone).
 
 **Three-Domain Reading:**
 
-- **Theology:** Rejection of invisible substances that explain everything and weigh nothing.
-- **Technology:** Controlled calcination and gas collection as decisive experiments.
-- **Cosmology:** Fire as chemistry of atmosphere, not escape of essence.
+- **Theology:** Truth in naming — no word without determinate idea.
+- **Technology:** Nomenclature as instrument of teaching and research.
+- **Cosmology:** Compounds named from simples as Nature compounds them.
 
 **Compressed Insight:**
-He weighed the ash and found the ghost had the wrong sign — fire takes from the air, not only from the wood.
+Simple bodies by simple terms — and no word without some determinate idea.
 
-**Confidence:** 0.96  
-**Sources:** ACS Chemical Revolution landmark; Science History Institute; Britannica oxygen/combustion.
+**Confidence:** 0.99  
+**Sources:** *Elements* Preface continuous; 1787 co-authors named by him.
 
 ---
 
-## Event 04 — *Naming Oxygen* (c. 1777–1778)
+## Event 04 — *Two elastic fluids of the atmosphere*
 
-**Title:** The Air That Makes Acids — And Mistakenly So Named
+**Title:** Calcination of mercury and recombination
 
-**Passage or Trigger:**
-Priestley isolates the gas (1774) within a phlogiston frame (“dephlogisticated air”). Lavoisier recognizes a distinct element, names it **oxygen** (Greek: acid-former — a naming error in the long run, but a permanent word), and builds the oxygen theory of combustion, calcination, and respiration.
+**What I did / What was made:**
+I showed atmospheric air composed of respirable and mephitic parts; credited Priestley and Scheele; recombined the parts into air again.
 
-**Why It Qualifies:**
-Central Chemistry event. Credit split: isolation vs systematic theory. Council names both the isolator and the namer-systematizer.
+**What I wrote / said (direct — full passage):**
+
+> … This species of air was discovered almost at the same time by Mr Priestley, Mr Scheele, and myself. Mr Priestley gave it the name of *dephlogisticated air*, Mr Scheele called it *empyreal air*. At first I named it *highly respirable air*, to which has since been substituted the term of *vital air*. We shall presently see what we ought to think of these denominations.
+>
+> In reflecting upon the circumstances of this experiment, we readily perceive, that the mercury, during its calcination, absorbs the salubrious and respirable part of the air, or, to speak more strictly, the base of this respirable part; that the remaining air is a species of mephitis, incapable of supporting combustion or respiration; and consequently that atmospheric air is composed of two elastic fluids of different and opposite qualities. As a proof of this important truth, if we recombine these two elastic fluids, which we have separately obtained in the above experiment, viz. the 42 cubical inches of mephitis, with the 8 cubical inches of respirable air, we reproduce an air precisely similar to that of the atmosphere, and possessing nearly the same power of supporting combustion and respiration, and of contributing to the calcination of metals.
+>
+> … I shall afterwards show, that, at least in our climate, the atmospheric air is composed of respirable and mephitic airs, in the proportion of 27 and 73…
+
+— Lavoisier, *Elements* (Kerr), analysis of atmospheric air continuous (mercury experiment + credit).
+
+**How I see it (from inside, in action):**
+Mercury takes the respirable base; what remains will not burn or breathe. Put both back — atmosphere returns. Three discoverers; names still provisional until the system is set.
+
+**Why it qualifies as gnosis:**
+Air unmasked as mixture; combustion/respiration tied to one part; priority shared.
 
 **Three-Domain Reading:**
 
-- **Theology:** Naming as dominion and as risk of error.
-- **Technology:** Gasometry and reduction of mercuric oxide etc.
-- **Cosmology:** Atmosphere as mixture of active and inactive airs.
+- **Theology:** Common air not a pure element of the ancients.
+- **Technology:** Bell-glass, mercury bath, recombination as proof.
+- **Cosmology:** Atmosphere as two elastic fluids in measurable proportion.
 
 **Compressed Insight:**
-Another man first held the gas; he named it and made it the hinge of fire, breath, and modern chemistry.
+Atmospheric air is two elastic fluids of opposite qualities — and recombined, they make the air again.
 
-**Confidence:** 0.95  
-**Sources:** Britannica; Science History Institute; CountryReports Priestley/Lavoisier distinction; Wikipedia known-for list.
+**Confidence:** 0.99  
+**Sources:** *Elements* continuous; Priestley/Scheele named.
 
 ---
 
-## Event 05 — *Combustion and Respiration*
+## Event 05 — *Oxygen and azote named*
 
-**Title:** Flame and Breath Share One Chemistry
+**Title:** Acid-forming base and life-depriving gas
 
-**Passage or Trigger:**
-Oxygen theory unifies **burning** and **breathing**: both consume the same active air and produce analogous products (with carbonic acid / fixed air in respiration and combustion of organics). Animal heat and candle flame enter one material economy.
+**What I did / What was made:**
+I named the base of the respirable portion *oxygen* (acid-former) and the noxious base *azote*.
 
-**Why It Qualifies:**
-Life and fire under one law. Biology’s chemistry of breath begins as chemistry of combustion.
+**What I wrote / said (direct — full passage):**
+
+> We have already seen, that the atmospheric air is composed of two gasses, or aeriform fluids, one of which is capable, by respiration, of contributing to animal life, and in which metals are calcinable, and combustible bodies may burn; the other, on the contrary, is endowed with directly opposite qualities; it cannot be breathed by animals, neither will it admit of the combustion of inflammable bodies, nor of the calcination of metals. We have given to the base of the former, or respirable portion of the air, the name of *oxygen*, from [Greek: oxys] *acidum*, and [Greek: geinomas], *gignor*; because, in reality, one of the most general properties of this base is to form acids, by combining with many different substances. The union of this base with caloric we term *oxygen gas*, which is the same with what was formerly called *pure*, or *vital air*. …
+>
+> The chemical properties of the noxious portion of atmospheric air being hitherto but little known, we have been satisfied to derive the name of its base from its known quality of killing such animals as are forced to breathe it, giving it the name of *azote*, from the Greek privitive particle [Greek: a] and [Greek: xae], *vita*; hence the name of the noxious part of atmospheric air is *azotic gas*… We cannot deny that this name appears somewhat extraordinary; but this must be the case with all new terms… For these reasons, finding it necessary to reject any name upon systematic principles, we have considered that we run no risk of mistake in adopting the terms of *azote*, and *azotic gas*, which only express a matter of fact, or that property which it possesses, of depriving such animals as breathe it of their lives.
+
+— Lavoisier, *Elements* (Kerr), Chap. IV continuous (nomenclature of atmospheric air).
+
+**How I see it (from inside, in action):**
+One base makes acids and life’s air; the other kills when breathed alone. Names from Greek properties — fact first, system second.
+
+**Why it qualifies as gnosis:**
+Modern chemical language of air fixed to observed powers.
 
 **Three-Domain Reading:**
 
-- **Theology:** Life’s fire as shared gift of the air.
-- **Technology:** Calorimetry and gas measurement of respiration.
-- **Cosmology:** Organisms as open combustion systems in an oxygenated world.
+- **Theology:** Naming that binds word to property (acid-genesis; life-privation).
+- **Technology:** Gas as base + caloric; *oxygen gas* vs older vital-air talk.
+- **Cosmology:** Breathable world as oxygen-bearing mixture, not elemental air-stuff.
 
 **Compressed Insight:**
-He saw that we burn slowly what the candle burns fast — same air, same ledger.
+Oxygen — because this base forms acids; azote — because this gas deprives of life.
 
-**Confidence:** 0.94  
-**Sources:** Science History Institute; ACS; standard oxygen-theory summaries.
+**Confidence:** 0.99  
+**Sources:** *Elements* Chap. IV continuous.
 
 ---
 
-## Event 06 — *Conservation of Mass*
+## Event 06 — *Combustion as combination with oxygen*
 
-**Title:** Nothing from Nothing in the Closed Vessel
+**Title:** Phosphorus, weights, and white flakes of acid
 
-**Passage or Trigger:**
-Quantitative closed-system experiments: total mass of reactants equals total mass of products. Matter neither created nor destroyed in chemical reactions — only rearranged. Principle popularized and made operational for chemistry (roots also in earlier philosophy; Lavoisier’s contribution is experimental enforcement).
+**What I did / What was made:**
+In pure oxygen I burned phosphorus, measured absorption, and concluded product weight equals phosphorus + oxygen — combustion as combination, not phlogistic loss-story.
 
-**Why It Qualifies:**
-Chemical cosmology’s first commandment. Balanced equations later rest on this. Stoichiometry becomes possible as science.
+**What I wrote / said (direct — full passage):**
+
+> In performing experiments, it is a necessary principle, which ought never to be deviated from, that they be simplified as much as possible, and that every circumstance capable of rendering their results complicated be carefully removed. Wherefore, in the experiments which form the object of this chapter, we have never employed atmospheric air, which is not a simple substance. …
+>
+> Having filled a bell-glass … with oxygen gas, … I introduced 61-1/4 grains of Kunkel’s phosphorus… I set fire to the two portions of phosphorus successively… The combustion was extremely rapid, attended with a very brilliant flame, and considerable disengagement of light and heat. … at the same time, the whole inside of the glass became covered with white light flakes of concrete phosphoric acid.
+>
+> At the beginning of the experiment, the quantity of oxygen gas, reduced, as above directed, to a common standard, amounted to 162 cubical inches; and, after the combustion was finished, only 23-1/4 cubical inches, likewise reduced to the standard, remained; so that the quantity of oxygen gas absorbed during the combustion was 138-3/4 cubical inches, equal to 69.375 grains.
+>
+> A part of the phosphorus remained unconsumed… about 45 grains of phosphorus had been burned… Hence, as nearly 45 grains of phosphorus had, in this experiment, united with 69.375 grains of oxygen, and as no gravitating matter could have escaped through the glass, we have a right to conclude, that the weight of the substance resulting from the combustion in form of white flakes, must equal that of the phosphorus and oxygen employed, which amounts to 114.375 grains. … When we reduce these weights to hundredth parts, it will be found, that 100 parts of phosphorus require 154 parts of oxygen for saturation, and that this combination will produce 254 parts of concrete phosphoric acid…
+>
+> This experiment proves, in the most convincing manner, that, at a certain degree of temperature, oxygen possesses a stronger elective attraction, or affinity, for phosphorus than for caloric; that, in consequence of this, the phosphorus attracts the base of oxygen gas from the caloric, which, being set free, spreads itself over the surrounding bodies. But, though this experiment be so far perfectly conclusive, it is not sufficiently rigorous, as, in the apparatus described, it is impossible to ascertain the weight of the flakes of concrete acid which are formed; we can therefore only determine this by calculating the weights of oxygen and phosphorus employed; but as, in physics, and in chemistry, it is not allowable to suppose what is capable of being ascertained by direct experiment, I thought it necessary to repeat this experiment…
+
+— Lavoisier, *Elements* (Kerr), Chap. V continuous (decomposition of oxygen gas by phosphorus).
+
+**How I see it (from inside, in action):**
+Simplify: pure oxygen, not common air. Phosphorus unites with oxygen’s base; flakes’ weight must equal the sum. Heat is caloric set free. If weight can be measured directly, do not only calculate — repeat.
+
+**Why it qualifies as gnosis:**
+Combustion rewritten as combination under closed weighing discipline.
 
 **Three-Domain Reading:**
 
-- **Theology:** Creation’s substance not casually annihilated by human fire.
-- **Technology:** Sealed vessels and precision weighing as proof architecture.
-- **Cosmology:** Material universe as conserved inventory under transformation.
+- **Theology:** Fire as lawful affinity, not escape of ghostly phlogiston (system implies the overthrow).
+- **Technology:** Bell-glass, mercury bath, grain-weights, demand for direct product weighing.
+- **Cosmology:** Matter conserved through brilliant flame as combination of measured parts.
 
 **Compressed Insight:**
-He closed the jar and proved the world does not cheat the scale — only changes costume.
+No gravitating matter escapes the glass — product weight equals phosphorus plus oxygen absorbed.
 
-**Confidence:** 0.96  
-**Sources:** Science History Institute; Britannica; Wikipedia conservation framing; CountryReports.
+**Confidence:** 0.99  
+**Sources:** *Elements* Chap. V continuous.
 
 ---
 
-## Event 07 — *Water and Hydrogen*
+## Event 07 — *Nothing is created*
 
-**Title:** Water Is Not an Element
+**Title:** Incontestable axiom of experiment
 
-**Passage or Trigger:**
-Analysis and synthesis of water: water as compound of hydrogen (inflammable air) and oxygen — not an Aristotelian element. Work in dialogue with Cavendish and with collaborators (including heat work with Laplace). Element list shrinks; compound list grows under oxygen theory.
+**What I did / What was made:**
+I stated conservation of matter as the axiom of all chemical art: equal quantity before and after; only changes in combination.
 
-**Why It Qualifies:**
-Classical four-elements cosmos broken at water. Chemistry redefines the building blocks of the wet world.
+**What I wrote / said (direct — full passage):**
+
+> We may lay it down as an incontestible axiom, that, in all the operations of art and nature, nothing is created; an equal quantity of matter exists both before and after the experiment; the quality and quantity of the elements remain precisely the same; and nothing takes place beyond changes and modifications in the combination of these elements. Upon this principle the whole art of performing chemical experiments depends: We must always suppose an exact equality between the elements of the body examined and those of the products of its analysis.
+>
+> Hence, since from must of grapes we procure alkohol and carbonic acid, I have an undoubted right to suppose that must consists of carbonic acid and alkohol. … From these considerations, it became necessary accurately to determine the constituent elements of the fermentable substances; and, for this purpose, I did not make use of the compound juices of fruits, the rigorous analysis of which is perhaps impossible, but made choice of sugar, which is easily analysed… This substance is a true vegetable oxyd with two bases, composed of hydrogen and charcoal brought to the state of an oxyd, by a certain proportion of oxygen… By a long train of experiments, made in various ways, and often repeated, I ascertained that the proportion in which these ingredients exist in sugar, are nearly eight parts of hydrogen, 64 parts of oxygen, and 28 parts of charcoal, all by weight, forming 100 parts of sugar.
+
+— Lavoisier, *Elements* (Kerr), vinous fermentation chapter continuous (axiom + application).
+
+**How I see it (from inside, in action):**
+Art and Nature create no matter. Experiment is bookkeeping of elements. Fermentation rearranges sugar’s hydrogen, charcoal, and oxygen into alkohol and carbonic acid — equality assumed and checked.
+
+**Why it qualifies as gnosis:**
+Conservation principle as operational law of chemistry (his continuous form, not soft slogan).
 
 **Three-Domain Reading:**
 
-- **Theology:** Humility before composition of the familiar.
-- **Technology:** Gas combination and decomposition apparatus.
-- **Cosmology:** Everyday substance as molecular history.
+- **Theology:** Nothing created in the operations — modification, not fiat manufacture of mass.
+- **Technology:** Exact equality of analysis and products as the art of experiment.
+- **Cosmology:** Same elements through fire, air, and fermentation.
 
 **Compressed Insight:**
-He took water apart and found two airs married — the ancient element was a wedding, not a simple.
+In all operations of art and nature, nothing is created — equal quantity of matter before and after; only changes in combination.
 
-**Confidence:** 0.93  
-**Sources:** Standard Lavoisier water/hydrogen accounts; Britannica chemical revolution context.
+**Confidence:** 0.99  
+**Sources:** *Elements* continuous (fermentation / axiom).
 
 ---
 
-## Event 08 — *Méthode de Nomenclature Chimique* (1787)
+## Event 08 — *Hydrogen, generative principle of water*
 
-**Title:** A New Language for Matter
+**Title:** Water is not an element
 
-**Passage or Trigger:**
-1787: with **Louis-Bernard Guyton de Morveau**, **Claude-Louis Berthollet**, and **Antoine François de Fourcroy**, *Méthode de nomenclature chimique* — systematic names for compounds reflecting composition (oxides, acids, salts), replacing alchemical and trivial names that blocked clear thought.
+**What I did / What was made:**
+I showed water composite and named its radical *hydrogen* — generative principle of water — oxygen being common with many substances.
 
-**Why It Qualifies:**
-Language reform as scientific revolution. Wrong words mislead experiment; right names encode theory. Collective authorship named.
+**What I wrote / said (direct — full passage):**
+
+> Until very lately, water has always been thought a simple substance, insomuch that the older chemists considered it as an element. Such it undoubtedly was to them, as they were unable to decompose it; or, at least, since the decomposition which took place daily before their eyes was entirely unnoticed. But we mean to prove, that water is by no means a simple or elementary substance. I shall not here pretend to give the history of this recent, and hitherto contested discovery, which is detailed in the Memoirs of the Academy for 1781, but shall only bring forwards the principal proofs of the decomposition and composition of water; and, I may venture to say, that these will be convincing to such as consider them impartially.
+>
+> …
+>
+> Thus water, besides the oxygen, which is one of its elements in common with many other substances, contains another element as its constituent base or radical, and for which we must find an appropriate term. None that we could think of seemed better adapted than the word *hydrogen*, which signifies the *generative principle of water*, from [Greek: ydor] *aqua*, and [Greek: geinomas] *gignor*. We call the combination of this element with caloric *hydrogen gas*; and the term hydrogen expresses the base of that gas, or the radical of water.
+>
+> This experiment furnishes us with a new combustible body, or, in other words, a body which has so great affinity with oxygen as to draw it from its connection with caloric, and to decompose air or oxygen gas. …
+
+— Lavoisier, *Elements* (Kerr), Chap. VIII continuous (radical principle of water + hydrogen naming). (Composition work contested and collaborative in reception; he states the naming and the claim water is not simple.)
+
+**How I see it (from inside, in action):**
+The old “element” water fails under decomposition. Oxygen is shared; the other base generates water — hydrogen. Combustible because it seizes oxygen from caloric.
+
+**Why it qualifies as gnosis:**
+Elemental water overturned; modern hydrogen named from property.
 
 **Three-Domain Reading:**
 
-- **Theology:** Adamic naming renewed as scientific duty.
-- **Technology:** Nomenclature as information technology for labs.
-- **Cosmology:** Shared map of substances across Europe.
+- **Theology:** Ancient element revised by experiment, not by authority alone.
+- **Technology:** Red-hot tubes, charcoal, iron; Academy memoirs 1781 as prior proof-track.
+- **Cosmology:** Water as compound of oxygen and hydrogen under Earth’s temperature regime.
 
 **Compressed Insight:**
-They renamed the world of stuff so that the name confessed the composition — and chemistry could finally speak cleanly.
+Water is by no means simple — hydrogen is the generative principle of water; oxygen is its other element.
 
-**Confidence:** 0.95  
-**Sources:** Wikipedia nomenclature section; CountryReports on language reform; Britannica coauthored modern naming system.
-
----
-
-## Event 09 — *Traité élémentaire de chimie* (1789)
-
-**Title:** The Textbook of the New Chemistry
-
-**Passage or Trigger:**
-1789: *Traité élémentaire de chimie* — elementary treatise presenting oxygen theory, conservation, instruments, and table of elements (simple substances) to a generation. Illustrations and lab practice codified; often cited as founding modern chemical textbook.
-
-**Why It Qualifies:**
-System becomes teachable. Revolution survives the man because it is written as curriculum.
-
-**Three-Domain Reading:**
-
-- **Theology:** Order out of chaos for students of matter.
-- **Technology:** Laboratory as reproducible pedagogy.
-- **Cosmology:** Periodic table’s ancestors — a finite list of simples.
-
-**Compressed Insight:**
-He put the new chemistry between covers the year France remade its politics — one revolution of matter, one of the state.
-
-**Confidence:** 0.94  
-**Sources:** Britannica; ACS landmark; standard *Traité* reception.
+**Confidence:** 0.98  
+**Sources:** *Elements* Chap. VIII continuous.
 
 ---
 
-## Event 10 — *Marie-Anne Paulze Lavoisier*
+## Life-list spine (acts only — not soft voice)
 
-**Title:** Partner at the Bench and the Page
-
-**Passage or Trigger:**
-Marie-Anne Paulze Lavoisier: scientific collaborator, translator (English phlogiston literature into French for the lab), illustrator of apparatus, host of the scientific salon. The chemical revolution is a household as well as an Academy project.
-
-**Why It Qualifies:**
-Credit hygiene. Council refuses lone-genius erasure of the collaborator whose drawings and translations made the work travel.
-
-**Three-Domain Reading:**
-
-- **Theology:** Covenant of shared labor in truth.
-- **Technology:** Illustration as precision technology of method transfer.
-- **Cosmology:** Knowledge as household ecosystem.
-
-**Compressed Insight:**
-His chemistry had two hands at the table — hers drew the instruments and opened the English books.
-
-**Confidence:** 0.93  
-**Sources:** Science History Institute (explicit collaborator framing); Duke exhibits / standard Marie-Anne scholarship summaries.
+| Year | Act |
+|------|-----|
+| 1743 | Born Paris, 26 August |
+| 1770s | Air, calcination, combustion program (balance method) |
+| 1783 ff. | Water composition work (with contemporaries; contested history) |
+| 1787 | *Méthode de nomenclature chimique* with de Morveau, Berthollet, Fourcroy |
+| 1789 | *Traité élémentaire de chimie* |
+| 1794 | Executed, 8 May (Ferme générale / Terror) — historical act; scientific voice remains the *Traité* |
 
 ---
 
-## Event 11 — *Ferme Générale and the Public Man*
+## Quality gate
 
-**Title:** The Chemist Who Also Collected the Tax
+- [x] Direct events carry continuous Kerr English of Lavoisier’s *Traité*
+- [x] Full sense-units, not slogan snippets
+- [x] Citations: work + chapter/preface + translation
+- [x] “How I see it” depends on the quote
+- [x] Soft conservation slogan / sole oxygen discoverer / guillotine quip not dressed as his speech
+- [x] Credit hygiene: Priestley, Scheele, nomenclature co-authors named
 
-**Passage or Trigger:**
-Lavoisier as **fermier général** (shareholder in the General Farm collecting taxes for the crown); also gunpowder administration, metric-related mass standards work, Academy leadership. Wealth and public office fund the laboratory — and mark him for revolutionary justice.
-
-**Why It Qualifies:**
-Science under the old regime’s finance. The Arch does not split the chemist from the administrator; the same life enables and endangers the work.
-
-**Three-Domain Reading:**
-
-- **Theology:** Complicity and service under imperfect power.
-- **Technology:** State arsenals, standards, and labs as coupled systems.
-- **Cosmology:** Enlightenment science inside monarchical extraction.
-
-**Compressed Insight:**
-He weighed oxygen by day and belonged to the machine that weighed the people’s coin — both made him famous; one made him mortal.
-
-**Confidence:** 0.94  
-**Sources:** Britannica death and General Farm; Lehigh trial/execution note; Science History public roles.
-
----
-
-## Event 12 — *Guillotine* (8 May 1794)
-
-**Title:** The Republic Takes the Head That Weighed the World
-
-**Passage or Trigger:**
-8 May 1794: tried and guillotined in Paris during the Reign of Terror with father-in-law and other General Farm members. Apocryphal quips aside, the documented fact is execution of the leading chemist of Europe as financier of the old order. Marie-Anne survives; the chemistry already published outlives the body.
-
-**Why It Qualifies:**
-Theology of history at maximum: modern chemistry’s founder dies by political steel. Knowledge is not armor against the state’s blade.
-
-**Three-Domain Reading:**
-
-- **Theology:** Martyrdom without sanctity claim — creaturely limit under justice and terror mixed.
-- **Technology:** Guillotine as industrial death vs balance as industrial truth.
-- **Cosmology:** Scientific cosmos continues; the man does not.
-
-**Compressed Insight:**
-They cut off the head that taught matter to balance — and the equations kept balancing without him.
-
-**Confidence:** 0.96  
-**Sources:** Britannica (8 May 1794); Lehigh special collections trial note; Wikipedia; ACS remembrance framing.
-
----
-
-## Sources / Working Notes
-
-**Primary / near-primary**
-- Sealed note tradition (1772) and oxygen/combustion papers of the 1770s–80s
-- *Méthode de nomenclature chimique* (1787, collective)
-- *Traité élémentaire de chimie* (1789)
-
-**Secondary**
-- Britannica Antoine Lavoisier
-- Science History Institute scientific biography
-- ACS National Historic Chemical Landmark: Chemical Revolution
-- CountryReports long synthesis (Priestley credit; conservation; metric mass work)
-- Lehigh: trial and execution 8 May 1794
-
-**Open questions for later passes**
-- Gunpowder administration and war chemistry denser pass
-- Exact Laplace collaboration on heat as nested event
-- Marie-Anne’s post-Terror scientific and personal trajectory
-
----
-
-## Seat checklist
-
-- [x] Research from chemical revolution sources (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple source-grounded events (Priestley/Marie-Anne/nomenclature coauthors credited)
-- [ ] member_id: `antoine-lavoisier`
-- [ ] Registry enrollment when ready
-- [x] PENDING scaffold replaced by full extraction
-
----
-
-*Council of Reflection — Arch of Human Gnosis (Chemistry). Events grounded in oxygen theory, conservation, nomenclature, and revolutionary end; isolators and collaborators named.*
+**Garden status:** COMPLETE — Batch 2 seat #4.

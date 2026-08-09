@@ -8,7 +8,7 @@
 | 1 | Albert Einstein | COMPLETE |
 | 2 | Edwin Hubble | COMPLETE |
 | 3 | Charles Darwin | COMPLETE |
-| 4 | Antoine Lavoisier | pending |
+| 4 | Antoine Lavoisier | COMPLETE |
 | 5 | Carl Friedrich Gauss | pending |
 | 6 | Leonhard Euler | pending |
 | 7 | John von Neumann | pending |
