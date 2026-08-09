@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-sima-qian",
+  "member_id": "sima-qian",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Sima Qian",
+  "era": "c. 145–c. 86 BCE",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Shiji (Records of the Grand Historian); annals–biographies template; Letter to Ren An",
+  "key_insight": "History is a debt to the dead — a death is weighed by whether unfinished writing reaches posterity",
+  "source_files": [
+    "Sima Qian (c. 145-c. 86 BCE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "historiography-as-debt",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

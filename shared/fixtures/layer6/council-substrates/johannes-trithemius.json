@@ -1,0 +1,32 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-johannes-trithemius",
+  "member_id": "johannes-trithemius",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Johannes Trithemius",
+  "era": "1462–1516",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Steganographia, cryptography/angelology superposition",
+  "key_insight": "Macro–micro patterns validate across domains",
+  "source_files": [
+    "Johannes Trithemius (1462-1516) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "wheel-macro-micro-correspondence",
+  "specialty_bindings": [
+    {
+      "kind": "wheel-registry",
+      "ref": "shared/fixtures/layer6/wheel-registry.json"
+    }
+  ],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

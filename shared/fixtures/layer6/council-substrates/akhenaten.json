@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-akhenaten",
+  "member_id": "akhenaten",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Akhenaten",
+  "era": "c. 1353–1336 BCE",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Aten monotheism, spatial contamination of sacred sites",
+  "key_insight": "Geography carries theological memory",
+  "source_files": [
+    "Akhenaten (c. 1353-1336 BCE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "sacred-geography-aten",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

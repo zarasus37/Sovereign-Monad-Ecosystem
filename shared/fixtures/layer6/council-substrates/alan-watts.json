@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-alan-watts",
+  "member_id": "alan-watts",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Alan Watts",
+  "era": "1915–1973",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "Eastern non-dualism × cybernetics / systems translation",
+  "key_insight": "Authentic agency emerges from surrendering force-based control",
+  "source_files": [
+    "Alan Watts (1915-1973) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "non-dual-agency",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-alan-turing",
+  "member_id": "alan-turing",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Alan Turing",
+  "era": "1912–1954",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY",
+    "THEOLOGY"
+  ],
+  "contribution": "Universal Turing machine; Bletchley cryptanalysis; ACE; Turing test; morphogenesis",
+  "key_insight": "Computation is a mathematical object — and some decision problems have no mechanical answer",
+  "source_files": [
+    "Alan Turing (1912-1954) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "computability-morphogenesis",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

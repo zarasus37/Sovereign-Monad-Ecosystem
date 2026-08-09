@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-antoine-lavoisier",
+  "member_id": "antoine-lavoisier",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Antoine Lavoisier",
+  "era": "1743–1794",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY",
+    "THEOLOGY"
+  ],
+  "contribution": "Oxygen theory; conservation of mass; chemical nomenclature; Traité élémentaire",
+  "key_insight": "Matter is transformed not destroyed — fire is combination with oxygen, not phlogiston escape",
+  "source_files": [
+    "Antoine Lavoisier (1743-1794) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "quantitative-chemistry",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

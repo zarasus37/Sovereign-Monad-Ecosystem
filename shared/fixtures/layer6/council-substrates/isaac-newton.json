@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-isaac-newton",
+  "member_id": "isaac-newton",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Sir Isaac Newton",
+  "era": "1642–1727",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY",
+    "THEOLOGY"
+  ],
+  "contribution": "Laws of motion; theology of a lawful cosmos",
+  "key_insight": "Universal law unifies celestial and terrestrial machinery",
+  "source_files": [
+    "Sir Isaac Newton (1642-1727) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "universal-lawful-cosmos",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

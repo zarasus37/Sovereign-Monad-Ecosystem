@@ -1,0 +1,26 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-irenaeus-of-lyon",
+  "member_id": "irenaeus-of-lyon",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Irenaeus of Lyon",
+  "era": "c. 130–202 CE",
+  "ttc_emphasis": [
+    "THEOLOGY"
+  ],
+  "contribution": "Anti-Gnostic systematics; orthodoxy as architecture",
+  "key_insight": "Boundary-setting is itself a theological technology",
+  "source_files": [
+    "Irenaeus of Lyon (c. 130-202 CE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "orthodoxy-as-boundary",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

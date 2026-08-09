@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-immanuel-kant",
+  "member_id": "immanuel-kant",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Immanuel Kant",
+  "era": "1724–1804",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "Critical philosophy; categorical imperative; Critique of Judgment; Sapere aude Enlightenment",
+  "key_insight": "We know appearances structured by us, not things-in-themselves — yet we give ourselves moral law",
+  "source_files": [
+    "Immanuel Kant (1724-1804) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "critical-limits-autonomy",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

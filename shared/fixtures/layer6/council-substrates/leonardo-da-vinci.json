@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-leonardo-da-vinci",
+  "member_id": "leonardo-da-vinci",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Leonardo da Vinci",
+  "era": "1452–1519",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY",
+    "THEOLOGY"
+  ],
+  "contribution": "Notebooks uniting anatomy/mechanics/flight; Last Supper; Mona Lisa; Vitruvian Man",
+  "key_insight": "To see is to dissect — body, machine, water, and bird are one continuous study of form in motion",
+  "source_files": [
+    "Leonardo da Vinci (1452-1519) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "seeing-as-dissection",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

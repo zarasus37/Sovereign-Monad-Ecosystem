@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-jiang-xueqin",
+  "member_id": "jiang-xueqin",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Jiang Xueqin",
+  "era": "b. 1976",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Predictive history, institutional algorithms, elite reproduction",
+  "key_insight": "Emanation and institutional filtering appear at every scale",
+  "source_files": [
+    "Jiang Xueqin (b. 1976) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "institutional-filters",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-leonhard-euler",
+  "member_id": "leonhard-euler",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Leonhard Euler",
+  "era": "1707–1783",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Analysis as functions; modern notation; graph theory; prolific formal science after blindness",
+  "key_insight": "Structure survives abstraction — form made portable across problems becomes calculable world",
+  "source_files": [
+    "Leonhard Euler (1707-1783) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "analysis-notation-graph",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

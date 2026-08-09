@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-cyrus-the-great",
+  "member_id": "cyrus-the-great",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Cyrus the Great",
+  "era": "c. 600–530 BCE",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Plural satrapy governance, tolerant layered sovereignty",
+  "key_insight": "Unity need not require uniformity",
+  "source_files": [
+    "Cyrus the Great (c. 600-530 BCE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "plural-satrapy",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

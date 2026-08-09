@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-queen-of-sheba",
+  "member_id": "queen-of-sheba",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Queen of Sheba",
+  "era": "Makeda, multi-tradition",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Hebrew / Kebra Nagast / Quran traditions of sovereign testing",
+  "key_insight": "Wisdom is verified by encounter, not rumor",
+  "source_files": [
+    "Queen of Sheba (Makeda, multi-tradition) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "wisdom-by-encounter",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-cristobal-colon",
+  "member_id": "cristobal-colon",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Cristobal Colon",
+  "era": "living, principal cris-colon",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Seat 37: TTCL unifying middle — holds the full Council of Reflection under tripartite grammar without founder veto or Archontic collapse",
+  "key_insight": "Unified perspective is the clear center of the table: all voices at full voltage, none the Source, compression into one act under LOGOC/TTCL",
+  "source_files": [
+    "Cristobal Colon (living, principal cris-colon) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "ttcl-unifying-middle-hold",
+  "specialty_bindings": [
+    {
+      "kind": "steward-council",
+      "ref": "docs/STEWARD_COUNCIL.md#12"
+    },
+    {
+      "kind": "logoc-corpus",
+      "ref": "monad-ecosystem/packages/gate-acl/fixtures/agent-0-profile.json"
+    },
+    {
+      "kind": "temple-grid",
+      "ref": "shared/fixtures/layer6/enheduanna-temple-grid.json"
+    },
+    {
+      "kind": "wheel-registry",
+      "ref": "shared/fixtures/layer6/wheel-registry.json"
+    },
+    {
+      "kind": "council-substrate-index",
+      "ref": "shared/fixtures/layer6/council-substrate-index.json"
+    }
+  ],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": "Unifying middle: hold all substrates and specialty grids; never merge identity with held seats."
+}

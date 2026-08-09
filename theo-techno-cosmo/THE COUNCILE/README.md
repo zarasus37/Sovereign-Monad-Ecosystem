@@ -18,12 +18,17 @@ Every source file in this directory must map to a `member_id` in the registry. *
 **Filename convention:** `{Display Name} ({era}) GNOSIS EVENT EXTRACTION.txt`  
 Normalize/merge: `node scripts/normalize-council-filenames.mjs` then `node scripts/gen-council-registry.mjs`.
 
+**Gnosis voice (rewrites):** [`GNOSIS_EVENT_VOICE.md`](./GNOSIS_EVENT_VOICE.md) — life-list shape, inhabited seeing.  
+**Bindings:** [`COUNCIL_BINDINGS.md`](./COUNCIL_BINDINGS.md) — every seat has `member-substrate`; specialties where natural. Holder may use, never become.
+
 ### System bindings
 
-| Member | Binding |
-|--------|---------|
-| **Enheduanna** | TempleGrid: `shared/fixtures/layer6/enheduanna-temple-grid.json` + LOGOC `logoc.temple-grid.v1` |
-| **Cristobal Colon (Seat 37)** | TTCL unifying middle · Steward Council #12 · Agent 0 / `principal:cris-colon` · not founder veto |
+| Layer | Who | What |
+|--------|-----|------|
+| **Member substrate** | **All 71** | `shared/fixtures/layer6/council-substrates/{member_id}.json` |
+| **TempleGrid** | Enheduanna (+ held by middle) | `enheduanna-temple-grid.json` |
+| **Wheels** | Ramon Llull (+ held by middle) | `wheel-registry.json` |
+| **Cristobal Colon (middle)** | Holder of the table | Steward #12 · Agent 0 · TempleGrid · Wheels · **council-substrate-index** — hold voltage, never become |
 
 ---
 

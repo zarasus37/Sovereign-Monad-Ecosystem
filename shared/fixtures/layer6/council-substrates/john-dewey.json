@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-john-dewey",
+  "member_id": "john-dewey",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "John Dewey",
+  "era": "1859–1952",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "THEOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Pragmatist education; Democracy and Education; experience as medium of learning",
+  "key_insight": "Education is life now — we learn by doing work that requires thought in democratic community",
+  "source_files": [
+    "John Dewey (1859-1952) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "experience-democracy-education",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

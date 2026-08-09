@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-zarathustra",
+  "member_id": "zarathustra",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Zarathustra",
+  "era": "~1500–1000 BCE",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Asha as universal operating system; cosmic polarity",
+  "key_insight": "Polarity and constraint as ontological, not accidental",
+  "source_files": [
+    "Zarathustra (~1500-1000 BCE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "asha-polarity",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

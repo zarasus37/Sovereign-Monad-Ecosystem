@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "title": "Council Member Substrate",
+  "description": "Loadable binding for one Council of Reflection seat. Holder may use; never become.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "substrate_id",
+    "member_id",
+    "schema_version",
+    "kind",
+    "hold_policy",
+    "display_name",
+    "era",
+    "ttc_emphasis",
+    "contribution",
+    "key_insight",
+    "source_files",
+    "natural_domain",
+    "runtime"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "substrate_id": { "type": "string", "minLength": 1 },
+    "member_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "schema_version": { "type": "string" },
+    "kind": { "type": "string", "const": "member-substrate" },
+    "hold_policy": {
+      "type": "string",
+      "const": "holder-may-use-never-become"
+    },
+    "display_name": { "type": "string" },
+    "era": { "type": "string" },
+    "ttc_emphasis": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": ["THEOLOGY", "TECHNOLOGY", "COSMOLOGY"]
+      }
+    },
+    "contribution": { "type": "string" },
+    "key_insight": { "type": "string" },
+    "source_files": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "natural_domain": { "type": "string" },
+    "specialty_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "ref"],
+        "properties": {
+          "kind": { "type": "string" },
+          "ref": { "type": "string" }
+        }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["loadable", "scoreable", "logoc_profile"],
+      "properties": {
+        "loadable": { "type": "boolean" },
+        "scoreable": { "type": "boolean" },
+        "logoc_profile": { "type": "string" }
+      }
+    },
+    "notes": { "type": ["string", "null"] }
+  }
+}

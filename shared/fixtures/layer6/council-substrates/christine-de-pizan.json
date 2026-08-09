@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-christine-de-pizan",
+  "member_id": "christine-de-pizan",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Christine de Pizan",
+  "era": "1364–c. 1430",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "First systematic rewrite of women’s social “source code”",
+  "key_insight": "Identity programming can be recognized and rewritten",
+  "source_files": [
+    "Christine de Pizan (1364-c. 1430) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "rewrite-social-source-code",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

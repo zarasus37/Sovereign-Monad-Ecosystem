@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-king-solomon",
+  "member_id": "king-solomon",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "King Solomon",
+  "era": "c. 990–931 BCE",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "Judgment under ambiguity; wisdom as structural resource",
+  "key_insight": "Wisdom is an operational capacity, not a slogan",
+  "source_files": [
+    "King Solomon (c. 990-931 BCE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "judgment-under-ambiguity",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-adam-smith",
+  "member_id": "adam-smith",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Adam Smith",
+  "era": "1723–1790",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Moral Sentiments; Wealth of Nations; division of labour; natural liberty; impartial spectator",
+  "key_insight": "Moral life and market life are one nature — prosperity has causes; virtue has a psychology",
+  "source_files": [
+    "Adam Smith (1723-1790) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "moral-sentiments-markets",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

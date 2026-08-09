@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-erik-davis",
+  "member_id": "erik-davis",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Erik Davis",
+  "era": "b. 1967",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "TechGnosis; High Weirdness — interpreter of mysticism × information technology resonance",
+  "key_insight": "The drive of mysticism and of technology is the same strange fire — transcendence through different fuels",
+  "source_files": [
+    "Erik Davis (b. 1967) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "techgnosis-resonance",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

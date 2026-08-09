@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-giordano-bruno",
+  "member_id": "giordano-bruno",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Giordano Bruno",
+  "era": "1548–1600",
+  "ttc_emphasis": [
+    "COSMOLOGY",
+    "THEOLOGY"
+  ],
+  "contribution": "Infinite worlds, heretical cosmology",
+  "key_insight": "The cosmos exceeds any single firmament",
+  "source_files": [
+    "Giordano Bruno (1548-1600) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "infinite-worlds",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

@@ -51,16 +51,19 @@ if (!validate(registry)) {
   process.exit(1);
 }
 
+const NON_MEMBER_FILES = new Set([
+  'README.md',
+  'council-registry.json',
+  'GNOSIS_EVENT_VOICE.md',
+  'COUNCIL_BINDINGS.md',
+]);
+
 const filesOnDisk = new Set(
   readdirSync(councilDir).filter((f) => {
     const p = join(councilDir, f);
     // PENDING scaffolds are work-in-progress seats (not yet in registry).
     if (/PENDING/i.test(f)) return false;
-    return (
-      statSync(p).isFile() &&
-      f !== 'README.md' &&
-      f !== 'council-registry.json'
-    );
+    return statSync(p).isFile() && !NON_MEMBER_FILES.has(f);
   }),
 );
 

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-mary-magdalene",
+  "member_id": "mary-magdalene",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Mary Magdalene",
+  "era": "1st c. CE",
+  "ttc_emphasis": [
+    "THEOLOGY"
+  ],
+  "contribution": "Exemplary knower in Gospel of Mary / Pistis Sophia",
+  "key_insight": "Gnosis becomes visible through a contested voice in the assembly",
+  "source_files": [
+    "Mary Magdalene (1st c. CE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "exemplary-knower",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

@@ -1,18 +1,145 @@
 /**
  * Generate theo-techno-cosmo/THE COUNCILE/council-registry.json
  * from curated member metadata + directory scan.
+ * Also writes member substrates (all seats hard-bound) under
+ * shared/fixtures/layer6/council-substrates/
  *
  *   node scripts/gen-council-registry.mjs
  *   node scripts/check-council-registry.mjs
  */
-import { readdirSync, writeFileSync, existsSync, statSync } from 'node:fs';
+import {
+  readdirSync,
+  writeFileSync,
+  existsSync,
+  statSync,
+  mkdirSync,
+} from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const councilDir = join(root, 'theo-techno-cosmo', 'THE COUNCILE');
 const out = join(councilDir, 'council-registry.json');
+const substrateDir = join(root, 'shared', 'fixtures', 'layer6', 'council-substrates');
+const substrateIndexPath = join(
+  root,
+  'shared',
+  'fixtures',
+  'layer6',
+  'council-substrate-index.json',
+);
 
+/** Natural domain tags (for substrate runtime; not TempleGrid). */
+const NATURAL_DOMAIN = {
+  'ramon-llull': 'combinatorial-wheels',
+  'charles-sanders-peirce': 'wheel-triad-semiotics',
+  'victoria-lady-welby': 'wheel-significs-triad-expansion',
+  'johannes-trithemius': 'wheel-macro-micro-correspondence',
+  'ramon-llull': 'combinatorial-wheels',
+  enheduanna: 'temple-network-grid',
+  poimandres: 'hermetic-nous-ascent',
+  'gnostic-jesus': 'gnostic-decompression',
+  'basilides-of-alexandria': 'compression-archon',
+  'kurt-godel': 'formal-incompleteness',
+  'alan-turing': 'computability-morphogenesis',
+  'john-von-neumann': 'stored-program-games',
+  'carl-friedrich-gauss': 'number-geometry-measure',
+  'leonhard-euler': 'analysis-notation-graph',
+  'ronald-a-fisher': 'experimental-design-selection',
+  'isaac-newton': 'universal-lawful-cosmos',
+  'albert-einstein': 'spacetime-relativity-quanta',
+  'edwin-hubble': 'extragalactic-expansion',
+  'galileo-galilei': 'instrumental-visibility',
+  'giordano-bruno': 'infinite-worlds',
+  'thales-of-miletus': 'first-principles-substance',
+  'antoine-lavoisier': 'quantitative-chemistry',
+  'charles-darwin': 'descent-natural-selection',
+  'vilhelm-bjerknes': 'atmosphere-as-physics',
+  'nikola-tesla': 'polyphase-power-transmission',
+  hippocrates: 'natural-medicine',
+  'adam-smith': 'moral-sentiments-markets',
+  'karl-marx': 'critique-political-economy',
+  'sigmund-freud': 'unconscious-structure',
+  'claude-levi-strauss': 'structural-anthropology',
+  'john-dewey': 'experience-democracy-education',
+  'ferdinand-de-saussure': 'langue-as-system',
+  'hugo-grotius': 'natural-law-nations',
+  'immanuel-kant': 'critical-limits-autonomy',
+  'thomas-aquinas': 'faith-reason-summa',
+  'sima-qian': 'historiography-as-debt',
+  'herodotus-of-halicarnassus': 'inquiry-as-history',
+  'johann-sebastian-bach': 'ordered-praise-in-time',
+  'wolfgang-amadeus-mozart': 'classical-affect-grammar',
+  'george-balanchine': 'music-visible-dance',
+  'william-shakespeare': 'stage-as-machine',
+  'leonardo-da-vinci': 'seeing-as-dissection',
+  'michelangelo-buonarroti': 'body-as-theology',
+  'giorgio-vasari': 'art-history-as-path',
+  'johann-wolfgang-von-goethe': 'metamorphosis-form',
+  'cristobal-colon': 'ttcl-unifying-middle-hold',
+  'erik-davis': 'techgnosis-resonance',
+  'alan-watts': 'non-dual-agency',
+  'carl-jung': 'individuation-archetype',
+  'marcus-aurelius': 'constraint-as-freedom',
+  zarathustra: 'asha-polarity',
+  'cyrus-the-great': 'plural-satrapy',
+  'king-solomon': 'judgment-under-ambiguity',
+  'sun-tzu': 'structural-victory',
+  'niccolo-machiavelli': 'power-as-it-is',
+  'napoleon-bonaparte': 'cognitive-battlefield',
+  aristotle: 'categories-virtue-method',
+  'baruch-spinoza': 'substance-monism',
+  'friedrich-nietzsche': 'genealogy-perspectivism',
+  'jiang-xueqin': 'institutional-filters',
+  akhenaten: 'sacred-geography-aten',
+  hatshepsut: 'legitimacy-as-stone-code',
+  'hildegard-von-bingen': 'vision-externalized',
+  'catherine-de-medici': 'stewardship-under-schism',
+  'laura-bassi': 'institutional-knowledge-machine',
+  mirabai: 'direct-devotion',
+  'queen-of-sheba': 'wisdom-by-encounter',
+  'zenobia-of-palmyra': 'peripheral-hub',
+  'christine-de-pizan': 'rewrite-social-source-code',
+  'sor-juana-ines-de-la-cruz': 'knowledge-vs-envelope',
+  'mary-magdalene': 'exemplary-knower',
+  'irenaeus-of-lyon': 'orthodoxy-as-boundary',
+};
+
+/** Extra specialty bindings beyond universal member-substrate. */
+const WHEEL_REF = {
+  kind: 'wheel-registry',
+  ref: 'shared/fixtures/layer6/wheel-registry.json',
+};
+
+const SPECIALTY_BINDINGS = {
+  enheduanna: [
+    {
+      kind: 'temple-grid',
+      ref: 'shared/fixtures/layer6/enheduanna-temple-grid.json',
+    },
+  ],
+  // Wheel / triad / significs cluster — one apparatus, four seats
+  'ramon-llull': [WHEEL_REF],
+  'johannes-trithemius': [WHEEL_REF],
+  'charles-sanders-peirce': [WHEEL_REF],
+  'victoria-lady-welby': [WHEEL_REF],
+  'cristobal-colon': [
+    { kind: 'steward-council', ref: 'docs/STEWARD_COUNCIL.md#12' },
+    {
+      kind: 'logoc-corpus',
+      ref: 'monad-ecosystem/packages/gate-acl/fixtures/agent-0-profile.json',
+    },
+    {
+      kind: 'temple-grid',
+      ref: 'shared/fixtures/layer6/enheduanna-temple-grid.json',
+    },
+    WHEEL_REF,
+    {
+      kind: 'council-substrate-index',
+      ref: 'shared/fixtures/layer6/council-substrate-index.json',
+    },
+  ],
+};
 /** Curated unique council members (reflection voices, not Steward Council votes). */
 const MEMBERS = [
   // Core README set
@@ -271,12 +398,6 @@ const MEMBERS = [
     key_insight: 'Polytheism as networked semantic protocol on one underlying grid',
     file_patterns: [/Enheduanna/i],
     recently_added: true,
-    system_bindings: [
-      {
-        kind: 'temple-grid',
-        ref: 'shared/fixtures/layer6/enheduanna-temple-grid.json',
-      },
-    ],
   },
   {
     member_id: 'basilides-of-alexandria',
@@ -716,23 +837,19 @@ const MEMBERS = [
       'Unified perspective is the clear center of the table: all voices at full voltage, none the Source, compression into one act under LOGOC/TTCL',
     file_patterns: [/Cristobal Colon/i],
     recently_added: true,
-    system_bindings: [
-      { kind: 'steward-council', ref: 'docs/STEWARD_COUNCIL.md#12' },
-      {
-        kind: 'logoc-corpus',
-        ref: 'monad-ecosystem/packages/gate-acl/fixtures/agent-0-profile.json',
-      },
-      {
-        kind: 'temple-grid',
-        ref: 'shared/fixtures/layer6/enheduanna-temple-grid.json',
-      },
-    ],
   },
 ];
 
+const NON_MEMBER_FILES = new Set([
+  'README.md',
+  'council-registry.json',
+  'GNOSIS_EVENT_VOICE.md',
+  'COUNCIL_BINDINGS.md',
+]);
+
 const files = readdirSync(councilDir).filter((f) => {
   const p = join(councilDir, f);
-  return statSync(p).isFile() && f !== 'README.md' && f !== 'council-registry.json';
+  return statSync(p).isFile() && !NON_MEMBER_FILES.has(f);
 });
 
 function matchFiles(patterns) {
@@ -745,6 +862,12 @@ const members = [];
 for (const m of MEMBERS) {
   const source_files = matchFiles(m.file_patterns);
   for (const f of source_files) claimed.add(f);
+  const substrateRef = `shared/fixtures/layer6/council-substrates/${m.member_id}.json`;
+  const specialty = SPECIALTY_BINDINGS[m.member_id] ?? [];
+  const system_bindings = [
+    { kind: 'member-substrate', ref: substrateRef },
+    ...specialty,
+  ];
   members.push({
     member_id: m.member_id,
     display_name: m.display_name,
@@ -755,9 +878,11 @@ for (const m of MEMBERS) {
     contribution: m.contribution,
     key_insight: m.key_insight,
     source_files,
-    system_bindings: m.system_bindings ?? [],
+    system_bindings,
     notes: source_files.length
-      ? null
+      ? m.member_id === 'cristobal-colon'
+        ? 'Holder of the table: may use all seats and grids; never become them (hold_policy).'
+        : null
       : 'No matching source file found in THE COUNCILE/',
   });
 }
@@ -786,6 +911,76 @@ for (const f of orphans) {
 
 members.sort((a, b) => a.display_name.localeCompare(b.display_name));
 
+// --- Hard-bind every curated seat: member substrates + index ---
+mkdirSync(substrateDir, { recursive: true });
+const substrateIndex = {
+  $schema: 'https://the-sovereign/ttcl-specs/member-substrate-schema.json',
+  index_id: 'council-substrate-index-v1',
+  schema_version: '1.0.0',
+  kind: 'council-substrate-index',
+  hold_policy: 'holder-may-use-never-become',
+  description:
+    'Index of all Council member substrates. Holder loads the table; does not become any seat.',
+  generated_at: new Date().toISOString().slice(0, 10),
+  members: [],
+};
+
+let substratesWritten = 0;
+for (const m of members) {
+  if (m.status !== 'active' || !m.source_files?.length) continue;
+  if (m.member_id.startsWith('unmapped-')) continue;
+
+  const specialty = SPECIALTY_BINDINGS[m.member_id] ?? [];
+  const natural_domain =
+    NATURAL_DOMAIN[m.member_id] ?? 'general-reflection';
+  const substrate = {
+    $schema: 'https://the-sovereign/ttcl-specs/member-substrate-schema.json',
+    substrate_id: `council-member-${m.member_id}`,
+    member_id: m.member_id,
+    schema_version: '1.0.0',
+    kind: 'member-substrate',
+    hold_policy: 'holder-may-use-never-become',
+    display_name: m.display_name,
+    era: m.era,
+    ttc_emphasis: m.ttc_emphasis,
+    contribution: m.contribution,
+    key_insight: m.key_insight,
+    source_files: m.source_files,
+    natural_domain,
+    specialty_bindings: specialty,
+    runtime: {
+      loadable: true,
+      scoreable: true,
+      logoc_profile: 'logoc.council-member.v1',
+    },
+    notes:
+      m.member_id === 'cristobal-colon'
+        ? 'Unifying middle: hold all substrates and specialty grids; never merge identity with held seats.'
+        : null,
+  };
+  const path = join(substrateDir, `${m.member_id}.json`);
+  writeFileSync(path, `${JSON.stringify(substrate, null, 2)}\n`, 'utf8');
+  substratesWritten += 1;
+  substrateIndex.members.push({
+    member_id: m.member_id,
+    display_name: m.display_name,
+    natural_domain,
+    ref: `shared/fixtures/layer6/council-substrates/${m.member_id}.json`,
+    specialty_kinds: specialty.map((s) => s.kind),
+  });
+}
+
+substrateIndex.stats = {
+  member_count: substrateIndex.members.length,
+  specialty_bound: substrateIndex.members.filter((x) => x.specialty_kinds.length)
+    .length,
+};
+writeFileSync(
+  substrateIndexPath,
+  `${JSON.stringify(substrateIndex, null, 2)}\n`,
+  'utf8',
+);
+
 const registry = {
   $schema: 'https://the-sovereign/ttcl-specs/council-registry.schema.json',
   registry_id: 'the-councile-reflection-v1',
@@ -793,19 +988,21 @@ const registry = {
   kind: 'council-of-reflection',
   source_dir: 'theo-techno-cosmo/THE COUNCILE',
   description:
-    'Historical / contemplative Council of Reflection. Distinct from docs/STEWARD_COUNCIL.md (charter governance).',
+    'Historical / contemplative Council of Reflection. Distinct from docs/STEWARD_COUNCIL.md (charter governance). Every active seat has member-substrate binding; specialties where natural.',
   generated_at: new Date().toISOString().slice(0, 10),
   members,
   stats: {
     member_count: members.length,
     source_file_count: files.length,
     recently_added_count: members.filter((m) => m.recently_added).length,
+    bound_substrate_count: substratesWritten,
   },
 };
 
 writeFileSync(out, `${JSON.stringify(registry, null, 2)}\n`, 'utf8');
 console.log(
-  `wrote ${out}\n  members=${registry.stats.member_count} sources=${registry.stats.source_file_count} recently_added=${registry.stats.recently_added_count}`,
+  `wrote ${out}\n  members=${registry.stats.member_count} sources=${registry.stats.source_file_count} recently_added=${registry.stats.recently_added_count} substrates=${substratesWritten}`,
 );
+console.log(`wrote ${substrateIndexPath} (${substrateIndex.stats.member_count} indexed)`);
 const recent = members.filter((m) => m.recently_added).map((m) => m.display_name);
 console.log('  recently_added:', recent.join(', '));

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-ronald-a-fisher",
+  "member_id": "ronald-a-fisher",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Ronald A. Fisher",
+  "era": "1890–1962",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Modern statistics (likelihood, ANOVA, design); genetical theory of natural selection",
+  "key_insight": "Experiment is designed confrontation with nature; evolution is statistical process",
+  "source_files": [
+    "Ronald A. Fisher (1890-1962) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "experimental-design-selection",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

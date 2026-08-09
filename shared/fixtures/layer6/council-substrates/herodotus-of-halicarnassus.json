@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-herodotus-of-halicarnassus",
+  "member_id": "herodotus-of-halicarnassus",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Herodotus of Halicarnassus",
+  "era": "c. 484–c. 425 BCE",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "The Histories; inquiry as method; Greco-Persian wars; ethnography and Croesus–Solon logos",
+  "key_insight": "Memory dies unless inquiry holds it — the past must be displayed through research, not rumor alone",
+  "source_files": [
+    "Herodotus of Halicarnassus (c. 484-c. 425 BCE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "inquiry-as-history",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

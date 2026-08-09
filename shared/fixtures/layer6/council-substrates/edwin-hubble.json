@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-edwin-hubble",
+  "member_id": "edwin-hubble",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Edwin Hubble",
+  "era": "1889–1953",
+  "ttc_emphasis": [
+    "COSMOLOGY",
+    "TECHNOLOGY",
+    "THEOLOGY"
+  ],
+  "contribution": "Extragalactic Cepheids; island universes; distance–redshift law; galaxy classification",
+  "key_insight": "The farther galaxies are, the faster they recede — the cosmos is vast and expanding",
+  "source_files": [
+    "Edwin Hubble (1889-1953) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "extragalactic-expansion",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

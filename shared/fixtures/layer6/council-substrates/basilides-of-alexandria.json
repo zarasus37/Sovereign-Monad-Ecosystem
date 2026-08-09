@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-basilides-of-alexandria",
+  "member_id": "basilides-of-alexandria",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Basilides of Alexandria",
+  "era": "early 2nd century CE",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Compression/decompression cosmology; Great Ignorance as mercy",
+  "key_insight": "Local maxima mistake themselves for global maxima (Archon)",
+  "source_files": [
+    "Basilides of Alexandria (early 2nd century CE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "compression-archon",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

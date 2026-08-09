@@ -28,7 +28,8 @@
       "properties": {
         "member_count": { "type": "integer", "minimum": 0 },
         "source_file_count": { "type": "integer", "minimum": 0 },
-        "recently_added_count": { "type": "integer", "minimum": 0 }
+        "recently_added_count": { "type": "integer", "minimum": 0 },
+        "bound_substrate_count": { "type": "integer", "minimum": 0 }
       }
     }
   },
@@ -86,9 +87,12 @@
                   "steward-council",
                   "logoc-corpus",
                   "wheel-registry",
-                  "preference-pairs"
+                  "preference-pairs",
+                  "member-substrate",
+                  "council-substrate-index"
                 ]
               },
+
               "ref": { "type": "string" }
             }
           }

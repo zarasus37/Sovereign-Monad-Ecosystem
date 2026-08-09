@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-vilhelm-bjerknes",
+  "member_id": "vilhelm-bjerknes",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Vilhelm Bjerknes",
+  "era": "1862–1951",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Primitive equations; Bergen School; polar front theory; weather as physics",
+  "key_insight": "The atmosphere is a physical system — fronts are where air masses meet and weather concentrates",
+  "source_files": [
+    "Vilhelm Bjerknes (1862-1951) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "atmosphere-as-physics",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

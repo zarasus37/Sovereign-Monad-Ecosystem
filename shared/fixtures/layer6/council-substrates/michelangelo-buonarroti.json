@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-michelangelo-buonarroti",
+  "member_id": "michelangelo-buonarroti",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Michelangelo Buonarroti",
+  "era": "1475–1564",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Pietà; David; Sistine ceiling; Last Judgment; St. Peter’s architecture; body as scripture of form",
+  "key_insight": "Stone and plaster hold spirit — the body in art becomes theology you can walk around",
+  "source_files": [
+    "Michelangelo Buonarroti (1475-1564) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "body-as-theology",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-charles-sanders-peirce",
+  "member_id": "charles-sanders-peirce",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Charles Sanders Peirce",
+  "era": "1839–1914",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Semiotics, triadic relations, pragmatism, abduction",
+  "key_insight": "Meaning emerges from resonance, not definition",
+  "source_files": [
+    "Charles Sanders Peirce (1839-1914) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "wheel-triad-semiotics",
+  "specialty_bindings": [
+    {
+      "kind": "wheel-registry",
+      "ref": "shared/fixtures/layer6/wheel-registry.json"
+    }
+  ],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-hildegard-von-bingen",
+  "member_id": "hildegard-von-bingen",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Hildegard von Bingen",
+  "era": "1098–1179",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "Visions → theological, musical, medical architecture",
+  "key_insight": "Latent vision becomes system when finally externalized",
+  "source_files": [
+    "Hildegard von Bingen (1098-1179) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "vision-externalized",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

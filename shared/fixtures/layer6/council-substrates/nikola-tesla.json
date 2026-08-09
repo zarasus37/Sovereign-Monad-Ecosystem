@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-nikola-tesla",
+  "member_id": "nikola-tesla",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Nikola Tesla",
+  "era": "1856–1943",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY",
+    "THEOLOGY"
+  ],
+  "contribution": "Polyphase AC; induction motor; Niagara hydroelectric architecture; high-frequency experiments",
+  "key_insight": "Power need not stay local — polyphase AC makes energy travel, scale, and light cities",
+  "source_files": [
+    "Nikola Tesla (1856-1943) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "polyphase-power-transmission",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

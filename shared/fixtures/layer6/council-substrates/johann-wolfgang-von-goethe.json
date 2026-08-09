@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-johann-wolfgang-von-goethe",
+  "member_id": "johann-wolfgang-von-goethe",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Johann Wolfgang von Goethe",
+  "era": "1749–1832",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "Faust; morphology/Urpflanze; Theory of Colours; art–science Bildung",
+  "key_insight": "Nature and art speak metamorphosis — the open secret without killing form into dead mechanism",
+  "source_files": [
+    "Johann Wolfgang von Goethe (1749-1832) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "metamorphosis-form",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

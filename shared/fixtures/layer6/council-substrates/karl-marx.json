@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-karl-marx",
+  "member_id": "karl-marx",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Karl Marx",
+  "era": "1818–1883",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY",
+    "THEOLOGY"
+  ],
+  "contribution": "Critique of political economy; Capital; commodity fetishism; class and modes of production",
+  "key_insight": "Social forms wear the mask of nature — commodities hide relations between people",
+  "source_files": [
+    "Karl Marx (1818-1883) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "critique-political-economy",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

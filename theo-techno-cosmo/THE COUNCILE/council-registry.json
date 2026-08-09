@@ -4,8 +4,8 @@
   "schema_version": "1.0.0",
   "kind": "council-of-reflection",
   "source_dir": "theo-techno-cosmo/THE COUNCILE",
-  "description": "Historical / contemplative Council of Reflection. Distinct from docs/STEWARD_COUNCIL.md (charter governance).",
-  "generated_at": "2026-08-07",
+  "description": "Historical / contemplative Council of Reflection. Distinct from docs/STEWARD_COUNCIL.md (charter governance). Every active seat has member-substrate binding; specialties where natural.",
+  "generated_at": "2026-08-09",
   "members": [
     {
       "member_id": "adam-smith",
@@ -23,7 +23,12 @@
       "source_files": [
         "Adam Smith (1723-1790) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/adam-smith.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -41,7 +46,12 @@
       "source_files": [
         "Akhenaten (c. 1353-1336 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/akhenaten.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -60,7 +70,12 @@
       "source_files": [
         "Alan Turing (1912-1954) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/alan-turing.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -78,7 +93,12 @@
       "source_files": [
         "Alan Watts (1915-1973) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/alan-watts.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -97,7 +117,12 @@
       "source_files": [
         "Albert Einstein (1879-1955) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/albert-einstein.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -116,7 +141,12 @@
       "source_files": [
         "Antoine Lavoisier (1743-1794) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/antoine-lavoisier.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -135,7 +165,12 @@
       "source_files": [
         "Aristotle (384-322 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/aristotle.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -153,7 +188,12 @@
       "source_files": [
         "Baruch Spinoza (1632-1677) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/baruch-spinoza.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -172,7 +212,12 @@
       "source_files": [
         "Basilides of Alexandria (early 2nd century CE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/basilides-of-alexandria.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -190,7 +235,12 @@
       "source_files": [
         "Carl Friedrich Gauss (1777-1855) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/carl-friedrich-gauss.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -208,7 +258,12 @@
       "source_files": [
         "Carl Jung (1875-1961) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/carl-jung.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -226,7 +281,12 @@
       "source_files": [
         "Catherine de' Medici (1519-1589) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/catherine-de-medici.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -245,7 +305,12 @@
       "source_files": [
         "Charles Darwin (1809-1882) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/charles-darwin.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -263,7 +328,16 @@
       "source_files": [
         "Charles Sanders Peirce (1839-1914) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/charles-sanders-peirce.json"
+        },
+        {
+          "kind": "wheel-registry",
+          "ref": "shared/fixtures/layer6/wheel-registry.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -281,7 +355,12 @@
       "source_files": [
         "Christine de Pizan (1364-c. 1430) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/christine-de-pizan.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -300,7 +379,12 @@
       "source_files": [
         "Claude Lévi-Strauss (1908-2009) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/claude-levi-strauss.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -321,6 +405,10 @@
       ],
       "system_bindings": [
         {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/cristobal-colon.json"
+        },
+        {
           "kind": "steward-council",
           "ref": "docs/STEWARD_COUNCIL.md#12"
         },
@@ -331,9 +419,17 @@
         {
           "kind": "temple-grid",
           "ref": "shared/fixtures/layer6/enheduanna-temple-grid.json"
+        },
+        {
+          "kind": "wheel-registry",
+          "ref": "shared/fixtures/layer6/wheel-registry.json"
+        },
+        {
+          "kind": "council-substrate-index",
+          "ref": "shared/fixtures/layer6/council-substrate-index.json"
         }
       ],
-      "notes": null
+      "notes": "Holder of the table: may use all seats and grids; never become them (hold_policy)."
     },
     {
       "member_id": "cyrus-the-great",
@@ -350,7 +446,12 @@
       "source_files": [
         "Cyrus the Great (c. 600-530 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/cyrus-the-great.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -369,7 +470,12 @@
       "source_files": [
         "Edwin Hubble (1889-1953) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/edwin-hubble.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -389,6 +495,10 @@
         "Enheduanna (c. 23rd century BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
       "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/enheduanna.json"
+        },
         {
           "kind": "temple-grid",
           "ref": "shared/fixtures/layer6/enheduanna-temple-grid.json"
@@ -412,7 +522,12 @@
       "source_files": [
         "Erik Davis (b. 1967) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/erik-davis.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -431,7 +546,12 @@
       "source_files": [
         "Ferdinand de Saussure (1857-1913) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/ferdinand-de-saussure.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -449,7 +569,12 @@
       "source_files": [
         "Friedrich Nietzsche (1844-1900) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/friedrich-nietzsche.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -467,7 +592,12 @@
       "source_files": [
         "Galileo Galilei (1564-1642) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/galileo-galilei.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -486,7 +616,12 @@
       "source_files": [
         "George Balanchine (1904-1983) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/george-balanchine.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -504,7 +639,12 @@
       "source_files": [
         "Giordano Bruno (1548-1600) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/giordano-bruno.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -523,7 +663,12 @@
       "source_files": [
         "Giorgio Vasari (1511-1574) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/giorgio-vasari.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -541,7 +686,12 @@
       "source_files": [
         "Gnostic Jesus (1st-2nd c. CE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/gnostic-jesus.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -560,7 +710,12 @@
       "source_files": [
         "Hatshepsut (c. 1507-1458 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/hatshepsut.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -579,7 +734,12 @@
       "source_files": [
         "Herodotus of Halicarnassus (c. 484-c. 425 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/herodotus-of-halicarnassus.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -598,7 +758,12 @@
       "source_files": [
         "Hildegard von Bingen (1098-1179) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/hildegard-von-bingen.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -617,7 +782,12 @@
       "source_files": [
         "Hippocrates (c. 460-c. 370 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/hippocrates.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -636,7 +806,12 @@
       "source_files": [
         "Hugo Grotius (1583-1645) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/hugo-grotius.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -655,7 +830,12 @@
       "source_files": [
         "Immanuel Kant (1724-1804) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/immanuel-kant.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -672,7 +852,12 @@
       "source_files": [
         "Irenaeus of Lyon (c. 130-202 CE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/irenaeus-of-lyon.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -690,7 +875,12 @@
       "source_files": [
         "Jiang Xueqin (b. 1976) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/jiang-xueqin.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -709,7 +899,12 @@
       "source_files": [
         "Johann Sebastian Bach (1685-1750) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/johann-sebastian-bach.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -728,7 +923,12 @@
       "source_files": [
         "Johann Wolfgang von Goethe (1749-1832) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/johann-wolfgang-von-goethe.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -746,7 +946,16 @@
       "source_files": [
         "Johannes Trithemius (1462-1516) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/johannes-trithemius.json"
+        },
+        {
+          "kind": "wheel-registry",
+          "ref": "shared/fixtures/layer6/wheel-registry.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -765,7 +974,12 @@
       "source_files": [
         "John Dewey (1859-1952) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/john-dewey.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -784,7 +998,12 @@
       "source_files": [
         "John von Neumann (1903-1957) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/john-von-neumann.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -803,7 +1022,12 @@
       "source_files": [
         "Karl Marx (1818-1883) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/karl-marx.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -821,7 +1045,12 @@
       "source_files": [
         "King Solomon (c. 990-931 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/king-solomon.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -840,7 +1069,12 @@
       "source_files": [
         "Kurt Gödel (1906-1978) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/kurt-godel.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -858,7 +1092,12 @@
       "source_files": [
         "Laura Bassi (1711-1778) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/laura-bassi.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -877,7 +1116,12 @@
       "source_files": [
         "Leonardo da Vinci (1452-1519) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/leonardo-da-vinci.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -895,7 +1139,12 @@
       "source_files": [
         "Leonhard Euler (1707-1783) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/leonhard-euler.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -913,7 +1162,12 @@
       "source_files": [
         "Marcus Aurelius (121-180 CE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/marcus-aurelius.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -930,7 +1184,12 @@
       "source_files": [
         "Mary Magdalene (1st c. CE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/mary-magdalene.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -949,7 +1208,12 @@
       "source_files": [
         "Michelangelo Buonarroti (1475-1564) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/michelangelo-buonarroti.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -966,7 +1230,12 @@
       "source_files": [
         "Mirabai (c. 1498-c. 1557) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/mirabai.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -984,7 +1253,12 @@
       "source_files": [
         "Napoleon Bonaparte (1769-1821) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/napoleon-bonaparte.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1002,7 +1276,12 @@
       "source_files": [
         "Niccolò Machiavelli (1469-1527) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/niccolo-machiavelli.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1021,7 +1300,12 @@
       "source_files": [
         "Nikola Tesla (1856-1943) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/nikola-tesla.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1040,7 +1324,12 @@
       "source_files": [
         "Poimandres (Corpus Hermeticum I, c. 1st-3rd c. CE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/poimandres.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1058,7 +1347,12 @@
       "source_files": [
         "Queen of Sheba (Makeda, multi-tradition) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/queen-of-sheba.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1077,7 +1371,16 @@
       "source_files": [
         "Ramon Llull (1232-1315) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/ramon-llull.json"
+        },
+        {
+          "kind": "wheel-registry",
+          "ref": "shared/fixtures/layer6/wheel-registry.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1095,7 +1398,12 @@
       "source_files": [
         "Ronald A. Fisher (1890-1962) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/ronald-a-fisher.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1114,7 +1422,12 @@
       "source_files": [
         "Sigmund Freud (1856-1939) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/sigmund-freud.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1133,7 +1446,12 @@
       "source_files": [
         "Sima Qian (c. 145-c. 86 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/sima-qian.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1152,7 +1470,12 @@
       "source_files": [
         "Sir Isaac Newton (1642-1727) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/isaac-newton.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1170,7 +1493,12 @@
       "source_files": [
         "Sor Juana Inés de la Cruz (1648-1695) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/sor-juana-ines-de-la-cruz.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1188,7 +1516,12 @@
       "source_files": [
         "Sun Tzu (c. 544-496 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/sun-tzu.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1206,7 +1539,12 @@
       "source_files": [
         "Thales of Miletus (c. 624-545 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/thales-of-miletus.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1225,7 +1563,12 @@
       "source_files": [
         "Thomas Aquinas (1225-1274) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/thomas-aquinas.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1242,7 +1585,16 @@
       "source_files": [
         "Victoria, Lady Welby (1837-1912) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/victoria-lady-welby.json"
+        },
+        {
+          "kind": "wheel-registry",
+          "ref": "shared/fixtures/layer6/wheel-registry.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1260,7 +1612,12 @@
       "source_files": [
         "Vilhelm Bjerknes (1862-1951) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/vilhelm-bjerknes.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1279,7 +1636,12 @@
       "source_files": [
         "William Shakespeare (1564-1616) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/william-shakespeare.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1298,7 +1660,12 @@
       "source_files": [
         "Wolfgang Amadeus Mozart (1756-1791) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/wolfgang-amadeus-mozart.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1316,7 +1683,12 @@
       "source_files": [
         "Zarathustra (~1500-1000 BCE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/zarathustra.json"
+        }
+      ],
       "notes": null
     },
     {
@@ -1334,13 +1706,19 @@
       "source_files": [
         "Zenobia of Palmyra (c. 240-c. 274 CE) GNOSIS EVENT EXTRACTION.txt"
       ],
-      "system_bindings": [],
+      "system_bindings": [
+        {
+          "kind": "member-substrate",
+          "ref": "shared/fixtures/layer6/council-substrates/zenobia-of-palmyra.json"
+        }
+      ],
       "notes": null
     }
   ],
   "stats": {
     "member_count": 71,
     "source_file_count": 71,
-    "recently_added_count": 44
+    "recently_added_count": 44,
+    "bound_substrate_count": 71
   }
 }

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-sigmund-freud",
+  "member_id": "sigmund-freud",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Sigmund Freud",
+  "era": "1856–1939",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Psychoanalysis; dream interpretation; unconscious; structural model; civilization and drives",
+  "key_insight": "The mind is not transparent to itself — civilization purchases order by frustrating drives",
+  "source_files": [
+    "Sigmund Freud (1856-1939) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "unconscious-structure",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

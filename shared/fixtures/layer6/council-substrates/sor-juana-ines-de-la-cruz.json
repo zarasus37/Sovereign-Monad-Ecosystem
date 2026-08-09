@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-sor-juana-ines-de-la-cruz",
+  "member_id": "sor-juana-ines-de-la-cruz",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Sor Juana Inés de la Cruz",
+  "era": "1648–1695",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "Baroque universal science vs scholastic limits",
+  "key_insight": "Knowledge desire collides with institutional envelope",
+  "source_files": [
+    "Sor Juana Inés de la Cruz (1648-1695) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "knowledge-vs-envelope",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

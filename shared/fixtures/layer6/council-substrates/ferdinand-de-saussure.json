@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-ferdinand-de-saussure",
+  "member_id": "ferdinand-de-saussure",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Ferdinand de Saussure",
+  "era": "1857–1913",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY",
+    "THEOLOGY"
+  ],
+  "contribution": "Course in General Linguistics; langue/parole; signifier/signified; structural turn",
+  "key_insight": "The linguistic sign is arbitrary — value arises from differences inside a social system",
+  "source_files": [
+    "Ferdinand de Saussure (1857-1913) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "langue-as-system",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

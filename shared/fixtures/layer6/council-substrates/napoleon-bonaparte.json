@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-napoleon-bonaparte",
+  "member_id": "napoleon-bonaparte",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Napoleon Bonaparte",
+  "era": "1769–1821",
+  "ttc_emphasis": [
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Cognitive battlefield; decision architecture of war",
+  "key_insight": "The physical battle reveals a decision already made",
+  "source_files": [
+    "Napoleon Bonaparte (1769-1821) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "cognitive-battlefield",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

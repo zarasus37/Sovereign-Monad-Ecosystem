@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-baruch-spinoza",
+  "member_id": "baruch-spinoza",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Baruch Spinoza",
+  "era": "1632–1677",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Substance monism, freedom within necessity",
+  "key_insight": "Truth may require remaining outside the temple",
+  "source_files": [
+    "Baruch Spinoza (1632-1677) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "substance-monism",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

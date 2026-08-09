@@ -1,0 +1,26 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-mirabai",
+  "member_id": "mirabai",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Mirabai",
+  "era": "c. 1498–c. 1557",
+  "ttc_emphasis": [
+    "THEOLOGY"
+  ],
+  "contribution": "Bhakti radicalism; rejection of caste/marriage orthodoxy",
+  "key_insight": "Direct unmediated devotion dissolves inherited architecture",
+  "source_files": [
+    "Mirabai (c. 1498-c. 1557) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "direct-devotion",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

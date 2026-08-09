@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-marcus-aurelius",
+  "member_id": "marcus-aurelius",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Marcus Aurelius",
+  "era": "121–180 CE",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Meditations, Stoic practical philosophy under imperial constraint",
+  "key_insight": "Authentic operation within constraint is freedom",
+  "source_files": [
+    "Marcus Aurelius (121-180 CE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "constraint-as-freedom",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

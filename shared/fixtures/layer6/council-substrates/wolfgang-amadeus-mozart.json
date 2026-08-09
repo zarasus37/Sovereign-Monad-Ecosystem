@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-wolfgang-amadeus-mozart",
+  "member_id": "wolfgang-amadeus-mozart",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Wolfgang Amadeus Mozart",
+  "era": "1756–1791",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "TECHNOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Classical grammar of affect; opera craft; Freemasonry and Zauberflöte; Requiem edge",
+  "key_insight": "Music is a technology of order, trial, and reconciliation when craft is exact enough",
+  "source_files": [
+    "Wolfgang Amadeus Mozart (1756-1791) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "classical-affect-grammar",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

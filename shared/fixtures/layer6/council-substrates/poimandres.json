@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-poimandres",
+  "member_id": "poimandres",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Poimandres",
+  "era": "Corpus Hermeticum I, c. 1st–3rd c. CE",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "Poimandres tractate — Hermetic revelation of Nous, Anthropos, planetary ascent, and commissioning",
+  "key_insight": "Mind looking at God discovers it is the same substance — human is sovereign Nous trapped in Fate’s body",
+  "source_files": [
+    "Poimandres (Corpus Hermeticum I, c. 1st-3rd c. CE) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "hermetic-nous-ascent",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

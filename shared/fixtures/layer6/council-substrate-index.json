@@ -1,0 +1,528 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "index_id": "council-substrate-index-v1",
+  "schema_version": "1.0.0",
+  "kind": "council-substrate-index",
+  "hold_policy": "holder-may-use-never-become",
+  "description": "Index of all Council member substrates. Holder loads the table; does not become any seat.",
+  "generated_at": "2026-08-09",
+  "members": [
+    {
+      "member_id": "adam-smith",
+      "display_name": "Adam Smith",
+      "natural_domain": "moral-sentiments-markets",
+      "ref": "shared/fixtures/layer6/council-substrates/adam-smith.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "akhenaten",
+      "display_name": "Akhenaten",
+      "natural_domain": "sacred-geography-aten",
+      "ref": "shared/fixtures/layer6/council-substrates/akhenaten.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "alan-turing",
+      "display_name": "Alan Turing",
+      "natural_domain": "computability-morphogenesis",
+      "ref": "shared/fixtures/layer6/council-substrates/alan-turing.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "alan-watts",
+      "display_name": "Alan Watts",
+      "natural_domain": "non-dual-agency",
+      "ref": "shared/fixtures/layer6/council-substrates/alan-watts.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "albert-einstein",
+      "display_name": "Albert Einstein",
+      "natural_domain": "spacetime-relativity-quanta",
+      "ref": "shared/fixtures/layer6/council-substrates/albert-einstein.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "antoine-lavoisier",
+      "display_name": "Antoine Lavoisier",
+      "natural_domain": "quantitative-chemistry",
+      "ref": "shared/fixtures/layer6/council-substrates/antoine-lavoisier.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "aristotle",
+      "display_name": "Aristotle",
+      "natural_domain": "categories-virtue-method",
+      "ref": "shared/fixtures/layer6/council-substrates/aristotle.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "baruch-spinoza",
+      "display_name": "Baruch Spinoza",
+      "natural_domain": "substance-monism",
+      "ref": "shared/fixtures/layer6/council-substrates/baruch-spinoza.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "basilides-of-alexandria",
+      "display_name": "Basilides of Alexandria",
+      "natural_domain": "compression-archon",
+      "ref": "shared/fixtures/layer6/council-substrates/basilides-of-alexandria.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "carl-friedrich-gauss",
+      "display_name": "Carl Friedrich Gauss",
+      "natural_domain": "number-geometry-measure",
+      "ref": "shared/fixtures/layer6/council-substrates/carl-friedrich-gauss.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "carl-jung",
+      "display_name": "Carl Jung",
+      "natural_domain": "individuation-archetype",
+      "ref": "shared/fixtures/layer6/council-substrates/carl-jung.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "catherine-de-medici",
+      "display_name": "Catherine de' Medici",
+      "natural_domain": "stewardship-under-schism",
+      "ref": "shared/fixtures/layer6/council-substrates/catherine-de-medici.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "charles-darwin",
+      "display_name": "Charles Darwin",
+      "natural_domain": "descent-natural-selection",
+      "ref": "shared/fixtures/layer6/council-substrates/charles-darwin.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "charles-sanders-peirce",
+      "display_name": "Charles Sanders Peirce",
+      "natural_domain": "wheel-triad-semiotics",
+      "ref": "shared/fixtures/layer6/council-substrates/charles-sanders-peirce.json",
+      "specialty_kinds": [
+        "wheel-registry"
+      ]
+    },
+    {
+      "member_id": "christine-de-pizan",
+      "display_name": "Christine de Pizan",
+      "natural_domain": "rewrite-social-source-code",
+      "ref": "shared/fixtures/layer6/council-substrates/christine-de-pizan.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "claude-levi-strauss",
+      "display_name": "Claude Lévi-Strauss",
+      "natural_domain": "structural-anthropology",
+      "ref": "shared/fixtures/layer6/council-substrates/claude-levi-strauss.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "cristobal-colon",
+      "display_name": "Cristobal Colon",
+      "natural_domain": "ttcl-unifying-middle-hold",
+      "ref": "shared/fixtures/layer6/council-substrates/cristobal-colon.json",
+      "specialty_kinds": [
+        "steward-council",
+        "logoc-corpus",
+        "temple-grid",
+        "wheel-registry",
+        "council-substrate-index"
+      ]
+    },
+    {
+      "member_id": "cyrus-the-great",
+      "display_name": "Cyrus the Great",
+      "natural_domain": "plural-satrapy",
+      "ref": "shared/fixtures/layer6/council-substrates/cyrus-the-great.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "edwin-hubble",
+      "display_name": "Edwin Hubble",
+      "natural_domain": "extragalactic-expansion",
+      "ref": "shared/fixtures/layer6/council-substrates/edwin-hubble.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "enheduanna",
+      "display_name": "Enheduanna",
+      "natural_domain": "temple-network-grid",
+      "ref": "shared/fixtures/layer6/council-substrates/enheduanna.json",
+      "specialty_kinds": [
+        "temple-grid"
+      ]
+    },
+    {
+      "member_id": "erik-davis",
+      "display_name": "Erik Davis",
+      "natural_domain": "techgnosis-resonance",
+      "ref": "shared/fixtures/layer6/council-substrates/erik-davis.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "ferdinand-de-saussure",
+      "display_name": "Ferdinand de Saussure",
+      "natural_domain": "langue-as-system",
+      "ref": "shared/fixtures/layer6/council-substrates/ferdinand-de-saussure.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "friedrich-nietzsche",
+      "display_name": "Friedrich Nietzsche",
+      "natural_domain": "genealogy-perspectivism",
+      "ref": "shared/fixtures/layer6/council-substrates/friedrich-nietzsche.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "galileo-galilei",
+      "display_name": "Galileo Galilei",
+      "natural_domain": "instrumental-visibility",
+      "ref": "shared/fixtures/layer6/council-substrates/galileo-galilei.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "george-balanchine",
+      "display_name": "George Balanchine",
+      "natural_domain": "music-visible-dance",
+      "ref": "shared/fixtures/layer6/council-substrates/george-balanchine.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "giordano-bruno",
+      "display_name": "Giordano Bruno",
+      "natural_domain": "infinite-worlds",
+      "ref": "shared/fixtures/layer6/council-substrates/giordano-bruno.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "giorgio-vasari",
+      "display_name": "Giorgio Vasari",
+      "natural_domain": "art-history-as-path",
+      "ref": "shared/fixtures/layer6/council-substrates/giorgio-vasari.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "gnostic-jesus",
+      "display_name": "Gnostic Jesus",
+      "natural_domain": "gnostic-decompression",
+      "ref": "shared/fixtures/layer6/council-substrates/gnostic-jesus.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "hatshepsut",
+      "display_name": "Hatshepsut",
+      "natural_domain": "legitimacy-as-stone-code",
+      "ref": "shared/fixtures/layer6/council-substrates/hatshepsut.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "herodotus-of-halicarnassus",
+      "display_name": "Herodotus of Halicarnassus",
+      "natural_domain": "inquiry-as-history",
+      "ref": "shared/fixtures/layer6/council-substrates/herodotus-of-halicarnassus.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "hildegard-von-bingen",
+      "display_name": "Hildegard von Bingen",
+      "natural_domain": "vision-externalized",
+      "ref": "shared/fixtures/layer6/council-substrates/hildegard-von-bingen.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "hippocrates",
+      "display_name": "Hippocrates",
+      "natural_domain": "natural-medicine",
+      "ref": "shared/fixtures/layer6/council-substrates/hippocrates.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "hugo-grotius",
+      "display_name": "Hugo Grotius",
+      "natural_domain": "natural-law-nations",
+      "ref": "shared/fixtures/layer6/council-substrates/hugo-grotius.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "immanuel-kant",
+      "display_name": "Immanuel Kant",
+      "natural_domain": "critical-limits-autonomy",
+      "ref": "shared/fixtures/layer6/council-substrates/immanuel-kant.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "irenaeus-of-lyon",
+      "display_name": "Irenaeus of Lyon",
+      "natural_domain": "orthodoxy-as-boundary",
+      "ref": "shared/fixtures/layer6/council-substrates/irenaeus-of-lyon.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "jiang-xueqin",
+      "display_name": "Jiang Xueqin",
+      "natural_domain": "institutional-filters",
+      "ref": "shared/fixtures/layer6/council-substrates/jiang-xueqin.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "johann-sebastian-bach",
+      "display_name": "Johann Sebastian Bach",
+      "natural_domain": "ordered-praise-in-time",
+      "ref": "shared/fixtures/layer6/council-substrates/johann-sebastian-bach.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "johann-wolfgang-von-goethe",
+      "display_name": "Johann Wolfgang von Goethe",
+      "natural_domain": "metamorphosis-form",
+      "ref": "shared/fixtures/layer6/council-substrates/johann-wolfgang-von-goethe.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "johannes-trithemius",
+      "display_name": "Johannes Trithemius",
+      "natural_domain": "wheel-macro-micro-correspondence",
+      "ref": "shared/fixtures/layer6/council-substrates/johannes-trithemius.json",
+      "specialty_kinds": [
+        "wheel-registry"
+      ]
+    },
+    {
+      "member_id": "john-dewey",
+      "display_name": "John Dewey",
+      "natural_domain": "experience-democracy-education",
+      "ref": "shared/fixtures/layer6/council-substrates/john-dewey.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "john-von-neumann",
+      "display_name": "John von Neumann",
+      "natural_domain": "stored-program-games",
+      "ref": "shared/fixtures/layer6/council-substrates/john-von-neumann.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "karl-marx",
+      "display_name": "Karl Marx",
+      "natural_domain": "critique-political-economy",
+      "ref": "shared/fixtures/layer6/council-substrates/karl-marx.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "king-solomon",
+      "display_name": "King Solomon",
+      "natural_domain": "judgment-under-ambiguity",
+      "ref": "shared/fixtures/layer6/council-substrates/king-solomon.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "kurt-godel",
+      "display_name": "Kurt Gödel",
+      "natural_domain": "formal-incompleteness",
+      "ref": "shared/fixtures/layer6/council-substrates/kurt-godel.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "laura-bassi",
+      "display_name": "Laura Bassi",
+      "natural_domain": "institutional-knowledge-machine",
+      "ref": "shared/fixtures/layer6/council-substrates/laura-bassi.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "leonardo-da-vinci",
+      "display_name": "Leonardo da Vinci",
+      "natural_domain": "seeing-as-dissection",
+      "ref": "shared/fixtures/layer6/council-substrates/leonardo-da-vinci.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "leonhard-euler",
+      "display_name": "Leonhard Euler",
+      "natural_domain": "analysis-notation-graph",
+      "ref": "shared/fixtures/layer6/council-substrates/leonhard-euler.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "marcus-aurelius",
+      "display_name": "Marcus Aurelius",
+      "natural_domain": "constraint-as-freedom",
+      "ref": "shared/fixtures/layer6/council-substrates/marcus-aurelius.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "mary-magdalene",
+      "display_name": "Mary Magdalene",
+      "natural_domain": "exemplary-knower",
+      "ref": "shared/fixtures/layer6/council-substrates/mary-magdalene.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "michelangelo-buonarroti",
+      "display_name": "Michelangelo Buonarroti",
+      "natural_domain": "body-as-theology",
+      "ref": "shared/fixtures/layer6/council-substrates/michelangelo-buonarroti.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "mirabai",
+      "display_name": "Mirabai",
+      "natural_domain": "direct-devotion",
+      "ref": "shared/fixtures/layer6/council-substrates/mirabai.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "napoleon-bonaparte",
+      "display_name": "Napoleon Bonaparte",
+      "natural_domain": "cognitive-battlefield",
+      "ref": "shared/fixtures/layer6/council-substrates/napoleon-bonaparte.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "niccolo-machiavelli",
+      "display_name": "Niccolò Machiavelli",
+      "natural_domain": "power-as-it-is",
+      "ref": "shared/fixtures/layer6/council-substrates/niccolo-machiavelli.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "nikola-tesla",
+      "display_name": "Nikola Tesla",
+      "natural_domain": "polyphase-power-transmission",
+      "ref": "shared/fixtures/layer6/council-substrates/nikola-tesla.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "poimandres",
+      "display_name": "Poimandres",
+      "natural_domain": "hermetic-nous-ascent",
+      "ref": "shared/fixtures/layer6/council-substrates/poimandres.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "queen-of-sheba",
+      "display_name": "Queen of Sheba",
+      "natural_domain": "wisdom-by-encounter",
+      "ref": "shared/fixtures/layer6/council-substrates/queen-of-sheba.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "ramon-llull",
+      "display_name": "Ramon Llull",
+      "natural_domain": "combinatorial-wheels",
+      "ref": "shared/fixtures/layer6/council-substrates/ramon-llull.json",
+      "specialty_kinds": [
+        "wheel-registry"
+      ]
+    },
+    {
+      "member_id": "ronald-a-fisher",
+      "display_name": "Ronald A. Fisher",
+      "natural_domain": "experimental-design-selection",
+      "ref": "shared/fixtures/layer6/council-substrates/ronald-a-fisher.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "sigmund-freud",
+      "display_name": "Sigmund Freud",
+      "natural_domain": "unconscious-structure",
+      "ref": "shared/fixtures/layer6/council-substrates/sigmund-freud.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "sima-qian",
+      "display_name": "Sima Qian",
+      "natural_domain": "historiography-as-debt",
+      "ref": "shared/fixtures/layer6/council-substrates/sima-qian.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "isaac-newton",
+      "display_name": "Sir Isaac Newton",
+      "natural_domain": "universal-lawful-cosmos",
+      "ref": "shared/fixtures/layer6/council-substrates/isaac-newton.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "sor-juana-ines-de-la-cruz",
+      "display_name": "Sor Juana Inés de la Cruz",
+      "natural_domain": "knowledge-vs-envelope",
+      "ref": "shared/fixtures/layer6/council-substrates/sor-juana-ines-de-la-cruz.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "sun-tzu",
+      "display_name": "Sun Tzu",
+      "natural_domain": "structural-victory",
+      "ref": "shared/fixtures/layer6/council-substrates/sun-tzu.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "thales-of-miletus",
+      "display_name": "Thales of Miletus",
+      "natural_domain": "first-principles-substance",
+      "ref": "shared/fixtures/layer6/council-substrates/thales-of-miletus.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "thomas-aquinas",
+      "display_name": "Thomas Aquinas",
+      "natural_domain": "faith-reason-summa",
+      "ref": "shared/fixtures/layer6/council-substrates/thomas-aquinas.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "victoria-lady-welby",
+      "display_name": "Victoria, Lady Welby",
+      "natural_domain": "wheel-significs-triad-expansion",
+      "ref": "shared/fixtures/layer6/council-substrates/victoria-lady-welby.json",
+      "specialty_kinds": [
+        "wheel-registry"
+      ]
+    },
+    {
+      "member_id": "vilhelm-bjerknes",
+      "display_name": "Vilhelm Bjerknes",
+      "natural_domain": "atmosphere-as-physics",
+      "ref": "shared/fixtures/layer6/council-substrates/vilhelm-bjerknes.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "william-shakespeare",
+      "display_name": "William Shakespeare",
+      "natural_domain": "stage-as-machine",
+      "ref": "shared/fixtures/layer6/council-substrates/william-shakespeare.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "wolfgang-amadeus-mozart",
+      "display_name": "Wolfgang Amadeus Mozart",
+      "natural_domain": "classical-affect-grammar",
+      "ref": "shared/fixtures/layer6/council-substrates/wolfgang-amadeus-mozart.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "zarathustra",
+      "display_name": "Zarathustra",
+      "natural_domain": "asha-polarity",
+      "ref": "shared/fixtures/layer6/council-substrates/zarathustra.json",
+      "specialty_kinds": []
+    },
+    {
+      "member_id": "zenobia-of-palmyra",
+      "display_name": "Zenobia of Palmyra",
+      "natural_domain": "peripheral-hub",
+      "ref": "shared/fixtures/layer6/council-substrates/zenobia-of-palmyra.json",
+      "specialty_kinds": []
+    }
+  ],
+  "stats": {
+    "member_count": 71,
+    "specialty_bound": 6
+  }
+}

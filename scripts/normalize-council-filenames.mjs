@@ -69,7 +69,12 @@ function mergeContents(parts) {
   return out;
 }
 
-const SKIP = new Set(['README.md', 'council-registry.json']);
+const SKIP = new Set([
+  'README.md',
+  'council-registry.json',
+  'GNOSIS_EVENT_VOICE.md',
+  'COUNCIL_BINDINGS.md',
+]);
 const onDisk = readdirSync(councilDir).filter((f) => {
   const p = join(councilDir, f);
   return statSync(p).isFile() && !SKIP.has(f);

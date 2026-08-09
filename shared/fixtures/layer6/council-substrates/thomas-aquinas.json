@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-thomas-aquinas",
+  "member_id": "thomas-aquinas",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Thomas Aquinas",
+  "era": "1225–1274",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "Summa Theologiae; Aristotelian–Christian synthesis; Five Ways; law and grace",
+  "key_insight": "Faith and reason are not enemies — theology works by ordered questions",
+  "source_files": [
+    "Thomas Aquinas (1225-1274) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "faith-reason-summa",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-charles-darwin",
+  "member_id": "charles-darwin",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Charles Darwin",
+  "era": "1809–1882",
+  "ttc_emphasis": [
+    "COSMOLOGY",
+    "THEOLOGY",
+    "TECHNOLOGY"
+  ],
+  "contribution": "Evolution by natural selection; Origin of Species; Descent of Man; sexual selection",
+  "key_insight": "Living forms are genealogies under pressure — the tree of life is history in flesh",
+  "source_files": [
+    "Charles Darwin (1809-1882) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "descent-natural-selection",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}

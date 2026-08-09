@@ -1,0 +1,27 @@
+{
+  "$schema": "https://the-sovereign/ttcl-specs/member-substrate-schema.json",
+  "substrate_id": "council-member-friedrich-nietzsche",
+  "member_id": "friedrich-nietzsche",
+  "schema_version": "1.0.0",
+  "kind": "member-substrate",
+  "hold_policy": "holder-may-use-never-become",
+  "display_name": "Friedrich Nietzsche",
+  "era": "1844–1900",
+  "ttc_emphasis": [
+    "THEOLOGY",
+    "COSMOLOGY"
+  ],
+  "contribution": "Genealogy of morals, perspectivism, self-implicating critique",
+  "key_insight": "Perspectivism applies to itself",
+  "source_files": [
+    "Friedrich Nietzsche (1844-1900) GNOSIS EVENT EXTRACTION.txt"
+  ],
+  "natural_domain": "genealogy-perspectivism",
+  "specialty_bindings": [],
+  "runtime": {
+    "loadable": true,
+    "scoreable": true,
+    "logoc_profile": "logoc.council-member.v1"
+  },
+  "notes": null
+}
