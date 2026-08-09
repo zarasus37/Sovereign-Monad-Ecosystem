@@ -16,7 +16,7 @@
 | 8 | Charles Darwin | Arch — Batch 2 | COMPLETE |
 | 9 | Claude Lévi-Strauss | Arch | COMPLETE |
 | 10 | Edwin Hubble | Arch — Batch 2 | COMPLETE |
-| 11 | Ferdinand de Saussure | Arch | pending |
+| 11 | Ferdinand de Saussure | Arch | COMPLETE |
 | 12 | George Balanchine | Arch | pending |
 | 13 | Giorgio Vasari | Arch | pending |
 | 14 | Hippocrates | Arch | pending |

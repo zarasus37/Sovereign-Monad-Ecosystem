@@ -1,18 +1,19 @@
 FERDINAND DE SAUSSURE GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Humanities → Linguistics
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Signs / structure — langue/parole; signifier/signified; arbitrariness; value by difference; synchrony/diachrony; semiology
 **Era:** 1857–1913 (Geneva / Leipzig / Paris / Geneva)
-**Status:** Extraction complete (seating candidate) — drawn from the *Cours de linguistique générale* (posthumous) and Indo-European scholarship
+**Status:** Garden + quotation depth — **Saussure’s sentences as carried by the *Cours*** (Wade Baskin English of the student-edited French) at full sense-units. Soft paraphrase and catalog-essay = defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. **Credit hygiene:** the *Cours de linguistique générale* (1916) is posthumous — compiled by Charles Bally and Albert Sechehaye from lecture notes (with Albert Riedlinger); not a manuscript Saussure published as final. Voice = *Cours* continuous as the effective founding text. Early Indo-European *Mémoire* remains for deepen. Structuralist afterlife (Lévi-Strauss etc.) is reception, not this seat’s monologue.
 
 ---
 
 ## Contribution
 
-Linguist who redirected the study of language from only historical sound-change toward **language as a system of signs**; whose Geneva lectures, edited by students as the *Course in General Linguistics* (1916), defined **langue** vs **parole**, the **signifier/signified** bond, and the **arbitrariness of the linguistic sign**; and who thereby founded the structuralist turn that remade twentieth-century humanities.
+I redirected linguistics from exclusive historical comparison toward **language as a system of signs**: *langue* vs speaking (*parole*), the two-sided sign (signifier / signified), the **arbitrariness** of the bond, **value** from differences within the system, **synchronic** and **diachronic** axes, and a horizon science of **semiology**.
 
 ## Key Insight
 
-Meaning is not a natural glue between sound and thing: the sign is arbitrary and value arises from differences inside a social system (*langue*) that individual speech (*parole*) only samples.
+The linguistic sign unites concept and sound-image, not thing and name; the bond is arbitrary; in language there are only differences (without positive terms when sides are taken separately); language is a form, not a substance.
 
 ## TTC Emphasis
 
@@ -22,342 +23,434 @@ Meaning is not a natural glue between sound and thing: the sign is arbitrary and
 
 ---
 
-## Preliminary Note
+## D-check (diligence / fact hygiene — before quotation garden)
 
-Saussure’s most famous book is **posthumous and student-edited** (Bally & Sechehaye from lecture notes, 1916) — not a manuscript he published as final. The Council treats the *Cours* as the effective founding text of structural linguistics while noting that editorial medium. Primary lines:
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| Soft career essays (Leipzig, “he never published the book”) without continuous *Cours* | **Defect as garden voice.** Editorial fact in hold note; events rebuild from Baskin continuous of the *Cours* itself. |
+| Soft one-line slogans for arbitrary sign / value | **Defect.** Full Principle I and value chapters continuous. |
+| Soft “chess piece” meme without continuous comparison | **Use continuous chess internal/external + knight/value blocks.** |
+| Soft synchronic priority without continuous definition | **Defect.** Static vs evolutionary continuous. |
+| Treating *Cours* as autograph manuscript | **False.** Bally/Sechehaye reconstruction — stated in header. |
+| Invented first-person journal of Geneva classroom | **None.** *Cours* “I” is editorial reconstruction of teaching. |
 
-1. Early Indo-European work (*Mémoire* on the primitive vowel system)
-2. Paris / Geneva teaching career
-3. Geneva courses in general linguistics (1907–1911)
-4. *Cours de linguistique générale* (1916)
-5. Sign theory; langue/parole; synchrony/diachrony; value by difference
-6. Death 1913; structuralist afterlife (Lévi-Strauss, Barthes, etc.)
-
-English: Wade Baskin translation tradition and standard textbook quotations.
-
----
-
-## Event 01 — *Indo-European Strictness*
-
-**Title:** Sound Laws Before the System
-
-**Passage or Trigger:**
-Early career: rigorous historical-comparative work on Indo-European — including the famous *Mémoire* on the primitive system of vowels. Philology as exact science of change.
-
-**Why It Qualifies:**
-Before structure-as-system, Saussure is already a master of **diachronic** discipline. The later turn does not erase history; it relativizes its monopoly.
-
-**Three-Domain Reading:**
-
-- **Theology:** Order in the deep past of tongues.
-- **Technology:** Comparative method as reconstruction tech.
-- **Cosmology:** Language families as trees of time.
-
-**Compressed Insight:**
-He earned the right to rethink language by first mastering how sounds die and transform across centuries.
-
-**Confidence:** 0.92  
-**Sources:** Early publications; standard Saussure biographies.
+**Dates:** Born 1857 Geneva. *Mémoire* 1879. Paris years; Geneva professorship. General linguistics courses ~1906–1911. Dies 1913. *Cours* published 1916.
 
 ---
 
-## Event 02 — *The Course, Not the Book He Wrote*
+## Preliminary Note (source hygiene)
 
-**Title:** Teaching Becomes the Canon
+| Priority | Material |
+|----------|----------|
+| **1** | *Course in General Linguistics* — object of linguistics; langue/speaking; semiology; nature of the sign; arbitrariness; linearity; immutability; static/evolutionary; value; differences (Baskin continuous) |
+| **2** | Early *Mémoire* on Indo-European vowels; manuscript sources critical editions — deepen later |
+| **3** | Soft handbook structuralism / Barthes-only reception — not voice |
 
-**Passage or Trigger:**
-1907–1911 Geneva lectures on general linguistics; after his death (1913), students **Charles Bally** and **Albert Sechehaye** compile the *Cours de linguistique générale* (1916) from notes. The founding text is a **classroom reconstruction**.
-
-**Why It Qualifies:**
-Knowledge transmission event: the teacher’s voice outlives him as edited system. Parallel to other Council “unfinished / mediated” masterworks — with unique twist that the masterwork *is* the mediation.
-
-**Three-Domain Reading:**
-
-- **Theology:** Apostolic notes — risk and gift of disciples’ memory.
-- **Technology:** Lecture + edition as publication pipeline.
-- **Cosmology:** Ideas as social products even at origin.
-
-**Compressed Insight:**
-He never published the book that founded a science — his students had to become the book.
-
-**Confidence:** 0.96  
-**Sources:** *Cours* publication history; Wikipedia *Course in General Linguistics*.
+**Carriers used:** Ferdinand de Saussure, *Course in General Linguistics*, ed. Charles Bally & Albert Sechehaye with Albert Riedlinger, trans. Wade Baskin (McGraw-Hill continuous carrier of the French *Cours*).
 
 ---
 
-## Event 03 — *Langue and Parole*
+## Event 01 — *The viewpoint creates the object*
 
-**Title:** System Versus Act
+**Title:** Dualities; language as norm of speech
 
-**Passage or Trigger:**
-*Cours*: distinction between **langue** (language as social system of conventions, homogeneous, classifiable) and **parole** (individual speaking acts, heterogeneous). *Langage* as the broad human faculty; *langue* as the social product that makes speech possible.
+**What I did / What was made:**
+I opened the problem of linguistics by showing that speech presents dual sides at every approach — and that only by taking **language** (*langue*) as the norm can the science find a definite object.
 
-**Why It Qualifies:**
-Central cut. Science needs an object; Saussure gives it **the system**, not the infinite mess of utterances alone. Sociology of the tongue.
+**What I wrote / said (direct — full passage):**
+
+> Other sciences work with objects that are given in advance and that can then be considered from different viewpoints; but not linguistics. Someone pronounces the French word nu ‘bare’: a superficial observer would be tempted to call the word a concrete linguistic object; but a more careful examination would reveal successively three or four quite different things, depending on whether the word is considered as a sound, as the expression of an idea, as the equivalent of Latin nudum, etc. Far from it being the object that antedates the viewpoint, it would seem that it is the viewpoint that creates the object; besides, nothing tells us in advance that one way of considering the fact in question takes precedence over the others or is in any way superior to them.
+>
+> Moreover, regardless of the viewpoint that we adopt, the linguistic phenomenon always has two related sides, each deriving its values from the other. … Speech has both an individual and a social side, and we cannot conceive of one without the other. Besides: Speech always implies both an established system and an evolution; at every moment it is an existing institution and a product of the past. …
+>
+> From whatever direction we approach the question, nowhere do we find the integral object of linguistics. … As I see it there is only one solution to all the foregoing difficulties: from the very outset we must put both feet on the ground of language and use language as the norm of all other manifestations of speech. Actually, among so many dualities, language alone seems to lend itself to independent definition and provide a fulcrum that satisfies the mind.
+>
+> But what is language [langue]? It is not to be confused with human speech [langage], of which it is only a definite part, though certainly an essential one. It is both a social product of the faculty of speech and a collection of necessary conventions that have been adopted by a social body to permit individuals to exercise that faculty. Taken as a whole, speech is many-sided and heterogeneous; straddling several areas simultaneously—physical, physiological, and psychological—it belongs both to the individual and to society; we cannot put it into any category of human facts, for we cannot discover its unity.
+>
+> Language, on the contrary, is a self-contained whole and a principle of classification. As soon as we give language first place among the facts of speech, we introduce a natural order into a mass that lends itself to no other classification.
+
+— Ferdinand de Saussure (as carried by Bally & Sechehaye), *Course in General Linguistics*, “The Object of Linguistics” continuous. English Wade Baskin.
+
+**How I see it (from inside, in action):**
+You cannot start from a given “word-thing.” Choose the viewpoint of the system, or speech remains a confused mass claimed by every neighboring science.
+
+**Why it qualifies as gnosis:**
+Founding cut that makes linguistics possible as an autonomous science.
 
 **Three-Domain Reading:**
 
-- **Theology:** Shared word as covenant-structure of a people.
-- **Technology:** System vs instance as software architecture metaphor avant la lettre.
-- **Cosmology:** Speech events floating on a deeper social sea of rules.
+- **Theology:** Covenant of conventions in a social body.
+- **Technology:** Object constitution by method — viewpoint creates object.
+- **Cosmology:** Speech as heterogeneous weather; language as self-contained whole.
 
 **Compressed Insight:**
-He split the ocean of talk into the chart (langue) and the waves (parole) — and told science to map the chart.
+The viewpoint creates the object; put both feet on language (*langue*) as social product and collection of conventions — the fulcrum of speech.
 
 **Confidence:** 0.97  
-**Sources:** *Cours*; EBSCO / standard expositions of langue/parole.
+**Sources:** *Cours* Baskin continuous, Object of Linguistics.
 
 ---
 
-## Event 04 — *The Sign as Two-Sided*
+## Event 02 — *Language vs speaking*
 
-**Title:** Sound-Image and Concept
+**Title:** Social system / individual act; contract of the community
 
-**Passage or Trigger:**
-Linguistic **sign** as double entity: **signifier** (sound-pattern / signal — psychological, not mere noise) and **signified** (concept). Inseparable like two sides of a sheet of paper. Not a name stuck on a thing only — a bond inside the mind’s semiotic system.
+**What I did / What was made:**
+I separated language from speaking: what is social and essential from what is individual and accessory — and listed the properties that make language a studyable, homogeneous object.
 
-**Why It Qualifies:**
-Breaks naive naming theory. Language is not a list of labels for pre-given objects; it is a structure of paired faces.
+**What I wrote / said (direct — full passage):**
 
-**Three-Domain Reading:**
+> Language is not complete in any speaker; it exists perfectly only within a collectivity.
+>
+> In separating language from speaking we are at the same time separating: (1) what is social from what is individual; and (2) what is essential from what is accessory and more or less accidental.
+>
+> Language is not a function of the speaker; it is a product that is passively assimilated by the individual. It never requires premeditation, and reflection enters in only for the purpose of classification. …
+>
+> Speaking, on the contrary, is an individual act. It is wilful and intellectual. Within the act, we should distinguish between: (1) the combinations by which the speaker uses the language code for expressing his own thought; and (2) the psychophysical mechanism that allows him to exteriorize those combinations. …
+>
+> To summarize, these are the characteristics of language:
+>
+> 1) Language is a well-defined object in the heterogeneous mass of speech facts. … It is the social side of speech, outside the individual who can never create nor modify it by himself; it exists only by virtue of a sort of contract signed by the members of a community. Moreover, the individual must always serve an apprenticeship in order to learn the functioning of language; a child assimilates it only gradually. …
+>
+> 2) Language, unlike speaking, is something that we can study separately. Although dead languages are no longer spoken, we can easily assimilate their linguistic organisms. We can dispense with the other elements of speech; indeed, the science of language is possible only if the other elements are excluded.
+>
+> 3) Whereas speech is heterogeneous, language, as defined, is homogeneous. It is a system of signs in which the only essential thing is the union of meanings and sound-images, and in which both parts of the sign are psychological.
+>
+> 4) Language is concrete, no less so than speaking. … Linguistic signs, though basically psychological, are not abstractions; associations which bear the stamp of collective approval—and which added together constitute language—are realities that have their seat in the brain.
 
-- **Theology:** Word and meaning as joined mystery — not bare pointers to creation.
-- **Technology:** Semiotic unit as base data structure of culture analysis.
-- **Cosmology:** Human world as woven of two-sided signs.
+— *Course in General Linguistics*, Object of Linguistics continuous. Baskin English.
 
-**Compressed Insight:**
-He cut the sign open and found not a thing but a marriage of sound-image and concept.
+**How I see it (from inside, in action):**
+Science needs a homogeneous object. Language is the storehouse of sound-images and meanings approved by the collectivity; speaking is the sum of wilful acts that use that code.
 
-**Confidence:** 0.97  
-**Sources:** *Cours*, nature of the linguistic sign; Baskin translation tradition.
-
----
-
-## Event 05 — *Arbitrariness of the Sign*
-
-**Title:** No Natural Glue
-
-**Passage or Trigger:**
-Principle I of the *Cours* (standard English):
-
-> “The bond between the signifier and the signified is arbitrary. … the linguistic sign is arbitrary.”
-
-Evidence: different languages (*bœuf* / *Ochs* for ox); no inner link between sound sequence and idea of “sister,” etc.
-
-**Why It Qualifies:**
-Central gnosis of modern linguistics and structuralism. Convention, not nature, assigns the bond — within a language the system is binding, but across languages the pairing is unmotivated.
+**Why it qualifies as gnosis:**
+Langue/parole cut — architecture for every later structural science of culture.
 
 **Three-Domain Reading:**
 
-- **Theology:** Babel as structure, not only punishment — many lawful pairings.
-- **Technology:** Coding systems as arbitrary-but-conventional.
-- **Cosmology:** Human meaning as social fact, not cosmic onomatopoeia (except limited motivated cases).
+- **Theology:** Contract of the community — word not private property.
+- **Technology:** System vs instance; code vs execution.
+- **Cosmology:** Collective brain-deposit of language vs momentary acts.
 
 **Compressed Insight:**
-He proved the word and the idea are married by custom, not by nature’s necessity — and custom is still law.
+Language is social, outside the individual who cannot modify it alone; speaking is individual and wilful — science studies the homogeneous system of signs.
 
 **Confidence:** 0.98  
-**Sources:** *Cours* ch. on arbitrary nature of the sign; UMSL / textbook quotations.
+**Sources:** *Cours* Baskin continuous.
 
 ---
 
-## Event 06 — *Value by Difference*
+## Event 03 — *Semiology*
 
-**Title:** Identity Is What Others Are Not
+**Title:** Life of signs within society; linguistics as master pattern
 
-**Passage or Trigger:**
-Signs have **value** through relations of difference within the system — not through positive substance alone. A term means by what it is not (the chess-piece analogy in the *Cours* tradition).
+**What I did / What was made:**
+I placed language among systems of signs (writing, rites, formulas, signals) and staked out **semiology** as the general science of which linguistics is the most important part.
 
-**Why It Qualifies:**
-Structuralism’s engine. Meaning is differential. Network before atom.
+**What I wrote / said (direct — full passage):**
+
+> Language is a system of signs that express ideas, and is therefore comparable to a system of writing, the alphabet of deaf-mutes, symbolic rites, polite formulas, military signals, etc. But it is the most important of all these systems.
+>
+> A science that studies the life of signs within society is conceivable; it would be a part of social psychology and consequently of general psychology; I shall call it semiology (from Greek sēmeîon ‘sign’). Semiology would show what constitutes signs, what laws govern them. Since the science does not yet exist, no one can say what it would be; but it has a right to existence, a place staked out in advance. Linguistics is only a part of the general science of semiology; the laws discovered by semiology will be applicable to linguistics, and the latter will circumscribe a well-defined area within the mass of anthropological facts. …
+>
+> In short, the characteristic that distinguishes semiological systems from all other institutions shows up clearly only in language where it manifests itself in the things which are studied least, and the necessity or specific value of a semiological science is therefore not clearly recognized. But to me the language problem is mainly semiological, and all developments derive their significance from that important fact. If we are to discover the true nature of language we must learn what it has in common with all other semiological systems. … By studying rites, customs, etc. as signs, I believe that we shall throw new light on the facts and point up the need for including them in a science of semiology and explaining them by its laws.
+
+— *Course in General Linguistics*, “Place of Language in Human Facts: Semiology” continuous. Baskin English.
+
+**How I see it (from inside, in action):**
+Language is not only words; it is the clearest case of social signs. Study rites and customs as signs under the same laws — or miss language’s true nature.
+
+**Why it qualifies as gnosis:**
+Horizon that later structural anthropology and cultural analysis take as invitation (Lévi-Strauss already on Council).
 
 **Three-Domain Reading:**
 
-- **Theology:** Creation as articulated differences (secular structural rhyme).
-- **Technology:** Systems analysis — nodes defined by relations.
-- **Cosmology:** Language as field of oppositions.
+- **Theology:** Rites and formulas as kin to the word.
+- **Technology:** General science of signs; linguistics as master-pattern case.
+- **Cosmology:** Human social world dense with structured signals.
 
 **Compressed Insight:**
-He taught that a word’s being is its difference — identity as the shadow of the whole system.
+Semiology studies the life of signs within society; linguistics is its most important part — rites and customs too as signs.
 
-**Confidence:** 0.95  
-**Sources:** *Cours* on value and difference; structuralist reception.
+**Confidence:** 0.96  
+**Sources:** *Cours* Baskin continuous, Semiology.
 
 ---
 
-## Event 07 — *Synchrony and Diachrony*
+## Event 04 — *Not a naming-process; concept and sound-image*
 
-**Title:** The Chess Game Now vs the History of Moves
+**Title:** The two-sided sign; signified and signifier
 
-**Passage or Trigger:**
-Priority of **synchronic** study (system at a moment) alongside **diachronic** (change over time). Historical linguistics remains valid but must not erase the need to describe the living system’s state.
+**What I did / What was made:**
+I rejected the naïve list of names for things, redefined the sign as concept + sound-image (both psychological), and named the sides **signified** and **signifier**.
 
-**Why It Qualifies:**
-Method dualism. Time’s story and structure’s snapshot both real; confusing them muddles science.
+**What I wrote / said (direct — full passage):**
+
+> Some people regard language, when reduced to its elements, as a naming-process only—a list of words, each corresponding to the thing that it names. … This conception is open to criticism at several points. It assumes that ready-made ideas exist before words … ; it does not tell us whether a name is vocal or psychological in nature … ; finally, it lets us assume that the linking of a name and a thing is a very simple operation—an assumption that is anything but true. But this rather naïve approach can bring us near the truth by showing us that the linguistic unit is a double entity, one formed by the associating of two terms.
+>
+> We have seen in considering the speaking-circuit … that both terms involved in the linguistic sign are psychological and are united in the brain by an associative bond. This point must be emphasized.
+>
+> The linguistic sign unites, not a thing and a name, but a concept and a sound-image. The latter is not the material sound, a purely physical thing, but the psychological imprint of the sound, the impression that it makes on our senses. The sound-image is sensory, and if I happen to call it “material,” it is only in that sense, and by way of opposing it to the other term of the association, the concept, which is generally more abstract. …
+>
+> The linguistic sign is then a two-sided psychological entity. … The two elements are intimately united, and each recalls the other. …
+>
+> Our definition of the linguistic sign poses an important question of terminology. I call the combination of a concept and a sound-image a sign, but in current usage the term generally designates only a sound-image, a word, for example (arbor, etc.). … Ambiguity would disappear if the three notions involved here were designated by three names, each suggesting and opposing the others. I propose to retain the word sign [signe] to designate the whole and to replace concept and sound-image respectively by signified [signifié] and signifier [signifiant]; the last two terms have the advantage of indicating the opposition that separates them from each other and from the whole of which they are parts.
+
+— *Course in General Linguistics*, Part One, ch. I “Nature of the Linguistic Sign” continuous. Baskin English.
+
+**How I see it (from inside, in action):**
+Not Adamic stickers on ready-made things. A sign is a marriage in the mind: imprint of sound and concept, each calling the other.
+
+**Why it qualifies as gnosis:**
+Break with nomenclaturism; base unit of structural analysis.
 
 **Three-Domain Reading:**
 
-- **Theology:** Eternal vs temporal — structured carefully for language.
-- **Technology:** Two research modes as complementary tools.
-- **Cosmology:** Language as both organism-in-time and crystal-in-a-slice.
+- **Theology:** Word not bare pointer to things only — double face.
+- **Technology:** Sign as data structure: whole = signified + signifier.
+- **Cosmology:** Psychological imprint, not mere air vibration, as half the sign.
 
 **Compressed Insight:**
-He split time’s movie from the still frame — and said both are needed to know a tongue.
+The linguistic sign unites not a thing and a name but a concept and a sound-image — sign = signified + signifier.
 
-**Confidence:** 0.95  
-**Sources:** *Cours* on synchronic vs diachronic linguistics.
+**Confidence:** 0.98  
+**Sources:** *Cours* Baskin continuous, Nature of the Linguistic Sign.
 
 ---
 
-## Event 08 — *Linearity of the Signifier*
+## Event 05 — *The linguistic sign is arbitrary*
 
-**Title:** Sound Unfolds in Time
+**Title:** Principle I; unmotivated bond; ox / Ochs
 
-**Passage or Trigger:**
-Principle of the **linear** character of the signifier — auditory signifiers unfold in a single temporal line (unlike visual diagrams that can be simultaneous in space).
+**What I did / What was made:**
+I stated Principle I: the bond between signifier and signified is arbitrary — unmotivated by nature, fixed by the community, dominant for all linguistics of language.
 
-**Why It Qualifies:**
-Constraint of the medium. Speech’s physics shapes language’s possible forms. Technology of the voice as limit of the system.
+**What I wrote / said (direct — full passage):**
+
+> The bond between the signifier and the signified is arbitrary. Since I mean by sign the whole that results from the associating of the signifier with the signified, I can simply say: the linguistic sign is arbitrary.
+>
+> The idea of “sister” is not linked by any inner relationship to the succession of sounds s-ö-r which serves as its signifier in French; that it could be represented equally by just any other sequence is proved by differences among languages and by the very existence of different languages: the signified “ox” has as its signifier b-ö-f on one side of the border and o-k-s (Ochs) on the other.
+>
+> No one disputes the principle of the arbitrary nature of the sign, but it is often easier to discover a truth than to assign to it its proper place. Principle I dominates all the linguistics of language; its consequences are numberless. …
+>
+> Signs that are wholly arbitrary realize better than the others the ideal of the semiological process; that is why language, the most complex and universal of all systems of expression, is also the most characteristic; in this sense linguistics can become the master-pattern for all branches of semiology although language is only one particular semiological system. …
+>
+> The word arbitrary also calls for comment. The term should not imply that the choice of the signifier is left entirely to the speaker (we shall see below that the individual does not have the power to change a sign in any way once it has become established in the linguistic community); I mean that it is unmotivated, i.e. arbitrary in that it actually has no natural connection with the signified.
+
+— *Course in General Linguistics*, Principle I continuous. Baskin English.
+
+**How I see it (from inside, in action):**
+No natural glue between sound-sequence and idea. Across the border the same beast has another chain of sounds — and that proves the bond is convention, not nature. Arbitrary does not mean “I may invent tonight.”
+
+**Why it qualifies as gnosis:**
+Central principle of modern linguistics and of structuralism’s inheritance.
 
 **Three-Domain Reading:**
 
-- **Theology:** Word as temporal event — incarnate in sequence.
-- **Technology:** Serialization as design constraint.
+- **Theology:** Babel as plurality of lawful pairings, not only punishment.
+- **Technology:** Codes as arbitrary-but-binding conventions.
+- **Cosmology:** Meaning as social fact, not cosmic onomatopoeia (except residual cases).
+
+**Compressed Insight:**
+The bond between signifier and signified is arbitrary — unmotivated; the individual cannot change it once the community has fixed it.
+
+**Confidence:** 0.99  
+**Sources:** *Cours* Baskin continuous, Principle I.
+
+---
+
+## Event 06 — *Linear nature of the signifier*
+
+**Title:** Principle II; a chain in time
+
+**What I did / What was made:**
+I stated Principle II: the auditory signifier unfolds only in time — a span measurable in one dimension — fundamental for the whole mechanism of language.
+
+**What I wrote / said (direct — full passage):**
+
+> The signifier, being auditory, is unfolded solely in time from which it gets the following characteristics: (a) it represents a span, and (b) the span is measurable in a single dimension; it is a line. While Principle II is obvious, apparently linguists have always neglected to state it, doubtless because they found it too simple; nevertheless, it is fundamental, and its consequences are incalculable. Its importance equals that of Principle I; the whole mechanism of language depends upon it. … In contrast to visual signifiers (nautical signals, etc.) which can offer simultaneous groupings in several dimensions, auditory signifiers have at their command only the dimension of time. Their elements are presented in succession; they form a chain. This feature becomes readily apparent when they are represented in writing and the spatial line of graphic marks is substituted for succession in time.
+
+— *Course in General Linguistics*, Principle II continuous. Baskin English.
+
+**How I see it (from inside, in action):**
+Speech cannot stack meanings in a simultaneous map like flags on a horizon. One after another — the chain is the law of the medium.
+
+**Why it qualifies as gnosis:**
+Medium constraint that grounds later syntagmatic relations.
+
+**Three-Domain Reading:**
+
+- **Theology:** Word as temporal event.
+- **Technology:** Serialization as design limit of voice.
 - **Cosmology:** Time as grammar’s necessary weather.
 
 **Compressed Insight:**
-He reminded us that spoken signs must march single file — time is their only road.
+The signifier unfolds solely in time — a line, a chain; whole mechanism of language depends on it.
 
-**Confidence:** 0.93  
-**Sources:** *Cours* principles of the sign.
+**Confidence:** 0.96  
+**Sources:** *Cours* Baskin continuous, Principle II.
 
 ---
 
-## Event 09 — *Language as Social Fact*
+## Event 07 — *Immutability: the stacked deck*
 
-**Title:** The System Belongs to No One Speaker
+**Title:** Choose! — but it must be this sign
 
-**Passage or Trigger:**
-*Langue* as social product of the speech faculty — conventions adopted by a social body; the individual cannot freely rewrite the system. Homogeneous object for science because it is collective.
+**What I did / What was made:**
+I stated the paradox of the arbitrary sign that is nonetheless fixed: the community inherits language and cannot freely rechoose; time + social force cancel freedom of revolution.
 
-**Why It Qualifies:**
-Sociology of language avant Durkheim-adjacent framing in the *Cours*. Meaning is never private property alone.
+**What I wrote / said (direct — full passage):**
+
+> The signifier, though to all appearances freely chosen with respect to the idea that it represents, is fixed, not free, with respect to the linguistic community that uses it. The masses have no voice in the matter, and the signifier chosen by language could be replaced by no other. This fact, which seems to embody a contradiction, might be called colloquially “the stacked deck.” We say to language: “Choose!” but we add: “It must be this sign and no other.” No individual, even if he willed it, could modify in any way at all the choice that has been made; and what is more, the community itself cannot control so much as a single word; it is bound to the existing language.
+>
+> No longer can language be identified with a contract pure and simple, and it is precisely from this viewpoint that the linguistic sign is a particularly interesting object of study; for language furnishes the best proof that a law accepted by a community is a thing that is tolerated and not a rule to which all freely consent. …
+>
+> No society, in fact, knows or has ever known language other than as a product inherited from preceding generations, and one to be accepted as such. …
+>
+> Language is checked not only by the weight of the collectivity but also by time. These two are inseparable. At every moment solidarity with the past checks freedom of choice. We say man and dog. This does not prevent the existence in the total phenomenon of a bond between the two antithetical forces—arbitrary convention by virtue of which choice is free and time which causes choice to be fixed. Because the sign is arbitrary, it follows no law other than that of tradition, and because it is based on tradition, it is arbitrary.
+
+— *Course in General Linguistics*, “Immutability and Mutability of the Sign” continuous. Baskin English.
+
+**How I see it (from inside, in action):**
+The deck is stacked: free in theory, fixed in history. You inherit the system; revolution of the whole lexicon is not a social option.
+
+**Why it qualifies as gnosis:**
+Social-political theory of the sign — law as tolerated inheritance, not perpetual free vote.
 
 **Three-Domain Reading:**
 
-- **Theology:** Shared word as communal bond.
-- **Technology:** Standards as enabling constraint.
-- **Cosmology:** Society as condition of sense.
+- **Theology:** Law tolerated, not freely re-consented each morning.
+- **Technology:** Standards locked by network effects and time.
+- **Cosmology:** Continuity of language through generations.
 
 **Compressed Insight:**
-He located language in the group — so no single mouth owns the rules that make mouths mean.
+“Choose!” but “this sign and no other” — arbitrary yet fixed by collectivity and time; tradition makes arbitrariness law.
 
-**Confidence:** 0.94  
-**Sources:** *Cours* definitions of langue as social.
+**Confidence:** 0.96  
+**Sources:** *Cours* Baskin continuous, Immutability.
 
 ---
 
-## Event 10 — *Semiology’s Horizon*
+## Event 08 — *Synchronic and diachronic*
 
-**Title:** Signs Beyond Speech
+**Title:** Two paths; system of coexisting values vs successive terms
 
-**Passage or Trigger:**
-Language as system of signs comparable to writing, rites, formulas, military signals — project of a general **semiology** (science of signs in social life) of which linguistics would be the master part.
+**What I did / What was made:**
+I divided linguistics into static (synchronic) and evolutionary (diachronic) paths — like political economy’s split before value — because time opens two divergent sciences of the same facts.
 
-**Why It Qualifies:**
-Expansion of the Arch: Linguistics becomes mother-method for culture studies. Lévi-Strauss and others later take the invitation.
+**What I wrote / said (direct — full passage):**
+
+> Very few linguists suspect that the intervention of the factor of time creates difficulties peculiar to linguistics and opens to their science two completely divergent paths. …
+>
+> On the contrary, that duality is already forcing itself upon the economic sciences. Here, in contrast to the other sciences, political economy and economic history constitute two clearly separated disciplines within a single science. … A similar necessity obliges us to divide linguistics into two parts, each with its own principle. Here as in political economy we are confronted with the notion of value; both sciences are concerned with a system for equating things of different orders—labor and wages in one and a signified and signifier in the other.
+>
+> … [Synchronic linguistics studies] psychological relations that bind together coexisting terms and form a system in the collective mind of speakers.
+>
+> Diachronic linguistics, on the contrary, will study relations that bind together successive terms not perceived by the collective mind but substituted for each other without forming a system.
+>
+> The aim of general synchronic linguistics is to set up the fundamental principles of any idiosynchronic system, the constituents of any language-state. … The study of static linguistics is generally much more difficult than the study of historical linguistics. Evolutionary facts are more concrete and striking. … But the linguistics that penetrates values and coexisting relations presents much greater difficulties.
+
+— *Course in General Linguistics*, “Static and Evolutionary Linguistics” + Part Two opening continuous. Baskin English.
+
+**How I see it (from inside, in action):**
+History of changes is easier to watch; the living system of coexisting values is harder and is what speakers actually hold in mind. Both paths — not mixed into one muddle.
+
+**Why it qualifies as gnosis:**
+Method dualism that frees structure without erasing history.
 
 **Three-Domain Reading:**
 
-- **Theology:** Ritual and word as kin sign-systems.
-- **Technology:** Cross-domain semiotic toolkit.
-- **Cosmology:** Human world as dense with structured signals.
+- **Theology:** Eternal-present of the system vs succession of ages.
+- **Technology:** Two coordinate systems for one science.
+- **Cosmology:** Language as crystal-slice and as process-in-time.
 
 **Compressed Insight:**
-He sketched a science of all social signs — with language as the clearest case to reverse-engineer the rest.
+Time opens two paths: synchronic system of coexisting terms in the collective mind; diachronic successive terms that do not form that system for speakers.
 
-**Confidence:** 0.92  
-**Sources:** *Cours* on semiology; structuralist afterlife (Lévi-Strauss already on Council pending/done path).
+**Confidence:** 0.96  
+**Sources:** *Cours* Baskin continuous, Static and Evolutionary Linguistics.
 
 ---
 
-## Event 11 — *Against Pure Naming-Lists*
+## Event 09 — *In language there are only differences*
 
-**Title:** Not a Nomenclature
+**Title:** Form not substance; value from the system; sheet of paper
 
-**Passage or Trigger:**
-Critique of the view that language is merely a list of words each corresponding to a pre-given thing — the nomenclaturist error. System and concept-cutting precede simple labeling.
+**What I did / What was made:**
+I stated that thought and sound are shapeless masses until language articulates them; that value comes from the whole system; that in language there are only differences without positive terms (when sides are separate) — and that language is a form, not a substance.
 
-**Why It Qualifies:**
-Epistemological hygiene. Worlds are articulated by languages, not only labeled after the fact.
+**What I wrote / said (direct — full passage):**
+
+> Without language, thought is a vague, uncharted nebula. There are no pre-existing ideas, and nothing is distinct before the appearance of language. …
+>
+> The linguistic fact can therefore be pictured in its totality—i.e. language—as a series of contiguous subdivisions marked off on both the indefinite plane of jumbled ideas (A) and the equally vague plane of sounds (B). … Language can also be compared with a sheet of paper: thought is the front and the sound the back; one cannot cut the front without cutting the back at the same time; likewise in language, one can neither divide sound from thought nor thought from sound. … Linguistics then works in the borderland where the elements of sound and thought combine; their combination produces a form, not a substance. …
+>
+> Language is a system of interdependent terms in which the value of each term results solely from the simultaneous presence of the others. … Its content is really fixed only by the concurrence of everything that exists outside it. … if redouter did not exist, all its content would go to its competitors. … Their most precise characteristic is in being what the others are not.
+>
+> Everything that has been said up to this point boils down to this: in language there are only differences. Even more important: a difference generally implies positive terms between which the difference is set up; but in language there are only differences without positive terms. Whether we take the signified or the signifier, language has neither ideas nor sounds that existed before the linguistic system, but only conceptual and phonic differences that have issued from the system. The idea or phonic substance that a sign contains is of less importance than the other signs that surround it. …
+>
+> Putting it another way, language is a form and not a substance. This truth could not be overstressed, for all the mistakes in our terminology, all our incorrect ways of naming things that pertain to language, stem from the involuntary supposition that the linguistic phenomenon must have substance.
+
+— *Course in General Linguistics*, Linguistic Value continuous. Baskin English.
+
+**How I see it (from inside, in action):**
+No ready-made concepts waiting for labels. Cut the sheet and you cut both faces. A term is what the others are not — value from the field.
+
+**Why it qualifies as gnosis:**
+Engine of structuralism: differential identity; form over substance.
 
 **Three-Domain Reading:**
 
-- **Theology:** Limits of Adamic naming fantasy as complete model.
-- **Technology:** Ontology design — categories are system-relative.
-- **Cosmology:** Reality-for-us shaped by differential nets.
+- **Theology:** Articulation of the uncharted — word as ordering of chaos of thought.
+- **Technology:** System of interdependent terms; relative value.
+- **Cosmology:** Differences issued from the system, not substances before it.
 
 **Compressed Insight:**
-He refused the dictionary-as-universe — words are not stickers on a finished world.
+In language there are only differences without positive terms; language is a form, not a substance — value from the simultaneous presence of the others.
 
-**Confidence:** 0.93  
-**Sources:** *Cours* opening critique of naming-process only.
+**Confidence:** 0.98  
+**Sources:** *Cours* Baskin continuous, Linguistic Value.
 
 ---
 
-## Event 12 — *Death and Structuralist Century* (1913/1916)
+## Event 10 — *Chess: internal vs external; the knight’s value*
 
-**Title:** The System Outlives the Teacher
+**Title:** What changes the system is internal
 
-**Passage or Trigger:**
-Dies 1913; *Cours* appears 1916; twentieth-century structuralism, semiotics, and large parts of anthropology, literary theory, and cultural studies run on Saussurean rails (and on misreadings). The man is brief; the system is long.
+**What I did / What was made:**
+I used chess to separate internal from external linguistics, and the replaceable knight to show that identity in a semiological system is value under fixed rules.
 
-**Why It Qualifies:**
-Institutional afterlife of a mediated book. Arch Linguistics’ modern founding myth is a posthumous course.
+**What I wrote / said (direct — full passage):**
+
+> In internal linguistics the picture differs completely. Just any arrangement will not do. Language is a system that has its own arrangement. Comparison with chess will bring out the point. In chess, what is external can be separated relatively easily from what is internal. The fact that the game passed from Persia to Europe is external; against that, everything having to do with its system and rules is internal. If I use ivory chessmen instead of wooden ones, the change has no effect on the system, but if I decrease or increase the number of chessmen, this change has a profound effect on the “grammar” of the game. One must always distinguish between what is internal and what is external. In each instance one can determine the nature of the phenomenon by applying this rule: everything that changes the system in any way is internal.
+>
+> … Take a knight, for instance. By itself is it an element in the game? Certainly not, for by its material make-up—outside its square and the other conditions of the game—it means nothing to the player; it becomes a real, concrete element only when endowed with value and wedded to it. Suppose that the piece happens to be destroyed or lost during a game. Can it be replaced by an equivalent piece? Certainly. Not only another knight but even a figure shorn of any resemblance to a knight can be declared identical provided the same value is attributed to it. We see then that in semiological systems like language, where elements hold each other in equilibrium in accordance with fixed rules, the notion of identity blends with that of value and vice versa.
+
+— *Course in General Linguistics*, Internal/External Elements + Identities/Values continuous. Baskin English.
+
+**How I see it (from inside, in action):**
+Ivory or wood does not rewrite the grammar; changing the set of pieces does. The knight is its powers in the game — not its carved horse-face.
+
+**Why it qualifies as gnosis:**
+Operational test for system-internal facts; identity as value.
 
 **Three-Domain Reading:**
 
-- **Theology:** Word’s power beyond the speaker’s life.
-- **Technology:** Edition as world-historical accident and gift.
-- **Cosmology:** Humanities reorganized by one Geneva classroom’s echo.
+- **Theology:** Rules of the game as higher than materials.
+- **Technology:** Interface vs implementation; value under fixed rules.
+- **Cosmology:** Equilibrium of elements in a system.
 
 **Compressed Insight:**
-He stopped teaching; the century kept taking his course — often without knowing the notes were not his hand.
+Everything that changes the system is internal; a knight is identical if the same value is attributed — identity blends with value.
 
-**Confidence:** 0.94  
-**Sources:** Death 1913; *Cours* 1916; structuralist reception history.
-
----
-
-## Sources / Working Notes
-
-**Primary**
-- *Cours de linguistique générale* (1916; student edition)
-- Early Indo-European *Mémoire*
-
-**Translations**
-- Wade Baskin *Course in General Linguistics*
-
-**Secondary**
-- Wikipedia *Course in General Linguistics*
-- Standard textbooks on signifier/signified, langue/parole
-
-**Open questions for later passes**
-- Manuscript notes vs published *Cours* divergences (critical edition work)
-- Anagram studies / late unpublished notebooks
-- Relation to Peirce’s semiotics (already on Council) as parallel system
+**Confidence:** 0.95  
+**Sources:** *Cours* Baskin continuous, chess comparisons.
 
 ---
 
-## Seat checklist
+## Closing note (voice law)
 
-- [x] Research from *Cours* and career (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple source-grounded events (posthumous edition noted)
-- [ ] member_id: `ferdinand-de-saussure`
-- [ ] Registry enrollment when ready
-- [x] PENDING scaffold replaced by full extraction
+Prior soft draft mixed career legend with short slogans. This garden’s sense-units are continuous Baskin English of the *Cours* (posthumous student edition). Early comparative *Mémoire* and critical manuscript work remain for deepen. Holder may use; never become.
 
----
-
-*Council of Reflection — Arch of Human Gnosis (Linguistics). Events grounded in the *Cours* tradition and Indo-European work; student-edited status of the founding book held honestly.*
+**Garden status:** COMPLETE under quotation bar.  
+**Batch 3 seat:** #11 Ferdinand de Saussure.
