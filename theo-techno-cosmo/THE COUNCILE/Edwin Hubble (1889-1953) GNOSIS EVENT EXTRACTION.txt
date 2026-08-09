@@ -1,357 +1,382 @@
-﻿EDWIN HUBBLE GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Natural Sciences → Space Sciences
-**Era:** 1889–1953 (Missouri / Chicago / Mount Wilson / later life)
-**Status:** Extraction complete (seating candidate) — drawn from Mount Wilson observations, published results, and standard astronomical history
+EDWIN HUBBLE GNOSIS EVENT EXTRACTION —
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Cosmos / law / life — extragalactic systems; Cepheid distances; velocity–distance relation
+**Era:** 1889–1953 (Missouri / Chicago / Mount Wilson)
+**Status:** Garden + quotation depth — **Hubble’s own sentences only** at full sense-units. Soft paraphrase is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Credit hygiene: **Henrietta Swan Leavitt** / Shapley zero-point of period–luminosity; **Vesto Slipher** and **Milton Humason** radial velocities; Einstein–de Sitter cosmology as interpretation he names, not sole authorship of expansion theory.
 
 ---
 
 ## Contribution
 
-Astronomer who, with the 100-inch Hooker Telescope at Mount Wilson, identified **Cepheid variables** (notably V1) in the Andromeda “nebula,” proving it a separate galaxy far beyond the Milky Way; who classified nebulae/galaxies and established the **distance–redshift relation** (Hubble’s law, 1929) showing recessional velocity increases with distance — foundational evidence for an **expanding universe**; and whose name the Space Telescope carries as civilizational memorial.
+I assigned **N.G.C. 6822** as the first object definitely outside the galactic system by Cepheid criteria; classified **extra-galactic nebulae** into a progressive sequence of ellipticals and spirals; showed that apparent magnitudes and diameters behave as if nebulae were of comparable absolute luminosity at different distances; and published a roughly **linear relation between radial velocity and distance** among extra-galactic nebulae (*K* ≈ 500 km/sec per million parsecs), with the possibility that it represents the de Sitter effect.
 
 ## Key Insight
 
-The Milky Way is not the whole: spiral “nebulae” are island universes, and the farther they are, the faster they recede — so the cosmos is vastly larger than one galaxy and is not static.
+Extra-galactic nebulae are systems complete in themselves; Cepheids fix distances far beyond the Milky Way; and velocities increase roughly linearly with those distances — so the distribution of velocities is dominated by a distance term that may enter discussions of the general curvature of space.
 
 ## TTC Emphasis
 
-- THEOLOGY
-- TECHNOLOGY
 - COSMOLOGY
+- TECHNOLOGY
+- THEOLOGY
 
 ---
 
-## Preliminary Note
+## D-check (diligence / fact hygiene — before quotation garden)
 
-Hubble is extracted from **observational achievements and papers**, with credit to predecessors: **Henrietta Swan Leavitt**’s period–luminosity relation for Cepheids made the distance ladder step possible; redshift work builds on Vesto Slipher and others. Primary lines:
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| Handwritten “VAR!” as continuous published voice | **Plate act / legend.** Documentary plate of M31; formal continuous voice is NGC 6822 (1925) and M31 paper (1929). May situate as act, not substitute for prose. |
+| “Hubble proved the expanding universe” as his sentence | **Soft reception.** He reports a **velocity–distance relation** and names **de Sitter** as possible interpretation; does not soft-slogan “expanding universe” as sole primary here. |
+| Invented Cepheid distance method alone | **Overclaim.** Period–luminosity from **Leavitt**; zero-point via **Shapley** (explicitly compared in NGC 6822). |
+| Sole measurer of redshifts | **False.** Velocities from Slipher tradition; Humason program for distant nebulae named in 1929 paper. |
+| Modern *H*₀ value as his | **Anachronism.** He proposes *K* ≈ 500 km/sec per 10⁶ parsecs; later revised downward historically. |
+| “Island universe” as coined by him | **Older phrase.** His prose: remote stellar system; extra-galactic; systems complete in themselves. |
 
-1. Mount Wilson 100-inch Hooker Telescope
-2. 1923 plate of Andromeda Cepheid V1 (“VAR!”)
-3. 1924–29 extragalactic distance results
-4. Galaxy classification (tuning-fork scheme)
-5. 1929 velocity–distance relation / Hubble’s law
-6. Hubble constant (historical value later revised; concept durable)
-7. Death 1953; HST naming afterlife
+**Dates:** Born 20 Nov 1889. Death 28 Sept 1953. NGC 6822 paper 1925; Extra-galactic Nebulae 1926; velocity–distance *PNAS* 1929; M31 monograph 1929.
 
 ---
 
-## Event 01 — *Hooker Telescope*
+## Preliminary Note (source hygiene)
 
-**Title:** The Largest Eye on Earth
+| Priority | Material |
+|----------|----------|
+| **1** | “N.G.C. 6822, a Remote Stellar System” (*ApJ* **62**, 1925) |
+| **1** | “Extra-Galactic Nebulae” (*ApJ* **64**, 1926) |
+| **1** | “A Relation between Distance and Radial Velocity among Extra-Galactic Nebulae” (*PNAS* **15**, 1929) |
+| **1** | “A Spiral Nebula as a Stellar System, Messier 31” (*ApJ* **69**, 1929) — abstract / distance continuous |
+| **2** | 1931 Hubble–Humason velocity–distance extension; popular lectures |
+| **3** | Soft “VAR!” legend, HST naming, modern *H*₀ — not as his speech |
 
-**Passage or Trigger:**
-Mount Wilson Observatory’s **100-inch Hooker Telescope** — then the world’s largest — becomes Hubble’s primary instrument for resolving stars in “spiral nebulae.”
+**Carriers used:** ADS PDF text of *ApJ* 1925/1926/1929; NASA APOD full text of *PNAS* 1929 (public scientific classic).
 
-**Why It Qualifies:**
-Cosmology waits on aperture. Technology of glass and mountain air enables a new scale of world.
+---
+
+## Event 01 — *First object outside the galactic system*
+
+**Title:** N.G.C. 6822 as remote stellar system
+
+**What I did / What was made:**
+I studied N.G.C. 6822 with the large Mount Wilson reflectors and assigned it, by Cepheid and structural criteria, as the first object definitely outside the galactic system.
+
+**What I wrote / said (direct — full passage):**
+
+> ABSTRACT
+>
+> A study of N.G.C. 6822.—The object is a very faint cluster of stars and nebulae, about 20′×10′, resembling the Magellanic Clouds. Detailed investigations confirm the similarity and show that it extends to many structural features of these systems. Familiar relations such as those connecting periods and luminosities of Cepheids, luminosities of brightest stars involved in diffuse nebulae, and frequencies of the most luminous stars in the systems are consistent when applied to N.G.C. 6822, the first object definitely assigned to a region outside the galactic system.
+>
+> …
+>
+> Cepheid criterion of distance.—Since the Cepheid criterion appears to function normally in N.G.C. 6822, its value as a means of exploring extragalactic space is considerably enhanced.
+>
+> …
+>
+> N.G.C. 6822 is a faint irregular cluster of stars with several small nebulae involved. … The photographs show a striking resemblance to the Magellanic Clouds, and detailed investigations have abundantly confirmed this first impression. Cepheid variables, diffuse nebulae, dimensions, density, and distribution of stellar luminosities agree in defining the system as a curiously faithful copy of the clouds, but removed to a vastly greater distance. N.G.C. 6822 lies far outside the limits of the galactic system, even as outlined by the globular clusters, and hence may serve as a stepping-stone for speculations concerning the habitants of space beyond.
+
+— Edwin Hubble, “N.G.C. 6822, a Remote Stellar System,” *Astrophysical Journal* **62** (1925): 409 ff. (Mt. Wilson Contr. No. 304). Abstract + opening continuous.
+
+**How I see it (from inside, in action):**
+The object is a Magellanic copy at vastly greater distance. Cepheids work there. It is outside even the globular-cluster outline of the Galaxy — a stepping-stone beyond.
+
+**Why it qualifies as gnosis:**
+First secure extragalactic stellar system by consistent criteria, not soft island-universe rhetoric alone.
 
 **Three-Domain Reading:**
 
-- **Theology:** Seeing farther as human vocation of wonder.
-- **Technology:** Large reflector as civilizational instrument.
-- **Cosmology:** Observational reach defines known universe size.
+- **Theology:** Space beyond our galactic limits as inhabited by other systems.
+- **Technology:** 100-inch reflector plates; blink-comparator survey of variables.
+- **Cosmology:** Extragalactic space opened by a single remote system measured.
 
 **Compressed Insight:**
-He needed the biggest eye available — because the truth was outside the old sky’s map.
+N.G.C. 6822 is the first object definitely assigned outside the galactic system — a Magellanic copy at vastly greater distance.
 
-**Confidence:** 0.94  
-**Sources:** Mount Wilson / Hooker histories; CSIRO education summaries.
+**Confidence:** 0.99  
+**Sources:** Hubble 1925 NGC 6822 continuous.
 
 ---
 
-## Event 02 — *Leavitt’s Candle*
+## Event 02 — *Period-luminosity to 214,000 parsecs*
 
-**Title:** Borrowed Ladder Rung
+**Title:** Cepheids fix the distance
 
-**Passage or Trigger:**
-**Henrietta Swan Leavitt**’s period–luminosity relation for Cepheid variables: longer period → intrinsically brighter. Hubble applies this “standard candle” method to extragalactic targets.
+**What I did / What was made:**
+I measured eleven Cepheids in N.G.C. 6822 and, comparing the period–luminosity curve with Shapley’s, obtained *m* − *M* = 21.65 and a distance of 214,000 parsecs.
 
-**Why It Qualifies:**
-Honest genealogy of discovery. Hubble’s leap stands on a woman’s Harvard work. Council names the rung he climbed.
+**What I wrote / said (direct — full passage):**
+
+> A survey of the plates with a blink-comparator has led to the discovery of fifteen variable stars within the area covered by the system. … No variables have been found on the plates outside the limits of the cluster, hence those within the limits must be considered as actual members of the system. Eleven of the variables are clearly Cepheids, and a few of the remaining four may ultimately prove to be of the same type. Periods, normal curves, and photographic magnitudes have been determined for the Cepheids, the periods ranging from 12 to 64 days and the magnitudes, at maximum, from 17.45 to 19.05. The familiar period-luminosity relation is conspicuously present and the curve is parallel to Shapley’s general curve expressing the corresponding relation among previously known Cepheids. The displacement in magnitudes between these two curves leads to a value of *m*−*M* = 21.65, corresponding to a distance of 214,000 parsecs.
+
+— Hubble, “N.G.C. 6822…” (1925), Cepheid section continuous. (Zero-point via Shapley’s curve; Leavitt’s period–luminosity relation is the underlying candle.)
+
+**How I see it (from inside, in action):**
+Variables inside the cluster are members. The PL curve is parallel to Shapley’s — only shifted in magnitude. That shift *is* the distance.
+
+**Why it qualifies as gnosis:**
+Standard-candle metrology applied beyond the Galaxy with explicit numbers.
 
 **Three-Domain Reading:**
 
-- **Theology:** Truth as cooperative across overlooked laborers.
-- **Technology:** Standard candles as metrology of deep space.
-- **Cosmology:** Brightness–period law as cosmic measuring tape.
+- **Theology:** Same light-law of variable stars at remote distance.
+- **Technology:** Blink-comparator; Selected Area magnitude system; 100-inch plates.
+- **Cosmology:** 214,000 parsecs as measured step into extragalactic space.
 
 **Compressed Insight:**
-He measured galaxies with a rule another mind had carved — Leavitt’s Cepheids made his distances speak.
+*m* − *M* = 21.65 — distance 214,000 parsecs from Cepheids parallel to Shapley’s curve.
 
-**Confidence:** 0.95  
-**Sources:** Kirshner and standard Hubble histories citing Leavitt.
+**Confidence:** 0.99  
+**Sources:** Hubble 1925 Cepheid continuous.
 
 ---
 
-## Event 03 — *V1 / “VAR!”* (1923)
+## Event 03 — *Part to the whole*
 
-**Title:** The Plate That Broke the Island
+**Title:** Galactic vs extra-galactic nebulae
 
-**Passage or Trigger:**
-October 1923: on a Mount Wilson plate of Andromeda (M31), Hubble marks a star first as nova (“N”), then crosses out and writes **“VAR!”** — recognizing a **Cepheid variable** (V1). Period (~31 days classically associated) yields distance placing Andromeda far outside the Milky Way (historical figure ~900,000 light-years in early Hubble estimates; modern value higher, method same in spirit).
+**What I did / What was made:**
+I stated the fundamental division: galactic nebulae are parts of a stellar system; extra-galactic nebulae are systems complete in themselves.
 
-**Why It Qualifies:**
-Central Space Sciences event. The “nebula” is a galaxy. Universe multiplies. The handwritten excitement is documentary theater of recognition.
+**What I wrote / said (direct — full passage):**
+
+> Recent studies have emphasized the fundamental nature of the division between galactic and extra-galactic nebulae. The relationship is not generic; it is rather that of the part to the whole. Galactic nebulae are clouds of dust and gas mingled with the stars of a particular stellar system; extra-galactic nebulae, at least the most conspicuous of them, are now recognized as systems complete in themselves, and often incorporate clouds of galactic nebulosity as component parts of their organization. Definite evidence as to distances and dimensions is restricted to six systems, including the Magellanic Clouds. The similar nature of the countless fainter nebulae has been inferred from the general principle of the uniformity of nature.
+>
+> The extra-galactic nebulae form a homogeneous group in which numbers increase rapidly with diminishing apparent size and luminosity. Four are visible to the naked eye; 141 are found on the Harvard “Sky Map”; 700 are on the Franklin-Adams plates; 300,000 are estimated to be within the limits of an hour’s exposure with the 60-inch reflector. These data indicate a wide range in distance or in absolute dimensions.
+
+— Edwin Hubble, “Extra-Galactic Nebulae,” *Astrophysical Journal* **64** (1926): 321 ff. (Mt. Wilson Contr. No. 324), opening continuous.
+
+**How I see it (from inside, in action):**
+Not two kinds of fog of the same order — part versus whole. Conspicuous extra-galactic objects are complete systems. Uniformity extends that nature to the fainter throng.
+
+**Why it qualifies as gnosis:**
+Ontological re-sort of “nebulae” into galactic weather and external galaxies.
 
 **Three-Domain Reading:**
 
-- **Theology:** Humility — our island is not the all.
-- **Technology:** Photographic plate + variable-star analysis.
-- **Cosmology:** Island-universe model confirmed observationally.
+- **Theology:** Whole systems beyond our particular stellar system.
+- **Technology:** Counts to 60-inch plate limits as census of depth.
+- **Cosmology:** Homogeneous extragalactic population vs local dust-and-gas.
 
 **Compressed Insight:**
-He crossed out “nova,” wrote “VAR!,” and the Milky Way stopped being the whole creation.
+The relationship of galactic to extra-galactic is that of the part to the whole — systems complete in themselves.
 
-**Confidence:** 0.97  
-**Sources:** Smithsonian / NASA / ESA accounts of V1 plate; 1923 discovery narrative.
+**Confidence:** 0.99  
+**Sources:** Hubble 1926 opening continuous.
 
 ---
 
-## Event 04 — *Island Universes Confirmed*
+## Event 04 — *Sequence of ellipticals and spirals*
 
-**Title:** Spirals as Galaxies
+**Title:** Classification of extra-galactic nebulae
 
-**Passage or Trigger:**
-1924–29: Cepheids in Andromeda, Triangulum, and other systems prove many “nebulae” are extragalactic galaxies — ending (for most) the Great Debate’s island-universe question in favor of a vast multi-galaxy cosmos. Formal publication of Andromeda results in peer-reviewed form by 1929.
+**What I did / What was made:**
+I classified regular extra-galactic nebulae into a progressive sequence of ellipticals and spirals (normal and barred), with irregulars aside — descriptive, not theory-bound.
 
-**Why It Qualifies:**
-World-size revision. Astronomy’s object becomes the universe of galaxies, not one stellar system’s foggy edges.
+**What I wrote / said (direct — full passage):**
+
+> ABSTRACT
+>
+> …
+>
+> The classification employed is based on the forms of the photographic images. About 3 per cent are irregular, but the remaining nebulae fall into a sequence of type forms characterized by rotational symmetry about dominating nuclei. The sequence is composed of two sections, the elliptical nebulae and the spirals, which merge into each other.
+>
+> …
+>
+> The characteristic feature of extra-galactic nebulae is rotational symmetry about dominating non-stellar nuclei. About 97 per cent of these nebulae are regular in the sense that they show this feature conspicuously. The regular nebulae fall into a progressive sequence ranging from globular masses of unresolved nebulosity to widely open spirals whose arms are swarming with stars. The sequence comprises two sections, elliptical nebulae and spirals, which merge into each other.
+>
+> Although deliberate effort was made to find a descriptive classification which should be entirely independent of theoretical considerations, the results are almost identical with the path of development derived by Jeans from purely theoretical investigations. … It should be borne in mind, however, that the basis of the classification is descriptive and entirely independent of any theory.
+>
+> …
+>
+> CLASSIFICATION OF NEBULAE — Continued
+>
+> 2. Spirals:
+> a) Normal spirals S — (1) Early Sa (2) Intermediate Sb (3) Late Sc
+> b) Barred spirals SB — (1) Early SBa (2) Intermediate SBb (3) Late SBc
+> B. Irregular Irr
+
+— Hubble, “Extra-Galactic Nebulae” (1926), abstract + classification continuous. (Later popular “tuning-fork” diagram develops this sequence; 1926 is the continuous published classification voice.)
+
+**How I see it (from inside, in action):**
+Form on the plate first. Nearly all regular: nucleus and rotational symmetry. Ellipticals merge into spirals; Jeans may match, but the basis stays descriptive.
+
+**Why it qualifies as gnosis:**
+Morphology ordered so that the sky of galaxies becomes a comparable sequence, not a chaos of smudges.
 
 **Three-Domain Reading:**
 
-- **Theology:** Scale of creation exploded.
-- **Technology:** Repeatable distance method across targets.
-- **Cosmology:** Cosmos as archipelago of galaxies.
+- **Theology:** Order of forms without forcing a creation-story into the labels.
+- **Technology:** Photographic-image classification across thousands of plates.
+- **Cosmology:** Progressive sequence from unresolved globular masses to open, star-swarming arms.
 
 **Compressed Insight:**
-He stacked enough distant Cepheids that “nebula” had to mean galaxy — again and again.
+Regular extra-galactic nebulae form a progressive sequence — ellipticals and spirals merging — rotational symmetry about nuclei.
 
-**Confidence:** 0.96  
-**Sources:** Wikipedia Hubble; CSIRO; peer-review timeline notes.
+**Confidence:** 0.98  
+**Sources:** Hubble 1926 classification continuous.
 
 ---
 
-## Event 05 — *Galaxy Classification*
+## Event 05 — *Apparent magnitude as measure of distance*
 
-**Title:** The Tuning Fork of Forms
+**Title:** Uniform absolute luminosity; density of space
 
-**Passage or Trigger:**
-Hubble’s morphological classification of galaxies (ellipticals, spirals, barred spirals — the **tuning-fork** diagram tradition) — order imposed on the new zoo of island universes.
+**What I did / What was made:**
+I argued that nebulae are of the same order of absolute luminosity, so apparent magnitude measures distance; gave mean *M* = −15.2 and a statistical distance formula; found approximately uniform density of space.
 
-**Why It Qualifies:**
-Taxonomy as first science after discovery. Form language for a new kingdom of objects.
+**What I wrote / said (direct — full passage):**
+
+> Luminosity relations.—The distribution of magnitudes appears to be uniform throughout the sequence. For each type or stage in the sequence, the total magnitudes are related to the logarithms of the maximum diameters by the formula,
+>
+> *m*T = *C* − 5 log *d*,
+>
+> where *C* varies progressively from type to type, indicating a variation in diameter for a given magnitude or vice versa. … The coefficient of log *d* corresponds with the inverse-square law, which suggests that the nebulae are all of the same order of absolute luminosity and that apparent magnitudes are measures of distance. This hypothesis is supported by similar results for the nuclear magnitudes and the magnitudes of the brightest stars involved, and by the small range in luminosities among nebulae whose distances are already known.
+>
+> Distances and absolute dimensions.—The mean absolute visual magnitude, as derived from the nebulae whose distances are known, is −15.2. The statistical expression for the distance in parsecs is then
+>
+> log *D* = 4.04 + 0.2 *m*T ,
+>
+> where *m*T is the total apparent magnitude. …
+>
+> Distribution and density of space.—To apparent magnitude about 16.7, corresponding to an exposure of one hour on fast plates with the 60-inch reflector, the numbers of nebulae to various limits of total magnitude vary directly with the volumes of space represented by the limits. This indicates an approximately uniform density of space, of the order of one nebula per 10¹⁷ cubic parsecs or 1.5×10⁻³¹ in C.G.S. units. The corresponding radius of curvature of the finite universe of general relativity is of the order of 2.7×10¹⁰ parsecs, or about 600 times the distance at which normal nebulae can be detected with the 100-inch reflector.
+
+— Hubble, “Extra-Galactic Nebulae” (1926), abstract continuous (luminosity, distance, density).
+
+**How I see it (from inside, in action):**
+Inverse-square behavior of magnitude and diameter: same order of absolute light, different distances. Counts rise with volume — roughly uniform space density — and that density already speaks to the scale of a relativistic finite universe.
+
+**Why it qualifies as gnosis:**
+Statistical cosmology from plate photometry: distance ladder in magnitudes before the 1929 velocity law.
 
 **Three-Domain Reading:**
 
-- **Theology:** Naming the host of heavens.
-- **Technology:** Classification scheme as research OS.
-- **Cosmology:** Galaxies as typed populations, not one blur.
+- **Theology:** Uniform order of nebular luminosities as lawful cosmos.
+- **Technology:** 60-inch one-hour plate limit as volume probe.
+- **Cosmology:** Density ~ one nebula per 10¹⁷ pc³; radius of curvature estimate under GR.
 
 **Compressed Insight:**
-He gave the new universe a grammar of shapes — so comparison could begin.
+Apparent magnitudes measure distance — mean *M* = −15.2 — and density of space is approximately uniform.
 
-**Confidence:** 0.93  
-**Sources:** Hubble classification scheme; standard textbooks.
+**Confidence:** 0.98  
+**Sources:** Hubble 1926 abstract continuous.
 
 ---
 
-## Event 06 — *Redshift and Distance* (1929)
+## Event 06 — *Linear relation between velocities and distances*
 
-**Title:** The Farther, the Faster
+**Title:** Velocity–distance among extra-galactic nebulae
 
-**Passage or Trigger:**
-1929: relation between galaxy distance and recessional velocity (redshift) — **Hubble’s law**: velocity increases with distance. Foundational empirical law of modern cosmology (building on Slipher’s redshifts and distance work). Later refined; the linear expansion signature remains.
+**What I did / What was made:**
+From reliable distances and available radial velocities I found a roughly linear relation; solved for *K* ≈ 500 km/sec per million parsecs; named the possible de Sitter interpretation.
 
-**Why It Qualifies:**
-Static cosmos dies. Expansion (or its kinematic signature) enters as data. Space Sciences seat’s second thunderclap after island universes.
+**What I wrote / said (direct — full passage):**
+
+> Determinations of the motion of the sun with respect to the extra-galactic nebulae have involved a term of several hundred kilometers which appears to be variable. Explanations of this paradox have been sought in a correlation between apparent radial velocities and distances, but so far the results have not been convincing. The present paper is a re-examination of the question, based on only those nebular distances which are believed to be fairly reliable.
+>
+> Distances of extra-galactic nebulae depend ultimately upon the application of absolute-luminosity criteria to involved stars whose types can be recognized. These include, among others, Cepheid variables, novae, and blue stars involved in emission nebulosity. Numerical values depend upon the zero point of the period-luminosity relation among Cepheids, the other criteria merely check the order of the distances. …
+>
+> Radial velocities of 46 extra-galactic nebulae are now available, but individual distances are estimated for only 24. …
+>
+> The data in the table indicate a linear correlation between distances and velocities, whether the latter are used directly or corrected for solar motion, according to the older solutions. This suggests a new solution for the solar motion in which the distances are introduced as coefficients of the *K* term, i.e., the velocities are assumed to vary directly with the distances, and hence *K* represents the velocity at unit distance due to this effect. The equations of condition then take the form
+>
+> *rK* + *X* cos α cos δ + *Y* sin α cos δ + *Z* sin δ = *v*.
+>
+> …
+>
+> For such scanty material, so poorly distributed, the results are fairly definite. … Meanwhile round numbers, intermediate between the two solutions, will represent the probable order of the values. For instance, let … *K* = +500 km./sec. per million parsecs. …
+>
+> The results establish a roughly linear relation between velocities and distances among nebulae for which velocities have been previously published, and the relation appears to dominate the distribution of velocities. In order to investigate the matter on a much larger scale, Mr. Humason at Mount Wilson has initiated a program of determining velocities of the most distant nebulae that can be observed with confidence. …
+>
+> New data to be expected in the near future may modify the significance of the present investigation or, if confirmatory, will lead to a solution having many times the weight. For this reason it is thought premature to discuss in detail the obvious consequences of the present results. …
+>
+> The outstanding feature, however, is the possibility that the velocity-distance relation may represent the de Sitter effect, and hence that numerical data may be introduced into discussions of the general curvature of space. In the de Sitter cosmology, displacements of the spectra arise from two sources, an apparent slowing down of atomic vibrations and a general tendency of material particles to scatter. The latter involves an acceleration and hence introduces the element of time. The relative importance of these two effects should determine the form of the relation between distances and observed velocities; and in this connection it may be emphasized that the linear relation found in the present discussion is a first approximation representing a restricted range in distance.
+
+— Edwin Hubble, “A Relation between Distance and Radial Velocity among Extra-Galactic Nebulae,” *Proceedings of the National Academy of Sciences* **15**, no. 3 (15 March 1929): 168–173. Continuous from opening through conclusion. Velocities: prior published measures; Humason for N.G.C. 7619 and program named.
+
+**How I see it (from inside, in action):**
+Only distances I trust. Velocity rises with distance — *K* about five hundred at a million parsecs. Humason will push farther. I will not over-discuss consequences yet; the outstanding feature is that this may be the de Sitter effect and feed curvature discussions. Linear is a first approximation.
+
+**Why it qualifies as gnosis:**
+Observational law linking extragalactic distance and radial velocity — foundation of modern expansion cosmology, in his own cautious terms.
 
 **Three-Domain Reading:**
 
-- **Theology:** Creation as dynamic — not a finished frozen vault.
-- **Technology:** Spectroscopy + distance ladder as joint instrument.
-- **Cosmology:** Expanding universe paradigm.
+- **Theology:** Numerical data into the curvature of space — cosmos not a static local stage.
+- **Technology:** Cepheid/nova/bright-star distances + spectrographic velocities; Humason program.
+- **Cosmology:** Roughly linear *v*–*r*; *K* ≈ 500 km s⁻¹ Mpc⁻¹ (historical value); de Sitter named.
 
 **Compressed Insight:**
-He plotted speed against distance — and the universe would not sit still on the graph.
+A roughly linear relation between velocities and distances — *K* ≈ +500 km/sec per million parsecs — may represent the de Sitter effect.
 
-**Confidence:** 0.97  
-**Sources:** 1929 velocity–distance paper tradition; Wikipedia Hubble’s law; Carnegie Science summaries.
+**Confidence:** 0.99  
+**Sources:** Hubble *PNAS* 1929 continuous.
 
 ---
 
-## Event 07 — *Hubble Constant*
+## Event 07 — *Messier 31 as a stellar system*
 
-**Title:** The Number That Ages the Cosmos
+**Title:** Andromeda’s distance from Cepheids
 
-**Passage or Trigger:**
-The slope of the velocity–distance relation — **Hubble constant** H₀ — implies an expansion timescale / age estimate. Hubble’s early numerical value was high (universe “too young” vs stellar ages); later revisions fixed the tension’s first form. Concept endures; number improves.
+**What I did / What was made:**
+From hundreds of plates I resolved outer arms of M 31 into stars, measured Cepheids, and found a distance of 273,000 parsecs (relative to Shapley’s Small Cloud).
 
-**Why It Qualifies:**
-Metrology of becoming. One parameter ties sky data to cosmic time. Error is historical; the *move* to quantify expansion rate is the event.
+**What I wrote / said (direct — full passage):**
+
+> ABSTRACT
+>
+> Material.—The present discussion of M 31 is based on the study of about 350 photographs taken with the 60- and 100-inch reflectors, distributed over an interval of about eighteen years. Two-thirds of the total number were obtained by the writer during the five years 1923–1928. …
+>
+> Resolution.—The outer regions of the spiral arms are partially resolved into swarms of faint stars, while the nuclear region shows no indications of resolution under any conditions with the 100-inch reflector. …
+>
+> Variables.—Fifty variables have been found, nearly all in the outer regions where resolution is pronounced. …
+>
+> Cepheids.—Forty of the variables are known to be Cepheids with periods from 48 days to 10 days and maxima from 18.1 to 19.3 photographic magnitude; one exceptional star varies from 17.9 to 19.2 in a period of 175 days. The period-luminosity relation is conspicuous, and the slope is approximately that found among Cepheids in other extra-galactic systems.
+>
+> Distance of M 31 derived from Cepheid criteria.—Comparisons of period-luminosity diagrams indicate that M 31 is about 0.1 mag. or 5 per cent more distant than M 33, and about 8.5 times more distant than the Small Magellanic Cloud. Using Shapley’s value for the Cloud, we find the distance of M 31 to be 273,000 parsecs.
+
+— Edwin Hubble, “A Spiral Nebula as a Stellar System, Messier 31,” *Astrophysical Journal* **69** (1929): 103 ff. (Mt. Wilson Contr. No. 376), abstract continuous. (Plate-era “VAR!” recognition of the first Andromeda Cepheid is the documentary act preceding this published distance.)
+
+**How I see it (from inside, in action):**
+Outer arms resolve into star swarms; nucleus does not. Cepheids fix M 31 far beyond the Clouds — a spiral as a stellar system at 273,000 parsecs.
+
+**Why it qualifies as gnosis:**
+The brightest spiral made a measured extragalactic stellar system in continuous scientific prose.
 
 **Three-Domain Reading:**
 
-- **Theology:** Time-depth of creation as measurable claim.
-- **Technology:** Constant as calibration target for generations of instruments.
-- **Cosmology:** Age of the universe as scientific object.
+- **Theology:** Our island not unique; Andromeda is another complete system of stars.
+- **Technology:** Hundreds of 60- and 100-inch plates over years; selected fields covering ~40% of the nebula.
+- **Cosmology:** Distance ladder Cloud → M 33 → M 31; multi-galaxy cosmos secured.
 
 **Compressed Insight:**
-He gave expansion a number — and forced cosmology to argue in years, not only myths of origin.
+M 31 is about 8.5 times more distant than the Small Magellanic Cloud — 273,000 parsecs from Cepheids.
 
-**Confidence:** 0.94  
-**Sources:** Hubble constant history; Kirshner on modern vs early H₀.
-
----
-
-## Event 08 — *Not Alone in the Work*
-
-**Title:** Credit’s Full Field
-
-**Passage or Trigger:**
-Historical honesty: Leavitt’s Cepheids; Slipher’s redshifts; theoretical expansion contexts (Friedmann, Lemaître) parallel and interact with Hubble’s observational synthesis. Hubble is linchpin observer, not sole author of the expanding universe idea.
-
-**Why It Qualifies:**
-Council hygiene: greatness without erasure of the network. Space science is cumulative.
-
-**Three-Domain Reading:**
-
-- **Theology:** Truth as common work.
-- **Technology:** Observation–theory relay.
-- **Cosmology:** Discovery as social process.
-
-**Compressed Insight:**
-He stood on Leavitt’s ladder and Slipher’s shifts — and still changed what “universe” meant.
-
-**Confidence:** 0.93  
-**Sources:** Standard multi-credit cosmology histories.
+**Confidence:** 0.99  
+**Sources:** Hubble 1929 M31 abstract continuous.
 
 ---
 
-## Event 09 — *From Law to Observatory Culture*
+## Life-list spine (acts only — not soft voice)
 
-**Title:** Mount Wilson as Factory of Distance
-
-**Passage or Trigger:**
-Institutional life of Mount Wilson observing runs, plates, reductions — industrial rhythm of night science producing epochal numbers.
-
-**Why It Qualifies:**
-Discovery as **scheduled labor** under a mountain’s sky, not only eureka myth.
-
-**Three-Domain Reading:**
-
-- **Theology:** Vigil as scientific vocation.
-- **Technology:** Observatory pipeline.
-- **Cosmology:** Knowledge extracted on human night-cycles from inhuman distances.
-
-**Compressed Insight:**
-He mined the dark with a hundred-inch glass — night after night until the plate said “farther.”
-
-**Confidence:** 0.88  
-**Sources:** Observatory practice in Hubble biographies.
+| Year | Act |
+|------|-----|
+| 1889 | Born Missouri, 20 November |
+| 1919 ff. | Mount Wilson Observatory |
+| 1923–24 | Cepheid program on extragalactic candidates (incl. M31 plates) |
+| 1925 | *N.G.C. 6822, a Remote Stellar System* |
+| 1926 | *Extra-Galactic Nebulae* (classification + statistics) |
+| 1929 | *PNAS* velocity–distance relation; *Messier 31* monograph |
+| 1931 | Hubble–Humason extension of velocity–distance |
+| 1953 | Death, 28 September; later HST naming is civilizational afterlife, not his sentence |
 
 ---
 
-## Event 10 — *Public Cosmos Shift*
+## Quality gate
 
-**Title:** The Newspaper Universe
+- [x] Direct events carry continuous verbatim from Hubble’s papers
+- [x] Full sense-units (abstracts + openings + law statement), not slogan snippets
+- [x] Citations: work + journal + year
+- [x] “How I see it” depends on the quote
+- [x] Soft “VAR!” / “proved expansion” / modern *H*₀ not dressed as his speech
+- [x] Credit hygiene: Leavitt–Shapley PL zero-point; Slipher/Humason velocities; de Sitter named as interpretation
 
-**Passage or Trigger:**
-1920s–30s public reception: island universes and expansion enter general culture — the sky’s story rewritten for non-specialists.
-
-**Why It Qualifies:**
-Cosmology becomes public metaphysics. Arch Space Sciences as civilizational news.
-
-**Three-Domain Reading:**
-
-- **Theology:** Humility and awe in popular form.
-- **Technology:** Press as amplifier of science.
-- **Cosmology:** Shared mental model of a vast expanding all.
-
-**Compressed Insight:**
-He forced the public sky to grow — one galaxy was no longer enough for the mind.
-
-**Confidence:** 0.87  
-**Sources:** Popular science reception histories.
-
----
-
-## Event 11 — *Death 1953*
-
-**Title:** Before the Namesake Mirror
-
-**Passage or Trigger:**
-Dies 28 September 1953 — before the space telescope that bears his name. Legacy outruns lifespan.
-
-**Why It Qualifies:**
-Finite observer; infinite program of looking he helped start.
-
-**Three-Domain Reading:**
-
-- **Theology:** Creaturely limit.
-- **Technology:** Naming of later instruments as memorial tech.
-- **Cosmology:** Continuity of the expansion program.
-
-**Compressed Insight:**
-He died; the measuring of recession did not — and a telescope in vacuum took his name aloft.
-
-**Confidence:** 0.93  
-**Sources:** Death date; HST naming afterlife.
-
----
-
-## Event 12 — *Hubble Space Telescope*
-
-**Title:** The Eye That Keeps His Law
-
-**Passage or Trigger:**
-NASA/ESA **Hubble Space Telescope** — named for him; continues Cepheid and deep-field work refining the universe he opened. Centennial commemorations of V1 restage the founding plate.
-
-**Why It Qualifies:**
-Institutional afterlife at maximum: an orbiting observatory as living footnote to 1923.
-
-**Three-Domain Reading:**
-
-- **Theology:** Perpetual praise of the heavens through better seeing.
-- **Technology:** Space astronomy as heir of Mount Wilson.
-- **Cosmology:** Expansion and deep time still under measurement.
-
-**Compressed Insight:**
-The century put his name above the atmosphere — so the expansion he charted would keep being refined.
-
-**Confidence:** 0.94  
-**Sources:** NASA HST naming and V1 commemorations.
-
----
-
-## Sources / Working Notes
-
-**Primary / near-primary**
-- Hubble’s Andromeda Cepheid work (1923–29 publications)
-- 1929 velocity–distance relation
-- Classification papers
-
-**Secondary**
-- Smithsonian Air & Space; NASA; ESA/Hubble; CSIRO education
-- Kirshner on Hubble diagram
-- Wikipedia Edwin Hubble
-
-**Open questions for later passes**
-- Exact 1929 paper quantitative reread
-- Relationship with Humason’s spectroscopy in finer grain
-- Personal papers / war service as secondary biography
-
----
-
-## Seat checklist
-
-- [x] Research from observations and standard history (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple source-grounded events (Leavitt/Slipher credit noted)
-- [ ] member_id: `edwin-hubble`
-- [ ] Registry enrollment when ready
-- [x] PENDING scaffold replaced by full extraction
-
----
-
-*Council of Reflection — Arch of Human Gnosis (Space Sciences). Events grounded in Mount Wilson results and cosmology history; predecessors credited.*
+**Garden status:** COMPLETE — Batch 2 seat #2.

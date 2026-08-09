@@ -6,7 +6,7 @@
 | # | Seat | Status |
 |---|------|--------|
 | 1 | Albert Einstein | COMPLETE |
-| 2 | Edwin Hubble | pending |
+| 2 | Edwin Hubble | COMPLETE |
 | 3 | Charles Darwin | pending |
 | 4 | Antoine Lavoisier | pending |
 | 5 | Carl Friedrich Gauss | pending |
