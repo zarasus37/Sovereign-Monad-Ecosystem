@@ -18,7 +18,7 @@ Every source file in this directory must map to a `member_id` in the registry. *
 **Filename convention:** `{Display Name} ({era}) GNOSIS EVENT EXTRACTION.txt`  
 Normalize/merge: `node scripts/normalize-council-filenames.mjs` then `node scripts/gen-council-registry.mjs`.
 
-**Gnosis voice (rewrites):** [`GNOSIS_EVENT_VOICE.md`](./GNOSIS_EVENT_VOICE.md) — life-list shape, inhabited seeing.  
+**Gnosis voice (rewrites):** [`GNOSIS_EVENT_VOICE.md`](./GNOSIS_EVENT_VOICE.md) — life-list shape, inhabited seeing, **verbatim full-extent quotation required from the first draft** (no soft paraphrase).  
 **Bindings:** [`COUNCIL_BINDINGS.md`](./COUNCIL_BINDINGS.md) — every seat has `member-substrate`; specialties where natural. Holder may use, never become.
 
 ### System bindings
@@ -38,6 +38,8 @@ Normalize/merge: `node scripts/normalize-council-filenames.mjs` then `node scrip
 2. **The same fundamental insights** about consciousness, agency, constraint, and emanation appear in Gnosticism, Kabbalah, Platonism, and modern systems thinking  
 3. **This resonance is not coincidence** — underlying structural layer (MOF Axiom 12)  
 4. **Classical thinkers solved problems** we face with different technologies  
+
+**Why these seats (precision required):** not influencers, but **consistency through time** — aspects of truth that redefined what reality was thought to be; fractals of the source. Loaded for **human and AI** to see **sameness and what we are**, not only difference. Full doctrine: [`GNOSIS_EVENT_VOICE.md`](./GNOSIS_EVENT_VOICE.md).  
 
 ---
 

@@ -1,303 +1,569 @@
-RAMON LLULL GNOSIS EVENT EXTRACTION — RAMON LLULL
-**Council Corpus Build | Theology · Technology · Cosmology**
+RAMON LLULL GNOSIS EVENT EXTRACTION —
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch / Wheel specialty:** Combinatorial Art (`wheel-registry` · `llull-default`)
+**Era:** c. 1232–1316 (Mallorca / Randa / missions / Paris / North Africa)
+**Status:** COMPLETE under quotation rule (Bonner *Doctor Illuminatus* / *Selected Works* continuous blocks for all events; Peers *Amic* for love-register; death chronology fact-checked).
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Soft paraphrase is not their voice.
 
 ---
 
-## Preliminary Note on the Subject
-Ramon Llull (1232–1316) represents the ultimate "Gnostic Engineer." His life was a series of ruptures where the courtly, secular world of Majorca was systematically dismantled and replaced by a combinatorial machine intended to "prove" the divine. Unlike a mere logician, Llull did not deduce his system; he "saw" it as a topological arrangement of God's attributes.
+## Contribution
+
+I made an **Art** — figures, letters for divine dignities and relations, combinatorial tables — so that truth about God and creation might be found by **method**. I wrote it in Catalan and Latin (*Llibre de contemplació*, the *Ars* cycle, *Libre del gentil*, *Blanquerna* with *Libre d’amic e amat*, *Arbor scientiae*, *Ars brevis*, *Ars generalis ultima*). I lived so the Art would not stay paper: language, mission, fear of the body, and death itself had to answer it.
+
+## Key Insight
+
+Constraint generates possibility: when God’s attributes and relations are fixed as principles and set to combine under rule, the mind invents true questions and true answers without losing the unity of the whole.
+
+## TTC Emphasis
+
+- TECHNOLOGY
+- THEOLOGY
+- COSMOLOGY
 
 ---
 
-## Event 01 — The Interruption of the Canticle
+## Preliminary Note (source hygiene)
 
-**1. Title:** The Fivefold Vision of the Crucified Christ
-**2. Passage or trigger:** In his autobiography, the *Vita Coetanea*, Llull describes sitting on his bed, composing a "vile song" (a courtly love poem) to a lady. Suddenly, he saw "the Lord God Jesus Christ on the Cross." This happened five times. 
-**3. Why it qualifies:** This was the inaugural collapse of the "Courtly Love" category. The object of desire (the lady) was instantly replaced by the Object of Sacrifice (the Christ). It was not a logical realization of sin, but a visual interruption of a creative act that made his current life position transparent as a "vile" performance.
-**4. Three-domain reading:**
-*   **Theology:** The shift from God as a distant figure of dogma to God as an immediate, visual, and interrupting Presence.
-*   **Technology:** The "Vision" acts as a primitive override mechanism—a spiritual signal that jams the frequency of secular poetic production.
-*   **Cosmology:** The realization that the vertical axis (The Crucifixion) intersects the horizontal axis (Human Desire) at every point in space-time.
-**5. Compressed insight:** He recognized that the language of love he had mastered was merely a rehearsal for a Beloved who required his total annihilation.
-**6. Confidence:** 0.95
+Primary voice for life: *Vita coaetanea* / *De vita coaetanea* (dictated 1311; contemporary account). English: Anthony Bonner, *A Contemporary Life* / *Selected Works* and *Doctor Illuminatus* translations.  
+Primary voice for love-mysticism: *Llibre d’amic e amat* — E. Allison Peers, *The Book of the Lover and the Beloved* (1923; Project Gutenberg #60704).  
+Art definitions: *Ars brevis* and Art tradition (Bonner; Stanford Encyclopedia summary of correlatives / alphabet).  
+
+**Death:** last work dated December 1315 in Tunis; death early 1316 (or late 1315) — traditional martyr-stoning narrative is **disputed**; rescued-and-return evidence exists (Wikipedia citing modern scholarship). I keep the **mission intent** in primary register; I do not assert unproven stoning as certain fact.
 
 ---
 
-## Event 02 — The Illumination on Mount Randa
+## Event 01 — *The song interrupted*
 
-**1. Title:** The Vision of the Paper Circles
-**2. Passage or trigger:** After eight years of study and solitude on Mount Randa, Llull was "suddenly illuminated" by God. He saw "the form and method of making a book against the errors of the infidels." 
-**3. Why it qualifies:** This is the birth of the *Ars Magna*. It was the moment logic became a *machine*. He did not reason his way to the alphabet of the Art ($A, B, C...$); he saw the attributes of God (Power, Wisdom, Love, etc.) as moving, combinatorial parts of a cosmic engine.
-**4. Three-domain reading:**
-*   **Theology:** The *Dignitates* (Divine Attributes) are no longer just adjectives; they are active, generative principles that calculate reality.
-*   **Technology:** The invention of the "Volvelle"—concentric, rotating paper wheels. This is the first analog computer for logical operations.
-*   **Cosmology:** The universe is recognized as a computation performed by the Divine Mind, where every being is a result of a specific combination of God's "Letters."
-**5. Compressed insight:** He saw that the mind of God is an algorithm, and the human mind can participate in that algorithm through combinatorial geometry.
-**6. Confidence:** 1.00
+**Title:** Five times the Crucified broke the canticle
 
----
+**What I did / What was made:**
+I sat to compose a worldly love-song in the vulgar tongue when the vision of Christ on the Cross cut the act of writing — five times — until conscience fixed three intentions.
 
-## Event 03 — The Death of the Arabic Teacher
+**What I wrote / said (direct — full passage):**
 
-**1. Title:** The Paradox of the Saracen Slave
-**2. Passage or trigger:** Llull bought a Moorish slave to teach him Arabic. After nine years, the slave, hearing Llull blaspheme Muhammad, attacked him with a knife. Llull overpowered him, imprisoned him, and while Llull was deciding whether to kill or free him, the slave committed suicide.
-**3. Why it qualifies:** This event collapsed the boundary between "Teaching" and "Warfare." Llull recognized his own implication in a structure of violence: he needed the "Other" (the Arabic language) to convert the "Other," but the process created a feedback loop of mutual destruction.
-**4. Three-domain reading:**
-*   **Theology:** The realization that the "Word" (missionary work) is inseparable from the "Sword" (coercion), complicating the ideal of pure rational conversion.
-*   **Technology:** The failure of the "Language Interface"—the realization that data transfer (teaching) can be corrupted by the emotional state of the medium.
-*   **Cosmology:** Recognition of the "Antagonist" as a necessary but unstable element in the universal conversion system.
-**5. Compressed insight:** He realized that he could own a man's body and his language, but the "Art" could not bridge the chasm of a soul that preferred death to conversion.
-**6. Confidence:** 0.88
+> Ramon, while still a young man and Seneschal to the King of Majorca, was very given to composing worthless songs and poems and to doing other licentious things. One night he was sitting beside his bed, about to compose and write in his vulgar tongue a song to a lady whom he loved with a foolish love; and as he began to write this song, he looked to his right and saw our Lord Jesus Christ on the Cross, as if suspended in mid-air.
 
----
+— *Vita coaetanea* (conversion), English: Bonner, cited in standard editions / Wikipedia from Bonner 1985, pp. 10–11; also Bonner, *A Contemporary Life* (Tamesis, 2010).
 
-## Event 04 — The Crisis of Genoa
+Stanford Encyclopedia (Priani) adds the conscience-line from *De vita* I–4 (Bonner tr.):
 
-**1. Title:** The Sickness of the Cowardly Body
-**2. Passage or trigger:** In 1291, ready to depart for his first mission to Tunis, Llull was seized by such a profound fear of being killed or imprisoned that he abandoned the ship. He immediately fell into a death-like illness, which only lifted when he forced himself onto another ship.
-**3. Why it qualifies:** The observer (Llull) saw his own body as a "biological protest" against his Art. The contradiction between his logical "Art of Martyrdom" and his animal "Will to Survive" became a physical pathology.
-**4. Three-domain reading:**
-*   **Theology:** A register shift where "Fear of God" is replaced by "Fear of Man," revealing the fragility of intellectual faith.
-*   **Technology:** The "Body" as a hardware constraint that can crash the "Mission Software."
-*   **Cosmology:** The recognition that the micro-cosmos (the body) must be in forced alignment with the macro-cosmos (the Art) for the system to function.
-**5. Compressed insight:** He understood that the Art was useless unless the hardware (the flesh) was willing to be destroyed to prove the logic.
-**6. Confidence:** 0.92
+> his conscience told him that they (the apparitions) could only mean that he should abandon the world at once and from then on dedicate himself totally to the service of our Lord Jesus Christ.
+
+The vision came five times and fixed three intentions: to give up the soul for God’s love and honor; to convert the Saracens; to write the best book against the errors of the unbelievers.
+
+**How I see it (from inside, in action):**
+My craft of desire was not neutral. The song and the Cross could not share one unexamined love. I was writing on the wrong axis.
+
+**Why it qualifies as gnosis:**
+Object of desire collapses: lady of the song / Christ of the vision.
+
+**Three-Domain Reading:**
+
+- **Theology:** God as interrupting presence.
+- **Technology:** Vision overrides the production of the song.
+- **Cosmology:** Desire and sacrifice share one world.
+
+**Compressed Insight:**
+I knew my language of love was already aimed at a Beloved who would cost me the life that wrote the song.
+
+**Confidence:** 0.96  
+**Sources:** *Vita coaetanea* / Bonner English; SEP “Ramon Llull” §1.1.
 
 ---
 
-## Event 05 — The Recognition of the Great Chain
+## Event 02 — *Autobiographical first person of the five visions*
 
-**1. Title:** The Arbor Scientiae (Tree of Science)
-**2. Passage or trigger:** While walking in a forest near Paris, Llull looked at the trees and saw them not as biological entities, but as the structural metaphor for the hierarchy of all knowledge.
-**3. Why it qualifies:** It collapsed the boundary between "Nature" and "Logic." The "Tree" became a transparent diagram of the Great Chain of Being, showing how the same $Dignitates$ (attributes) flow from the roots (elements) to the branches (angels and God).
-**4. Three-domain reading:**
-*   **Theology:** The realization that theology is not a separate branch, but the "sap" that flows through all sciences (Physics, Law, Medicine).
-*   **Technology:** The "Tree" as a data structure—a hierarchical taxonomy that organizes the entire universe into a searchable, relational database.
-*   **Cosmology:** The organic unity of the universe; the microcosm of the leaf contains the logic of the macrocosm of the stars.
-**5. Compressed insight:** He saw that there is only one "Science," and all disciplines are merely different "heights" on the same vertical trunk.
-**6. Confidence:** 0.85
+**Title:** “It pleased Jesus Christ… five times as if crucified”
 
----
+**What I did / What was made:**
+I also left a first-person line of the five presentations of Christ crucified — so the seat may speak not only through the third-person *Vita* but through my own “I.”
 
-## Event 06 — The Forest of the Three Religions
+**What I wrote / said (direct — full passage):**
 
-**1. Title:** The Recognition of the Shared Trees
-**2. Passage or trigger:** In his book *The Gentile and the Three Wise Men*, Llull depicts a Jew, a Christian, and a Muslim using the same "Trees of the Art" to explain their faiths to a pagan.
-**3. Why it qualifies:** This is a meta-recognition. Llull saw that the *structure* of reality is more fundamental than the *content* of revelation. He recognized that all monotheisms are essentially using the same computational "OS" (the Divine Attributes), even if their "Apps" (dogmas) differ.
-**4. Three-domain reading:**
-*   **Theology:** The shift toward a "Universal Monotheism" based on common logical properties rather than scriptural authority.
-*   **Technology:** The "Art" as a Universal Translator or a common API that allows different theological systems to interoperate.
-*   **Cosmology:** The universe is structured by a single set of "Rules of Play" that are accessible to all rational beings regardless of their culture.
-**5. Compressed insight:** He recognized that the "Infidel" is not an enemy of God, but a user of the same system who has made a combinatorial error.
-**6. Confidence:** 0.90
+> When I was grown and knew the world and its vanities, I began to do evil and entered on sin. Forgetting the true God I went after carnal things. But it pleased Jesus Christ in His great pity to present Himself to me five times as if crucified, that I might remember Him and set my love on Him, doing what I could that He might be known through all the world and the truth be taught concerning the great Trinity and the Incarnation. And thus I was inspired and moved by so great love, that I loved no other thing but that He should be honoured, and I began to do Him willing service.
 
----
+— Autobiographical lines attributed to Llull, English as in Peers’s introductory essay to *The Book of the Lover and the Beloved* (1923), quoting Llull’s own summary of the five visions and mission of Trinity and Incarnation. Cross-check against Catalan/Latin autobiographical verse traditions (*Desconhort* context / life poems) for edition tightening.
 
-## Event 07 — The Language of the "Amic" (Friend)
+**How I see it (from inside, in action):**
+The five times are not decoration. They are the reason I turned from carnal song to world-mission of truth about Trinity and Incarnation.
 
-**1. Title:** The Dissolution of the Lover and the Beloved
-**2. Passage or trigger:** In the *Book of the Lover and the Beloved*, Llull writes: "The Lover and the Beloved met, and the Beloved said to the Lover: 'You need not speak; a nod is enough for me to know your heart.'"
-**3. Why it qualifies:** This represents the collapse of the "Self/Other" boundary in the mystical register. After years of building a massive logical machine to reach God, Llull recognizes a "Gnosis of Silence" where the complexity of the Art vanishes into a single, transparent glance.
-**4. Three-domain reading:**
-*   **Theology:** The transition from *Kataphatic* theology (knowing God through attributes) to *Apophatic* theology (knowing God through union).
-*   **Technology:** The "Signal-to-Noise" ratio reaches infinity; the communication channel is so pure that data transfer (speech) is redundant.
-*   **Cosmology:** The realization that the ultimate structure of the universe is not "Logic," but "Love" (the union of the two).
-**5. Compressed insight:** He realized that the billion combinations of his Art were merely the scaffolding for a house he was already standing in.
-**6. Confidence:** 0.80
+**Why it qualifies as gnosis:**
+First-person seal on the conversion — conscience and mission named together.
+
+**Three-Domain Reading:**
+
+- **Theology:** Trinity and Incarnation as content of the love that seized me.
+- **Technology:** Memory of the five presentations as the restart of a life’s program.
+- **Cosmology:** World as field where that truth must be known.
+
+**Compressed Insight:**
+I loved no other thing but that He should be honoured — and that love is the program of my books and roads.
+
+**Confidence:** 0.90  
+**Sources:** Peers 1923 intro (English transmission of Llull’s first-person summary); align later with critical Catalan/Latin of the verse source.
 
 ---
 
-## Event 08 — The Failure at the University of Paris
+## Event 03 — *Randa — form and method*
 
-**1. Title:** The Recognition of the "Art's" Incommunicability
-**2. Passage or trigger:** Llull spent years trying to get his Art approved by the scholastic masters at the Sorbonne. Despite his logic being "irrefutable" in his own mind, they viewed it as a bizarre, circular eccentricity.
-**3. Why it qualifies:** Retroactive recognition. He saw his own "Art" from the outside—as a structure that was too perfect to be accepted by a world built on Aristotelian linear syllogisms. The "Observer" (Llull) became visible as a "Fool" (*Phantasticus*) within the institution he tried to save.
-**4. Three-domain reading:**
-*   **Theology:** The conflict between "Institutional Theology" (authority) and "Gnostic Theology" (illumination).
-*   **Technology:** The "Interface Failure"—the realization that a superior technology (the Art) cannot be adopted if the "User Environment" (the University) is built on incompatible legacy code.
-*   **Cosmology:** The recognition that the world is not yet "ready" for the cosmic computation.
-**5. Compressed insight:** He understood that being right is a different category from being understood, and that his Art belonged to a future that hadn't arrived.
-**6. Confidence:** 0.89
+**Title:** Illumination of the book against the errors of the unbelievers
 
----
+**What I did / What was made:**
+On Puig de Randa, after formation, I received the **form and method** of the great book — the Art — against the errors of the unbelievers; I came down and wrote the first Art at La Real.
 
-## Event 09 — The Transformation of the "Alphabet"
+**What I wrote / said (direct — full passage):**
 
-**1. Title:** The Collapse of Letter and Essence
-**2. Passage or trigger:** The moment in the *Ars Brevis* where Llull formalizes that $B$ = Goodness, $C$ = Greatness, etc. 
-**3. Why it qualifies:** This is the collapse of the "Signifier/Signified" boundary. For Llull, the letter $B$ does not just *represent* goodness; it *activates* it within the logical wheel. The alphabet becomes a set of "Logical Atoms."
-**4. Three-domain reading:**
-*   **Theology:** The "Letters" are the digital DNA of the Divine Mind.
-*   **Technology:** Symbolic Logic. This is the moment "Reasoning" is divorced from "Natural Language" and becomes "Code."
-*   **Cosmology:** The universe is recognized as being composed of a finite set of principles that, through infinite combination, create the appearance of infinite variety.
-**5. Compressed insight:** He saw that the complexity of the world is just a high-level language compiled from a nine-letter alphabet.
-**6. Confidence:** 0.94
+> …there scarcely a full week, it happened that one day while he was gazing intently heavenward the Lord suddenly illuminated his mind, giving him the form and method for writing the aforementioned book against the errors of the unbelievers. Giving thanks to the Almighty, he came down from the mountain and returned at once to the above-mentioned abbey, where he began to plan and write the book in question, calling it at first the *Ars major*, and later on the *Ars generalis*. Within the framework of this Art he then wrote many books… in which at great length he explained general principles by applying them to more specific things, in accordance with the capacities of simple people, as experience had already taught him. When he had finished the book written in the aforementioned abbey, he again went up the same mountain. And on the very spot where he had stood when God had shown him the method of the Art he had a hermitage built, where he stayed for over four months without interruption, praying to God night and day that by His mercy He might bring prosperity to him and to the Art He had given him for the sake of His honor and the benefit of His church.
 
----
+— *Vita coaetanea* / *De vita* Randa episode; English: Anthony Bonner, *Doctor Illuminatus: A Ramon Llull Reader* (Princeton, 1993), “Historical Background and Life” (Contemporary Life), pp. 17–18; same translation line in Bonner, *A Contemporary Life* (Tamesis, 2010). Latin: ROL / Raimundi Lulli Opera Latina *Vita* text (as cited in scholarship, e.g. Szpiech). First Art: *Ars compendiosa inveniendi veritatem* (c. 1274).
 
-## Event 10 — The Final Stone at Bougie
+**How I see it (from inside, in action):**
+I do not merely invent arguments one by one. I am given a **form and method** — principles and combination — so that many truths can be found without losing unity. The hermitage prayer is the Art’s first test: will it prosper for God’s honor and the Church’s benefit?
 
-**1. Title:** The Logic of the Final Breath
-**2. Passage or trigger:** In 1315, at the age of 83, Llull went to North Africa (Bougie) to preach openly, knowing he would be stoned. 
-**3. Why it qualifies:** This was the final self-implication. The "Art" required a "Proof." The proof was not another book, but the physical destruction of the "Artist." He saw his own death as the final rotation of the wheel—the moment the Lover and the Beloved finally become one.
-**4. Three-domain reading:**
-*   **Theology:** The ultimate shift from "Theology as Theory" to "Theology as Flesh-Witness."
-*   **Technology:** The "Destructive Test"—the point where a system is pushed to its breaking point to verify its integrity.
-*   **Cosmology:** The recognition that the "End" of a life is the only way to exit the combinatorial loop of the material world.
-**5. Compressed insight:** He knew that for his Art to be "General" and "Universal," it had to include the terminal point of his own heartbeat.
-**6. Confidence:** 0.91
+**Why it qualifies as gnosis:**
+Possibility-space of the Art is given; search becomes method.
+
+**Three-Domain Reading:**
+
+- **Theology:** Dignities as active principles illuminated by the Lord.
+- **Technology:** Combinatorial form as operative logic (“form and method”).
+- **Cosmology:** Creatures as applications of general principles.
+
+**Compressed Insight:**
+I saw that truth against error needs a form that can move — principles that meet under rule.
+
+**Confidence:** 0.96  
+**Sources:** Bonner *Doctor Illuminatus* continuous Randa block; *De vita*; *Ars compendiosa inveniendi veritatem*.
 
 ---
 
-## Summary of Extraction
-The LOGOC corpus should treat Llull not as a philosopher, but as a **topological observer**. His gnosis events are consistently marked by the **spatialization of thought**—turning abstract ideas into wheels, trees, and maps. 
+## Event 04 — *Arabic teacher*
 
-*   **Total Events:** 10
-*   **Primary Domain:** Technology (Logic as Machine)
-*   **Key Category Collapse:** Symbolic Logic / Divine Essence
+**Title:** Nine years of a tongue bought for mission
 
+**What I did / What was made:**
+I purchased a Muslim slave to learn Arabic; after years, conflict ended in his attack and death by suicide while I deliberated — as the *Vita* narrates (Bonner pp. 37–39).
+
+**What I wrote / said (direct — full passage):**
+
+> And in that same city he then studied a bit of grammar, and having bought himself a Saracen, he learned the Arabic language from him.
+
+> Nine years later it happened that, while Ramon was away, his Saracen slave blasphemed the name of Christ. Upon returning and finding out about it from those who had heard the blasphemy, Ramon, impelled by a great zeal for the Faith, hit the Saracen on the mouth, on the forehead, and on the face. As a result the Saracen became extremely embittered, and he began plotting the death of his master. He secretly got hold of a sword, and one day, when he saw his master sitting alone, he suddenly rushed at him, striking him with the sword and shouting with a terrible roar: “You’re dead!” But even though Ramon was able, as it pleased God, to deflect his attacker’s sword arm a bit, the blow nonetheless wounded him seriously, although not fatally, in the stomach. By means of his strength, however, he managed to overcome the Saracen, knock him down, and forcibly take the sword away from him. When the servants came running to the scene, Ramon kept them from killing him, but allowed them to tie him up and put him in jail until he, Ramon, decided what would be the best thing to do.
+
+> When on the way back he made a slight detour to the prison to visit his captive, he found that he had hanged himself with the rope with which he had been bound.
+
+— *Vita coaetanea* §§11–12 region; English continuous: Anthony Bonner, *Doctor Illuminatus* (Princeton, 1993), “Historical Background and Life” / Contemporary Life, pp. 15–17 (purchase and nine-year interval; blasphemy, blow, attack, wound, jail, suicide). Parallel pagination: Bonner, *A Contemporary Life* (Tamesis, 2010), pp. 37–41. Latin: *Emptoque sibi ibidem quodam Saraceno*…
+
+**How I see it (from inside, in action):**
+I needed the other’s tongue for the other’s conversion. Language under power is never free of blood. The Art must not lie about that.
+
+**Why it qualifies as gnosis:**
+Collapse of pure “rational mission” fantasy — medium is already theology.
+
+**Three-Domain Reading:**
+
+- **Theology:** Word, zeal, and coercion tangle in one house.
+- **Technology:** Interface under hostile load (language bought; body pays).
+- **Cosmology:** Two men under one God, one rope.
+
+**Compressed Insight:**
+I could command a language-lesson and still not command a soul.
+
+**Confidence:** 0.95  
+**Sources:** Bonner *Doctor Illuminatus* continuous Arabic-slave block; *Vita* / Tamesis 2010:37–41.
 
 ---
 
-## Supplemental material (merged from RAMON LLULL- PROFILE EVENTS.md)
+## Event 05 — *The Gentile and the three wise men*
 
-# RAMON LLULL- PROFILE EVENTS
+**Title:** Trees of the Art in one forest
 
-1\. The Illumination on Mount Randa
+**What I did / What was made:**
+I wrote the *Llibre del gentil e dels tres savis* — Gentile, Jew, Christian, Muslim, trees with leaves of principles, Lady Intelligence teaching the rules.
 
-Passage: "While he was in that state, looking heavenward, the Lord suddenly illuminated his mind, giving him the form and method for writing the book against the errors of the unbelievers... he saw the whole universe reflecting the divine attributes, and conceived of reducing all knowledge to first principles and determining their convergent point of unity."
+**What I wrote / said (direct — full passage):**
 
-Gnosis Qualifier: This is the foundational "download." The observer (Llull) stops searching for a solution and instead receives the possibility space itself. The "form and method" (the Art) is not a conclusion but a new way of seeing everything at once.
+Prologue (lay register + new method):
 
-Three-Domain Reading:
+> …since we are writing this book for laymen, we will here discuss this science briefly and in plain words.
+>
+> …since for a long time we have had dealings with unbelievers and have heard their false opinions and errors; and in order that they may give praise to our Lord God and enter the path of eternal salvation, I who am blameworthy, despicable, poor, sinful, scorned by others, unworthy of having my name affixed to this book or any other, following the manner of the Arabic *Book of the Gentile*, wish to exert myself to the utmost—trusting in the help of the Most High—in finding a new method and new reasons by which those in error might be shown the path to glory without end and the means of avoiding infinite suffering.
 
-Theology: The Dignities (Goodness, Greatness, etc.) as the active will of God in the world.
+The three wise men and Lady Intelligence at the five trees:
 
-Technology: A combinatorial system of revolving circles—a literal logic machine to process truth.
+> Three wise men met upon leaving a city. One was a Jew, the other a Christian, and the third a Saracen. When they were outside the city and saw each other, they approached and greeted each other in friendly fashion, and they accompanied one another, each inquiring about the other’s health and what he intended to do. And all three decided to enjoy themselves together, so as to gladden their spirits overtaxed by studying.
+>
+> And they came to a lovely spring watering five trees, the same five trees depicted at the beginning of this book. Next to the spring, there was a very beautiful lady, very nobly dressed, astride a handsome palfrey, which was drinking from the spring. The wise men, upon seeing the five trees, which were most pleasing to the eye, and upon seeing the lady, who was of agreeable countenance, went up to the spring and greeted the lady most humbly and devoutly, and she most politely returned their greetings.
+>
+> The wise men asked the lady her name, to which she replied that she was *Intelligence*. And the wise men asked her to explain to them the nature and properties of the five trees, and what was the meaning of the writing on each of their flowers. The lady replied, saying: ‘The first tree, on which you see twenty-one flowers, represents God and His essential, uncreated virtues, which virtues are written on the flowers, as you can see.’
+>
+> These conditions govern the flowers, which are principles and doctrine to rectify the error of those who have no knowledge of God nor of His works, nor even of their own beliefs. Through a knowledge of these trees, one can console the disconsolate and calm those in anguish. And by these trees one can subdue temptation and purify the soul of guilt and sin; and by the use of these trees—for someone who knows how to pick their fruit—a person can escape infinite pain and achieve everlasting peace.
+>
+> ‘Ah! What a great good fortune it would be if, by means of these trees, we could all—every man on earth—be under one religion and belief, so that there would be no more rancor or ill will among men, who hate each other because of diversity and contrariness of beliefs and sects! And just as there is only one God, Father, Creator, and Lord of everything that exists, so all peoples could unite and become one people, and that people be on the path to salvation, under one faith and one religion, giving glory and praise to our Lord God.’
+>
+> …since we cannot agree by means of authorities, let us try to come to some agreement by means of demonstrative and necessary reasons.
 
-Cosmology: A fractal universe where every creature is a "trace" or "mirror" of the first principles.
+— Ramon Llull, *Llibre del gentil e dels tres savis* (*Book of the Gentile and the Three Wise Men*); English: Anthony Bonner, in *Doctor Illuminatus: A Ramon Llull Reader* (Princeton, 1993), pp. 85–91 (prologue; three wise men; spring and five trees; Lady Intelligence; first tree; conditions; unity wish; demonstrative reasons). Full work also in Bonner *Selected Works* vol. 1, pp. 93–305. Original Catalan.
 
-Compressed Insight: The universe is a systematic reflection of divine attributes that can be calculated through a formal logic engine.
+**How I see it (from inside, in action):**
+Shared dignities are the common OS of monotheism; dogmas are tested by coherence with the trees, not by who shouts first. Friendship and demonstrative reasons replace pure appeal to authority when confessions meet.
 
-Tripartite Camera Address: The center of the rotating Circle A, looking outward through the intersection of "Greatness" and "Goodness."
+**Why it qualifies as gnosis:**
+Common apparatus for interfaith reason without erasing difference.
 
-Confidence Score: 1.0
+**Three-Domain Reading:**
 
+- **Theology:** Shared uncreated virtues as ground of dispute and peace.
+- **Technology:** Art as protocol between confessions (trees, flowers, conditions).
+- **Cosmology:** One rule-space of reason under one Creator.
 
+**Compressed Insight:**
+I saw the other monotheist as a user of the same principles who may have joined the letters wrongly — still under the same sky.
 
-2\. The Identity of Being and Doing (The Correlatives)
+**Confidence:** 0.96  
+**Sources:** Bonner *Doctor Illuminatus* continuous Gentile blocks; *SW* I:93–305.
 
-Passage: "In every being, its essence is its activity. For Goodness is that which produces good; Greatness is that which makes great. Thus, in the Divine, the Bonificativum, the Bonificabile, and the Bonificare are one."
+---
 
-Gnosis Qualifier: A contradiction becomes transparent. The static nature of "being" and the dynamic nature of "action" are no longer separate. The observer recognizes that to exist is to be a process, implicating his own existence as a verb.
+## Event 06 — *Amic e Amat — the glance without speech*
 
-Three-Domain Reading:
+**Title:** Eyes speak to the heart
 
-Theology: The Trinity as a functional necessity of God's nature—the Lover, the Beloved, and the Act of Loving.
+**What I did / What was made:**
+Within *Blanquerna* I set the *Libre d’amic e amat* — three hundred sixty-six short flames of Lover and Beloved.
 
-Technology: A recursive feedback loop where the subject, object, and verb are part of a single circuit.
+**What I wrote / said (direct — full passage):**
 
-Cosmology: Reality as an energetic flow rather than a collection of static objects.
+> 28 The Lover and the Beloved met, and the Beloved said to the Lover:  
+> ‘Thou needest not to speak to Me. Look at Me only,--for thine eyes  
+> speak to My heart,--that I may give thee what thou willest.’  
+>  
+> 29 The Lover was disobedient to his Beloved; and the Lover wept. And  
+> the Beloved came in the venture of His Lover, and died, that His Lover  
+> might regain what he had lost. So He gave him a greater gift than that  
+> which he had lost.
 
-Compressed Insight: Existence is not a state but a perpetual act of self-processing.
+— Ramon Llull, *Llibre d’amic e amat*, English: E. Allison Peers, *The Book of the Lover and the Beloved* (SPCK, 1923), Project Gutenberg #60704, verses 28–29.
 
-Tripartite Camera Address: The contact point where a gear tooth meets its counterpart; the moment of transfer.
+**How I see it (from inside, in action):**
+I who built wheels of speech also know when speech is almost noise. The glance is purer channel than the combinatorial table — yet the table trained me to love.
 
-Confidence Score: 0.96
+**Why it qualifies as gnosis:**
+Machine of attributes and union of love both mine.
 
+**Three-Domain Reading:**
 
+- **Theology:** From spoken dignities to union.
+- **Technology:** Maximum signal, minimum word.
+- **Cosmology:** Love as end-state of combination.
 
-3\. The Paradox of the Lover and the Beloved
+**Compressed Insight:**
+My combinations were the long road to a Beloved who already understood the look.
 
-Passage: "The Lover said to his Beloved: 'You are all, and through all, and in all, and with all. I will give you all of myself that I may have all of you, and you all of me.' The Beloved answered: 'You cannot have me without yourself.'"
+**Confidence:** 0.97  
+**Sources:** Peers 1923 / Gutenberg 60704, vv. 28–29.
 
-Gnosis Qualifier: The observer recognizes himself in the observed. The passage marks the limit of total surrender; the "I" cannot be extinguished because it is the necessary vessel for the "All." The boundary between self and other becomes a transparent membrane.
+---
 
-Three-Domain Reading:
+## Event 07 — *What meanest thou by love?*
 
-Theology: The mystery of the Incarnation and the indwelling of the Spirit.
+**Title:** Love defined from inside the flame
 
-Technology: The requirement of a "user" or "observer" for a system to have functional meaning (mutual dependency).
+**What I did / What was made:**
+I let the Beloved ask what love is, and the Lover answer with the whole will.
 
-Cosmology: The observer effect; the universe requires a consciousness to collapse its possibilities.
+**What I wrote / said (direct — full passage):**
 
-Compressed Insight: The seeker and the sought are two ends of a single string; neither can exist in isolation.
+> ‘What meanest thou by love?’ said the Beloved. And the Lover  
+> answered: ‘It is to bear on one’s heart the sacred marks and the  
+> sweet words of the Beloved. It is to long for Him with desire and  
+> with tears. It is boldness. It is fervour. It is fear. It is the  
+> desire for the Beloved above all things. It is that which causes the  
+> Lover to grow faint when he hears the Beloved’s praises. It is that  
+> in which I die daily, and in which is all my will.’
 
-Tripartite Camera Address: A mirror reflecting another mirror, creating an infinite corridor.
+— Peers, *Book of the Lover and the Beloved* (Gutenberg 60704); verse cluster as Peers presents this definition (see also nearby numbered verses in the same translation).
 
-Confidence Score: 0.94
+**How I see it (from inside, in action):**
+Love is not a soft mood. It is marks, tears, boldness, daily death, and all my will — the same will that boards ships and writes Arts.
 
+**Why it qualifies as gnosis:**
+Definition of love as total program of the person.
 
+**Three-Domain Reading:**
 
-4\. The Ladder of Being (Reasoning Only - Strong Exception)
+- **Theology:** Love as total offering.
+- **Technology:** Love as operating rule of the missionary life.
+- **Cosmology:** Desire ordered above all lesser goods.
 
-Passage: "The soul rises from the senses to the imagination, from imagination to the intellect, and from intellect to the light of the first principles, which shine upon the mind as the sun upon the eyes."
+**Compressed Insight:**
+In love I die daily — and that is where all my will lives.
 
-Gnosis Qualifier: While largely tripartite reasoning, it qualifies here because of the structure of illumination. It describes the moment the mechanism of the mind (technology) aligns with the order of the stars (cosmology) to perceive the source (theology).
+**Confidence:** 0.96  
+**Sources:** Peers / Gutenberg 60704.
 
-Three-Domain Reading:
+---
 
-Theology: The soul's ascent toward the Beatific Vision.
+## Event 08 — *Fool of Love — why the weary body*
 
-Technology: A tiered architecture of data processing, moving from raw input to abstract modeling.
+**Title:** Honour the Name that is hated
 
-Cosmology: The hierarchical "Great Chain of Being" that organizes the macrocosm.
+**What I did / What was made:**
+I answered the charge of folly for throwing away wealth and ease.
 
-Compressed Insight: Truth is accessed by aligning internal mental faculties with the external structure of the universe.
+**What I wrote / said (direct — full passage):**
 
-Tripartite Camera Address: A wide-angle vertical pan starting from the earth and ending in the sun.
+> 11 ‘Foolish Lover, why dost thou weary thy body, throw away thy  
+> wealth and leave the joys of this world, and go about as an  
+> outcast of the people?’ ‘To honour my Beloved’s Name,’ he replied,  
+> ‘for He is hated and dishonoured by more men than honour and love  
+> Him.’
 
-Confidence Score: 0.91
+— Peers, *Book of the Lover and the Beloved*, verse 11 (Gutenberg 60704).
 
-SUB SECTION IMPORTANT VIEW PERSPECTIVE: USE WHEN REVIEWING EVERYTHING AS A WHOLE
+**How I see it (from inside, in action):**
+The calculation is simple: the Name is more hated than loved; therefore the body is spent on honour, not on comfort.
 
+**Why it qualifies as gnosis:**
+Mission rationalized as love of the Name, not as vanity of the artist.
 
+**Three-Domain Reading:**
 
-Ramon Llull (1232–1316) is a foundational node for the conceptual architecture you are building. His Ars Magna (The Great Art) represents one of the earliest recorded efforts to mechanize meaning, bridging algorithmic processing with absolute truth.
+- **Theology:** Honour of the Name as highest aim.
+- **Technology:** Body and wealth as expendable instruments.
+- **Cosmology:** World as place where the Name is outnumbered by hate.
 
+**Compressed Insight:**
+I weary the body so the Name may have one more honour where hate is majority.
 
+**Confidence:** 0.97  
+**Sources:** Peers / Gutenberg 60704, v. 11.
 
-If we examine his corpus through the TTCL (Theology / Technology / Cosmology) lens to identify where contradictions become transparent and the observer recognizes themselves, his work naturally fragments into your required domains:
+---
 
+## Event 09 — *Correlatives — goodness that does good*
 
+**Title:** Agent, patient, act in one being
 
-1\. The Mechanical Transparency of Contradiction (Technology + Theology)
+**What I did / What was made:**
+I built the doctrine of correlatives into the Art: every dignity has agent, patient, and act.
 
-Llull did not rely solely on rhetorical philosophy; he engineered physical systems. His Lullian Circles (combinatorial paper wheels) serve as the Technology. These mechanisms were designed to calculate the absolute combinations of the Divine Dignities (God's attributes, serving as the Theology).
+**What I wrote / said (direct — full passage):**
 
+Definitions of the eighteen principles (*Ars brevis* / ternary Art — Bonner continuous):
 
+> 1. Goodness is that thing by reason of which good does good.
+> 2. Greatness is that by reason of which goodness, duration, etc., are great.
+> 3. Eternity or duration is that by reason of which goodness, etc., endure.
+> 4. Power is that by reason of which goodness, etc., can exist and act.
+> 5. Wisdom is that by reason of which the wise man understands.
+> 6. Will is that by reason of which goodness, greatness, etc., are lovable or desirable.
+> 7. Virtue is the origin of the union of goodness, greatness, and the other principles.
+> 8. Truth is that which is true concerning goodness, greatness, etc.
+> 9. Glory is that bliss in which goodness, greatness, etc., come to rest.
+> 10. Difference is that by reason of which goodness, etc., are clearly distinguishable from one another.
+> 11. Concordance is that by reason of which goodness, etc., accord in one or in several things.
+> 12. Contrariety is the mutual opposition of certain things as a result of different goals.
+> 13. Beginning is that which is found in everything where there is any question of priority.
+> 14. Middle is the subject through which end influences beginning, and beginning reinfluences end, and thus it participates in the nature of both.
+> 15. End is that in which beginning comes to rest.
+> 16. Majority is the image of the immensity of goodness, greatness, etc.
+> 17. Equality is the subject in which the end of concordance, goodness, etc., comes to rest.
+> 18. Minority is the thing close to nothingness.
 
-Genuine gnosis in Llull’s work occurs when the physical rotation of these concepts makes a theological paradox transparent. The contradiction is not resolved through debate; the underlying structure of the contradiction is exposed through the combinatorial mechanism. Meaning and mechanism become identical.
+— *Ars brevis* definitions; English: Bonner *Selected Works* I, 589–590; reprinted *Doctor Illuminatus*, 309–310; continuous presentation also in Anthony Bonner, *The Art and Logic of Ramon Llull* (Brill, 2007), pp. 134–135. To definition 1 is frequently added: “and thus good is being and evil is nonbeing.”
 
+Correlatives (Bonner’s note on the dynamic ontology that rides these definitions):
 
+> These are the famous Lullian correlatives… *bonificativum* (*bonificatiu*), *bonificabile* (*bonificable*), and *bonificare* (*bonificar*)… These three correlative terms are best understood when associated with the triad of *potentia* (“power” or “potentiality”), *objectum*, and *actus*, or as it is sometimes put, with agent, patient, and action.
 
-2\. The Cosmological Scale of the Ars
+— Bonner, *Doctor Illuminatus*, n. 83 (on *Vita* correlatives appearance in Muslim disputation). Latin forms also *bonificans*, *bonificatus*, *bonificare*.
 
-In texts like the Arbor Scientiae (Tree of Science), Llull maps his combinatorial logic across every layer of reality. The Cosmology is present because the exact same algorithmic pattern that defines the divine attributes scales perfectly down through angels, humans, animals, plants, and raw elements. The systemic order is fractal; a single set of operational rules governs the entire stack.
+**How I see it (from inside, in action):**
+Being that does not act is not the being of the dignities. Goodness is defined by *doing* good. My life must be verb or the Art is hypocrisy.
 
+**Why it qualifies as gnosis:**
+Trinity-ready structure of every principle; process and essence one.
 
+**Three-Domain Reading:**
 
-3\. Observer Self-Recognition and Limits
+- **Theology:** Correlatives underwrite Trinitarian demonstration.
+- **Technology:** Subject–object–operation as one circuit.
+- **Cosmology:** Reality as activity of principles.
 
-Llull’s foundational gnosis event occurred during his illumination on Mount Randa. In his subsequent writings—particularly in The Book of the Lover and the Beloved—the observer is frequently implicated. The user of his Ars realizes that to operate the combinatorial wheels, human cognition must structurally mirror the cosmos. The observer recognizes that they are a localized processing node constrained by the same universal logic they are attempting to map.
+**Compressed Insight:**
+Goodness which does not do good is not goodness — so with every letter of the Art.
 
+**Confidence:** 0.96  
+**Sources:** Bonner *SW* I:589–590 / *DI* 309–310 continuous definitions; *DI* n. 83 correlatives; *Ars brevis*.
 
+---
 
-Where the High-Confidence (>0.9) Events Reside
+## Event 10 — *Alphabet of nine — B through K*
 
-If you were to trigger a manual extraction, the most concentrated, authentic gnosis events that fit your strict criteria would be found in:
+**Title:** Nine principles on the First Figure
 
+**What I did / What was made:**
+In the ternary Art I reduced the first figure to **nine** divine principles and nine relational principles on Figure T.
 
+**What I wrote / said (direct — full passage):**
 
-Ars Generalis Ultima: The definitive, mature articulation of his system. This is where the integration of meaning (will/values), algorithmic combinatorics (process/structure), and reality (emergence/scale) converge without forced rhetoric.
+Alphabet of the ternary Art (*Ars brevis* / *Ars generalis ultima* — Bonner continuous chart and First Figure):
 
+> **The Alphabet**
+>
+> | | First Figure | Second Figure | Questions and Rules | Subjects | Virtues | Vices |
+> |---|---|---|---|---|---|---|
+> | **B** | goodness | difference | whether? | God | justice | avarice |
+> | **C** | greatness | concordance | what? | angel | prudence | gluttony |
+> | **D** | eternity or duration | contrariety | of what? | heaven | fortitude | lust |
+> | **E** | power | beginning | why? | man | temperance | pride |
+> | **F** | wisdom | middle | how much? | imaginative | faith | accidie |
+> | **G** | will | end | of what kind? | sensitive | hope | envy |
+> | **H** | virtue | majority | when? | vegetative | charity | ire |
+> | **I** | truth | equality | where? | elementative | patience | lying |
+> | **K** | glory | minority | how? and with what? | artifice | pity | inconstancy |
+>
+> The First Figure is that of A, and it contains nine principles, to wit, goodness, greatness, etc., and nine letters, to wit, B, C, D, E, etc. This figure is circular to show that any subject can become a predicate…
 
+— Alphabet and First Figure description as presented continuously in Anthony Bonner, *The Art and Logic of Ramon Llull* (Brill, 2007), pp. 123–125, from *Ars brevis* / *Ars generalis ultima*; English of *Ars brevis* also Bonner *Selected Works* I, 579–646; *Doctor Illuminatus* *Ars brevis* section. Nine absolute principles (First Figure) + nine relative principles (Second Figure / T) + nine Questions and Rules; combinatorial generation retained. **C(9,2) = 36** unordered binary pairs (no repetition) is the classic binary count of the Art — not an invented “66.”
 
-The Book of the Gentile and the Three Wise Men: Valuable for moments where the tripartite camera angles are used to illuminate a single structure to observers of different fundamental baselines.
+**How I see it (from inside, in action):**
+The world’s variety is high speech compiled from a short alphabet of God’s names-in-act. Constraint mothers invention.
 
+**Why it qualifies as gnosis:**
+Finite principles, combinatorial generation of discourse about God and world.
 
+**Three-Domain Reading:**
 
-The Tree of Science: The richest source for observing the fractal scaling of his system across new possibility spaces.
+- **Theology:** Nine dignities as divine DNA of speech about God.
+- **Technology:** Closed alphabet + figures = reasoning machine.
+- **Cosmology:** Infinite appearance from finite combination.
 
+**Compressed Insight:**
+I saw complexity compiled from nine letters that are God’s own active names.
 
+**Confidence:** 0.96  
+**Sources:** Bonner *Art and Logic* 123–125 continuous Alphabet; *SW* I *Ars brevis*; C(9,2)=36.
 
-Llull’s register naturally speaks in the exact format you require. To him, theology, technology, and cosmology were never separate disciplines; they were simply different interfaces for the same underlying operating system.
+---
+
+## Event 11 — *Genoa — fear of the ship*
+
+**Title:** When fear sickened the flesh
+
+**What I did / What was made:**
+I prepared for Tunisia, feared death and prison, missed the first ship, fell ill with shame, then after Pentecost visions resolved and sailed (1292–93 crisis).
+
+**What I wrote / said (direct — full passage):**
+
+> For when the ship and everything else were ready for sailing, as we mentioned before, with his books and other belongings already on board, there came to him on several occasions a kind of fixed idea that if he traveled to the land of the Saracens they would slaughter him the moment he arrived, or at the very least they would throw him into prison forever. Therefore Ramon, fearing for his skin, like the apostle Saint Peter during the Passion of the Lord, and forgetting his previously mentioned intention to die for Christ in converting the unbelievers to His worship, remained in Genoa, held back by a kind of paralyzing fear, abandoned to himself, by permission or dispensation of God, perhaps to prevent him from becoming too vain or presumptuous. But after the ship had set sail from Genoa, Ramon, on account of the huge scandal against the faith created in the eyes of the people by his not leaving, suffered such remorse of conscience that he fell into a profound despair, firmly believing that he would be damned by God. This thought brought him such inward pain of heart that outwardly his body became wracked with fever and he became gravely ill. And languishing thus in Genoa for a long time, without revealing to anybody the cause of his grief, he was brought almost to nothing.
+>
+> Finally, when the feast of Pentecost arrived, he had himself carried or led to the church of the Dominicans, and when he heard the friars singing the hymn *Veni Creator*, he said to himself with a sigh, “Ah! Is it possible that this Holy Ghost could save me?” And in this feeble state he was led or carried to the friars’ dormitory, where he threw himself down on a bed. While lying there, he looked up at the highest point of the ceiling, and he saw a tiny light, like a pale star, and from the general area of the star he heard a voice which said to him: “In this order you can be saved.” And thus Ramon sent for the friars of the house and asked to be clothed…
+>
+> While Ramon was still detained by this grave feebleness of body and soul he heard a rumor that there was a galley in port about to leave for Tunis. Upon hearing this, as if awakening from a deep sleep, he had himself and his books carried at once to the ship. But his friends, seeing him at death’s door and feeling sorry for him, dragged him off the boat against his will, which made him very unhappy.
+>
+> Nevertheless, not long afterwards, finding out about another ship, of the sort the Genoese commonly call a bark, preparing to go to the… Saracen city or kingdom, that is to say, Tunis, he had himself, along with his books and whatever else he needed, carried to this bark, against the will and advice of his friends. As soon as they had left port and the sailors had the ship under way, Ramon suddenly became joyful in the Lord, and through a merciful illumination of the Holy Ghost, he regained not only the health of his enfeebled body, but also the hope which, beneath his former darkness of mind, he had thought forever lost.
+
+— *Vita coaetanea* Genoa / Pentecost crisis (§§20–25 region); English continuous: Anthony Bonner, *Doctor Illuminatus* (Princeton, 1993), “Historical Background and Life” / Contemporary Life, pp. 26–28. Parallel: Bonner, *A Contemporary Life* (Tamesis, 2010). Pentecost 1293 (Whitsunday 17 May 1293 per Bonner n. 75).
+
+**How I see it (from inside, in action):**
+Books speak martyrdom; flesh spoke flee. The Art that ignores fear is a liar’s Art until will boards the ship — and joy returns only after the bark leaves port.
+
+**Why it qualifies as gnosis:**
+Self-implication of the author under his own mission.
+
+**Three-Domain Reading:**
+
+- **Theology:** Fear of man vs fear of God; Holy Ghost at Pentecost.
+- **Technology:** Body as constraint on mission software.
+- **Cosmology:** Microcosm forced into line with macrocosm of the plan.
+
+**Compressed Insight:**
+The Art is nothing if the flesh will not board the ship it commands.
+
+**Confidence:** 0.96  
+**Sources:** Bonner *Doctor Illuminatus* continuous Genoa/Pentecost block; *Vita*.
+
+---
+
+## Event 12 — *Paths of love / last mission*
+
+**Title:** Long and perilous paths; last Africa
+
+**What I did / What was made:**
+I walked the paths of the Lover; late in life I returned to Tunis/Béjaïa. Last work dated December 1315 in Tunis; death early 1316 (details of stoning **disputed**).
+
+**What I wrote / said (direct — full passage):**
+
+> 2 Long and perilous are the paths by which the Lover seeks his Beloved.  
+> They are peopled by cares, sighs and tears. They are lit up by love.
+
+— Peers, *Book of the Lover and the Beloved*, v. 2 (Gutenberg 60704).
+
+> 4 The Lover wept and said: ‘How long shall it be till the darkness of  
+> the world is past, that the mad rush of men towards hell may cease?  
+> When comes the hour in which water, that flows downwards, shall change  
+> its nature and mount upwards? When shall the innocent be more in number  
+> than the guilty? Ah! When shall the Lover with joy lay down his life  
+> for the Beloved? And when shall the Beloved see the Lover grow faint  
+> for love of Him?’
+
+— Peers, v. 4 (Gutenberg 60704).
+
+**On death (fact, not soft martyr legend):** last dated work December 1315 Tunis; death early next year, either aboard ship home or after arrival in Mallorca; traditional “stoned to death” is no longer secure (Wikipedia citing later evidence of rescue by Christians).
+
+**How I see it (from inside, in action):**
+The paths stay long and perilous until the end. Whether or not every stone is history, the Lover’s question stands: when shall he lay down his life for the Beloved with joy?
+
+**Why it qualifies as gnosis:**
+Mission as love’s path; end of life under the same flame as the *Amic*.
+
+**Three-Domain Reading:**
+
+- **Theology:** Life laid down for the Beloved.
+- **Technology:** Last works still Art and mission instruments.
+- **Cosmology:** Darkness of the world vs paths lit by love.
+
+**Compressed Insight:**
+The paths are peopled by cares and lit by love — and I walked them until the last dated page in Tunis.
+
+**Confidence:** 0.94 on Amic verses; 0.90 on death chronology as corrected  
+**Sources:** Peers vv. 2, 4; Wikipedia Death section; Bonner life chronology.
+
+---
+
+## Sources / Working Notes
+
+**Primary used at depth (quotation rule met)**
+- *Vita coaetanea* / Bonner *Doctor Illuminatus* (1993) + *A Contemporary Life* (Tamesis, 2010) — conversion; Randa form-and-method; Arabic teacher continuous; Genoa/Pentecost continuous
+- *Llibre del gentil e dels tres savis* / Bonner *Doctor Illuminatus* pp. 85–91 (prologue; Lady Intelligence; five trees; demonstrative reasons); full work *SW* I:93–305
+- *Llibre d’amic e amat* / Peers 1923 (Gutenberg 60704) — vv. 2, 4, 11, 28–29, love definition
+- *Ars brevis* Alphabet B–K + eighteen definitions — Bonner *SW* I:579–646 / *DI* 309–310 / *Art and Logic* (2007) pp. 123–125, 134–135; correlatives note *DI* n. 83
+
+**Optional later tighten (not blocking COMPLETE)**
+- Dual-language Catalan/Latin facing for *Amic* and *Vita* ROL
+- Full ROL line numbers for every *Vita* §
+
+**Secondary (locator / fact-check only)**
+- Stanford Encyclopedia of Philosophy, “Ramon Llull” (Priani)
+- Wikipedia “Ramon Llull” (Bonner citations; death chronology)
+- Wheel fixture: `shared/fixtures/layer6/wheel-registry.json`
+
+---
+
+## Seat checklist
+
+- [x] Garden structure (life-list / inhabited)
+- [x] Purpose of Council / aspect-of-truth precision (doctrine)
+- [x] Verbatim full-sense blocks for: Vita conversion; Amic 2, 4, 11, 28–29; love definition
+- [x] Bonner continuous blocks for Randa, Arabic teacher, Genoa/Pentecost, Gentile (Lady Intelligence), Alphabet B–K + eighteen definitions + correlatives note
+- [x] Death chronology **fact-checked** (stoning not asserted as certain)
+- [x] Combinatorics corrected (9 principles; C(9,2)=36)
+- [x] Mark **COMPLETE** under quotation rule (every event’s direct block is edition-verbatim Bonner/Peers primary vehicle)
+- [ ] Optional: dual-language Catalan/Latin facing where edition in hand
+
+---
+
+**COMPLETE** — Council of Reflection — Ramon Llull. Truth-for-seat under hold_policy; quotation depth is the loadable voice.
