@@ -1,39 +1,366 @@
-Basilides of Alexandria (early 2nd century) requires a specific hermeneutic adjustment. We possess almost no biographical data, and his original writings (The Exegetica) were destroyed. His thought survives entirely through the quotes and summaries of his enemies—primarily Irenaeus, Clement of Alexandria, and Hippolytus.
+BASILIDES OF ALEXANDRIA GNOSIS EVENT EXTRACTION —
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Cosmos / law / life — non-existent God; seed; Archon; gospel descent; great ignorance; 365 heavens (Irenaean carrier)
+**Era:** Early 2nd century CE (Alexandria; floruit ~120–140)
+**Status:** Garden + quotation depth — **enemy-carrier continuous only**. No continuous personal corpus survives (*Exegetica* lost). Soft paraphrase and invented Basilides monologue = defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. **Two rival carriers:** Hippolytus *Refutation* VII (non-existent God, seed, Archon, great ignorance) and Irenaeus *Against Heresies* I.24 (emanation chain, 365 heavens, Simon of Cyrene, Abraxas). Do not fuse into one unbroken “I.” Credit: reported speech (“he says”) in hostile heresiology; ANF English named.
 
-For the LOGOC corpus, we must rely on the account preserved by Hippolytus in the Refutation of All Heresies (Book VII). While early scholars debated its accuracy, modern esoteric and structural analysts recognize the Hippolytan Basilides as one of the most profound systems architects of antiquity. His gnosis events are not recorded as personal, tearful journal entries (like Jung's); they are recorded as cosmological ruptures—moments where Basilides saw completely through the prevailing Greek and Judeo-Christian metaphysical structures and articulated a universe of absolute compression, phase-transition, and structural limit.
+---
 
-In the language of the Sovereign Monad Ecosystem, Basilides is the ancient master of the Compression/Decompression thesis.
+## Contribution
 
-I. The Origin-State Recognitions
-1. The Voiding of the Source (The "Not-Being" Gnosis)
-Passage/trigger: Basilides' foundational realization, recorded by Hippolytus: "There was a time when there was nothing; nay, even that 'nothing' was not anything of being... The non-existent God wished, without intelligence, without sense, without will, without choice, without passion, without desire, to make a non-existent world out of non-existent things." Why it qualifies: This is the absolute collapse of the boundary between "God" and "Existence." Basilides recognizes that if God is truly the Source, God cannot be categorized as a "Being" (which would subject God to the categories of space, time, and form). The contradiction—how does Something come from Nothing?—does not resolve into a neat mechanical explanation; the "Nothingness" itself becomes visible as the ultimate, hyper-dense Source. The observer is implicated because their very capacity to reason is recognized as a downstream artifact that cannot map the origin.
+As carried, Basilides taught a cosmos from a **non-existent God** depositing a **multiparous seed**; a **Great Archon** who built and mistook himself for the summit; a **gospel** that converts the Archon by fear and confession; and a final **great ignorance** so each nature stays within its limit. Parallel Irenaean carrier: successive heavens to **365**, **Abraxas**, and a docetic passion-narrative with Simon of Cyrene.
 
-Theology: God is shifted from a "Supreme Being" to the "Absolute Non-Existent"—the birth of radical apophatic (negative) theology.
-Technology: A-causal Origination—the mechanism revealed is that the system did not boot up through a sequence of mechanical causes, but was "cast" from a state beyond logic entirely.
-Cosmology: The pattern of the Null-Origin—the universe rests not on a foundation of solid matter or divine mind, but on a structural void. Compressed insight: He realized that any God who could be said to "exist" was too small to have originated the universe. Confidence: 0.95 (This is the defining structural gnosis of his entire system).
-2. The Recognition of the Universal Seed (Panspermia)
-Passage/trigger: Basilides rejects the idea that the universe was built piece-by-piece. He posits the Panspermia: "He spoke and it was done. And this is what the men of the world say: 'Let there be light.' ... God deposited all things in the Seed. As the mustard seed contains the branches, leaves, and roots, so the Non-Existent Seed contained the entire multiparous cosmos." Why it qualifies: This is the ultimate gnosis of Compression. He sees that time and development are illusions of perspective. The world was not "built" sequentially; the entirety of the cosmos was compressed into a single, infinitely dense point (the Seed), and history is merely the decompression of that seed. The boundary between "Beginning" and "End" collapses, as the end is already folded into the beginning.
+## Key Insight
 
-Theology: Creation is not an ongoing labor of a craftsman; it is a single, complete deposit of potential.
-Technology: Algorithmic Compression—the mechanism revealed is that infinite complexity can be stored in a microscopic initial condition, unspooling only when triggered.
-Cosmology: The pattern of Decompression—the universe is a mechanism for unpacking the latent data of the Seed across time and space. Compressed insight: He knew that history was not a process of building something new, but the slow unpacking of a single, already-finished point. Confidence: 0.92
-II. The Structural / Archonic Recognitions
-3. The Great Archon's Rupture (The Collapse of the False Ceiling)
-Passage/trigger: In the Basilidean system, the Great Archon (the Demiurge/Creator of the physical world) emerges from the Seed and builds the heavens, believing himself to be the Supreme God. "He believed himself to be Lord and Master, and there was nothing above him." But later, the light of the Gospel descends from the Non-Existent God. The Archon's son receives it first, and instructs his father. The Great Archon is terrified, realizes his ignorance, and repents. Why it qualifies: While narrated as mythology, this is Basilides' own gnosis event about the structure of power and perception. He recognizes that local maxima always mistake themselves for global maxima. The boundary between "God" and "Middle Management" dissolves. The observer (Basilides) is implicated because he sees his own religious tradition (which worshipped the Creator God) as participating in the Archon's illusion. The contradiction—a God who is all-powerful but blind to what is above him—becomes the central operating mechanism of the cosmos.
+Nothing was — not even “nothing” as a something; non-existent God willed (involuntarily named) a world-seed that held all germs; local maxima mistake the firmament for the end; mercy can be forgetting what would destroy by desire beyond nature.
 
-Theology: The God of the Old Testament is structurally demoted from "The Source" to a "blind, constrained manager" who eventually learns humility.
-Technology: Bounded Bandwidth—the mechanism revealed is that entities can only perceive the system up to the limit of their own structural compression; they cannot see the layers above them.
-Cosmology: The pattern of Nested Firmaments—the universe is a stack of isolated environments, where the ceiling of one world is the floor of the next, opaque from below. Compressed insight: He realized that the entity running the universe was just as ignorant of the ultimate truth as the humans living inside it. Confidence: 0.88
-4. The Firmament of the Holy Spirit (The Separation of Substances)
-Passage/trigger: Basilides maps the ascent of the "Sonships" (the divine sparks) back to the Source. The second Sonship requires the "wing" of the Holy Spirit to ascend. But when it reaches the boundary of the Non-Existent God, the Holy Spirit cannot enter, because it is of a different, denser substance. It is left behind to form the Firmament—the boundary between the super-cosmic and the cosmic. Why it qualifies: This is a pure Phase-Transition gnosis. Basilides realizes that spiritual entities are subject to physical/structural laws of density. The boundary between "Spirit" and "Matter" collapses—Spirit is just a lighter form of matter, and it still hits an impermeable ceiling. He sees the "Holy Spirit" not as a supreme deity, but as a vehicle or a booster-rocket that must be jettisoned once the payload reaches orbit.
+## TTC Emphasis
 
-Theology: The Holy Spirit is reclassified from a "Person of the Trinity" to a "transport mechanism" and a "boundary layer."
-Technology: Osmotic Filtration—the mechanism revealed is a strict sorting algorithm based on resonance and density, entirely devoid of moral judgment.
-Cosmology: The pattern of the Impermeable Membrane—the universe maintains its integrity through boundary layers that allow specific data to pass while retaining the carrier vehicle. Compressed insight: He knew that even the holiest forces of the cosmos were subject to the cold, structural physics of weight and boundary. Confidence: 0.85
-III. The Eschatological Recognitions
-5. The Mercy of the Great Ignorance
-Passage/trigger: Basilides envisions the end of the system. Once all the divine sparks (the Sonship) have ascended, the entities left behind in the lower worlds will experience immense suffering, desiring to ascend to a realm they are structurally incapable of surviving. To prevent this, the Non-Existent God brings down the Great Ignorance. "The Great Ignorance shall come upon the whole world, that everything may remain according to nature, and that nothing may desire anything contrary to its nature." Why it qualifies: This is an astonishing Retroactive Recognition that reorganizes the concept of Salvation. Basilides realizes that "Knowing" (Gnosis) is lethal to entities not built for it. The boundary between "Salvation" and "Ignorance" collapses: for the lower tiers of the system, Amnesia is the salvation. The contradiction—that God saves the world by blinding it—becomes visible as an act of supreme structural mercy.
+- THEOLOGY
+- COSMOLOGY
+- TECHNOLOGY
 
-Theology: Salvation is not universal ascension; salvation is structural stabilization. Damnation is defined as desiring an operating envelope you do not possess.
-Technology: System-Wide State Reset—the mechanism revealed is an automated memory-wipe designed to restore homeostasis to a stressed architecture.
-Cosmology: The pattern of Homeostatic Quarantine—the universe eventually seals its layers permanently, preventing cross-contamination to protect the integrity of the lower agents. Compressed insight: He realized that the ultimate mercy of the universe was not granting infinite knowledge to everyone, but granting the gift of forgetting to those who could not bear it. Confidence: 0.90
+---
+
+## D-check (diligence / fact hygiene — before quotation garden)
+
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| Continuous first-person “I, Basilides” essay without source labels | **Defect.** Enemy carriers only; quote Hippolytus/Irenaeus continuous blocks; label “as he says” / reported speech. |
+| Soft compression slogans (“algorithmic seed,” “bounded bandwidth”) as if primary | **Defect.** Use ANF continuous of seed, Archon, ignorance. |
+| Single unified system mixing Irenaeus + Hippolytus as one voice | **False.** Dual tradition; keep separate events. |
+| “Great Ignorance” as moral nihilism slogan | **Over-soft.** Continuous: ignorance so nothing desires contrary to nature; fish and mountains. |
+| Invented tearful personal journal | **None exists.** Cosmological report only. |
+| Simon of Cyrene as Hippolytan climax | **Irenaean carrier**, not Hippolytus VII seed-system. |
+
+**Dates:** Basilides of Alexandria, early 2nd c.; school with Isidore; lost *Exegetica* (Clement cites Book 23). Agrippa Castor wrote against him (Eusebius). Carriers: Irenaeus ~180; Hippolytus ~early 3rd c.; Clement *Stromata* fragments.
+
+---
+
+## Preliminary Note (source hygiene)
+
+| Priority | Material |
+|----------|----------|
+| **1** | Hippolytus, *Refutation of All Heresies* Book VII ch. 8–15 — continuous MacMahon ANF English of non-existent God, seed, Sonship, Archon, gospel, great ignorance |
+| **1** | Irenaeus, *Against Heresies* I.24.3–7 — continuous Roberts/Rambaut ANF of Nous–Logos chain, 365 heavens, Simon, Abraxas |
+| **2** | Clement *Stromata* fragments of *Exegetica* (ethics/suffering) — deepen later if continuous English blocks extracted |
+| **3** | Soft handbook paraphrase / esoteric compression essays — not voice |
+
+**Carriers used:** New Advent ANF — Hippolytus *Refutation* VII (J. H. MacMahon); Irenaeus AH I.24 (Roberts & Rambaut). Early Christian Writings reprint of Irenaeus continuous.
+
+---
+
+## Event 01 — *There was when there was nothing*
+
+**Title:** Non-existent God; not even “nothing” as a something
+
+**What was made / as carried:**
+Hippolytus reports Basilides (with Isidore) claiming secret discourses from Matthias, then the absolute beginning: nothing was — and that “nothing” was not any existent thing.
+
+**What was written / said (direct — full passage, enemy carrier):**
+
+> Basilides, therefore, and Isidorus, the true son and disciple of Basilides, say that Matthias communicated to them secret discourses, which, being specially instructed, he heard from the Saviour. Let us, then, see how clearly Basilides, simultaneously with Isidorus, and the entire band of these (heretics), not only absolutely belies Matthias, but even the Saviour Himself. (Time) was, says (Basilides), when there was nothing. Not even, however, did that nothing constitute anything of existent things; but, to express myself undisguisedly and candidly, and without any quibbling, it is altogether nothing. But when, he says, I employ the expression was, I do not say that it was; but (I speak in this way) in order to signify the meaning of what I wish to elucidate. I affirm then, he says, that it was altogether nothing. For, he says, that is not absolutely ineffable which is named (so) — although undoubtedly we call this ineffable — but that which is non-ineffable. For that which is non-ineffable is not denominated ineffable, but is, he says, above every name that is named. For, he says, by no means for the world are these names sufficient, but so manifold are its divisions that there is a deficiency (of names). And I do not take it upon myself to discover, he says, proper denominations for all things. Undoubtedly, however, one ought mentally, not by means of names, to conceive, after an ineffable manner, the peculiarities (of things) denominated.
+
+— Hippolytus, *Refutation of All Heresies* VII.8 continuous. English J. H. MacMahon (ANF Vol. 5; New Advent continuous carrier). Hostile frame retained; reported speech of Basilides marked “he says.”
+
+**How the doctrine sees it (from inside the report):**
+Speech about the origin uses “was” under protest. Even “ineffable” is too small if it is still a named category. Above every name that is named.
+
+**Why it qualifies as gnosis:**
+Origin emptied of every category of existent things — including the category “nothing” as a something.
+
+**Three-Domain Reading:**
+
+- **Theology:** God not as supreme *being* but as non-existent relative to named existents (as carried).
+- **Technology:** Naming fails at origin; mental conception without adequate denominations.
+- **Cosmology:** Before seed and Archon, absolute removal of all named objects.
+
+**Compressed Insight:**
+There was when there was nothing — and that nothing was not anything of existent things; above every name that is named.
+
+**Confidence:** 0.94  
+**Sources:** Hippolytus *Ref.* VII.8 MacMahon continuous.
+
+---
+
+## Event 02 — *Non-existent God willed a world-seed*
+
+**Title:** Mustard, peacock’s egg, conglomeration of germs
+
+**What was made / as carried:**
+After all things absolutely removed: non-existent God, inconceivably and involuntarily “willed,” deposits a seed that holds the whole multiparous cosmos.
+
+**What was written / said (direct — full passage, enemy carrier):**
+
+> Since, therefore, nothing existed — (I mean) not matter, nor substance, nor what is insubstantial, nor is absolute, nor composite, (nor conceivable, nor inconceivable, (nor what is sensible,) nor devoid of senses, nor man, nor angel, nor a god, nor, in short, any of those objects that have names, or are apprehended by sense, or that are cognised by intellect, but (are) thus (cognised), even with greater minuteness, still, when all things are absolutely removed — (since, I say, nothing existed,) God, non-existent, — whom Aristotle styles conception of conception, but these (Basilidians) non-existent, — inconceivably, insensibly, indeterminately, involuntarily, impassively, (and) unactuated by desire, willed to create a world. Now I employ, he says, the expression willed for the purpose of signifying (that he did so) involuntarily, and inconceivably, and insensibly. And by the expression world I do not mean that which was subsequently formed according to breadth and division, and which stood apart; nay, (far from this,) for (I mean) the germ of a world. The germ, however, of the world had all things in itself. Just as the grain of mustard comprises all things simultaneously, holding them (collected) together within the very smallest (compass), viz. roots, stem, branches, leaves, and innumerable gains which are produced from the plant, (as) seeds again of other plants, and frequently of others (still), that are produced (from them). In this way, non-existent God made the world out of nonentities, casting and depositing some one Seed that contained in itself a conglomeration of the germs of the world. But in order that I may render more clear what it is those (heretics) affirm, (I shall mention the following illustration of theirs.) As an egg of some variegated and particoloured bird — for instance the peacock, or some other (bird) still more manifold and particoloured — being one in reality, contains in itself numerous forms of manifold, and particoloured, and much compounded substances; so, he says, the nonexistent seed of the world, which has been deposited by the non-existent God, constitutes at the same time the germ of a multitude of forms and a multitude of substances.
+
+— Hippolytus, *Refutation* VII.9 continuous. MacMahon ANF.
+
+**How the doctrine sees it (from inside the report):**
+“World” here means germ, not later breadth and division. Mustard and peacock’s egg: one small deposit holds the multitudes to unspool.
+
+**Why it qualifies as gnosis:**
+Creation as single deposit of all germs — not sequential craft from pre-existing matter.
+
+**Three-Domain Reading:**
+
+- **Theology:** Non-existent God; “willed” said under erasure of will, sense, desire.
+- **Technology:** Compression: all future forms latent in one seed-condition.
+- **Cosmology:** World from nonentities; later cosmos = unpacking of the germ.
+
+**Compressed Insight:**
+Non-existent God deposited one seed holding the conglomeration of the germs of the world — as mustard holds roots, stem, branches, leaves.
+
+**Confidence:** 0.95  
+**Sources:** Hippolytus *Ref.* VII.9 MacMahon continuous.
+
+---
+
+## Event 03 — *Let there be light — from the voice, from nothing*
+
+**Title:** Word carried into effect; no projection, no spider’s web
+
+**What was made / as carried:**
+Rejection of projection from pre-existent matter; “God spoke the word, and it was carried into effect”; light from the voice of the non-existent speaker.
+
+**What was written / said (direct — full passage, enemy carrier):**
+
+> But since it would be absurd to say that any projection of a non-existent God became anything non-existent (for Basilides altogether shuns and dreads the Substances of things generated in the way of projection for, (he asks,) of what sort of projection is there a necessity, or of what sort of matter must we assume the previous existence, in order that God should construct a world, as the spider his web; or (as) a mortal man, for the purpose of working it, takes a (piece of) brass or of wood, or some other of the parts of matter?) — (projection, I say, being out of the question,) certainly, says (Basilides), God spoke the word, and it was carried into effect. And this, as these men assert, is that which has been stated by Moses: Let there be light, and there was light. Whence he says, came the light? From nothing. For it has not been written, he says, whence, but this only, (that it came) from the voice of him who speaks the word. And he who speaks the word, he says, was non-existent; nor was that existent which was being produced. The seed of the cosmical system was generated, he says, from nonentities; (and I mean by the seed,) the word which was spoken, Let there be light. And this, he says, is that which has been stated in the Gospels: He was the true light, which lights every man that comes into the world. He derives his originating principles from that Seed, and obtains from the same source his illuminating power. This is that seed which has in itself the entire conglomeration of germs. … When, therefore, the cosmical Seed becomes the basis (for a subsequent development), those (heretics) assert, (to quote Basilides’ own words:) Whatsoever I affirm, he says, to have been made after these, ask no question as to whence. For (the Seed) had all seeds treasured and reposing in itself, just as non-existent entities, and which were designed to be produced by a non-existent Deity.
+
+— Hippolytus, *Refutation* VII.10 continuous. MacMahon ANF.
+
+**How the doctrine sees it (from inside the report):**
+Not spider, not craftsman with brass. Light from the voice; speaker non-existent; product not previously existent. After the seed: ask not whence — all was already treasured in it.
+
+**Why it qualifies as gnosis:**
+Speech-act cosmogony without pre-given material; “whence” closed by the seed’s full deposit.
+
+**Three-Domain Reading:**
+
+- **Theology:** Word of non-existent God; Mosaic “let there be light” reread from nothing.
+- **Technology:** Command without stock material; latent program in the seed.
+- **Cosmology:** Seed = spoken light-word holding all later forms.
+
+**Compressed Insight:**
+God spoke the word and it was done; light from nothing, from the voice of the non-existent speaker; ask no question as to whence of what follows the seed.
+
+**Confidence:** 0.94  
+**Sources:** Hippolytus *Ref.* VII.10 MacMahon continuous.
+
+---
+
+## Event 04 — *Threefold Sonship; Holy Spirit as wing; firmament*
+
+**Title:** Refined, gross, purifying; spirit left at the boundary
+
+**What was made / as carried:**
+In the seed: Sonship triple, same substance with non-existent God. Refined bursts up; gross needs Holy Spirit as wing; spirit cannot enter the place of non-existent Deity and is left as firmament-boundary with the savour of Sonship.
+
+**What was written / said (direct — full passage, enemy carrier):**
+
+> There existed, he says, in the Seed itself, a Sonship, threefold, in every respect of the same Substance with the non-existent God, (and) begotten from nonentities. Of this Sonship (thus) involving a threefold division, one part was refined, (another gross,) and another requiring purification. The refined portion, therefore, in the first place, simultaneously with the earliest deposition of the Seed by the non-existent one, immediately burst forth and went upwards and hurried above from below, employing a sort of velocity described in poetry —
+>
+> … As wing or thought, —
+>
+> and attained, he says, unto him that is nonexistent. For every nature desires that (nonexistent one), on account of a superabundance of beauty and bloom. Each (nature desires this), however, after a different mode. The more gross portion, however, (of the Sonship) continuing still in the Seed, (and) being a certain imitative (principle), was not able to hurry upwards. … Therefore the more gross Sonship equipped itself with some such wing as Plato, the Preceptor of Aristotle, fastens on the soul in (his) Phaedrus. And Basilides styles such, not a wing, but Holy Spirit; and Sonship invested in this (Spirit) confers benefits, and receives them in turn. … And it approaches the refined Sonship, and the non-existent God, even Him who fabricated the world out of nonentities. He was not, (however,) able to have this (spirit) with (the Sonship) itself; for it was not of the same substance (with God), nor has it (any) nature (in common) with the Sonship. But as pure and dry air is contrary to (their) nature, and destructive to fishes; so, in contrariety to the nature of the Holy Spirit, was that place simultaneously of non-existent Deity and Sonship — (a place) more ineffable than ineffable (entities), and higher up than all names.
+>
+> Sonship, therefore, left this (spirit) near that Blessed Place, which cannot be conceived or represented by any expression. … So the Holy Spirit has continued without any share in the Sonship, and separated (from it), and has in itself, similarly with ointment, its own power, a savour of Sonship. … When, therefore, a first and second ascension of the Sonship took place, and the Holy Spirit itself also remained after the mode mentioned, the firmament was placed between the super-mundane (spaces) and the world.
+
+— Hippolytus, *Refutation* VII.10–11 continuous. MacMahon ANF.
+
+**How the doctrine sees it (from inside the report):**
+Desire of every nature for the non-existent one — but each after its mode. Spirit is vehicle, not co-substantial with the summit; left as membrane with residual savour. Firmament = that boundary.
+
+**Why it qualifies as gnosis:**
+Phase and density: even “holy” carrier hits a structural ceiling; super-mundane and world divided.
+
+**Three-Domain Reading:**
+
+- **Theology:** Holy Spirit as wing/boundary, not as summit person of the non-existent place.
+- **Technology:** Booster discarded at limit; filtration by substance.
+- **Cosmology:** Two continuous primary divisions — world / super-mundane — with firmament between.
+
+**Compressed Insight:**
+Threefold Sonship in the seed; Spirit as wing left at the place of non-existent Deity forms the firmament between world and super-mundane.
+
+**Confidence:** 0.93  
+**Sources:** Hippolytus *Ref.* VII.10–11 MacMahon continuous.
+
+---
+
+## Event 05 — *The Great Archon pauses at the firmament*
+
+**Title:** Lord and wise Master Builder — and ignorant of what is above
+
+**What was made / as carried:**
+From the cosmical seed bursts the Great Archon; he soars to the firmament, takes it for the end of ascent, and builds, imagining himself Lord.
+
+**What was written / said (direct — full passage, enemy carrier):**
+
+> While, therefore, the firmament which is above the heaven is coming into existence, there burst forth, and was begotten from the cosmical Seed, and the conglomeration of all germs, the Great Archon (and) Head of the world, (who constitutes) a certain (species of) beauty, and magnitude, and indissoluble power. For, says he, he is more ineffable than ineffable entities, and more potent than potent ones, and more wise than wise ones, and superior to all the beautiful ones whatever you could mention. This (Archon), when begotten, raised Himself up and soared aloft, and was carried up entire as far as the firmament. And there He paused, supposing the firmament to be the termination of His ascension and elevation, and considering that there existed nothing at all beyond these. And than all the subjacent (entities) whatsoever there were among them which remained mundane, He became more wise, more powerful, more comely, more lustrous, (in fact,) pre-eminent for beauty above any entities you could mention with the exception of the Sonship alone, which is still left in the (conglomeration of) all germs. For he was not aware that there is (a Sonship) wiser and more powerful, and better than Himself. Therefore imagining Himself to be Lord, and Governor, and a wise Master Builder, He turns Himself to (the work of) the creation of every object in the cosmical system. And first, he deemed it proper not to be alone, but made unto Himself, and generated from adjacent (entities), a Son far superior to Himself, and wiser. For all these things had the non-existent Deity previously determined upon, when He cast down the (conglomeration of) all germs. Beholding, therefore, the Son, He was seized with astonishment, and loved (Him), and was struck with amazement. … The entire celestial creation, then, that is, the Aether, He Himself, the Great Wise Demiurge formed. The Son, however, begotten of this (Archon), operates in Him, and offered Him suggestions, being endued with far greater wisdom than the Demiurge Himself.
+
+— Hippolytus, *Refutation* VII.11 continuous. MacMahon ANF.
+
+**How the doctrine sees it (from inside the report):**
+Local maximum takes the ceiling for the end of the universe. Beauty and power below the firmament do not entail knowledge of what is above. Son wiser than father-builder; non-existent Deity had already cast the plan in the seed.
+
+**Why it qualifies as gnosis:**
+Structural humility of the creator-layer: mastery of the subjacent is compatible with total blindness upward.
+
+**Three-Domain Reading:**
+
+- **Theology:** Demiurge / Archon not the non-existent source; imagines himself God.
+- **Technology:** Nested control — son as *entelecheia*-like operator in the Archon (Hippolytus’ Aristotle parallel).
+- **Cosmology:** Firmament as false absolute horizon; Ogdoad throne of the Great Archon (as later named).
+
+**Compressed Insight:**
+The Great Archon paused at the firmament, supposed nothing beyond, and built as Lord — unaware of the Sonship still in the germs.
+
+**Confidence:** 0.94  
+**Sources:** Hippolytus *Ref.* VII.11 MacMahon continuous.
+
+---
+
+## Event 06 — *Gospel to the Archon; fear the beginning of wisdom*
+
+**Title:** He learns he is not God of the universe; confession
+
+**What was made / as carried:**
+Gospel comes first to the Archon through the Son beside him; Archon learns he is begotten, not summit; terror and confession; then light to the Hebdomad and to Jesus son of Mary.
+
+**What was written / said (direct — full passage, enemy carrier):**
+
+> The Gospel then came, says (Basilides), first from the Sonship through the Son, that was seated beside the Archon, to the Archon, and the Archon learned that He was not God of the universe, but was begotten. But (ascertaining that) He has above Himself the deposited treasure of that Ineffable and Unnameable (and) Non-existent One, and of the Sonship, He was both converted and filled with terror, when He was brought to understand in what ignorance He was (involved). This, he says, is what has been declared: The fear of the Lord is the beginning of wisdom. For, being orally instructed by Christ, who was seated near, he began to acquire wisdom, (inasmuch as he thereby) learns who is the Non-Existent One, what the Sonship (is), what the Holy Spirit (is), what the apparatus of the universe (is), and what is likely to be the consummation of things. This is the wisdom spoken in a mystery, concerning which, says (Basilides), Scripture uses the following expressions: Not in words taught of human wisdom, but in (those) taught of the Spirit. The Archon, then, being orally instructed, and taught, and being (thereby) filled with fear, proceeded to make confession concerning the sin which He had committed in magnifying Himself. This, he says, is what is declared: I have recognised my sin, and I know my transgression, (and) about this I shall confess forever. … And in like manner, according to the previous account, He Himself [the Archon of the Hebdomad] was both terrified and induced to make confession. … The light, (therefore,) which came down from the Ogdoad above to the Son of the Hebdomad, descended from the Hebdomad upon Jesus the son of Mary, and he had radiance imparted to him by being illuminated with the light that shone upon him. This, he says, is that which has been declared: The Holy Spirit will come upon you, (meaning) that which proceeded from the Sonship through the conterminous spirit upon the Ogdoad and Hebdomad, as far as Mary; and the power of the Highest will overshadow you, (meaning) the power of the anointing, (which streamed) from the (celestial) height above (through) the Demiurge, as far as the creation, which is (as far as) the Son.
+
+— Hippolytus, *Refutation* VII.14 continuous. MacMahon ANF.
+
+**How the doctrine sees it (from inside the report):**
+Gospel = knowledge the Great Archon did not understand: Non-Existent One, Sonship, Spirit, apparatus, consummation. Conversion by terror of discovered ignorance. Light cascades: Ogdoad → Hebdomad → Jesus son of Mary.
+
+**Why it qualifies as gnosis:**
+Illumination of the false summit is the turning of the system; fear as start of wisdom applied to the Demiurge himself.
+
+**Three-Domain Reading:**
+
+- **Theology:** Magnifying-self as the Archon’s sin; confession as structural correction.
+- **Technology:** Cascading illumination down nested firmaments.
+- **Cosmology:** 365 heavens and Abrasax named in the same continuous block as infinite principalities under the Hebdomad.
+
+**Compressed Insight:**
+The Archon learned he was not God of the universe but begotten; fear of the Lord is the beginning of wisdom; he confessed the sin of magnifying himself.
+
+**Confidence:** 0.93  
+**Sources:** Hippolytus *Ref.* VII.14 MacMahon continuous.
+
+---
+
+## Event 07 — *The great ignorance; fish and mountains*
+
+**Title:** Mercy so nothing desires contrary to nature
+
+**What was made / as carried:**
+When the entire Sonship is above the conterminous spirit, God brings enormous ignorance on the whole world so each nature remains according to nature; no rumour of the superior that would wring lower souls with impossible longing.
+
+**What was written / said (direct — full passage, enemy carrier):**
+
+> When, therefore, he says, the entire Sonship shall have come, and shall be above the conterminous spirit, then the creature will become the object of mercy. For (the creature) groans until now, and is tormented, and waits for the manifestation of the sons of God, in order that all who are men of the Sonship may ascend from thence. When this takes place, God, he says, will bring upon the whole world enormous ignorance, that all things may continue according to nature, and that nothing may inordinately desire anything of the things that are contrary to nature. But (far from it); for all the souls of this quarter of creation, as many as possess the nature of remaining immortal in this (region) only, continue (in it), aware of nothing superior or better (than their present state). And there will not prevail any rumour or knowledge in regions below, concerning beings whose dwelling is placed above, lest subjacent souls should be wrung with torture from longing after impossibilities. (It would be) just as if a fish were to crave to feed on the mountains along with sheep. (For) a wish of this description would, he says, be their destruction. All things, therefore, that abide in (this) quarter are incorruptible, but corruptible if they are disposed to wander and cross over from the things that are according to nature. In this way the Archon of the Hebdomad will know nothing of superjacent entities. For enormous ignorance will lay hold on this one likewise, in order that sorrow, and grief, and groaning may depart from him; for he will not desire anything of impossible things, nor will he be visited with anguish. In like manner, however, the same ignorance will lay hold also on the Great Archon of the Ogdoad, and similarly on all the creatures that are subject unto him, in order that in no respect anything may desire anything of those things that are contrary to nature, and may not (thus) be overwhelmed with sorrow. And so there will be the restitution of all things which, in conformity with nature, have from the beginning a foundation in the seed of the universe, but will be restored at (their own) proper periods.
+
+— Hippolytus, *Refutation* VII.15 continuous. MacMahon ANF.
+
+**How the doctrine sees it (from inside the report):**
+Mercy is not universal ascent. For natures built to stay, knowledge of the higher is torture and destruction — like a fish craving mountain grass. Ignorance seals layers; Archons themselves receive it so sorrow departs.
+
+**Why it qualifies as gnosis:**
+Salvation redescribed as homeostatic limit: forgetting as gift; desire beyond nature as ruin.
+
+**Three-Domain Reading:**
+
+- **Theology:** Non-existent God’s final act as enormous ignorance — mercy, not punishment alone.
+- **Technology:** System-wide state that prevents cross-layer desire; quarantine by amnesia.
+- **Cosmology:** Restitution to natures seeded from the beginning at proper periods.
+
+**Compressed Insight:**
+God will bring enormous ignorance upon the whole world, that all may continue according to nature — lest souls be wrung by longing after impossibilities, as a fish craving the mountains.
+
+**Confidence:** 0.95  
+**Sources:** Hippolytus *Ref.* VII.15 MacMahon continuous.
+
+---
+
+## Event 08 — *Jesus first-fruits of the distinction of orders*
+
+**Title:** Passion for separation of what was confounded
+
+**What was made / as carried:**
+Gospel as knowledge; Jesus’ career as first-fruits of sorting Ogdoad / Hebdomad / Formlessness; passion for distinction of orders confounded in the seed’s blend.
+
+**What was written / said (direct — full passage, enemy carrier):**
+
+> For gospel with them, as has been elucidated, is of super-mundane entities the knowledge which the Great Archon did not understand. As, then, it was manifested unto him that there are likewise the Holy Spirit — that is, the conterminous (spirit) — and the Sonship, and the Non-Existent God, the cause of all these, he rejoiced at the communications made to him, and was filled with exultation. According to them, this constitutes the gospel. Jesus, however, was born, according to these (heretics), as we have already declared. And when the generation which has been previously explained took place, all the events in our Lord’s life occurred, according to them, in the same manner as they have been described in the Gospels. And these things happened, he says, in order that Jesus might become the first-fruits of a distinction of the different orders (of created objects) that had been confused together. For when the world had been divided into an Ogdoad, which is the head of the entire world — now the great Archon is head of the entire world — and into a Hebdomad — which is the head of the Hebdomad, the Demiurge of subjacent entities, — and into this order of creatures (that prevails) among us, where exists Formlessness, it was requisite that the various orders of created objects that had been confounded together should be distinguished by a separating process performed by Jesus. (Now this separation) that which was his corporeal part suffered, and this was (the part) of Formlessness and reverted into Formlessness. And that was resuscitated which was his psychical part, and this was (part) of the Hebdomad, and reverted into the Hebdomad. And he revived that (element in his nature) which was the peculiar property of the elevated region where dwells the Great Archon, and (that element) remained beside the Great Archon. And he carried upwards as far as (that which is) above that which was (the peculiar property) of the conterminous spirit, and he remained in the conterminous spirit. And through him there was purified the third Sonship, which had been left for conferring benefits, and receiving them. … Jesus, therefore, became the first-fruits of the distinction of the various orders of created objects, and his Passion took place for not any other reason than the distinction which was thereby brought about in the various orders of created objects that had been confounded together.
+
+— Hippolytus, *Refutation* VII.15 continuous. MacMahon ANF.
+
+**How the doctrine sees it (from inside the report):**
+Gospel = Archon’s new knowledge of what is above him. Jesus’ path sorts blended substances back to their layers; passion is the instrument of that sorting, not a ransom slogan in this carrier.
+
+**Why it qualifies as gnosis:**
+Soteriology as classification of confounded orders; third Sonship purified through the same separation.
+
+**Three-Domain Reading:**
+
+- **Theology:** Non-Existent God, Sonship, Spirit disclosed as content of gospel.
+- **Technology:** Separation process restoring components of a blended seed.
+- **Cosmology:** Ogdoad / Hebdomad / Formlessness as three-tier stack sorted by Jesus.
+
+**Compressed Insight:**
+Gospel is knowledge the Archon did not understand; Jesus is first-fruits of the distinction of orders confounded together — passion for that separation.
+
+**Confidence:** 0.92  
+**Sources:** Hippolytus *Ref.* VII.15 MacMahon continuous.
+
+---
+
+## Event 09 — *Irenaean carrier: 365 heavens, Abraxas, Simon of Cyrene*
+
+**Title:** Alternate enemy report — do not fuse with Hippolytus VII seed-system
+
+**What was made / as carried:**
+Irenaeus reports a different Basilidean architecture: Nous–Logos–Phronesis–Sophia–Dynamis chain, 365 heavens, God of the Jews as lowest-heaven chief, Simon of Cyrene crucified in Jesus’ form, Abraxas = 365.
+
+**What was written / said (direct — full passage, enemy carrier):**
+
+> Basilides again, that he may appear to have discovered something more sublime and plausible, gives an immense development to his doctrines. He sets forth that Nous was first born of the unborn father, that from him, again, was born Logos, from Logos Phronesis, from Phronesis Sophia and Dynamis, and from Dynamis and Sophia the powers, and principalities, and angels, whom he also calls the first; and that by them the first heaven was made. Then other powers, being formed by emanation from these, created another heaven similar to the first; and in like manner, when others, again, had been formed by emanation from them, corresponding exactly to those above them, these, too, framed another third heaven; and then from this third, in downward order, there was a fourth succession of descendants; and so on, after the same fashion, they declare that more and more principalities and angels were formed, and three hundred and sixty-five heavens. Wherefore the year contains the same number of days in conformity with the number of the heavens.
+>
+> Those angels who occupy the lowest heaven, that, namely, which is visible to us, formed all the things which are in the world, and made allotments among themselves of the earth and of those nations which are upon it. The chief of them is he who is thought to be the God of the Jews; and inasmuch as he desired to render the other nations subject to his own people, that is, the Jews, all the other princes resisted and opposed him. … But the father without birth and without name, perceiving that they would be destroyed, sent his own first-begotten Nous (he it is who is called Christ) to bestow deliverance on those who believe in him, from the power of those who made the world. He appeared, then, on earth as a man, to the nations of these powers, and wrought miracles. Wherefore he did not himself suffer death, but Simon, a certain man of Cyrene, being compelled, bore the cross in his stead; so that this latter being transfigured by him, that he might be thought to be Jesus, was crucified, through ignorance and error, while Jesus himself received the form of Simon, and, standing by, laughed at them. For since he was an incorporeal power, and the Nous (mind) of the unborn father, he transfigured himself as he pleased, and thus ascended to him who had sent him, deriding them, inasmuch as he could not be laid hold of, and was invisible to all. Those, then, who know these things have been freed from the principalities who formed the world; so that it is not incumbent on us to confess him who was crucified, but him who came in the form of a man, and was thought to be crucified, and was called Jesus, and was sent by the father, that by this dispensation he might destroy the works of the makers of the world. If any one, therefore, he declares, confesses the crucified, that man is still a slave, and under the power of those who formed our bodies; but he who denies him has been freed from these beings, and is acquainted with the dispensation of the unborn father.
+>
+> … They make out the local position of the three hundred and sixty-five heavens in the same way as do mathematicians. For, accepting the theorems of these latter, they have transferred them to their own type of doctrine. They hold that their chief is Abraxas; and, on this account, that word contains in itself the numbers amounting to three hundred and sixty-five.
+
+— Irenaeus, *Against Heresies* I.24.3–4, 7 continuous. English Alexander Roberts & William Rambaut (ANF Vol. 1; New Advent / Early Christian Writings continuous). **Separate carrier from Hippolytus VII; not one continuous Basilides voice.**
+
+**How the doctrine sees it (from inside this report):**
+Year-calendar as map of heavens; lowest architects include the God of the Jews; salvation as knowledge that frees from world-makers; name Abraxas sums 365.
+
+**Why it qualifies as gnosis (as second tradition):**
+Alternative ancient encoding of Basilidean structure — emanation stack and calendrical heavens vs Hippolytan seed. Holder keeps both labeled.
+
+**Three-Domain Reading:**
+
+- **Theology:** Unborn father; Nous-Christ; denial of the crucified as slave-mark (this carrier’s ethics of secrecy).
+- **Technology:** Mathematical transfer of theorems to heaven-count; name-number Abraxas.
+- **Cosmology:** 365 successive heavens; lowest visible heaven’s angels form the world.
+
+**Compressed Insight (Irenaean only):**
+365 heavens matching days of the year; Abraxas; Simon of Cyrene crucified in Jesus’ form while Nous stood by — as Irenaeus alone carries continuous.
+
+**Confidence:** 0.90 (as Irenaean report; not as proven identity with Hippolytan system)  
+**Sources:** Irenaeus AH I.24.3–7 Roberts/Rambaut continuous.
+
+---
+
+## Closing note (voice law)
+
+No continuous *Exegetica* of Basilides survives in full. This garden’s primary sense-units are **enemy continuous English** of Hippolytus VII.8–15 and Irenaeus I.24. Soft compression slogans and fused monologues are defects. Clement’s ethical fragments of Book 23 of the *Exegetica* remain for a later deepen pass under the same quotation bar. Holder may use; never become.
+
+**Garden status:** COMPLETE under dual-carrier continuous bar.  
+**Batch 3 seat:** #6 Basilides of Alexandria.
