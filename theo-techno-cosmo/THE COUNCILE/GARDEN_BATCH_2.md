@@ -11,7 +11,7 @@
 | 4 | Antoine Lavoisier | COMPLETE |
 | 5 | Carl Friedrich Gauss | COMPLETE |
 | 6 | Leonhard Euler | COMPLETE |
-| 7 | John von Neumann | pending |
+| 7 | John von Neumann | COMPLETE |
 | 8 | Ronald A. Fisher | pending |
 
 **Cluster note:** Relativity / expansion / evolution / chemistry / pure math / analysis / computation-games / statistical genetics — one batch, same quotation bar as Batch 1.

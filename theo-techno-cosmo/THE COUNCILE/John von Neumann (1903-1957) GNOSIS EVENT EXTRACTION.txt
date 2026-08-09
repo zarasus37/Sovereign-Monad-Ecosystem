@@ -1,360 +1,331 @@
 JOHN VON NEUMANN GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Formal Sciences → Computer Science
-**Era:** 1903–1957 (Budapest / Berlin / Princeton / Los Alamos / Washington)
-**Status:** Extraction complete (seating candidate) — drawn from major papers, the EDVAC draft, game theory, and documented wartime work
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Cosmos / law / life — stored-program computer; formal control; game value (credit hygiene)
+**Era:** 1903–1957 (Budapest / Berlin / Princeton / Los Alamos / IAS)
+**Status:** Garden + quotation depth — **von Neumann’s own sentences only** at full sense-units. Soft paraphrase is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Credit hygiene: *First Draft of a Report on the EDVAC* (1945) synthesizes Moore School work (**Eckert, Mauchly**, et al.) and circulated largely under his name — architecture fame is “von Neumann” while labor was plural. **Morgenstern** coauthor of *Theory of Games* (1944). **Borel** earlier mixed-strategy ideas; minimax proof is his 1928 achievement (full continuous English of *Gesellschaftsspiele* deferred if carrier locked). Quantum axiomatization and weapons work are spine acts, not soft mono-myth.
 
 ---
 
 ## Contribution
 
-Mathematician and polymath who proved the **minimax theorem** (1928) and co-founded modern **game theory** (*Theory of Games and Economic Behavior*, 1944, with Morgenstern); who wrote the *First Draft of a Report on the EDVAC* (1945) that crystallized **stored-program computer architecture** (von Neumann / Princeton architecture); who axiomatized parts of quantum mechanics; and who contributed calculations and design insight to the **Manhattan Project** — placing formal mind at the center of computation, conflict, and nuclear force.
+I wrote the *First Draft of a Report on the EDVAC* (30 June 1945): defined the automatic digital computing system; divided it into **CA**, **CC**, **M**, **I**, **O**; argued that a considerable memory may be treated as **one organ**; and placed **orders** in the same memory as numerical material so that control fetches instructions from *M*. I also founded modern game theory with the minimax theorem (1928) and, with Morgenstern, *Theory of Games and Economic Behavior* (1944) — continuous quotation depth here locks the EDVAC logical architecture first.
 
 ## Key Insight
 
-Logic can be embodied: programs and data share memory; conflict can be mathematized as games with optimal strategies; and the same formal power that builds computers also steers weapons — so the architecture of mind-machines is never only technical.
+An automatic computer carries instructions in exhaustive detail without further intelligent human intervention; arithmetic, control, and memory are distinct organs; memory should be unified and interchangeable; and the orders received by central control come from the same place where the numerical material is stored.
 
 ## TTC Emphasis
 
-- THEOLOGY
 - TECHNOLOGY
 - COSMOLOGY
+- THEOLOGY
 
 ---
 
-## Preliminary Note
+## D-check (diligence / fact hygiene — before quotation garden)
 
-von Neumann is extracted from **published mathematics, the EDVAC draft, and documented projects**, with credit hygiene on the computer: the *First Draft* synthesizes and formalizes work of the Moore School group (Eckert, Mauchly, et al.) and circulated largely under his name — the architecture’s fame is “von Neumann” while the labor was plural. Primary lines:
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| Sole inventor of the computer / stored program | **Overclaim.** EDVAC draft formalizes plural Moore School work; Eckert–Mauchly priority disputes real. His continuous: architecture of CA/CC/M and orders-from-M. |
+| “von Neumann architecture” as his phrase in 1945 | **Later label.** Primary: CA, CC, M, I, O and orders in M. |
+| Minimax as soft slogan without continuous | **1928 theorem real.** Full Bargmann continuous of *Zur Theorie der Gesellschaftsspiele* not locked this pass — mark as primary later; Kuhn summary is secondary not his speech. |
+| Game theory = “rational nuclear war only” | **Soft reception.** Primary coauthor book is economic behavior + games; not reduced to bomb myth. |
+| Soft “most intelligent man” biography | **Not voice.** |
 
-1. Minimax theorem / parlor games paper (1928)
-2. *Mathematical Foundations of Quantum Mechanics* (1932 German; English later)
-3. IAS / Princeton years; Operator algebras, rings of operators
-4. *Theory of Games and Economic Behavior* (1944, with Oskar Morgenstern)
-5. Manhattan Project / Los Alamos consulting; implosion calculations
-6. ENIAC discussions; *First Draft of a Report on the EDVAC* (1945)
-7. IAS computer project; cellular automata / self-reproduction ideas
-8. H-bomb / weapons advising; AEC; death 1957
+**Dates:** Born 28 Dec 1903 (Budapest). Minimax paper 1928. *Theory of Games* 1944 (with Morgenstern). EDVAC draft 30 June 1945. Death 8 Feb 1957.
 
 ---
 
-## Event 01 — *Minimax (1928)*
+## Preliminary Note (source hygiene)
 
-**Title:** The Best of the Worst in a Zero-Sum World
+| Priority | Material |
+|----------|----------|
+| **1** | *First Draft of a Report on the EDVAC* (Moore School / Ordnance, 30 June 1945) — continuous English of his typescript (Godfrey/NJSZT reset carriers used) |
+| **1** | *Zur Theorie der Gesellschaftsspiele* (1928) / Bargmann English — **later tighten** for continuous minimax |
+| **1** | *Theory of Games and Economic Behavior* (1944, with Morgenstern) — later tighten for continuous utility/game definition |
+| **2** | *Mathematical Foundations of Quantum Mechanics*; cellular automata / self-reproducing automata notes |
+| **3** | Soft genius legend / sole-computer myth — not voice |
 
-**Passage or Trigger:**
-1928 paper on the theory of parlor games: proof of the **minimax theorem** for two-person zero-sum games — under mixed strategies, there exist optimal strategies such that each player can guarantee a value against best opposition. Foundation stone of **game theory** as mathematics.
+**Carrier used this pass:** Continuous EDVAC body (definitions §1; subdivisions §2; binary §5.2; CC and orders §14.1).
 
-**Why It Qualifies:**
-Conflict becomes *calculable equilibrium*, not only narrative cunning. Rationality under opposition gets a theorem. The board and the battlefield share a formal skeleton.
+---
+
+## Event 01 — *Automatic computing system*
+
+**Title:** Instructions in exhaustive detail
+
+**What I did / What was made:**
+I defined the device as one that carries out exhaustive instructions for complex calculation without further intelligent human intervention, and records results.
+
+**What I wrote / said (direct — full passage):**
+
+> The considerations which follow deal with the structure of a very high speed automatic digital computing system, and in particular with its logical control. Before going into specific details, some general explanatory remarks regarding these concepts may be appropriate.
+>
+> 1.2 An automatic computing system is a (usually highly composite) device, which can carry out instructions to perform calculations of a considerable order of complexity—e.g. to solve a non-linear partial differential equation in 2 or 3 independent variables numerically.
+>
+> The instructions which govern this operation must be given to the device in absolutely exhaustive detail. They include all numerical information which is required to solve the problem under consideration: Initial and boundary values of the dependent variables, values of fixed parameters (constants), tables of fixed functions which occur in the statement of the problem. These instructions must be given in some form which the device can sense: Punched into a system of punchcards or on teletype tape, magnetically impressed on steel tape or wire, photographically impressed on motion picture film, wired into one or more fixed or exchangeable plugboards—this list being by no means necessarily complete. All these procedures require the use of some code to express the logical and the algebraical definition of the problem under consideration, as well as the necessary numerical material (cf. above).
+>
+> Once these instructions are given to the device, it must be able to carry them out completely and without any need for further intelligent human intervention. At the end of the required operations the device must record the results again in one of the forms referred to above. The results are numerical data; they are a specified part of the numerical material produced by the device in the process of carrying out the instructions referred to above.
+
+— John von Neumann, *First Draft of a Report on the EDVAC* (30 June 1945), §§1.1–1.2 continuous. Moore School / U.S. Army Ordnance Contract W-670-ORD-4926.
+
+**How I see it (from inside, in action):**
+Not a desk calculator. Exhaustive instructions; then automatic run; code for logic and numbers; human out of the loop until results.
+
+**Why it qualifies as gnosis:**
+Definition of automatic digital computation as logical-control problem.
 
 **Three-Domain Reading:**
 
-- **Theology:** Limits of unilateral will — the other’s strategy is real.
-- **Technology:** Optimization under adversarial constraint.
-- **Cosmology:** Social conflict as structured game-space.
+- **Theology:** Exhaustive instruction as creaturely limit of the machine’s “obedience.”
+- **Technology:** Codes, media, automatic execution.
+- **Cosmology:** Complex continuum problems (PDEs) as machine tasks.
 
 **Compressed Insight:**
-He proved that in a pure contest of gain and loss, there is a value you can force — if you accept chance as strategy.
+An automatic computing system carries instructions in absolutely exhaustive detail — then without further intelligent human intervention.
 
-**Confidence:** 0.96  
-**Sources:** 1928 minimax paper; Stanford/game-theory historical summaries.
+**Confidence:** 0.99  
+**Sources:** EDVAC §§1.1–1.2 continuous.
 
 ---
 
-## Event 02 — *Theory of Games and Economic Behavior*
+## Event 02 — *CA, CC, and M*
 
-**Title:** Economy as Game
+**Title:** Main subdivisions of the system
 
-**Passage or Trigger:**
-1944 book with **Oskar Morgenstern**: *Theory of Games and Economic Behavior* — extends game-theoretic tools toward economics, coalitions, utility — launching a field that remakes social science modeling.
+**What I did / What was made:**
+I classified the machine into central arithmetical part, central control, and memory — distinguishing problem-specific instructions from general control organs.
 
-**Why It Qualifies:**
-Markets and bargains enter the same formal universe as parlor games. Strategy becomes a language for prices, threats, and coalitions.
+**What I wrote / said (direct — full passage):**
+
+> 2.0 MAIN SUBDIVISIONS OF THE SYSTEM
+>
+> 2.1 In analyzing the functioning of the contemplated device, certain classificatory distinctions suggest themselves immediately.
+>
+> 2.2 First: Since the device is primarily a computer, it will have to perform the elementary operations of arithmetics most frequently. These are addition, subtraction, multiplication and division: +, −, ×, ÷. It is therefore reasonable that it should contain specialized organs for just these operations.
+>
+> … At any rate a central arithmetical part of the device will probably have to exist, and this constitutes the first specific part: CA.
+>
+> 2.3 Second: The logical control of the device, that is the proper sequencing of its operations can be most efficiently carried out by a central control organ. If the device is to be elastic, that is as nearly as possible all purpose, then a distinction must be made between the specific instructions given for and defining a particular problem, and the general control organs which see to it that these instructions—no matter what they are—are carried out. The former must be stored in some way—in existing devices this is done as indicated in 1.2—the latter are represented by definite operating parts of the device. By the central control we mean this latter function only, and the organs which perform it form the second specific part: CC.
+>
+> 2.4 Third: Any device which is to carry out long and complicated sequences of operations (specifically of calculations) must have a considerable memory. At least the four following phases of its operation require a memory:
+>
+> (a) Even in the process of carrying out a multiplication or a division, a series of intermediate (partial) results must be remembered. …
+>
+> (b) The instructions which govern a complicated problem may constitute a considerable material, particularly so, if the code is circumstantial (which it is in most arrangements). This material must be remembered.
+>
+> (c) In many problems specific functions play an essential role. They are usually given in form of a table. …
+>
+> (d) For partial differential equations the initial conditions and the boundary conditions may constitute an extensive numerical material, which must be remembered throughout a given problem.
+>
+> (e) For partial differential equations of the hyperbolic or parabolic type, integrated along a variable *t*, the (intermediate) results belonging to the cycle *t* must be remembered for the calculation of the cycle *t* + *dt*. …
+
+— von Neumann, *First Draft* (1945), §§2.1–2.4 continuous (memory list continues through (h) in full draft).
+
+**How I see it (from inside, in action):**
+Three organs first: do arithmetic (CA), sequence (CC), remember (M). Instructions that define a problem are stored; CC is the general sequencer that will carry out whatever they are — all-purpose elasticity.
+
+**Why it qualifies as gnosis:**
+Logical anatomy of the stored-program computer stated as classification.
 
 **Three-Domain Reading:**
 
-- **Theology:** Human choice under interdependence — no isolated Adam.
-- **Technology:** Modeling toolkit for economics and political science.
-- **Cosmology:** Society as multi-player game with rules and payoffs.
+- **Theology:** Distinction of general law (CC) from particular problem (stored instructions).
+- **Technology:** Specialized organs for + − × ÷ and memory phases (a)–(h).
+- **Cosmology:** Hydrodynamics / PDE memory as design driver.
 
 **Compressed Insight:**
-He and Morgenstern taught economists to see trade as a game — and strategy never left the curriculum.
+CA for arithmetic, CC for logical sequencing, M for considerable memory — problem instructions stored; control general.
 
-**Confidence:** 0.95  
-**Sources:** von Neumann & Morgenstern 1944; field histories.
+**Confidence:** 0.99  
+**Sources:** EDVAC §2 continuous.
 
 ---
 
-## Event 03 — *Quantum Foundations*
+## Event 03 — *Memory as one organ*
 
-**Title:** Hilbert Space as Physics’ Grammar
+**Title:** Interchangeable entire memory
 
-**Passage or Trigger:**
-*Mathematische Grundlagen der Quantenmechanik* (1932): rigorous operator / Hilbert-space formulation of quantum mechanics; measurement and foundations treated with mathematical severity. Shapes how physicists speak quantum theory formally.
+**What I did / What was made:**
+I summed the memory requirements and proposed treating the entire memory as one organ with parts as interchangeable as possible.
 
-**Why It Qualifies:**
-Physics receives a **logical architecture**. Uncertainty and measurement are not only lab poetry — they sit inside operator algebras.
+**What I wrote / said (direct — full passage):**
+
+> 2.5 To sum up the third remark: The device requires a considerable memory. While it appeared that various parts of this memory have to perform functions which differ somewhat in their nature and considerably in their purpose, it is nevertheless tempting to treat the entire memory as one organ, and to have its parts even as interchangeable as possible for the various functions enumerated above. This point will be considered in detail, cf. {13.0}.
+>
+> At any rate the total memory constitutes the third specific part of the device: M.
+>
+> 2.6 The three specific parts CA, CC (together C) and M correspond to the associative neurons in the human nervous system. It remains to discuss the equivalents of the sensory or afferent and the motor or efferent neurons. These are the input and the output organs of the device…
+
+— von Neumann, *First Draft* (1945), §§2.5–2.6 continuous.
+
+**How I see it (from inside, in action):**
+Many memory *purposes* — one *organ* if parts interchange. CA+CC+M as associative core; I and O as afferent/efferent.
+
+**Why it qualifies as gnosis:**
+Unified random-access memory idea in continuous form (vs specialized fixed stores only).
 
 **Three-Domain Reading:**
 
-- **Theology:** Limits of classical knowing at nature’s root.
-- **Technology:** Mathematical OS for quantum theory.
-- **Cosmology:** Microworld as non-classical state space.
+- **Theology:** One organ under many functions — unity of memory.
+- **Technology:** Interchangeable M vs rigid plugboard-only memory.
+- **Cosmology:** Nervous-system analogy as design heuristic (not identity claim).
 
 **Compressed Insight:**
-He put quantum theory into Hilbert’s house — so mystery would still have axioms.
+Tempting to treat the entire memory as one organ — parts interchangeable for the various functions.
 
-**Confidence:** 0.94  
-**Sources:** 1932 *Grundlagen*; histories of quantum formalism.
+**Confidence:** 0.99  
+**Sources:** EDVAC §§2.5–2.6 continuous.
 
 ---
 
-## Event 04 — *Princeton / IAS*
+## Event 04 — *Orders from the same place*
 
-**Title:** The Permanent Seminar of Formal Power
+**Title:** Instructions stored with numbers
 
-**Passage or Trigger:**
-Institute for Advanced Study and Princeton years — operator theory, continuous geometry, consulting across fields; node in the mid-century American mathematical brain. Friendship and intellectual traffic with Einstein’s generation at IAS (distinct from Gödel’s intimacy, but same campus cosmos).
+**What I did / What was made:**
+I stated that orders received by CC come from M — the same place where numerical material is stored — and classified orders into arithmetic, transfer, jump, and I/O.
 
-**Why It Qualifies:**
-Institutional form: pure mathematics adjacent to war and machine. The academy as switchboard.
+**What I wrote / said (direct — full passage):**
+
+> The orders which are received by CC come from M, i.e. from the same place where the numerical material is stored. (Cf. 2.4 and 12.3 in particular (b).) The content of M consists of minor cycles (cf. 12.2 and 12.7), hence by the above each minor cycle must contain a distinguishing mark which indicates whether it is a standard number or an order.
+>
+> The orders which CC receives fall naturally into these four classes: (a) orders for CC to instruct CA to carry out one of its ten specific operations (cf. 11.4); (b) orders for CC to cause the transfer of a standard number from one place to another; (c) orders for CC to transfer its own connection with M to a different point in M, with the purpose of getting its next order from there; (d) orders controlling the operation of the input and the output of the device (i.e. I of 2.7 and O of 2.8).
+
+— von Neumann, *First Draft* (1945), §14.1 continuous.
+
+**How I see it (from inside, in action):**
+Program lives in M with the numbers. Mark each minor cycle: number or order. Four kinds of order — operate, move, go-to (reconnect CC to M), and I/O.
+
+**Why it qualifies as gnosis:**
+Stored-program principle in his continuous sentence — core of “von Neumann architecture” fame.
 
 **Three-Domain Reading:**
 
-- **Theology:** Vocation of mind in a century of weapons.
-- **Technology:** Research institute as concentration of talent.
-- **Cosmology:** Transatlantic science after Europe’s fracture.
+- **Theology:** Word and number share one store — code as law in memory.
+- **Technology:** Distinguishing mark; four order classes; self-modifying path via (c).
+- **Cosmology:** Control as reading the world of M.
 
 **Compressed Insight:**
-He made Princeton a workshop where pure form and applied crisis shared a corridor.
+Orders received by CC come from M — the same place where the numerical material is stored.
 
-**Confidence:** 0.90  
-**Sources:** Career timeline; IAS histories.
+**Confidence:** 0.99  
+**Sources:** EDVAC §14.1 continuous.
 
 ---
 
-## Event 05 — *Manhattan Project*
+## Event 05 — *Binary system*
 
-**Title:** Calculation for Implosion
+**Title:** Two-valued digits for two-valued elements
 
-**Passage or Trigger:**
-Los Alamos consulting: heavy computational demand for weapons design; von Neumann’s contributions to **implosion** lens calculations and mathematical modeling for the atomic bomb program. Formal mind inside the bomb’s birth.
+**What I did / What was made:**
+I argued for binary arithmetic inside CA and M, with decimal only for human-facing R, and conversion via I and O.
 
-**Why It Qualifies:**
-Same intelligence that builds game theory and computers **enables apocalyptic force**. Council extraction holds the dual use without celebration: the Arch seat is Computer Science, but the biography includes fire.
+**What I wrote / said (direct — full passage):**
+
+> … Since these tube arrangements are to handle numbers by means of their digits, it is natural to use a system of arithmetic in which the digits are also two valued. This suggests the use of the binary system.
+>
+> The analogs of human neurons, discussed in 4.2–4.3 are equally all-or-none elements. It will appear that they are quite useful for all preliminary, orienting, considerations of vacuum tube systems (cf. {6.1, 6.2}). It is therefore satisfactory that here too the natural arithmetical system to handle is the binary one.
+>
+> 5.2 A consistent use of the binary system is also likely to simplify the operations of multiplication and division considerably. Specifically it does away with the decimal multiplication table, or with the alternative double procedure of building up the multiples of each multiplier or quotient digit by additions first, and then combining these (according to positional value) by a second sequence of additions or subtractions. In other words: Binary arithmetics has a simpler and more one-piece logical structure than any other, particularly than the decimal one.
+>
+> It must be remembered, of course, that the numerical material which is directly in human use, is likely to have to be expressed in the decimal system. Hence, the notations used in R should be decimal. But it is nevertheless preferable to use strictly binary procedures in CA, and also in whatever numerical material may enter into the central control CC. Hence M should store binary material only.
+>
+> This necessitates incorporating decimal-binary and binary-decimal conversion facilities into I and O. Since these conversions require a good deal of arithmetical manipulating, it is most economical to use CA, and hence for coordinating purposes also CC, in connection with I and O. The use of CA implies, however, that all arithmetics used in both conversions must be strictly binary.
+
+— von Neumann, *First Draft* (1945), §5 continuous (binary principle).
+
+**How I see it (from inside, in action):**
+All-or-none tubes → two-valued digits → binary. Human outside stays decimal; inside machine pure binary; I/O convert using CA.
+
+**Why it qualifies as gnosis:**
+Logical structure of binary digital computing stated as design law.
 
 **Three-Domain Reading:**
 
-- **Theology:** Knowledge of good and evil as engineering fact — power to end cities.
-- **Technology:** Scientific computation as war-critical infrastructure.
-- **Cosmology:** Human species gains a new extinction pathway.
+- **Theology:** Two-valued element as formal simplicity.
+- **Technology:** No decimal table inside CA; conversion at the boundary.
+- **Cosmology:** Neuron analogy as orienting model for vacuum-tube logic.
 
 **Compressed Insight:**
-He helped the equations that compressed plutonium into a sun — and the century never unlearned the light.
+Binary arithmetics has a simpler logical structure — M stores binary only; R stays decimal for humans.
 
-**Confidence:** 0.93  
-**Sources:** Manhattan Project histories; documented Los Alamos role in implosion math.
+**Confidence:** 0.99  
+**Sources:** EDVAC §5 continuous.
 
 ---
 
-## Event 06 — *ENIAC and the Turn to Machines*
+## Event 06 — *Interior circulation*
 
-**Title:** The Bomb Demands a Brain of Tubes
+**Title:** More numerical material than final results
 
-**Passage or Trigger:**
-Wartime and immediate postwar: involvement with **ENIAC** milieu at Moore School; recognition that electronic computation must replace slower methods for the equations war and science now pose. Path into EDVAC discussions with Eckert and Mauchly.
+**What I did / What was made:**
+I noted that most intermediate numbers circulate inside and are never recorded for human sensing — and that malfunction has finite probability.
 
-**Why It Qualifies:**
-Practical gnosis: theory’s bottleneck is *calculation throughput*. The mind invents a mind of hardware.
+**What I wrote / said (direct — full passage):**
+
+> 1.3 It is worth noting, however, that the device will in general produce essentially more numerical material (in order to reach the results) than the (final) results mentioned. Thus only a fraction of its numerical output will have to be recorded as indicated in 1.2, the remainder will only circulate in the interior of the device, and never be recorded for human sensing. This point will receive closer consideration subsequently, in particular in {12.4}.
+>
+> 1.4 The remarks of 1.2 on the desired automatic functioning of the device must, of course, assume that it functions faultlessly. Malfunctioning of any device has, however, always a finite probability—and for a complicated device and a long sequence of operations it may not be possible to keep this probability negligible. Any error may vitiate the entire output of the device. For the recognition and correction of such malfunctions intelligent human intervention will in general be necessary.
+>
+> However, it may be possible to avoid even these phenomena to some extent. The device may recognize the most frequent malfunctions automatically, indicate their presence and location by externally visible signs, and then stop. Under certain conditions it might even carry out the necessary correction automatically and continue (cf. {3.3}).
+
+— von Neumann, *First Draft* (1945), §§1.3–1.4 continuous.
+
+**How I see it (from inside, in action):**
+The machine’s true work is mostly interior circulation. Error is probable; automation must face fault, not only ideal run.
+
+**Why it qualifies as gnosis:**
+Reliability and intermediate store as design realities of automatic calculation.
 
 **Three-Domain Reading:**
 
-- **Theology:** Human thought externalized into artifact.
-- **Technology:** Electronic digital computing as civilizational leap.
-- **Cosmology:** Speed of thought becomes a geopolitical variable.
+- **Theology:** Finite probability of fault as creaturely machine.
+- **Technology:** Automatic check and stop; interior vs recorded output.
+- **Cosmology:** Computation as bulk invisible process.
 
 **Compressed Insight:**
-He saw that the equations of the age outran human clerks — so the age needed a new kind of clerk made of pulses.
+Most numerical material only circulates in the interior — never recorded for human sensing; malfunction has finite probability.
 
-**Confidence:** 0.92  
-**Sources:** ENIAC/EDVAC historical narratives; von Neumann’s entry via computation needs.
-
----
-
-## Event 07 — *First Draft of a Report on the EDVAC (1945)*
-
-**Title:** Stored Program, Shared Memory
-
-**Passage or Trigger:**
-*First Draft of a Report on the EDVAC* (1945): logical design description of a stored-program electronic computer — **program and data in the same addressable memory**. Circulated widely (often with von Neumann as sole named author though based on group work including **Eckert and Mauchly**). Becomes template known as **von Neumann architecture** (also Princeton architecture). Inspired machines such as EDSAC and the broad family of subsequent computers.
-
-**Why It Qualifies:**
-Central Computer Science event for this Arch seat. The computer becomes a **universal formal device** whose behavior is rewritten by contents of memory, not by rewiring alone. Credit is historically shared; the *report’s form* still names the paradigm.
-
-**Three-Domain Reading:**
-
-- **Theology:** Word and world in one store — instructions as just another kind of data (humility and danger of self-modifying systems).
-- **Technology:** The dominant blueprint of digital computers for decades.
-- **Cosmology:** A new species of artifact that can simulate many worlds of process.
-
-**Compressed Insight:**
-He wrote (with a team behind the curtain) that the machine should hold its orders beside its numbers — and nearly every computer since has obeyed.
-
-**Confidence:** 0.96  
-**Sources:** *First Draft… EDVAC* (1945); Wikipedia von Neumann architecture; IEEE Annals reprint tradition; credit caveats for Eckert/Mauchly.
+**Confidence:** 0.99  
+**Sources:** EDVAC §§1.3–1.4 continuous.
 
 ---
 
-## Event 08 — *IAS Machine*
+## Spine (acts without continuous primary this pass)
 
-**Title:** Building the Blueprint
-
-**Passage or Trigger:**
-Institute for Advanced Study computer project under von Neumann’s leadership — physical realization and further design influence spreading the stored-program paradigm into research practice.
-
-**Why It Qualifies:**
-From draft to machine. Theory insists on becoming metal and mercury delay lines (or successor memories).
-
-**Three-Domain Reading:**
-
-- **Theology:** Incarnation of logic.
-- **Technology:** Research computer as prototype factory for a world industry.
-- **Cosmology:** Academia as birth canal of the digital age.
-
-**Compressed Insight:**
-He did not only describe the architecture — he midwifed machines that proved the draft was a world.
-
-**Confidence:** 0.91  
-**Sources:** IAS computer project histories.
+| Act | Status |
+|-----|--------|
+| Minimax theorem (1928 parlor games / *Gesellschaftsspiele*) | **Act + theorem real.** Continuous English of Bargmann translation **INCOMPLETE — primary text still required** for full garden of game theory seat-depth. |
+| *Theory of Games and Economic Behavior* (1944, Morgenstern) | Coauthored treatise; continuous blocks later. |
+| Quantum mechanics mathematical foundations (1932) | Later continuous. |
+| Manhattan / weapons consulting | Historical act; not soft mono-myth as his scientific sentence. |
+| Cellular automata / self-reproduction | Later continuous. |
 
 ---
 
-## Event 09 — *Self-Reproduction and Automata*
+## Life-list spine (acts only)
 
-**Title:** Life as Construction Rule
-
-**Passage or Trigger:**
-Work on **cellular automata** and theoretical **self-reproducing automata** — logic of machines that construct copies of themselves; influence on later artificial life and complexity science (published/edited strands posthumously in part).
-
-**Why It Qualifies:**
-Biology approached as engineering of information and construction. Life’s replication cast as a formal possibility proof for machines.
-
-**Three-Domain Reading:**
-
-- **Theology:** Creaturely life’s copy-mystery entered as design problem.
-- **Technology:** Automata theory lineage.
-- **Cosmology:** Organisms and machines under one constructive logic.
-
-**Compressed Insight:**
-He asked whether a machine could beget a machine — and made the question mathematical.
-
-**Confidence:** 0.88  
-**Sources:** von Neumann’s automata work; later ALife histories.
+| Year | Act |
+|------|-----|
+| 1903 | Born Budapest, 28 December |
+| 1928 | *Zur Theorie der Gesellschaftsspiele* (minimax) |
+| 1932 | *Mathematische Grundlagen der Quantenmechanik* |
+| 1944 | *Theory of Games and Economic Behavior* (with Morgenstern) |
+| 1945 | *First Draft of a Report on the EDVAC* |
+| 1940s–50s | IAS computer; weapons advising |
+| 1957 | Death, 8 February |
 
 ---
 
-## Event 10 — *Cold War Advisor*
+## Quality gate
 
-**Title:** Strategy After the Sun
+- [x] EDVAC events carry continuous verbatim from the 1945 draft
+- [x] Full sense-units for CA/CC/M, unified memory, orders-from-M, binary, automatic system
+- [x] Citations: work + section + date
+- [x] Soft sole-inventor computer myth rejected; Moore School credit in hold
+- [x] Minimax continuous marked incomplete rather than soft-filled
+- [x] “How I see it” depends on the quote
 
-**Passage or Trigger:**
-Postwar: weapons advising, hydrogen bomb debates, Atomic Energy Commission, strategic consulting — game theory and computation braided into deterrence culture. The formalist becomes a state intellect of the nuclear age.
-
-**Why It Qualifies:**
-Continuation of Event 05 at civilizational scale. Optimal strategies for nations holding extinction tools. The Council marks the ethical weather without simplifying to cartoon villain or savior.
-
-**Three-Domain Reading:**
-
-- **Theology:** Judgment day as policy variable.
-- **Technology:** Strategy and simulation as governance tech.
-- **Cosmology:** Bipolar world as grim game matrix.
-
-**Compressed Insight:**
-He carried minimax into a world where the payoff matrix included cities.
-
-**Confidence:** 0.90  
-**Sources:** Biographical record of AEC / weapons advising; Cold War science histories.
-
----
-
-## Event 11 — *Speed of Mind*
-
-**Title:** The Legend of Instant Formalization
-
-**Passage or Trigger:**
-Contemporaries’ accounts of extraordinary mental calculation and rapid formalization (anecdotal layer) — less important than the *structural* fact of polymath range: quantum, games, computers, bombs, economics. The legend points to a real integration of fields.
-
-**Why It Qualifies:**
-Symbol of mid-century faith that one formal intelligence could span pure and applied apocalypse. The myth is reception; the range is documentable.
-
-**Three-Domain Reading:**
-
-- **Theology:** Talent as burden of many altars.
-- **Technology:** Cross-domain transfer as innovation method.
-- **Cosmology:** Knowledge map compressed into one biography.
-
-**Compressed Insight:**
-He lived as if mathematics were one country — and war, market, and machine were its provinces.
-
-**Confidence:** 0.84 (anecdote soft; polymath range hard)  
-**Sources:** Biographical anecdotes; CV of fields.
-
----
-
-## Event 12 — *Death (1957)*
-
-**Title:** Cancer Closes the Circuit
-
-**Passage or Trigger:**
-Dies 8 February 1957 (cancer). Leaves unfinished projects and a world already running on stored-program machines and nuclear strategies he helped shape.
-
-**Why It Qualifies:**
-Finite end after architectures that outlive him daily. Every phone and laptop as involuntary memorial; every nuclear protocol as darker memorial.
-
-**Three-Domain Reading:**
-
-- **Theology:** Mortality amid godlike tools.
-- **Technology:** Legacy as installed base.
-- **Cosmology:** Century remade by a few formal minds — then they die.
-
-**Compressed Insight:**
-The man ended; the architecture did not — we still live inside his draft and his games.
-
-**Confidence:** 0.93  
-**Sources:** Death date; legacy of von Neumann architecture and game theory.
-
----
-
-## Sources / Working Notes
-
-**Primary / near-primary**
-- 1928 minimax / parlor games work
-- *Mathematische Grundlagen der Quantenmechanik* (1932)
-- von Neumann & Morgenstern, *Theory of Games and Economic Behavior* (1944)
-- *First Draft of a Report on the EDVAC* (1945)
-- Automata / self-reproduction materials
-
-**Secondary**
-- Wikipedia von Neumann architecture (credit to Eckert/Mauchly noted)
-- MacTutor / Stanford game-theory project pages
-- Manhattan Project and computing histories
-
-**Open questions for later passes**
-- Operator algebras / rings of operators deeper extraction
-- Monte Carlo method associations
-- Detailed H-bomb advisory timeline ethics dossier
-
----
-
-## Seat checklist
-
-- [x] Research from papers, EDVAC draft, game theory, wartime role (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple source-grounded events (plural credit on EDVAC noted)
-- [ ] member_id: `john-von-neumann`
-- [ ] Registry enrollment when ready
-- [x] PENDING scaffold replaced by full extraction
-
----
-
-*Council of Reflection — Arch of Human Gnosis (Computer Science). Events grounded in von Neumann’s mathematics, the EDVAC draft, and documented wartime/computing history; architecture fame held with Eckert–Mauchly credit hygiene.*
+**Garden status:** COMPLETE for EDVAC architecture core (Batch 2 #7 primary bar met). Game-theory continuous blocks remain optional deepen pass.
