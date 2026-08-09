@@ -1,18 +1,19 @@
 ADAM SMITH GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Social Sciences → Economics / Moral Philosophy
-**Era:** 1723–1790 (Kirkcaldy / Glasgow / Oxford / France tour / London / Edinburgh Customs)
-**Status:** Extraction complete (seating candidate) — drawn from *Moral Sentiments*, *Wealth of Nations*, and Scottish Enlightenment context
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Cosmos / law / life — sympathy; division of labour; natural liberty
+**Era:** 1723–1790 (Kirkcaldy / Glasgow / Edinburgh)
+**Status:** Garden + quotation depth — **Smith’s own sentences only** at full sense-units. Soft paraphrase is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Credit hygiene: **Hutcheson** teacher; **Hume** interlocutor; physiocrats as trade/land context; “invisible hand” is rare in his corpus (TMS + WN), not a universal free-market slogan in every chapter. *Moral Sentiments* and *Wealth of Nations* are one system, not two Adam Smiths.
 
 ---
 
 ## Contribution
 
-Scottish moral philosopher and political economist who wrote *The Theory of Moral Sentiments* (1759) on **sympathy** and the **impartial spectator**, and *An Inquiry into the Nature and Causes of the Wealth of Nations* (1776) on **division of labour**, markets, **absolute advantage**, and the system of **natural liberty**; who treated the wealth of nations as caused by human action, institutions, and exchange rather than divine allotment alone; and whose rare phrase **“invisible hand”** (three uses across the corpus) became — often oversimplified — the emblem of unintended social coordination.
+I wrote *The Theory of Moral Sentiments* (1759) on **sympathy** and the **impartial spectator**, and *An Inquiry into the Nature and Causes of the Wealth of Nations* (1776) on the **division of labour**, exchange from **self-love** addressed to mutual advantage, the **invisible hand** by which private gain may promote the public, and the **system of natural liberty** in which the sovereign’s duties are defence, justice, and certain public works.
 
 ## Key Insight
 
-Moral life and market life are one human nature in two registers: we judge ourselves through an imagined impartial spectator, and we provision society when self-interest is channeled by exchange, specialization, and limited government — so prosperity has causes (labour, capital, institutions), and virtue has a psychology, not only a sermon.
+We enter others’ situations by imagination and judge ourselves as if from an impartial spectator; we get our dinner not from the butcher’s benevolence but from his regard to his own interest; division of labour multiplies productive power; and under natural liberty the sovereign is discharged from directing private capitals — with three plain duties remaining.
 
 ## TTC Emphasis
 
@@ -22,337 +23,328 @@ Moral life and market life are one human nature in two registers: we judge ourse
 
 ---
 
-## Preliminary Note
+## D-check (diligence / fact hygiene — before quotation garden)
 
-Smith is extracted from **both major books as one system**, resisting the cartoon of pure greed. Credit hygiene: **physiocrats** and earlier trade theorists as precursors; **Hutcheson** as teacher; **Hume** as friend and interlocutor; “Adam Smith problem” (alleged clash of sympathy vs self-interest) treated as later scholarly tension, not as Smith’s self-understanding of contradiction. Invisible hand appears sparingly — not as a universal free-market slogan in every chapter. Primary lines:
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| Invisible hand as omnipresent free-market dogma | **Overclaim.** Continuous rare uses (TMS distribution of necessaries; WN domestic industry). Not a slogan in every chapter. |
+| Smith = pure greed / amoral markets | **False to TMS.** Opens with sympathy; perfection of nature restrains selfish affections. |
+| “Adam Smith problem” as his contradiction | **Later scholarship.** He revised TMS through 1790; treat as one system unless continuous conflict is shown. |
+| Laissez-faire with zero state | **False.** Three duties of the sovereign include public works individuals will not erect. |
+| Soft Kirkcaldy romance as primary voice | **Situating act only.** Voice from published books. |
 
-1. Kirkcaldy / Glasgow / Oxford formation
-2. Glasgow chair of moral philosophy
-3. *The Theory of Moral Sentiments* (1759; revisions to 1790)
-4. Grand Tour as tutor; French and physiocratic contact
-5. *The Wealth of Nations* (1776)
-6. Division of labour; invisible hand locus; duties of the sovereign
-7. Commissioner of Customs; death 1790
+**Dates:** Baptised 5/16 June 1723 (O.S./N.S.). *TMS* 1759. *WN* 1776. Death 17 July 1790.
 
 ---
 
-## Event 01 — *Kirkcaldy and the Scottish Enlightenment*
+## Preliminary Note (source hygiene)
 
-**Title:** A Coastal Town, a Missing Father, a Public Mind
+| Priority | Material |
+|----------|----------|
+| **1** | *The Theory of Moral Sentiments* (1759 ff.; continuous English public-domain text) |
+| **1** | *An Inquiry into the Nature and Causes of the Wealth of Nations* (1776; Gutenberg #3300 continuous) |
+| **2** | *Lectures on Jurisprudence*; correspondence |
+| **3** | Soft invisible-hand cartoon — not voice |
 
-**Passage or Trigger:**
-Baptised 16 June 1723 (O.S. 5 June), Kirkcaldy; father dies before birth; raised by mother. University of Glasgow under Francis Hutcheson’s influence; Balliol College, Oxford. Forms within the **Scottish Enlightenment** — reason, moral philosophy, and improvement of commercial society as one project.
+**Carriers used:** Project Gutenberg *Wealth of Nations*; Project Gutenberg *Theory of Moral Sentiments*.
 
-**Why It Qualifies:**
-Seat roots in a culture that yoked ethics to social science. Economics will emerge from a moral philosophy chair, not a counting-house alone.
+---
+
+## Event 01 — *How selfish soever*
+
+**Title:** Sympathy and the brother on the rack
+
+**What I did / What was made:**
+I opened *Moral Sentiments* by asserting principles of nature that interest us in others’ fortune, and explained sympathy as imaginative placing of ourselves in another’s case.
+
+**What I wrote / said (direct — full passage):**
+
+> How selfish soever man may be supposed, there are evidently some principles in his nature, which interest him in the fortune of others, and render their happiness necessary to him, though he derives nothing from it, except the pleasure of seeing it. Of this kind is pity or compassion, the emotion which we feel for the misery of others, when we either see it, or are made to conceive it in a very lively manner. That we often derive sorrow from the sorrow of others, is a matter of fact too obvious to require any instances to prove it; for this sentiment, like all the other original passions of human nature, is by no means confined to the virtuous and humane, though they perhaps may feel it with the most exquisite sensibility. The greatest ruffian, the most hardened violator of the laws of society, is not altogether without it.
+>
+> As we have no immediate experience of what other men feel, we can form no idea of the manner in which they are affected, but by conceiving what we ourselves should feel in the like situation. Though our brother is upon the rack, as long as we ourselves are at our ease, our senses will never inform us of what he suffers. They never did and never can carry us beyond our own person, and it is by the imagination only that we can form any conception of what are his sensations. Neither can that faculty help us to this any other way, than by representing to us what would be our own, if we were in his case. It is the impressions of our own senses only, not those of his, which our imaginations copy. By the imagination we place ourselves in his situation, we conceive ourselves enduring all the same torments, we enter as it were into his body and become in some measure him, and thence form some idea of his sensations and even feel something which, though weaker in degree, is not altogether unlike them.
+
+— Adam Smith, *The Theory of Moral Sentiments* (1759), Part I, Section I, Chapter I continuous (*Of Sympathy*).
+
+**How I see it (from inside, in action):**
+Even the ruffian has pity. We do not feel his pain directly — imagination puts us on the rack with him.
+
+**Why it qualifies as gnosis:**
+Moral psychology of commercial society starts from sympathy, not from greed alone.
 
 **Three-Domain Reading:**
 
-- **Theology:** Presbyterian and natural-law weather of Scottish thought.
-- **Technology:** University as technology of civic formation.
-- **Cosmology:** Improvement of nations as a thinkable human task.
+- **Theology:** Principles in nature that bind us to others’ fortune.
+- **Technology:** Imagination as the instrument of moral knowledge.
+- **Cosmology:** Human nature social before market calculus.
 
 **Compressed Insight:**
-He came from a small port and a large classroom — and made the wealth of nations a moral-philosophical problem.
+How selfish soever man may be supposed — there are principles which interest him in the fortune of others; imagination places us in his case.
 
-**Confidence:** 0.93  
-**Sources:** Wikipedia life; IEP Smith; 3:16 interview life sketch.
+**Confidence:** 0.99  
+**Sources:** *TMS* I.i.1 continuous.
 
 ---
 
-## Event 02 — *Glasgow Chair*
+## Event 02 — *I divide myself into two persons*
 
-**Title:** The Classroom That Wrote Two Books
+**Title:** Examiner and agent; the spectator within
 
-**Passage or Trigger:**
-Professor of moral philosophy at Glasgow (succeeding in Hutcheson’s line): philosophical theology, ethics, jurisprudence. Lectures become the laboratory for *Moral Sentiments* and later political economy. Over a decade of teaching before literary fame.
+**What I did / What was made:**
+I described self-judgment as dividing into spectator-judge and agent-panel, and named the inmate of the breast as representative of mankind and substitute of the Deity.
 
-**Why It Qualifies:**
-Method: theory tested in lecture. Political economy is born as a branch of moral philosophy and jurisprudence, not as amoral technique.
+**What I wrote / said (direct — full passage):**
+
+> When I endeavour to examine my own conduct, when I endeavour to pass sentence upon it, and either to approve or condemn it, it is evident that, in all such cases, I divide myself, as it were, into two persons, and that I, the examiner and judge, represent a different character from that other I, the person whose conduct is examined into and judged of. The first is the spectator, whose sentiments with regard to my own conduct I endeavour to enter into, by placing myself in his situation, and by considering how it would appear to me when seen from that particular point of view. The second is the agent, the person whom I properly call myself, and of whose conduct, under the character of a spectator, I was endeavouring to form some opinion. The first is the judge; the second the pannel. But that the judge should, in every respect, be the same with the pannel, is as impossible, as that the cause should, in every respect, be the same with the effect.
+>
+> …
+>
+> On the contrary, if the man within condemns us, the loudest acclamations of mankind appear but as the noise of ignorance and folly, and whenever we assume the character of this impartial judge, we cannot avoid viewing our own actions with this distaste and dissatisfaction. The weak, the vain, and the frivolous, indeed, may be mortified by the most groundless censure, or elated by the most absurd applause. Such persons are not accustomed to consult the judge within concerning the opinion which they ought to form of their own conduct. This inmate of the breast, this abstract man, the representative of mankind, and substitute of the Deity, whom Nature has constituted the supreme judge of all their actions, is seldom appealed to by them.
+
+— Smith, *Theory of Moral Sentiments*, continuous (self-examination + man within / impartial judge). Public-domain continuous English.
+
+**How I see it (from inside, in action):**
+I cannot be fully judge and panel at once. The spectator within is Nature’s supreme judge — louder than the crowd when we dare consult him.
+
+**Why it qualifies as gnosis:**
+Impartial spectator as interior tribunal of moral life.
 
 **Three-Domain Reading:**
 
-- **Theology:** Natural religion and duty in the curriculum.
-- **Technology:** Lecture as iterative publication system.
-- **Cosmology:** Society as ordered for study like nature.
+- **Theology:** Substitute of the Deity; accountability to God and fellows (earlier same arc).
+- **Technology:** Self-examination as dual-role procedure.
+- **Cosmology:** Harmony of sentiments as natural perfection (amiable + self-command).
 
 **Compressed Insight:**
-He taught young men how to be just — and the notes became the architecture of markets and morals.
+I divide myself into examiner and agent — the inmate of the breast is Nature’s supreme judge of all our actions.
 
-**Confidence:** 0.94  
-**Sources:** IEP on Glasgow chair and TMS composition; standard biographies.
+**Confidence:** 0.99  
+**Sources:** *TMS* continuous.
 
 ---
 
-## Event 03 — *The Theory of Moral Sentiments* (1759)
+## Event 03 — *Love ourselves only as we love our neighbour*
 
-**Title:** Sympathy Before the Market
+**Title:** Perfection of human nature
 
-**Passage or Trigger:**
-1759: *The Theory of Moral Sentiments* — how moral judgment arises from **sympathy** (fellow-feeling); how we construct an **impartial spectator** to judge our own conduct; ambition, propriety, virtue, and the social mirror. Six lifetime editions; major revisions (including 1790).
+**What I did / What was made:**
+I joined Christian law and nature’s precept: restrain selfish, indulge benevolent affections for harmony of sentiments.
 
-**Why It Qualifies:**
-First pillar. Without this book, *Wealth of Nations* is misread as pure selfishness. Smith’s human is other-regarding and self-regarding at once.
+**What I wrote / said (direct — full passage):**
+
+> And hence it is, that to feel much for others and little for ourselves, that to restrain our selfish, and to indulge our benevolent affections, constitutes the perfection of human nature; and can alone produce among mankind that harmony of sentiments and passions in which consist their whole grace and propriety. As to love our neighbour as we love ourselves is the great law of christianity, so it is the great precept of nature to love ourselves only as we love our neighbour, or what comes to the same thing, as our neighbour is capable of loving us.
+
+— Smith, *Theory of Moral Sentiments*, continuous (perfection of human nature / impartial spectator context).
+
+**How I see it (from inside, in action):**
+Perfection is not maximal self — it is restrained self and enlarged fellow-feeling. Christianity and nature meet on that line.
+
+**Why it qualifies as gnosis:**
+Moral ideal continuous with market psychology, not cancelled by it.
 
 **Three-Domain Reading:**
 
-- **Theology:** Conscience as internalized spectator — secular cousin of judgment.
-- **Technology:** Moral psychology as social technology of peace.
-- **Cosmology:** Human nature as intersubjective, not atom alone.
+- **Theology:** Great law of Christianity and precept of nature aligned.
+- **Technology:** Self-command as cultivated excellence.
+- **Cosmology:** Harmony of sentiments as social order’s grace.
 
 **Compressed Insight:**
-He mapped the inner court where we try our own hearts — long before he mapped the market.
+Restrain the selfish and indulge the benevolent — love ourselves only as our neighbour is capable of loving us.
 
-**Confidence:** 0.96  
-**Sources:** TMS publication history (IEP); CEI / Daily Economy on TMS primacy; Wikipedia notable works.
+**Confidence:** 0.99  
+**Sources:** *TMS* continuous.
 
 ---
 
-## Event 04 — *The Impartial Spectator*
+## Event 04 — *Division of labour and the pin-maker*
 
-**Title:** The Judge We Invent to Become Ourselves
+**Title:** Eighteen operations; forty-eight thousand pins
 
-**Passage or Trigger:**
-Core TMS mechanism: we view our conduct as an impartial spectator would; moral education is learning to inhabit that gaze. Praise and blame, pride and shame, operate through imagined otherness.
+**What I did / What was made:**
+I opened *Wealth of Nations* Book I by attributing productive powers to division of labour, and measured it in the pin manufactory.
 
-**Why It Qualifies:**
-Compressed insight of Smith’s ethics. Complements later economics: the same species that truck and barter also judges and is judged.
+**What I wrote / said (direct — full passage):**
+
+> The greatest improvements in the productive powers of labour, and the greater part of the skill, dexterity, and judgment, with which it is anywhere directed, or applied, seem to have been the effects of the division of labour. The effects of the division of labour, in the general business of society, will be more easily understood, by considering in what manner it operates in some particular manufactures. …
+>
+> To take an example, therefore, from a very trifling manufacture, but one in which the division of labour has been very often taken notice of, the trade of a pin-maker: a workman not educated to this business (which the division of labour has rendered a distinct trade), nor acquainted with the use of the machinery employed in it (to the invention of which the same division of labour has probably given occasion), could scarce, perhaps, with his utmost industry, make one pin in a day, and certainly could not make twenty. But in the way in which this business is now carried on, not only the whole work is a peculiar trade, but it is divided into a number of branches, of which the greater part are likewise peculiar trades. One man draws out the wire; another straights it; a third cuts it; a fourth points it; a fifth grinds it at the top for receiving the head; to make the head requires two or three distinct operations; to put it on is a peculiar business; to whiten the pins is another; it is even a trade by itself to put them into the paper; and the important business of making a pin is, in this manner, divided into about eighteen distinct operations, which, in some manufactories, are all performed by distinct hands, though in others the same man will sometimes perform two or three of them. I have seen a small manufactory of this kind, where ten men only were employed, and where some of them consequently performed two or three distinct operations. But though they were very poor, and therefore but indifferently accommodated with the necessary machinery, they could, when they exerted themselves, make among them about twelve pounds of pins in a day. There are in a pound upwards of four thousand pins of a middling size. Those ten persons, therefore, could make among them upwards of forty-eight thousand pins in a day. Each person, therefore, making a tenth part of forty-eight thousand pins, might be considered as making four thousand eight hundred pins in a day. But if they had all wrought separately and independently, and without any of them having been educated to this peculiar business, they certainly could not each of them have made twenty, perhaps not one pin in a day…
+
+— Adam Smith, *An Inquiry into the Nature and Causes of the Wealth of Nations* (1776), Book I, Chapter I continuous. Gutenberg #3300.
+
+**How I see it (from inside, in action):**
+Skill and power of labour grow from division. One pin a day alone; thousands a day together — even in a poor shop of ten.
+
+**Why it qualifies as gnosis:**
+Productive power explained as social technology of specialization.
 
 **Three-Domain Reading:**
 
-- **Theology:** Accountable self without requiring constant external priest.
-- **Technology:** Internalized norm as low-cost social order.
-- **Cosmology:** Personhood as relation.
+- **Theology:** Improvement of powers as human (not only divine) cause of plenty.
+- **Technology:** Eighteen operations; machinery occasioned by division.
+- **Cosmology:** Society’s productive order visible in a trifling manufacture.
 
 **Compressed Insight:**
-He taught that we become moral by borrowing another’s eyes — and keeping them when alone.
+Division of labour — about eighteen operations on a pin — multiplies what one man could make alone by thousands.
 
-**Confidence:** 0.95  
-**Sources:** CEI impartial spectator summary; IEP TMS; standard Smith scholarship.
+**Confidence:** 0.99  
+**Sources:** *WN* I.i continuous.
 
 ---
 
-## Event 05 — *Tutor’s Tour and France*
+## Event 05 — *Butcher, brewer, baker*
 
-**Title:** The Grand Tour That Stocked the Second Book
+**Title:** Self-love and mutual advantage
 
-**Passage or Trigger:**
-1760s: tutor to the stepson of Charles Townshend; travel in France; contact with Enlightenment figures and **physiocrats**; conversation world that includes (in orbit) Hume, Voltaire, Franklin. Returns to write the great inquiry into wealth.
+**What I did / What was made:**
+I stated that we expect our dinner from regard to others’ own interest, and that trucking disposition occasions the division of labour.
 
-**Why It Qualifies:**
-Comparative political economy begins in movement. Smith sees commercial and agricultural systems abroad before systematizing Britain’s.
+**What I wrote / said (direct — full passage):**
+
+> It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner, but from their regard to their own interest. We address ourselves, not to their humanity, but to their self-love, and never talk to them of our own necessities, but of their advantages. Nobody but a beggar chooses to depend chiefly upon the benevolence of his fellow-citizens. Even a beggar does not depend upon it entirely. The charity of well-disposed people, indeed, supplies him with the whole fund of his subsistence. But though this principle ultimately provides him with all the necessaries of life which he has occasion for, it neither does nor can provide him with them as he has occasion for them. The greater part of his occasional wants are supplied in the same manner as those of other people, by treaty, by barter, and by purchase. …
+>
+> As it is by treaty, by barter, and by purchase, that we obtain from one another the greater part of those mutual good offices which we stand in need of, so it is this same trucking disposition which originally gives occasion to the division of labour.
+
+— Smith, *Wealth of Nations*, Book I continuous (butcher/brewer/baker + trucking disposition). Gutenberg #3300.
+
+**How I see it (from inside, in action):**
+I do not beg the baker for dinner — I speak to his advantage. Exchange, not pure charity, supplies the day-to-day; and that trucking spirit starts the division of labour.
+
+**Why it qualifies as gnosis:**
+Self-interest channeled by address to mutual advantage — not soft greed-alone cartoon.
 
 **Three-Domain Reading:**
 
-- **Theology:** Cosmopolitan conversation under providence of letters.
-- **Technology:** Travel as research instrument.
-- **Cosmology:** Nations as comparable experiments in prosperity.
+- **Theology:** Benevolence real but insufficient as daily system.
+- **Technology:** Treaty, barter, purchase as instruments of coordination.
+- **Cosmology:** Propensity to exchange as natural occasion of specialization.
 
 **Compressed Insight:**
-He walked Europe as a tutor and came home ready to ask why some nations are rich.
+Not from the benevolence of the butcher, the brewer, or the baker — but from their regard to their own interest.
 
-**Confidence:** 0.92  
-**Sources:** Investopedia France/tutor period; 3:16 life sketch; Wikipedia career outline.
+**Confidence:** 0.99  
+**Sources:** *WN* I continuous.
 
 ---
 
-## Event 06 — *The Wealth of Nations* (1776)
+## Event 06 — *Invisible hand* (Wealth of Nations)
 
-**Title:** An Inquiry, Not a Catechism of Greed
+**Title:** Own gain may promote the public
 
-**Passage or Trigger:**
-March 1776: *An Inquiry into the Nature and Causes of the Wealth of Nations* — comprehensive system of political economy; causes of wealth (not poverty) as the question; attack on mercantilist “commercial system of Great Britain” (Smith’s own later phrase for the book’s violence against that system). Four lifetime editions with revisions.
+**What I did / What was made:**
+I described how the individual who seeks only his own gain may be led by an invisible hand to promote an end that was no part of his intention.
 
-**Why It Qualifies:**
-Central Economics seat event. Birth of modern economics as systematic science. Published the same year as American independence — twin 1776s of liberty discourse.
+**What I wrote / said (direct — full passage):**
+
+> As every individual, therefore, endeavours as much as he can, both to employ his capital in the support of domestic industry, and so to direct that industry that its produce maybe of the greatest value; every individual necessarily labours to render the annual revenue of the society as great as he can. He generally, indeed, neither intends to promote the public interest, nor knows how much he is promoting it. By preferring the support of domestic to that of foreign industry, he intends only his own security; and by directing that industry in such a manner as its produce may be of the greatest value, he intends only his own gain; and he is in this, as in many other cases, led by an invisible hand to promote an end which was no part of his intention. Nor is it always the worse for the society that it was no part of it. By pursuing his own interest, he frequently promotes that of the society more effectually than when he really intends to promote it. I have never known much good done by those who affected to trade for the public good. It is an affectation, indeed, not very common among merchants, and very few words need be employed in dissuading them from it.
+>
+> What is the species of domestic industry which his capital can employ, and of which the produce is likely to be of the greatest value, every individual, it is evident, can in his local situation judge much better than any statesman or lawgiver can do for him. The statesman, who should attempt to direct private people in what manner they ought to employ their capitals, would not only load himself with a most unnecessary attention, but assume an authority which could safely be trusted, not only to no single person, but to no council or senate whatever, and which would nowhere be so dangerous as in the hands of a man who had folly and presumption enough to fancy himself fit to exercise it.
+
+— Smith, *Wealth of Nations*, Book IV continuous (invisible hand in domestic industry context). Gutenberg #3300.
+
+**How I see it (from inside, in action):**
+He intends security and gain; society may gain more than when he affects public trading. Local knowledge beats the directing statesman — whose power is most dangerous when he fancies himself fit.
+
+**Why it qualifies as gnosis:**
+Unintended coordination under private intention — continuous, limited context, not soft total ideology.
 
 **Three-Domain Reading:**
 
-- **Theology:** Wealth explained by natural and human causes, not fate alone.
-- **Technology:** Book as operating system for policy argument.
-- **Cosmology:** National prosperity as lawful, investigable order.
+- **Theology:** End no part of intention — order beyond design of the agent.
+- **Technology:** Capital allocation under local information.
+- **Cosmology:** Society’s annual revenue as emergent from many private aims.
 
 **Compressed Insight:**
-He asked what makes nations rich — and answered with labour, exchange, and institutions, not gold piles alone.
+Led by an invisible hand to promote an end which was no part of his intention — often more effectually than when he intends the public good.
 
-**Confidence:** 0.97  
-**Sources:** Wikipedia WN; IEP March 1776 and “violent attack” letter; Daily Economy 250th framing.
+**Confidence:** 0.99  
+**Sources:** *WN* IV continuous.
 
 ---
 
-## Event 07 — *Division of Labour*
+## Event 07 — *Invisible hand* (Moral Sentiments)
 
-**Title:** The Pin Factory as Cosmology of Skill
+**Title:** Rich led to divide necessaries with the poor
 
-**Passage or Trigger:**
-Opening of WN: division of labour multiplies productive power — famous pin-factory illustration; specialization limited by the extent of the market. Growth of wealth begins in how work is split and recombined.
+**What I did / What was made:**
+In *TMS* I used invisible hand for the distribution of necessaries under inequality of property — without the rich intending the interest of society.
 
-**Why It Qualifies:**
-Foundational micro-to-macro mechanism. Technology of production is social organization of tasks. Complements later industrial and Darwinian “division” metaphors without collapsing them.
+**What I wrote / said (direct — full passage):**
+
+> The rich only select from the heap what is most precious and agreeable. They consume little more than the poor, and in spite of their natural selfishness and rapacity, though they mean only their own conveniency, though the sole end which they propose from the labours of all the thousands whom they employ, be the gratification of their own vain and insatiable desires, they divide with the poor the produce of all their improvements. They are led by an invisible hand to make nearly the same distribution of the necessaries of life, which would have been made, had the earth been divided into equal portions among all its inhabitants, and thus without intending it, without knowing it, advance the interest of the society, and afford means to the multiplication of the species. When Providence divided the earth among a few lordly masters, it neither forgot nor abandoned those who seemed to have been left out in the partition. These last too enjoy their share of all that it produces. In what constitutes the real happiness of human life, they are in no respect inferior to those who would seem so much above them. In ease of body and peace of mind, all the different ranks of life are nearly upon a level, and the beggar, who suns himself by the side of the highway, possesses that security which kings are fighting for.
+
+— Smith, *Theory of Moral Sentiments*, continuous (invisible hand / distribution of necessaries). Public-domain continuous English.
+
+**How I see it (from inside, in action):**
+Rapacity means only vanity — yet the poor get produce of improvements. Providence did not abandon the left-out. Real happiness is nearer level than rank pretends.
+
+**Why it qualifies as gnosis:**
+Second continuous “invisible hand” — moral-providential, not only commercial policy.
 
 **Three-Domain Reading:**
 
-- **Theology:** Human cooperation as vocation of many gifts.
-- **Technology:** Process engineering before the name.
-- **Cosmology:** Society as organism of differentiated functions.
+- **Theology:** Providence and invisible hand in one paragraph.
+- **Technology:** Employment of thousands under land and improvement.
+- **Cosmology:** Species multiplication; ranks nearly level in ease and peace of mind.
 
 **Compressed Insight:**
-He watched pins made by many hands and saw the wealth of nations in the split of one task.
+Led by an invisible hand to nearly the same distribution of necessaries as equal partition — without intending or knowing it.
 
-**Confidence:** 0.96  
-**Sources:** WN Book I tradition; Wikipedia division of labour; Daily Economy classical emphasis on opening sentences.
+**Confidence:** 0.99  
+**Sources:** *TMS* continuous.
 
 ---
 
-## Event 08 — *The Invisible Hand* (Used Sparingly)
+## Event 08 — *Three duties of the sovereign*
 
-**Title:** Unintended Benefit — Not Magic in Every Chapter
+**Title:** System of natural liberty
 
-**Passage or Trigger:**
-Phrase “invisible hand” appears **three times** in Smith’s corpus: “History of Astronomy” (Jupiter’s hand); once in TMS; once in WN Book IV, Ch. II — merchant led by self-interest “in many cases” to promote social benefit without intending it. Later ideology inflates the phrase into a universal law Smith did not sloganize on every page.
+**What I did / What was made:**
+I stated that under natural liberty every man is free to pursue his interest without violating justice, and the sovereign has three duties: defence, justice, and certain public works.
 
-**Why It Qualifies:**
-Credit and hygiene event. Council keeps Smith’s restraint: spontaneous order is real and partial, not a blank check for every market outcome. Complements Hayekian afterlife without retrofitting it entirely into 1776.
+**What I wrote / said (direct — full passage):**
+
+> All systems, either of preference or of restraint, therefore, being thus completely taken away, the obvious and simple system of natural liberty establishes itself of its own accord. Every man, as long as he does not violate the laws of justice, is left perfectly free to pursue his own interest his own way, and to bring both his industry and capital into competition with those of any other man, or order of men. The sovereign is completely discharged from a duty, in the attempting to perform which he must always be exposed to innumerable delusions, and for the proper performance of which, no human wisdom or knowledge could ever be sufficient; the duty of superintending the industry of private people, and of directing it towards the employments most suitable to the interests of the society. According to the system of natural liberty, the sovereign has only three duties to attend to; three duties of great importance, indeed, but plain and intelligible to common understandings: first, the duty of protecting the society from the violence and invasion of other independent societies; secondly, the duty of protecting, as far as possible, every member of the society from the injustice or oppression of every other member of it, or the duty of establishing an exact administration of justice; and, thirdly, the duty of erecting and maintaining certain public works, and certain public institutions, which it can never be for the interest of any individual, or small number of individuals to erect and maintain; because the profit could never repay the expense to any individual, or small number of individuals, though it may frequently do much more than repay it to a great society.
+
+— Smith, *Wealth of Nations*, Book IV / transition to Book V continuous (system of natural liberty). Gutenberg #3300.
+
+**How I see it (from inside, in action):**
+Strip preference and restraint systems — natural liberty sets itself up. No human wisdom suffices to direct every private capital. Three duties remain: defence, justice, public works the few will not build alone.
+
+**Why it qualifies as gnosis:**
+Limited sovereign under law of justice — continuous alternative to both total direction and zero state.
 
 **Three-Domain Reading:**
 
-- **Theology:** Providence-language secularized into social mechanism — carefully.
-- **Technology:** Price and interest as coordination tech.
-- **Cosmology:** Order without single designer of every outcome.
+- **Theology:** Justice as bound; liberty under law.
+- **Technology:** Public works and institutions as shared infrastructure.
+- **Cosmology:** Society self-ordering when preference systems fall away.
 
 **Compressed Insight:**
-He named an invisible hand only rarely — and only as what self-interest sometimes does for the whole.
+Under natural liberty, three duties of the sovereign: defence, justice, and public works individuals will not erect.
 
-**Confidence:** 0.94  
-**Sources:** Wikipedia three uses; Daily Economy WN IV.ii quote; 3:16 “in many cases” caution; popular myth-correction summaries.
-
----
-
-## Event 09 — *Natural Liberty and the Sovereign’s Three Duties*
-
-**Title:** Free Exchange with a Fence of Public Goods
-
-**Passage or Trigger:**
-System of **natural liberty**: market largely self-governing under justice — yet the sovereign retains three duties: defense against invasion; administration of justice; and erecting **public works and institutions** individuals will not profitably build alone (WN IV.ix). Not pure anarchism; not mercantilist micromanagement.
-
-**Why It Qualifies:**
-Policy core. Prevents both libertarian cartoon and socialist erasure of Smith. Public goods and justice are inside the system.
-
-**Three-Domain Reading:**
-
-- **Theology:** Limited but real office of the magistrate.
-- **Technology:** Infrastructure and law as shared platforms.
-- **Cosmology:** Ordered liberty as political cosmology of commerce.
-
-**Compressed Insight:**
-He freed the market from the mercantile cage — and still charged the state to defend, judge, and build what none alone will build.
-
-**Confidence:** 0.95  
-**Sources:** IEP natural liberty and three duties quote (WN IV.ix); standard Smith policy summaries.
+**Confidence:** 0.99  
+**Sources:** *WN* continuous (natural liberty).
 
 ---
 
-## Event 10 — *Absolute Advantage and Trade*
+## Life-list spine (acts only — not soft voice)
 
-**Title:** Why Nations Should Not Make Everything
-
-**Passage or Trigger:**
-Trade theory: nations gain by producing what they produce best and exchanging — **absolute advantage** in Smith’s framing (later Ricardian comparative advantage refines). Mercantilist hoarding of specie and restriction of trade attacked as misunderstanding of wealth.
-
-**Why It Qualifies:**
-International political economy hinge. Complements Grotius’s legal seas with economic seas of exchange.
-
-**Three-Domain Reading:**
-
-- **Theology:** Mutual benefit against zero-sum envy of treasure.
-- **Technology:** Shipping and markets as wealth engines.
-- **Cosmology:** World as trading whole, not closed bullion vaults.
-
-**Compressed Insight:**
-He taught that a nation’s wealth is what it can make and trade — not only what gold it locks away.
-
-**Confidence:** 0.93  
-**Sources:** Wikipedia absolute advantage; WN trade books; Investopedia overview.
+| Year | Act |
+|------|-----|
+| 1723 | Baptised Kirkcaldy |
+| 1751 ff. | Glasgow professor of moral philosophy |
+| 1759 | *The Theory of Moral Sentiments* |
+| 1776 | *The Wealth of Nations* |
+| 1778 ff. | Commissioner of Customs |
+| 1790 | Death, Edinburgh, 17 July |
 
 ---
 
-## Event 11 — *Commissioner of Customs*
+## Quality gate
 
-**Title:** The Theorist Collects the Duty
+- [x] Direct events carry continuous verbatim from *TMS* and *WN*
+- [x] Full sense-units (sympathy, spectator, division of labour, butcher, both invisible hands, three duties)
+- [x] Soft free-market cartoon / pure greed rejected by continuous TMS
+- [x] Credit hygiene: rare invisible hand; limited sovereign
+- [x] “How I see it” depends on the quote
 
-**Passage or Trigger:**
-1778: appointed Commissioner of Customs, Edinburgh; lives with mother; no further major books. Practices the revenue state he had analyzed — enforcement, tariffs, administration after having attacked the commercial system’s worst abuses.
-
-**Why It Qualifies:**
-Life irony and integrity test: political economy meets the customs house. Thought does not stay pure theory.
-
-**Three-Domain Reading:**
-
-- **Theology:** Stewardship under imperfect law.
-- **Technology:** Bureaucracy as real economy’s skeleton.
-- **Cosmology:** Enlightenment man inside the machine of state.
-
-**Compressed Insight:**
-He spent his last years taking customs — having written the book that taught nations how wealth actually grows.
-
-**Confidence:** 0.93  
-**Sources:** IEP Customs 1778 and late life; 3:16 life sketch; Wikipedia.
-
----
-
-## Event 12 — *Death and the Two-Book Afterlife* (1790)
-
-**Title:** Moral Sentiments Still on the Desk
-
-**Passage or Trigger:**
-Dies 17 July 1790. Final TMS edition (1790) with major new material — evidence he cared for the moral book to the end. Afterlife: “father of economics/capitalism” fame often eclipses TMS until modern scholarship reunites the system; “Adam Smith problem” names the false split.
-
-**Why It Qualifies:**
-Closing gnosis: Smith wanted both books. The Council seats the whole man — spectator and pin factory, sympathy and self-interest.
-
-**Three-Domain Reading:**
-
-- **Theology:** Legacy of a unified human nature under God or nature’s laws.
-- **Technology:** Editions as living software updates to a philosophy.
-- **Cosmology:** Commercial modernity still arguing in his terms.
-
-**Compressed Insight:**
-He died polishing how we judge ourselves — while the world remembered only how we enrich ourselves.
-
-**Confidence:** 0.94  
-**Sources:** IEP death 17 July 1790 and TMS final edition; CEI on two-book unity; Wikipedia.
-
----
-
-## Sources / Working Notes
-
-**Primary**
-- *The Theory of Moral Sentiments* (1759; eds. through 1790)
-- *An Inquiry into the Nature and Causes of the Wealth of Nations* (1776)
-- “History of Astronomy” (invisible hand of Jupiter)
-
-**Secondary**
-- Internet Encyclopedia of Philosophy — Adam Smith
-- Britannica / Wikipedia life and works
-- Daily Economy; CEI two-book and impartial spectator treatments
-- 3:16 interview (life + invisible hand “many cases”)
-
-**Open questions for later passes**
-- Lectures on Jurisprudence denser pass (unpublished in life, student notes)
-- Relations to Hutcheson and Hume as nested intellectual events
-- Reception in American founding and later Chicago/Austrian schools as afterlife layer
-
----
-
-## Seat checklist
-
-- [x] Research from both major works (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple source-grounded events (TMS+WN unity; invisible hand hygiene; precursors noted)
-- [ ] member_id: `adam-smith`
-- [ ] Registry enrollment when ready
-- [x] PENDING scaffold replaced by full extraction
-
----
-
-*Council of Reflection — Arch of Human Gnosis (Economics / Moral Philosophy). Events grounded in Smith’s two books and life; cartoon laissez-faire and sympathy-erasure both refused.*
+**Garden status:** COMPLETE — Batch 3 seat #1.
