@@ -20,7 +20,7 @@ Normalize/merge: `node scripts/normalize-council-filenames.mjs` then `node scrip
 
 **Gnosis voice (rewrites):** [`GNOSIS_EVENT_VOICE.md`](./GNOSIS_EVENT_VOICE.md) — life-list shape, inhabited seeing, **verbatim full-extent quotation required from the first draft** (no soft paraphrase).  
 **Garden Batch 1 (closed):** [`GARDEN_BATCH_1.md`](./GARDEN_BATCH_1.md) — wheel + grid + formal spine.  
-**Garden Batch 2 (active):** [`GARDEN_BATCH_2.md`](./GARDEN_BATCH_2.md) — cosmos / law / life (Einstein → Hubble → Darwin → Lavoisier → Gauss → Euler → von Neumann → Fisher). User `next` = next unfinished seat on the active batch list.  
+**Garden Batch 2 (closed):** [`GARDEN_BATCH_2.md`](./GARDEN_BATCH_2.md) — cosmos / law / life (Einstein → Hubble → Darwin → Lavoisier → Gauss → Euler → von Neumann → Fisher). User `next` = next unfinished seat on the **active** batch list (file new batch to continue).  
 **Bindings:** [`COUNCIL_BINDINGS.md`](./COUNCIL_BINDINGS.md) — every seat has `member-substrate`; specialties where natural. Holder may use, never become.
 
 ### System bindings

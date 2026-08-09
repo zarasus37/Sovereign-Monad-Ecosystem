@@ -1,361 +1,352 @@
 RONALD A. FISHER GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Formal Sciences → Statistics
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Cosmos / law / life — likelihood; experimental design; genetical selection
 **Era:** 1890–1962 (London / Rothamsted / London / Adelaide)
-**Status:** Extraction complete (seating candidate) — drawn from major books, papers, and documented scientific controversies
+**Status:** Garden + quotation depth — **Fisher’s own sentences only** at full sense-units. Soft paraphrase is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Credit hygiene: **“Student” (W. S. Gosset)** for *t*; **Pearson** for χ² (with Fisher’s corrections); **Galton–Pearson** correlation tradition; Mendelian data (de Winton & Bateson in his example). **Eugenic chapters** of *Genetical Theory* and related public stands are historical facts for the Council to hold — not laundered into “insight.” Smoking–cancer disputes later continuous if needed.
 
 ---
 
 ## Contribution
 
-Statistician and geneticist who rebuilt modern statistical practice (likelihood, ANOVA, experimental design, randomization) and mathematically fused Mendelian genetics with Darwinian selection in *The Genetical Theory of Natural Selection* (1930); whose tools still underwrite agricultural trials, clinical inference, and population genetics — and whose later public fight over smoking and lung cancer, plus eugenic writings, remain part of the historical record that any honest seat must carry.
+I defined statistics as the study of **populations**, **variation**, and the **reduction of data**; rejected inverse probability as a general logic of induction and introduced **likelihood**; recommended the **method of maximum likelihood** for efficient estimation; classified the problems of reduction as **specification**, **estimation**, and **distribution**; designed the tea-tasting experiment to teach **randomization** and the **test of significance**; and in *The Genetical Theory of Natural Selection* (1930) stated the **fundamental theorem**: the rate of increase in fitness of any organism at any time is equal to its genetic variance in fitness at that time.
 
 ## Key Insight
 
-Uncertain evidence can be made rigorous: experiment is not mere observation but a designed confrontation with nature — and evolution itself is a statistical process in which selection’s force on gene ratios can be stated with mathematical exactness.
+Observational data are a sample of a hypothetical infinite population; relevant information is isolated by statistics that estimate population parameters; inductive confidence is measured by likelihood, not inverse probability; an experiment is a designed procedure whose every possible result has a pre-agreed interpretation; and natural selection’s rate is the genetic variance in fitness.
 
 ## TTC Emphasis
 
-- THEOLOGY
 - TECHNOLOGY
 - COSMOLOGY
+- THEOLOGY
 
 ---
 
-## Preliminary Note
+## D-check (diligence / fact hygiene — before quotation garden)
 
-Fisher is extracted from **scientific works and attested controversies**, without hagiography and without erasing the hard parts. Primary lines:
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| Soft “p < 0.05 invented as dogma” | **Nuanced.** He describes 5% as usual convenient standard for experimenters, not a metaphysical law. Continuous: tea chapter. |
+| ANOVA as slogan without book locus | **Real method** in SMRW/Design — continuous deepen later if needed; this pass locks introductory SMRW + tea + FTNS. |
+| Fundamental theorem = “fitness always increases” | **Misreading** (Edwards/Price). His continuous sentence is rate of increase = genetic variance in fitness. |
+| Eugenics erased or celebrated as gnosis | **Neither.** Hold as historical record in note/spine; not as continuous “wisdom” block. |
+| Sole founder of modern stats | **Overclaim.** Student, Pearson, Laplace, Bernoulli named in his own pages. |
 
-1. *Statistical Methods for Research Workers* (1925 ff.)
-2. *The Design of Experiments* (1935)
-3. *The Genetical Theory of Natural Selection* (1930) — including the fundamental theorem of natural selection
-4. Maximum likelihood; analysis of variance; randomization; fiducial inference
-5. Rothamsted Experimental Station agricultural statistics
-6. Synthesis of Mendelism and Darwinism (modern evolutionary synthesis lineage)
-7. Public dispute with Doll–Hill on smoking and lung cancer (1950s)
-8. Eugenic commitments in *Genetical Theory* and related writings (historical fact for the Council to hold, not celebrate)
-
-Confidence scores mark textual/scientific firmness; moral evaluation of eugenics is not laundered into “insight.”
+**Dates:** Born 17 Feb 1890. Rothamsted from 1919. *Statistical Methods for Research Workers* 1925. *Genetical Theory* 1930. *Design of Experiments* 1935. Death 29 July 1962 (Adelaide).
 
 ---
 
-## Event 01 — *Rothamsted: Dirt Becomes Data*
+## Preliminary Note (source hygiene)
 
-**Title:** The Field as Laboratory
+| Priority | Material |
+|----------|----------|
+| **1** | *Statistical Methods for Research Workers* (1925), Ch. I continuous (York Classics / standard editions) |
+| **1** | *The Design of Experiments* (1935), “Mathematics of a Lady Tasting Tea” continuous (Newman *World of Mathematics* reprint of Fisher) |
+| **1** | *The Genetical Theory of Natural Selection* (1930), fundamental theorem sentence continuous |
+| **2** | Maximum-likelihood papers 1912–22; ANOVA papers; fiducial papers |
+| **3** | Soft hero/villain biography — not voice |
 
-**Passage or Trigger:**
-Fisher’s years at **Rothamsted Experimental Station** (from 1919): agricultural plots, yields, fertilizers — messy real-world variation. He develops methods that turn field noise into analyzable structure. Statistics leaves the pure table and enters soil.
+---
 
-**Why It Qualifies:**
-Recognition that nature’s mess is not the enemy of science if **design and analysis** match the mess. Earth science of crops becomes a statistical cosmos.
+## Event 01 — *Populations, variation, reduction of data*
+
+**Title:** Three aspects of statistics
+
+**What I did / What was made:**
+I opened *Statistical Methods for Research Workers* by defining statistics as applied mathematics of observational data under three aspects: populations, variation, reduction of data.
+
+**What I wrote / said (direct — full passage):**
+
+> The science of statistics is essentially a branch of Applied Mathematics and may be regarded as mathematics applied to observational data. As in other mathematical studies the same formula is equally relevant to widely different groups of subject matter. Consequently the unity of the different applications has usually been overlooked, the more naturally because the development of the underlying mathematical theory has been much neglected. We shall therefore consider the subject matter of statistics under three different aspects, and then show in more mathematical language that the same types of problems arise in every case. Statistics may be regarded as (i.) the study of **populations**, (ii.) as the study of **variation**, (iii.) as the study of methods of the **reduction of data**.
+>
+> The original meaning of the word “statistics” suggests that it was the study of populations of human beings living in political union. The methods developed, however, have nothing to do with the political unity of the group, and are not confined to populations of men or of social insects. Indeed, since no observational record can completely specify a human being, the populations studied are to some extent abstractions. If we have records of the stature of 10,000 recruits, it is rather the population of statures than the population of recruits that is open to study. Nevertheless, in a real sense, statistics is the study of populations, or aggregates of individuals, rather than of individuals. Scientific theories which involve the properties of large aggregates of individuals, and not necessarily the properties of the individuals themselves, such as the Kinetic Theory of Gases, the Theory of Natural Selection, or the chemical Theory of Mass Action, are essentially statistical arguments; and are liable to misinterpretation as soon as the statistical nature of the argument is lost sight of.
+>
+> …
+>
+> The idea of a population is to be applied not only to living, or even material, individuals. If an observation, such as a simple measurement, be repeated a number of times, the aggregate of the results is a population of measurements. Such populations are the particular field of study of the **Theory of Errors**… Just as a single observation may be regarded as an individual, and its repetition as generating a population, so the entire result of an extensive experiment may be regarded as but one of a population of such experiments. The salutary habit of repeating important experiments, or of carrying out original observations in replicate, shows a tacit appreciation of the fact that the object of our study is not the individual result, but the population of possibilities of which we do our best to make our experiments representative.
+>
+> The conception of statistics as the study of variation is the natural outcome of viewing the subject as the study of populations; for a population of individuals in all respects identical is completely described by a description of any one individual, together with the number in the group… For, until comparatively recent times, the vast majority of workers in this field appear to have had no other aim than to ascertain aggregate, or average, values. The variation itself was not an object of study, but was recognised rather as a troublesome circumstance which detracted from the value of the average… Yet, from the modern point of view, the study of the causes of variation of any variable phenomenon, from the yield of wheat to the intellect of man, should be begun by the examination and measurement of the variation which presents itself.
+>
+> …
+>
+> The third aspect under which we shall regard the scope of statistics is introduced by the practical need to reduce the bulk of any given body of data… No human mind is capable of grasping in its entirety the meaning of any considerable quantity of numerical data. We want to be able to express all the *relevant* information contained in the mass by means of comparatively few numerical values… It is the object of the statistical processes employed in the reduction of data to exclude this irrelevant information, and to isolate the whole of the relevant information contained in the data.
+
+— R. A. Fisher, *Statistical Methods for Research Workers* (1925), Ch. I §§1 continuous. York University Classics continuous carrier.
+
+**How I see it (from inside, in action):**
+Not politics of states — populations of measurements and possibilities. Variation is the object, not a nuisance. Data must be reduced to relevant information only.
+
+**Why it qualifies as gnosis:**
+Foundational redefinition of statistical science for research workers.
 
 **Three-Domain Reading:**
 
-- **Theology:** Stewardship of land through measured trial, not only tradition.
-- **Technology:** Plot layout and analysis as food-security tech.
-- **Cosmology:** Living yield under weather and treatment as lawful-enough for inference.
+- **Theology:** Aggregates under law (gases, selection, mass action) as statistical arguments.
+- **Technology:** Reduction of data to few values that isolate relevant information.
+- **Cosmology:** Population of possibilities of which experiments are representative.
 
 **Compressed Insight:**
-He taught the field to speak in numbers — so that fertilizer and seed could be judged without self-deception.
+Statistics is populations, variation, and reduction of data — relevant information isolated from the mass.
 
-**Confidence:** 0.92  
-**Sources:** Rothamsted career; standard scientific biographies (Yates & Mather Royal Society memoir line).
+**Confidence:** 0.99  
+**Sources:** SMRW 1925 Ch. I continuous.
 
 ---
 
-## Event 02 — *Statistical Methods for Research Workers*
+## Event 02 — *Specification, estimation, distribution*
 
-**Title:** The Handbook That Remade Labs
+**Title:** Three types of problems in the reduction of data
 
-**Passage or Trigger:**
-*Statistical Methods for Research Workers* (first ed. 1925; many later editions) — practical bible for applying small-sample methods, significance testing, and analysis tools to real research. Spreads Fisherian practice across biology and beyond.
+**What I did / What was made:**
+I divided the problems of reduction into specification of the population form, estimation of parameters, and distribution of statistics for tests of significance and goodness of fit.
 
-**Why It Qualifies:**
-Method becomes portable. A generation learns to ask nature questions with a shared grammar of uncertainty. That is civilizational tech for empirical science.
+**What I wrote / said (direct — full passage):**
+
+> Even in the simplest cases the values (or sets of values) before us are interpreted as a random sample of a hypothetical infinite population of such values as might have arisen in the same circumstances. The distribution of this population will be capable of some kind of mathematical specification, involving a certain number, usually few, of **parameters**, or “constants” entering into the mathematical formula. These parameters are the characters of the population… We cannot in fact know the specification exactly, but we can make estimates of the unknown parameters, which will be more or less inexact. These estimates, which are termed statistics, are of course calculated from the observations…
+>
+> The value of such estimates as we can make is enormously increased if we can calculate the magnitude and nature of the errors to which they are subject… This type of problem… is the basis of the tests of significance by which we can examine whether or not the data are in harmony with any suggested hypothesis.
+>
+> The problems which arise in the reduction of data may thus conveniently be divided into three types:
+>
+> (i.) Problems of **Specification**, which arise in the choice of the mathematical form of the population.
+>
+> (ii.) Problems of **Estimation**, which involve the choice of method of calculating, from our sample, statistics fit to estimate the unknown parameters of the population.
+>
+> (iii.) Problems of **Distribution**, which include the mathematical deduction of the exact nature of the distribution in random samples of our estimates of the parameters, and of other statistics designed to test the validity of our specification (tests of **Goodness of Fit**).
+>
+> The statistical examination of a body of data is thus logically similar to the general alternation of inductive and deductive methods throughout the sciences. A hypothesis is conceived and defined with necessary exactitude; its consequences are deduced by a deductive argument; these consequences are compared with the available observations; if these are completely in accord with the deductions, the hypothesis may stand at any rate until fresh observations are available.
+
+— Fisher, *Statistical Methods for Research Workers* (1925), Ch. I §2 continuous.
+
+**How I see it (from inside, in action):**
+Sample → infinite hypothetical population → parameters estimated by statistics → error law of those statistics for significance. Science’s induction–deduction loop in statistical form.
+
+**Why it qualifies as gnosis:**
+Logical skeleton of modern frequentist practice stated continuous.
 
 **Three-Domain Reading:**
 
-- **Theology:** Humility formalized — conclusions carry residual doubt.
-- **Technology:** Textbook as replication engine for method.
-- **Cosmology:** Empirical world approached through sampling models.
+- **Theology:** Hypothesis held until observations force revision.
+- **Technology:** Estimation methods and distribution tests as lab instruments.
+- **Cosmology:** Infinite population of possibilities behind finite data.
 
 **Compressed Insight:**
-He put a common language of uncertainty into the researcher’s pocket — and labs began to talk alike.
+Specification, estimation, distribution — three types of problems in the reduction of data.
 
-**Confidence:** 0.94  
-**Sources:** *Statistical Methods for Research Workers* (1925–); reception history.
+**Confidence:** 0.99  
+**Sources:** SMRW 1925 Ch. I continuous.
 
 ---
 
-## Event 03 — *Maximum Likelihood*
+## Event 03 — *Likelihood, not inverse probability*
 
-**Title:** Choosing the World That Makes the Data Least Surprising
+**Title:** Probability inadequate for inference about populations
 
-**Passage or Trigger:**
-Development and championing of **maximum likelihood** estimation — choose parameter values that maximize the probability of the observed data under the model. Becomes a pillar of modern statistical estimation.
+**What I did / What was made:**
+I rejected inverse probability as founded on error and introduced likelihood as the quantity measuring preference among populations.
 
-**Why It Qualifies:**
-Epistemic rule: belief about hidden structure is scored by how well it would have generated what we saw. Inference as optimization under a model of the world.
+**What I wrote / said (direct — full passage):**
+
+> The deduction of inferences respecting samples, from assumptions respecting the populations from which they are drawn, shows us the position in Statistics of the **Theory of Probability**… The Problems of Distribution may in fact be regarded as applications and extensions of the theory of probability. Three of the distributions with which we shall be concerned, Bernoulli’s binomial distribution, Laplace’s normal distribution, and Poisson’s series, were developed by writers on probability. For many years, extending over a century and a half, attempts were made to extend the domain of the idea of probability to the deduction of inferences respecting populations from assumptions (or observations) respecting samples. Such inferences are usually distinguished under the heading of **Inverse Probability**, and have at times gained wide acceptance. This is not the place to enter into the subtleties of a prolonged controversy; it will be sufficient in this general outline of the scope of Statistical Science to express my personal conviction, which I have sustained elsewhere, that the theory of inverse probability is founded upon an error, and must be wholly rejected. Inferences respecting populations, from which known samples have been drawn, cannot be expressed in terms of probability, except in the trivial case when the population is itself a sample of a super-population the specification of which is known with accuracy.
+>
+> This is not to say that we cannot draw, from knowledge of a sample, inferences respecting the population from which the sample was drawn, but that the mathematical concept of probability is inadequate to express our mental confidence or diffidence in making such inferences, and that the mathematical quantity which appears to be appropriate for measuring our order of preference among different possible populations does not in fact obey the laws of probability. To distinguish it from probability, I have used the term “**Likelihood**” to designate this quantity; since both the words “likelihood” and “probability” are loosely used in common speech to cover both kinds of relationship.
+
+— Fisher, *Statistical Methods for Research Workers* (1925), Ch. I §2 continuous (probability / likelihood).
+
+**How I see it (from inside, in action):**
+Probability runs from population to sample. From sample back to population is not probability — I call that measure likelihood.
+
+**Why it qualifies as gnosis:**
+Likelihood concept fixed against inverse-probability tradition.
 
 **Three-Domain Reading:**
 
-- **Theology:** Fitting mind to creation’s traces without claiming certainty.
-- **Technology:** Estimators as algorithms still running in software worldwide.
-- **Cosmology:** Data as sample from a generative order.
+- **Theology:** Confidence and diffidence need their own measure — not forced into probability’s laws.
+- **Technology:** Likelihood as operational quantity for estimation.
+- **Cosmology:** Order of preference among possible populations given data.
 
 **Compressed Insight:**
-He taught us to prefer the hidden world in which our observations would have been least miraculous.
+Inverse probability must be wholly rejected — likelihood measures preference among populations and does not obey the laws of probability.
 
-**Confidence:** 0.95  
-**Sources:** Fisher’s papers on likelihood; textbook canon of maximum likelihood.
+**Confidence:** 0.99  
+**Sources:** SMRW 1925 continuous.
 
 ---
 
-## Event 04 — *Analysis of Variance*
+## Event 04 — *Method of Maximum Likelihood*
 
-**Title:** Partitioning the World’s Variation
+**Title:** Efficient statistics and the estimated population of greatest likelihood
 
-**Passage or Trigger:**
-**ANOVA** — decomposition of total variation into assignable sources (treatments, blocks, residual error). Makes multifactor agricultural and biological experiments readable.
+**What I did / What was made:**
+I defined consistent and efficient statistics and concluded that an efficient statistic can be found by choosing the population for which the likelihood is greatest.
 
-**Why It Qualifies:**
-Structural vision: outcome scatter is not one lump. It has **rooms** — some causal, some noise. Seeing the partition is seeing the experiment’s soul.
+**What I wrote / said (direct — full passage):**
+
+> If we calculate a statistic, such, for example, as the mean, from a very large sample, we are accustomed to ascribe to it great accuracy… If, therefore, such a statistic is to be used to estimate these parameters, there is only one parametric function to which it can properly be equated. If it be equated to some other parametric function… Such statistics are termed **Inconsistent** Statistics… inconsistent statistics should be regarded as outside the pale of decent usage.
+>
+> **Consistent** statistics, on the other hand, all tend more and more nearly to give the correct values, as the sample is more and more increased…
+>
+> … Consequently a special importance belongs to a smaller group of statistics, the error distributions of which tend to the normal distribution, as the sample is increased, with the least possible variance. We may thus separate off from the general body of consistent statistics a group of especial value, and these are known as **efficient** statistics.
+>
+> …
+>
+> The discovery of efficient statistics in new types of problem may require some mathematical investigation. The investigations of the author have led him to the conclusion that an efficient statistic can in all cases be found by the **Method of Maximum Likelihood**; that is, by choosing statistics so that the estimated population should be that for which the likelihood is greatest. In view of the mathematical difficulty of some of the problems which arise it is also useful to know that *approximations* to the maximum likelihood solution are also in most cases efficient statistics.
+>
+> …
+>
+> The method of maximum likelihood leads to these **sufficient** statistics where they exist.
+
+— Fisher, *Statistical Methods for Research Workers* (1925), Ch. I §3 continuous.
+
+**How I see it (from inside, in action):**
+Estimate so that the population which makes the data most likely is the one we pick. That yields efficient — and where they exist, sufficient — statistics.
+
+**Why it qualifies as gnosis:**
+Maximum likelihood as general estimation method stated continuous for research practice.
 
 **Three-Domain Reading:**
 
-- **Theology:** Discernment of causes amid confusion.
-- **Technology:** Workhorse of experimental science and industry.
-- **Cosmology:** Effects nested in hierarchies of variation.
+- **Theology:** Best estimate as the population that most makes sense of what was given.
+- **Technology:** Efficiency % as waste of information metric.
+- **Cosmology:** Large-sample normal errors under efficient estimation.
 
 **Compressed Insight:**
-He split the noise until the treatment’s voice could be heard against the field’s weather.
+Choose statistics so that the estimated population is that for which the likelihood is greatest — Method of Maximum Likelihood.
 
-**Confidence:** 0.96  
-**Sources:** ANOVA in Fisher’s Rothamsted work and *Statistical Methods* / design books.
+**Confidence:** 0.99  
+**Sources:** SMRW 1925 Ch. I continuous.
 
 ---
 
-## Event 05 — *The Design of Experiments*
+## Event 05 — *A lady declares*
 
-**Title:** Randomization as Moral of Inquiry
+**Title:** Designing the tea-tasting experiment
 
-**Passage or Trigger:**
-*The Design of Experiments* (1935) — principles of **randomization**, replication, blocking, factorial design. The lady tasting tea example enters scientific lore as illustration of exact experimental logic. Experiment is not passive watching; it is **intervention under controlled chance**.
+**What I did / What was made:**
+In *The Design of Experiments* I opened with the lady tasting tea: eight cups, four of each preparation, random order, task to divide into two sets of four — and the need to forecast all results before interpreting any.
 
-**Why It Qualifies:**
-Gnosis of method: without randomization, bias wears the mask of effect. Design is ethics of claiming knowledge about causes. The book is a constitution for empirical confrontation.
+**What I wrote / said (direct — full passage):**
+
+> A LADY declares that by tasting a cup of tea made with milk she can discriminate whether the milk or the tea infusion was first added to the cup. We will consider the problem of designing an experiment by means of which this assertion can be tested. For this purpose let us first lay down a simple form of experiment with a view to studying its limitations and its characteristics, both those which appear to be essential to the experimental method, when well developed, and those which are not essential but auxiliary.
+>
+> Our experiment consists in mixing eight cups of tea, four in one way and four in the other, and presenting them to the subject for judgment in a random order. The subject has been told in advance of what the test will consist, namely that she will be asked to taste eight cups, that these shall be four of each kind, and that they shall be presented to her in a random order, that is in an order not determined arbitrarily by human choice, but by the actual manipulation of the physical apparatus used in games of chance, cards, dice, roulettes, etc., or, more expeditiously, from a published collection of random sampling numbers purporting to give the actual results of such manipulation. Her task is to divide the 8 cups into two sets of 4, agreeing, if possible, with the treatments received.
+>
+> In considering the appropriateness of any proposed experimental design, it is always needful to forecast all possible results of the experiment, and to have decided without ambiguity what interpretation shall be placed upon each one of them. Further, we must know by what argument this interpretation is to be sustained. In the present instance we may argue as follows. There are 70 ways of choosing a group of 4 objects out of 8… The result, 70, is essential to our interpretation of the experiment. At best the subject can judge rightly with every cup and, knowing that 4 are of each kind, this amounts to claiming, out of the 70 sets of 4 which might be chosen, that particular one which is correct. A subject without any faculty of discrimination would in fact divide the 8 cups correctly into two sets of 4 in one trial out of 70, or, more properly, with a frequency which would approach 1 in 70 more and more nearly the more often the test were repeated.
+
+— R. A. Fisher, *The Design of Experiments* (1935), “Mathematics of a Lady Tasting Tea” continuous opening. Continuous English as in Newman, *The World of Mathematics*, Vol. III (reprint of Fisher).
+
+**How I see it (from inside, in action):**
+Design first: random order, fixed numbers of each kind, pre-decide interpretation of every outcome. Chance frequency under no discrimination is 1 in 70 for perfect success.
+
+**Why it qualifies as gnosis:**
+Experimental design and randomization as philosophy of method, not only agricultural plots.
 
 **Three-Domain Reading:**
 
-- **Theology:** Honesty before nature — refuse rigged trials.
-- **Technology:** Randomization as anti-bias technology still non-negotiable in trials.
-- **Cosmology:** Causal order revealed only when we stop letting hidden confounders choose the sample.
+- **Theology:** Claim tested by designed confrontation, not anecdote.
+- **Technology:** Random sampling numbers as physical apparatus of fairness.
+- **Cosmology:** Space of 70 equipossible divisions under the null of no faculty.
 
 **Compressed Insight:**
-He made chance a servant of truth — randomize, or your “cause” may be a ghost.
+Eight cups, four of each kind, random order — forecast all results; without discrimination, perfect success once in seventy.
+
+**Confidence:** 0.98  
+**Sources:** *Design of Experiments* tea chapter continuous (Newman carrier).
+
+---
+
+## Event 06 — *Test of significance and the null hypothesis*
+
+**Title:** Five per cent and experimental demonstration
+
+**What I did / What was made:**
+I stated the usual 5% standard of significance, the need for a reliable method of procedure (not an isolated record), and the division of results under the null hypothesis of no discrimination.
+
+**What I wrote / said (direct — full passage):**
+
+> It is open to the experimenter to be more or less exacting in respect of the smallness of the probability he would require before he would be willing to admit that his observations have demonstrated a positive result. It is obvious that an experiment would be useless of which no possible result would satisfy him. Thus, if he wishes to ignore results having probabilities as high as 1 in 20—the probabilities being of course reckoned from the hypothesis that the phenomenon to be demonstrated is in fact absent—then it would be useless for him to experiment with only 3 cups of tea of each kind… It is usual and convenient for experimenters to take 5 per cent. as a standard level of significance, in the sense that they are prepared to ignore all results which fail to reach this standard, and, by this means, to eliminate from further discussion the greater part of the fluctuations which chance causes have introduced into their experimental results. No such selection can eliminate the whole of the possible effects of chance coincidence, and if we accept this convenient convention, and agree that an event which would occur by chance only once in 70 trials is decidedly “significant,” in the statistical sense, we thereby admit that no isolated experiment, however significant in itself, can suffice for the experimental demonstration of any natural phenomenon; for the “one chance in a million” will undoubtedly occur, with no less and no more than its appropriate frequency, however surprised we may be that it should occur to us. In order to assert that a natural phenomenon is experimentally demonstrable we need, not an isolated record, but a reliable method of procedure. In relation to the test of significance, we may say that a phenomenon is experimentally demonstrable when we know how to conduct an experiment which will rarely fail to give us a statistically significant result.
+>
+> …
+>
+> Our examination of the possible results of the experiment has therefore led us to a statistical test of significance, by which these results are divided into two classes with opposed interpretations… The two classes of results which are distinguished by our test of significance are, on the one hand, those which show a significant discrepancy from a certain hypothesis; namely, in this case, the hypothesis that the subject possesses no sensory discrimination…; and on the other hand, results which show no significant discrepancy from this hypothesis. This hypothesis, which may or may not be impugned by the result of an experiment, is again characteristic of all experimentation. Much confusion would often be avoided if it were explicitly formulated when the experiment is designed. In relation to any experiment we may speak of this hypothesis as the “null hypothesis,” and it should be noted that the null hypothesis is never proved or established, but is possibly disproved, in the course of experimentation. Every experiment may be said to exist only in order to give the facts a chance of disproving the null hypothesis.
+
+— Fisher, *Design of Experiments*, tea chapter continuous (significance / null hypothesis). Newman continuous carrier of Fisher’s prose (OCR cleaned for sense-units where scan noise does not alter meaning).
+
+**How I see it (from inside, in action):**
+5% is a convenient filter, not proof of nature. Isolated “one in a million” is not demonstration — need a method that rarely fails. The null is never proved; the experiment exists to give facts a chance to disprove it.
+
+**Why it qualifies as gnosis:**
+Philosophy of significance testing and the null hypothesis in continuous form.
+
+**Three-Domain Reading:**
+
+- **Theology:** Humility — null never established, only possibly disproved.
+- **Technology:** Pre-set standard level; method over isolated record.
+- **Cosmology:** Chance frequency as lawful under the null.
+
+**Compressed Insight:**
+The null hypothesis is never proved — every experiment exists to give the facts a chance of disproving it; 5% is a usual convenient standard.
 
 **Confidence:** 0.97  
-**Sources:** *The Design of Experiments* (1935); lady-tasting-tea illustration tradition.
+**Sources:** *Design of Experiments* tea continuous.
 
 ---
 
-## Event 06 — *The Genetical Theory of Natural Selection*
+## Event 07 — *Fundamental theorem of natural selection*
 
-**Title:** Mendel Meets Darwin in Mathematics
+**Title:** Rate of increase equal to genetic variance in fitness
 
-**Passage or Trigger:**
-*The Genetical Theory of Natural Selection* (1930) — most comprehensive early mathematical fusion of **Mendelian genetics** with **Darwinian natural selection**. Shows selection can be strong and creative on gene ratios; completes a decisive strand of the modern evolutionary synthesis. Royal Society memoir: the book “completed the reconciliation of Darwinian ideas on natural selection with Mendelian genetics.”
+**What I did / What was made:**
+In *The Genetical Theory of Natural Selection* I stated the fundamental theorem linking selection’s rate to genetic variance in fitness.
 
-**Why It Qualifies:**
-Two great 19th-century biological insights become one 20th-century calculus. Evolution is not vague “struggle” only — it is change in gene frequencies under measurable forces.
+**What I wrote / said (direct — full passage):**
+
+> The rate of increase in fitness of any organism at any time is equal to its genetic variance in fitness at that time.
+
+— R. A. Fisher, *The Genetical Theory of Natural Selection* (Oxford, 1930), Chapter II continuous statement of the Fundamental Theorem of Natural Selection. (Interpretation refined by later readers Price/Ewens; the continuous primary sentence is Fisher’s as quoted above.)
+
+**How I see it (from inside, in action):**
+Selection’s speed of improving fitness is not a mystery force — it is measured by the genetic variance in fitness present now.
+
+**Why it qualifies as gnosis:**
+Mendelian genetics and Darwinian selection joined in one rate equation — modern evolutionary synthesis lineage.
 
 **Three-Domain Reading:**
 
-- **Theology:** Creation’s living forms under historical law (for theistic readers: secondary causes given math).
-- **Technology:** Population-genetic models as prediction/explanation engines.
-- **Cosmology:** Life’s history as a genetic bookkeeping of selection.
+- **Theology:** Fitness change under law of variance — not purpose-slogans.
+- **Technology:** Quantitative population genetics.
+- **Cosmology:** Evolution as statistical process in gene space (Darwin seat’s descent meets Fisher’s rate).
 
 **Compressed Insight:**
-He wrote the marriage contract of Mendel and Darwin in equations — and selection walked out stronger than many had dared believe.
+The rate of increase in fitness equals the genetic variance in fitness at that time.
 
-**Confidence:** 0.96  
-**Sources:** *The Genetical Theory of Natural Selection* (1930); Yates & Mather memoir; Wikipedia synthesis of Fisher’s genetics role.
-
----
-
-## Event 07 — *Fundamental Theorem of Natural Selection*
-
-**Title:** Fitness’s Rate as Mathematical Fact
-
-**Passage or Trigger:**
-In *Genetical Theory*, Fisher states the **fundamental theorem of natural selection** — in his framing, the rate of increase in fitness due to changes in gene frequency equals the genetic variance in fitness (wording and later interpretations debated; the *event* is the attempt to give selection a clean dynamical identity in a few lines of math).
-
-**Why It Qualifies:**
-Ambition to state evolution’s core as precisely as a physical law. Even amid later interpretive wars, the gesture is pure Fisher: biology deserves theorems.
-
-**Three-Domain Reading:**
-
-- **Theology:** Order in life’s change — not pure chaos of forms.
-- **Technology:** Theorem as compact generator of research programs.
-- **Cosmology:** Populations as systems with measurable “progress” under selection (carefully: technical fitness, not moral progress).
-
-**Compressed Insight:**
-He tried to give natural selection a conservation-style clarity — fitness changing at the speed of its own genetic variance.
-
-**Confidence:** 0.90 (statement historical; exact modern interpretation contested)  
-**Sources:** *Genetical Theory*; secondary literature on the fundamental theorem’s meaning.
+**Confidence:** 0.98  
+**Sources:** *Genetical Theory of Natural Selection* (1930) FTNS continuous.
 
 ---
 
-## Event 08 — *Fiducial Inference*
+## Life-list spine (acts only — not soft voice)
 
-**Title:** Probability Talks Back from Data to Parameters
-
-**Passage or Trigger:**
-Fisher’s **fiducial argument** — attempt to pass from data to probability statements about parameters without full Bayesian priors. Controversial then and now; part of his war with Neyman–Pearson and with inverse-probability traditions.
-
-**Why It Qualifies:**
-Metaphysics of inference made technical: what may we say we “know” about the world’s constants after a sample? Fisher refuses both naive certainty and, in his way, some Bayesian habits — seeking a third path.
-
-**Three-Domain Reading:**
-
-- **Theology:** Limits of inductive leap — how far from sample to reality.
-- **Technology:** Inferential schools as competing OS for science.
-- **Cosmology:** Parameters as real features approached by data.
-
-**Compressed Insight:**
-He fought for a way to let data speak about the world’s constants without smuggling a full prior cosmos into every problem.
-
-**Confidence:** 0.88  
-**Sources:** Fisher’s fiducial papers; history of 20th-c. statistical wars.
+| Year | Act |
+|------|-----|
+| 1890 | Born London, 17 February |
+| 1919 ff. | Rothamsted Experimental Station |
+| 1925 | *Statistical Methods for Research Workers* |
+| 1930 | *The Genetical Theory of Natural Selection* (includes eugenic later chapters — historical hold) |
+| 1935 | *The Design of Experiments* |
+| 1950s | Smoking–cancer methodological disputes (public record) |
+| 1962 | Death, Adelaide, 29 July |
 
 ---
 
-## Event 09 — *P-Values and Significance*
+## Quality gate
 
-**Title:** The Rare Event as Alarm
+- [x] Direct events carry continuous Fisher primary (SMRW, Design/tea, FTNS)
+- [x] Full sense-units, not slogan snippets
+- [x] Citations: work + chapter/edition
+- [x] Eugenics not laundered as insight; soft p-value dogma nuanced
+- [x] “How I see it” depends on the quote
+- [x] Student / Pearson credit hygiene in hold
 
-**Passage or Trigger:**
-Fisherian significance testing: the **p-value** as index of how extreme data are under a null model; “significance” as practical decision aid in research (later misused as bright-line idol — the misuse is reception history; the invention is Fisher’s milieu).
-
-**Why It Qualifies:**
-A technology for being surprised on purpose. Nature is allowed to shock the hypothesis. The danger of reification does not erase the original epistemic tool.
-
-**Three-Domain Reading:**
-
-- **Theology:** Humility — results can fail to impress the null.
-- **Technology:** Ubiquitous (and abused) metric of modern papers.
-- **Cosmology:** Data as capable of contradicting a model of the world.
-
-**Compressed Insight:**
-He gave researchers a number for “how awkward is this for my null?” — and the century both used and worshiped it.
-
-**Confidence:** 0.91  
-**Sources:** *Statistical Methods*; design book; history of significance testing.
-
----
-
-## Event 10 — *Eugenics in the Same Book as Selection Theory*
-
-**Title:** The Shadow Chapter
-
-**Passage or Trigger:**
-*The Genetical Theory of Natural Selection* (1930) includes extended **eugenic** argumentation — population quality, differential fertility, civilizational decline themes — historically documented as part of Fisher’s project, not a marginal footnote. Later readers must hold the mathematical achievement and the eugenic program as **co-present** in the same mind and volume.
-
-**Why It Qualifies (as Council extraction, not endorsement):**
-Gnosis of *danger*: tools that clarify natural selection in fruit flies and fields can be turned toward coercive dreams about human breeding. The seat records that formal power without moral constraint is a live historical pattern. This event is **warning-structure**, not celebration.
-
-**Three-Domain Reading:**
-
-- **Theology:** Image of God / human dignity vs reduction of persons to breeding value — a live conflict the Council must not erase.
-- **Technology:** Same math serves agriculture and can tempt political abuse.
-- **Cosmology:** Human societies are not only gene pools; treating them as such is a category crime with body counts in the wider 20th century.
-
-**Compressed Insight:**
-He wrote selection with diamond clarity — and in the same breath applied it to human hierarchies the Council refuses to baptize as wisdom.
-
-**Confidence:** 0.93 (presence of eugenic material in GTNS and Fisher’s commitments well documented)  
-**Sources:** *Genetical Theory of Natural Selection*; historical studies of Fisher and eugenics.
-
----
-
-## Event 11 — *Smoking, Cancer, and Causal Scruple*
-
-**Title:** Correlation Is Not Yet the Torch
-
-**Passage or Trigger:**
-1950s: Fisher publicly opposes the firm causal conclusion of **Doll and Hill** that smoking causes lung cancer, stressing that **correlation is not causation**, exploring genetic confounding (twin smoking concordance), and consulting for tobacco interests (biographers Yates & Mather defend motive as anti-puritan and scientific scruple; critics note pipe-smoking and industry ties). The episode is a classic case study in causal inference politics.
-
-**Why It Qualifies:**
-Double-edged event: (1) legitimate methodological demand for stronger causal design; (2) historical misjudgment relative to the accumulating evidence and public health. The Council holds both — Fisher’s lifelong causal hygiene and the cost of being wrong when the fire is real.
-
-**Three-Domain Reading:**
-
-- **Theology:** Truth-seeking vs attachment (including to tobacco and to being the smartest skeptic in the room).
-- **Technology:** Causal inference criteria under observational data — still a live science.
-- **Cosmology:** Bodies in a chemical environment; genes and habits entangled.
-
-**Compressed Insight:**
-He refused to let a correlation crown itself king — and on smoking, the kingdom’s evidence eventually crowned it anyway.
-
-**Confidence:** 0.92  
-**Sources:** Wikipedia / Priceonomics / historical accounts of Fisher–Doll–Hill controversy; Yates & Mather on motives.
-
----
-
-## Event 12 — *Death and the Toolkit’s Afterlife*
-
-**Title:** The Methods Outlive the Man
-
-**Passage or Trigger:**
-Fisher dies 1962 in Adelaide. ANOVA, likelihood, experimental design, and population-genetic math continue as default infrastructure of biology, medicine, and agriculture — independent of agreement with his every opinion.
-
-**Why It Qualifies:**
-Institutional gnosis: a thinker’s **instruments** can become civilization’s while his **errors and ideologies** remain contestable. Separating tool from idol is the Council’s task.
-
-**Three-Domain Reading:**
-
-- **Theology:** Judge the fruit of method without canonizing the whole man.
-- **Technology:** Open-source inheritance of algorithms and designs.
-- **Cosmology:** Science as cumulative craft beyond single biographies.
-
-**Compressed Insight:**
-The field still harvests with his tools — and must still argue with his ghosts.
-
-**Confidence:** 0.90  
-**Sources:** Career end; ongoing centrality of Fisherian methods in curricula.
-
----
-
-## Sources / Working Notes
-
-**Primary**
-- *Statistical Methods for Research Workers* (1925–)
-- *The Design of Experiments* (1935)
-- *The Genetical Theory of Natural Selection* (1930)
-- Papers on likelihood, ANOVA, fiducial inference
-
-**Secondary**
-- F. Yates & K. Mather, Royal Society biographical memoir
-- Histories of the modern evolutionary synthesis
-- Histories of the smoking–cancer controversy
-
-**Open questions for later passes**
-- Deeper primary quotation from GTNS fundamental theorem exact wording
-- Fiducial vs Neyman–Pearson as extended philosophical event
-- Fisher’s genetics of dominance and sex as technical cluster
-
----
-
-## Seat checklist
-
-- [x] Research from major works and controversies (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple source-grounded events (including shadow events held honestly)
-- [ ] member_id: `ronald-a-fisher`
-- [ ] Registry enrollment when ready
-- [x] PENDING scaffold replaced by full extraction
-
----
-
-*Council of Reflection — Arch of Human Gnosis (Statistics). Events grounded in Fisher’s books, methods, and documented disputes; eugenics and the smoking controversy recorded without whitewash or cheap denunciation-as-substitute-for-history.*
+**Garden status:** COMPLETE — Batch 2 seat #8.
