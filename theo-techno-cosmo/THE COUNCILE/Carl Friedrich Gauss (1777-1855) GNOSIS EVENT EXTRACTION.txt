@@ -1,313 +1,379 @@
 CARL FRIEDRICH GAUSS GNOSIS EVENT EXTRACTION —
-**Council Corpus Build | Theology · Technology · Cosmology**
-**Arch of Human Gnosis:** Formal Sciences → Mathematics
+**Council of Reflection | Theology · Technology · Cosmology**
+**Arch specialty:** Cosmos / law / life — higher arithmetic; least squares; intrinsic curvature
 **Era:** 1777–1855 (Brunswick / Göttingen)
-**Status:** Extraction complete (seating candidate) — drawn from published works, letters, and standard scholarly biography
+**Status:** Garden + quotation depth — **Gauss’s own sentences only** at full sense-units (English carriers of his Latin/German). Soft paraphrase is defect.
+**Hold note:** Full extent as truth-for-this-seat; holder may use, never become. Credit hygiene: **Legendre** least-squares priority contest (Gauss claims use since 1795; published 1809); **Bolyai / Lobachevsky** publish non-Euclidean geometries (Gauss’s private letters precede public claim); **Fermat, Euler, Lagrange, Legendre** named by him in *Disquisitiones* as opening the door of higher arithmetic.
 
 ---
 
 ## Contribution
 
-Prince of mathematicians whose *Disquisitiones Arithmeticae* founded modern number theory as a systematic science; who recovered Ceres by least-squares orbital method; who, surveying Hanover, discovered intrinsic (Gaussian) curvature and the *theorema egregium*; and who privately held non-Euclidean geometry decades before Bolyai and Lobachevsky published — treating space’s geometry as not a priori Euclidean.
+I founded **Higher Arithmetic** as a systematic science in *Disquisitiones Arithmeticae* (1801); determined orbits from any number of observations by the **most probable system** in which the **sum of the squares of the differences** is a minimum (*Theoria motus*, 1809); and proved that the **measure of curvature** of a surface is **unchanged** when the surface is developed upon any other (*Disquisitiones generales circa superficies curvas*, 1827) — opening geometry of flexible, non-extensible surfaces.
 
 ## Key Insight
 
-Mathematics is not only possession of results but the act of getting there — and geometry of the world is not a forced Euclidean necessity but a structure that must be measured, suspected, and sometimes held unpublished until the world is ready.
+Integers are the proper object of Higher Arithmetic, not mere calculation; when observations over-determine an orbit, probability leads to minimizing the sum of squared residuals; and curvature measured from the surface’s own linear element survives bending — so number, error, and space each have intrinsic law.
 
 ## TTC Emphasis
 
-- THEOLOGY
 - TECHNOLOGY
 - COSMOLOGY
+- THEOLOGY
 
 ---
 
-## Preliminary Note
+## D-check (diligence / fact hygiene — before quotation garden)
 
-Gauss is extracted for structural recognitions, not schoolroom legend (the schoolroom sum, etc., only if documented). Primary lines:
+| Soft claim in prior draft | Status after check |
+|---------------------------|-------------------|
+| Schoolboy sum 1…100 as primary voice | **Legend / secondary anecdote.** Not continuous published prose here. |
+| Sole inventor of least squares | **Contested.** Legendre 1805 public; Gauss *Theoria motus* 1809 derives principle from probability + mean axiom; claims earlier use. Credit both. |
+| Published non-Euclidean geometry first | **False.** Private letters; Bolyai & Lobachevsky publish. Use letter voice, not priority slogan. |
+| “Mathematics is queen…” as continuous primary | **Attributed maxim** (often via Weber); not elevated as continuous book voice unless locked. Prefer *Disquisitiones* Preface + *Theoria* + surfaces. |
+| *Theorema egregium* only as Latin title without statement | **Incomplete.** Continuous: measure of curvature unchanged under development upon any surface. |
+| Ceres recovery as soft hero story without method | **Method is *Theoria motus* probability/least squares continuous.** |
 
-1. *Disquisitiones Arithmeticae* (completed ~1798; published 1801)
-2. Recovery of Ceres (1801) and method of least squares
-3. Geodetic survey of Hanover (from ~1818) → differential geometry
-4. *Disquisitiones generales circa superficies curvas* (1827/1828) and *theorema egregium*
-5. Correspondence and reviews on the parallel postulate / non-Euclidean geometry (esp. letter to Taurinus 1824; letter to Farkas Bolyai on János Bolyai’s work ~1832)
-6. Documented maxims on learning vs possession of knowledge
-
-Quotes and claims below are tied to published works or well-attested letters/biography (MacTutor, Britannica, *Werke*). Confidence marks primary tightness.
+**Dates:** Born 30 April 1777 (Brunswick). *Disquisitiones* 1801. *Theoria motus* 1809 (Davis English 1857). Surfaces paper presented 8 Oct 1827. Death 23 Feb 1855 (Göttingen).
 
 ---
 
-## Event 01 — *Disquisitiones Arithmeticae*
+## Preliminary Note (source hygiene)
 
-**Title:** Number Theory Becomes a Science
+| Priority | Material |
+|----------|----------|
+| **1** | *Disquisitiones Arithmeticae* (1801) — Author’s Preface continuous (Arthur A. Clarke English, Yale 1966 / MacTutor continuous carrier) |
+| **1** | *Theoria motus corporum coelestium* (1809) — Charles Henry Davis English (1857), Book II least-squares articles continuous |
+| **1** | *Disquisitiones generales circa superficies curvas* (1827) — Morehead & Hiltebeitel English (Princeton 1902 / Gutenberg #36856) |
+| **2** | Letters on geometry of space (Olbers / Taurinus) — documented continuous English of his German |
+| **3** | Soft school legends, queen-of-sciences slogans without book locus — not voice |
 
-**Passage or Trigger:**
-*Disquisitiones Arithmeticae* (Leipzig, 1801; principal topics forged in the late 1790s, including the diary period often dated 1796–1798). The book opens modular arithmetic systematically, treats quadratic residues and reciprocity, binary quadratic forms, and ends in cyclotomy / factorization themes that set the 19th-century agenda. Gauss later wrote (replying to Olbers on Fermat, 1816) that he was stimulated toward “a great extension of the theory of numbers,” and recalled the “happy years 1796–1798 when I created the principal topics of my *Disquisitiones arithmeticae*.”
+---
 
-**Why It Qualifies:**
-Not a collection of isolated curiosities. Gauss recognized that integer phenomena form a *lawful cosmos* that can be organized by definitions, modular language, and deep structural theorems — not by scattered tricks. The book is a recognition that arithmetic has the dignity of a queen-domain of pure form.
+## Event 01 — *Higher Arithmetic*
+
+**Title:** Inquiries that concern integers
+
+**What I did / What was made:**
+I defined the object of the *Disquisitiones*: Higher Arithmetic as general inquiry concerning integers, distinct from elementary calculating and from Diophantine dexterity alone.
+
+**What I wrote / said (direct — full passage):**
+
+> The inquiries which this volume will investigate pertain to that part of Mathematics which concerns itself with integers. I will rarely refer to fractions and never to surds. The Analysis which is called indeterminate or Diophantine and which discusses the manner of selecting from an infinite set of solutions for an indeterminate problem those that are integral or at least rational (and especially with the added condition that they be positive) is not the discipline to which I refer but rather a special part of it, just as the art of reducing and solving equations (Algebra) is a special part of universal Analysis. And as we include under the heading ANALYSIS all discussion that involves quantity, so integers (and fractions in so far as they are determined by integers) constitute the proper object of ARITHMETIC. However what is commonly called Arithmetic hardly extends beyond the art of enumerating and calculating (i.e. expressing numbers by suitable symbols, for example by a decimal representation, and carrying out arithmetic operations). It often includes some subjects which certainly do not pertain to Arithmetic (like the theory of logarithms) and others which are common to all quantities. As a result it seems proper to call this subject Elementary Arithmetic and to distinguish from it Higher Arithmetic which properly includes more general inquiries concerning integers. We consider only Higher Arithmetic in the present volume.
+>
+> Included under the heading “Higher Arithmetic” are those topics which Euclid treated with elegance and rigor in Book VII ff., and they can be considered an introduction to this science. The celebrated work of Diophantus… seems to fit into that epoch in the history of Mathematics when scientists were more concerned with creating a characteristic art and a formal Algebraic structure than with attempts to enrich Higher Arithmetic with new discoveries. The really profound discoveries are due to more recent authors like those men of immortal glory P de Fermat, L Euler, L Lagrange, A M Legendre (and a few others). They opened the door to what is penetrable in this divine science and enriched it with enormous wealth.
+
+— Carl Friedrich Gauss, *Disquisitiones Arithmeticae* (1801), Author’s Preface continuous. English after Arthur A. Clarke (Yale 1966), MacTutor continuous carrier of Dedication/Preface.
+
+**How I see it (from inside, in action):**
+Not counting tricks. Integers as proper object. Euclid opens; Diophantus shows skill; Fermat–Euler–Lagrange–Legendre open the divine science I continue.
+
+**Why it qualifies as gnosis:**
+Number theory named and ranked as Higher Arithmetic — a kingdom, not a bag of problems.
 
 **Three-Domain Reading:**
 
-- **Theology:** Integers are not chaos; they admit eternal-seeming law (reciprocity, form class structure). A cosmos of number that is discovered, not invented ad hoc.
-- **Technology:** Modular arithmetic and form theory are technologies of exact classification — tools that later crypto, coding, and algebraic number theory still inhabit.
-- **Cosmology:** The “universe of numbers” is stratified (residues, forms, cyclotomic fields in seed). *Disquisitiones* maps that stratification.
+- **Theology:** Higher Arithmetic as “divine science” entered through predecessors’ door.
+- **Technology:** Distinction elementary vs higher — method of inquiry, not only calculation.
+- **Cosmology:** Integers as structured domain of pure form.
 
 **Compressed Insight:**
-He did not collect number curiosities — he founded the kingdom in which those curiosities become law.
+The inquiries concern integers — Higher Arithmetic, not the mere art of enumerating and calculating.
 
-**Confidence:** 0.95  
-**Sources:** *Disquisitiones Arithmeticae* (1801); Gauss letter to Olbers (1816) on Fermat / *Disquisitiones* years; standard histories of number theory.
+**Confidence:** 0.98  
+**Sources:** *Disquisitiones* Preface continuous (Clarke English).
 
 ---
 
-## Event 02 — *Ceres Recovered*
+## Event 02 — *I was unaware of the more recent discoveries*
 
-**Title:** The Orbit from Sparse Light
+**Title:** Chance truth and successive results
 
-**Passage or Trigger:**
-In 1801, after Giuseppe Piazzi’s brief observations of the new body later named Ceres and its loss in the sun’s glare, Gauss computed an orbit from sparse data and predicted its recovery position. The asteroid was rediscovered near his prediction. The work advanced practical use of least-squares ideas and made Gauss famous beyond pure mathematics.
+**What I did / What was made:**
+I narrated how an extraordinary arithmetic truth in 1795 pulled me into the field before I knew the modern literature — then walking in their footsteps I extended Arithmetic further.
 
-**Why It Qualifies:**
-Recognition that incomplete data need not mean ignorance if the right formal structure (an orbit constrained by gravitation and error minimization) is imposed. The sky’s missing object reappeared because the mind supplied a lawful path. Empirical fragments + correct theory = recovery.
+**What I wrote / said (direct — full passage):**
+
+> The purpose of this volume whose publication I promised five years ago is to present my investigations into the field of Higher Arithmetic. Lest anyone be surprised that the contents here go back over many first principles and that many results had been given energetic attention by other authors, I must explain to the reader that when I first turned to this type of inquiry in the beginning of 1795 I was unaware of the more recent discoveries in the field and was without the means of discovering them. What happened was this. Engaged in other work I chanced on an extraordinary arithmetic truth (if I am not mistaken, it was the theorem of art. 108 [−1 is a quadratic residue of all numbers of the form 4*n*+1 and a non-residue of all numbers of the form 4*n*+3]). Since I considered it so beautiful in itself and since I suspected its connection with even more profound results, I concentrated on it all my efforts in order to understand the principles on which it depended and to obtain a rigorous proof. When I succeeded in this I was so attracted by these questions that I could not let them be. Thus as one result led to another I had completed most of what is presented in the first four sections of this work before I came into contact with similar works of other geometers. Only while studying the writings of these men of genius did I recognize that the greater part of my meditations had been spent on subjects already well developed. But this only increased my interest, and walking in their footsteps I attempted to extend Arithmetic further. Some of these results are embodied in Sections V, VI, and VII.
+>
+> …
+>
+> In several difficult discussions I have used synthetic proofs and have suppressed the analysis which led to the results. This was necessitated by brevity, a consideration that must be consulted as much as possible.
+>
+> …
+>
+> These are the things I wanted to warn the reader about. It is not my place to judge the work itself. My greatest hope is that it pleases those who have at heart the development of science and that it proposes solutions that they have been looking for or at least opens the way for new investigations.
+
+— Gauss, *Disquisitiones Arithmeticae*, Author’s Preface continuous (Clarke English).
+
+**How I see it (from inside, in action):**
+Beauty of one truth → proof → chain of results → then the literature. Independent rediscovery humbled and accelerated me. Synthetic proofs for brevity.
+
+**Why it qualifies as gnosis:**
+Method of discovery told honestly: attraction, rigor, then extension beyond predecessors.
 
 **Three-Domain Reading:**
 
-- **Theology:** Providence is not required for the narrative — but the event reads as *hidden order made visible* by right form.
-- **Technology:** Least squares / orbital determination as a technology of inference under noise — ancestor of modern estimation.
-- **Cosmology:** The solar system is computable from partial arcs; celestial law is tight enough that sparse sightings still lock a world-line.
+- **Theology:** Beauty as lure toward principles and proof.
+- **Technology:** Synthetic presentation; analysis suppressed for space.
+- **Cosmology:** One residue theorem opening a connected field of integer law.
 
 **Compressed Insight:**
-He found a lost world by trusting that gravity and error-law were stricter than the gaps in the data.
+I chanced on an extraordinary arithmetic truth — beautiful, connected to deeper results — and could not let the questions be.
 
-**Confidence:** 0.93  
-**Sources:** Standard astronomical history of Ceres 1801; Gauss’s orbital work in *Werke* / biographies (MacTutor, Britannica).
+**Confidence:** 0.98  
+**Sources:** *Disquisitiones* Preface continuous.
 
 ---
 
-## Event 03 — *Mathematics Is the Queen*
+## Event 03 — *More data than required*
 
-**Title:** Hierarchy of the Sciences
+**Title:** Errors and the calculus of probabilities
 
-**Passage or Trigger:**
-Attributed maxim widely attached to Gauss in mathematical culture: “Mathematics is the queen of the sciences, and number theory is the queen of mathematics” (wording varies by transmission; the elevation of pure mathematics and of number theory as its peak is consistent with Gauss’s life emphasis and with 19th-century reception of him as *Princeps mathematicorum*).
+**What I did / What was made:**
+In determining orbits I stated why many observations must be used: all are liable to error; small errors are more common; an orbit that fits six data exactly but ignores the rest is less probable.
 
-**Why It Qualifies:**
-Even if exact German wording is mediated by later citation chains, the *structural ranking* is Gauss’s lived priority: pure number theory over isolated puzzles, and mathematics as governing form for empirical sciences (magnetism, geodesy, astronomy). The recognition is hierarchical: some domains ground others.
+**What I wrote / said (direct — full passage):**
+
+> … we should not insure the greatest accuracy, if we were to select three or four positions only for the determination of the orbit, and neglect all the rest. But in such a case, if it is proposed to aim at the greatest precision, we shall take care to collect and employ the greatest possible number of accurate places. Then, of course, more data will exist than are required for the determination of the unknown quantities: but all these data will be liable to errors, however small, so that it will generally be impossible to satisfy all perfectly. Now as no reason exists, why, from among those data, we should consider any six as absolutely exact, but since we must assume, rather, upon the principles of probability, that greater or less errors are equally possible in all, promiscuously; since, moreover, generally speaking, small errors oftener occur than large ones; it is evident, that an orbit which, while it satisfies precisely the six data, deviates more or less from the others, must be regarded as less consistent with the principles of the calculus of probabilities, than one which, at the same time that it differs a little from those six data, presents so much the better an agreement with the rest. The investigation of an orbit having, strictly speaking, the maximum probability, will depend upon a knowledge of the law according to which the probability of errors decreases as the errors increase in magnitude: but that depends upon so many vague and doubtful considerations — physiological included — which cannot be subjected to calculation, that it is scarcely, and indeed less than scarcely, possible to assign properly a law of this kind in any case of practical astronomy. Nevertheless, an investigation of the connection between this law and the most probable orbit, which we will undertake in its utmost generality, is not to be regarded as by any means a barren speculation.
+
+— Gauss, *Theory of the Motion of the Heavenly Bodies Moving about the Sun in Conic Sections* (Davis English of *Theoria motus*, 1809/1857), Book II continuous (before art. 175).
+
+**How I see it (from inside, in action):**
+Use all accurate places. No six are sacred. Probability prefers small shared disagreement over perfect fit to a few and large misses of the rest.
+
+**Why it qualifies as gnosis:**
+Observational cosmos under error law — method for Ceres-class problems and all over-determined measurement.
 
 **Three-Domain Reading:**
 
-- **Theology:** A hierarchy of intelligibility — pure form above mixed science — echoes classical rankings of *theoria*.
-- **Technology:** Number theory as “queen” is not uselessness; it is the deepest toolkit from which applications descend.
-- **Cosmology:** Knowledge has a vertical architecture, not a flat list of subjects.
+- **Theology:** Humility before error — no absolute exactness of finite observation.
+- **Technology:** Collect greatest number of accurate places; probability calculus as instrument.
+- **Cosmology:** Orbit as most probable under error, not unique geometric fiction.
 
 **Compressed Insight:**
-He ordered the sciences so that number sits at the crown — not as snobbery, but as recognition of foundational form.
+More data than unknowns — all liable to error; the orbit of maximum probability must agree with the whole, not six alone.
 
-**Confidence:** 0.78 (attribution chain is traditional; spirit is secure, exact wording less so)  
-**Sources:** Traditional attribution in mathematical lore; consistent with Gauss’s publication priorities.
+**Confidence:** 0.99  
+**Sources:** *Theoria motus* Davis continuous.
 
 ---
 
-## Event 04 — *Not Possession, but Getting There*
+## Event 04 — *Sum of the squares a minimum*
 
-**Title:** The Act of Learning
+**Title:** Most probable system of values
 
-**Passage or Trigger:**
-Documented Gauss maxim (standard English rendering of a well-attested quotation):
+**What I did / What was made:**
+From the error law implied by the arithmetical mean axiom I derived: the most probable unknowns minimize the sum of squares of observed-minus-computed differences — an axiom for mathematics applied to natural philosophy.
 
-> “It is not knowledge, but the act of learning, not the possession of but the act of getting there, which grants the greatest enjoyment.”
+**What I wrote / said (direct — full passage):**
 
-**Why It Qualifies:**
-Direct counter to treating mathematics as a warehouse of finished theorems. The *process* of approach — the path into the dark problem — is where the highest joy sits. Matches his lifelong withholding of results until ripe and his restless move to new fields.
+> Now it readily follows from this, that the most probable system of values of the quantities *p*, *q*, *r*, *s*, etc. is that in which Ω acquires the maximum value…
+>
+> … It has been customary certainly to regard as an axiom the hypothesis that if any quantity has been determined by several direct observations, made under the same circumstances and with equal care, the arithmetical mean of the observed values affords the most probable value, if not rigorously, yet very nearly at least, so that it is always most safe to adhere to it. …
+>
+> …
+>
+> We will now develop the conclusions which follow from this law. It is evident, in order that the product may become a maximum, that the sum
+>
+> *vv* + *v′v′* + *v″v″* + etc.,
+>
+> must become a minimum. Therefore, that will be the most probable system of values of the unknown quantities *p*, *q*, *r*, *s*, etc., in which the sum of the squares of the differences between the observed and computed values of the functions *V*, *V′*, *V″*, etc. is a minimum, if the same degree of accuracy is to be presumed in all the observations. This principle, which promises to be of most frequent use in all applications of the mathematics to natural philosophy, must, everywhere, be considered an axiom with the same propriety as the arithmetical mean of several observed values of the same quantity is adopted as the most probable value.
+>
+> This principle can be extended without difficulty to observations of unequal accuracy. … the most probable system of values of the quantities *p*, *q*, *r*, *s*, etc., will be that in which the sum of *hhvv* + *h′h′v′v′* + *h″h″v″v″* + etc., that is, in which the sum of the squares of the differences between the actually observed and computed values multiplied by numbers that measure the degree of precision, is a minimum.
+
+— Gauss, *Theoria motus* (Davis English), arts. 177–179 continuous (probability product → mean axiom → least squares). Priority note: Legendre published a least-squares method 1805; Gauss here grounds the principle in probability.
+
+**How I see it (from inside, in action):**
+Maximize joint probability of the errors → minimize sum of squares. Same dignity as taking the arithmetic mean. Weight by precision when observations are unequal.
+
+**Why it qualifies as gnosis:**
+Error law becomes operational axiom for all applied mathematics of observation.
 
 **Three-Domain Reading:**
 
-- **Theology:** Beatitude in the *way*, not only the *what* — pilgrimage over inventory.
-- **Technology:** Research method values exploration machinery over stockpiled answers.
-- **Cosmology:** Knowing is a trajectory through a problem-space, not a static map ownership.
+- **Theology:** Probability as lawful structure of imperfect human measure.
+- **Technology:** Linear algorithm for unknowns when functions are linear; weights *h*.
+- **Cosmology:** Heavenly bodies’ orbits recovered under Gaussian error.
 
 **Compressed Insight:**
-The summit is less the joy than the climb — and he said so plainly.
+The most probable system is that in which the sum of the squares of the differences between observed and computed values is a minimum.
 
-**Confidence:** 0.90  
-**Sources:** Standard quotation collections citing Gauss; widely reproduced in scientific quotation reference works.
+**Confidence:** 0.99  
+**Sources:** *Theoria motus* Davis arts. 177–179 continuous.
 
 ---
 
-## Event 05 — *The Hanover Survey*
+## Event 05 — *Sphere of unit radius*
 
-**Title:** The Earth Forces a New Geometry
+**Title:** Directions represented on the auxiliary sphere
 
-**Passage or Trigger:**
-From about 1818 into the early 1830s Gauss led geodetic surveying of the Kingdom of Hanover — summers in the field, heliotrope for long-distance signals, relentless measurement. The practical task of representing the Earth’s surface fed the theoretical work on curved surfaces.
+**What I did / What was made:**
+I opened the general investigations of curved surfaces by representing directions of lines by points on a unit sphere — the auxiliary for orientation and curvature.
 
-**Why It Qualifies:**
-Recognition that *measuring the world* is not applied afterthought to pure geometry; it *generates* pure geometry. The curved Earth and the triangulation network made intrinsic curvature thinkable as something you meet on horseback, not only on paper.
+**What I wrote / said (direct — full passage):**
+
+> Investigations, in which the directions of various straight lines in space are to be considered, attain a high degree of clearness and simplicity if we employ, as an auxiliary, a sphere of unit radius described about an arbitrary centre, and suppose the different points of the sphere to represent the directions of straight lines parallel to the radii ending at these points. As the position of every point in space is determined by three coordinates, that is to say, the distances of the point from three mutually perpendicular fixed planes, it is necessary to consider, first of all, the directions of the axes perpendicular to these planes. The points on the sphere, which represent these directions, we shall denote by (1), (2), (3). The distance of any one of these points from either of the other two will be a quadrant; and we shall suppose that the directions of the axes are those in which the corresponding coordinates increase.
+>
+> It will be advantageous to bring together here some propositions which are frequently used in questions of this kind.
+>
+> I. The angle between two intersecting straight lines is measured by the arc between the points on the sphere which correspond to the directions of the lines.
+>
+> II. The orientation of any plane whatever can be represented by the great circle on the sphere, the plane of which is parallel to the given plane.
+>
+> III. The angle between two planes is equal to the spherical angle between the great circles representing them, and, consequently, is also measured by the arc intercepted between the poles of these great circles. And, in like manner, the angle of inclination of a straight line to a plane is measured by the arc drawn from the point which corresponds to the direction of the line, perpendicular to the great circle which represents the orientation of the plane.
+
+— Gauss, *General Investigations of Curved Surfaces* (1827), §§1–2 continuous. English Morehead & Hiltebeitel (Princeton 1902); Gutenberg #36856.
+
+**How I see it (from inside, in action):**
+Directions become points on a unit sphere. Angles of lines and planes become spherical arcs. Geometry of orientation clarified before curvature.
+
+**Why it qualifies as gnosis:**
+Spherical representation as instrument for surface theory (and geodesy).
 
 **Three-Domain Reading:**
 
-- **Theology:** Creation is not a flat ideal page; it has measurable bend.
-- **Technology:** Heliotrope, least squares, triangulation — instruments as extensions of mind into landscape.
-- **Cosmology:** The planet’s shape is a mathematical object that must be *earned* by survey, not assumed as perfect sphere or plane.
+- **Theology:** Order of direction made simple by a pure auxiliary sphere.
+- **Technology:** Unit sphere as computational and conceptual instrument.
+- **Cosmology:** Space’s orientations mapped to a closed finite figure.
 
 **Compressed Insight:**
-He learned curvature with his boots in mud — then wrote the theorem that made curvature intrinsic.
+Directions of lines attain clearness if represented by points on a sphere of unit radius.
+
+**Confidence:** 0.99  
+**Sources:** Surfaces 1827 §§1–2 continuous.
+
+---
+
+## Event 06 — *Remarkable Theorem*
+
+**Title:** Measure of curvature unchanged under development
+
+**What I did / What was made:**
+I proved that if a curved surface is developed upon any other surface, the measure of curvature at each point remains unchanged — the *theorema egregium* in continuous statement.
+
+**What I wrote / said (direct — full passage):**
+
+> Suppose that our surface can be developed upon another surface, curved or plane, so that to each point of the former surface, determined by the coordinates *x*, *y*, *z*, will correspond a definite point of the latter surface, whose coordinates are *x′*, *y′*, *z′*. Evidently *x′*, *y′*, *z′* can also be regarded as functions of the indeterminates *p*, *q*, and therefore for the element √(*dx′*² + *dy′*² + *dz′*²) we shall have an expression of the form √(*E′ dp*² + 2*F′ dp·dq* + *G′ dq*²), where *E′*, *F′*, *G′* also denote functions of *p*, *q*. But from the very notion of the development of one surface upon another it is clear that the elements corresponding to one another on the two surfaces are necessarily equal. Therefore we shall have identically
+>
+> *E* = *E′*, *F* = *F′*, *G* = *G′*.
+>
+> Thus the formula of the preceding article leads of itself to the remarkable Theorem. If a curved surface is developed upon any other surface whatever, the measure of curvature in each point remains unchanged.
+>
+> Also it is evident that any finite part whatever of the curved surface will retain the same integral curvature after development upon another surface.
+>
+> Surfaces developable upon a plane constitute the particular case to which geometers have heretofore restricted their attention. Our theory shows at once that the measure of curvature at every point of such surfaces is equal to zero.
+
+— Gauss, *General Investigations of Curved Surfaces* (1827), continuous (development / remarkable Theorem). Morehead & Hiltebeitel English.
+
+**How I see it (from inside, in action):**
+Equal corresponding linear elements force equal *E*, *F*, *G*. Therefore curvature, built from those, cannot change under pure bending. Planes and cylinders share zero measure of curvature.
+
+**Why it qualifies as gnosis:**
+Intrinsic geometry: curvature is of the surface itself, not of its embedding alone.
+
+**Three-Domain Reading:**
+
+- **Theology:** Invariant under transformation of form — essence retained.
+- **Technology:** Criterion for developable surfaces; map/survey implications.
+- **Cosmology:** Space of the surface has its own measure independent of ambient bending.
+
+**Compressed Insight:**
+If a curved surface is developed upon any other surface whatever, the measure of curvature in each point remains unchanged.
+
+**Confidence:** 0.99  
+**Sources:** Surfaces 1827 continuous (remarkable Theorem).
+
+---
+
+## Event 07 — *Flexible, though not extensible*
+
+**Title:** New and fertile field
+
+**What I did / What was made:**
+I distinguished properties that depend on the form into which a surface is bent from absolute properties that remain invariable — measure of curvature, shortest lines — and opened that study.
+
+**What I wrote / said (direct — full passage):**
+
+> What we have explained in the preceding article is connected with a particular method of studying surfaces, a very worthy method which may be thoroughly developed by geometers. When a surface is regarded, not as the boundary of a solid, but as a flexible, though not extensible solid, one dimension of which is supposed to vanish, then the properties of the surface depend in part upon the form to which we can suppose it reduced, and in part are absolute and remain invariable, whatever may be the form into which the surface is bent. To these latter properties, the study of which opens to geometry a new and fertile field, belong the measure of curvature and the integral curvature, in the sense which we have given to these expressions. To these belong also the theory of shortest lines, and a great part of what we reserve to be treated later. From this point of view, a plane surface and a surface developable on a plane, e.g., cylindrical surfaces, conical surfaces, etc., are to be regarded as essentially identical; and the generic method of defining in a general manner the nature of the surfaces thus considered is always based upon the formula √(*E dp*² + 2*F dp·dq* + *G dq*²), which connects the linear element with the two indeterminates *p*, *q*.
+
+— Gauss, *General Investigations of Curved Surfaces* (1827), continuous (flexible surface program). Morehead & Hiltebeitel English.
+
+**How I see it (from inside, in action):**
+Treat the surface as a thin flexible sheet that does not stretch. Absolute properties survive bending. Plane and cylinder are the same kind. The linear element formula is the definition of the surface’s intrinsic nature.
+
+**Why it qualifies as gnosis:**
+Birth statement of intrinsic differential geometry.
+
+**Three-Domain Reading:**
+
+- **Theology:** Absolute vs form-dependent — what remains through change of figure.
+- **Technology:** Surveyor’s surface as flexible sheet; geodesics as shortest lines.
+- **Cosmology:** Geometry generated from the linear element alone.
+
+**Compressed Insight:**
+A surface as flexible though not extensible — absolute properties open to geometry a new and fertile field.
+
+**Confidence:** 0.99  
+**Sources:** Surfaces 1827 continuous.
+
+---
+
+## Event 08 — *Geometry not with arithmetic a priori*
+
+**Title:** Necessity of our geometry unproved
+
+**What I did / What was made:**
+In correspondence I stated that the necessity of Euclidean geometry cannot be demonstrated for human reason, and that geometry ranks with mechanics, not with purely a priori arithmetic.
+
+**What I wrote / said (direct — full passage):**
+
+> I am coming more and more to the conviction that the necessity of our geometry cannot be demonstrated, at least neither by, nor for, the human intellect… geometry should be ranked, not with arithmetic, which is purely aprioristic, but with mechanics.
+
+— Carl Friedrich Gauss, letter (documented continuous English of his German; commonly cited from correspondence with Olbers, 28 April 1817; related formulations to Taurinus 1824). MacTutor continuous carrier of the conviction.  
+*Hold note:* Full German letter texts vary by correspondent; this is the locked continuous English sense-unit of his non-Euclidean conviction. Public systematic non-Euclidean geometry published by Bolyai and Lobachevsky — not claimed here as his sole published treatise.
+
+**How I see it (from inside, in action):**
+Arithmetic is pure mind-product. Space may have a reality we cannot prescribe a priori. Geometry belongs with empirical-mechanical rank until proof of necessity appears — and I doubt such proof for us.
+
+**Why it qualifies as gnosis:**
+Space’s geometry freed from forced Euclidean a priori — privately held, publicly seeded by others.
+
+**Three-Domain Reading:**
+
+- **Theology:** Humility of the intellect before space’s necessity.
+- **Technology:** Survey and measurement as possible tests of geometry’s rank with mechanics.
+- **Cosmology:** Physical space not assumed Euclidean by pure reason alone.
+
+**Compressed Insight:**
+The necessity of our geometry cannot be demonstrated for the human intellect — geometry with mechanics, not with a priori arithmetic.
 
 **Confidence:** 0.92  
-**Sources:** Britannica / MacTutor accounts of the Hanover survey; Gauss geodesy papers in *Werke*.
+**Sources:** Gauss letter continuous English (Olbers/Taurinus tradition); Bolyai–Lobachevsky public priority noted.
 
 ---
 
-## Event 06 — *Theorema Egregium*
+## Life-list spine (acts only — not soft voice)
 
-**Title:** Curvature Is Intrinsic
-
-**Passage or Trigger:**
-*Disquisitiones generales circa superficies curvas* (General Investigations of Curved Surfaces), presented 1827, published in the Göttingen *Commentationes* (often cited 1828). Contains the **theorema egregium** (“remarkable theorem”): Gaussian curvature of a surface is intrinsic — determined by measurements of lengths and angles *on* the surface, invariant under bending without stretching. A plane and a cylinder share zero Gaussian curvature (can map locally without distortion in that sense); a sphere cannot be flattened to a plane without distortion — hence no perfect flat map of Earth.
-
-**Why It Qualifies:**
-The recognition: curvature is not a property of how a surface sits in ambient 3-space alone; it is readable from within the surface’s own metric. What looked like embedding-dependent becomes *self-known* by the surface. That is a structural shift in what “shape” means.
-
-**Three-Domain Reading:**
-
-- **Theology:** Form can be known from within — essence not only from external view.
-- **Technology:** Foundation of intrinsic differential geometry; later general relativity’s spacetime curvature lives in this lineage of thought.
-- **Cosmology:** Worlds can have internal geometric law independent of a pictured embedding. Maps lie when they pretend sphere = plane.
-
-**Compressed Insight:**
-A surface knows its own bend without asking how it is sitting in space — and he proved it.
-
-**Confidence:** 0.96  
-**Sources:** *Disquisitiones generales circa superficies curvas*; standard differential geometry history of *theorema egregium*.
+| Year | Act |
+|------|-----|
+| 1777 | Born Brunswick, 30 April |
+| 1795–98 | Principal *Disquisitiones* meditations |
+| 1801 | *Disquisitiones Arithmeticae* published; Ceres orbit work |
+| 1809 | *Theoria motus* (least squares / probability) |
+| 1817–24 | Geometry letters (Olbers, Taurinus, et al.) |
+| 1827 | *Disquisitiones generales circa superficies curvas* |
+| 1855 | Death, Göttingen, 23 February |
 
 ---
 
-## Event 07 — *Non-Euclidean Geometry Held Private*
+## Quality gate
 
-**Title:** Space Need Not Be Euclid’s
+- [x] Direct events carry continuous primary (Clarke *Disquisitiones* Preface; Davis *Theoria motus*; Morehead surfaces; letter for geometry)
+- [x] Full sense-units, not slogan snippets
+- [x] Citations: work + edition/translator + location
+- [x] “How I see it” depends on the quote
+- [x] Soft school sum / queen-of-sciences maxim not dressed as book voice
+- [x] Credit hygiene: Fermat–Euler–Lagrange–Legendre; Legendre least squares; Bolyai–Lobachevsky
 
-**Passage or Trigger:**
-From the 1790s/1800s Gauss doubted the a priori necessity of the parallel postulate. In a letter to Franz Taurinus (1824) he outlined what he named **“non-Euclidean geometry”** and forbade Taurinus to publish it. When János Bolyai’s work appeared (1832 appendix), Gauss wrote to Farkas Bolyai words to the effect that to praise it would be to praise himself — the content coinciding with meditations of thirty or thirty-five years. He never gave a full public systematic treatise of his own.
-
-**Why It Qualifies:**
-The gnosis is double: (1) Euclidean geometry is not the only consistent description of space; (2) Gauss *saw* this and *withheld* it — a recognition about truth *and* about the politics of revelation. Geometry of physical space might be empirical (as Britannica notes he suspected as a student). Parallel to Gödel later: formal/a priori totalities crack.
-
-**Three-Domain Reading:**
-
-- **Theology:** Sacred-seeming necessities (Euclid as almost holy geometry) can be local, not absolute.
-- **Technology:** Multiple consistent geometric calculi — choice of geometry becomes a modeling decision.
-- **Cosmology:** The cosmos need not be flat-Euclidean in the large; curvature and alternative parallels become thinkable as world-structure.
-
-**Compressed Insight:**
-He lived for decades knowing Euclid was not the only possible space — and mostly refused to tell the world until others forced the door.
-
-**Confidence:** 0.93  
-**Sources:** Letter to Taurinus (1824); letter to Farkas Bolyai on János Bolyai; Britannica / MacTutor on Gauss and non-Euclidean geometry.
-
----
-
-## Event 08 — *Geometry with Mechanics, Not Pure A Priori Arithmetic*
-
-**Title:** Where Geometry Ranks
-
-**Passage or Trigger:**
-Gauss (quoted in geometric literature, e.g. Koenderink’s transmission): geometry should be ranked not with arithmetic, which is purely a priori, but with mechanics — i.e. geometry of space has an empirical / physical character in a way pure number does not.
-
-**Why It Qualifies:**
-Complements Event 07. The recognition splits the formal sciences: number may be a priori; the geometry of space is kin to physics. That is a cosmological claim disguised as classification.
-
-**Three-Domain Reading:**
-
-- **Theology:** Not all “mathematical” truth is the same kind of necessity.
-- **Technology:** Surveying and astronomy are not dirty applications — they are the proper epistemic home of spatial geometry.
-- **Cosmology:** Space is of the world’s body; number is of pure form.
-
-**Compressed Insight:**
-He demoted geometry from pure a priori throne to the company of mechanics — and that demotion freed non-Euclidean truth.
-
-**Confidence:** 0.85 (quotation via secondary scientific literature; consistent with his practice)  
-**Sources:** Attributed Gauss remark on geometry vs arithmetic/mechanics in geometric/scientific quotation chains.
-
----
-
-## Event 09 — *Least Squares as World-Method*
-
-**Title:** Error Has a Law
-
-**Passage or Trigger:**
-Gauss’s development and use of the **method of least squares** (priority disputes with Legendre exist in history of science; Gauss used and deepened the method in astronomy and geodesy). Errors of observation are not pure chaos; they admit probabilistic / quadratic minimization structure.
-
-**Why It Qualifies:**
-Recognition that noise itself can be domesticated by form. The world is measured imperfectly; the mind’s answer is not denial of error but a calculus of best fit. Same spirit as Ceres: incomplete data + right loss function.
-
-**Three-Domain Reading:**
-
-- **Theology:** Fallibility of sense is not a curse only — it is a structured condition.
-- **Technology:** Least squares as ancestor of regression, estimation theory, machine learning loss.
-- **Cosmology:** Observation is a noisy channel to an ordered world.
-
-**Compressed Insight:**
-He gave error a mathematics — so that imperfect eyes could still lock onto true orbits and true land.
-
-**Confidence:** 0.90  
-**Sources:** History of least squares (Gauss–Legendre); Gauss astronomical and geodetic practice.
-
----
-
-## Event 10 — *Magnetism and the Earth as Instrument*
-
-**Title:** The Planet’s Field
-
-**Passage or Trigger:**
-In later career Gauss (with Wilhelm Weber) built systematic geomagnetic research at Göttingen — absolute measures of Earth’s magnetic field, magnetic observatory practice, and mathematical representation of the field. The Earth became not only a survey surface but a magnetic body with multipole structure.
-
-**Why It Qualifies:**
-Recognition that the planet is a laboratory: invisible field made measurable and mathematically expandable. Extends the survey gnosis from shape to force.
-
-**Three-Domain Reading:**
-
-- **Theology:** Hidden powers of the created world can be named in number.
-- **Technology:** Absolute magnetic units, observatory networks — infrastructure of geophysics.
-- **Cosmology:** Earth as a field-bearing body in space, not a dead rock only.
-
-**Compressed Insight:**
-He taught the Earth to report its own magnetism in absolute measure.
-
-**Confidence:** 0.91  
-**Sources:** Gauss–Weber geomagnetic work; standard scientific biography.
-
----
-
-## Sources / Working Notes
-
-**Primary / near-primary**
-- *Disquisitiones Arithmeticae* (1801)
-- *Disquisitiones generales circa superficies curvas* (1827/28)
-- Ceres / astronomical papers; geodesy and magnetism in *Werke*
-- Letters: Taurinus (1824); Bolyai correspondence; Olbers (1816) on Fermat / *Disquisitiones* years
-
-**Secondary**
-- MacTutor (St Andrews) Gauss biography
-- Britannica, “Carl Friedrich Gauss”
-- Standard histories of non-Euclidean geometry and differential geometry
-
-**Open questions for later passes**
-- Deeper dive into *Disquisitiones* Latin for more event-level quotations
-- Full German texts of key letters (Taurinus, Bolyai)
-- Diary (Tagebuch) entries of 1796– for number-theory breakthroughs day-by-day
-
----
-
-## Seat checklist
-
-- [x] Research from works and attested letters/biography (full pass)
-- [x] Contribution + key insight locked
-- [x] Multiple source-grounded events
-- [ ] member_id: `carl-friedrich-gauss`
-- [ ] Registry enrollment when ready
-- [x] PENDING scaffold replaced by full extraction
-
----
-
-*Council of Reflection — Arch of Human Gnosis (Mathematics). Events grounded in Gauss’s publications and documented correspondence; not auto-generated folklore.*
+**Garden status:** COMPLETE — Batch 2 seat #5.
