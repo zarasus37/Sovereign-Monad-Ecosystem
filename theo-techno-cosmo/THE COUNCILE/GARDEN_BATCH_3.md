@@ -42,9 +42,27 @@
 | 34 | William Shakespeare | Arch | pending |
 | 35 | Wolfgang Amadeus Mozart | Arch | pending |
 
-**Prior complete on this list (12):** Turing, Einstein, Lavoisier, Gauss, Darwin, Hubble, von Neumann, Gödel, Euler, Fisher, Llull — already under quotation bar from Batches 1–2; not reworked unless user demands re-pass.
+**Prior complete on this list (from Batches 1–2):** Turing, Einstein, Lavoisier, Gauss, Darwin, Hubble, von Neumann, Gödel, Euler, Fisher, Llull — already under quotation bar; not reworked unless user demands re-pass.
 
-**First unfinished:** #1 Adam Smith.
+**Batch 3 rewritten this run (COMPLETE under quotation bar):**  
+Smith · Aristotle · Basilides · Lévi-Strauss · Saussure  
+(Latest push tip when paused: `6a4f4d3` Saussure.)
+
+### Session handoff (pause 2026-08-11)
+
+| Field | Value |
+|-------|--------|
+| **Active batch** | Batch 3 — rest of Tier A |
+| **Next unfinished** | **#12 George Balanchine** |
+| **User command** | `next` = next unfinished on **this** list only (skip COMPLETE) |
+| **Rule** | `GNOSIS_EVENT_VOICE.md` — continuous primary quotes; soft paraphrase = defect |
+| **Ops** | On each seat finish → commit + push |
+| **Special notes** | Basilides = dual enemy-carrier (Hippolytus VII + Irenaeus I.24). Saussure = *Cours* posthumous Baskin English. Lévi-Strauss = Elementary Structures / JAF myth / Savage Mind / Tristes Tropiques. |
+| **Remaining pending (19)** | Balanchine → Vasari → Hippocrates → Grotius → Kant → Jiang → Bach → Goethe → Dewey → Marx → da Vinci → Michelangelo → Tesla → Freud → Sima Qian → Aquinas → Bjerknes → Shakespeare → Mozart |
+| **Thin deepen still pending** | #17 Jiang Xueqin (~9 KB) |
+| **Optional later** | von Neumann minimax continuous English re-pass; Clement fragments for Basilides |
+
+**Working tree at pause:** garden commits pushed to `origin/main`. Untracked (do **not** auto-commit unless asked): `docs/Review/`, `.env.example` paths under archive / sovereign-host.
 
 **Batch 1:** closed — `GARDEN_BATCH_1.md`.  
 **Batch 2:** closed — `GARDEN_BATCH_2.md`.
