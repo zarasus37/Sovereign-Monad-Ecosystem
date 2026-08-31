@@ -18,6 +18,30 @@ import CostLib "lib/cost";
 import DeploymentLib "lib/deployment";
 import Queue "mo:core/Queue";
 import Time "mo:core/Time";
+import Principal "mo:base/Principal";
+
+/// P0 caller-check operator allowlist.
+///
+/// Seeded as `[]` (no operators). Every state-mutating public function in
+/// mixins/ takes `shared(msg)`, rejects the anonymous principal, and
+/// refuses to mutate unless `msg.caller` is in this list. With an empty
+/// list, no one can call the mutators — the correct fail-closed default
+/// for a canister that is not yet deployed (or for which operators have
+/// not yet been provisioned).
+///
+/// PHASE 2 (deferred — canister is not deployed, see
+/// `lib/operators.mo` header and `mixins/*` doc comments):
+/// 1. Provision the canister's controller principal here (typically via
+///    canister init args; the simplest is hardcoding the controller's
+///    principal below).
+/// 2. Add any operator identities that need to call the mutators
+///    (e.g. the front-end identity used by the dashboard, a CI identity
+///    that runs deployment-step toggles).
+/// 3. Land a `setOperators` admin function (itself gated by the same
+///    caller check) so the list can be rotated without redeploying.
+///
+/// Until those land, the mutators are intentionally locked.
+let operators : [Principal] = [];
 
 actor {
   // --- Metrics state (mutable record injected into mixin) ---
@@ -95,11 +119,12 @@ actor {
     integrityState,
     kafkaState,
     bootTime,
+    operators,
   );
   include IntegrityApi(integrityState);
   include PipelineApi(pipelineState);
   include KafkaApi(kafkaState);
   include SkillsApi(skillsState);
-  include CostApi(costModelState);
-  include DeploymentApi(deploySteps, deployConfig);
+  include CostApi(costModelState, operators);
+  include DeploymentApi(deploySteps, deployConfig, operators);
 };

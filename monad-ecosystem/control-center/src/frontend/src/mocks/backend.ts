@@ -207,5 +207,5 @@ export const mockBackend: backendInterface = {
   }),
 
   markStepComplete: async (_stepNumber: bigint) => ({ __kind__: "ok", ok: null }),
-  resetDeployment: async () => {},
+  resetDeployment: async () => ({ __kind__: "ok", ok: null }),
 };

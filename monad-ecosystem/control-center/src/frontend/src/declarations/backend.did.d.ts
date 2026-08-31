@@ -203,7 +203,7 @@ export interface _SERVICE {
   'getSkillsMatrix' : ActorMethod<[], SkillsMatrix>,
   'pushKafkaSignal' : ActorMethod<[KafkaSignal], { 'ok' : null } | { 'err' : string }>,
   'markStepComplete' : ActorMethod<[bigint], Result>,
-  'resetDeployment' : ActorMethod<[], undefined>,
+  'resetDeployment' : ActorMethod<[], Result>,
   'setArmed' : ActorMethod<[boolean], { 'ok' : null } | { 'err' : string }>,
   'setPrimaryMode' : ActorMethod<
     [PrimaryMode],

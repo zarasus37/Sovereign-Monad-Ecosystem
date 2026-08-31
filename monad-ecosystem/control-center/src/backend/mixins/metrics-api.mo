@@ -3,9 +3,13 @@ import Types "../types/metrics";
 import IntegrityTypes "../types/integrity";
 import KafkaTypes "../types/kafka";
 import MetricsLib "../lib/metrics";
+import Operators "../lib/operators";
 import Queue "mo:core/Queue";
 import Time "mo:core/Time";
 
+/// P0: every public shared mutator in this mixin takes `shared(msg)`,
+/// rejects the anonymous caller via Operators.checkCaller, and verifies
+/// the caller is in the operator allowlist before any state change.
 mixin (
   metrics : { var cpuLoad : Nat; var memoryUsage : Nat; var uptime : Nat; var timestamp : Int },
   controls : { var armed : Bool; var primaryMode : Types.PrimaryMode; var secondaryMode : Types.SecondaryMode },
@@ -14,6 +18,7 @@ mixin (
   integrityReport : { var agents : [IntegrityTypes.IntegrityAgent]; var axioms : [IntegrityTypes.Axiom]; var overallScore : Nat; var lastAudit : Int },
   kafkaState : { var topics : [KafkaTypes.KafkaTopic]; var connections : [KafkaTypes.KafkaConnection]; var totalMessages : Nat },
   bootTime : Int,
+  operators : [Principal],
 ) {
 
   func currentUptimeSeconds() : Nat {
@@ -60,7 +65,14 @@ mixin (
   };
 
   /// Arms or disarms the system.
-  public shared func setArmed(value : Bool) : async { #ok; #err : Text } {
+  public shared(msg) func setArmed(value : Bool) : async { #ok; #err : Text } {
+    switch (Operators.checkCaller(msg.caller)) {
+      case (?err) return #err(err);
+      case null {};
+    };
+    if (not Operators.isOperator(msg.caller, operators)) {
+      return #err(Operators.notOperatorErr());
+    };
     let oldVal = if (controls.armed) "true" else "false";
     let newVal = if (value) "true" else "false";
     controls.armed := value;
@@ -77,7 +89,14 @@ mixin (
   };
 
   /// Changes the primary operating mode.
-  public shared func setPrimaryMode(mode : Types.PrimaryMode) : async { #ok; #err : Text } {
+  public shared(msg) func setPrimaryMode(mode : Types.PrimaryMode) : async { #ok; #err : Text } {
+    switch (Operators.checkCaller(msg.caller)) {
+      case (?err) return #err(err);
+      case null {};
+    };
+    if (not Operators.isOperator(msg.caller, operators)) {
+      return #err(Operators.notOperatorErr());
+    };
     let oldVal = primaryModeText(controls.primaryMode);
     let newVal = primaryModeText(mode);
     controls.primaryMode := mode;
@@ -94,7 +113,14 @@ mixin (
   };
 
   /// Changes the secondary operating mode.
-  public shared func setSecondaryMode(mode : Types.SecondaryMode) : async { #ok; #err : Text } {
+  public shared(msg) func setSecondaryMode(mode : Types.SecondaryMode) : async { #ok; #err : Text } {
+    switch (Operators.checkCaller(msg.caller)) {
+      case (?err) return #err(err);
+      case null {};
+    };
+    if (not Operators.isOperator(msg.caller, operators)) {
+      return #err(Operators.notOperatorErr());
+    };
     let oldVal = secondaryModeText(controls.secondaryMode);
     let newVal = secondaryModeText(mode);
     controls.secondaryMode := mode;
@@ -111,12 +137,19 @@ mixin (
   };
 
   /// Updates configuration settings with validation.
-  public shared func updateConfig(
+  public shared(msg) func updateConfig(
     newCpuThreshold : Nat,
     newMemThreshold : Nat,
     newPollingInterval : Nat,
     newResponseDelay : Nat,
   ) : async { #ok; #err : Text } {
+    switch (Operators.checkCaller(msg.caller)) {
+      case (?err) return #err(err);
+      case null {};
+    };
+    if (not Operators.isOperator(msg.caller, operators)) {
+      return #err(Operators.notOperatorErr());
+    };
     if (not MetricsLib.validatePercent(newCpuThreshold)) {
       return #err("cpuThreshold must be between 1 and 99");
     };
@@ -158,7 +191,14 @@ mixin (
   };
 
   /// Ingests a live agent status update from an external Python agent or watcher.
-  public shared func updateAgentStatus(update : Types.AgentStatusUpdate) : async { #ok; #err : Text } {
+  public shared(msg) func updateAgentStatus(update : Types.AgentStatusUpdate) : async { #ok; #err : Text } {
+    switch (Operators.checkCaller(msg.caller)) {
+      case (?err) return #err(err);
+      case null {};
+    };
+    if (not Operators.isOperator(msg.caller, operators)) {
+      return #err(Operators.notOperatorErr());
+    };
     let newAgent : IntegrityTypes.IntegrityAgent = {
       name = update.agentName;
       domain = update.domain;
@@ -223,7 +263,14 @@ mixin (
   };
 
   /// Ingests a live Kafka/event-bus signal from an external agent or on-chain watcher.
-  public shared func pushKafkaSignal(signal : Types.KafkaSignal) : async { #ok; #err : Text } {
+  public shared(msg) func pushKafkaSignal(signal : Types.KafkaSignal) : async { #ok; #err : Text } {
+    switch (Operators.checkCaller(msg.caller)) {
+      case (?err) return #err(err);
+      case null {};
+    };
+    if (not Operators.isOperator(msg.caller, operators)) {
+      return #err(Operators.notOperatorErr());
+    };
     let newTopic : KafkaTypes.KafkaTopic = {
       id = signal.topicId;
       name = signal.topicName;

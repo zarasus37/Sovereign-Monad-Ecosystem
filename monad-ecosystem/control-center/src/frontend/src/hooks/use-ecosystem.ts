@@ -186,7 +186,10 @@ export function useResetDeployment() {
   return useMutation({
     mutationFn: async () => {
       if (!actor) throw new Error("Actor not ready");
-      await actor.resetDeployment();
+      // P0: resetDeployment now returns Result<(), Text> so an auth
+      // failure (anonymous caller or non-operator) is observable.
+      const result = await actor.resetDeployment();
+      if (result.__kind__ === "err") throw new Error(result.err);
     },
     onSettled: () => {
       qc.invalidateQueries({ queryKey: ECOSYSTEM_KEYS.deploymentSteps });

@@ -309,7 +309,7 @@ export interface backendInterface {
         err: string;
     }>;
     markStepComplete(stepNumber: bigint): Promise<Result>;
-    resetDeployment(): Promise<void>;
+    resetDeployment(): Promise<Result>;
     setArmed(value: boolean): Promise<{
         __kind__: "ok";
         ok: null;
@@ -552,18 +552,18 @@ export class Backend implements backendInterface {
             return from_candid_Result_n49(this._uploadFile, this._downloadFile, result);
         }
     }
-    async resetDeployment(): Promise<void> {
+    async resetDeployment(): Promise<Result> {
         if (this.processError) {
             try {
                 const result = await this.actor.resetDeployment();
-                return result;
+                return from_candid_Result_n49(this._uploadFile, this._downloadFile, result);
             } catch (e) {
                 this.processError(e);
                 throw new Error("unreachable");
             }
         } else {
             const result = await this.actor.resetDeployment();
-            return result;
+            return from_candid_Result_n49(this._uploadFile, this._downloadFile, result);
         }
     }
     async setArmed(arg0: boolean): Promise<{

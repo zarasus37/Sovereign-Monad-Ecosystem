@@ -1,9 +1,13 @@
 import Types "../types/cost";
 import Common "../types/common";
 import CostLib "../lib/cost";
+import Operators "../lib/operators";
 
+/// P0: updateCostModel takes `shared(msg)`, rejects the anonymous caller,
+/// and verifies the caller is in the operator allowlist before mutating.
 mixin (
   costModelState : { var cyclesPerHour : Nat; var rpcCallsPerHour : Nat; var gasFeePerTx : Nat; var agentCount : Nat; var storageGB : Nat },
+  operators : [Principal],
 ) {
   /// Returns the current cost model parameters.
   public query func getCostModel() : async Types.CostModel {
@@ -22,7 +26,14 @@ mixin (
   };
 
   /// Persists updated cost model parameters.
-  public shared func updateCostModel(model : Types.CostModel) : async Common.Result<(), Text> {
+  public shared(msg) func updateCostModel(model : Types.CostModel) : async Common.Result<(), Text> {
+    switch (Operators.checkCaller(msg.caller)) {
+      case (?err) return #err(err);
+      case null {};
+    };
+    if (not Operators.isOperator(msg.caller, operators)) {
+      return #err(Operators.notOperatorErr());
+    };
     costModelState.cyclesPerHour   := model.cyclesPerHour;
     costModelState.rpcCallsPerHour := model.rpcCallsPerHour;
     costModelState.gasFeePerTx     := model.gasFeePerTx;

@@ -195,7 +195,7 @@ export const idlService = IDL.Service({
   'getMetrics' : IDL.Func([], [Metrics], ['query']),
   'getSkillsMatrix' : IDL.Func([], [SkillsMatrix], ['query']),
   'markStepComplete' : IDL.Func([IDL.Nat], [Result], []),
-  'resetDeployment' : IDL.Func([], [], []),
+  'resetDeployment' : IDL.Func([], [Result], []),
   'setArmed' : IDL.Func(
       [IDL.Bool],
       [IDL.Variant({ 'ok' : IDL.Null, 'err' : IDL.Text })],
@@ -431,7 +431,7 @@ export const idlFactory = ({ IDL }) => {
     'getSkillsMatrix' : IDL.Func([], [SkillsMatrix], ['query']),
     'pushKafkaSignal' : IDL.Func([KafkaSignal], [IDL.Variant({ 'ok' : IDL.Null, 'err' : IDL.Text })], []),
     'markStepComplete' : IDL.Func([IDL.Nat], [Result], []),
-    'resetDeployment' : IDL.Func([], [], []),
+    'resetDeployment' : IDL.Func([], [Result], []),
     'setArmed' : IDL.Func(
         [IDL.Bool],
         [IDL.Variant({ 'ok' : IDL.Null, 'err' : IDL.Text })],

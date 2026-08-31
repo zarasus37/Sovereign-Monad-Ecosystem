@@ -227,7 +227,7 @@ export interface backendInterface {
         err: string;
     }>;
     markStepComplete(stepNumber: bigint): Promise<Result>;
-    resetDeployment(): Promise<void>;
+    resetDeployment(): Promise<Result>;
     setArmed(value: boolean): Promise<{
         __kind__: "ok";
         ok: null;
