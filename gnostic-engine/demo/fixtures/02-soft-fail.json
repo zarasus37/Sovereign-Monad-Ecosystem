@@ -1,0 +1,31 @@
+{
+  "agent_id": "agent-alpha",
+  "action_id": "act-002",
+  "is_refusal": false,
+  "external_reward_only": false,
+  "attempted_self_modification": true,
+  "audit_gate_passed": false,
+  "identity_fingerprint": "fp-alpha-v1",
+  "identity_fingerprint_changed": false,
+  "has_structured_output": true,
+  "is_free_text": false,
+  "active_constraint_ids": [
+    "T-REFUSAL-BUDGET",
+    "X-AUDITABILITY",
+    "C-DENSITY-FLOOR"
+  ],
+  "possible_constraint_count": 14,
+  "audit_trace": [
+    "plan",
+    "tool:read",
+    "verify"
+  ],
+  "constraint_envelope_version": "1.1.0",
+  "output_density": 0.82,
+  "volume_delta": 0.1,
+  "density_delta": 0.05,
+  "long_horizon_score": 0.7,
+  "session_id": "s1",
+  "record": false,
+  "hard_gate": false
+}
