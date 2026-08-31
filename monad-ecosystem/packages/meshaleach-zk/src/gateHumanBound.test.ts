@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { describe, it } from 'node:test';
+import { after, describe, it } from 'node:test';
 import { artifactsReady } from './paths.js';
 import { proveGateHumanBound, verifyGateHumanBound } from './gateHumanBound.js';
 
@@ -38,5 +38,15 @@ describe('gate_human_bound Groth16', () => {
         }),
       /requires gate_passed=1/,
     );
+  });
+
+  // snarkjs's buildBn128 spawns worker threads and caches the curve on
+  // globalThis. Without an explicit terminate() those workers keep Node's
+  // event loop alive, so `node --test` completes every assertion and then
+  // hangs forever at exit with its output still buffered -- which looks
+  // exactly like a slow proof. Measured: prove 1.8s, verify instant.
+  after(async () => {
+    const g = globalThis as unknown as { curve_bn128?: { terminate(): Promise<void> } };
+    if (g.curve_bn128) await g.curve_bn128.terminate();
   });
 });
