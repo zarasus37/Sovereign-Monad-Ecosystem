@@ -33,7 +33,10 @@ ENV PYTHONUNBUFFERED=1 \
 WORKDIR /app
 
 # ── Dependency layer (cached unless the lockfile changes) ────────────────────
-COPY gnostic-engine/pyproject.toml gnostic-engine/uv.lock ./
+# README.md is required here: pyproject.toml:5 declares readme = "README.md",
+# and hatchling reads it when the project itself is installed further down.
+# Without it, `uv sync` fails with "Readme file does not exist: README.md".
+COPY gnostic-engine/pyproject.toml gnostic-engine/uv.lock gnostic-engine/README.md ./
 RUN uv sync --frozen --no-install-project --no-dev
 
 # ── Application layer ────────────────────────────────────────────────────────
