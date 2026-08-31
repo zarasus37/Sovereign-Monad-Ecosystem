@@ -28,7 +28,14 @@ const MODE_ALLOWS: Record<string, IntentAction[]> = {
 };
 
 export class GateAclService {
-  constructor(private readonly issuer: MandateIssuer = new MandateIssuer()) {}
+  constructor(private readonly issuer: MandateIssuer) {
+    if (!issuer) {
+      throw new Error(
+        'GateAclService requires an injected MandateIssuer. ' +
+          'Constructing without a secret is no longer supported.',
+      );
+    }
+  }
 
   /**
    * Gate an intent. Same failure mode as invalid Hepar audit: reject with no side effects.

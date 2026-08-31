@@ -17,15 +17,23 @@ import type {
 /** Default mandate TTL: 15 minutes — forces re-derivation from live PL. */
 export const MANDATE_TTL_MS = 15 * 60 * 1000;
 
-const DEV_FALLBACK_SECRET = 'gate-acl-dev-only-not-for-production';
+/**
+ * Test-only fallback — only used when NODE_ENV === 'test' AND no explicit
+ * secret is passed AND GATE_ACL_SIGNING_SECRET is unset. Never used in
+ * production or development runs; those must throw closed.
+ */
+const TEST_FALLBACK_SECRET = 'gate-acl-test-only-secret';
 
 export function resolveSigningSecret(explicit?: string): string {
   const fromEnv = process.env.GATE_ACL_SIGNING_SECRET;
-  const secret = explicit ?? fromEnv ?? DEV_FALLBACK_SECRET;
-  if (!explicit && !fromEnv) {
-    // Demo-only fallback — never silent in production configs
-    console.warn(
-      '[gate-acl] GATE_ACL_SIGNING_SECRET unset; using DEV fallback (not safe for real mandates)',
+  const secret = explicit ?? fromEnv;
+  if (!secret) {
+    if (process.env.NODE_ENV === 'test') {
+      return TEST_FALLBACK_SECRET;
+    }
+    throw new Error(
+      'GATE_ACL_SIGNING_SECRET is required (pass an explicit secret or set the env var). ' +
+        'There is no DEV fallback. NODE_ENV=test is the only mode that signs without a secret.',
     );
   }
   return secret;

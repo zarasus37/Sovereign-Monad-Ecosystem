@@ -125,7 +125,7 @@ const out = await promotePl(
 
 ## Secrets
 
-Set `GATE_ACL_SIGNING_SECRET` for anything beyond local demo. Unset falls back to a **dev string** and logs a warning. Use `GATE_ACL_REQUIRE_SECRET=1` once past local testing.
+`GATE_ACL_SIGNING_SECRET` is **required**. The runtime hard-throws if it is unset and no explicit secret is injected into `MandateIssuer`. There is no DEV fallback. `NODE_ENV=test` is the only mode that signs without a secret (a fixed test string), and only because `node --test` sets it automatically.
 
 ## Thresholds
 
