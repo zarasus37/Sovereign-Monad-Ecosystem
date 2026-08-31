@@ -6,6 +6,7 @@ import type { Kafka } from 'kafkajs';
 import { createKafka, KafkaBusProducer } from './kafkaBus.js';
 import type { PLLedger } from './plLedger.js';
 import { TOPICS } from './types.js';
+import { walletBindRequestSchema, formatIssues } from './claimSchemas.js';
 import {
   buildWalletBindEvent,
   PrincipalWalletRegistry,
@@ -134,7 +135,18 @@ export async function bindWalletHttp(
       json: { error: 'MISSING_PARAMETERS', message: 'JSON body required' },
     };
   }
-  const out = await bindWallet(body as WalletBindRequest, deps);
+  const parsed = walletBindRequestSchema.safeParse(body);
+  if (!parsed.success) {
+    return {
+      status: 400,
+      json: {
+        error: 'MISSING_PARAMETERS',
+        message: 'bind request failed validation',
+        issues: formatIssues(parsed.error),
+      },
+    };
+  }
+  const out = await bindWallet(parsed.data as WalletBindRequest, deps);
   if (!out.ok) {
     return {
       status: out.status,

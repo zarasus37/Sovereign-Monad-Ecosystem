@@ -15,6 +15,8 @@ import {
 import type { PlPromoteClaim, PlPromoteResult } from './plBridge.types.js';
 import { PLLedger } from './plLedger.js';
 import { TOPICS } from './types.js';
+import type { PLDomain } from './types.js';
+import { plPromoteClaimSchema, formatIssues } from './claimSchemas.js';
 
 export type PlBridgeDeps = {
   ledger: PLLedger;
@@ -27,6 +29,31 @@ export type PlBridgeDeps = {
  * Promote a client claim to verified PL.
  * Server recalculates totalPl; client currentPl is a hint only.
  */
+/**
+ * PL onboarding tasks are one-time awards. The ledger's own dedup keys on
+ * eventId, and buildPlLedgerKafkaEvent salts eventId with String(now) -- so
+ * replaying an identical claim mints a fresh eventId every time and the
+ * ledger happily appends it again. Confirmed at 49fcd9f: three identical
+ * POSTs 3ms apart returned 200/200/200 and drove the ledger 10 -> 20 -> 30.
+ *
+ * Key idempotency on what is actually invariant -- (principalId, domain,
+ * taskId) -- rather than on wall-clock time. Events land as either a
+ * TaskEvent (taskId) or a GateEvent (gateId); check both.
+ */
+function alreadyAwarded(
+  deps: PlBridgeDeps,
+  principalId: string,
+  domain: string,
+  taskId: string,
+): boolean {
+  const prior = deps.ledger.allEvents(principalId, domain as PLDomain);
+  return prior.some((e) => {
+    if (e.kind === 'domain_task') return e.taskId === taskId;
+    if (e.kind === 'comprehension_gate') return e.gateId === taskId;
+    return false;
+  });
+}
+
 export async function promotePl(
   claim: PlPromoteClaim,
   deps: PlBridgeDeps,
@@ -46,6 +73,16 @@ export async function promotePl(
   }
 
   const domain = claim.domain ?? 'agent_ops';
+
+  if (alreadyAwarded(deps, claim.principalId, domain, claim.taskId)) {
+    return {
+      ok: false,
+      status: 409,
+      error: 'TASK_ALREADY_AWARDED',
+      message: `task "${claim.taskId}" has already been awarded for this principal`,
+    };
+  }
+
   const serverState = deps.ledger.compute(claim.principalId, domain, now);
   const serverCurrentPl = serverState.score;
 
@@ -142,7 +179,18 @@ export async function promotePlHttp(
       json: { error: 'INVALID_BODY', message: 'JSON claim required' },
     };
   }
-  const claim = body as PlPromoteClaim;
+  const parsed = plPromoteClaimSchema.safeParse(body);
+  if (!parsed.success) {
+    return {
+      status: 400,
+      json: {
+        error: 'INVALID_BODY',
+        message: 'claim failed validation',
+        issues: formatIssues(parsed.error),
+      },
+    };
+  }
+  const claim = parsed.data as PlPromoteClaim;
   const out = await promotePl(claim, deps);
   if (!out.ok) {
     return {
