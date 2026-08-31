@@ -18,6 +18,45 @@ const outDir = join(pkgRoot, 'artifacts');
 mkdirSync(buildDir, { recursive: true });
 mkdirSync(outDir, { recursive: true });
 
+/**
+ * Refuse to write if a production-ceremony artifact is already pinned at the
+ * target path. The demo build (this script) must never clobber a multi-party
+ * production zkey/vkey/meta — production ceremonies are run via
+ * scripts/phase2-contribute.mjs and pinned with --mode=production.
+ *
+ * - production → hard refuse, exit non-zero (the whole point of this guard).
+ * - demo      → loud warning (the committed demo pin will change).
+ * - missing   → proceed (fresh state).
+ */
+const metaPath = join(outDir, 'circuit_meta.json');
+if (existsSync(metaPath)) {
+  let existingMode = 'unknown';
+  try {
+    const parsed = JSON.parse(readFileSync(metaPath, 'utf8'));
+    existingMode = parsed?.ceremony?.mode ?? 'unknown';
+  } catch (err) {
+    console.warn('[build-circuit] could not parse existing circuit_meta.json:', err.message);
+  }
+  if (existingMode === 'production') {
+    console.error(
+      '[build-circuit] REFUSING: artifacts/circuit_meta.json is pinned to ceremony.mode="production".\n' +
+        'A multi-party production ceremony has already been run; the demo build\n' +
+        '(this script) must NOT overwrite its zkey, verification_key.json, or meta.\n' +
+        '\n' +
+        'To refresh demo artifacts, first move the production meta out of the way\n' +
+        '(e.g. archive it), or run scripts/phase2-contribute.mjs for a new production\n' +
+        'ceremony. See PRODUCTION_PTAU.md.',
+    );
+    process.exit(1);
+  }
+  if (existingMode === 'demo') {
+    console.warn(
+      '[build-circuit] WARNING: existing demo artifacts will be overwritten. The committed\n' +
+        'vkey.sha256 pin will change. Pass --force to suppress this warning.',
+    );
+  }
+}
+
 const circomLocal = join(pkgRoot, 'bin', 'circom.exe');
 const circomBin = existsSync(circomLocal) ? circomLocal : 'circom';
 

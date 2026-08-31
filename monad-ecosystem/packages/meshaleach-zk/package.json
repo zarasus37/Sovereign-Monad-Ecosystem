@@ -14,10 +14,11 @@
   },
   "scripts": {
     "build:circuit": "node scripts/build-circuit.mjs",
+    "build:demo": "node scripts/build-circuit.mjs",
     "pin:vkey": "node scripts/pin-vkey.mjs",
     "ceremony:contribute": "node scripts/phase2-contribute.mjs",
     "ceremony:finalize": "node scripts/phase2-contribute.mjs --finalize",
-    "build": "pnpm run build:circuit && tsc",
+    "build": "tsc",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test src/gateHumanBound.test.ts src/vkeyPin.test.ts"
   },
