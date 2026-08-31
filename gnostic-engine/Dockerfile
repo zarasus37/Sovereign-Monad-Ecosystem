@@ -47,6 +47,17 @@ COPY gnostic-engine/demo/ ./demo/
 # ── Versioned constraint packs (read-only, from the repo root) ───────────────
 COPY shared/constraints/ /shared/constraints/
 
+# ── Peirce manifold mirror ───────────────────────────────────────────────────
+# The engine is not import-standalone: classification/_manifold_proxy.py opens
+# a sys.path seam to monad-ecosystem/packages/logoc/peirce and imports
+# manifold.py directly, bypassing peirce/__init__.py to avoid its heavy ML
+# deps. That proxy resolves 4 parents up, so in-container the tree must sit at
+# /monad-ecosystem/packages/logoc/peirce. manifold.py:28 then reads
+# <root>/shared/peirce-spec/peirce_sign_classes.json (66 sign classes).
+# Both are pure stdlib at this depth; nothing heavy is pulled in.
+COPY monad-ecosystem/packages/logoc/peirce/ /monad-ecosystem/packages/logoc/peirce/
+COPY shared/peirce-spec/ /shared/peirce-spec/
+
 # ── Writable state dirs, then drop privileges ────────────────────────────────
 RUN uv sync --frozen --no-dev \
     && useradd --create-home --uid 10001 gnostic \
