@@ -23,7 +23,23 @@ const PORT = Number(process.env.PORT) || 3001;
 const frontendOrigin =
   process.env.FRONTEND_URL || 'http://localhost:5173';
 
-const { app, kafkaEnabled } = createSovereignApp();
+// P0: host auth is mandatory in non-test environments. createSovereignApp()
+// throws if SOVEREIGN_API_TOKEN or SOVEREIGN_PRINCIPAL_ID are unset outside
+// NODE_ENV=test, so the server entrypoint should either provide them or be
+// in a test harness.
+const apiToken = process.env.SOVEREIGN_API_TOKEN;
+const principalId = process.env.SOVEREIGN_PRINCIPAL_ID;
+if (process.env.NODE_ENV !== 'test' && (!apiToken || !principalId)) {
+  console.error(
+    '[Sovereign Host] FATAL: SOVEREIGN_API_TOKEN and SOVEREIGN_PRINCIPAL_ID are required.',
+  );
+  process.exit(1);
+}
+
+const { app, kafkaEnabled } = createSovereignApp({
+  apiToken,
+  principalId,
+});
 
 // Only listen when this file is the process entry (not when imported by Azure wrapper)
 const isMain =
@@ -64,11 +80,15 @@ if (isMain) {
     console.log(
       `[Sovereign Host] Live funding: ${process.env.CARDIA_FUNDING_LIVE === 'true'}`,
     );
-    console.log(`  POST /api/v1/gate-acl/promote-pl`);
-    console.log(`  POST /api/v1/gate-acl/bind-wallet`);
-    console.log(`  GET  /api/v1/cardia/funding/stream/:walletAddress`);
-    console.log(`  GET  /metrics`);
-    console.log(`  GET  /health`);
+    console.log(`[Sovereign Host] Auth: required (principal=${principalId})`);
+    console.log(`  POST /api/v1/gate-acl/promote-pl       (auth)`);
+    console.log(`  POST /api/v1/gate-acl/bind-wallet      (auth)`);
+    console.log(`  GET  /api/v1/cardia/funding/stream/:walletAddress  (auth)`);
+    console.log(`  POST /api/v1/metrics/ingest            (auth)`);
+    console.log(`  POST /api/v1/hepar/audit               (proxy)`);
+    console.log(`  GET  /metrics                          (public)`);
+    console.log(`  GET  /health                           (public, liveness only)`);
+    console.log(`  GET  /health/details                   (auth, full diagnostics)`);
   });
 }
 
