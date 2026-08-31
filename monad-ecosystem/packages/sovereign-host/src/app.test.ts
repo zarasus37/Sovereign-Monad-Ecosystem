@@ -276,4 +276,36 @@ describe('@sovereign/host', () => {
       else process.env.NODE_ENV = savedNodeEnv;
     }
   });
+
+  // ── brute-force protection ────────────────────────────────────────────────
+
+  it('rate-limits repeated bad-token attempts (limiter runs BEFORE auth)', async () => {
+    // Regression guard. Originally the routes were mounted as
+    // `bearerAuth, mutatingRateLimit`, so a failed auth returned 401 and
+    // short-circuited before the limiter could ever count the request.
+    // Measured at that ordering: 150 wrong-token POSTs returned 150x 401 and
+    // ZERO 429 -- the shared token was brute-forceable at unlimited rate.
+    // Mounting the limiter first makes failed attempts consume the budget.
+    await withServer(async (base) => {
+      const codes: Record<number, number> = {};
+      for (let i = 0; i < 120; i++) {
+        const res = await fetch(`${base}/api/v1/gate-acl/promote-pl`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer wrong-guess-${i}`,
+          },
+          body: JSON.stringify({ principalId: 'x' }),
+        });
+        codes[res.status] = (codes[res.status] ?? 0) + 1;
+      }
+      assert.ok(
+        (codes[429] ?? 0) > 0,
+        `no 429 in 120 bad-token attempts (${JSON.stringify(codes)}) -- ` +
+          'the limiter must be mounted before bearerAuth or the token is ' +
+          'brute-forceable at unlimited rate',
+      );
+      assert.ok((codes[401] ?? 0) > 0, 'bad tokens must still 401 before the cap');
+    });
+  });
 });

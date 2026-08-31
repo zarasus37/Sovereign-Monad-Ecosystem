@@ -274,8 +274,8 @@ export function createSovereignApp(
   // ── PL Bridge (Vector 3.1) — auth + principalId from auth context ──────
   app.post(
     '/api/v1/gate-acl/promote-pl',
-    bearerAuth,
     mutatingRateLimit,
+    bearerAuth,
     async (req: Request, res: Response, next: NextFunction) => {
       try {
         const authPrincipal = requireAuthPrincipal(req);
@@ -299,8 +299,8 @@ export function createSovereignApp(
   // ── Wallet Binding (Vector 3.2) — auth + localPrincipalId from auth ────
   app.post(
     '/api/v1/gate-acl/bind-wallet',
-    bearerAuth,
     mutatingRateLimit,
+    bearerAuth,
     async (req: Request, res: Response, next: NextFunction) => {
       try {
         const authPrincipal = requireAuthPrincipal(req);
@@ -326,8 +326,8 @@ export function createSovereignApp(
   // Mount at /api/v1/cardia → GET .../funding/stream/:walletAddress
   app.use(
     '/api/v1/cardia',
-    bearerAuth,
     sseRateLimit,
+    bearerAuth,
     createCardiaFundingStreamRouter(),
   );
 
@@ -392,8 +392,8 @@ export function createSovereignApp(
     // Auth required so a third party cannot inject fake metrics events.
     app.post(
       '/api/v1/metrics/ingest',
-      bearerAuth,
       mutatingRateLimit,
+      bearerAuth,
       (req: Request, res: Response) => {
         const topic =
           typeof req.body?.topic === 'string'
