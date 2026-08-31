@@ -1,7 +1,0 @@
-{
-  "minimumExecutionTruthStatus": "staged",
-  "requireMultisig": true,
-  "requireGuardedLiveCapApproval": true,
-  "recommendedFirstFundingMon": "10",
-  "maxInitialDisbursementPercent": 10
-}
