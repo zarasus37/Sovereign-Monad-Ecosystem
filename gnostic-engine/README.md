@@ -143,6 +143,11 @@ non-root user; CI asserts both on every push.
   store to survive restarts or run more than one replica.
 - **No authentication yet.** Do not expose this to an untrusted network as-is.
 - **Not a substitute for tool-level authorization.** Run it alongside one.
+- **Not yet import-standalone.** Classification imports the Peirce manifold
+  mirror from `monad-ecosystem/packages/logoc/peirce` through a `sys.path`
+  seam, and reads its 66 sign classes from `shared/peirce-spec/`. The image
+  bundles both, which is why the build context is the repo root. Extracting
+  this into a real package is the next cleanup.
 
 ---
 
