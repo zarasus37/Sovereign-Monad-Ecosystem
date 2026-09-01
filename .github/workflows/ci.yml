@@ -66,5 +66,15 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
+      # test:integration includes TS<->Python parity tests
+      # (classifier-parity, scorer-parity, tier-parity). They shell out to
+      # `uv run --project gnostic-engine python ...`, so the runner needs uv.
+      # Without it the three suites fail with `spawnSync uv ENOENT`.
+      # uv downloads the interpreter gnostic-engine's requires-python asks for.
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v10
+        with:
+          enable-cache: true
+
       - name: Aggregate validate (layout + drift + typecheck + integration)
         run: pnpm validate
