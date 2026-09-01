@@ -58,11 +58,18 @@ const NON_MEMBER_FILES = new Set([
   'COUNCIL_BINDINGS.md',
 ]);
 
+// Batch tracking / ops documents. Same category as GNOSIS_EVENT_VOICE.md and
+// COUNCIL_BINDINGS.md above: they live in the council directory but describe
+// the rewrite process, not a seat. Matched by pattern so BATCH_4 and onward do
+// not each break CI on the day they are created.
+const NON_MEMBER_PATTERNS = [/^GARDEN_BATCH_\d+\.md$/i];
+
 const filesOnDisk = new Set(
   readdirSync(councilDir).filter((f) => {
     const p = join(councilDir, f);
     // PENDING scaffolds are work-in-progress seats (not yet in registry).
     if (/PENDING/i.test(f)) return false;
+    if (NON_MEMBER_PATTERNS.some((re) => re.test(f))) return false;
     return statSync(p).isFile() && !NON_MEMBER_FILES.has(f);
   }),
 );
