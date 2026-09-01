@@ -1,0 +1,100 @@
+# Builds the standalone Gnostic Engine container and proves it works by running
+# the three-verdict demo against the running image.
+#
+# This is the verification path for anyone without a local docker daemon: push
+# the branch, and CI does the build-and-boot that a laptop would otherwise do.
+name: engine-container
+
+on:
+  push:
+    paths:
+      - 'gnostic-engine/**'
+      - 'shared/constraints/**'
+      - '.github/workflows/engine-container.yml'
+  pull_request:
+    paths:
+      - 'gnostic-engine/**'
+      - 'shared/constraints/**'
+      - '.github/workflows/engine-container.yml'
+  workflow_dispatch:
+
+jobs:
+  build-and-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/setup-buildx-action@v3
+
+      # Build from the REPO ROOT context — the engine reads the constraint
+      # packs from shared/constraints, which is outside gnostic-engine/.
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: gnostic-engine/Dockerfile
+          tags: gnostic-engine:ci
+          load: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Start container
+        run: |
+          docker run -d --name engine -p 8000:8000 gnostic-engine:ci
+          for i in $(seq 1 40); do
+            if curl -sf --max-time 3 http://127.0.0.1:8000/ >/dev/null; then
+              echo "engine up after ${i} attempts"; exit 0
+            fi
+            sleep 2
+          done
+          echo "::error::engine failed to become ready"
+          docker logs engine
+          exit 1
+
+      - name: Verify it runs as non-root
+        run: |
+          uid=$(docker exec engine id -u)
+          echo "container uid: $uid"
+          if [ "$uid" = "0" ]; then echo "::error::running as root"; exit 1; fi
+
+      - name: Verify constraint packs are read-only
+        run: |
+          if docker exec engine sh -c 'touch /shared/constraints/probe 2>/dev/null'; then
+            echo "::error::constraint packs are writable at runtime"; exit 1
+          fi
+          echo "packs are read-only"
+
+      # The real check: three actions in, three expected verdicts out.
+      # run_demo.py exits non-zero if any verdict differs.
+      - name: Run the three-verdict demo
+        run: python gnostic-engine/demo/run_demo.py --url http://127.0.0.1:8000 --no-color
+
+      # window_log writes to /logs/ttc-window as a non-root user. This is the
+      # failure mode that only shows up with record=true, so assert it directly
+      # rather than trusting the Dockerfile's chown.
+      - name: Verify writable state dirs
+        run: |
+          docker exec engine sh -c 'touch /logs/ttc-window/probe && rm /logs/ttc-window/probe'
+          docker exec engine sh -c 'touch /app/logs/events/probe && rm /app/logs/events/probe'
+          echo "state dirs writable"
+
+      - name: Healthcheck reports healthy
+        run: |
+          for i in $(seq 1 20); do
+            s=$(docker inspect --format='{{.State.Health.Status}}' engine 2>/dev/null || echo none)
+            echo "health: $s"
+            [ "$s" = "healthy" ] && exit 0
+            sleep 5
+          done
+          echo "::error::container never reported healthy"
+          docker logs engine
+          exit 1
+
+      - name: Container logs
+        if: always()
+        run: docker logs engine
+
+      - name: Tear down
+        if: always()
+        run: docker rm -f engine || true
