@@ -72,7 +72,7 @@ jobs:
       # Without it the three suites fail with `spawnSync uv ENOENT`.
       # uv downloads the interpreter gnostic-engine's requires-python asks for.
       - name: Set up uv
-        uses: astral-sh/setup-uv@v10
+        uses: astral-sh/setup-uv@v10.0.1
         with:
           enable-cache: true
 
