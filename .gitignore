@@ -144,7 +144,16 @@ gh.exe
 #   small. The single existing carve-out
 #   (!monad-ecosystem/packages/hcd-monitor/tests/fixtures/*.jsonl)
 #   is upstream of this rule and unaffected.
-logs/
+# Runtime logs are ignored, but git must still descend into logs/ so the
+# build inputs below can be re-included. `logs/` (directory form) would
+# stop traversal and make the negations below unreachable.
+logs/*
+!logs/corpus/
+logs/corpus/*
+# BUILD INPUT, not a runtime log: control-center's build-corpus.js reads
+# this at build time to generate public/logoc-corpus.json. Untracking it
+# in P1 broke `pnpm build` for the frontend from a clean clone.
+!logs/corpus/master_corpus_v5.10.jsonl
 gnosis-training/data/*.jsonl
 
 # Local Claude Code session data (plans, worktrees, settings) — never commit
