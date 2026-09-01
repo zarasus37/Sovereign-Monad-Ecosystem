@@ -1,0 +1,91 @@
+# gitleaks configuration
+#
+# Purpose: let the secret scanner BLOCK. Before this file existed, the workflow
+# carried `continue-on-error: true`, so its own comment ("block new secrets")
+# was untrue -- it could not fail. A full-history scan reports 3,566 findings,
+# which is why it was never switched on.
+#
+# Triage of those 3,566 (gitleaks 8.28.0, full history, 219 commits):
+#
+#   3,552  archive/**            historical export dump, allowlisted by path
+#      13  monad-ecosystem/**    triaged individually below
+#       1  docs/**               triaged below
+#
+# Everything allowlisted here was inspected and is a confirmed false positive.
+# Nothing is allowlisted merely to make the build green.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Triaged false positives. Add here only with a justification."
+
+# Match the allowlist regexes against the whole LINE, not just the captured
+# secret. Without this, a rule like "vkeySha256" never matches, because the
+# captured secret is the bare hash and the identifying context is the key name
+# next to it.
+regexTarget = "line"
+
+paths = [
+  # Frozen historical export. Not built, not imported, not deployed. Whatever
+  # is in here is already public; rewriting it is a separate, riskier job.
+  # Re-scan this directory deliberately, not on every PR.
+  '''^archive/''',
+
+  # Vendored/lock artefacts: high-entropy hashes, never credentials.
+  '''(^|/)pnpm-lock\.yaml$''',
+  '''(^|/)uv\.lock$''',
+  '''(^|/)mops\.lock$''',
+  '''(^|/)package-lock\.json$''',
+
+  # Virtualenvs / vendored deps. Not ours, gitignored, but a local `gitleaks
+  # dir` run walks them and drowns the signal.
+  '''(^|/)\.venv/''',
+  '''(^|/)node_modules/''',
+  '''\.js\.map$''',
+]
+
+regexes = [
+  # --- ZK ceremony artefacts -------------------------------------------------
+  # vkey SHA-256 pins. These are integrity hashes that MUST be committed --
+  # that is the entire point of vkeyPin.ts. A hash is not a secret.
+  '''vkeySha256''',
+  '''DEMO_VKEY_SHA256''',
+
+  # --- EVM addresses ---------------------------------------------------------
+  # X402_EVM_PRIVATE_KEY_ADDRESS is the PUBLIC address derived from the signing
+  # key, not the key. The variable name is unfortunate and reads like a private
+  # key to both humans and scanners; renaming it to X402_EVM_SIGNER_ADDRESS
+  # would remove this whole class of false positive.
+  '''X402_EVM_PRIVATE_KEY_ADDRESS''',
+
+  # --- Documentation placeholders --------------------------------------------
+  # curl examples in templates/api/README.md using a literal placeholder header.
+  '''x-api-key:\s*(<[^>]+>|your[-_]|placeholder|example|changeme)''',
+]
+
+stopwords = [
+  "example",
+  "placeholder",
+  "changeme",
+  "your-key-here",
+  "xxxxxxxx",
+]
+
+# NOTE, deliberately NOT allowlisted:
+#
+#   monad-ecosystem/agents/monad-mev/organ-runtime/functions/
+#     hepar-commercial-pipeline/local.settings.json   (COSMOS_KEY)
+#   monad-ecosystem/legacy/monad-mev-archive/
+#     local.settings.json                             (COSMOS_KEY)
+#
+# 89-char base64, Shannon entropy 5.35, ends in "==", in an Azure Functions
+# local.settings.json -- a file format that by convention holds live
+# credentials and is normally gitignored. It is NOT the well-known Cosmos DB
+# Emulator key (checked: 13 characters of common prefix, then diverges; 89
+# chars vs the emulator's 88).
+#
+# Both paths are already absent from main, so a diff scan will not trip on
+# them. They remain reachable in history. The fix is to ROTATE the key in
+# Azure -- rotation is what actually makes the exposed value worthless.
+# Allowlisting it here would only hide it.

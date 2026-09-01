@@ -1,27 +1,113 @@
-# P0 leftover / P1 hygiene — block new secrets on PR and main
+# Secret scanning that can actually fail the build.
+#
+# This workflow previously carried `continue-on-error: true`, which meant its
+# own header comment ("block new secrets") was false -- it could not block
+# anything. The reason was real: a full-history scan reports 3,566 findings,
+# almost all of them noise from archive/. That noise is now triaged in
+# .gitleaks.toml, so the gate can be switched on.
+#
+# Two jobs, deliberately split:
+#
+#   protect   scans only the commits in this push/PR. BLOCKING. This is the
+#             control that stops a new secret from landing.
+#   history   scans the full history. NON-BLOCKING, scheduled + manual. Known
+#             historical exposure should be visible without wedging every PR
+#             on commits that are already public.
 name: gitleaks
 
 on:
   push:
     branches: [main, master]
   pull_request:
-    branches: [main, master]
+  schedule:
+    # Mondays 06:00 UTC — history drift check.
+    - cron: '0 6 * * 1'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
-  gitleaks:
+  # ── BLOCKING: no new secrets ────────────────────────────────────────────────
+  protect:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          # Need the base commit to diff against; 0 fetches everything, but
+          # `gitleaks protect` still only inspects the new commits.
+          fetch-depth: 0
+
+      - name: Install gitleaks
+        run: |
+          curl -sSfL -o /tmp/gitleaks.tar.gz \
+            https://github.com/gitleaks/gitleaks/releases/download/v8.28.0/gitleaks_8.28.0_linux_x64.tar.gz
+          tar -xzf /tmp/gitleaks.tar.gz -C /tmp gitleaks
+          sudo install /tmp/gitleaks /usr/local/bin/gitleaks
+          gitleaks version
+
+      - name: Determine scan range
+        id: range
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "range=${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            # New branch: scan its tip commit only.
+            echo "range=${{ github.sha }}~1..${{ github.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "range=${{ github.event.before }}..${{ github.sha }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      # No continue-on-error. A finding here fails the build.
+      - name: Scan new commits
+        run: |
+          echo "scanning ${{ steps.range.outputs.range }}"
+          gitleaks git \
+            --config .gitleaks.toml \
+            --log-opts "${{ steps.range.outputs.range }}" \
+            --redact \
+            --verbose \
+            --report-format sarif \
+            --report-path gitleaks-new.sarif
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitleaks-new
+          path: gitleaks-new.sarif
+          if-no-files-found: ignore
+
+  # ── NON-BLOCKING: visibility into historical exposure ──────────────────────
+  history:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Gitleaks
-        # continue-on-error until .gitleaks.toml allowlists archive noise;
-        # still surfaces findings in the Actions UI.
+      - name: Install gitleaks
+        run: |
+          curl -sSfL -o /tmp/gitleaks.tar.gz \
+            https://github.com/gitleaks/gitleaks/releases/download/v8.28.0/gitleaks_8.28.0_linux_x64.tar.gz
+          tar -xzf /tmp/gitleaks.tar.gz -C /tmp gitleaks
+          sudo install /tmp/gitleaks /usr/local/bin/gitleaks
+
+      - name: Full history scan (report only)
         continue-on-error: true
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+        run: |
+          gitleaks git --config .gitleaks.toml --redact --verbose \
+            --report-format json --report-path gitleaks-history.json
+          echo "findings: $(jq 'length' gitleaks-history.json 2>/dev/null || echo '?')"
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitleaks-history
+          path: gitleaks-history.json
+          if-no-files-found: ignore
