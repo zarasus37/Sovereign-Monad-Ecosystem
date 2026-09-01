@@ -20,6 +20,7 @@ import type {
   QuarantineTaskPayload,
 } from './plBridge.types.js';
 import type { PLDomain, TaskEvent, GateEvent, PLEvent } from './types.js';
+import { plPromoteClaimSchema, formatIssues } from './claimSchemas.js';
 
 export const PL_POINTS: Record<PlOnboardingTaskId, PlPointsAwarded> = {
   'broken-genesis-repair': 10,
@@ -40,7 +41,11 @@ export type PromoteVerifyOk = {
 
 export type PromoteVerifyFail = {
   ok: false;
-  error: 'INVALID_TASK_PROOF' | 'UNKNOWN_TASK' | 'EMPTY_PRINCIPAL';
+  error:
+    | 'INVALID_CLAIM_SHAPE'
+    | 'INVALID_TASK_PROOF'
+    | 'UNKNOWN_TASK'
+    | 'EMPTY_PRINCIPAL';
   message: string;
 };
 
@@ -75,6 +80,23 @@ function isArchon(p: unknown): p is ArchonTaskPayload {
  * Mirrors local-pl-ledger rules; server is source of truth.
  */
 export function verifyPlPromoteClaim(claim: PlPromoteClaim): PromoteVerifyResult {
+  // Validating parse at the DOMAIN boundary, not just the HTTP wrapper.
+  // This function is exported and called directly by library consumers
+  // (sovereign-host, closedLoop, paperCli), so validating only in
+  // promotePlHttp would leave every non-HTTP caller exposed. It is also the
+  // contract of a verifier that it never throws: at 49fcd9f a string
+  // totalEnergy reached .toFixed() and raised a TypeError, which sovereign-
+  // host turned into a 500 leaking the internal message.
+  const parsed = plPromoteClaimSchema.safeParse(claim);
+  if (!parsed.success) {
+    return {
+      ok: false,
+      error: 'INVALID_CLAIM_SHAPE',
+      message: formatIssues(parsed.error).join('; '),
+    };
+  }
+  claim = parsed.data as PlPromoteClaim;
+
   if (!claim.principalId?.trim()) {
     return {
       ok: false,

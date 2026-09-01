@@ -1,7 +1,7 @@
 {
   "name": "@sovereign/gate-acl",
   "version": "0.1.0",
-  "description": "Shaliah PL→ACL hard gate — Principal Level ledger, signed ACL mandates, bus-side enforcement",
+  "description": "Shaliah PL\u2192ACL hard gate \u2014 Principal Level ledger, signed ACL mandates, bus-side enforcement",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",
@@ -15,7 +15,7 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "test": "tsx --test src/gateAcl.test.ts src/runtime.adapters.test.ts src/closedLoop.test.ts src/logocTrade.test.ts src/plBridge.test.ts src/walletBind.test.ts",
+    "test": "tsx --test src/gateAcl.test.ts src/runtime.adapters.test.ts src/closedLoop.test.ts src/logocTrade.test.ts src/plBridge.test.ts src/plBridge.security.test.ts src/walletBind.test.ts",
     "demo": "tsx src/demo.ts",
     "closed-loop": "tsx src/closedLoop.ts",
     "closed-loop:interactive": "tsx src/closedLoop.ts --interactive",
@@ -27,7 +27,8 @@
   "dependencies": {
     "ethers": "^6.13.5",
     "ioredis": "^5.4.1",
-    "kafkajs": "^2.2.4"
+    "kafkajs": "^2.2.4",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
