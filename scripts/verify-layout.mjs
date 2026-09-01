@@ -40,6 +40,12 @@ const QUIET = process.argv.includes('--quiet');
 const ALLOWED_TOP_LEVEL = new Set([
   '.git',
   '.github',
+  // Tooling configs that must live at the repo root to be picked up:
+  // Docker reads .dockerignore relative to the build context (the repo root,
+  // because gnostic-engine's Dockerfile bundles sibling trees), and gitleaks
+  // reads .gitleaks.toml from the scan root.
+  '.dockerignore',
+  '.gitleaks.toml',
   '.claude',
   '.editorconfig',
   '.gitattributes',
