@@ -3,12 +3,19 @@
 import os
 import sys
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # Make sure we can import from src/
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
 from gnostic_engine.api import gnostic_router, gnostic_live_router
+
+# The app is normally loaded as ``api.gnostic_api:app`` (uvicorn, tests), but
+# tolerate ``api/`` itself being on sys.path.
+try:
+    from api.auth import guard
+except ImportError:  # pragma: no cover - import-path fallback
+    from auth import guard
 
 SGE_VERSION = "2.0.0"
 
@@ -28,8 +35,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(gnostic_router)
-app.include_router(gnostic_live_router)
+# Every router-mounted route requires a valid X-API-Key. ``guard`` waves through
+# the liveness and documentation paths listed in ``auth.PUBLIC_PATHS`` -- notably
+# ``GET /api/v1/health``, which lives on the live router but must stay probeable.
+app.include_router(gnostic_router, dependencies=[Depends(guard)])
+app.include_router(gnostic_live_router, dependencies=[Depends(guard)])
 
 
 @app.get("/")

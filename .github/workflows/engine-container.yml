@@ -41,7 +41,12 @@ jobs:
 
       - name: Start container
         run: |
-          docker run -d --name engine -p 8000:8000 gnostic-engine:ci
+          # Generated per run rather than hardcoded: a literal key in this file is
+          # a secret-scanner finding, and a rotating one is closer to real use.
+          ENGINE_KEY="$(openssl rand -hex 20)"
+          echo "::add-mask::$ENGINE_KEY"
+          echo "ENGINE_KEY=$ENGINE_KEY" >> "$GITHUB_ENV"
+          docker run -d --name engine -p 8000:8000 -e GNOSTIC_API_KEYS="$ENGINE_KEY" gnostic-engine:ci
           for i in $(seq 1 40); do
             if curl -sf --max-time 3 http://127.0.0.1:8000/ >/dev/null; then
               echo "engine up after ${i} attempts"; exit 0
@@ -68,7 +73,22 @@ jobs:
       # The real check: three actions in, three expected verdicts out.
       # run_demo.py exits non-zero if any verdict differs.
       - name: Run the three-verdict demo
-        run: python gnostic-engine/demo/run_demo.py --url http://127.0.0.1:8000 --no-color
+        run: python gnostic-engine/demo/run_demo.py --url http://127.0.0.1:8000 --no-color --api-key "$ENGINE_KEY"
+
+      # The guard must hold in the built image, not just in pytest. A container
+      # that ships with scoring routes open is the failure this step exists to
+      # catch.
+      - name: Unauthenticated requests are refused
+        run: |
+          pub=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8000/api/v1/health)
+          [ "$pub" = "200" ] || { echo "::error::health should be public, got $pub"; exit 1; }
+          nokey=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8000/api/v1/ttc/pack)
+          [ "$nokey" = "401" ] || { echo "::error::ttc/pack without a key should be 401, got $nokey"; exit 1; }
+          bad=$(curl -s -o /dev/null -w '%{http_code}' -H 'X-API-Key: wrong' http://127.0.0.1:8000/api/v1/ttc/pack)
+          [ "$bad" = "401" ] || { echo "::error::ttc/pack with a bad key should be 401, got $bad"; exit 1; }
+          ok=$(curl -s -o /dev/null -w '%{http_code}' -H "X-API-Key: $ENGINE_KEY" http://127.0.0.1:8000/api/v1/ttc/pack)
+          [ "$ok" = "200" ] || { echo "::error::ttc/pack with the right key should be 200, got $ok"; exit 1; }
+          echo "public 200 / no-key 401 / bad-key 401 / good-key 200"
 
       # window_log writes to /logs/ttc-window as a non-root user. This is the
       # failure mode that only shows up with record=true, so assert it directly

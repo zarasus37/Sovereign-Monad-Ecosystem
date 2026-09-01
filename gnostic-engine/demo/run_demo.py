@@ -48,6 +48,13 @@ def post(url: str, payload: dict, api_key: str | None) -> tuple[int, dict]:
         return e.code, json.loads(e.read() or b"{}")
 
 
+def get(url: str, api_key: str | None, timeout: int = 10):
+    headers = {"X-API-Key": api_key} if api_key else {}
+    req = urllib.request.Request(url, headers=headers, method="GET")
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read())
+
+
 def wait_for(url: str, attempts: int = 40) -> bool:
     for _ in range(attempts):
         try:
@@ -85,8 +92,14 @@ def main() -> int:
         print(f"{RED}Engine did not become ready at {base}{RESET}")
         return 1
 
-    with urllib.request.urlopen(f"{base}/api/v1/ttc/pack", timeout=10) as r:
-        pack = json.loads(r.read())
+    try:
+        pack = get(f"{base}/api/v1/ttc/pack", args.api_key)
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 503):
+            print(f"{RED}The engine requires an API key.{RESET}\n"
+                  f"  Start it with GNOSTIC_API_KEYS=<key> and rerun with --api-key <key>.")
+            return 1
+        raise
     n_rules = sum(len(v) for v in pack["domains"].values())
     print(f"Constraint pack {BOLD}v{pack['version']}{RESET} — {n_rules} rules "
           f"across {len(pack['domains'])} domains "
