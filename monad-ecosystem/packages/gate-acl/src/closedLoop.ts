@@ -101,11 +101,12 @@ async function runClosedLoop(interactive: boolean): Promise<void> {
   const principalId = agent.principalBinding.principalId;
   const domain = agent.routing.plDomain as PLDomain;
   const now0 = Date.now();
-  const secret =
-    process.env.GATE_ACL_SIGNING_SECRET ?? 'closed-loop-local-secret-not-for-prod';
-
   const ledger = new PLLedger();
-  const issuer = new MandateIssuer({ secret });
+  // No local fallback secret. Passing one explicitly bypasses the fail-closed
+  // guard in resolveSigningSecret(), because an explicit value short-circuits
+  // before the `!secret` check. Constructing with no secret lets the issuer
+  // read GATE_ACL_SIGNING_SECRET and throw when it is absent.
+  const issuer = new MandateIssuer();
   const gate = new GateAclService(issuer);
   const executor = new Executor(issuer);
 

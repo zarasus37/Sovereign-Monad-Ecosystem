@@ -453,9 +453,10 @@ async function runInteractive(
 function main(): void {
   const cmd = process.argv[2] ?? 'demo';
   const agent = loadAgent();
-  const secret = process.env.GATE_ACL_SIGNING_SECRET ?? 'paper-protocol-local-secret';
   const ledger = new PLLedger();
-  const issuer = new MandateIssuer({ secret });
+  // No local fallback secret -- see the note in closedLoop.ts. An explicit
+  // secret short-circuits resolveSigningSecret()'s fail-closed guard.
+  const issuer = new MandateIssuer();
   const gate = new GateAclService(issuer);
 
   if (cmd === 'session') {

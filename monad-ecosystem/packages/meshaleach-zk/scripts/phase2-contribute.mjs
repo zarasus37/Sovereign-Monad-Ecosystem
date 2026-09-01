@@ -50,8 +50,19 @@ if (!existsSync(snarkjsCli)) {
   process.exit(1);
 }
 
+/**
+ * Ceremony entropy is toxic waste: whoever knows it can forge proofs. It must
+ * never reach stdout, which lands in terminals, CI logs, screen shares and
+ * scrollback. Redact any -e=/--entropy= argument before echoing the command.
+ */
+function redactArgs(args) {
+  return args.map((a) =>
+    /^(-e=|--entropy=)/.test(a) ? a.slice(0, a.indexOf('=') + 1) + '<redacted>' : a,
+  );
+}
+
 function run(args) {
-  console.log('>', process.execPath, 'snarkjs', args.join(' '));
+  console.log('>', process.execPath, 'snarkjs', redactArgs(args).join(' '));
   const r = spawnSync(process.execPath, [snarkjsCli, ...args], {
     stdio: 'inherit',
     shell: false,
@@ -76,15 +87,37 @@ if (flag('finalize')) {
   if (resolve(src) !== resolve(dest)) copyFileSync(src, dest);
   const vkey = join(outDir, 'verification_key.json');
   run(['zkey', 'export', 'verificationkey', dest, vkey]);
-  if (ptau && existsSync(r1cs)) {
-    console.log('Verifying zkey against r1cs + ptau…');
-    run(['zkey', 'verify', r1cs, ptau, dest]);
+
+  // Finalizing pins the artifact as ceremony.mode=production. Verification is
+  // therefore mandatory, not conditional: this used to be
+  // `if (ptau && existsSync(r1cs))`, so omitting --ptau silently skipped the
+  // only check that the zkey actually corresponds to this circuit and phase-1,
+  // and the script still pinned it as production.
+  if (!ptau) {
+    console.error(
+      'finalize requires --ptau=path/to/prepared.ptau so the zkey can be verified ' +
+        'against the r1cs before it is pinned as production. See PRODUCTION_PTAU.md.',
+    );
+    process.exit(1);
   }
+  if (!existsSync(ptau)) {
+    console.error('finalize: --ptau file not found:', ptau);
+    process.exit(1);
+  }
+  if (!existsSync(r1cs)) {
+    console.error(
+      'finalize: missing r1cs at ' + r1cs + ' — build the circuit first so the ' +
+        'zkey can be verified against it.',
+    );
+    process.exit(1);
+  }
+  console.log('Verifying zkey against r1cs + ptau…');
+  run(['zkey', 'verify', r1cs, ptau, dest]);
   // pin as production
   const pinScript = join(__dirname, 'pin-vkey.mjs');
   const contrib = arg('contributors', name);
   const phase1 = arg('phase1', ptau || 'unspecified');
-  spawnSync(
+  const pin = spawnSync(
     process.execPath,
     [
       pinScript,
@@ -94,6 +127,20 @@ if (flag('finalize')) {
     ],
     { stdio: 'inherit' },
   );
+  // The result used to be discarded, so a failed pin still printed
+  // "Finalized production zkey + vkey pin" and exited 0 -- a false success on
+  // the step that decides whether the committed vkey hash is trustworthy.
+  if (pin.error) {
+    console.error('Failed to run pin-vkey.mjs:', pin.error.message);
+    process.exit(1);
+  }
+  if (pin.status !== 0) {
+    console.error(
+      `pin-vkey.mjs exited ${pin.status} — the production vkey pin was NOT written. ` +
+        'The zkey and verification_key.json on disk are now ahead of the committed pin.',
+    );
+    process.exit(pin.status ?? 1);
+  }
   console.log('Finalized production zkey + vkey pin. Mode=production.');
   process.exit(0);
 }
