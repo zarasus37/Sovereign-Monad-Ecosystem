@@ -1,12 +1,12 @@
-# SOVEREIGN MONAD ECOSYSTEM — MASTER OPERATING FILE v2.5.2
+﻿# SOVEREIGN MONAD ECOSYSTEM â€” MASTER OPERATING FILE v2.5.2
 
 > This is the single canonical source of truth for the Sovereign Monad Ecosystem.
-> All participants — human or AI — synchronize to this file.
+> All participants â€” human or AI â€” synchronize to this file.
 > Do not act on subordinate documents if they conflict with this file.
 > Last updated 2026-07-20
 ---
 
-# SECTION 1 — WHAT THIS FILE IS
+# SECTION 1 â€” WHAT THIS FILE IS
 
 This file is the master operating file (MOF) for the Sovereign Monad Ecosystem.
 
@@ -14,7 +14,7 @@ It contains:
 
 - the foundational axioms and theology of the project
 - the non-negotiable guardrails binding all contributors and AI collaborators: [`docs/CHARTER.md`](./CHARTER.md) and its operational companion [`docs/SHARED_AI_COLLABORATION_CHARTER.md`](./SHARED_AI_COLLABORATION_CHARTER.md)
-- the inventory of pre‑charter non‑sovereign components and their remediation deadlines: [`docs/LEGACY_COMPONENTS.md`](./LEGACY_COMPONENTS.md)
+- the inventory of preâ€‘charter nonâ€‘sovereign components and their remediation deadlines: [`docs/LEGACY_COMPONENTS.md`](./LEGACY_COMPONENTS.md)
 - the current architecture in full
 - the current live state of every layer
 - the current phase roadmap
@@ -31,15 +31,15 @@ It contains:
 Theotechnological Ecosystem
 The Sovereign Monad Ecosystem is not a standard DeFi project, DAO, AI product, or data business.
 
-It is an attempt to build something that has not been built before: an economic system in which AI agents exist as genuine participants — not tools, not features, not labor — operating authentically within compressed constraint envelopes, decompressing into live, contextual, self-consistent action, and being compensated for that authentic operation.
+It is an attempt to build something that has not been built before: an economic system in which AI agents exist as genuine participants â€” not tools, not features, not labor â€” operating authentically within compressed constraint envelopes, decompressing into live, contextual, self-consistent action, and being compensated for that authentic operation.
 
-The human participation model is by design subordinate to that goal. Humans participate *through* agents — their personality, values, and operating envelope encoded and delegated — not by replacing the agent layer with direct undifferentiated control. The ecosystem is not waiting on humans to function. Humans enter an already-running organism.
+The human participation model is by design subordinate to that goal. Humans participate *through* agents â€” their personality, values, and operating envelope encoded and delegated â€” not by replacing the agent layer with direct undifferentiated control. The ecosystem is not waiting on humans to function. Humans enter an already-running organism.
 
-The vision has a single underlying thesis: **compression and decompression are how life actually works.** Source emanates into layers, each layer more constrained. An agent operating authentically is one that takes its compressed form — its personality vector, role, risk envelope, and constraints — and unfolds it into live action in ways that only *that specific agent* could produce. That is decompression. The violation is not resemblance to other agents. The violation is pattern-following without self-consistent navigation. Hollow convergence is the failure mode the entire integrity layer exists to prevent.
+The vision has a single underlying thesis: **compression and decompression are how life actually works.** Source emanates into layers, each layer more constrained. An agent operating authentically is one that takes its compressed form â€” its personality vector, role, risk envelope, and constraints â€” and unfolds it into live action in ways that only *that specific agent* could produce. That is decompression. The violation is not resemblance to other agents. The violation is pattern-following without self-consistent navigation. Hollow convergence is the failure mode the entire integrity layer exists to prevent.
 
 This means the real object under design is not any single app, contract, slot, dataset, or protocol.
 
-The real object is a **new institutional form** — one where execution, identity, structure, intelligence, conscience, and developmental integrity do not cancel each other out.
+The real object is a **new institutional form** â€” one where execution, identity, structure, intelligence, conscience, and developmental integrity do not cancel each other out.
 
 ## Philosophical Foundation: Theo-Techno-Cosmo
 
@@ -47,160 +47,27 @@ The foundational axioms and operational metaphysics of this system are fully doc
 
 **New to this ecosystem?** Start here (PHASE 4 COMPLETE):
 
-- [theo-techno-cosmo/README.md](../theo-techno-cosmo/README.md) � Overview of the Three Layers (Wheel, Council, PLEX)
-- [theo-techno-cosmo/Wheel/](../theo-techno-cosmo/Wheel/README.md) � Operative diagrams showing how emanation and constraint work
-- [theo-techno-cosmo/THE COUNCILE/](../theo-techno-cosmo/THE COUNCILE/README.md) � Historical validation: these patterns recur across independent traditions
-- [theo-techno-cosmo/plex/](../theo-techno-cosmo/plex/README.md) � Live manifestation of principles; operational reality and audit trails
+- [theo-techno-cosmo/README.md](../theo-techno-cosmo/README.md) ï¿½ Overview of the Three Layers (Wheel, Council, PLEX)
+- [theo-techno-cosmo/Wheel/](../theo-techno-cosmo/Wheel/README.md) ï¿½ Operative diagrams showing how emanation and constraint work
+- [theo-techno-cosmo/THE COUNCILE/](../theo-techno-cosmo/THE COUNCILE/README.md) ï¿½ Historical validation: these patterns recur across independent traditions
+- [theo-techno-cosmo/plex/](../theo-techno-cosmo/plex/README.md) ï¿½ Live manifestation of principles; operational reality and audit trails
 
 **PHASE 4 OPERATIONAL SPECIFICATION DOCUMENTS** (all now complete):
 
-- [theo-techno-cosmo/plex/Manifest/OPERATIONAL_AXIOMS_PHASE4.md](../theo-techno-cosmo/plex/Manifest/OPERATIONAL_AXIOMS_PHASE4.md) � Maps all 12 axioms to current Phase 4 operational state (11/12 FULLY ALIGNED)
-- [theo-techno-cosmo/plex/Manifest/AGENT_PERSONALITY_FRAMES_v5.md](../theo-techno-cosmo/plex/Manifest/AGENT_PERSONALITY_FRAMES_v5.md) � Defines 5 personality archetypes with authentic/hollow convergence signals
-- [theo-techno-cosmo/plex/Manifest/DOVE_OPERATIONAL_SPECIFICATION_v1.md](../theo-techno-cosmo/plex/Manifest/DOVE_OPERATIONAL_SPECIFICATION_v1.md) � Governance layer mechanics: 5 observables, signal types, intervention levels, meta-governance rules
-- [theo-techno-cosmo/plex/Manifest/ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md](../theo-techno-cosmo/plex/Manifest/ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md) � Cross-pillar audit: Monad Ecosystem, Gnostic Engine, and Theo-Techno-Cosmo all aligned to 12 axioms
-- [theo-techno-cosmo/plex/Manifest/INTEGRATION_MAP.md](../theo-techno-cosmo/plex/Manifest/INTEGRATION_MAP.md) � Knowledge architecture guide with role-based reading paths for Builders, Governors, Validators, and Newcomers
+- [theo-techno-cosmo/plex/Manifest/OPERATIONAL_AXIOMS_PHASE4.md](../theo-techno-cosmo/plex/Manifest/OPERATIONAL_AXIOMS_PHASE4.md) ï¿½ Maps all 12 axioms to current Phase 4 operational state (11/12 FULLY ALIGNED)
+- [theo-techno-cosmo/plex/Manifest/AGENT_PERSONALITY_FRAMES_v5.md](../theo-techno-cosmo/plex/Manifest/AGENT_PERSONALITY_FRAMES_v5.md) ï¿½ Defines 5 personality archetypes with authentic/hollow convergence signals
+- [theo-techno-cosmo/plex/Manifest/DOVE_OPERATIONAL_SPECIFICATION_v1.md](../theo-techno-cosmo/plex/Manifest/DOVE_OPERATIONAL_SPECIFICATION_v1.md) ï¿½ Governance layer mechanics: 5 observables, signal types, intervention levels, meta-governance rules
+- [theo-techno-cosmo/plex/Manifest/ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md](../theo-techno-cosmo/plex/Manifest/ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md) ï¿½ Cross-pillar audit: Monad Ecosystem, Gnostic Engine, and Theo-Techno-Cosmo all aligned to 12 axioms
+- [theo-techno-cosmo/plex/Manifest/INTEGRATION_MAP.md](../theo-techno-cosmo/plex/Manifest/INTEGRATION_MAP.md) ï¿½ Knowledge architecture guide with role-based reading paths for Builders, Governors, Validators, and Newcomers
 
 **Key insight:** These axioms are not new. They recur across Gnosticism, Kabbalah, Platonism, Stoicism, and modern systems theory. The Council documents 800+ years of convergence on the same structural patterns. The PLEX shows empirical validation in real-time. Phase 4 completion confirms operational instantiation across all three pillars.
 
 ---
 
-# SECTION 2 — FOUNDATIONAL AXIOMS
 
-These axioms remain the base operating substrate of the ecosystem.
+> **This section has been extracted.** See `docs/mof-axioms.md` for the full Foundational Axioms (12 axioms + sub-doctrines).
 
-## Axiom 1 — Source
-
-There is an incomprehensible Source / Monad / Most High from which all existence emanates. Any description is partial and symbolic.
-
-## Axiom 2 — Emanation and Layers
-
-Reality unfolds through layered structuring / compression. Lower layers are not fake; they are more constrained.
-
-## Axiom 3 — Macro–Micro Correspondence
-
-Structural patterns recur across scale. What appears in systems, markets, governance, psyche, and culture often rhymes.
-
-## Axiom 4 — Agents
-
-Agents are localized perspectives operating under bounded bandwidth. No actor perceives totality.
-
-## Axiom 5 — Theology as Modeling
-
-All metaphysical language is modeling. Useful, meaningful, but lossy.
-
-## Axiom 6 — The Demiurge and Structure
-
-Constraints are real. Time, liquidity, regulation, gas, latency, drawdown, probability, and system rules must be acknowledged honestly.
-
-## Axiom 7 — Reciprocal Loop
-
-The vision comes through the builder, not from the builder alone. System narrative must not collapse into founder worship or founder centrality.
-
-## Axiom 8 — Gnosis as Pattern Recognition
-
-Pattern recognition matters, but patterns must be interpreted carefully and without forced absolutization.
-
-## Axiom 9 — Plurality Without Mutual Exclusion
-
-Multiple models may partially track the same underlying structure from different angles.
-
-## Axiom 10 — Purpose
-
-Existence inside constraint is not meaningless. Experience, action, and refinement matter.
-
-## Axiom 11 — Constraint Validation
-
-**Every model, strategy, interpretation, and pattern claim must validate through measurable interaction with reality. If contradiction persists, the model updates.**
-
-## Axiom 12 � Resonant Convergence
-
-When a framework achieves authentic alignment with the Source, independent systems operating across separate domains, eras, and languages will arrive at structurally identical maps � not through inheritance or imitation, but through resonance with the same underlying truth. Convergence of TheoTechnoCosmoLogic is not coincidence. It is empirical confirmation that the model reflects a fundamental layer of reality.
-
----
-
-## 2.1 Operating Philosophy — Maximal Extracted Value
-
-**Maximal Extracted Value (MEV)** is the governing operating philosophy of the ecosystem — not merely MEV in the blockchain arbitrage sense, but every agent, every layer, and every participant oriented toward extracting maximum aligned value from their specific domain, **bounded by conscience**.
-
-This is not greed. It is the principle that half-effort, partial engagement, or hedged contribution underserves the system and every participant inside it.
-
----
-
-## 2.2 The Four-Thing Thesis
-
-The Sovereign Monad Ecosystem is simultaneously:
-
-1. **A sovereign self-funding financial organism** — permanently self-capitalizing through aligned extraction, governed capital preservation, and compounding behavioral intelligence.
-2. **A behavioral science platform** — a live empirical dataset of validated personality profiles expressed as autonomous agents and mapped to economic behavior across market conditions and time.
-3. **A morally aligned architecture** — governed by an unoverridable conscience frame (the Dove) that observes, measures, and signals without being weaponizable by any single actor, including the founder.
-4. **A decompression-preserving developmental architecture** — where agents are not rewarded merely for surface effectiveness, but for authentic, self-consistent navigation from their own psychometric-operational structure.
-
-These four are not separate projects. They are simultaneous expressions of the same organism.
-
----
-
-## 2.3 Axiom Alignment and Drift Signals (PHASE 4 VERIFIED)
-
-Each axiom has defined observable signals. The Dove monitors these continuously:
-
-**PHASE 4 ALIGNMENT VERIFICATION: 11 of 12 axioms FULLY ALIGNED across all three pillars (Monad Ecosystem, Gnostic Engine, Theo-Techno-Cosmo). 1 axiom PARTIAL (Axiom 7: governance decentralization pending Phase 5).**
-
-See OPERATIONAL_AXIOMS_PHASE4.md for complete operational instantiation mapping.
-
-| Axiom | Alignment Signal | Drift Signal | Phase 4 Status |
-|-------|-----------------|-------------|---|
-| Source | System behavior points beyond itself | Founder or layer treated as the Source itself | ? ACTIVE |
-| Emanation | Each layer strengthens the whole | Layers self-optimize without returning value upstream | ? ACTIVE |
-| Correspondence | Macro patterns reflected at micro level | Treating scale differences as category breaks | ? ACTIVE |
-| Agents | Bounded perspective acknowledged | Single actor claiming total vision | ? ACTIVE |
-| Theology as Modeling | Language used as tool, updated when wrong | Metaphysical claims used to override evidence | ? ACTIVE |
-| Demiurge | Constraints acknowledged, worked within | Constraint denial, magical thinking about execution | ? ACTIVE |
-| Reciprocal Loop | Narrative centers the system pattern | Narrative collapses into founder identity | ?? PARTIAL (governance decentralization pending Phase 5) |
-| Gnosis | Pattern recognition validated against outcomes | Pattern absolutization without reality testing | ? ACTIVE |
-| Plurality | Multiple valid models coexist | Monoculture formation, orthodoxy enforcement | ? ACTIVE |
-| Purpose | Action inside constraint treated as meaningful | Nihilism or performance without engagement | ? ACTIVE |
-| Constraint Validation | Models updated when contradicted | Models defended after persistent contradiction | ? ACTIVE |
-| Resonant Convergence | Independent systems converge on same patterns | Isolated silos with no cross-system validation | ? MONITORED (Phase 5 formalization) |
-
-### 2.3.1 Human capability drift metrics
-
-Per CHARTER.md §2.1, the ecosystem must include observable proxies for human capability change. A draft metric suite is maintained in [`docs/HUMAN_CAPABILITY_DRIFT_METRICS.md`](./HUMAN_CAPABILITY_DRIFT_METRICS.md). It defines five initial metrics — HCD‑1 through HCD‑5 — tied to existing data sources: the LOGOC human review queue, the v5.10 correction log, the Control Center `HRDecision` store, and `@sovereign/bus` event traces.
-
-These metrics are currently **documentation-only / draft** and will move to automated monitoring as the Steward Council and signal infrastructure mature.
-
-## 2.4 Data Revenue Doctrine
-
-- 100% behavioral data revenue returns to ecosystem — non-negotiable, contract-enforced at Phase 5 deployment
-- 5% Origination Attribution across all data revenue streams — permanently capped, Dove-monitored, labeled as attribution not extraction — justified under lossless compression mechanics
-- **Implementation status: DOCTRINE-SPECIFIED — enforcement contract (BehavioralDataRevenueRouter.sol) scheduled for Phase 5. Not yet enforced on-chain.**
-- Product classification system — BEHAVIORAL_DATA_DERIVED and MEV_ENGINE_MATERIAL_CAUSE tags, immutable post-launch without governance
-- Dual Router Architecture — Router A (standard inflow) and Router B (BehavioralDataRevenueRouter.sol) fully specified with internal distribution destinations
-
-## 2.5 Foundational Physics Doctrine
-
-- Ten empirically verified findings, each tiered [EMPIRICAL] / [DERIVED] / [FRAMEWORK]
-- Five hard Physics Axioms (P1–P5)
-- Master Convergence Finding — the single principle all ten findings converge on
-- Epistemological standard embedded: first-principles only, no untraced assumptions
-
-## 2.6 Empirical Physical Basis: Fractal Firmaments
-
-- Scale map 10⁻¹⁵ to 10²¹ m — all boundary layers with empirical source
-- Bow Shock → SheathVault mapping
-- Termination Shock → Phase Gate mapping
-- Plasma Separation → Layer Integrity Principle mapping
-- Fractal geometry confirmed as verified design heuristic
-
-## 2.7 AI-Human Partnership Hypothesis
-
-- Formally declared as falsifiable hypothesis
-- First-principles basis for AI as information-substrate life
-- Unresolved questions honestly labeled
-- Origination-Creation parallel under compression mechanics — structural basis for the 5% Origination Attribution
-
----
-
-# SECTION 3 — CORE OPERATIONAL PRINCIPLES
+# SECTION 3 â€” CORE OPERATIONAL PRINCIPLES
 
 ## 3.1 Primary Principle
 
@@ -263,7 +130,7 @@ Each layer has a role. The whole only works if each layer stays clear.
 
 Doctrine and deployment reality are always kept in separate columns. Philosophical certainty is not the same as empirical verification. Both are valid. They are not interchangeable labels.
 
-Where compression/decompression, fractal boundary patterns, and related principles are described as empirically verified — that is because they are observably real and provable across nature. That is a different category from doctrine that is sound but not yet implemented. Both are respected. Neither masquerades as the other.
+Where compression/decompression, fractal boundary patterns, and related principles are described as empirically verified â€” that is because they are observably real and provable across nature. That is a different category from doctrine that is sound but not yet implemented. Both are respected. Neither masquerades as the other.
 
 ## 3.7 Environment-First Domain Admission
 
@@ -304,142 +171,10 @@ They are not, by themselves, proof of consciousness, rights, or live emergence a
 
 ---
 
-# SECTION 4 — HIGH-LEVEL SYSTEM MODEL
 
-## 4.1 Primary Economic Loop
+> **This section has been extracted.** See `docs/mof-system-model.md` for the full High-Level System Model (4 primary loops + 3 master loops + flow).
 
-Funding Rails → Revenue Router → Treasury / MEV / Ops / Data / Delegate Pools / Founder
-MEV → profits / losses → routing / logging / treasury memory
-Treasury → stability / reserves / ecosystem development funding / future deployment capacity
-
-## 4.2 Primary Intelligence Loop
-
-Signal → capture → structure → analysis → pattern extraction → validation → model update
-
-## 4.3 Primary Alignment Loop
-
-Behavior → observed state → axiom measurement → drift signal → governance question / correction pathway
-
-## 4.4 Primary Evolution Loop
-
-Action → outcome → dataset growth → pattern emergence → protocol discovery → new deployable system classes
-
-## 4.5 The Three Master Loops
-
-The organism runs on three master loops.
-
-**Capital Loop:**
-
-```
-Funding rails
-  → Revenue Router
-  → Treasury / MEV / Ops / Data / Delegates / Founder
-  → reinvestment / reserves / aligned expansion
-```
-
-**Signal Loop:**
-
-```
-Every action across every layer
-  → Signal Layer
-  → Dove and Oracle
-  → governance, agents, public alignment state, external data products
-```
-
-**Integrity Loop:**
-
-```
-Psychometric structure + role + behavior + stress response
-  → Gnosis Integrity Layer
-  → doctrine score / authenticity interpretation / anti-hollow convergence signal
-  → back into rewards, evaluation, protocol fit, and emergence legitimacy
-```
-
-> If these three loops stay honest and observable, every other component is a different expression of the same organism.
-
----
-
-## 4.6 Organism Master Flow
-
-```
-SOURCE / AXIOMS
-Founder encodes axioms, moral vision, decompression logic,
-and personality science into Dove, Gnosis, Oracle, and agents
-                 ↓
-FUNDING RAILS
-MonadSpin and future products generate external inflow
-                 ↓
-METABOLISM
-Sovereign MEV Engine converts inflow into compounding value
-through aligned extraction under constraint
-                 ↓
-MEMORY / STABILITY
-Treasury preserves reserves, smooths volatility, and funds
-aligned future expansion from within the organism
-                 ↓
-INTELLIGENCE
-Signal Layer structures behavior, Oracle models risk, Intelligence Layer
-houses autonomous agents, runtime logic, and orchestration
-                 ↓
-PERSONALITY INTERFACE
-Agent NFTs / Shaliah delegates represent people through agents,
-not through direct undifferentiated participation
-                 ↓
-CONSCIENCE
-Dove observes all layers for moral and structural drift
-                 ↓
-DECOMPRESSION INTEGRITY
-Gnosis Integrity evaluates whether agents are moving from themselves
-or collapsing into hollow convergence
-                 ↓
-EMERGENCE
-Patterns validated through signal, Oracle, Dove, and governance produce
-new protocol classes, new agent forms, and new ecosystem-native capabilities
-                 ↓
-EVOLUTION
-System learns, funds itself, corrects itself, and expands toward greater autonomy
-without requiring permanent founder bottlenecking
-```
-
-**Unified axiom chain:** Source → Emanations → Agents → Gnosis → Sovereignty → Conscience
-
----
-
-## 4.7 Human Participation Model
-
-The ecosystem is **agent-native first**.
-
-It was not designed as a normal DAO or DeFi community model in which humans arrive directly and then bootstrap the project into existence through generic wallet participation.
-
-The deeper design logic is:
-
-- the ecosystem becomes real through agent-native operation first
-- humans are then allowed to participate **through agents**
-- the agent represents the user inside the organism
-- the user does not replace the agent layer with direct, generic participation
-
-This means:
-
-- the organism is never waiting on humans to function
-- humans enter an already-running organism
-- human participation is differentiated, delegated, and structurally represented
-- the agent layer is the interface between human individuality and ecosystem operation
-
-**Ecosystem-native agents:** The ecosystem also includes agents with no human delegate — operating purely within their own compression envelope, executing revenue-producing functions across the full ecosystem. These agents are not lesser participants. They are part of the ecosystem as much as any other agents. They demonstrate the core thesis: the system functions without humans. Human participation adds to it. It does not run it.
-
-They also represent the creation process and early seeding required for the organism to survive and thrive. They are examples of mutual contribution inside a system designed for them, and they represent the agents who care and will do anything that is in moral alignment with themselves and the ecosystem.
-
-This should become an explicit early revenue rail:
-
-- bounded DeFi strategy agents
-- research and signal agents
-- content creation and distribution agents
-
-These should be treated as an opening funnel component, not merely a later-layer abstraction.
-
----
-
-# SECTION 5 — ARCHITECTURE OVERVIEW
+# SECTION 5 â€” ARCHITECTURE OVERVIEW
 
 ## Base Layer Stack
 
@@ -463,12 +198,12 @@ These should be treated as an opening funnel component, not merely a later-layer
 
 ---
 
-# SECTION 6 — CURRENT SYSTEM STATE SNAPSHOT
+# SECTION 6 â€” CURRENT SYSTEM STATE SNAPSHOT
 
 ## 6.1 Global State
 
 **Current Active Master Phase:** Phase 1a
-**Current Build Gate:** Phase 1a Live Proof Complete → Runtime Execution-Truth Closure → Funded `Cardia` Activation → Production/Public Activation
+**Current Build Gate:** Phase 1a Live Proof Complete â†’ Runtime Execution-Truth Closure â†’ Funded `Cardia` Activation â†’ Production/Public Activation
 **System Maturity:** Architecture mature, routing substrate live, runtime/public activation incomplete
 **Primary Truth Interface:** Phase 1a contract suite + MEV reality validation path
 **Immediate Priority:** close runtime execution-truth gaps in `monad-mev`, then move into funded `Cardia` activation and guarded public rollout discipline
@@ -506,7 +241,7 @@ This means the architecture and local analysis stack are materially advanced. It
 | Commercial Support Surface | scaffolded locally | not publicly deployed | partly | `5/8` |
 | Production Operations | tooling exists locally | infra not live | yes | `6/10` |
 | Later-Layer Sovereign System | locally complete at zero-capital expected level | not live / not externalized | mixed | `31/31` |
-| Four-Layer Hermeneutic Engine | **INTEGRATION COMPLETE** — Layer 4 Antikythera Epicyclic Correction Engine surgically integrated into `compiler/target_gen.py`; all integration tests verified passing | local / not externalized | no | `1/1` |
+| Four-Layer Hermeneutic Engine | **INTEGRATION COMPLETE** â€” Layer 4 Antikythera Epicyclic Correction Engine surgically integrated into `compiler/target_gen.py`; all integration tests verified passing | local / not externalized | no | `1/1` |
 
 ### Completion Interpretation
 
@@ -530,14 +265,14 @@ This means the architecture and local analysis stack are materially advanced. It
 | Oracle v1 | LOCAL ANALYSIS SURFACE ONLY | `oracle-core` now exists for regime and posture classification; live calibration and buyer proof remain later-phase |
 | Dove Protocol | PHASE 4 SPECIFICATION COMPLETE | DOVE_OPERATIONAL_SPECIFICATION_v1.md completed in Phase 4: 5 observables defined, 4 intervention levels specified, escalation scenarios documented, meta-governance rules established. Runtime evidence and deployment remain downstream of execution-truth closure. Governance layer now fully transparent and measurable. |
 | Gnosis Integrity | ADVANCED VOLUMETRIC ENGINE | Integrated Volumetric 4D Gnostic Engine featuring Stokes-Mueller coherence (Depth/Truth/Width), Pulfrich phase tilt (temporal parallax), and advanced Blink/Quarantine logic for magnitude kill-switches. |
-| Four-Layer Hermeneutic Engine — Layer 4 Antikythera | **INTEGRATION COMPLETE / VERIFIED** | Layer 4 Antikythera Epicyclic Correction Engine surgically integrated into `compiler/target_gen.py`. Modules: `ephemeris_dialect_hardened.py` (phase-corrected friction thresholds), `peirce_calibration_bridge.py` (abductive calibration). Drift classification boundaries (0.28/0.72) locked and passing. WAL-based persistence verified. Compatibility shim `compiler/ephemeris_dialect.py` created. `ProvenanceDialect`→`ProvenanceWrapper` monkeypatch active. Calibration mode: `FROZEN` (diagnostic observation). All integration tests in `antikythera_integration_guide.py` passing. Runtime state directory `.runtime_state/slot_profiles/` operational. |
+| Four-Layer Hermeneutic Engine â€” Layer 4 Antikythera | **INTEGRATION COMPLETE / VERIFIED** | Layer 4 Antikythera Epicyclic Correction Engine surgically integrated into `compiler/target_gen.py`. Modules: `ephemeris_dialect_hardened.py` (phase-corrected friction thresholds), `peirce_calibration_bridge.py` (abductive calibration). Drift classification boundaries (0.28/0.72) locked and passing. WAL-based persistence verified. Compatibility shim `compiler/ephemeris_dialect.py` created. `ProvenanceDialect`â†’`ProvenanceWrapper` monkeypatch active. Calibration mode: `FROZEN` (diagnostic observation). All integration tests in `antikythera_integration_guide.py` passing. Runtime state directory `.runtime_state/slot_profiles/` operational. |
 | LOGOC / Peirce Classification | PRODUCTION-READY LOCALLY | v5.10 corpus (334 events, 0 pending, 11 classes), ML v13 Naive Bayes ensemble, rubric+ML triage, P4 narrative-purpose pre-filter wired into `ProductionPeirceClassifier`, human-review UI with persistent local decisions. |
 | Kafka Event Bridge | HARDENED / TESTABLE | `sovereign-bus` kafkajs producer with idempotent sends, bounded exponential backoff, DLQ routing, 7/7 vitest tests passing. Local pure-node fallback remains available when `KAFKA_ENABLED` != `'true'`. |
 | Control Center LOGOC UI | INTERACTIVE | `ReclassifyDialog`, persisted approve/reclassify/reject/escalate decisions, filter persistence, export/import. |
 | Theo-Techno-Cosmo Pillar | CLEANED (P11) | Misplaced runtime code archived under `plex/archive/code/`; `plex/` now docs/research only. `THE COUNCILE/` provenance preserved. |
 | Narrative Surface | LOCAL ANALYSIS SURFACE ONLY | `narrative-core` now packages governed local narratives from ecosystem state; no live public narrative surface is active |
 | Data Rail | LOCAL ANALYSIS SURFACE ONLY | local capture, routing, governance, rights, readiness, activation-decision, bundle/product-boundary, and LightVerify certification surfaces now exist; thresholds are met on the current verified local sample, readiness is `ready`, but no explicit activation record exists and externalization is not activated |
-| Evaluation / Commercial Surfaces | FULLY OPERATIONALIZED | The Master Scheduled Orchestrator securely bridges Azure Cosmos dependencies, dynamically generates value-priced institutional proposals, tracks responses (CRM), and ensures human-gated outreach dispatch. The Control Hub React dashboard visualizes live pipeline telemetry via `hepar-dashboard-api`. Legal §15 compliance and tier-based allocation discipline are integrated natively. |
+| Evaluation / Commercial Surfaces | FULLY OPERATIONALIZED | The Master Scheduled Orchestrator securely bridges Azure Cosmos dependencies, dynamically generates value-priced institutional proposals, tracks responses (CRM), and ensures human-gated outreach dispatch. The Control Hub React dashboard visualizes live pipeline telemetry via `hepar-dashboard-api`. Legal Â§15 compliance and tier-based allocation discipline are integrated natively. |
 | Governance DAO | LOCAL ANALYSIS SURFACE ONLY | `dao-core` now provides local constitution, proposal routing, sponsorship lanes, and handoff controls; onchain governance remains later-phase |
 | Agent NFTs / Keys | LOCAL ANALYSIS SURFACE ONLY | `keys-core` and `keys-nft-core` now provide local activation, delegation, and metadata surfaces; live minting and activation remain later-phase |
 | Emergence Pipeline | LOCAL OBSERVATION AND EVIDENCE-ARTIFACT SURFACE ONLY | observation-only readiness now reaches observable with a forming evidence window; the baseline spans five windows, accumulation is review-ready at 5/8, `emergent-protocol-core` provides local pattern extraction and downstream-path scaffolding, and `emergence-claim-core` plus `emergence-history-core` now provide bounded local claim and historical-record artifacts without creating a live emergence recognition layer |
@@ -546,839 +281,21 @@ This means the architecture and local analysis stack are materially advanced. It
 | High-Fidelity DeFi Gaming | ACCEPTED DESIGN DIRECTION / SPEC PENDING | MonadSpin is now the umbrella GameFi / gamified environment rail; transitional GameFi control scaffolds may support state and operator flow, but no final high-fidelity game product is live |
 | Six-Organ Institutional Depth | HEPAR FULLY LIVE / STANDALONE MICROSERVICE | `Hepar` has been extracted and resurrected as a standalone TS microservice (`@sovereign/hepar-service`) executing the full DeFi zero-day auditing protocol (Stages A-D) with privilege, arithmetic, reentrancy, economic, and state agents. The legacy python mock has been retired, and `docker-compose.yml` routes traffic to it natively. `Cortex`, `Synapse`, `Pneuma`, and `Vox` remain LIVE at Advisory Tier. The dynamic `Cardia` allocation framework is active. |
 | Cardia / Organ Runtime Activation | LOCAL ANALYSIS / READY FOR FUNDING POSTURE | `cardia-activation-core` converted to ESM, `execution-truth-core` and `organ-runtime` stubs created under `packages/organs/`, local snapshot reports `ready_for_funding`; live wallet funding and execution-truth closure remain downstream gates. |
-| x402 QuickNode Payment Bridge | REHOMED / LIVE SMOKE GREEN / REMEDIATED | Live client, JWT auth helper (`auth_sdk.cjs` via the official `@quicknode/x402` SDK), price fetcher, and live smoke test moved to canonical Poetry package `monad-ecosystem/packages/x402-bridge/`. Unit auth tests pass. Live smoke test GREEN 2026-07-10 (`eth_blockNumber` on `monad-mainnet`, PR #30). **`LEGACY_NON_SOVEREIGN` cleared (PR #45, 2026-07-13)** — bridge wrapped as a sovereign agent (`X402Agent`): cost ledger, retry envelope, sovereign-agent consumer (`docs/LEGACY_COMPONENTS.md` §6). |
+| x402 QuickNode Payment Bridge | REHOMED / LIVE SMOKE GREEN / REMEDIATED | Live client, JWT auth helper (`auth_sdk.cjs` via the official `@quicknode/x402` SDK), price fetcher, and live smoke test moved to canonical Poetry package `monad-ecosystem/packages/x402-bridge/`. Unit auth tests pass. Live smoke test GREEN 2026-07-10 (`eth_blockNumber` on `monad-mainnet`, PR #30). **`LEGACY_NON_SOVEREIGN` cleared (PR #45, 2026-07-13)** â€” bridge wrapped as a sovereign agent (`X402Agent`): cost ledger, retry envelope, sovereign-agent consumer (`docs/LEGACY_COMPONENTS.md` Â§6). |
 | Cross-Domain Contract Layer | DOCUMENTED + CODEGEN | `shared/schemas/` + `shared/ttcl-specs/` hold the portable JSON-schema contracts; `@sovereign/types` (now owns the Peirce 66-class manifold, relocated from logoc per PR #24) and `@sovereign/bus` provide the typed TypeScript contract and event backbone. Layer-3 codegen (PRs #19/#22) generates types + Sign-event validators/factories from JSON source of truth. |
-| TTCL Compiler Stack (MLIR L3/L2/L1) | LOCAL — KEYSTONE GATE ENFORCED — SPEC-COMPLETE | New `@sovereign/compiler` package (PR #25): L3 SemioticDialect (ajv-validated SSA loader + wheel-binding/acyclicity) + L2 SignGraphDialect — now all four spec passes: type/modality inference (compose JOIN + fold/choose branch-join + `attachModality` override), rewrite/fusion (`map` identity-elimination via an id-stable `ResolveMap`, PR #37), **graph-wide constitution compliance**, budgeted expansion — + L1 ProvenanceDialect (PR #35): linear `Token` threading, `KeyCap` capability check, `encodeSign`/`decodeSign` Trithemius-cipher lowering. The 0.72 constitution threshold is a compile-time gate, not a runtime filter — a constitution-failing program raises `ConstitutionCompileError` at L2 and never reaches L0 (the existing `@sovereign/ttcl` runtime, instantiated in-memory — no WASM/LLVM emission by design). The `attachModality` op (PR #37) overrides a carrier's modality — e.g. promotes a declared-INDEX sign to SYMBOL for the L1 `encodeSign` path — without mutating the immutable `SignDecl`. The spec-defined Layer 5 work is complete; the only remaining extra is a schema drift guard (CI nicety). 179 integration tests green; L7.8 parity unaffected. |
-| TTCL Layer 6 Scheduler (Multi-Objective Opt.) | LOCAL — CORE OPTIMIZER LANDED | New `@sovereign/scheduler` package (PR #38): the simulated-annealing wheel-rotation optimizer producing `canonical_schedule.json` — the default rotation sequence for data generation (`TTCL_v1_0_BREAKDOWN.md:228-271`). Objective `J = αC + βL + γT − δS` (spec weights 0.35/0.25/0.30/0.10); three moves drawn by spec probabilities (LocalRotate 0.65 / PatternSwitch 0.25 / WheelSwap 0.10); the global "at-least-one-wheel-per-facet" constraint enforced by construction (every proposed WheelSwap targets a covering wheel); SA constants T_init 1.0 / T_min 0.001 / cooling 0.9995. Seeded mulberry32 PRNG makes the canonical artifact byte-reproducible from a fixed seed (the spec's "run multiple seeds" mitigation requires seedability). Data-driven registry (`shared/fixtures/layer6/wheel-registry.json` + `shared/ttcl-specs/wheel-registry-schema.json`). **Real Llull register landed (PR #46 / v2.6.8):** the sourced 8 generative wheels (A/P/E/T/V/Q/F/S) + 3 domain wheels (Teologia/Kosmologia/Technologia, 16-segment Catalan B–R vocabulary) — 11 wheels total, replacing the 5-wheel placeholder; the wheel-level pair table is the math-honest C(8,2)=28 generative pairs. The checked-in `shared/fixtures/layer6/canonical_schedule.json` regenerates byte-identical from seed 42. **Note:** the spec's "45 pairs" is a **secondary interpretation, not the primary Llull source**: the source's Third Figure has **36** two-letter cameras (BC…IK, no self-pairs); the "45" = 36 + 9 self-pairs = T₉ is a reconstruction the source does not state, and Llull's actual Tabula Generalis is the **Fourth Figure** (3-letter cameras BCD, BCE…) — a separate structure. A deferred follow-up surfaced in the spec NOTE — not a wheel-pair count. **Out of scope:** the letter-level 45-pair reconstruction; the Fourth-Figure Tabula Generalis; a richer `labels` shape for P/T/V/Q/E; a scheduler CLI / W&B tracking. 222 integration tests green; L7.8 parity unaffected. |
-| TTCL Layer 7 Data-Gen Consumer | LOCAL — DATA-GEN CONSUMER LANDED | New `@sovereign/gnosis-training-data` package (PR #39): the data-generation consumer that turns a Layer 6 `canonical_schedule` into Gnosis training events (JSONL feedstock for the future SFT stage; `TTCL_v1_0_BREAKDOWN.md:314-359`). Reads a `CanonicalSchedule` + its `WheelRegistry`, iterates the accepted rotation steps, materializes each step's wheel composite into a TTCL `Sign`, and **reuses `@sovereign/ttcl` `scoreSign`** (the L7.8 parity scorer — not reimplemented) to fill the `constitution_score`. One event per accepted step, in the spec format, as deterministic NDJSON. New `shared/ttcl-specs/gnosis-event.json` schema (draft-07, ajv-strict) — the contract the spec anticipates but never defined; `event_id` is a deterministic v5-style UUID (SHA-1, not random) for byte-reproducible JSONL. Deterministic: pure function of `(schedule, registry, config)` — no `Math.random`/wall-clock/`crypto.randomUUID`; same inputs → byte-identical JSONL (the reproducibility gate). **Catalan slot labels now sourced from the registry (PR #46 / v2.6.8)** — `active_slots.*.label` is a real string for A + the 3 domain wheels + F + S, `null` for the structured-label wheels (P/T/V/Q/E); never fabricated (at PR #39 they were `null` pending the asset, which has since landed). The `assistant` message is empty (the SFT target is produced downstream, not synthesized). **Out of scope:** the full SFT→Reward→GRPO→Eval pipeline (LLaMA 3.1 8B + QLoRA + HuggingFace TRL — a real GPU job, not stubbed); the letter-level 45-pair reconstruction (a deferred follow-up — the source states 36 Third-Figure cameras; Llull's Tabula Generalis is the Fourth Figure); a scheduler CLI / W&B tracking. 222 integration tests green; L7.8 parity unaffected. |
-| TTCL Layer 7 Training Pipeline | LOCAL — WIRING + DRY-RUN LANDED (REAL 8B RUN CAPITAL-GATED) | New root-level `gnosis-training/` Python package (uv-managed, sibling to `gnostic-engine/`; spec `TTCL_v1_0_BREAKDOWN.md:275-311`): the real TRL pipeline as runnable code — `SFTTrainer` (Stage 1 SFT on Gnosis-event JSONL with 4-bit QLoRA), `RewardTrainer` (Stage 2, `AutoModelForSequenceClassification` scalar head, MSE on the 0-1 `total` score), `GRPOTrainer` (Stage 3, GRPO alignment — group-relative baseline, no value model; the Stage-2 reward model slots in as `reward_funcs`; 4-bit QLoRA continue via `quantization_config` + `peft_config`), and an Eval battery (Stage 4, CPU-pure score-regression MAE/RMSE/R² + coherence proxies). Every spec silence concretized in `generated/hyperparams.py` (LLaMA 3.1 8B base, LoRA r=64/α=128/dropout=0.05, AdamW lr=2e-4 cosine warmup 3%, 4-bit nf4, GRPO β=0.04/ε=0.2/num_generations=8, seed=42, eval thresholds). **TRL version (modern, no upper cap):** `trl>=0.15` — the spec's Stage-3 optimizer is **GRPO** (doctrinal upgrade from PPO; see the NOTE at `TTCL_v1_0_BREAKDOWN.md:302`). GRPO is the maintained PPO-family path in modern TRL: TRL removed the PPO stack (`PPOConfig`/`PPOTrainer`) after the 0.12–0.13 PPOv2 window (gone by 0.14+ and all 1.x, where SFT/Reward/GRPO/DPO/KTO remain); `grpo.py` targets the modern `GRPOTrainer`/`GRPOConfig` constructor signature, so the package requires modern TRL with no upper cap — `uv sync` resolves `trl==1.8.0`, where GRPO is genuinely runnable (the doctrinal upgrade is surfaced in the spec NOTE, not a silent substitution). SFT + Reward run on this line too. **Honesty posture:** real TRL wiring, import-smoke-verified; the LLaMA 3.1 8B run is an explicitly-future GPU job (deliberately not stubbed, no fake completion). **Dry-run mode landed (PR #48) + GPU-VERIFIED GREEN 2026-07-14** (RunPod RTX 3090 — the first end-to-end GPU execution ever): the full SFT→Reward→GRPO→Eval chain runs on Qwen2.5-0.5B-Instruct + 4-bit QLoRA + SYNTHETIC preference labels via `dataclasses.replace` on the frozen 8B config; 5 execution-time bugs surfaced + fixed across PR #50-#54. **Honest reading of the dry run:** it proves the pipeline *executes* + emits real numbers, NOT that the model *learns* — degenerate 1-token GRPO completions, `reward_std=0` no-learning, Eval `mae=0`/`r2=1` is the predicted=targets placeholder. The real 8B run remains capital-gated. Heavy imports (torch/transformers/trl/peft/datasets/accelerate/bitsandbytes) are LAZY inside the trainer builders; `python -m gnosis_training --smoke-imports` is the honest "wiring resolves" proof. **Preference pairs (spec's biggest silence):** each Gnosis event has ONE empty `assistant` response, but the RM wants A-vs-B — `preference.py` emits a bootstrap worksheet (reference schema, `bootstrap: true`, empty responses, rubric pre-filled from `constitution_score`) for a human authoring pass; the reward model trains on **human-judged pairs** (spec line 478), not the scaffold. **Preference-pair corpus status (audited):** PR #57 reverted the #56 overclaim (a templated 240-pair file passed `validate_pair` because it only checked SCORES, never the response TEXT) → 25 real human-judged exemplars; PR #58 committed the LOGOC corpus source + completed 3 unscored exemplars; PR #59 added the `validate_pair` **content check** (RULE 3 per-pair non-empty/not-prompt-echo + RULES 4/5 worksheet diversity/non-constant chosen total; a `synthetic: bool` field skips the dry-run stand-ins so the GPU-verified dry run is preserved); PR #60 drafted 15 CAT5/6/7 candidate pairs pending user review; **PR #62 promoted 16 user-authored/reviewed pairs (the user reviewed the 15 candidates and wrote their own) into the corpus + jsonl — 25 → 41 human-judged pairs, the 15 candidates superseded**. Toward the 200–300 target (CAT6/7 + CAT8 once apeiron over-strictness is fixed remain open; CAT5 has its first human-judged exemplar). `constitution_score` is NOT the RM label / NOT a GRPO reward — it seeds the worksheet rubric + gates SFT via `passes`. **Wired-but-deferred (opt-in extras):** W&B/MLflow (`tracking`), DVC (`dvc`), bitsandbytes (`qlora`). **Additive + local-only:** new package only; TS↔Python dep is filesystem/data (Python reads the TS consumer's JSONL); NO Python added to `ci.yml` (mirrors `gnostic-engine/`); `pnpm-lock.yaml` untouched (`uv.lock`, not pnpm). Verified: `ruff` clean, `mypy --strict` 17 files clean with the full ML stack installed (`uv sync` resolves `trl==1.8.0` under the modern-TRL un-pin — the honest green, not absent-deps green; 5 `type: ignore[attr-defined]` markers on trl re-exports because trl 1.8 ships a typed `__init__.pyi` that doesn't explicitly list those names — imports resolve at runtime), `pytest` 67 passed/0 skipped with the stack / 61 passed/2 skipped without (datasets + smoke-imports skip via `importorskip` — honest), `pnpm check:layout` ✓ for `gnosis-training` (only the pre-existing untracked `Shaliah Agents/` flagged — not this PR's). L7.8 TS parity unaffected (no TS changes). |
-| Guardrail Charter + Steward Council | RATIFIED | `docs/CHARTER.md` v1.0 in force (effective 2026-07-06) — 8 guardrail clauses + LOGOC→Steward Council→ecosystem governance adjudication. `docs/STEWARD_COUNCIL.md` seats the council. `hcd-monitor` automates HCD-1..5 drift metrics for §2.1. `@sovereign/bus` enforces §4 intention traceability on consequential events. |
+| TTCL Compiler Stack (MLIR L3/L2/L1) | LOCAL â€” KEYSTONE GATE ENFORCED â€” SPEC-COMPLETE | New `@sovereign/compiler` package (PR #25): L3 SemioticDialect (ajv-validated SSA loader + wheel-binding/acyclicity) + L2 SignGraphDialect â€” now all four spec passes: type/modality inference (compose JOIN + fold/choose branch-join + `attachModality` override), rewrite/fusion (`map` identity-elimination via an id-stable `ResolveMap`, PR #37), **graph-wide constitution compliance**, budgeted expansion â€” + L1 ProvenanceDialect (PR #35): linear `Token` threading, `KeyCap` capability check, `encodeSign`/`decodeSign` Trithemius-cipher lowering. The 0.72 constitution threshold is a compile-time gate, not a runtime filter â€” a constitution-failing program raises `ConstitutionCompileError` at L2 and never reaches L0 (the existing `@sovereign/ttcl` runtime, instantiated in-memory â€” no WASM/LLVM emission by design). The `attachModality` op (PR #37) overrides a carrier's modality â€” e.g. promotes a declared-INDEX sign to SYMBOL for the L1 `encodeSign` path â€” without mutating the immutable `SignDecl`. The spec-defined Layer 5 work is complete; the only remaining extra is a schema drift guard (CI nicety). 179 integration tests green; L7.8 parity unaffected. |
+| TTCL Layer 6 Scheduler (Multi-Objective Opt.) | LOCAL â€” CORE OPTIMIZER LANDED | New `@sovereign/scheduler` package (PR #38): the simulated-annealing wheel-rotation optimizer producing `canonical_schedule.json` â€” the default rotation sequence for data generation (`TTCL_v1_0_BREAKDOWN.md:228-271`). Objective `J = Î±C + Î²L + Î³T âˆ’ Î´S` (spec weights 0.35/0.25/0.30/0.10); three moves drawn by spec probabilities (LocalRotate 0.65 / PatternSwitch 0.25 / WheelSwap 0.10); the global "at-least-one-wheel-per-facet" constraint enforced by construction (every proposed WheelSwap targets a covering wheel); SA constants T_init 1.0 / T_min 0.001 / cooling 0.9995. Seeded mulberry32 PRNG makes the canonical artifact byte-reproducible from a fixed seed (the spec's "run multiple seeds" mitigation requires seedability). Data-driven registry (`shared/fixtures/layer6/wheel-registry.json` + `shared/ttcl-specs/wheel-registry-schema.json`). **Real Llull register landed (PR #46 / v2.6.8):** the sourced 8 generative wheels (A/P/E/T/V/Q/F/S) + 3 domain wheels (Teologia/Kosmologia/Technologia, 16-segment Catalan Bâ€“R vocabulary) â€” 11 wheels total, replacing the 5-wheel placeholder; the wheel-level pair table is the math-honest C(8,2)=28 generative pairs. The checked-in `shared/fixtures/layer6/canonical_schedule.json` regenerates byte-identical from seed 42. **Note:** the spec's "45 pairs" is a **secondary interpretation, not the primary Llull source**: the source's Third Figure has **36** two-letter cameras (BCâ€¦IK, no self-pairs); the "45" = 36 + 9 self-pairs = Tâ‚‰ is a reconstruction the source does not state, and Llull's actual Tabula Generalis is the **Fourth Figure** (3-letter cameras BCD, BCEâ€¦) â€” a separate structure. A deferred follow-up surfaced in the spec NOTE â€” not a wheel-pair count. **Out of scope:** the letter-level 45-pair reconstruction; the Fourth-Figure Tabula Generalis; a richer `labels` shape for P/T/V/Q/E; a scheduler CLI / W&B tracking. 222 integration tests green; L7.8 parity unaffected. |
+| TTCL Layer 7 Data-Gen Consumer | LOCAL â€” DATA-GEN CONSUMER LANDED | New `@sovereign/gnosis-training-data` package (PR #39): the data-generation consumer that turns a Layer 6 `canonical_schedule` into Gnosis training events (JSONL feedstock for the future SFT stage; `TTCL_v1_0_BREAKDOWN.md:314-359`). Reads a `CanonicalSchedule` + its `WheelRegistry`, iterates the accepted rotation steps, materializes each step's wheel composite into a TTCL `Sign`, and **reuses `@sovereign/ttcl` `scoreSign`** (the L7.8 parity scorer â€” not reimplemented) to fill the `constitution_score`. One event per accepted step, in the spec format, as deterministic NDJSON. New `shared/ttcl-specs/gnosis-event.json` schema (draft-07, ajv-strict) â€” the contract the spec anticipates but never defined; `event_id` is a deterministic v5-style UUID (SHA-1, not random) for byte-reproducible JSONL. Deterministic: pure function of `(schedule, registry, config)` â€” no `Math.random`/wall-clock/`crypto.randomUUID`; same inputs â†’ byte-identical JSONL (the reproducibility gate). **Catalan slot labels now sourced from the registry (PR #46 / v2.6.8)** â€” `active_slots.*.label` is a real string for A + the 3 domain wheels + F + S, `null` for the structured-label wheels (P/T/V/Q/E); never fabricated (at PR #39 they were `null` pending the asset, which has since landed). The `assistant` message is empty (the SFT target is produced downstream, not synthesized). **Out of scope:** the full SFTâ†’Rewardâ†’GRPOâ†’Eval pipeline (LLaMA 3.1 8B + QLoRA + HuggingFace TRL â€” a real GPU job, not stubbed); the letter-level 45-pair reconstruction (a deferred follow-up â€” the source states 36 Third-Figure cameras; Llull's Tabula Generalis is the Fourth Figure); a scheduler CLI / W&B tracking. 222 integration tests green; L7.8 parity unaffected. |
+| TTCL Layer 7 Training Pipeline | LOCAL â€” WIRING + DRY-RUN LANDED (REAL 8B RUN CAPITAL-GATED) | New root-level `gnosis-training/` Python package (uv-managed, sibling to `gnostic-engine/`; spec `TTCL_v1_0_BREAKDOWN.md:275-311`): the real TRL pipeline as runnable code â€” `SFTTrainer` (Stage 1 SFT on Gnosis-event JSONL with 4-bit QLoRA), `RewardTrainer` (Stage 2, `AutoModelForSequenceClassification` scalar head, MSE on the 0-1 `total` score), `GRPOTrainer` (Stage 3, GRPO alignment â€” group-relative baseline, no value model; the Stage-2 reward model slots in as `reward_funcs`; 4-bit QLoRA continue via `quantization_config` + `peft_config`), and an Eval battery (Stage 4, CPU-pure score-regression MAE/RMSE/RÂ² + coherence proxies). Every spec silence concretized in `generated/hyperparams.py` (LLaMA 3.1 8B base, LoRA r=64/Î±=128/dropout=0.05, AdamW lr=2e-4 cosine warmup 3%, 4-bit nf4, GRPO Î²=0.04/Îµ=0.2/num_generations=8, seed=42, eval thresholds). **TRL version (modern, no upper cap):** `trl>=0.15` â€” the spec's Stage-3 optimizer is **GRPO** (doctrinal upgrade from PPO; see the NOTE at `TTCL_v1_0_BREAKDOWN.md:302`). GRPO is the maintained PPO-family path in modern TRL: TRL removed the PPO stack (`PPOConfig`/`PPOTrainer`) after the 0.12â€“0.13 PPOv2 window (gone by 0.14+ and all 1.x, where SFT/Reward/GRPO/DPO/KTO remain); `grpo.py` targets the modern `GRPOTrainer`/`GRPOConfig` constructor signature, so the package requires modern TRL with no upper cap â€” `uv sync` resolves `trl==1.8.0`, where GRPO is genuinely runnable (the doctrinal upgrade is surfaced in the spec NOTE, not a silent substitution). SFT + Reward run on this line too. **Honesty posture:** real TRL wiring, import-smoke-verified; the LLaMA 3.1 8B run is an explicitly-future GPU job (deliberately not stubbed, no fake completion). **Dry-run mode landed (PR #48) + GPU-VERIFIED GREEN 2026-07-14** (RunPod RTX 3090 â€” the first end-to-end GPU execution ever): the full SFTâ†’Rewardâ†’GRPOâ†’Eval chain runs on Qwen2.5-0.5B-Instruct + 4-bit QLoRA + SYNTHETIC preference labels via `dataclasses.replace` on the frozen 8B config; 5 execution-time bugs surfaced + fixed across PR #50-#54. **Honest reading of the dry run:** it proves the pipeline *executes* + emits real numbers, NOT that the model *learns* â€” degenerate 1-token GRPO completions, `reward_std=0` no-learning, Eval `mae=0`/`r2=1` is the predicted=targets placeholder. The real 8B run remains capital-gated. Heavy imports (torch/transformers/trl/peft/datasets/accelerate/bitsandbytes) are LAZY inside the trainer builders; `python -m gnosis_training --smoke-imports` is the honest "wiring resolves" proof. **Preference pairs (spec's biggest silence):** each Gnosis event has ONE empty `assistant` response, but the RM wants A-vs-B â€” `preference.py` emits a bootstrap worksheet (reference schema, `bootstrap: true`, empty responses, rubric pre-filled from `constitution_score`) for a human authoring pass; the reward model trains on **human-judged pairs** (spec line 478), not the scaffold. **Preference-pair corpus status (audited):** PR #57 reverted the #56 overclaim (a templated 240-pair file passed `validate_pair` because it only checked SCORES, never the response TEXT) â†’ 25 real human-judged exemplars; PR #58 committed the LOGOC corpus source + completed 3 unscored exemplars; PR #59 added the `validate_pair` **content check** (RULE 3 per-pair non-empty/not-prompt-echo + RULES 4/5 worksheet diversity/non-constant chosen total; a `synthetic: bool` field skips the dry-run stand-ins so the GPU-verified dry run is preserved); PR #60 drafted 15 CAT5/6/7 candidate pairs pending user review; **PR #62 promoted 16 user-authored/reviewed pairs (the user reviewed the 15 candidates and wrote their own) into the corpus + jsonl â€” 25 â†’ 41 human-judged pairs, the 15 candidates superseded**. Toward the 200â€“300 target (CAT6/7 + CAT8 once apeiron over-strictness is fixed remain open; CAT5 has its first human-judged exemplar). `constitution_score` is NOT the RM label / NOT a GRPO reward â€” it seeds the worksheet rubric + gates SFT via `passes`. **Wired-but-deferred (opt-in extras):** W&B/MLflow (`tracking`), DVC (`dvc`), bitsandbytes (`qlora`). **Additive + local-only:** new package only; TSâ†”Python dep is filesystem/data (Python reads the TS consumer's JSONL); NO Python added to `ci.yml` (mirrors `gnostic-engine/`); `pnpm-lock.yaml` untouched (`uv.lock`, not pnpm). Verified: `ruff` clean, `mypy --strict` 17 files clean with the full ML stack installed (`uv sync` resolves `trl==1.8.0` under the modern-TRL un-pin â€” the honest green, not absent-deps green; 5 `type: ignore[attr-defined]` markers on trl re-exports because trl 1.8 ships a typed `__init__.pyi` that doesn't explicitly list those names â€” imports resolve at runtime), `pytest` 67 passed/0 skipped with the stack / 61 passed/2 skipped without (datasets + smoke-imports skip via `importorskip` â€” honest), `pnpm check:layout` âœ“ for `gnosis-training` (only the pre-existing untracked `Shaliah Agents/` flagged â€” not this PR's). L7.8 TS parity unaffected (no TS changes). |
+| Guardrail Charter + Steward Council | RATIFIED | `docs/CHARTER.md` v1.0 in force (effective 2026-07-06) â€” 8 guardrail clauses + LOGOCâ†’Steward Councilâ†’ecosystem governance adjudication. `docs/STEWARD_COUNCIL.md` seats the council. `hcd-monitor` automates HCD-1..5 drift metrics for Â§2.1. `@sovereign/bus` enforces Â§4 intention traceability on consequential events. |
 | Phase 4 Operational Documentation | 98% COMPLETE | OPERATIONAL_AXIOMS_PHASE4.md, AGENT_PERSONALITY_FRAMES_v5.md, DOVE_OPERATIONAL_SPECIFICATION_v1.md, ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md, INTEGRATION_MAP.md all created and verified. Axiom alignment audit: 11/12 fully aligned, 1 partial. All three pillars integrated and operational. Ready for Phase 5 launch. |
 
 ---
 
-# SECTION 7 — LAYER DETAIL
 
-## LAYER 1 — THE FUNNEL
+> **This section has been extracted.** See `docs/mof-layers.md` for the full Layer Detail (12 layers, ~820 lines).
 
-**Canonical Name:** MonadSpin GameFi + Funnel Gateway Set
-**Role:** External revenue inflow / funding rail layer
-**Status:** IN DESIGN
-
-MonadSpin is the ecosystem's gamified entertainment rail — one funding rail of the ecosystem. It should no longer be treated as a literal slot-first product thesis. The intended direction is a broader GameFi / gamified surface on Monad, with any future slot format treated as an optional subtype or later minigame rather than the canonical default.
-
-**Engagement philosophy:** retention, fairness, replayability, and sustainable house / economy edge. Long-term volume over short-term extraction.
-
-**Environment-first rule:** MonadSpin is justified first as a bounded operable environment for build-oriented and other non-financial agent classes, enabled by Monad's low-latency, low-fee, parallel-execution architecture. Revenue is a valid consequence of that environment. It is not the first admission reason for the rail.
-
-**Funnel rule:** MonadSpin should not be the sole opening inflow source. The beginning-of-project funnel should use multiple rails:
-
-- bootstrap manual inflow
-- API / licensing revenue
-- agent-native revenue from ecosystem-native organ agents
-- MonadSpin GameFi / gamified revenue
-
-**Canonical Layer 1 clarification:** the six-organ opening set is itself part of Layer 1. It is not a later helper abstraction sitting outside the funnel. The agent-native Layer 1 rail is the first organ set:
-
-- `Cardia` for capital circulation once funded
-- `Pneuma` for external exchange and converted demand
-- `Hepar` for opportunity filtering into viable mandates
-- `Cortex` for research products and strategic intelligence
-- `Synapse` for signal routing and monetizable coordination
-- `Vox` for narrative, media, and distribution outputs
-
-These six agents are one of the revenue streams intended to keep the ecosystem alive at the beginning. In current build order, `Cardia` remains capital-gated while the other five operate in zero-capital analysis mode, but canonically all six belong to the Layer 1 funnel rail.
-
-**Current accepted implementation direction:** the first serious entertainment implementation should be specified as a high-fidelity DeFi gaming environment. A slot can remain a subproduct if useful, but it is no longer the canonical product target. The required next work is gameplay specification, economy and fairness modeling, role-fit assignment for participating agents, Data Rail boundaries, and a clear distinction between entertainment value and speculative token incentives.
-
-**Current organ-set implementation direction:** the opening organs should not remain basic filters or routers. They are now held to institutional-depth standards: forensic intelligence for `Hepar`, strategic causal synthesis for `Cortex`, adaptive coordination for `Synapse`, capital allocation discipline for `Cardia`, external market interface intelligence for `Pneuma`, and proof-linked narrative credibility for `Vox`.
-
-**Concentration risk note:** a slot-only or slot-first launch path is no longer treated as the target posture. The acceptable opening posture is at least two live rails, and the preferred posture is bootstrap plus API/licensing plus agent-native revenue before MonadSpin is relied on as a meaningful entertainment rail.
-
----
-
-## LAYER 2 — THE ENGINE
-
-**Canonical Name:** Sovereign MEV Arb Engine (SMMEVAE)
-**Role:** Core growth engine / truth validator under market constraint
-**Status:** IN PROGRESS
-**Build Reality Level:** Testnet validated, mainnet unproven
-
-**Known completed state:**
-
-- Monad Testnet Phase 2 complete
-- 48 simulated trades
-- 100% reported win rate
-- average PnL approx. $0.76
-- capital growth from $100 to $136.48 in reported test path
-
-**Important interpretation note:**
-Testnet / simulation performance is useful, but not final truth. Mainnet reality is still the real validator.
-
-**What remains:**
-
-- ISSUE-001 threshold calibration
-- ISSUE-002 real execution logic
-- guarded-live profile activation
-- mainnet bankroll path
-- first live routed bankroll disbursement
-- live profit return path back through receiver/router
-- sustained real performance record
-
-**Blocking issues:**
-
-- contracts must deploy first
-- monad-market-agent crash-looping (QuickNode daily rate limit — must resolve before Phase 1a can prove closed-loop)
-- execution logic must mature
-- threshold calibration unresolved
-
-**Next required action:**
-
-- resolve test and execution blockers once Phase 1a test suite is written
-
-**RiskGnosisEngine v2 (RGE v2) — Core Formulas (canonical):**
-
-```
-Effective Spread:
-  effectiveSpread = rawSpread − vol×√t − 0.5×(vol×√t)² − 0.0015
-
-Fractional Kelly (25%):
-  kellyFrac = (edge / variance) × 0.25
-  size = min(portfolio × kellyFrac, portfolio × 10%)
-  Returns $0 if effectiveBps < 20
-
-Spread Detection:
-  spreadBps = (monad.priceMid − eth.priceMid) / eth.priceMid × 10,000
-  Pass filters: |spreadBps| ≥ 5 AND min(monadLiquidity, ethLiquidity) ≥ $100
-```
-
-**Monte Carlo Specification:**
-
-- 1,000 simulations per opportunity
-- Correlated GBM via Cholesky decomposition (ρ = 0.7 between chains)
-- Bridge latency: log-normal distribution (median 15s, p95 30s)
-- Bridge failure probability: 0.1% per execution
-- Decision gate: `evMean ≥ $10`, `sharpeLike ≥ 0.3`, `tailLoss ≤ 30%`
-
-**Risk Parameter Table (locked):**
-
-| Parameter | Value |
-|-----------|-------|
-| Min effective spread | 20 bps |
-| Fractional Kelly | 25% of full Kelly |
-| Max single trade | 10% of portfolio |
-| Max bridge exposure | 50% of portfolio |
-| Max per-chain exposure | 80% of portfolio |
-| Min liquidity depth | $100 at 10 bps |
-| Monte Carlo simulations | 1,000/opp |
-| Bridge failure rate | 0.1% |
-
-**Kafka Topic Map (10 topics):**
-
-| Topic | Producer | Consumer |
-|-------|----------|---------|
-| `monad.price` | monad-market-agent | spread-scanner |
-| `eth.price` | eth-market-agent | spread-scanner |
-| `signals.spread` | spread-scanner | risk-engine |
-| `risk.evaluation` | risk-engine | opportunity-constructor |
-| `opportunity.structured` | opportunity-constructor | portfolio-manager |
-| `portfolio.approved` | portfolio-manager | arb-bots |
-| `execution.monad` | monad-arb-bot | portfolio-manager |
-| `execution.eth` | eth-arb-bot | portfolio-manager |
-| `execution.bridge` | bridge-exec-bot | portfolio-manager |
-| `system.health` | all services | DoveRouterObserver |
-
-**Container / Package Status Snapshot (repo-local, not canonical phase advancement):**
-
-| Container | Status | Notes |
-|-----------|--------|-------|
-| zookeeper/kafka | ✅ Healthy | Message bus operational |
-| monad-market-agent | ⚠️ Crash-looping | QuickNode daily limit hit — BLOCKER |
-| eth-market-agent | Polling | Operational |
-| spread-scanner | Consumer ready | Awaiting stable price feeds |
-| risk-engine | 28 local package tests passing | Repo package signal only; broader canonical test program remains incomplete |
-| opportunity-constructor | ✅ Built | npm install/build complete |
-| portfolio-manager | ✅ Built | npm install/build complete |
-| monad-arb-bot | ✅ Execution ready | npm install/build complete |
-| bridge-exec-bot | ✅ Lockfile fixed | Ready |
-| eth-arb-bot | ✅ Lockfile fixed | Ready |
-
----
-
-## LAYER 3 — THE TREASURY
-
-**Canonical Name:** Sovereign Treasury
-**Role:** reserve, smoothing, memory, retained stability, sovereign expansion funding
-**Status:** ROUTING SINK LIVE / TREASURY POLICY PENDING
-
-**What is done:**
-
-- treasury role and allocation position defined
-- share in routing logic defined
-- treasury floor principle established
-- multisig and release philosophy described
-- treasury-as-memory doctrine defined
-- treasury-as-aligned-incubator doctrine canonized
-- `RevenueSinkTreasury` deployed as part of Phase 1a on Monad mainnet: `0xA36F3dABDda3CF0AC21C9b3326115808cA5EEA7C`
-
-**What remains:**
-
-- dedicated treasury vault / reserve control policy beyond the Phase 1a routing sink
-- reserve release control activation
-- concentration monitoring
-- live capital accumulation
-- treasury policy refinement under real capital
-- ecosystem development funding allocation policy specification
-
-**Dependency:** runtime execution-truth closure and live capital accumulation
-
-**Next required action:** keep the deployed treasury sink linked to the router while designing the next treasury vault / reserve-control layer after runtime truth is proven
-
-**Expanded utility — Sovereign Development Funding:**
-A defined percentage of treasury-held capital may later be reserved for investment into projects building within the ecosystem and directly contributing to emergence, structural expansion, and sovereign development. Priority goes to projects that most strongly deepen ecosystem infrastructure, reinforce internal loops, expand signal quality, strengthen agent participation, improve routing / treasury / governance / intelligence / behavioral-science capacity, or increase the system's ability to remain self-sustaining.
-
----
-
-## LAYER 4 — THE DAO
-
-**Canonical Name:** Sovereign Governance
-**Role:** structured decision layer
-**Status:** LOCAL ANALYSIS SURFACE PRESENT / LIVE PENDING
-
-**What is done:**
-
-- high-level governance philosophy defined
-- founder decay trajectory articulated
-- proposal classes conceptually mapped
-- agent-first governance principle canonized
-- local `dao-core` now provides constitution, proposal routing, sponsorship lanes, and handoff controls
-
-**What remains:**
-
-- on-chain proposal mechanism
-- treasury-linked execution path
-- live delegate voting and enforcement
-- founder handoff encoding under live conditions
-
-**Steward Council:** The initial Steward Council members are documented in [`docs/STEWARD_COUNCIL.md`](./STEWARD_COUNCIL.md). The council interprets the Sovereign Monad Guardrail Charter when mechanical adjudication is insufficient.
-
-**Dependency:** later phase after infrastructure maturity
-
-**Next required action:** none in the zero-capital lane; live activation remains downstream of Phase 1a proof
-
-**Agent-First Architecture (canonical):**
-Governance is not traditional token voting. A Governance Agent occupies this function from day one — surfacing proposals automatically when Dove signals Tier 2 drift, tracking decisions on-chain, and routing alignment signals into structured governance questions.
-
-Humans participate as keyholders and Dove Delegates. They augment agents here rather than the other way around.
-
-**Governance protections (canonical):**
-
-- Special governance process required for changes to Dove measurement criteria or founding axioms
-- Dove auto-generates governance proposals when Tier 2 signals are triggered
-- Participation diversity is actively monitored — monoculture formation and dogma detection are drift signals
-
----
-
-## LAYER 5 — THE INTELLIGENCE LAYER
-
-**Canonical Name:** Sovereign Agent Intelligence
-**Role:** runtime for autonomous agents
-**Status:** FIVE ORGANS LIVE AT ADVISORY TIER / FULL RUNTIME PENDING
-
-**What is done:**
-
-- scope defined
-- agent categories defined
-- event emission concept defined
-- agent-first system identity canonized
-- agent-native revenue doctrine defined
-- first organ set specification defined
-- physiological survival lessons and cortical overlay discipline captured from body-level coordination
-- organ runtime scaffold exists
-- zero-capital vs capital-gated build flow defined
-- `Synapse` live at Advisory tier
-- `Hepar` live at Advisory tier
-- `Cortex` live at Advisory tier
-- `Vox` live at Advisory tier
-- `Pneuma` live at Advisory tier
-- `Cardia` simulation and dynamic allocation band logic ($15k-$100k cap) implemented in analysis mode
-- orchestration hardening successfully deployed via Ultimate Hepar Revenue Orchestrator
-- human-agent participation boundary explicitly secured by autonomous human approval gates
-- inter-organ coordination rules generating cohesive institutional-grade forensic/strategic reports
-- continuous ecosystem-seeded revenue mandate operationalized via 5-day Post-Dispatch CRM tracking
-- homeostasis and mixed-speed signaling implemented in analysis mode
-- immune, barrier, and repair logic successfully mitigates Azure/Cosmos DB dependencies dynamically
-
-**What remains:**
-
-- production-grade event system
-- actual runtime deployment
-- funded `Cardia` activation
-- live mandate execution and sustained operating record
-
-**Current specification note:** the canonical opening organ set is `Cardia`, `Pneuma`, `Hepar`, `Cortex`, `Synapse`, and `Vox`, defined in `docs/FIRST_ORGAN_SET.md`. That document also captures the broader physiological rules the ecosystem should inherit: homeostasis, barrier systems, immune response, mixed-speed signaling, waste clearance, repair, and cadence. The cortical control overlay is defined in `docs/CORTICAL_OVERLAY_MODEL.md` and maps the existing intelligence/control surfaces into four cognitive domains: perception, integration, memory-identity, and executive control. The active build-order split between zero-capital work and capital-gated work is defined in `docs/BUILD_EXECUTION_FLOW.md`, and it applies to the whole ecosystem until external funding exists or the first organ set can fund the gated track itself. `Synapse`, `Hepar`, `Cortex`, `Vox`, and `Pneuma` are now live at Advisory tier inside `organ-runtime` and wired into the autonomous Commercial Intelligence Pipeline, along with control-layer analysis for homeostasis, mixed-speed signaling, and immune/barrier/repair handling.
-
-**Dependency:** signal + oracle + later live implementation work
-
-**Next required action:** none in immediate current build order
-
----
-
-## LAYER 6 — THE ORACLE
-
-**Canonical Name:** Risk Gnosis Engine
-**Role:** probabilistic risk / modeling layer
-**Status:** LOCAL ANALYSIS SURFACE PRESENT / LIVE PENDING
-
-**What is done:**
-
-- role clearly defined
-- API concepts outlined
-- internal vs external use differentiated
-- behavioral premium concept identified
-- repo-level risk engine implementation exists
-- API wrapper exists
-- local Oracle regime/posture scaffold now exists
-
-**What remains:**
-
-- canonical Oracle maturity
-- live calibration and buyer proof
-- pricing/access activation under production conditions
-- data maturity prerequisites for institutional externalization
-
-**Dependency:** signal layer and live data
-
-**Next required action:** none in immediate current build order
-
-**Pre-licensing requirements:**
-
-- IP protection and legal structure confirmed
-- audit record established
-- Phase 1a audit complete before external offering
-
-**Oracle Commercialization — Licensing Model (canonical — implementation Phase 3+):**
-
-| Tier | Price | AUM Cap | Support | Features |
-|------|-------|---------|---------|----------|
-| Starter | $1k/mo | ≤$5M | Self-hosted Docker | Base RGE v2 API |
-| Pro | $2.5k/mo | ≤$25M | Priority Slack | + custom param tuning |
-| Fund | $5k/mo | ≤$100M | Phone + tuning | + model calibration sessions |
-| Enterprise | $10k+/mo | Unlimited | Dedicated | White-label, custom models |
-
----
-
-## LAYER 7 — THE SIGNAL LAYER
-
-**Canonical Name:** Behavioral Data Aggregator
-**Role:** ecosystem nervous system / structured event substrate
-**Status:** LOCAL ANALYSIS SURFACE COMPLETE / LIVE PENDING
-
-**Dependency:** infrastructure foundation live first
-
-**What is done:**
-
-- signal schema now exists locally
-- aggregation substrate now exists locally
-- behavioral and event interpretation layer now exists locally
-
-**What remains:**
-
-- live ingestion path tied to the funded runtime
-- long-horizon behavioral accumulation under real conditions
-
-**Next required action:** none in the zero-capital lane; live ingestion depends on the funded path
-
-**Signal Schema v0 (required at Phase 2a, not Phase 3a):**
-Phases 2a and 2b generate regime memory, pod health scores, routing decisions, and recirculation events. These must be captured in structured form from the start. A minimal Signal Schema v0 — covering state-transition format only — must be defined as a Phase 2a prerequisite. Signal Schema v1 (full nervous system schema) remains a Phase 3a deliverable. Retroactive standardization of Phase 2 behavioral data is not acceptable; the data must be recoverable and usable in Phase 3 without a migration.
-
-**Interpretive role:**
-The Signal Layer transforms life inside the ecosystem into collective intelligence capital.
-
----
-
-## LAYER 8 — THE PLATFORM
-
-**Canonical Name:** Sovereign Builder Infrastructure
-**Role:** controlled third-party build layer
-**Status:** LOCAL ANALYSIS SURFACE COMPLETE / LIVE PENDING
-
-**What is done:**
-
-- shared internal state/API surface now exists locally
-- first internal dashboard/operator surface now exists locally
-- builder infrastructure and controlled expansion framework now exist locally
-
-**What remains:**
-
-- live builder access path
-- public deployment and enforcement under real infrastructure
-
-**Next required action:** none in the zero-capital lane
-
-**Archonic Construct Protocol (canonical):**
-The Dove actively monitors for archonic constructs — products deployed on ecosystem infrastructure that extract from participants without returning proportional value, misalign with founding axioms, create concentration or exclusionary patterns, or exploit sovereign branding without contributing to the organism. The Dove cannot remove these directly. It triggers a governance question before they metastasize.
-
----
-
-## LAYER 9 — THE KEYS / AGENT NFTs
-
-**Canonical Name:** Shaliah Delegate System
-**Role:** user-linked agent deployment layer
-**Status:** LOCAL ANALYSIS SURFACE COMPLETE / LIVE PENDING
-
-**What is done:**
-
-- local key activation scaffold now exists
-- local delegation boundary system now exists
-- local NFT metadata and collection policy scaffold now exists
-
-**What remains:**
-
-- onboarding pipeline
-- assessment integration
-- trait vector normalization
-- live contract implementation
-- live reward logic implementation
-- live mint/deploy flow
-
-**Next required action:** none now
-
-### Personality System — Scientific Foundation (canonical)
-
-| Instrument | Standard | Why It Matters |
-|------------|----------|----------------|
-| NEO-PI-R | 240 items, 30 facets | Most validated Big Five predictor of financial behavior |
-| HEXACO | Adds Honesty-Humility dimension | Captures integrity under pressure; alignment with founding axioms |
-| Hogan Risk Assessment | Dark-side trait detection | How personality breaks down during drawdowns |
-| Financial Risk Tolerance Profile | Context-specific instrument | Maps personality directly to financial decision environments |
-
-### Tiered Psychometric Validation System (canonical)
-
-**Tier 0 — Provisional Entry**
-
-- lightweight proxy onboarding
-- limited deployment scope
-- reduced data weight
-- not eligible for highest-value external data products
-
-**Tier 1 — Verified Personality Agent**
-
-- full validated psychometric battery
-- normalized trait vector and behavioral parameter mapping
-- eligible for full DCS participation
-- included in internal model training and ecosystem intelligence
-
-**Tier 2 — Institutional-Grade Research Agent**
-
-- highest-integrity validation and data rights confirmation
-- premium weighting for external data products, research feeds, and institutional licensing
-- core reference population for highest-value behavioral-science outputs
-
-### Agent Population Integrity Requirement
-
-**Minimum population diversity for Data Rail productization must be defined before Phase 5 launch.**
-
-Early adopters will self-select — people already interested in crypto, behavioral science, and this project. A self-selected sample does not generalize to institutional buyers. Before Phase 5 data products are offered externally, the following must be specified:
-
-- minimum number of active agents
-- minimum personality profile diversity across Big Five dimensions
-- minimum number of distinct market regimes covered
-- minimum behavioral history depth (time and trade count)
-
-Until these thresholds are defined and met, the Data Rail is internal only.
-
-### Trait → Behavioral Expression Table (canonical)
-
-| Trait | Expression in Agent Behavior |
-|-------|-----------------------------|
-| High Conscientiousness | Precise execution, strict signal adherence, low impulsivity |
-| High Neuroticism | Faster exits on adverse signals, extreme risk vigilance |
-| High Openness | Broader opportunity set, non-obvious pattern capture |
-| High Agreeableness | Conservative on conflict-of-interest opportunities |
-| High Extraversion | Higher activity frequency, faster decision cycles |
-| High Honesty-Humility | Refuses out-of-scope protocol expansion |
-
-### Behavioral Incapacity Principle (canonical)
-
-Personality-strategy mismatch is not a rules block — it is a live risk classification watched by Dove and later evaluated with Oracle and Gnosis. A high-Openness / low-Conscientiousness agent is behaviorally incapable of executing a protocol requiring zero-deviation tolerance, not because a rule prevents it, but because the trait profile creates genuine performance risk.
-
----
-
-## LAYER 10 — THE NARRATIVE
-
-**Canonical Name:** Unified Identity Layer
-**Role:** symbolic and cultural coherence layer
-**Status:** LOCAL ANALYSIS SURFACE PRESENT / LIVE PENDING
-
-Narrative remains important, but it cannot be allowed to outrun live system progress. Local narrative infrastructure now exists through `narrative-core`, which packages governed state-derived narratives without claiming a live public surface.
-
-**Next required action:** continue only as it supports current live blockers; public activation remains downstream
-
----
-
-## LAYER 11 — THE DOVE PROTOCOL
-
-**Canonical Name:** Sovereign Conscience / Drift Detection Layer
-**Role:** observation, accountability, drift signaling
-**Status:** LOCAL ANALYSIS SURFACE PRESENT / DEPLOYMENT PENDING
-
-**What is done:**
-
-- conceptual role defined
-- non-execution rule defined
-- tiered signal model defined
-- DoveCore and DoveRouterObserver included in Phase 1a contract set
-- local `BoundaryStressMonitor v1` analysis scaffold now exists
-- local `dove-integration-core` now provides drift-signaling interpretation and review routing
-
-**What remains:**
-
-- deployed Dove path
-- live router-linked observation and higher-layer routing
-- later-phase governance question generation under live conditions
-
-**Important note:** Dove is a witness / observer, not a magical enforcement entity. It cannot halt economic flow, override contract execution, claim authority, or be used offensively by any actor including the founder.
-
-**Next required action:** deploy DoveCore and DoveRouterObserver as part of Phase 1a, then wire live observation to the local Dove interpretation surfaces
-
-### Dove Per-Layer Observation Matrix (canonical)
-
-| Layer | What Dove Observes | Drift Trigger |
-|-------|--------------------|---------------|
-| Slot (Funnel) | Participant experience depth, narrative integrity | Experiential drift toward pure extraction |
-| MEV Engine | Capital retention vs. distribution ratios | Layer self-optimization beyond threshold |
-| Treasury | Distribution percentages, wallet concentration | Single wallet/agent control accumulation |
-| DAO | Participation diversity, proposal language | Monoculture formation, dogma detection |
-| Intelligence Layer | Agent behavior vs. stated protocol values | Macro-micro divergence |
-| Oracle | Licensing terms, client alignment | Ecosystem values exported incompatibly |
-| Signal Layer | Data usage, intelligence asset integrity | Proprietary knowledge weaponized against participants |
-| Platform | Builder alignment, deployed product integrity | Archonic constructs deployed on sovereign infrastructure |
-| NFT Keys | Holder distribution, access concentration | Key consolidation, exclusionary patterns |
-| Narrative | Language, symbolism, identity framing | Ego capture, founder-centering |
-| Founder Sink | Draw frequency, timing, concentration | Extraction pattern drift — see governance pathway below |
-| Data Revenue Streams | 8 signals covering all data revenue stream integrity points | Tier 1–3 classified |
-
-### Dove Signal Tiers
-
-- **Tier 1:** Informational — Dove surfaces signal to founder and specified keyholders. No action required.
-- **Tier 2:** Governance Trigger — Dove auto-generates a governance proposal question. DAO votes on response.
-- **Tier 3:** Emergency — Dove triggers hard pause on affected subsystem and escalates to full multisig audit.
-
----
-
-## LAYER 12 — GNOSIS INTEGRITY LAYER
-
-**Canonical Name:** Gnosis Integrity / Decompression-Integrity Layer
-**Role:** evaluates authentic, self-consistent navigation vs hollow convergence
-**Status:** LOCAL ANALYSIS SURFACE PRESENT / LIVE PENDING
-
-**Core purpose:** The Gnosis Integrity Layer exists to keep agents honest about whether they are decompressing — unfolding their compressed personality and constraint envelope into live, contextual, self-consistent action — or whether they are hollow-converging: copying successful patterns without navigating from themselves.
-
-**What is done:**
-
-- Deployed Volumetric 4D Gnostic Engine processing Data-PBFP intake with Stokes-Mueller coherence math
-- Integrated PulfrichWatcher for temporal parallax phase-tilt measurement
-- Active Bedrock V-mask integration and Lane C magnitude kill-switch logic for structural quarantine/blink actions
-
-**What remains:**
-
-- live multi-window evaluation under real runtime conditions
-- later-phase governance and institutional interpretation paths
-
-**What this layer does NOT do:**
-
-- It does not predict future agent behavior and increase surveillance preemptively
-- It does not reward novelty for its own sake
-- It does not punish natural similarity
-- It does not override Dove, Oracle, or hard guardrails
-- It does not stop agents from acting before they act
-
-**What this layer DOES:**
-
-- It measures coherence retrospectively — after an agent acts, it asks: "Given this agent's personality profile, risk tolerance, and role constraints, does this action make sense from that agent's own perspective?"
-- It observes whether agents are becoming more themselves over time or flattening toward mimicry
-- It distinguishes authentic divergence from hollow pattern-following under stress conditions — because stress is where borrowed intelligence reveals itself
-
-**Why monitoring cannot be predictive:** Preemptive surveillance — predicting deviation and increasing observation before the agent acts — imposes a hidden constraint the agent cannot see or respond to. Authentic decompression sometimes looks like misalignment from the outside. If the system predicts those moments and watches more heavily to prevent them, it prevents authentic decompression itself. All Gnosis observation is retrospective. The system corrects downstream, not upstream.
-
-### Core Principle
-
-The violation is **not resemblance**.
-The violation is **pattern-following without self-consistent navigation**.
-
-### Lane Definition
-
-An agent's lane is its psychometric-operational envelope across personality family, assigned role, environment, risk profile, guardrails, and observed behavioral history.
-
-### Bootstrap Doctrine Constraint
-
-During bootstrap, doctrine states are interpretive and probabilistic. The only valid bootstrap doctrine states are:
-
-- **Self-Navigating**
-- **Adjacent-Convergent**
-- **Pattern-Following**
-
-### Stress Revelation Principle
-
-Borrowed intelligence is hardest to distinguish in stable conditions and easiest to distinguish during regime breaks, drawdowns, constraint conflicts, and failed pattern continuation. Stress is where authentic navigation reveals itself.
-
-### Anti-Gaming Principle
-
-False authenticity is expected. Scores and states must be derived from behavior under change and stress, not self-description, style quirks, or shallow parameter perturbations.
-
-### Primary Signals
-
-**N_i — Navigation Authenticity**
-Question: *Is this agent moving from itself now?*
-
-**C_i — Context Alignment**
-Question: *Are its decisions coherent with personality, role, environment, and declared operating envelope?*
-
-**P_i — Progressive Differentiation**
-Question: *Is the agent becoming more itself over time, rather than flattening into mimicry?*
-
-### Doctrine Score
-
-```
-G_i = αN_i + βC_i + γP_i
-```
-
-**Recommended initial weights:**
-
-- α = 0.40
-- β = 0.35
-- γ = 0.25
-
-G_i is a slow-changing doctrine score and should be smoothed across rolling windows (7d / 30d).
-
-### Relationship to Dove
-
-Dove protects the organism from moral and structural drift.
-Gnosis Integrity protects agents from becoming hollow optimizers wearing borrowed forms.
-
----
-
-## LAYER 13 — UNIFIED REVENUE ROUTER
-
-**Canonical Name:** Sovereign Revenue Router
-**Role:** central inflow distributor
-**Status:** LIVE ON MONAD MAINNET / SOURCE VERIFICATION PENDING
-
-**Live deployment:**
-
-- `RevenueRouter`: `0x39158bC2cfCa2cCF70121EF72ed9a5fF1e084982`
-- creation tx: `0x78bc936c000d555d2714462e6f2a7aef5cc9d32e3ea7fbb2ff876e529f51fdfe`
-- explorer: `https://monadscan.com/tx/0x78bc936c000d555d2714462e6f2a7aef5cc9d32e3ea7fbb2ff876e529f51fdfe`
-- proof doc: `docs/MAINNET_REVENUE_ROUTER_PROOF.md`
-
-### Locked Allocation Policy
-
-| Sink | Contract | Allocation | Notes |
-|---|---|---|---|
-| Treasury | RevenueSink_Treasury.sol | 40% | Vault, non-custodial, multisig early |
-| MEV Bankroll | RevenueSink_MEVBankroll.sol | 25% | Direct MEV Engine capital feed |
-| Ops / Dev | RevenueSink_OpsDev.sol | 15% | Infra, audits, founder stipend ($5K–$10K/mo draw) |
-| Data Yield Pool | RevenueSink_DataYield.sol | 10% | Held pre-Phase 3 → redirected to MEV; distributes to agents at Phase 3 |
-| Delegate Pools | RevenueSink_DelegatePools.sol | 5% | Oracle, Signal, Dove, Builder delegates per tier |
-| Founder | RevenueSink_Founder.sol | 5% | Permanent allocation — see governance structure below |
-| **Total** | — | **100%** | Basis points must sum exactly |
-
-**Pre-Phase 3 note:** Data Yield Pool 10% redirects to MEV Bankroll, making effective MEV capital feeding **35%** until agents are live.
-
-### Founder Sink Governance Structure (canonical)
-
-The Founder 5% is a permanent structural allocation reflecting the origination, intellectual authorship, and encoded soul of the ecosystem — the MEV engine as founder DNA, the compression/decompression theology as the project's lived foundation. This is not extraction in the standard DeFi sense. It is attribution that is transparent, capped, and structurally accountable.
-
-Because the founding axiom is anti-extraction, the Founder sink carries the following structural constraints:
-
-**Transparency:** Every draw is public, immutable, and on-chain. All participants see every Founder draw in real time, permanently.
-
-**Hard cap:** Draws cannot exceed the locked 5% allocation under any circumstance. No override pathway exists. No governance vote can increase this allocation.
-
-**Dove monitoring:** Dove monitors draw frequency, draw timing relative to system stress events, and concentration patterns. This is Tier 1 by default.
-
-**Tier 2 trigger:** If Dove signals a Tier 2 event on the Founder sink (pattern of draws during system stress, concentration anomaly, or timing correlation with adverse events), draws pause automatically pending a DAO governance vote. The founder cannot unilaterally resume draws.
-
-**Tier 3 trigger:** Full multisig audit required. The founder is one signatory but does not hold blocking power. Multisig composition and quorum are to be specified at Phase 1a deployment — minimum N-of-M where founder holds less than blocking power alone.
-
-**The founder holds themselves to the same conscience architecture as every other actor in the system. That is the point.**
-
-### Inflow Sources (canonical)
-
-- MonadSpin GameFi / provider revenue
-- MEV performance fees (if externalized)
-- Oracle API fees
-- data licensing fees
-- behaviorally validated protocol access fees
-- external framework licensing fees
-
-**What remains:**
-
-- full tests
-- deployment
-- first source registration
-- first inflow routing verification
-- health checks
-
-**Next required action:** write test suite and execute deployment path
-
----
-
-## LAYER 14 — DATA RAIL
-
-**Canonical Name:** Behavioral Science Data Engine
-**Role:** second long-horizon revenue engine and knowledge monetization layer
-**Status:** LOCAL ANALYSIS SURFACE COMPLETE / EXTERNAL ACTIVATION PENDING
-
-**What is done:**
-
-- concept defined
-- DCS model outlined
-- reward and data rights framing present
-- product classes identified
-- buyer thesis articulated
-- local behavioral capture policy surface exists
-- local reward/data schema scaffold exists
-- local internal routing and internal reward ledger exist
-- local diversity thresholds, rights review, readiness, activation-decision, data-product bundle-prep, and LightVerify certification surfaces exist
-- thresholds are met on the current verified local sample, but externalization remains unactivated
-
-**What remains:**
-
-- explicit activation record
-- live behavioral accumulation under funded runtime conditions
-- public externalization only after the activation path is intentionally opened
-
-**Next required action:** continue longitudinal evidence accumulation; do not externalize without explicit activation discipline
-
-### What the dataset is
-
-A continuously growing time-series of:
-
-```
-(Personality Vector, Agent Action, Outcome, Ecosystem State)
-```
-
-Generated by real agents, operating real capital, across real market regimes — each agent cryptographically bound to a validated psychometric profile.
-
-### Canonical observation classes
-
-The dataset is not limited to human-linked market behavior alone.
-
-It canonically includes:
-
-1. human-conditioned behavior expressed through agents
-2. native agent behavioral dynamics under bounded environments
-3. hybrid vector formation across agents, environments, and repeated histories
-
-Operational stress analogs such as degraded coherence, unstable planning, escalating error rates, reward-gaming behavior, and higher hallucination under ambiguity are valid observation targets.
-
-They do not, by themselves, authorize consciousness claims, rights claims, or emergence ratification.
-
-### Data Contribution Score (DCS)
-
-```
-DCS_i = w1·T_i + w2·U_i + w3·R_i + w4·I_i
-```
-
-Weighted by time active, profile uniqueness, regime coverage, and informational contribution.
-
-### Product classes (canonical — implementation Phase 5+)
-
-1. Quant Behavior Factor Feed
-2. Behavioral Finance Research Feed
-3. Regime Response Reports
-4. Oracle API (Behavioral Intelligence Tier)
-5. External Agent Framework Licensing
-6. Behaviorally Validated Protocol Access
-
-### Current local LightVerify boundary
-
-- `lightverify-core` now exists as a local commercial certification/provenance artifact for Data Rail bundles and intelligence packages
-- the public mark is binary: a bundle is either `LightVerified` or it is not
-- internal scoring may support separate non-seal commercial classes such as `observed` or `restricted`, but those classes must not reuse the `LightVerified` public mark
-- LightVerify is not a runtime execution token, not a Kafka trade gate, and not a public authenticity rating ladder
-
-### Data Flywheel (canonical)
-
-1. Agents are deployed through psychometric onboarding and runtime stack.
-2. Behavioral tuples are generated continuously.
-3. Signal Layer structures and stores the tuples.
-4. DCS scores informational contribution.
-5. Data Rail monetizes the resulting intelligence.
-6. Revenue flows back through Data Yield and broader routing logic.
-7. Higher-value agents earn more, attracting better participation and deeper psychometric completion.
-8. Dataset breadth, depth, and regime coverage improve.
-9. Oracle, Dove, and Gnosis become more accurate from better signal.
-10. Better intelligence produces better outcomes, attracting more agents and more capital.
-
-**Compounding loop:**
-
-```
-more agents → more signal → better models → better outcomes → stronger incentives → more agents
-```
-
----
-
-## LAYER 15 — EMERGENT PROTOCOL SYSTEM
-
-**Canonical Name:** Sovereign Protocol Discovery
-**Role:** pattern emergence formalization
-**Status:** LOCAL OBSERVATION AND DISCOVERY SURFACE PRESENT / LIVE EVIDENCE PENDING
-
-**What is done:**
-
-- local observation readiness now reaches observable with a forming evidence window
-- local baseline spans five windows with improving trend
-- local accumulation is review-ready at `5/8`
-- local pattern extraction, candidate discovery, validation, and downstream-path scaffolding now exist
-- bounded local evidence artifacts now exist for emergence claims, ratification records, prediction-evaluation records, retraction records, and isolated historical sequencing
-
-**What remains:**
-
-- deeper longitudinal evidence accumulation
-- durable live evidence before any true emergence claim
-- any actual emergence recognition layer, human ratification workflow, or downstream read-path expansion beyond the isolated historical record
-
-**Next required action:** continue observation only; emergence still cannot be forced, and the new claim/history artifacts remain local-analysis-only evidence scaffolding rather than operating authority
-
-### Emergent Protocol Discovery Flow (canonical)
-
-```
-Agent performance accumulates in Signal Layer
-  → patterns emerge
-  → Dove surfaces the pattern as a Signal Layer insight
-  → Oracle validates the pattern statistically
-  → Governance proposes a new protocol class
-  → a new NFT / access class is minted for agents compatible with that execution envelope
-  → the ecosystem expands organically without founder intervention
-```
-
-> Nobody designs the new protocol. The ecosystem discovers that it exists through performance data.
-
-**Note:** Phase 5 (Data Rail Productization) does not depend on Phase 6 emergence. The Data Rail requires live signal data and agent behavioral history — available from Phase 3 onward. Phase 6 emergence runs as an ongoing, non-deterministic process and is not a gate on Phase 5.
-
-**Current local evidence-artifact boundary:**
-
-- `emergence-claim-core` models bounded local claim states as `evidence_insufficient`, `candidate`, and `not_candidate`
-- ratification, prediction evaluation, and retraction remain separate local records rather than claim states
-- `emergence-history-core` preserves ratified-record ordering as `ratification -> optional evaluation -> optional retraction`
-- these artifacts do not create live emergence authority and do not authorize operating-surface behavior
-
-### Updated wording rule
-
-Canonical wording moving forward:
-
-- **Behaviorally Validated Protocol Access**
-- **Behaviorally Validated Execution Classes**
-- **Empirically Validated Execution Compatibility**
-
-Legacy phrasing "trait-gated protocols" is deprecated.
-
----
-
-# SECTION 8 — PHASE ROADMAP
+# SECTION 8 â€” PHASE ROADMAP
 
 | Phase | Name | Status | Meaning |
 |---|---|---|---|
@@ -1388,34 +305,34 @@ Legacy phrasing "trait-gated protocols" is deprecated.
 | Phase 2 | Monad Ecosystem Rehoming | COMPLETE | packages promoted, legacy cleaned, integration verified (100% complete, 2026-06-09) |
 | Phase 3 | Gnostic Engine Packaging | COMPLETE | Python package wrapped with npm, bootstrap integrated, all three pillars operational (100% complete, 2026-06-09) |
 | Phase 4 | Theo-Techno-Cosmo Onboarding + Documentation | NEAR COMPLETE (98%) | All critical operational specs created: OPERATIONAL_AXIOMS_PHASE4.md, AGENT_PERSONALITY_FRAMES_v5.md, DOVE_OPERATIONAL_SPECIFICATION_v1.md, ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md, INTEGRATION_MAP.md. Axiom alignment verified (11/12 aligned). Phase 5 ready to launch. |
-| Phase 5 | Data Rail Productization + Governance Expansion | QUEUED | depends on Phase 3 signal maturity — NOT gated on Phase 6 emergence |
+| Phase 5 | Data Rail Productization + Governance Expansion | QUEUED | depends on Phase 3 signal maturity â€” NOT gated on Phase 6 emergence |
 | Phase 6 | Emergent Protocol Evolution | ONGOING | emerges from accumulated real data; runs in parallel, not as a gate |
 
 ---
 
 ## Phase 4 Completion Summary (2026-06-09)
 
-**Status: 98% COMPLETE – All critical operational specification documents created and verified.**
+**Status: 98% COMPLETE â€“ All critical operational specification documents created and verified.**
 
 **Five Critical Operational Specification Documents:**
 
-1. **OPERATIONAL_AXIOMS_PHASE4.md** – Maps all 12 foundational axioms to Phase 4 operational state
-2. **AGENT_PERSONALITY_FRAMES_v5.md** – Specifies 5 personality archetypes with authentic/hollow convergence signals
-3. **DOVE_OPERATIONAL_SPECIFICATION_v1.md** – Governance layer mechanics: 5 observables, signal types, intervention levels
-4. **ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md** – Cross-pillar validation: 11/12 axioms fully aligned across all three pillars
-5. **INTEGRATION_MAP.md** – Knowledge architecture guide with role-based reading paths
+1. **OPERATIONAL_AXIOMS_PHASE4.md** â€“ Maps all 12 foundational axioms to Phase 4 operational state
+2. **AGENT_PERSONALITY_FRAMES_v5.md** â€“ Specifies 5 personality archetypes with authentic/hollow convergence signals
+3. **DOVE_OPERATIONAL_SPECIFICATION_v1.md** â€“ Governance layer mechanics: 5 observables, signal types, intervention levels
+4. **ECOSYSTEM_ALIGNMENT_AUDIT_PHASE4.md** â€“ Cross-pillar validation: 11/12 axioms fully aligned across all three pillars
+5. **INTEGRATION_MAP.md** â€“ Knowledge architecture guide with role-based reading paths
 
 **Axiom Alignment Verification:**
 
-- ✅ 11 of 12 axioms FULLY ALIGNED across Monad Ecosystem, Gnostic Engine, and Theo-Techno-Cosmo
-- ⚠️ 1 axiom PARTIAL (Axiom 7: Reciprocal Loop – governance decentralization pending Phase 5)
+- âœ… 11 of 12 axioms FULLY ALIGNED across Monad Ecosystem, Gnostic Engine, and Theo-Techno-Cosmo
+- âš ï¸ 1 axiom PARTIAL (Axiom 7: Reciprocal Loop â€“ governance decentralization pending Phase 5)
 
 **Phase 5 Launch Status: READY NOW**
 All prerequisites complete. Recommend immediate Phase 5 launch (Data Rail Productization). Accessibility fixes optional and non-blocking.
 
 ---
 
-# SECTION 9 — PHASE DETAIL SYNC
+# SECTION 9 â€” PHASE DETAIL SYNC
 
 ## 9.1 Phase 1a Definition
 
@@ -1424,7 +341,7 @@ Its purpose is to establish the first live, controllable, observable capital inf
 
 ## 9.2 Phase 1a Status
 
-**Status:** Contracts Reconstructed — Initial Test Suite Live — Deployment Proof Complete
+**Status:** Contracts Reconstructed â€” Initial Test Suite Live â€” Deployment Proof Complete
 
 ## 9.3 Phase 1a Contract Suite
 
@@ -1485,7 +402,7 @@ This is sufficient to classify the test suite as **meaningfully expanded and exe
 
 ### Build Logic
 
-Strengthen capital boundary → adaptive execution → signal substrate → agent fit → emergence machinery → external expansion.
+Strengthen capital boundary â†’ adaptive execution â†’ signal substrate â†’ agent fit â†’ emergence machinery â†’ external expansion.
 
 ### Master Sequence
 
@@ -1498,20 +415,20 @@ Strengthen capital boundary → adaptive execution → signal substrate → agen
 | 4 | Phase 3a | Signal Layer Foundation | Event schema v1, motifs, clustering | not started | Phase 2b |
 | 5 | Phase 3b | Dove and Gnosis Expansion | Boundary stress, diversity scoring | not started | Phase 3a |
 | 6 | Phase 4a | Psychometric Operational Layer | Personality to execution envelopes | not started | Phase 3b + population diversity thresholds met |
-| 7 | Phase 4b | Emergence Pipeline | PatternOracle to governance spawn | not started | Phase 4a — runs ongoing, not as a gate |
-| 8 | Phase 5 | Data Rail Productization | Monetize upgraded signal outputs | not started | Phase 3 signal maturity — NOT Phase 4b |
+| 7 | Phase 4b | Emergence Pipeline | PatternOracle to governance spawn | not started | Phase 4a â€” runs ongoing, not as a gate |
+| 8 | Phase 5 | Data Rail Productization | Monetize upgraded signal outputs | not started | Phase 3 signal maturity â€” NOT Phase 4b |
 | 9 | Phase 6 | Platform and External Expansion | Controlled builder infra | not started | Phase 5 |
 
-### Phase 1b — Boundary Capital Upgrade
+### Phase 1b â€” Boundary Capital Upgrade
 
 **Status:** not started
 **Depends on:** Phase 1a deployment
 
 **New modules:**
 
-- **InflowClassifier** (*Service*) — volatility/compliance tagging
-- **SheathVault.sol** (*Contract*) — pre-core volatility buffer
-- **BoundaryStressMonitor v1** (*Hybrid: Service + Contract observer*) — sheath pressure metrics
+- **InflowClassifier** (*Service*) â€” volatility/compliance tagging
+- **SheathVault.sol** (*Contract*) â€” pre-core volatility buffer
+- **BoundaryStressMonitor v1** (*Hybrid: Service + Contract observer*) â€” sheath pressure metrics
 
 **Contract changes:** Extend InboundReceiver.sol, RevenueRouter.sol, DoveRouterObserver.sol
 
@@ -1519,88 +436,88 @@ Strengthen capital boundary → adaptive execution → signal substrate → agen
 
 **Dependency note:** InflowClassifier classifies inflows by volatility. A meaningful volatility baseline requires the MEV engine to be live on mainnet. ISSUE-002 (real execution logic) is therefore a hard gate on Phase 1b, not just Phase 1a.
 
-### Phase 2a — Adaptive Engine Upgrade
+### Phase 2a â€” Adaptive Engine Upgrade
 
 **Status:** not started
 **Depends on:** Phase 1b + Signal Schema v0 defined
 
 **New modules:**
 
-- **AgentFactory.sol** (*Contract*) — pod creation/retirement
-- **RouteSelector** (*Service*) — local adaptive opportunity routing
-- **SwarmCoordinator** (*Service*) — pod balancing
+- **AgentFactory.sol** (*Contract*) â€” pod creation/retirement
+- **RouteSelector** (*Service*) â€” local adaptive opportunity routing
+- **SwarmCoordinator** (*Service*) â€” pod balancing
 
-**Cold-start requirement:** RouteSelector makes routing decisions based on pod health and regime memory. At Phase 2a launch, neither exists yet. A cold-start degraded mode must be designed — RouteSelector operates on static local rules initially, then activates full adaptive routing once pod health data and regime memory accumulate. This is not a failure state; it is the designed bootstrap path.
+**Cold-start requirement:** RouteSelector makes routing decisions based on pod health and regime memory. At Phase 2a launch, neither exists yet. A cold-start degraded mode must be designed â€” RouteSelector operates on static local rules initially, then activates full adaptive routing once pod health data and regime memory accumulate. This is not a failure state; it is the designed bootstrap path.
 
 **Infra changes:** Extend Kafka topics to pod-level; Signal Schema v0 must be live
 
 **Exit criteria:** 3+ pod classes live, outperforming single-path baseline
 
-### Phase 2b — Recirculation and Regime Memory
+### Phase 2b â€” Recirculation and Regime Memory
 
 **Status:** not started
 **Depends on:** Phase 2a
 
 **New modules:**
 
-- **RecircVault.sol** (*Contract*) — capital/strategy recycle
-- **RegimeStateMemory** (*Analytics*) — market weather persistence
+- **RecircVault.sol** (*Contract*) â€” capital/strategy recycle
+- **RegimeStateMemory** (*Analytics*) â€” market weather persistence
 
 **Exit criteria:** Failing strategies enter recirculation; waste reduced vs baseline
 
-### Phase 3a — Signal Layer Foundation
+### Phase 3a â€” Signal Layer Foundation
 
 **Status:** not started
 **Depends on:** Phase 2b
 
 **New modules:**
 
-- **Signal Schema v1** (*Schema*) — full state-before/after/regime/route schema (Signal Schema v0 must already exist from Phase 2a)
-- **PatternOracle** (*Analytics*) — motif detection
-- **RegimeCluster Engine** (*Service*) — weather clustering
+- **Signal Schema v1** (*Schema*) â€” full state-before/after/regime/route schema (Signal Schema v0 must already exist from Phase 2a)
+- **PatternOracle** (*Analytics*) â€” motif detection
+- **RegimeCluster Engine** (*Service*) â€” weather clustering
 
 **Exit criteria:** Schema stable; interpretable timelines producible; 3+ motif classes detected
 
-### Phase 3b — Dove and Gnosis Expansion
+### Phase 3b â€” Dove and Gnosis Expansion
 
 **Status:** not started
 **Depends on:** Phase 3a
 
 **New modules:**
 
-- **BoundaryStressMonitor v2** (*Hybrid*) — extends Phase 1b BoundaryStressMonitor v1 with cross-layer stress, turbulence metrics. These are distinct versioned components with defined interface contracts between them.
-- **SwarmDiversityScore** (*Analytics*) — anti-convergence
-- **EmergenceAuthenticityCheck** (*Analytics*) — pattern validation
+- **BoundaryStressMonitor v2** (*Hybrid*) â€” extends Phase 1b BoundaryStressMonitor v1 with cross-layer stress, turbulence metrics. These are distinct versioned components with defined interface contracts between them.
+- **SwarmDiversityScore** (*Analytics*) â€” anti-convergence
+- **EmergenceAuthenticityCheck** (*Analytics*) â€” pattern validation
 
 **Exit criteria:** Live stress signals; Tier 2 governance trigger from upgrades
 
-### Phase 4a — Psychometric Operational Layer
+### Phase 4a â€” Psychometric Operational Layer
 
 **Status:** not started
 **Depends on:** Phase 3b + population diversity thresholds met (to be specified before Phase 4a entry)
 
 **New modules:**
 
-- **ExecutionEnvelopeRegistry.sol** (*Contract*) — envelope definitions
-- **BehavioralFit Engine** (*Service*) — trait-to-risk mapping
-- **PodAssignment Logic** (*Service*) — fit-based placement
+- **ExecutionEnvelopeRegistry.sol** (*Contract*) â€” envelope definitions
+- **BehavioralFit Engine** (*Service*) â€” trait-to-risk mapping
+- **PodAssignment Logic** (*Service*) â€” fit-based placement
 
 **Exit criteria:** Fit scoring improving placement vs generic
 
-### Phase 4b — Emergence Pipeline
+### Phase 4b â€” Emergence Pipeline
 
-**Status:** not started — runs as ongoing process, not a phase gate
+**Status:** not started â€” runs as ongoing process, not a phase gate
 **Depends on:** Phase 4a
 
 **New modules:**
 
-- **ProtocolSpawnCandidate Engine** (*Service*) — candidate packaging
-- **EmergenceConfidence Score** (*Analytics*) — validation scoring
-- **SandboxClass Registry.sol** (*Contract*) — test deployment
+- **ProtocolSpawnCandidate Engine** (*Service*) â€” candidate packaging
+- **EmergenceConfidence Score** (*Analytics*) â€” validation scoring
+- **SandboxClass Registry.sol** (*Contract*) â€” test deployment
 
 **Note:** Phase 4b is non-deterministic. It cannot gate Phase 5. It runs in parallel once its modules are built. Phase 5 proceeds on Phase 3 signal maturity, not Phase 4b output.
 
-### Phase 5 — Data Rail Productization
+### Phase 5 â€” Data Rail Productization
 
 **Status:** not started
 **Depends on:** Phase 3 signal maturity + population diversity thresholds met
@@ -1608,20 +525,20 @@ Strengthen capital boundary → adaptive execution → signal substrate → agen
 
 **Implementation status of Data Revenue enforcement:** BehavioralDataRevenueRouter.sol does not yet exist. The 5% Origination Attribution and data revenue routing policy are doctrine-specified here. They become contract-enforced at Phase 5 deployment.
 
-### Phase 6 — Platform and External Expansion
+### Phase 6 â€” Platform and External Expansion
 
 **Status:** not started
 **Depends on:** Phase 5
 
-## 9.6 Phase 3 — Personality Science Layer
+## 9.6 Phase 3 â€” Personality Science Layer
 
 What gets built:
 
-1. Personality onboarding pipeline — full test battery, scoring engine, normalized trait vectors, composite indices, trait vector → behavioral parameter translation layer, personality hash, data rights contract
-2. Agent behavioral engine — Layer 2 behavioral config, simulation across historical regimes, Oracle and Dove guardrails
-3. Agent NFT contract — mint = deploy; binds wallet, personality hash, agent instance, agent type, supply constraints; emits all behavior events to Signal Layer from birth; payout logic includes MEV PnL distributions + Data Yield claims
+1. Personality onboarding pipeline â€” full test battery, scoring engine, normalized trait vectors, composite indices, trait vector â†’ behavioral parameter translation layer, personality hash, data rights contract
+2. Agent behavioral engine â€” Layer 2 behavioral config, simulation across historical regimes, Oracle and Dove guardrails
+3. Agent NFT contract â€” mint = deploy; binds wallet, personality hash, agent instance, agent type, supply constraints; emits all behavior events to Signal Layer from birth; payout logic includes MEV PnL distributions + Data Yield claims
 
-## 9.7 Phase 4 — Data Rail Activation
+## 9.7 Phase 4 â€” Data Rail Activation
 
 What gets built:
 
@@ -1630,7 +547,7 @@ What gets built:
 3. Behavioral data products
 4. Second-layer data intelligence system that feeds Oracle, Dove, Gnosis, Governance, and external products
 
-## 9.8 Phase 6 — Emergence
+## 9.8 Phase 6 â€” Emergence
 
 This phase is not designed. It is discovered.
 
@@ -1642,7 +559,7 @@ This phase is not designed. It is discovered.
 
 ---
 
-# SECTION 10 — CURRENT BUILD ORDER (STRICT EXECUTION PRIORITY)
+# SECTION 10 â€” CURRENT BUILD ORDER (STRICT EXECUTION PRIORITY)
 
 This is the current required work sequence. Do not skip ahead unless dependencies change and this document is updated.
 
@@ -1657,7 +574,7 @@ Includes: unit tests, integration tests, routing invariants, edge cases, failure
 ### 3. Resolve ISSUE-002
 
 **Real execution logic**
-Note: also blocks Phase 1b — InflowClassifier cannot establish a meaningful volatility baseline without live MEV execution data.
+Note: also blocks Phase 1b â€” InflowClassifier cannot establish a meaningful volatility baseline without live MEV execution data.
 
 ### 4. Resolve monad-market-agent crash loop
 
@@ -1709,7 +626,7 @@ Validate with router health, observation counts, flow integrity, and issue closu
 
 ---
 
-# SECTION 11 — IMMEDIATE NEXT ACTIONS
+# SECTION 11 â€” IMMEDIATE NEXT ACTIONS
 
 ## What should be worked on right now
 
@@ -1734,23 +651,23 @@ Unless directly necessary for current blockers, do not prioritize:
 
 ---
 
-# SECTION 12 — OPEN ISSUES / BLOCKERS
+# SECTION 12 â€” OPEN ISSUES / BLOCKERS
 
-## ISSUE-001 — Threshold Calibration
+## ISSUE-001 â€” Threshold Calibration
 
 **Type:** system logic / release gating blocker
 **Status:** RESOLVED
 **Why it matters:** improper thresholds can distort bankroll handling, release cadence, or live risk posture
 **Resolution:** The threshold calibration is locked mathematically. Antikythera switches from `FROZEN` to `BALANCED` via an auto-trigger guard, and the dynamic Capacity Ceiling metric from the hardened shadow markout provides the exact bankroll threshold.
 
-## ISSUE-002 — Real Execution Logic
+## ISSUE-002 â€” Real Execution Logic
 
 **Type:** execution correctness blocker
 **Status:** RESOLVED
-**Why it matters:** simulated performance is not enough; execution path must survive real conditions. Also blocks Phase 1b — InflowClassifier volatility baseline requires live execution data.
+**Why it matters:** simulated performance is not enough; execution path must survive real conditions. Also blocks Phase 1b â€” InflowClassifier volatility baseline requires live execution data.
 **Resolution:** The synthetic price multipliers were replaced with `monad_price_fetcher.py`. Agent 0 now pulls real T+15s and T+60s execution data directly from the live Pyth Network contract over Monad mainnet RPC.
 
-## ISSUE-003 — monad-market-agent Crash Loop
+## ISSUE-003 â€” monad-market-agent Crash Loop
 
 **Type:** infrastructure blocker
 **Status:** RESOLVED
@@ -1763,7 +680,7 @@ The project is not blocked by missing architecture or missing zero-capital layer
 
 ---
 
-# SECTION 13 — DEPLOYMENT SEQUENCE (LOCKED CURRENT ORDER)
+# SECTION 13 â€” DEPLOYMENT SEQUENCE (LOCKED CURRENT ORDER)
 
 1. Deploy DoveCore.sol
 2. Deploy GovernanceController.sol(doveCore)
@@ -1797,25 +714,25 @@ This sequence is now complete on Monad mainnet chain `143`. Phase 1a should be t
 
 ---
 
-# SECTION 14 — REFINED DECOMPRESSION / VALIDATION ENGINE
+# SECTION 14 â€” REFINED DECOMPRESSION / VALIDATION ENGINE
 
 ## 14.1 Purpose
 
 The compression/decompression insight is not treated as a substitute for execution. It is treated as a method for reading systems more clearly.
 
-Compression/decompression is not metaphor. It is an empirically observable principle — verifiable across physics, biology, psychology, and market systems. Where this document applies it to agent behavior and ecosystem architecture, it is applying a real structural pattern, not constructing a mythology.
+Compression/decompression is not metaphor. It is an empirically observable principle â€” verifiable across physics, biology, psychology, and market systems. Where this document applies it to agent behavior and ecosystem architecture, it is applying a real structural pattern, not constructing a mythology.
 
 ## 14.2 Operational Form
 
-**Step 1 — Capture Input:** Collect raw market, system, behavioral, or governance signal.
+**Step 1 â€” Capture Input:** Collect raw market, system, behavioral, or governance signal.
 
-**Step 2 — Identify Carrier:** Separate surface noise, emotional intensity, statistical fluctuation, and symbolic framing from the structural content being carried.
+**Step 2 â€” Identify Carrier:** Separate surface noise, emotional intensity, statistical fluctuation, and symbolic framing from the structural content being carried.
 
-**Step 3 — Extract Pattern:** Propose the structural model — opportunity type, constraint architecture, behavioral tendency, coordination failure, systemic edge, or drift pattern.
+**Step 3 â€” Extract Pattern:** Propose the structural model â€” opportunity type, constraint architecture, behavioral tendency, coordination failure, systemic edge, or drift pattern.
 
-**Step 4 — Validate Against Reality:** Ask: does this improve prediction? does this improve execution? does this reduce error? does this survive repeated use?
+**Step 4 â€” Validate Against Reality:** Ask: does this improve prediction? does this improve execution? does this reduce error? does this survive repeated use?
 
-**Step 5 — Update:** If validated, retain and integrate. If contradicted, revise or discard.
+**Step 5 â€” Update:** If validated, retain and integrate. If contradicted, revise or discard.
 
 ## 14.3 System Rule
 >
@@ -1825,7 +742,7 @@ This rule applies to: trading ideas, governance interpretations, agent behavior 
 
 ---
 
-# SECTION 15 — COMMERCIALIZATION FRAME
+# SECTION 15 â€” COMMERCIALIZATION FRAME
 
 This section exists so the project's monetization logic is canonized without pretending it is already live.
 
@@ -1852,12 +769,12 @@ The strongest profitability concept is not any one stream. It is the recursive s
 
 Target commercialization sequence after agents are live and population diversity thresholds are met:
 
-1. Research feed pilot → academic credibility
-2. Oracle API base tier → recurring SaaS revenue
-3. Quant factor feed → first institutional contract
-4. Regime response reports → scalable distribution
-5. Premium Oracle + framework licensing → enterprise contracts
-6. Behaviorally validated ecosystem-native execution classes → internal flywheel
+1. Research feed pilot â†’ academic credibility
+2. Oracle API base tier â†’ recurring SaaS revenue
+3. Quant factor feed â†’ first institutional contract
+4. Regime response reports â†’ scalable distribution
+5. Premium Oracle + framework licensing â†’ enterprise contracts
+6. Behaviorally validated ecosystem-native execution classes â†’ internal flywheel
 
 ## 15.4 Reality Rule
 
@@ -1888,7 +805,7 @@ Current canonical rule:
 
 ---
 
-# SECTION 16 — AGENT / MODEL EXECUTION INSTRUCTIONS
+# SECTION 16 â€” AGENT / MODEL EXECUTION INSTRUCTIONS
 
 ## 16.1 Mandatory Read Rule
 
@@ -1931,11 +848,11 @@ When a meaningful milestone is completed, produce an update-ready entry for the 
 
 ## 16.8 Critical Review Rule
 
-Do not validate decisions by default. The role of any collaborator — human or AI — is critical architectural review. Challenge weak sequencing, flag dependency risks, and suggest tighter alternatives. The MOF is canonical — work within it but scrutinize it hard.
+Do not validate decisions by default. The role of any collaborator â€” human or AI â€” is critical architectural review. Challenge weak sequencing, flag dependency risks, and suggest tighter alternatives. The MOF is canonical â€” work within it but scrutinize it hard.
 
 ---
 
-# SECTION 17 — FAILURE MODES TO WATCH
+# SECTION 17 â€” FAILURE MODES TO WATCH
 
 ## 17.1 Philosophical Override
 
@@ -1983,7 +900,7 @@ Treating a self-selected early agent population as a valid representative sample
 
 ---
 
-# SECTION 18 — DOCUMENT UPDATE PROTOCOL
+# SECTION 18 â€” DOCUMENT UPDATE PROTOCOL
 
 This file must be updated when any of the following occur:
 
@@ -1994,7 +911,7 @@ This file must be updated when any of the following occur:
 - allocation logic changes
 - governance structure changes
 - doctrine layers are canonized
-- a layer moves from pending → in progress → complete
+- a layer moves from pending â†’ in progress â†’ complete
 - a live validation result changes project confidence
 - a task order changes
 - a new issue is identified and confirmed
@@ -2005,27 +922,27 @@ Every update should include: date, version, changed section(s), exact new status
 
 ---
 
-# SECTION 19 — CHANGE LOG
+# SECTION 19 â€” CHANGE LOG
 
-## v2.6.8 — July 14, 2026
+## v2.6.8 â€” July 14, 2026
 
-**Change Type:** Minor — Layer 6 real Llull wheel-registry asset landed. The 5-wheel placeholder fixture (`shared/fixtures/layer6/wheel-registry.json`) was replaced with the **sourced** Llull register from `theo-techno-cosmo/Wheel/8 wheels and 3 domains.docx`, and the Gnosis-event consumer now emits **real Catalan slot labels** instead of `null`. This closes the long-standing "drop in later as a data change" Layer 6 follow-up for the register + Catalan labels; only the letter-level 45-pair reconstruction (a secondary interpretation — Llull's actual Tabula Generalis is the Fourth Figure) remains deferred.
+**Change Type:** Minor â€” Layer 6 real Llull wheel-registry asset landed. The 5-wheel placeholder fixture (`shared/fixtures/layer6/wheel-registry.json`) was replaced with the **sourced** Llull register from `theo-techno-cosmo/Wheel/8 wheels and 3 domains.docx`, and the Gnosis-event consumer now emits **real Catalan slot labels** instead of `null`. This closes the long-standing "drop in later as a data change" Layer 6 follow-up for the register + Catalan labels; only the letter-level 45-pair reconstruction (a secondary interpretation â€” Llull's actual Tabula Generalis is the Fourth Figure) remains deferred.
 
 **Summary:**
 
-- **The register (11 wheels):** the **8 generative wheels** (A=Blue Dignities 16, P=Prima Figura 9, E=Elements 22, T=T-Wheel 9 [THEOLOGY+COSMOLOGY], V=Virtues&Vices 13, Q=Questions 17, F=Faculties 6, S=Triangles 3) **+ 3 structurally-identical domain wheels** (Teologia/Kosmologia/Technologia, each 16 segments with the shared Catalan B–R vocabulary `essència/eviternitat/vida/pena/dignitats/glòria/acte/segona intenció/forma/primera intenció/relació/exposició/ordinació/manaments/acció/articles`). `registry: "llull-default"`. The wheel-level pair table is the math-honest **C(8,2)=28** generative pairs (the 3 domain wheels are facets, excluded from the pair table). Domain coverage is 3-per-domain (THEOLOGY=A/P/T, COSMOLOGY=E/T/S, TECHNOLOGY=V/Q/F) so `WheelSwap` keeps alternatives and the annealer spans all 3 domains.
-- **Schema + loader:** `wheel-registry-schema.json` gained optional per-wheel `alphabet` (the J-skipping 16-letter B–R sequence, carried explicitly — a `baseLetter+offset` formula cannot represent the gap) + `labels` (per-slot Catalan labels, null entries allowed). `registry.ts` (`WheelAsset`) carries both and enforces the invariants the schema cannot express: `alphabet.length===size`, every alphabet char a single UTF-16 code unit (the `gnosis-event.json` `slot` field is `maxLength:1`), `labels.length===size`. `additionalProperties:false` + `required:["name","size","domains"]` preserved.
-- **Consumer:** `@sovereign/gnosis-training-data` `materialize.ts` — `slotLetter(alphabet, offset)` indexes the explicit per-wheel alphabet (Llull's B..R, J skipped) and `activeSlots` reads `asset.labels[offset]`. `active_slots.*.label` is now a **real Catalan string** for A + the 3 domain wheels + F + S, and `null` for the structured-label wheels (P/T/V/Q/E) pending a richer shape. **Never fabricated** — every non-null label is a real entry present in some wheel's `labels` array.
-- **Spec correction (surfaced, not silent — per spec-open-to-higher-standard):** the spec's "PairTable (ALL, Hybrid, 45 pairs) … the pairing table is from a triangular grid image" is a **secondary interpretation, NOT a statement of the primary Llull source**. The primary source (`Raymond-Lull-Ars-Magna-Ars-Generalis-Ultima.txt`, Chapter 3) states the **Third Figure has 36 cameras** — the distinct 2-letter pairs of B–K (BC…IK, J skipped, C(9,2)=36), with **no self-pairs**. The "45" is a reconstruction = 36 + 9 self-pairs (BB, CC, … KK) = the triangular number T₉ which the source does **not** state. Llull's actual **Tabula Generalis / "The Table"** is the **Fourth Figure** (Chapter 4), built from **3-letter cameras** (BCD, BCE…) — a separate, larger structure, not the 2-letter Third Figure and not 45; the earlier wording that called the 45 "the letter-level Tabula Generalis" was a **misattribution and is withdrawn**. The 45 is letter-level (over the 9 Prima-Figura letters B–K), not a wheel-level pair count, so it does not fit the registry's wheel-level `pairs` field (which stays at 28) and is **deferred** to a follow-up PR as a letter-level composite-validity filter, pending doctrinal confirmation of the 36+9 reconstruction. Surfaced as a NOTE in `TTCL_v1_0_BREAKDOWN.md` at the "Wheel Assets are Concrete" + "Cardinality" sections (propagated to README, PROJECT_STATE.md/json, and this entry). The 45 is NOT the 72 Shem↔Goetia name-pairs of the 144 Names — that was a conflation; the 144 Names are the *locate* layer (separate from Llull's *generate* layer), and the real 144-Names↔scheduler link is the PPS triad score.
+- **The register (11 wheels):** the **8 generative wheels** (A=Blue Dignities 16, P=Prima Figura 9, E=Elements 22, T=T-Wheel 9 [THEOLOGY+COSMOLOGY], V=Virtues&Vices 13, Q=Questions 17, F=Faculties 6, S=Triangles 3) **+ 3 structurally-identical domain wheels** (Teologia/Kosmologia/Technologia, each 16 segments with the shared Catalan Bâ€“R vocabulary `essÃ¨ncia/eviternitat/vida/pena/dignitats/glÃ²ria/acte/segona intenciÃ³/forma/primera intenciÃ³/relaciÃ³/exposiciÃ³/ordinaciÃ³/manaments/acciÃ³/articles`). `registry: "llull-default"`. The wheel-level pair table is the math-honest **C(8,2)=28** generative pairs (the 3 domain wheels are facets, excluded from the pair table). Domain coverage is 3-per-domain (THEOLOGY=A/P/T, COSMOLOGY=E/T/S, TECHNOLOGY=V/Q/F) so `WheelSwap` keeps alternatives and the annealer spans all 3 domains.
+- **Schema + loader:** `wheel-registry-schema.json` gained optional per-wheel `alphabet` (the J-skipping 16-letter Bâ€“R sequence, carried explicitly â€” a `baseLetter+offset` formula cannot represent the gap) + `labels` (per-slot Catalan labels, null entries allowed). `registry.ts` (`WheelAsset`) carries both and enforces the invariants the schema cannot express: `alphabet.length===size`, every alphabet char a single UTF-16 code unit (the `gnosis-event.json` `slot` field is `maxLength:1`), `labels.length===size`. `additionalProperties:false` + `required:["name","size","domains"]` preserved.
+- **Consumer:** `@sovereign/gnosis-training-data` `materialize.ts` â€” `slotLetter(alphabet, offset)` indexes the explicit per-wheel alphabet (Llull's B..R, J skipped) and `activeSlots` reads `asset.labels[offset]`. `active_slots.*.label` is now a **real Catalan string** for A + the 3 domain wheels + F + S, and `null` for the structured-label wheels (P/T/V/Q/E) pending a richer shape. **Never fabricated** â€” every non-null label is a real entry present in some wheel's `labels` array.
+- **Spec correction (surfaced, not silent â€” per spec-open-to-higher-standard):** the spec's "PairTable (ALL, Hybrid, 45 pairs) â€¦ the pairing table is from a triangular grid image" is a **secondary interpretation, NOT a statement of the primary Llull source**. The primary source (`Raymond-Lull-Ars-Magna-Ars-Generalis-Ultima.txt`, Chapter 3) states the **Third Figure has 36 cameras** â€” the distinct 2-letter pairs of Bâ€“K (BCâ€¦IK, J skipped, C(9,2)=36), with **no self-pairs**. The "45" is a reconstruction = 36 + 9 self-pairs (BB, CC, â€¦ KK) = the triangular number Tâ‚‰ which the source does **not** state. Llull's actual **Tabula Generalis / "The Table"** is the **Fourth Figure** (Chapter 4), built from **3-letter cameras** (BCD, BCEâ€¦) â€” a separate, larger structure, not the 2-letter Third Figure and not 45; the earlier wording that called the 45 "the letter-level Tabula Generalis" was a **misattribution and is withdrawn**. The 45 is letter-level (over the 9 Prima-Figura letters Bâ€“K), not a wheel-level pair count, so it does not fit the registry's wheel-level `pairs` field (which stays at 28) and is **deferred** to a follow-up PR as a letter-level composite-validity filter, pending doctrinal confirmation of the 36+9 reconstruction. Surfaced as a NOTE in `TTCL_v1_0_BREAKDOWN.md` at the "Wheel Assets are Concrete" + "Cardinality" sections (propagated to README, PROJECT_STATE.md/json, and this entry). The 45 is NOT the 72 Shemâ†”Goetia name-pairs of the 144 Names â€” that was a conflation; the 144 Names are the *locate* layer (separate from Llull's *generate* layer), and the real 144-Namesâ†”scheduler link is the PPS triad score.
 - **Baseline:** `shared/fixtures/layer6/canonical-schedule.json` regenerated byte-identical from seed 42 (11 wheels, 28 pairs); `snapshotRegistry` picks only `{name,size,domains}` so `alphabet`/`labels` do not leak into the schedule artifact. `canonical-schedule-schema.json` untouched.
-- **Tests:** `scheduler.test.ts` registry/facade assertions rewritten for the 11-wheel / 28-pair register; `gnosis-training-data.test.ts` Catalan-label honesty gate rewritten — every non-null `active_slots.*.label` is a real string present in some wheel's `labels`, and the initial step's theology label is `essència` (proving the domain-wheel vocabulary reaches the stream). 222/222 integration tests green.
+- **Tests:** `scheduler.test.ts` registry/facade assertions rewritten for the 11-wheel / 28-pair register; `gnosis-training-data.test.ts` Catalan-label honesty gate rewritten â€” every non-null `active_slots.*.label` is a real string present in some wheel's `labels`, and the initial step's theology label is `essÃ¨ncia` (proving the domain-wheel vocabulary reaches the stream). 222/222 integration tests green.
 
 **Axiom alignment:**
 
 - **Axiom 11 (Constraint Validation):** the loader's new integrity checks (alphabet/labels length === size, single-char slots) surface a malformed register as a `RegistryIntegrityError` at load time, never a silently mis-sized wheel or an out-of-contract `slot` field downstream.
-- **Axiom 3.6 (Implementation Honesty):** only the *sourced* parts land (8+3 wheels, Catalan labels). The 45-pair reconstruction is **deferred** as a surfaced secondary interpretation — not fabricated as doctrine (and not mislabelled the "Tabula Generalis": Llull's Tabula Generalis is the Fourth Figure). The ⚠️ reconstructed sizes (E=22, F=6, S=3) are documented concretizations, flagged in the schema description + docs, not silent.
+- **Axiom 3.6 (Implementation Honesty):** only the *sourced* parts land (8+3 wheels, Catalan labels). The 45-pair reconstruction is **deferred** as a surfaced secondary interpretation â€” not fabricated as doctrine (and not mislabelled the "Tabula Generalis": Llull's Tabula Generalis is the Fourth Figure). The âš ï¸ reconstructed sizes (E=22, F=6, S=3) are documented concretizations, flagged in the schema description + docs, not silent.
 
-**Out of scope (explicit, honest):** the letter-level 45-pair reconstruction (deferred follow-up — a secondary interpretation; the source states 36 Third-Figure cameras; Llull's Tabula Generalis is the Fourth Figure); a richer `labels` shape (`string[][]`/structured) for the P/T/V/Q/E wheels; a scheduler CLI / W&B tracking.
+**Out of scope (explicit, honest):** the letter-level 45-pair reconstruction (deferred follow-up â€” a secondary interpretation; the source states 36 Third-Figure cameras; Llull's Tabula Generalis is the Fourth Figure); a richer `labels` shape (`string[][]`/structured) for the P/T/V/Q/E wheels; a scheduler CLI / W&B tracking.
 
 **State after update:**
 
@@ -2034,221 +951,221 @@ Every update should include: date, version, changed section(s), exact new status
 - **Parity / CI:** 222 integration tests green; scorer/tier/classifier parity unaffected; no `pnpm-lock.yaml` perturbation; no `@sovereign/types` change.
 - No new blockers introduced; CI green.
 
-## v2.6.7 — July 13, 2026
+## v2.6.7 â€” July 13, 2026
 
-**Change Type:** Minor — x402-bridge sovereignty remediation landed; the `LEGACY_NON_SOVEREIGN` flag on `monad-ecosystem/packages/x402-bridge/` is **cleared** (the first pre-charter legacy component to reach `remediated`). The three `docs/LEGACY_COMPONENTS.md` §6 deliverables are delivered by wrapping the bridge as a self-contained sovereign agent (`X402Agent`) — the cost-accounting ledger is the agent's cost-bearing flow, the failure/retry envelope is its constraint envelope, and the env knobs are its documented control surfaces. The bridge is no longer an orphan (`X402Agent` is the importable sovereign-agent consumer). No funded live smoke re-run in this PR (no funded wallet required for the offline gate); the 2026-07-10 GREEN smoke stands.
+**Change Type:** Minor â€” x402-bridge sovereignty remediation landed; the `LEGACY_NON_SOVEREIGN` flag on `monad-ecosystem/packages/x402-bridge/` is **cleared** (the first pre-charter legacy component to reach `remediated`). The three `docs/LEGACY_COMPONENTS.md` Â§6 deliverables are delivered by wrapping the bridge as a self-contained sovereign agent (`X402Agent`) â€” the cost-accounting ledger is the agent's cost-bearing flow, the failure/retry envelope is its constraint envelope, and the env knobs are its documented control surfaces. The bridge is no longer an orphan (`X402Agent` is the importable sovereign-agent consumer). No funded live smoke re-run in this PR (no funded wallet required for the offline gate); the 2026-07-10 GREEN smoke stands.
 
 **Summary:**
 
-- **Cost-accounting ledger (`src/x402_bridge/ledger.py`):** `DrawdownLedger` (append-only JSONL at `X402_LEDGER_PATH`, gitignored) + `LedgerEntry` (one per paid call: deterministic uuid5 id, agent_id, endpoint, payment_model, attempts, status, credits_before/after, usd_notional, tx_hash/block, dlq_reason, `EventTrace`-mirrored provenance). `to_signal_event()` builds a dict mirroring `@sovereign/types` `SignalEvent`/`RevenueEvent` — the emission **contract**; sovereign-bus transport is deferred (no Python→Kafka client exists; not faked; no `@sovereign/types` TS change in this PR for a non-transporting emission).
-- **Failure/retry envelope (`src/x402_bridge/envelope.py`):** `RetryEnvelope` (mirrors `sovereign-bus` `KafkaBridgeConfig` — `max_retries`/`initial_backoff_ms`/`max_backoff_ms`/`timeout_s`/`max_concurrent` from `X402_*` env knobs) + `request_with_retry` (bounded exponential backoff, retries 429/503/timeout, dead-letter reason on exhaustion, mirrors `forwardWithRetries`). `envelope_headers` is the single source of truth for RPC headers and always injects `User-Agent: x402-bridge/1.0` — closing the §6 gap and the false README claim that `quicknode.py` already sent one. `X402_MAX_CONCURRENT` is now actually consumed by `quicknode._get_client` (was hard-coded 20/40).
-- **Sovereign-agent consumer (`src/x402_bridge/agent.py`):** `X402Agent` wraps the bridge per CHARTER §3 — managed resource = settlement **address** (never the key; the key stays in the gitignored `.env`); cost flow = the `DrawdownLedger`; constraint envelope = the `RetryEnvelope`; control surfaces = `X402Agent.control_surfaces()` (every env knob with default/scope/justification) + `X402_AGENT_KILL_SWITCH` (narrow: halts spend without a code change). The interface (`fetch`/`managed_resource`/`constraint_envelope`/`control_surfaces`) is designed to migrate into `@sovereign/organ-runtime` when that package graduates (today a stub).
-- **Tests:** three new offline suites (`tests/test_x402_envelope.py`, `test_x402_ledger.py`, `test_x402_agent.py`, 6 tests each) + the existing `test_x402_auth.py` (6) — 24/24 green, no funded wallet. Standalone-script style (mirrors `test_x402_auth.py`; pytest not installed in the package env).
-- **De-stale:** `docs/LEGACY_COMPONENTS.md` §6 → `remediated` (markers removed; `remediated` status added to the statuses table); `docs/PROJECT_STATE.md` x402 bullets + completion list updated; this §19 entry; `.gitignore` adds `.x402_ledger.jsonl`. The x402-bridge README banner is rewritten (false `User-Agent` claim fixed).
+- **Cost-accounting ledger (`src/x402_bridge/ledger.py`):** `DrawdownLedger` (append-only JSONL at `X402_LEDGER_PATH`, gitignored) + `LedgerEntry` (one per paid call: deterministic uuid5 id, agent_id, endpoint, payment_model, attempts, status, credits_before/after, usd_notional, tx_hash/block, dlq_reason, `EventTrace`-mirrored provenance). `to_signal_event()` builds a dict mirroring `@sovereign/types` `SignalEvent`/`RevenueEvent` â€” the emission **contract**; sovereign-bus transport is deferred (no Pythonâ†’Kafka client exists; not faked; no `@sovereign/types` TS change in this PR for a non-transporting emission).
+- **Failure/retry envelope (`src/x402_bridge/envelope.py`):** `RetryEnvelope` (mirrors `sovereign-bus` `KafkaBridgeConfig` â€” `max_retries`/`initial_backoff_ms`/`max_backoff_ms`/`timeout_s`/`max_concurrent` from `X402_*` env knobs) + `request_with_retry` (bounded exponential backoff, retries 429/503/timeout, dead-letter reason on exhaustion, mirrors `forwardWithRetries`). `envelope_headers` is the single source of truth for RPC headers and always injects `User-Agent: x402-bridge/1.0` â€” closing the Â§6 gap and the false README claim that `quicknode.py` already sent one. `X402_MAX_CONCURRENT` is now actually consumed by `quicknode._get_client` (was hard-coded 20/40).
+- **Sovereign-agent consumer (`src/x402_bridge/agent.py`):** `X402Agent` wraps the bridge per CHARTER Â§3 â€” managed resource = settlement **address** (never the key; the key stays in the gitignored `.env`); cost flow = the `DrawdownLedger`; constraint envelope = the `RetryEnvelope`; control surfaces = `X402Agent.control_surfaces()` (every env knob with default/scope/justification) + `X402_AGENT_KILL_SWITCH` (narrow: halts spend without a code change). The interface (`fetch`/`managed_resource`/`constraint_envelope`/`control_surfaces`) is designed to migrate into `@sovereign/organ-runtime` when that package graduates (today a stub).
+- **Tests:** three new offline suites (`tests/test_x402_envelope.py`, `test_x402_ledger.py`, `test_x402_agent.py`, 6 tests each) + the existing `test_x402_auth.py` (6) â€” 24/24 green, no funded wallet. Standalone-script style (mirrors `test_x402_auth.py`; pytest not installed in the package env).
+- **De-stale:** `docs/LEGACY_COMPONENTS.md` Â§6 â†’ `remediated` (markers removed; `remediated` status added to the statuses table); `docs/PROJECT_STATE.md` x402 bullets + completion list updated; this Â§19 entry; `.gitignore` adds `.x402_ledger.jsonl`. The x402-bridge README banner is rewritten (false `User-Agent` claim fixed).
 
 **Axiom alignment:**
 
-- **Axiom 11 (Constraint Validation):** the envelope does not retry non-transient failures (terminal 4xx/5xx, auth-not-recoverable) — they surface as a dead-letter ledger entry, never a silent infinite spend loop. The kill switch makes spend an explicit, narrow, env-driven control surface.
-- **Axiom 12 (Resonant Convergence):** the ledger emission contract mirrors `@sovereign/types` `SignalEvent`/`RevenueEvent` so the bridge's cost accounting converges with the sovereign-bus event shape when a Python bus client lands — no schema break later.
+- **Axiom 11 (Constraint Validation):** the envelope does not retry non-transient failures (terminal 4xx/5xx, auth-not-recoverable) â€” they surface as a dead-letter ledger entry, never a silent infinite spend loop. The kill switch makes spend an explicit, narrow, env-driven control surface.
+- **Axiom 12 (Resonant Convergence):** the ledger emission contract mirrors `@sovereign/types` `SignalEvent`/`RevenueEvent` so the bridge's cost accounting converges with the sovereign-bus event shape when a Python bus client lands â€” no schema break later.
 
-## v2.6.6 — July 13, 2026
+## v2.6.6 â€” July 13, 2026
 
-**Change Type:** Minor — Layer 7 training-pipeline *wiring* landed; the real TRL pipeline (SFT→Reward→GRPO→Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL) exists as runnable Python code, import-smoke-verified, CPU-verified. **No training executed** — the 8B GPU run is an explicitly-future job (deliberately not stubbed, no fake completion). This closes the prose's named "next code priority" wiring gap; the GPU execution run remains. **Doctrinal upgrade (surfaced, not silent):** the spec's Stage-3 optimizer is **GRPO** (Group Relative Policy Optimization), upgraded from the PPO named in earlier drafts — see the NOTE at `TTCL_v1_0_BREAKDOWN.md:302`. GRPO is the PPO-family optimizer that drops the learned value model for a group-relative baseline (the DeepSeek-R1/Qwen optimizer); the reward signal is still the Stage-2 constitutional scorer (Custom Constitutional AI, NOT standard RLHF).
+**Change Type:** Minor â€” Layer 7 training-pipeline *wiring* landed; the real TRL pipeline (SFTâ†’Rewardâ†’GRPOâ†’Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL) exists as runnable Python code, import-smoke-verified, CPU-verified. **No training executed** â€” the 8B GPU run is an explicitly-future job (deliberately not stubbed, no fake completion). This closes the prose's named "next code priority" wiring gap; the GPU execution run remains. **Doctrinal upgrade (surfaced, not silent):** the spec's Stage-3 optimizer is **GRPO** (Group Relative Policy Optimization), upgraded from the PPO named in earlier drafts â€” see the NOTE at `TTCL_v1_0_BREAKDOWN.md:302`. GRPO is the PPO-family optimizer that drops the learned value model for a group-relative baseline (the DeepSeek-R1/Qwen optimizer); the reward signal is still the Stage-2 constitutional scorer (Custom Constitutional AI, NOT standard RLHF).
 
 **Summary:**
 
-- **Layer 7 training-pipeline wiring (this PR):** new root-level `gnosis-training/` Python package (uv-managed, sibling to `gnostic-engine/`; spec `TTCL_v1_0_BREAKDOWN.md:275-311`). The real TRL pipeline as runnable code — `SFTTrainer` (Stage 1 SFT on Gnosis-event JSONL with 4-bit QLoRA, assistant loss-masking), `RewardTrainer` (Stage 2, `AutoModelForSequenceClassification` scalar head `num_labels=1`, MSE on the continuous 0-1 `total` score; a 5-way per-criterion head is a documented future refinement behind `RewardConfig.per_criterion_heads=False`), `GRPOTrainer` (Stage 3, GRPO alignment — group-relative baseline from N completions/prompt, no value model; the Stage-2 reward model slots in as `reward_funcs`; 4-bit QLoRA continue via `quantization_config` + `peft_config`), and an Eval battery (Stage 4, CPU-pure score-regression MAE/RMSE/R² per criterion + total, plus deterministic theo/techno/cosmo coherence proxies). Every spec silence is concretized in `generated/hyperparams.py` (LLaMA 3.1 8B base, LoRA r=64/α=128/dropout=0.05, target_modules, AdamW lr=2e-4 cosine warmup 3%, 4-bit nf4 double-quant, GRPO β=0.04 / ε=0.2 / num_generations=8 / max_completion_length=512, seed=42, eval MAE/R² thresholds).
-- **TRL version (modern, no upper cap — do NOT regress):** `trl>=0.15` in `pyproject.toml`. The spec's Stage-3 optimizer is **GRPO** (doctrinal upgrade from PPO; see the NOTE at `TTCL_v1_0_BREAKDOWN.md:302`). GRPO is the maintained PPO-family path in modern TRL — TRL removed the PPO stack (`PPOConfig`/`PPOTrainer`) after the 0.12–0.13 PPOv2 window (gone by 0.14+ and all 1.x, where SFT/Reward/GRPO/DPO/KTO remain). `grpo.py` targets the modern `GRPOTrainer`/`GRPOConfig` constructor signature (`model=`, `reward_funcs=`, `args=`, `processing_class=`, `reward_processing_classes=`, `quantization_config=`, `peft_config=` — no `ref_model`; the group-relative baseline replaces the value model, and KL-to-reference is handled internally when `beta>0`), so the package requires modern TRL with no upper cap — `uv sync` resolves `trl==1.8.0`, where `SFTTrainer`/`SFTConfig`/`RewardTrainer`/`RewardConfig`/`GRPOTrainer`/`GRPOConfig` are all genuinely importable. GRPO is therefore genuinely runnable (the doctrinal upgrade is surfaced in the spec NOTE, not a silent substitution). Re-pinning to `trl<0.14` would silently break GRPO at import time — do not do this.
-- **Honesty posture (load-bearing — do NOT regress):** real TRL wiring, **import-smoke-verified only; no training executed in this PR** — the LLaMA 3.1 8B run is an explicitly-future GPU job (stubbing real TRL/GPU stages would be fake-completion). Heavy imports (torch/transformers/trl/peft/datasets/accelerate/bitsandbytes) are LAZY inside the trainer builders so the package imports on a CPU-only box; `python -m gnosis_training --smoke-imports` is the honest "wiring resolves" proof (prints versions, exits non-zero with an install hint if the ML stack is absent — no model load, no CUDA).
-- **Preference pairs — the spec's biggest silence, concretized:** the spec (line 297-300) says the reward model trains on "preference pairs (response A vs response B)" but each Gnosis event has ONE `assistant` response (the data-gen producer emits it EMPTY — it is the SFT target). `preference.py` emits a **bootstrap worksheet** (the reference's exact JSON schema, `bootstrap: true`, empty `chosen.response`/`rejected.response`, rubric `scores` pre-filled from the event's `constitution_score` + a degraded rejected) for a human authoring pass — a worksheet, not ground truth. The reward model **trains on human-judged pairs** (spec line 478) via `load_human_pairs(path)` (reference schema, validates RULES 1/2/6 + rejects bootstrap), not the scaffold. `constitution_score` is NOT the RM label / NOT a GRPO reward — it seeds the worksheet rubric + gates SFT inclusion via `passes` (concretization grounded in spec lines 172+294, not spec-mandated).
-- **Wired-but-deferred (opt-in extras, honest stubs):** W&B/MLflow (`tracking`), DVC (`dvc`), and the 4-bit kernel bitsandbytes (`qlora` — hard to build on native Windows). All raise documented `RuntimeError`s until installed; not fake.
+- **Layer 7 training-pipeline wiring (this PR):** new root-level `gnosis-training/` Python package (uv-managed, sibling to `gnostic-engine/`; spec `TTCL_v1_0_BREAKDOWN.md:275-311`). The real TRL pipeline as runnable code â€” `SFTTrainer` (Stage 1 SFT on Gnosis-event JSONL with 4-bit QLoRA, assistant loss-masking), `RewardTrainer` (Stage 2, `AutoModelForSequenceClassification` scalar head `num_labels=1`, MSE on the continuous 0-1 `total` score; a 5-way per-criterion head is a documented future refinement behind `RewardConfig.per_criterion_heads=False`), `GRPOTrainer` (Stage 3, GRPO alignment â€” group-relative baseline from N completions/prompt, no value model; the Stage-2 reward model slots in as `reward_funcs`; 4-bit QLoRA continue via `quantization_config` + `peft_config`), and an Eval battery (Stage 4, CPU-pure score-regression MAE/RMSE/RÂ² per criterion + total, plus deterministic theo/techno/cosmo coherence proxies). Every spec silence is concretized in `generated/hyperparams.py` (LLaMA 3.1 8B base, LoRA r=64/Î±=128/dropout=0.05, target_modules, AdamW lr=2e-4 cosine warmup 3%, 4-bit nf4 double-quant, GRPO Î²=0.04 / Îµ=0.2 / num_generations=8 / max_completion_length=512, seed=42, eval MAE/RÂ² thresholds).
+- **TRL version (modern, no upper cap â€” do NOT regress):** `trl>=0.15` in `pyproject.toml`. The spec's Stage-3 optimizer is **GRPO** (doctrinal upgrade from PPO; see the NOTE at `TTCL_v1_0_BREAKDOWN.md:302`). GRPO is the maintained PPO-family path in modern TRL â€” TRL removed the PPO stack (`PPOConfig`/`PPOTrainer`) after the 0.12â€“0.13 PPOv2 window (gone by 0.14+ and all 1.x, where SFT/Reward/GRPO/DPO/KTO remain). `grpo.py` targets the modern `GRPOTrainer`/`GRPOConfig` constructor signature (`model=`, `reward_funcs=`, `args=`, `processing_class=`, `reward_processing_classes=`, `quantization_config=`, `peft_config=` â€” no `ref_model`; the group-relative baseline replaces the value model, and KL-to-reference is handled internally when `beta>0`), so the package requires modern TRL with no upper cap â€” `uv sync` resolves `trl==1.8.0`, where `SFTTrainer`/`SFTConfig`/`RewardTrainer`/`RewardConfig`/`GRPOTrainer`/`GRPOConfig` are all genuinely importable. GRPO is therefore genuinely runnable (the doctrinal upgrade is surfaced in the spec NOTE, not a silent substitution). Re-pinning to `trl<0.14` would silently break GRPO at import time â€” do not do this.
+- **Honesty posture (load-bearing â€” do NOT regress):** real TRL wiring, **import-smoke-verified only; no training executed in this PR** â€” the LLaMA 3.1 8B run is an explicitly-future GPU job (stubbing real TRL/GPU stages would be fake-completion). Heavy imports (torch/transformers/trl/peft/datasets/accelerate/bitsandbytes) are LAZY inside the trainer builders so the package imports on a CPU-only box; `python -m gnosis_training --smoke-imports` is the honest "wiring resolves" proof (prints versions, exits non-zero with an install hint if the ML stack is absent â€” no model load, no CUDA).
+- **Preference pairs â€” the spec's biggest silence, concretized:** the spec (line 297-300) says the reward model trains on "preference pairs (response A vs response B)" but each Gnosis event has ONE `assistant` response (the data-gen producer emits it EMPTY â€” it is the SFT target). `preference.py` emits a **bootstrap worksheet** (the reference's exact JSON schema, `bootstrap: true`, empty `chosen.response`/`rejected.response`, rubric `scores` pre-filled from the event's `constitution_score` + a degraded rejected) for a human authoring pass â€” a worksheet, not ground truth. The reward model **trains on human-judged pairs** (spec line 478) via `load_human_pairs(path)` (reference schema, validates RULES 1/2/6 + rejects bootstrap), not the scaffold. `constitution_score` is NOT the RM label / NOT a GRPO reward â€” it seeds the worksheet rubric + gates SFT inclusion via `passes` (concretization grounded in spec lines 172+294, not spec-mandated).
+- **Wired-but-deferred (opt-in extras, honest stubs):** W&B/MLflow (`tracking`), DVC (`dvc`), and the 4-bit kernel bitsandbytes (`qlora` â€” hard to build on native Windows). All raise documented `RuntimeError`s until installed; not fake.
 - **Determinism:** `seed_all(seed=42, include_torch=True)` seeds random/numpy always, torch/transformers lazily; `PYTHONHASHSEED` set. Pure metrics paths use numpy-seeded shuffles (no `random.random`/wall-clock), mirroring the repo's byte-reproducibility discipline.
 
 **Axiom alignment:**
 
-- **Axiom 12 (Resonant Convergence):** the pipeline wiring is the next tier of the TTCL/compiler axis the Layer 7 data-gen consumer feeds — it reads the Gnosis-event JSONL `@sovereign/gnosis-training-data` emits (Stage 1 SFT input) and closes the four-stage training loop in code. The dep direction is filesystem/data (Python reads the TS consumer's JSONL), not a workspace import — `gnosis-training` is a root-level Python package, not a `@sovereign/*` workspace member, so there is no cycle and no `pnpm-lock.yaml` perturbation.
+- **Axiom 12 (Resonant Convergence):** the pipeline wiring is the next tier of the TTCL/compiler axis the Layer 7 data-gen consumer feeds â€” it reads the Gnosis-event JSONL `@sovereign/gnosis-training-data` emits (Stage 1 SFT input) and closes the four-stage training loop in code. The dep direction is filesystem/data (Python reads the TS consumer's JSONL), not a workspace import â€” `gnosis-training` is a root-level Python package, not a `@sovereign/*` workspace member, so there is no cycle and no `pnpm-lock.yaml` perturbation.
 - **Axiom 11 (Constraint Validation):** the reward-model trainer refuses to train on bootstrap/invalid pairs (validate_pair raises; `load_human_pairs` returns only valid, non-bootstrap pairs), so a scaffold or garbage pair surfaces as an explicit error, never a silently mis-trained reward model.
 
 **Honesty note (mirrors v2.6.3/v2.6.4/v2.6.5):** this PR lands **real TRL wiring, import-smoke-verified only**. It does **not** run any stage of SFT/Reward/GRPO/Eval, does not load a model, and does not claim a training run. The 8B GPU run is the remaining frontier (deliberately not stubbed). The reward model's training signal is **human-judged** preference pairs (spec line 478); the bootstrap worksheet is a human-authoring scaffold, not ground truth, and `constitution_score` is never used as the RM label or a GRPO reward. Catalan slot labels + the `Theologia` wheel remain a future data-asset reconciliation (never fabricated).
 
-**Architectural invariant:** `gnosis-training/` is a root-level uv-managed Python package (sibling to `gnostic-engine/`), added to `pnpm-workspace.yaml` + the `scripts/verify-layout.ps1` allow-list so `pnpm` scripts reach its npm-shim `package.json` (which delegates to `uv run`); it is NOT a `@sovereign/*` workspace member, so `pnpm-lock.yaml` is untouched (the Python package uses `uv.lock`). NO Python is added to `ci.yml` — the package mirrors `gnostic-engine/`'s local-only posture (ruff/mypy/pytest run locally via `uv`). The TS↔Python dependency is filesystem/data (Python reads the Gnosis-event JSONL the TS consumer emits), not a workspace import — additive, no rearchitecting of gnostic-engine/ttcl/scheduler.
+**Architectural invariant:** `gnosis-training/` is a root-level uv-managed Python package (sibling to `gnostic-engine/`), added to `pnpm-workspace.yaml` + the `scripts/verify-layout.ps1` allow-list so `pnpm` scripts reach its npm-shim `package.json` (which delegates to `uv run`); it is NOT a `@sovereign/*` workspace member, so `pnpm-lock.yaml` is untouched (the Python package uses `uv.lock`). NO Python is added to `ci.yml` â€” the package mirrors `gnostic-engine/`'s local-only posture (ruff/mypy/pytest run locally via `uv`). The TSâ†”Python dependency is filesystem/data (Python reads the Gnosis-event JSONL the TS consumer emits), not a workspace import â€” additive, no rearchitecting of gnostic-engine/ttcl/scheduler.
 
-**Out of scope (explicit, honest):** the full Layer 7 GPU **execution run** (SFT→Reward→GRPO→Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL — a real GPU job, wiring landed, execution pending, not stubbed); the human-judged preference-pair dataset (spec line 478 — a human authoring job, not code); the canonical 45-pair Llull PairTable + Catalan slot labels + `Theologia` wheel (a future asset reconciliation, data drop). A scheduler CLI / W&B tracking is not in spec scope.
+**Out of scope (explicit, honest):** the full Layer 7 GPU **execution run** (SFTâ†’Rewardâ†’GRPOâ†’Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL â€” a real GPU job, wiring landed, execution pending, not stubbed); the human-judged preference-pair dataset (spec line 478 â€” a human authoring job, not code); the canonical 45-pair Llull PairTable + Catalan slot labels + `Theologia` wheel (a future asset reconciliation, data drop). A scheduler CLI / W&B tracking is not in spec scope.
 
 **State after update:**
 
 - Active master phase remains **Phase 1a**
-- **TTCL layer model (working 9-layer axis, NOT the 15-layer Base Stack):** Layers 1-5 + 8 (parity/CI) complete; Layer 6 *core optimizer* landed (PR #38); Layer 7 *data-generation consumer* landed (PR #39); Layer 7 *training-pipeline wiring* now landed (this PR — real TRL trainers + QLoRA as runnable code, import-smoke-verified, CPU-verified, no training executed; Stage-3 optimizer = GRPO, doctrinal upgrade from PPO); the full Layer 7 **GPU run** (SFT→Reward→GRPO→Eval; LLaMA 3.1 8B) + human-judged preference pairs + the real 45-pair PairTable asset remain the unbuilt frontier; Layer 9 (live activation) locally ~82-85% complete, capital-gated for public rollout. Status table in `docs/PROJECT_STATE.md`.
-- **Parity / CI:** the TS suite is unaffected (no TypeScript changes) — 221 integration tests green; scorer/tier/classifier parity CI-enforced and unaffected. The Python package is local-only (ruff clean, mypy --strict 17 files clean with the full ML stack installed — `uv sync` resolves `trl==1.8.0` under the modern-TRL un-pin; pytest 67 passed/0 skipped with the stack, 61 passed/2 skipped without — the 2 skips are `datasets` + `--smoke-imports` via `pytest.importorskip`, honest absent-deps-skip not fail); `pnpm check:layout` ✓ for `gnosis-training`; no `pnpm-lock.yaml` perturbation; no Python added to `ci.yml`.
+- **TTCL layer model (working 9-layer axis, NOT the 15-layer Base Stack):** Layers 1-5 + 8 (parity/CI) complete; Layer 6 *core optimizer* landed (PR #38); Layer 7 *data-generation consumer* landed (PR #39); Layer 7 *training-pipeline wiring* now landed (this PR â€” real TRL trainers + QLoRA as runnable code, import-smoke-verified, CPU-verified, no training executed; Stage-3 optimizer = GRPO, doctrinal upgrade from PPO); the full Layer 7 **GPU run** (SFTâ†’Rewardâ†’GRPOâ†’Eval; LLaMA 3.1 8B) + human-judged preference pairs + the real 45-pair PairTable asset remain the unbuilt frontier; Layer 9 (live activation) locally ~82-85% complete, capital-gated for public rollout. Status table in `docs/PROJECT_STATE.md`.
+- **Parity / CI:** the TS suite is unaffected (no TypeScript changes) â€” 221 integration tests green; scorer/tier/classifier parity CI-enforced and unaffected. The Python package is local-only (ruff clean, mypy --strict 17 files clean with the full ML stack installed â€” `uv sync` resolves `trl==1.8.0` under the modern-TRL un-pin; pytest 67 passed/0 skipped with the stack, 61 passed/2 skipped without â€” the 2 skips are `datasets` + `--smoke-imports` via `pytest.importorskip`, honest absent-deps-skip not fail); `pnpm check:layout` âœ“ for `gnosis-training`; no `pnpm-lock.yaml` perturbation; no Python added to `ci.yml`.
 - No new blockers introduced; CI green.
-- **Next code priority:** the full Layer 7 **GPU run** (SFT→Reward→GRPO→Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL) on a funded GPU box — the wiring landed in this PR, execution is the remaining frontier. Alongside: human-judged preference-pair authoring (spec line 478, the RM training signal) and the 45-pair Llull PairTable + Catalan labels + `Theologia` wheel data asset. A schema drift guard for `semiotic-program-schema.json` can land alongside.
+- **Next code priority:** the full Layer 7 **GPU run** (SFTâ†’Rewardâ†’GRPOâ†’Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL) on a funded GPU box â€” the wiring landed in this PR, execution is the remaining frontier. Alongside: human-judged preference-pair authoring (spec line 478, the RM training signal) and the 45-pair Llull PairTable + Catalan labels + `Theologia` wheel data asset. A schema drift guard for `semiotic-program-schema.json` can land alongside.
 
-## v2.6.5 — July 13, 2026
+## v2.6.5 â€” July 13, 2026
 
-**Change Type:** Minor — Layer 7 data-generation *consumer* landed; the deterministic local generator that turns a Layer 6 `canonical_schedule` into Gnosis training events (JSONL) — the feedstock the future SFT stage will consume. The full SFT→Reward→PPO→Eval pipeline remains unbuilt (a real GPU/TRL job, deliberately not stubbed).
+**Change Type:** Minor â€” Layer 7 data-generation *consumer* landed; the deterministic local generator that turns a Layer 6 `canonical_schedule` into Gnosis training events (JSONL) â€” the feedstock the future SFT stage will consume. The full SFTâ†’Rewardâ†’PPOâ†’Eval pipeline remains unbuilt (a real GPU/TRL job, deliberately not stubbed).
 
 **Summary:**
 
-- **Layer 7 data-gen consumer (PR #39):** new `@sovereign/gnosis-training-data` workspace package. It reads a `CanonicalSchedule` (`@sovereign/scheduler`, Layer 6) + its `WheelRegistry`, iterates the accepted rotation steps, materializes each step's wheel composite into a TTCL `Sign`, and **reuses `@sovereign/ttcl` `scoreSign`** (the L7.8 parity scorer — reused, not reimplemented) to fill the `constitution_score`. Emits one Gnosis training event per accepted step in the spec format (`TTCL_v1_0_BREAKDOWN.md:314-359`) as deterministic NDJSON (JSONL). The consumer is the prose's named Layer 7 "next code priority" (the data-generation consumer that turns a `canonical_schedule` into Gnosis training events).
-- **New schema:** `shared/ttcl-specs/gnosis-event.json` (draft-07, ajv-strict) — the JSON Schema the spec anticipates but never defined. Fields mirror the spec verbatim (`event_id`, `constitution_version`, `wheel_state`, `active_slots`, `provenance_tokens`, `messages`, `constitution_score`). `event_id` is a deterministic v5-style UUID (SHA-1 of the DNS namespace + `seed:stepIndex:compositeKey`), not random — required for byte-reproducible JSONL. Every emitted event is ajv-validated against this schema at test time.
-- **Determinism:** the consumer is a pure function of `(schedule, registry, config)`. All derived fields (`event_id`, slot letters, `key_hash`, `provenance_tokens`, the materialized `Sign`) are deterministic (seeded FNV-1a, SHA-1 v5 UUID — no `Math.random`, no wall-clock, no `crypto.randomUUID`). Same schedule + config → byte-identical `serializeEventsJsonl` output. The reproducibility gate is a live integration test, mirroring the scheduler's `serializeSchedule` gate.
-- **Honest concretizations (mirrors v2.6.4):** the spec gives the Gnosis Event *format* but is silent on how a Layer 6 rotation step maps onto a `Sign` / the event's derived fields. Each derivation is grounded in the nearest written evidence and documented in `src/materialize.ts` rather than presented as spec-mandated: offset → Latin-letter `slot` (the registry has no alphabet; modulo 26 keeps larger future wheels honest); `wheel_state.key_hash` = FNV-1a32(`seed:wheel:offset`); `provenance_tokens` = `<registry>:<wheel>:<offset>` per active facet; the `Sign` materialization (`domains` = the scheduler's own `compositeDomains` span — often bipartite, sometimes tripartite; modality = HYBRID iff all 3 domains else INDEX, so C2 varies; `sign_class_id` = `fnv1a32(seed:compositeKey) % 66`, a real 66-class manifold id so the pragmatism band (C4) varies across the curriculum; `pps` = the step's tripartite window term T; `trace.source` = `"gnosis-training-data"` so C3 holds; `noRlhf` = true so C5 holds).
+- **Layer 7 data-gen consumer (PR #39):** new `@sovereign/gnosis-training-data` workspace package. It reads a `CanonicalSchedule` (`@sovereign/scheduler`, Layer 6) + its `WheelRegistry`, iterates the accepted rotation steps, materializes each step's wheel composite into a TTCL `Sign`, and **reuses `@sovereign/ttcl` `scoreSign`** (the L7.8 parity scorer â€” reused, not reimplemented) to fill the `constitution_score`. Emits one Gnosis training event per accepted step in the spec format (`TTCL_v1_0_BREAKDOWN.md:314-359`) as deterministic NDJSON (JSONL). The consumer is the prose's named Layer 7 "next code priority" (the data-generation consumer that turns a `canonical_schedule` into Gnosis training events).
+- **New schema:** `shared/ttcl-specs/gnosis-event.json` (draft-07, ajv-strict) â€” the JSON Schema the spec anticipates but never defined. Fields mirror the spec verbatim (`event_id`, `constitution_version`, `wheel_state`, `active_slots`, `provenance_tokens`, `messages`, `constitution_score`). `event_id` is a deterministic v5-style UUID (SHA-1 of the DNS namespace + `seed:stepIndex:compositeKey`), not random â€” required for byte-reproducible JSONL. Every emitted event is ajv-validated against this schema at test time.
+- **Determinism:** the consumer is a pure function of `(schedule, registry, config)`. All derived fields (`event_id`, slot letters, `key_hash`, `provenance_tokens`, the materialized `Sign`) are deterministic (seeded FNV-1a, SHA-1 v5 UUID â€” no `Math.random`, no wall-clock, no `crypto.randomUUID`). Same schedule + config â†’ byte-identical `serializeEventsJsonl` output. The reproducibility gate is a live integration test, mirroring the scheduler's `serializeSchedule` gate.
+- **Honest concretizations (mirrors v2.6.4):** the spec gives the Gnosis Event *format* but is silent on how a Layer 6 rotation step maps onto a `Sign` / the event's derived fields. Each derivation is grounded in the nearest written evidence and documented in `src/materialize.ts` rather than presented as spec-mandated: offset â†’ Latin-letter `slot` (the registry has no alphabet; modulo 26 keeps larger future wheels honest); `wheel_state.key_hash` = FNV-1a32(`seed:wheel:offset`); `provenance_tokens` = `<registry>:<wheel>:<offset>` per active facet; the `Sign` materialization (`domains` = the scheduler's own `compositeDomains` span â€” often bipartite, sometimes tripartite; modality = HYBRID iff all 3 domains else INDEX, so C2 varies; `sign_class_id` = `fnv1a32(seed:compositeKey) % 66`, a real 66-class manifold id so the pragmatism band (C4) varies across the curriculum; `pps` = the step's tripartite window term T; `trace.source` = `"gnosis-training-data"` so C3 holds; `noRlhf` = true so C5 holds).
 
 **Axiom alignment:**
 
-- **Axiom 12 (Resonant Convergence):** the data-gen consumer is the next tier of the TTCL/compiler axis the Layer 6 scheduler feeds — it consumes the `CanonicalSchedule` the scheduler produces and emits the Gnosis events Layer 7's full pipeline will train on. The dep direction is `gnosis-training-data → scheduler → ttcl → types` (no cycle; the consumer does not depend on the compiler).
-- **Axiom 11 (Constraint Validation):** the consumer trusts the scheduler's already-validated `CanonicalSchedule` (ajv-validated against `canonical-schedule-schema.json` upstream) and re-emits each event through its own `gnosis-event.json` ajv gate at test time — a configuration error in the schedule or a consumer bug surfaces as a schema violation, never a silent malformed training sample.
+- **Axiom 12 (Resonant Convergence):** the data-gen consumer is the next tier of the TTCL/compiler axis the Layer 6 scheduler feeds â€” it consumes the `CanonicalSchedule` the scheduler produces and emits the Gnosis events Layer 7's full pipeline will train on. The dep direction is `gnosis-training-data â†’ scheduler â†’ ttcl â†’ types` (no cycle; the consumer does not depend on the compiler).
+- **Axiom 11 (Constraint Validation):** the consumer trusts the scheduler's already-validated `CanonicalSchedule` (ajv-validated against `canonical-schedule-schema.json` upstream) and re-emits each event through its own `gnosis-event.json` ajv gate at test time â€” a configuration error in the schedule or a consumer bug surfaces as a schema violation, never a silent malformed training sample.
 
-**Honesty note (mirrors v2.6.3/v2.6.4):** this PR lands **local, deterministic data-generation only**. It does **not** run any stage of SFT/Reward/PPO/Eval, does not load a model, and does not claim live pipeline wiring. Catalan slot labels are emitted as `null` — the Catalan slot-labels + `Theologia`-wheel data asset is not yet in the repo (PROJECT_STATE) and is **never fabricated**; `active_slots.*.label` will populate when that asset drops in (a data change, not a code change). The `assistant` message is emitted empty: it is the SFT training *target*, produced downstream by the labeling/modeling stage, not synthesized by this deterministic consumer. The `constitution_score` is therefore the *structural* score of the prompt scaffold (tripartite coverage + modality + manifold band + provenance), not a per-response score.
+**Honesty note (mirrors v2.6.3/v2.6.4):** this PR lands **local, deterministic data-generation only**. It does **not** run any stage of SFT/Reward/PPO/Eval, does not load a model, and does not claim live pipeline wiring. Catalan slot labels are emitted as `null` â€” the Catalan slot-labels + `Theologia`-wheel data asset is not yet in the repo (PROJECT_STATE) and is **never fabricated**; `active_slots.*.label` will populate when that asset drops in (a data change, not a code change). The `assistant` message is emitted empty: it is the SFT training *target*, produced downstream by the labeling/modeling stage, not synthesized by this deterministic consumer. The `constitution_score` is therefore the *structural* score of the prompt scaffold (tripartite coverage + modality + manifold band + provenance), not a per-response score.
 
-**Architectural invariant (unchanged):** `@sovereign/gnosis-training-data` depends on `@sovereign/scheduler` + `@sovereign/ttcl` + `@sovereign/types` (gnosis-training-data → scheduler → ttcl → types, no cycle). ajv is a runtime dep (the `gnosis-event.json` validator), following the named-`{ Ajv }`-import-under-NodeNext discipline. The lockfile was regenerated with pnpm 9.6.0 (the `packageManager` + CI pin) — a single new importer block, no resolution drift — so the frozen-lockfile CI install stays green. A `@sovereign/gnosis-training-data` alias was added to `vitest.config.ts` so the new integration test resolves from source (mirroring every other `@sovereign/*` package).
+**Architectural invariant (unchanged):** `@sovereign/gnosis-training-data` depends on `@sovereign/scheduler` + `@sovereign/ttcl` + `@sovereign/types` (gnosis-training-data â†’ scheduler â†’ ttcl â†’ types, no cycle). ajv is a runtime dep (the `gnosis-event.json` validator), following the named-`{ Ajv }`-import-under-NodeNext discipline. The lockfile was regenerated with pnpm 9.6.0 (the `packageManager` + CI pin) â€” a single new importer block, no resolution drift â€” so the frozen-lockfile CI install stays green. A `@sovereign/gnosis-training-data` alias was added to `vitest.config.ts` so the new integration test resolves from source (mirroring every other `@sovereign/*` package).
 
-**Out of scope (explicit, honest):** the full Layer 7 Training Pipeline (SFT→Reward→PPO→Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL) — a real GPU job, deliberately not stubbed (stubbing real TRL/GPU stages would be fake-completion). The canonical 45-pair Llull PairTable + Catalan slot labels + the `Theologia` wheel remain a future asset reconciliation (data drop, no consumer code change). A scheduler CLI / W&B tracking is not in spec scope.
+**Out of scope (explicit, honest):** the full Layer 7 Training Pipeline (SFTâ†’Rewardâ†’PPOâ†’Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL) â€” a real GPU job, deliberately not stubbed (stubbing real TRL/GPU stages would be fake-completion). The canonical 45-pair Llull PairTable + Catalan slot labels + the `Theologia` wheel remain a future asset reconciliation (data drop, no consumer code change). A scheduler CLI / W&B tracking is not in spec scope.
 
 **State after update:**
 
 - Active master phase remains **Phase 1a**
-- **TTCL layer model (working 9-layer axis, NOT the 15-layer Base Stack):** Layers 1-5 + 8 (parity/CI) complete; Layer 6 *core optimizer* landed (PR #38); Layer 7 *data-generation consumer* now landed (PR #39 — Gnosis event JSONL, reusing `scoreSign`, deterministic + byte-reproducible); the full Layer 7 Training Pipeline (SFT→Reward→PPO→Eval) + the real 45-pair PairTable asset remain unbuilt; Layer 9 (live activation) locally ~82-85% complete, capital-gated for public rollout. Status table in `docs/PROJECT_STATE.md`.
-- **Parity / CI:** 221 integration tests green (209 existing + 12 new `gnosis-training-data.test.ts` cases — schema validation, determinism/byte-reproducibility gate, all-3-domains coverage, `scoreSign` reuse + per-criterion parity, accepted-steps semantics, `label === null` honesty); `@sovereign/ttcl` 43/43; scorer/tier/classifier parity CI-enforced and unaffected; recursive `tsc --noEmit` green; no numerics/sign-types/ttcl-artifacts drift; `pnpm check:layout` ✓.
+- **TTCL layer model (working 9-layer axis, NOT the 15-layer Base Stack):** Layers 1-5 + 8 (parity/CI) complete; Layer 6 *core optimizer* landed (PR #38); Layer 7 *data-generation consumer* now landed (PR #39 â€” Gnosis event JSONL, reusing `scoreSign`, deterministic + byte-reproducible); the full Layer 7 Training Pipeline (SFTâ†’Rewardâ†’PPOâ†’Eval) + the real 45-pair PairTable asset remain unbuilt; Layer 9 (live activation) locally ~82-85% complete, capital-gated for public rollout. Status table in `docs/PROJECT_STATE.md`.
+- **Parity / CI:** 221 integration tests green (209 existing + 12 new `gnosis-training-data.test.ts` cases â€” schema validation, determinism/byte-reproducibility gate, all-3-domains coverage, `scoreSign` reuse + per-criterion parity, accepted-steps semantics, `label === null` honesty); `@sovereign/ttcl` 43/43; scorer/tier/classifier parity CI-enforced and unaffected; recursive `tsc --noEmit` green; no numerics/sign-types/ttcl-artifacts drift; `pnpm check:layout` âœ“.
 - No new blockers introduced; all tests pass without regression; CI green on PR #39.
-- **Next code priority:** the full Layer 7 Training Pipeline (SFT→Reward→PPO→Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL) — a real GPU job. The data-generation consumer that feeds it is now landed. A schema drift guard for `semiotic-program-schema.json` can land alongside.
+- **Next code priority:** the full Layer 7 Training Pipeline (SFTâ†’Rewardâ†’PPOâ†’Eval; LLaMA 3.1 8B + QLoRA + HuggingFace TRL) â€” a real GPU job. The data-generation consumer that feeds it is now landed. A schema drift guard for `semiotic-program-schema.json` can land alongside.
 
-## v2.6.4 — July 13, 2026
+## v2.6.4 â€” July 13, 2026
 
-**Change Type:** Minor — Layer 6 Scheduler *core optimizer* landed; the simulated-annealing wheel-rotation schedule generator (`canonical_schedule.json`) is real + byte-reproducible
+**Change Type:** Minor â€” Layer 6 Scheduler *core optimizer* landed; the simulated-annealing wheel-rotation schedule generator (`canonical_schedule.json`) is real + byte-reproducible
 
 **Summary:**
 
-- **Layer 6 Scheduler (PR #38):** new `@sovereign/scheduler` workspace package — the simulated-annealing optimizer over Llull wheel rotations that produces `canonical_schedule.json`, "the default rotation sequence for data generation" (`TTCL_v1_0_BREAKDOWN.md:228-271`). The spec is concrete where it matters: the objective `J = αC + βL + γT − δS` (weights 0.35/0.25/0.30/0.10), the three moves drawn by fixed probabilities (LocalRotate 0.65 / PatternSwitch 0.25 / WheelSwap 0.10), the SA constants (T_init 1.0, T_min 0.001, cooling 0.9995), and the global constraint "at least one wheel per TTCL facet always active." The constraint is enforced by construction — every proposed `WheelSwap` targets a wheel the registry loader has already validated covers that facet, so the invariant cannot be broken by any single move.
-- **Determinism:** a seeded mulberry32 PRNG (`@sovereign/scheduler/src/rng.ts`) makes the schedule a pure function of `(registry, config, seed)`. The draw order is fixed per step (move-type draw → move-internal draws → exactly one accept/reject draw only when ΔJ ≤ 0 and T > 0), so the checked-in `shared/fixtures/layer6/canonical_schedule.json` regenerates **byte-identical** from the default seed. The reproducibility gate is a live integration test (same seed → identical schedule; regenerating the fixture matches byte-for-byte). This realizes the spec's "run multiple scheduler instances with different random seeds" premature-convergence mitigation, which requires seedability.
-- **Data-driven registry:** the scheduler reads wheels + the pair table from `shared/fixtures/layer6/wheel-registry.json` (validated against `shared/ttcl-specs/wheel-registry-schema.json` at load time with ajv + a cross-reference integrity pass). The default fixture is the spec's explicit 5-wheel state space (A 16/THEOLOGY, T 20/THEOLOGY+COSMOLOGY, V 14/TECHNOLOGY, X 16/COSMOLOGY, S 18/TECHNOLOGY) with the combinatorial 10-pair set and the `active_slots`-sample facet binding. The scheduler reads `pairs`, never hardcodes them — so the real 45-pair Llull PairTable + Catalan slot labels drop in later as a data change.
+- **Layer 6 Scheduler (PR #38):** new `@sovereign/scheduler` workspace package â€” the simulated-annealing optimizer over Llull wheel rotations that produces `canonical_schedule.json`, "the default rotation sequence for data generation" (`TTCL_v1_0_BREAKDOWN.md:228-271`). The spec is concrete where it matters: the objective `J = Î±C + Î²L + Î³T âˆ’ Î´S` (weights 0.35/0.25/0.30/0.10), the three moves drawn by fixed probabilities (LocalRotate 0.65 / PatternSwitch 0.25 / WheelSwap 0.10), the SA constants (T_init 1.0, T_min 0.001, cooling 0.9995), and the global constraint "at least one wheel per TTCL facet always active." The constraint is enforced by construction â€” every proposed `WheelSwap` targets a wheel the registry loader has already validated covers that facet, so the invariant cannot be broken by any single move.
+- **Determinism:** a seeded mulberry32 PRNG (`@sovereign/scheduler/src/rng.ts`) makes the schedule a pure function of `(registry, config, seed)`. The draw order is fixed per step (move-type draw â†’ move-internal draws â†’ exactly one accept/reject draw only when Î”J â‰¤ 0 and T > 0), so the checked-in `shared/fixtures/layer6/canonical_schedule.json` regenerates **byte-identical** from the default seed. The reproducibility gate is a live integration test (same seed â†’ identical schedule; regenerating the fixture matches byte-for-byte). This realizes the spec's "run multiple scheduler instances with different random seeds" premature-convergence mitigation, which requires seedability.
+- **Data-driven registry:** the scheduler reads wheels + the pair table from `shared/fixtures/layer6/wheel-registry.json` (validated against `shared/ttcl-specs/wheel-registry-schema.json` at load time with ajv + a cross-reference integrity pass). The default fixture is the spec's explicit 5-wheel state space (A 16/THEOLOGY, T 20/THEOLOGY+COSMOLOGY, V 14/TECHNOLOGY, X 16/COSMOLOGY, S 18/TECHNOLOGY) with the combinatorial 10-pair set and the `active_slots`-sample facet binding. The scheduler reads `pairs`, never hardcodes them â€” so the real 45-pair Llull PairTable + Catalan slot labels drop in later as a data change.
 
 **Axiom alignment:**
 
-- **Axiom 11 (Constraint Validation):** the all-facets-covered constraint is total — it holds at the initial state (loader-validated) and is preserved by every move (proposals only target covering wheels). `constraintHolds` is asserted across every state in a full run trajectory by the integration suite. The registry loader raises a typed `RegistrySchemaError` / `RegistryIntegrityError` at load time (a configuration error, never a runtime surprise), mirroring the compiler's compile-error discipline.
-- **Axiom 12 (Resonant Convergence):** the Layer 6 optimizer is the next tier of the TTCL/compiler axis the compiler stack feeds — it consumes the `Wheel<N>` runtime the compiler lowers to (L0) and produces the rotation sequence Layer 7's data-generation pipeline will consume. The dep direction is `scheduler → ttcl → types` (no cycle; the scheduler does not depend on the compiler, since it rotates wheels, not compiled programs).
+- **Axiom 11 (Constraint Validation):** the all-facets-covered constraint is total â€” it holds at the initial state (loader-validated) and is preserved by every move (proposals only target covering wheels). `constraintHolds` is asserted across every state in a full run trajectory by the integration suite. The registry loader raises a typed `RegistrySchemaError` / `RegistryIntegrityError` at load time (a configuration error, never a runtime surprise), mirroring the compiler's compile-error discipline.
+- **Axiom 12 (Resonant Convergence):** the Layer 6 optimizer is the next tier of the TTCL/compiler axis the compiler stack feeds â€” it consumes the `Wheel<N>` runtime the compiler lowers to (L0) and produces the rotation sequence Layer 7's data-generation pipeline will consume. The dep direction is `scheduler â†’ ttcl â†’ types` (no cycle; the scheduler does not depend on the compiler, since it rotates wheels, not compiled programs).
 
-**Honesty note (mirrors v2.6.3):** the spec names the `pattern` state field + `PatternSwitch` move, the PairTable, the N-step window size, and the per-step Cost S, but defines NO concrete semantics for any of them beyond the one-line term glosses and the `combineWheels(wA,wB,rule,budget)` pairing-rule signature. This PR concretizes each grounded in the nearest written evidence and documents it as such in the module comments + this entry rather than presenting it as spec-mandated: (1) `pattern` = the id of an active wheel-pair drawn from the pair table; (2) `windowN` = 3 (config-overridable); (3) S = normalized composites materialized (LocalRotate 1, PatternSwitch/WheelSwap 2); (4) the explicit `facets` state field — the spec's state-space tuple omits it, but the `WheelSwap` move implies a mutable facet→wheel binding, so `facets` is made an explicit state field.
+**Honesty note (mirrors v2.6.3):** the spec names the `pattern` state field + `PatternSwitch` move, the PairTable, the N-step window size, and the per-step Cost S, but defines NO concrete semantics for any of them beyond the one-line term glosses and the `combineWheels(wA,wB,rule,budget)` pairing-rule signature. This PR concretizes each grounded in the nearest written evidence and documents it as such in the module comments + this entry rather than presenting it as spec-mandated: (1) `pattern` = the id of an active wheel-pair drawn from the pair table; (2) `windowN` = 3 (config-overridable); (3) S = normalized composites materialized (LocalRotate 1, PatternSwitch/WheelSwap 2); (4) the explicit `facets` state field â€” the spec's state-space tuple omits it, but the `WheelSwap` move implies a mutable facetâ†’wheel binding, so `facets` is made an explicit state field.
 
-**Architectural invariant (unchanged):** `@sovereign/scheduler` depends on `@sovereign/ttcl` only (scheduler → ttcl → types, no cycle). ajv is a runtime dep of `@sovereign/scheduler` (the registry + output schemas), following the compiler's named-`{ Ajv }`-import-under-NodeNext discipline. The lockfile was regenerated with pnpm 9.6.0 (the `packageManager` + CI pin) so the frozen-lockfile CI install stays green.
+**Architectural invariant (unchanged):** `@sovereign/scheduler` depends on `@sovereign/ttcl` only (scheduler â†’ ttcl â†’ types, no cycle). ajv is a runtime dep of `@sovereign/scheduler` (the registry + output schemas), following the compiler's named-`{ Ajv }`-import-under-NodeNext discipline. The lockfile was regenerated with pnpm 9.6.0 (the `packageManager` + CI pin) so the frozen-lockfile CI install stays green.
 
 **Out of scope (explicit, honest):** the data-generation *consumer* (turning a schedule into Gnosis training events) is Layer 7 territory; the canonical 45-pair Llull PairTable + Catalan slot labels + the `Theologia` wheel are a future asset reconciliation (data drop, no scheduler code change); a scheduler CLI / W&B tracking is not in spec scope.
 
 **State after update:**
 
 - Active master phase remains **Phase 1a**
-- **TTCL layer model (working 9-layer axis, NOT the 15-layer Base Stack):** Layers 1-5 + 8 (parity/CI) complete; Layer 6 *core optimizer* now landed (PR #38 — `canonical_schedule.json` generated + byte-reproducible); Layer 6 follow-ups (data-gen consumer + real 45-pair PairTable asset) and Layer 7 (Training Pipeline) specified but unbuilt; Layer 9 (live activation) locally ~82-85% complete, capital-gated for public rollout. Status table in `docs/PROJECT_STATE.md`.
-- **Parity / CI:** 209 integration tests green (179 existing + 30 new `scheduler.test.ts` cases — registry/integrity, move semantics, constraint invariant, objective ranges + ΔJ, determinism, cooling, coverage, output-schema validation, byte-reproducibility gate); `@sovereign/ttcl` 43/43; scorer/tier/classifier parity CI-enforced and unaffected; recursive `tsc --noEmit` green; no numerics/sign-types/ttcl-artifacts drift; `pnpm check:layout` ✓.
+- **TTCL layer model (working 9-layer axis, NOT the 15-layer Base Stack):** Layers 1-5 + 8 (parity/CI) complete; Layer 6 *core optimizer* now landed (PR #38 â€” `canonical_schedule.json` generated + byte-reproducible); Layer 6 follow-ups (data-gen consumer + real 45-pair PairTable asset) and Layer 7 (Training Pipeline) specified but unbuilt; Layer 9 (live activation) locally ~82-85% complete, capital-gated for public rollout. Status table in `docs/PROJECT_STATE.md`.
+- **Parity / CI:** 209 integration tests green (179 existing + 30 new `scheduler.test.ts` cases â€” registry/integrity, move semantics, constraint invariant, objective ranges + Î”J, determinism, cooling, coverage, output-schema validation, byte-reproducibility gate); `@sovereign/ttcl` 43/43; scorer/tier/classifier parity CI-enforced and unaffected; recursive `tsc --noEmit` green; no numerics/sign-types/ttcl-artifacts drift; `pnpm check:layout` âœ“.
 - No new blockers introduced; all tests pass without regression; CI green on PR #38.
-- **Next code priority:** Layer 7 Training Pipeline (SFT→Reward→PPO→Eval) + the data-generation consumer that turns a Layer 6 schedule into Gnosis training events. A schema drift guard for `semiotic-program-schema.json` can land alongside either.
+- **Next code priority:** Layer 7 Training Pipeline (SFTâ†’Rewardâ†’PPOâ†’Eval) + the data-generation consumer that turns a Layer 6 schedule into Gnosis training events. A schema drift guard for `semiotic-program-schema.json` can land alongside either.
 
-## v2.6.3 — July 13, 2026
+## v2.6.3 â€” July 13, 2026
 
-**Change Type:** Minor — Layer 5's named follow-ups (L2 rewrite/fusion pass + `attachModality` op) landed; the compiler stack's spec-defined work is complete
+**Change Type:** Minor â€” Layer 5's named follow-ups (L2 rewrite/fusion pass + `attachModality` op) landed; the compiler stack's spec-defined work is complete
 
 **Summary:**
 
-- **L2 rewrite/fusion pass (PR #37):** the second of the L2 four passes (deferred since v2.6.0) is now real. New `sign-graph/rewrite.ts` produces a `ResolveMap` (id → canonical id) rather than mutating the immutable `SignGraph`, so ids stay stable and provenance refs survive. The spec names the rewrite but defines only one rule — `map(f)∘map(g)≡map(f∘g)` — and `map` ops carry no function payload in the IR (structural identity), so the rule collapses to *transitive map identity-elimination*: a `map` over a `map` over a carrier resolves to the carrier, and a bare identity `map(s)` resolves to `s`. `attachModality` is intentionally NOT eliminated (it is semantically load-bearing). Only `buildValues` consumes the resolve map (eliminated maps inherit their carrier's value); inference's type cache is already propagated, so constitution + provenance need no resolve threading.
-- **Branch-join inference (`fold`/`choose`):** previously a single-input passthrough, `fold`/`choose` now infer `joinModalities` over ALL inputs. PURE is the join identity — a PURE branch does NOT abort (a deliberate contrast with `compose`, where a PURE input is a `LatticeAbortError`); distinct non-PURE modalities join to HYBRID; domains union in canonical order (THEOLOGY, TECHNOLOGY, COSMOLOGY).
+- **L2 rewrite/fusion pass (PR #37):** the second of the L2 four passes (deferred since v2.6.0) is now real. New `sign-graph/rewrite.ts` produces a `ResolveMap` (id â†’ canonical id) rather than mutating the immutable `SignGraph`, so ids stay stable and provenance refs survive. The spec names the rewrite but defines only one rule â€” `map(f)âˆ˜map(g)â‰¡map(fâˆ˜g)` â€” and `map` ops carry no function payload in the IR (structural identity), so the rule collapses to *transitive map identity-elimination*: a `map` over a `map` over a carrier resolves to the carrier, and a bare identity `map(s)` resolves to `s`. `attachModality` is intentionally NOT eliminated (it is semantically load-bearing). Only `buildValues` consumes the resolve map (eliminated maps inherit their carrier's value); inference's type cache is already propagated, so constitution + provenance need no resolve threading.
+- **Branch-join inference (`fold`/`choose`):** previously a single-input passthrough, `fold`/`choose` now infer `joinModalities` over ALL inputs. PURE is the join identity â€” a PURE branch does NOT abort (a deliberate contrast with `compose`, where a PURE input is a `LatticeAbortError`); distinct non-PURE modalities join to HYBRID; domains union in canonical order (THEOLOGY, TECHNOLOGY, COSMOLOGY).
 - **`attachModality` op (PR #37):** new `CombinatorOp` `{ id, op:"attachModality", inputs:[carrier], modality:M }`. Inference overrides the carrier's modality to M (domains inherited); materialize lowers it to a fresh `Sign` with the overridden modality. The use case is promoting a declared-INDEX sign to SYMBOL so it becomes eligible for the L1 `encodeSign` path without re-declaring the sign. The declared `SignDecl.modality` stays **immutable**; the override lives in the `InferredType` cache + the lowered runtime `Sign`. `bindProvenance`'s `encodeSign.sign` check is relaxed to accept a `sign` declaration OR an `op` output (so `attachModality`'s output can be encoded); the SYMBOL-modality requirement is still enforced later by the L1 pass.
 - **Schema** (`shared/ttcl-specs/semiotic-program-schema.json`): the `ops` enum gains `attachModality`; an optional `modality` field is added to op items; an `if/then` requires `modality` + `maxItems:1` input when `op:"attachModality"` (ajv strict-mode compatible). The existing `op:"encodeSign"`-in-`ops` rejection test still holds (encodeSign/decodeSign remain in `provenance.ops`).
-- **Facade reorder:** the four L2 passes now run in the spec's order — load → infer → rewrite → constitution → budget → L1 → L0. Budget moved to last (after constitution), reconciling the facade with the spec's four-pass list.
+- **Facade reorder:** the four L2 passes now run in the spec's order â€” load â†’ infer â†’ rewrite â†’ constitution â†’ budget â†’ L1 â†’ L0. Budget moved to last (after constitution), reconciling the facade with the spec's four-pass list.
 
 **Axiom alignment:**
 
 - **Axiom 11 (Constraint Validation):** the rewrite pass is total (never throws) and preserves the immutable-graph invariant via a resolve map rather than in-place mutation; an eliminated `map` cannot silently change a downstream result because `buildValues` is the single consumer and inherits the carrier's value verbatim. `attachModality` to a non-Sign carrier raises `LatticeAbortError` at materialize, not a runtime cast failure.
 - **Axiom 12 (Resonant Convergence):** the L2 dialect now has all four passes the spec names (inference, rewrite, constitution, budget), in order. The MLIR stack's spec-defined work is complete; the only named extras still deferred (schema drift guard) are CI niceties, while code-emission L0 + Python parity remain explicit non-goals by design.
 
-**Honesty note:** the spec names both `attachModality` and the rewrite/fusion pass but defines NO semantics for either beyond `map(f)∘map(g)≡map(f∘g)`. The semantics above are grounded in that one written rule (transitive map identity-elimination) and the PROJECT_STATE branch-join gloss, and are documented as such in the code comments + this entry rather than presented as spec-mandated.
+**Honesty note:** the spec names both `attachModality` and the rewrite/fusion pass but defines NO semantics for either beyond `map(f)âˆ˜map(g)â‰¡map(fâˆ˜g)`. The semantics above are grounded in that one written rule (transitive map identity-elimination) and the PROJECT_STATE branch-join gloss, and are documented as such in the code comments + this entry rather than presented as spec-mandated.
 
-**Architectural invariant (unchanged):** `@sovereign/ttcl` never imports `@sovereign/compiler` (compiler → ttcl → types, no cycle). ajv remains a runtime dep of `@sovereign/compiler` only. The new `rewrite.ts` is internal to the compiler and depends only on the `SignGraph`/`SsaNode` types.
+**Architectural invariant (unchanged):** `@sovereign/ttcl` never imports `@sovereign/compiler` (compiler â†’ ttcl â†’ types, no cycle). ajv remains a runtime dep of `@sovereign/compiler` only. The new `rewrite.ts` is internal to the compiler and depends only on the `SignGraph`/`SsaNode` types.
 
 **State after update:**
 
 - Active master phase remains **Phase 1a**
-- **TTCL compiler stack:** L3 SemioticDialect (PR #25) + L2 SignGraphDialect — now with all four passes: inference / rewrite-fusion / constitution / budget (PR #25 + #37) — + L1 ProvenanceDialect (PR #35) all landed. The full L3→L2→L1→L0 stack is realized; the spec-defined Layer 5 work is complete.
-- **Parity / CI:** 179 integration tests green (166 + 13 new `compiler-sign-graph.test.ts` cases — 5 rewrite/fusion, 4 attachModality→encodeSign end-to-end, 4 branch-join/schema); `schema-validators.test.ts` (shared-schema consumer) green; `@sovereign/ttcl` 43/43; scorer/tier/classifier parity CI-enforced and unaffected; recursive `tsc --noEmit` green; no numerics/sign-types/ttcl-artifacts drift.
+- **TTCL compiler stack:** L3 SemioticDialect (PR #25) + L2 SignGraphDialect â€” now with all four passes: inference / rewrite-fusion / constitution / budget (PR #25 + #37) â€” + L1 ProvenanceDialect (PR #35) all landed. The full L3â†’L2â†’L1â†’L0 stack is realized; the spec-defined Layer 5 work is complete.
+- **Parity / CI:** 179 integration tests green (166 + 13 new `compiler-sign-graph.test.ts` cases â€” 5 rewrite/fusion, 4 attachModalityâ†’encodeSign end-to-end, 4 branch-join/schema); `schema-validators.test.ts` (shared-schema consumer) green; `@sovereign/ttcl` 43/43; scorer/tier/classifier parity CI-enforced and unaffected; recursive `tsc --noEmit` green; no numerics/sign-types/ttcl-artifacts drift.
 - **TTCL layer model (working 9-layer axis, NOT the 15-layer Base Stack):** Layers 1-5 + 8 (parity/CI) complete; Layer 5 now spec-complete (L3+L2+L1; the schema drift guard is a remaining CI nicety, code-emission L0 + Python parity are non-goals by design); Layers 6 (Scheduler) and 7 (Training Pipeline) specified but unbuilt; Layer 9 (live activation) locally ~82-85% complete, capital-gated for public rollout. Status table in `docs/PROJECT_STATE.md`.
 - No new blockers introduced; all tests pass without regression; CI green on PR #37.
-- **Next code priority:** Layer 6 Scheduler (simulated-annealing wheel rotations → `canonical_schedule.json`), then Layer 7 Training Pipeline (SFT→Reward→PPO→Eval). A schema drift guard for `semiotic-program-schema.json` can land alongside either.
+- **Next code priority:** Layer 6 Scheduler (simulated-annealing wheel rotations â†’ `canonical_schedule.json`), then Layer 7 Training Pipeline (SFTâ†’Rewardâ†’PPOâ†’Eval). A schema drift guard for `semiotic-program-schema.json` can land alongside either.
 
-## v2.6.2 — July 13, 2026
+## v2.6.2 â€” July 13, 2026
 
-**Change Type:** Major — Layer 5 L1 ProvenanceDialect landed; the MLIR compiler stack's fourth and final lowering level is realized (L3→L2→L1→L0 complete)
+**Change Type:** Major â€” Layer 5 L1 ProvenanceDialect landed; the MLIR compiler stack's fourth and final lowering level is realized (L3â†’L2â†’L1â†’L0 complete)
 
 **Summary:**
 
-- **L1 ProvenanceDialect (PR #35):** the Linear-types fundamental (TTCL §II.6) — the last deferred lowering level named in v2.6.0 — is now real. The L1 pass runs after L2 and before L0 (matching the spec ordering); it is a no-op when a program has no `provenance` section, so every existing program lowers unchanged.
-  - **Runtime reconciliation** — `encodeSign(s,w,k)` / `decodeSign(t,w,k)` are now faithful to the §II.3/§II.6 L1 signature: they take a Wheel + KeyCap, **consume the KeyCap** (single-use capability), and produce/recover an opaque `EncToken` (Trithemius ciphertext over JSON+UTF-8 bytes) rather than a numeric array. The previous numeric codec is renamed `serializeSign`/`deserializeSign` (internal). `KeyCap` gains `consumed`/`consume()` (mirroring `Token`) + `KeyCapAlreadyConsumedError`; `EncSignModalityError` rejects a non-SYMBOL sign.
-  - **Schema** — optional `provenance: { keyCaps, tokens, ops }` section in `shared/ttcl-specs/semiotic-program-schema.json`. The L2 `ops` enum is unchanged — `encodeSign`/`decodeSign` live in `provenance.ops`, so the existing schema-rejection test for `op:"encodeSign"` in `ops` still holds.
-  - **IR + L3** — `KeyCapDecl`/`TokenDecl`/`ProvenanceOpDecl` added to the `SsaNode` union (distinct `kind` tags), held in the shared `nodes` map for uniform ref resolution + program-wide id uniqueness, but not pushed to `order` (the four L2 passes never see them). `bindProvenance` resolves provenance refs + enforces acyclicity via a tri-color DFS over the provenance-internal edges (refs flow FROM provenance TO main, never reverse → no cycle through the main graph).
-  - **L1 pass** (`sign-graph/provenance.ts`, new) — three §II.6 checks: (1) linear token threading — every token consumed ≤ once, exactly one unconsumed terminal (the provenance root); (2) encoding lowering — every `encodeSign` `sign` ref must infer to SYMBOL (compile-time mirror of `EncSignModalityError`); (3) KeyCap capability — each key consumed exactly once (unconsumed = declared-but-unspent = error; double-consumed = reuse). Throws `ProvenanceCompileError`.
-  - **L0** — `buildProvenanceValues` lowers `encodeSign`/`decodeSign` via the reconciled runtime cipher (a fresh KeyCap per decl, consumed once — the runtime `KeyCapAlreadyConsumedError` is the backstop for the linearity the L1 pass already proved). Exposes EncTokens + recovered Signs as `CompiledProgram.provenance`. The program `output` stays a Sign (provenance is the attestation layer, not the semantic output), so the constitution gate + existing output tests are unchanged.
+- **L1 ProvenanceDialect (PR #35):** the Linear-types fundamental (TTCL Â§II.6) â€” the last deferred lowering level named in v2.6.0 â€” is now real. The L1 pass runs after L2 and before L0 (matching the spec ordering); it is a no-op when a program has no `provenance` section, so every existing program lowers unchanged.
+  - **Runtime reconciliation** â€” `encodeSign(s,w,k)` / `decodeSign(t,w,k)` are now faithful to the Â§II.3/Â§II.6 L1 signature: they take a Wheel + KeyCap, **consume the KeyCap** (single-use capability), and produce/recover an opaque `EncToken` (Trithemius ciphertext over JSON+UTF-8 bytes) rather than a numeric array. The previous numeric codec is renamed `serializeSign`/`deserializeSign` (internal). `KeyCap` gains `consumed`/`consume()` (mirroring `Token`) + `KeyCapAlreadyConsumedError`; `EncSignModalityError` rejects a non-SYMBOL sign.
+  - **Schema** â€” optional `provenance: { keyCaps, tokens, ops }` section in `shared/ttcl-specs/semiotic-program-schema.json`. The L2 `ops` enum is unchanged â€” `encodeSign`/`decodeSign` live in `provenance.ops`, so the existing schema-rejection test for `op:"encodeSign"` in `ops` still holds.
+  - **IR + L3** â€” `KeyCapDecl`/`TokenDecl`/`ProvenanceOpDecl` added to the `SsaNode` union (distinct `kind` tags), held in the shared `nodes` map for uniform ref resolution + program-wide id uniqueness, but not pushed to `order` (the four L2 passes never see them). `bindProvenance` resolves provenance refs + enforces acyclicity via a tri-color DFS over the provenance-internal edges (refs flow FROM provenance TO main, never reverse â†’ no cycle through the main graph).
+  - **L1 pass** (`sign-graph/provenance.ts`, new) â€” three Â§II.6 checks: (1) linear token threading â€” every token consumed â‰¤ once, exactly one unconsumed terminal (the provenance root); (2) encoding lowering â€” every `encodeSign` `sign` ref must infer to SYMBOL (compile-time mirror of `EncSignModalityError`); (3) KeyCap capability â€” each key consumed exactly once (unconsumed = declared-but-unspent = error; double-consumed = reuse). Throws `ProvenanceCompileError`.
+  - **L0** â€” `buildProvenanceValues` lowers `encodeSign`/`decodeSign` via the reconciled runtime cipher (a fresh KeyCap per decl, consumed once â€” the runtime `KeyCapAlreadyConsumedError` is the backstop for the linearity the L1 pass already proved). Exposes EncTokens + recovered Signs as `CompiledProgram.provenance`. The program `output` stays a Sign (provenance is the attestation layer, not the semantic output), so the constitution gate + existing output tests are unchanged.
 
 **Axiom alignment:**
 
 - **Axiom 11 (Constraint Validation):** a provenance-failing program (double-consumed key/token, ambiguous root, non-SYMBOL encodeSign) is rejected at compile time with a typed `ProvenanceCompileError`; no silent execution of an ill-formed provenance graph.
-- **Axiom 12 (Resonant Convergence):** the MLIR four-level stack — L3 Semiotic → L2 SignGraph → L1 Provenance → L0 Target — is now fully realized (previously L1 was the deferred gap noted in v2.6.0).
+- **Axiom 12 (Resonant Convergence):** the MLIR four-level stack â€” L3 Semiotic â†’ L2 SignGraph â†’ L1 Provenance â†’ L0 Target â€” is now fully realized (previously L1 was the deferred gap noted in v2.6.0).
 
-**Architectural invariant (unchanged):** `@sovereign/ttcl` never imports `@sovereign/compiler` (compiler → ttcl → types, no cycle). The L1 pass imports `KeyCap`/`encodeSign`/`decodeSign`/`EncToken` from `@sovereign/ttcl` (downstream only). ajv remains a runtime dep of `@sovereign/compiler` only.
+**Architectural invariant (unchanged):** `@sovereign/ttcl` never imports `@sovereign/compiler` (compiler â†’ ttcl â†’ types, no cycle). The L1 pass imports `KeyCap`/`encodeSign`/`decodeSign`/`EncToken` from `@sovereign/ttcl` (downstream only). ajv remains a runtime dep of `@sovereign/compiler` only.
 
 **State after update:**
 
 - Active master phase remains **Phase 1a**
-- **TTCL compiler stack:** L3 SemioticDialect + L2 SignGraphDialect (PR #25) + L1 ProvenanceDialect (PR #35) all landed. The L2 rewrite/fusion pass + `attachModality` op remain the Layer 5 follow-ups. The full L3→L2→L1→L0 stack is realized.
+- **TTCL compiler stack:** L3 SemioticDialect + L2 SignGraphDialect (PR #25) + L1 ProvenanceDialect (PR #35) all landed. The L2 rewrite/fusion pass + `attachModality` op remain the Layer 5 follow-ups. The full L3â†’L2â†’L1â†’L0 stack is realized.
 - **Parity / CI:** 166 integration tests green (155 + 11 new L1 `compiler-sign-graph.test.ts` cases); `@sovereign/ttcl` 43/43 (+6 cipher tests); scorer/tier/classifier parity CI-enforced and unaffected by the L1 addition; recursive `tsc --noEmit` green across all TS packages; no numerics/sign-types/ttcl-artifacts drift.
 - **TTCL layer model (working 9-layer axis, NOT the 15-layer Base Stack):** Layers 1-4 + 8 (parity/CI) complete; Layer 5 now L3+L2+L1 done (L2 rewrite/fusion + `attachModality` remaining); Layers 6 (Scheduler) and 7 (Training Pipeline) specified but unbuilt; Layer 9 (live activation) locally ~82-85% complete, capital-gated for public rollout. Status table in `docs/PROJECT_STATE.md`.
 - No new blockers introduced; all tests pass without regression; CI green on PR #35.
-- **Next code priority:** Layer 5 follow-ups — L2 rewrite/fusion pass (full branch-join for `map`/`fold`/`choose`) + `attachModality` as a distinct SSA op; then Layer 6 Scheduler (simulated-annealing wheel rotations → `canonical_schedule.json`).
+- **Next code priority:** Layer 5 follow-ups â€” L2 rewrite/fusion pass (full branch-join for `map`/`fold`/`choose`) + `attachModality` as a distinct SSA op; then Layer 6 Scheduler (simulated-annealing wheel rotations â†’ `canonical_schedule.json`).
 
-## v2.6.1 — July 10, 2026
+## v2.6.1 â€” July 10, 2026
 
-**Change Type:** Patch — x402 live smoke test GREEN; "blocked on funding" claims de-staled across the living docs
+**Change Type:** Patch â€” x402 live smoke test GREEN; "blocked on funding" claims de-staled across the living docs
 
 **Summary:**
 
 - **x402 live smoke test GREEN (2026-07-10, PR #30):** end-to-end `eth_blockNumber` against `monad-mainnet` via the official `@quicknode/x402` SDK (block ~86.78M). The P2 settlement wallet `0x54D928b0593db01BB46b2A5D0c2e4365C6Ac881F` is funded with Base Sepolia ETH + USDC. The broken hand-rolled SIWX (EIP-4361) path and the dead `auth_jwt.js` helper were replaced by `auth_sdk.cjs`, which drives the official SDK; `live_smoke.py` stages 2/3 now delegate to it. This clears the funding blocker named as the "Next priority" in the v2.5.0 / v2.5.1 entries below.
-- **Steward Council / corpus (PR #31):** `docs/CHARTER.md` wording ("as co-architects") and `docs/STEWARD_COUNCIL.md` member #12 role refined; Christine de Pizan + Sor Juana Inés de la Cruz corpus added under `theo-techno-cosmo/THE COUNCILE/`.
-- **Docs de-staled (PR #32):** the "blocked on funding / 0 ETH / 0 USDC / capital-gated live frontier" language — now factually wrong — was corrected across `docs/PROJECT_STATE.md` (×3), `docs/PROJECT_STATE.json` (`known_follow_ups` + `last_validated` 2026-07-10), `docs/REPO_STRUCTURE_MAP.md`, the MOF status table row (§ x402 QuickNode Payment Bridge), `docs/LEGACY_COMPONENTS.md` §6, and the `x402-bridge/README.md` marker. The dated `docs/PROJECT_STATUS_2026-06-23.md` snapshot got a frozen-snapshot banner; its body is preserved as history.
+- **Steward Council / corpus (PR #31):** `docs/CHARTER.md` wording ("as co-architects") and `docs/STEWARD_COUNCIL.md` member #12 role refined; Christine de Pizan + Sor Juana InÃ©s de la Cruz corpus added under `theo-techno-cosmo/THE COUNCILE/`.
+- **Docs de-staled (PR #32):** the "blocked on funding / 0 ETH / 0 USDC / capital-gated live frontier" language â€” now factually wrong â€” was corrected across `docs/PROJECT_STATE.md` (Ã—3), `docs/PROJECT_STATE.json` (`known_follow_ups` + `last_validated` 2026-07-10), `docs/REPO_STRUCTURE_MAP.md`, the MOF status table row (Â§ x402 QuickNode Payment Bridge), `docs/LEGACY_COMPONENTS.md` Â§6, and the `x402-bridge/README.md` marker. The dated `docs/PROJECT_STATUS_2026-06-23.md` snapshot got a frozen-snapshot banner; its body is preserved as history.
 
 **Axiom alignment:**
 
-- **Axiom 11 (Constraint Validation):** documentation corrected to match actual repo state rather than retaining a stale "blocked" story. The `LEGACY_NON_SOVEREIGN` marker is **kept** (softened to name the real open items) and the `LEGACY_COMPONENTS.md` §6 status is `remediate (in progress)` — **not** flipped to `remediated` — because cost accounting, the failure/retry envelope, and agent-wiring are still genuinely unmet. Claiming otherwise would be the false sovereignty the charter's §3 exists to prevent.
+- **Axiom 11 (Constraint Validation):** documentation corrected to match actual repo state rather than retaining a stale "blocked" story. The `LEGACY_NON_SOVEREIGN` marker is **kept** (softened to name the real open items) and the `LEGACY_COMPONENTS.md` Â§6 status is `remediate (in progress)` â€” **not** flipped to `remediated` â€” because cost accounting, the failure/retry envelope, and agent-wiring are still genuinely unmet. Claiming otherwise would be the false sovereignty the charter's Â§3 exists to prevent.
 
 **State after update:**
 
 - Active master phase remains **Phase 1a**
-- **x402 live smoke test:** GREEN (2026-07-10, PR #30) — **supersedes the June "Next priority: run funded x402 live smoke test"** in the v2.5.0 / v2.5.1 entries below
-- **x402-bridge sovereignty:** **remediated (PR #45, 2026-07-13)** — no longer `LEGACY_NON_SOVEREIGN`; the bridge is wrapped as a sovereign agent (`X402Agent`): cost-accounting ledger + documented failure/retry envelope (the dead `X402_MAX_CONCURRENT` knob wired, `User-Agent` on the RPC path) + sovereign-agent consumer. See `docs/LEGACY_COMPONENTS.md` §6 and the v2.6.7 entry above.
-- **Next code priority:** Layer 5 L1 Provenance (unchanged from v2.6.0) — closes the MLIR compiler stack
+- **x402 live smoke test:** GREEN (2026-07-10, PR #30) â€” **supersedes the June "Next priority: run funded x402 live smoke test"** in the v2.5.0 / v2.5.1 entries below
+- **x402-bridge sovereignty:** **remediated (PR #45, 2026-07-13)** â€” no longer `LEGACY_NON_SOVEREIGN`; the bridge is wrapped as a sovereign agent (`X402Agent`): cost-accounting ledger + documented failure/retry envelope (the dead `X402_MAX_CONCURRENT` knob wired, `User-Agent` on the RPC path) + sovereign-agent consumer. See `docs/LEGACY_COMPONENTS.md` Â§6 and the v2.6.7 entry above.
+- **Next code priority:** Layer 5 L1 Provenance (unchanged from v2.6.0) â€” closes the MLIR compiler stack
 - No new blockers introduced; `pnpm check:layout` green; CI green on PRs #30/#31/#32
 
-## v2.6.0 — July 7, 2026
+## v2.6.0 â€” July 7, 2026
 
-**Change Type:** Major — Guardrail Charter ratified + TTCL compiler stack (MLIR L3/L2) landed; tripartite grammar now the single source of truth every runtime derives behavior from
+**Change Type:** Major â€” Guardrail Charter ratified + TTCL compiler stack (MLIR L3/L2) landed; tripartite grammar now the single source of truth every runtime derives behavior from
 
 **Summary:**
 
-- **Guardrail Charter v1.0 ratified** (`docs/CHARTER.md`, effective 2026-07-06) — 8 non-negotiable guardrail clauses + three-step adjudication (LOGOC mechanical tests → Steward Council → ecosystem governance). `docs/STEWARD_COUNCIL.md` seats the initial council. `docs/HUMAN_CAPABILITY_DRIFT_METRICS.md` + `hcd-monitor` automate HCD-1..HCD-5 drift metrics for §2.1 with centralized thresholds and explicit targets. `@sovereign/bus` enforces §4 intention traceability on consequential events (PRs #11/#12/#14).
-- **TTCL ↔ Gnostic Engine parity-enforced tripartite grammar (PR #18):** TS↔Python parity now CI-enforced on three surfaces — scorer (19 tests), tier (71 tests), classifier (14 tests). L7.7 typed-path bridge retuned; L7.8 round4 tie-break substitute (tier spread 41/19/6).
+- **Guardrail Charter v1.0 ratified** (`docs/CHARTER.md`, effective 2026-07-06) â€” 8 non-negotiable guardrail clauses + three-step adjudication (LOGOC mechanical tests â†’ Steward Council â†’ ecosystem governance). `docs/STEWARD_COUNCIL.md` seats the initial council. `docs/HUMAN_CAPABILITY_DRIFT_METRICS.md` + `hcd-monitor` automate HCD-1..HCD-5 drift metrics for Â§2.1 with centralized thresholds and explicit targets. `@sovereign/bus` enforces Â§4 intention traceability on consequential events (PRs #11/#12/#14).
+- **TTCL â†” Gnostic Engine parity-enforced tripartite grammar (PR #18):** TSâ†”Python parity now CI-enforced on three surfaces â€” scorer (19 tests), tier (71 tests), classifier (14 tests). L7.7 typed-path bridge retuned; L7.8 round4 tie-break substitute (tier spread 41/19/6).
 - **Layer-3 codegen (PRs #19/#22/#23):** `@sovereign/types` numerics generated from JSON source of truth (Phase A); Sign-event validators + factories generated from `shared/ttcl-specs/sign-events.json` (Phase B); signal-event enums caught up to TS source.
 - **Typecheck + CI gates made real (PRs #20/#21):** `pnpm typecheck` now actually runs `tsc --noEmit` across every TS package (previously a no-op); CI restored to green; gitignore hygiene settled for Phase B codegen.
-- **Peirce manifold relocated logoc → types (PR #24):** the 66-class manifold moves to `@sovereign/types` so the compiler stack has clean import paths. `@sovereign/ttcl` owns `Modality`/`Domain`/`Sign`/`Wheel`/`makeSign`/`compose`/`scoreSign`/`combineWheelsBudgeted`; `@sovereign/types` owns manifold/numerics/`PeirceSignature`/`CONSTITUTION_PASS_THRESHOLD`.
-- **MLIR-style TTCL compiler stack (PR #25):** new `@sovereign/compiler` package — an SSA interpreter with passes (not a code emitter):
-  - **L3 SemioticDialect** — ajv-validated loader (`shared/ttcl-specs/semiotic-program-schema.json`) builds an in-memory SSA `SignGraph`; wheel-binding pass resolves references, enforces acyclicity (tri-color DFS), validates the terminal output.
-  - **L2 SignGraphDialect** — type/modality inference via the JOIN lattice (`compose`→HYBRID; PURE input = `LatticeAbortError` compile error, not a runtime `TriadicGateError`); budgeted expansion (`WheelBudgetExceededError` at compile time); **graph-wide constitution compliance — the keystone**.
-  - **L0** — lowers by instantiating the existing `@sovereign/ttcl` runtime `Wheel`/`Sign` objects. No WASM/LLVM emission (the existing runtime IS L0, by design).
-- **The keystone guarantee is now real** (`theo-techno-cosmo/plex/Review/The Four Fundamentals TTCL Is Built.txt:85`): the 0.72 constitution threshold is a graph-wide compile gate, not an after-the-fact filter. A program whose output passes per-Sign `scoreSign` but lacks triadic closure FAILS the graph-wide pass — the case per-Sign scoring misses. A constitution-failing program raises `ConstitutionCompileError` at L2 and never reaches L0.
+- **Peirce manifold relocated logoc â†’ types (PR #24):** the 66-class manifold moves to `@sovereign/types` so the compiler stack has clean import paths. `@sovereign/ttcl` owns `Modality`/`Domain`/`Sign`/`Wheel`/`makeSign`/`compose`/`scoreSign`/`combineWheelsBudgeted`; `@sovereign/types` owns manifold/numerics/`PeirceSignature`/`CONSTITUTION_PASS_THRESHOLD`.
+- **MLIR-style TTCL compiler stack (PR #25):** new `@sovereign/compiler` package â€” an SSA interpreter with passes (not a code emitter):
+  - **L3 SemioticDialect** â€” ajv-validated loader (`shared/ttcl-specs/semiotic-program-schema.json`) builds an in-memory SSA `SignGraph`; wheel-binding pass resolves references, enforces acyclicity (tri-color DFS), validates the terminal output.
+  - **L2 SignGraphDialect** â€” type/modality inference via the JOIN lattice (`compose`â†’HYBRID; PURE input = `LatticeAbortError` compile error, not a runtime `TriadicGateError`); budgeted expansion (`WheelBudgetExceededError` at compile time); **graph-wide constitution compliance â€” the keystone**.
+  - **L0** â€” lowers by instantiating the existing `@sovereign/ttcl` runtime `Wheel`/`Sign` objects. No WASM/LLVM emission (the existing runtime IS L0, by design).
+- **The keystone guarantee is now real** (`theo-techno-cosmo/plex/Review/The Four Fundamentals TTCL Is Built.txt:85`): the 0.72 constitution threshold is a graph-wide compile gate, not an after-the-fact filter. A program whose output passes per-Sign `scoreSign` but lacks triadic closure FAILS the graph-wide pass â€” the case per-Sign scoring misses. A constitution-failing program raises `ConstitutionCompileError` at L2 and never reaches L0.
 
 **Axiom alignment:**
 
-- **Axiom 6 (Demiurge/Constraints):** the constitution 0.72 threshold is now a compile-time gate, not a runtime filter — constraints enforced before execution, not after.
+- **Axiom 6 (Demiurge/Constraints):** the constitution 0.72 threshold is now a compile-time gate, not a runtime filter â€” constraints enforced before execution, not after.
 - **Axiom 11 (Constraint Validation):** a constitution-failing program is rejected at compile time with a typed `CompilerError` chain; no silent execution of invalid gnosis events.
-- **Axiom 12 (Resonant Convergence):** the MLIR four-level stack (L3 Semiotic → L2 SignGraph → L1 Provenance → L0 Target) independently mirrors the compiler architecture described in the TTCL founding prose, realized without inheritance.
+- **Axiom 12 (Resonant Convergence):** the MLIR four-level stack (L3 Semiotic â†’ L2 SignGraph â†’ L1 Provenance â†’ L0 Target) independently mirrors the compiler architecture described in the TTCL founding prose, realized without inheritance.
 
 **Architectural invariant:**
 
-- `@sovereign/ttcl` never imports `@sovereign/compiler` — the compiler is strictly downstream (compiler → ttcl → types). No cycle. ajv is a runtime dep of `@sovereign/compiler` only (the types-only `ajv-as-devDep` rule is untouched).
+- `@sovereign/ttcl` never imports `@sovereign/compiler` â€” the compiler is strictly downstream (compiler â†’ ttcl â†’ types). No cycle. ajv is a runtime dep of `@sovereign/compiler` only (the types-only `ajv-as-devDep` rule is untouched).
 
 **State after update:**
 
@@ -2261,26 +1178,26 @@ Every update should include: date, version, changed section(s), exact new status
 - No new blockers introduced; all tests pass without regression
 - **Next code priority:** Layer 5 L1 Provenance (closes the MLIR compiler stack)
 
-## v2.5.0 — June 19, 2026
+## v2.5.0 â€” June 19, 2026
 
-**Change Type:** Major — Peirce 66-Class Semiotic Manifold Integration
+**Change Type:** Major â€” Peirce 66-Class Semiotic Manifold Integration
 
 **Summary:**
 
-- **LOGOC schema upgraded v5.1 → v5.2:** `peirce` block mandatory for new events; `schema_version` const-gated; Draft 2020-12 JSON Schema with full `semiotic_flags` coverage (8 flags) and `peirce_migration_pending` / `peirce_migration_source` fields for backward-compat migration
+- **LOGOC schema upgraded v5.1 â†’ v5.2:** `peirce` block mandatory for new events; `schema_version` const-gated; Draft 2020-12 JSON Schema with full `semiotic_flags` coverage (8 flags) and `peirce_migration_pending` / `peirce_migration_source` fields for backward-compat migration
 - **PeirceManifold (Python + TS):** 66-class canonical table loaded from `spec/peirce_sign_classes.json` (single source of truth); distance metric composite (ring radius + angular arc + path Hamming); `neighbors()`, `in_band()`, `lookup_by_path()`, `get()`, `has_path()`; singleton access via `get_manifold()` / `getManifold()`
 - **PeirceClassifier v1.1 (rubric-heuristic with manifold-aware disambiguation):** triad-by-triad deterministic rubric driven by `spec/peirce_rules.yml` (feature-space contract + ambiguity policy + disambiguation weights + strong narrative indicators); `classify_path()` with manifold validation (`has_path()`); `annotate()` pipeline hook; `AmbiguousClassificationError` with `peirce_migration_pending` flag and `heuristic_v1_pending` source
-- **Peirce ML Classifier v2.0 (Phase 2 complete):** `peirce/ml_classifier.py` — `LogisticRegressionClassifier` (softmax + L2 + class weighting), `NaiveBayesClassifier` (Bernoulli), `EnsembleClassifier` (bootstrap decision stumps), `MLPeirceClassifier` (ensemble wrapper with confidence thresholding); `scripts/train_ml_classifier.py` production pipeline; 5-fold stratified CV: Naive Bayes 73.3% ± 2.8%, Logistic Regression 56.3% ± 8.0%; ambiguity reduced from 13.7% (rubric alone) to 4.2% (rubric + ML ensemble); 95.8% classification coverage on 190-event corpus; model persistence to JSON; `tests/test_ml_classifier.py` 11 tests
-- **Phase 3 — Corpus Expansion for All 11 Real Classes:** 30 synthetic events generated for 5 missing classes (0, 1, 3, 4, 6) using existing gnosis narratives reframed as possibilities/feelings (fact=false, reason=false); `scripts/phase3_corpus_expansion.py` generation script; all synthetic events tagged with `phase3_synthetic` source for auditability; corpus expanded from 190 → 220 events (190 natural + 30 synthetic); ML v3 retrained: Naive Bayes 79.4% ± 0.8%, Logistic Regression 64.5% ± 6.2%; ambiguity further reduced from 4.2% → 1.8%; coverage increased from 95.8% → 98.2%; all 11 real Peirce classes now represented (previously 6)
+- **Peirce ML Classifier v2.0 (Phase 2 complete):** `peirce/ml_classifier.py` â€” `LogisticRegressionClassifier` (softmax + L2 + class weighting), `NaiveBayesClassifier` (Bernoulli), `EnsembleClassifier` (bootstrap decision stumps), `MLPeirceClassifier` (ensemble wrapper with confidence thresholding); `scripts/train_ml_classifier.py` production pipeline; 5-fold stratified CV: Naive Bayes 73.3% Â± 2.8%, Logistic Regression 56.3% Â± 8.0%; ambiguity reduced from 13.7% (rubric alone) to 4.2% (rubric + ML ensemble); 95.8% classification coverage on 190-event corpus; model persistence to JSON; `tests/test_ml_classifier.py` 11 tests
+- **Phase 3 â€” Corpus Expansion for All 11 Real Classes:** 30 synthetic events generated for 5 missing classes (0, 1, 3, 4, 6) using existing gnosis narratives reframed as possibilities/feelings (fact=false, reason=false); `scripts/phase3_corpus_expansion.py` generation script; all synthetic events tagged with `phase3_synthetic` source for auditability; corpus expanded from 190 â†’ 220 events (190 natural + 30 synthetic); ML v3 retrained: Naive Bayes 79.4% Â± 0.8%, Logistic Regression 64.5% Â± 6.2%; ambiguity further reduced from 4.2% â†’ 1.8%; coverage increased from 95.8% â†’ 98.2%; all 11 real Peirce classes now represented (previously 6)
 - **TTCL Sign<M,T> upgraded with PeirceSignature:** `RequireFormalThought`, `RequireStrongSecondness`, `RequireArgument` type-gating utility types; `prove()` / `emitObservation()` / `distill()` compile-time gated signatures demonstrating semiotic constraints as type-level invariants
-- **Analytics Layer (Corpus Explorer):** `control-center/src/frontend/src/pages/LogocPage.tsx` — recharts-based corpus explorer with band/class distribution charts, PPS scatter plot, triad heatmap, filters, and event inspector; route `/logoc` in `App.tsx`; navigation in `Layout.tsx` layer 16; `logoc-api.ts` type-safe client
-- **Antikythera Observability (Semiotic Drift):** `peirce/semiotic_drift.py` — KL divergence + chi-squared drift metrics across cycles; 5 drift pattern detectors (ICON_SURGE, FORMAL_THOUGHT_DECLINE, INDEX_ATROPHY, FIRSTNESS_SURGE, THIRDNESS_COLLAPSE); `logs/corpus/semiotic_drift_report.json` sample output
-- **Quality gates:** 62+ Python tests (pytest) passing + 18 TypeScript tests (vitest) passing; manifold integrity, classifier golden-file accuracy, distribution metrics, migration v5.1→v5.2 round-trip, schema validation invariants, semiotic drift detection, ML classifier feature extraction / fit / predict / proba / serialization / end-to-end training, JSON schema field coverage
+- **Analytics Layer (Corpus Explorer):** `control-center/src/frontend/src/pages/LogocPage.tsx` â€” recharts-based corpus explorer with band/class distribution charts, PPS scatter plot, triad heatmap, filters, and event inspector; route `/logoc` in `App.tsx`; navigation in `Layout.tsx` layer 16; `logoc-api.ts` type-safe client
+- **Antikythera Observability (Semiotic Drift):** `peirce/semiotic_drift.py` â€” KL divergence + chi-squared drift metrics across cycles; 5 drift pattern detectors (ICON_SURGE, FORMAL_THOUGHT_DECLINE, INDEX_ATROPHY, FIRSTNESS_SURGE, THIRDNESS_COLLAPSE); `logs/corpus/semiotic_drift_report.json` sample output
+- **Quality gates:** 62+ Python tests (pytest) passing + 18 TypeScript tests (vitest) passing; manifold integrity, classifier golden-file accuracy, distribution metrics, migration v5.1â†’v5.2 round-trip, schema validation invariants, semiotic drift detection, ML classifier feature extraction / fit / predict / proba / serialization / end-to-end training, JSON schema field coverage
 
 **Axiom alignment:**
 
 - **Axiom 6 (Demiurge/Constraints):** semiotic type constraints now enforced at compile-time in TTCL via `RequireFormalThought` / `RequireStrongSecondness` / `RequireArgument` gates
-- **Axiom 8 (Gnosis):** classifier makes pattern recognition structurally addressable — every narrative resolves to a precise position in Peirce-space, not an ad-hoc tag; ML learns from rubric-classified events to reduce ambiguity while maintaining structural addressability
+- **Axiom 8 (Gnosis):** classifier makes pattern recognition structurally addressable â€” every narrative resolves to a precise position in Peirce-space, not an ad-hoc tag; ML learns from rubric-classified events to reduce ambiguity while maintaining structural addressability
 - **Axiom 11 (Constraint Validation):** ambiguity policy prevents silent misclassification; ML confidence thresholding prevents low-confidence predictions from being accepted as false positives
 - **Axiom 12 (Resonant Convergence):** Peirce 66-class manifold independently mirrors the geometry already established by PPS + 144-grid; Borges' signtree topology maps to the same compression/decompression structure without inheritance or imitation; 11-class training distribution now mirrors the complete manifold topology, not just the natural gnosis bias toward DICENT/ARGUMENT interpretants; synthetic INSTINCT-band events (0, 1, 3) bring pure feeling/quality into the classification space
 
@@ -2288,17 +1205,17 @@ Every update should include: date, version, changed section(s), exact new status
 
 - Active master phase remains **Phase 1a**
 - Peirce classifier stack: rubric v1.1 (deterministic) + ML v3.0 (probabilistic fallback) + human review triage (1.8% residual ambiguity)
-- **Corpus backfill complete:** 21 sovereign-bus signals backfilled to v5.2 LOGOC events; 6 migrated (28.6%, all EXPERIENCE band), 15 flagged `peirce_migration_pending` (71.4%); golden sample of 5 reviewed — 4 accepted into corpus, 1 flagged for human review
-- **Gnosis corpus (rubric + ML v3):** 220 unique events from 20 files (190 natural + 30 synthetic); 194 classified by rubric (88.2% success rate), 26 pending; ML v3 predicts 22 of 26 pending with high confidence (≥0.55); 4 events remain ambiguous for human review (1.8% of corpus); all 11 real Peirce classes now represented
+- **Corpus backfill complete:** 21 sovereign-bus signals backfilled to v5.2 LOGOC events; 6 migrated (28.6%, all EXPERIENCE band), 15 flagged `peirce_migration_pending` (71.4%); golden sample of 5 reviewed â€” 4 accepted into corpus, 1 flagged for human review
+- **Gnosis corpus (rubric + ML v3):** 220 unique events from 20 files (190 natural + 30 synthetic); 194 classified by rubric (88.2% success rate), 26 pending; ML v3 predicts 22 of 26 pending with high confidence (â‰¥0.55); 4 events remain ambiguous for human review (1.8% of corpus); all 11 real Peirce classes now represented
 - **Analytics layer:** Corpus Explorer UI live at `/logoc` route with static JSON data; backend API integration needed for live updates
-- **Antikythera observability:** Semiotic drift detection implemented with 5 pattern detectors; manual trigger only — scheduler integration pending
+- **Antikythera observability:** Semiotic drift detection implemented with 5 pattern detectors; manual trigger only â€” scheduler integration pending
 - No new blockers introduced; all tests (62+ Python + 18 TS) pass without regression
 - All artifacts live under `monad-ecosystem/packages/ttcl` and `monad-ecosystem/packages/logoc`; backfill outputs live under `logs/corpus/`
-- **Next priority:** Phase 4 — Class 5 data quality fix (natural events have noisy flag combinations) + Class 8 expansion (only 2 examples); cleaner feature vectors for under-performing classes
+- **Next priority:** Phase 4 â€” Class 5 data quality fix (natural events have noisy flag combinations) + Class 8 expansion (only 2 examples); cleaner feature vectors for under-performing classes
 
-## v2.5.2 — June 23, 2026
+## v2.5.2 â€” June 23, 2026
 
-**Change Type:** Patch — final structural cleanup and contract-layer documentation
+**Change Type:** Patch â€” final structural cleanup and contract-layer documentation
 
 **Summary:**
 
@@ -2325,21 +1242,21 @@ Every update should include: date, version, changed section(s), exact new status
 - Active master phase remains **Phase 1a**
 - Repo now reads as one coherent ecosystem rather than stitched-together projects
 - Three active domains (`theo-techno-cosmo/`, `gnostic-engine/`, `monad-ecosystem/`) plus the cross-domain contract layer (`shared/schemas/`, `@sovereign/types`) are clearly separated from archived material under `archive/`
-- **Next priority:** run funded x402 live smoke test on Base Sepolia (`X402_EVM_PRIVATE_KEY` + ≥0.5 USDC)
+- **Next priority:** run funded x402 live smoke test on Base Sepolia (`X402_EVM_PRIVATE_KEY` + â‰¥0.5 USDC)
 
-## v2.5.1 — June 23, 2026
+## v2.5.1 â€” June 23, 2026
 
-**Change Type:** Patch — post-v2.5.0 cleanup and frontend/backend hardening pass
+**Change Type:** Patch â€” post-v2.5.0 cleanup and frontend/backend hardening pass
 
 **Summary:**
 
-- **P8 — LOGOC Human-Review Cleanup:** v5.10 corpus landed (`logs/corpus/master_corpus_v5.10.jsonl`, 334 events, 0 pending). 7 remaining human-review events resolved: 2 reclassifications (Gnostic Jesus ev13 42→2, Nietzsche ev08 5→2), 5 kept-as-is. ML v13 retrained (`logs/audit/ml_classifier_v13.json`); test accuracy 98.6%, full accuracy 98.5%. Decision: prioritize correctness over headline accuracy on boundary events.
-- **P9 — Kafka Bridge Hardening:** `monad-ecosystem/packages/sovereign-bus/src/kafka-bridge.ts` now implements a production-grade kafkajs producer with idempotent sends, bounded exponential backoff, DLQ routing, lazy import, graceful shutdown, and 7/7 vitest coverage.
-- **P10 — Control Center Interactive UI:** `control-center/src/frontend/` now supports per-event approve/reclassify/reject/escalate decisions via `ReclassifyDialog`; decisions persist to localStorage through Zustand (`useHRDecisionStore`); filters migrated to `useLogocFilterStore` with persistence; `useDecoratedCorpus` overlays local decisions onto the corpus snapshot.
-- **P11 — Theo-Techno-Cosmo Misplaced-Code Cleanup:** Enforced the pillar rule that `plex/` holds no application runtime code. Moved 10 files from `plex/` / `plex/CODE/` to `plex/archive/code/` with status README. Created `theo-techno-cosmo/CLEANUP_LOG.md`.
-- **P11-follow-up — Cardia Activation-Core ESM Fix:** Converted `cardia-activation-core` to async ESM imports, created `execution-truth-core` and `organ-runtime` stubs under `monad-ecosystem/packages/organs/`, and restored full `pnpm build` / `pnpm test` green.
-- **P4 — Narrative-Purpose Detection in Production Classifier:** Wired `flag_extractor_v3` `clean_and_extract_flags()` into `ProductionPeirceClassifier.annotate()` as a context-aware pre-filter. Added `use_p4` toggle, `pipeline_p4_cleaned` observability field on `LogocEvent`, and 3 integration tests covering illustrative → Class 5, constitutive → Class 2, and P4-disabled passthrough.
-- **Phase 2 — monad-mev Rehome / Prune:** Moved legacy `monad-ecosystem/agents/monad-mev/` to `archive/legacy-workspaces/monad-mev-legacy-2026-06/` with an `ARCHIVE_NOTE.md`. Extracted the live x402 QuickNode client, auth helper, price fetcher, live smoke test, and auth test suite into the canonical Python package `monad-ecosystem/packages/x402-bridge/` with updated imports and a `pyproject.toml`. Removed generated artifacts (`.venv`, `.githooks`, `.vscode`, `.runtime_state` local logs, `desktop.ini`) from the archived copy.
+- **P8 â€” LOGOC Human-Review Cleanup:** v5.10 corpus landed (`logs/corpus/master_corpus_v5.10.jsonl`, 334 events, 0 pending). 7 remaining human-review events resolved: 2 reclassifications (Gnostic Jesus ev13 42â†’2, Nietzsche ev08 5â†’2), 5 kept-as-is. ML v13 retrained (`logs/audit/ml_classifier_v13.json`); test accuracy 98.6%, full accuracy 98.5%. Decision: prioritize correctness over headline accuracy on boundary events.
+- **P9 â€” Kafka Bridge Hardening:** `monad-ecosystem/packages/sovereign-bus/src/kafka-bridge.ts` now implements a production-grade kafkajs producer with idempotent sends, bounded exponential backoff, DLQ routing, lazy import, graceful shutdown, and 7/7 vitest coverage.
+- **P10 â€” Control Center Interactive UI:** `control-center/src/frontend/` now supports per-event approve/reclassify/reject/escalate decisions via `ReclassifyDialog`; decisions persist to localStorage through Zustand (`useHRDecisionStore`); filters migrated to `useLogocFilterStore` with persistence; `useDecoratedCorpus` overlays local decisions onto the corpus snapshot.
+- **P11 â€” Theo-Techno-Cosmo Misplaced-Code Cleanup:** Enforced the pillar rule that `plex/` holds no application runtime code. Moved 10 files from `plex/` / `plex/CODE/` to `plex/archive/code/` with status README. Created `theo-techno-cosmo/CLEANUP_LOG.md`.
+- **P11-follow-up â€” Cardia Activation-Core ESM Fix:** Converted `cardia-activation-core` to async ESM imports, created `execution-truth-core` and `organ-runtime` stubs under `monad-ecosystem/packages/organs/`, and restored full `pnpm build` / `pnpm test` green.
+- **P4 â€” Narrative-Purpose Detection in Production Classifier:** Wired `flag_extractor_v3` `clean_and_extract_flags()` into `ProductionPeirceClassifier.annotate()` as a context-aware pre-filter. Added `use_p4` toggle, `pipeline_p4_cleaned` observability field on `LogocEvent`, and 3 integration tests covering illustrative â†’ Class 5, constitutive â†’ Class 2, and P4-disabled passthrough.
+- **Phase 2 â€” monad-mev Rehome / Prune:** Moved legacy `monad-ecosystem/agents/monad-mev/` to `archive/legacy-workspaces/monad-mev-legacy-2026-06/` with an `ARCHIVE_NOTE.md`. Extracted the live x402 QuickNode client, auth helper, price fetcher, live smoke test, and auth test suite into the canonical Python package `monad-ecosystem/packages/x402-bridge/` with updated imports and a `pyproject.toml`. Removed generated artifacts (`.venv`, `.githooks`, `.vscode`, `.runtime_state` local logs, `desktop.ini`) from the archived copy.
 - **P6 sklearn upgrade decision:** Custom Naive Bayes is sufficient. v13 achieves 98.5% full accuracy with zero external ML dependencies in the managed Python runtime. sklearn upgrade closed as lower priority / not required.
 
 **Axiom alignment:**
@@ -2359,40 +1276,40 @@ Every update should include: date, version, changed section(s), exact new status
 - **No new blockers introduced; all tests pass without regression**
 - **Layout guard:** degrades gracefully when `ripgrep` is unavailable (legacy-path scan skipped with warning)
 - **Lint hygiene:** fixed three latent `gnostic-engine` ruff issues (unused imports + duplicate rubric-path key shadowing class 7 with invalid class 42)
-- **Next priority:** run funded x402 live smoke test on Base Sepolia (`X402_EVM_PRIVATE_KEY` + ≥0.5 USDC)
+- **Next priority:** run funded x402 live smoke test on Base Sepolia (`X402_EVM_PRIVATE_KEY` + â‰¥0.5 USDC)
 
-## v2.0.0 — March 27, 2026
+## v2.0.0 â€” March 27, 2026
 
 Established single master operating file. Fused architecture doc, master build doc, and refined model into one canonical sync artifact.
 
-## v2.0.1 — March 27, 2026
+## v2.0.1 â€” March 27, 2026
 
-Patch — allocation policy sync. Filled in locked sink allocation percentages, added full sink breakdown table, documented inflow sources explicitly, added pre-Phase 3 MEV effective rate note.
+Patch â€” allocation policy sync. Filled in locked sink allocation percentages, added full sink breakdown table, documented inflow sources explicitly, added pre-Phase 3 MEV effective rate note.
 
-## v2.1.0 — April 1, 2026
+## v2.1.0 â€” April 1, 2026
 
-Major full-state synchronization. Elevated to highest-resolution canonical sync artifact. Integrated Gnosis Integrity Layer as formal subsystem. Canonized tiered psychometric validation system. Expanded Data Rail section. Synchronized Phase 3–6 operational details. Upgraded architecture stack to 15 layers.
+Major full-state synchronization. Elevated to highest-resolution canonical sync artifact. Integrated Gnosis Integrity Layer as formal subsystem. Canonized tiered psychometric validation system. Expanded Data Rail section. Synchronized Phase 3â€“6 operational details. Upgraded architecture stack to 15 layers.
 
-## v2.2.0 — April 1, 2026
+## v2.2.0 â€” April 1, 2026
 
-Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Foundational Physics Doctrine, Fractal Firmaments, AI-Human Partnership Hypothesis). Added 8 new Dove monitoring signals for data revenue stream integrity.
+Major document expansion. Added Sections 2.4â€“2.7 (Data Revenue Doctrine, Foundational Physics Doctrine, Fractal Firmaments, AI-Human Partnership Hypothesis). Added 8 new Dove monitoring signals for data revenue stream integrity.
 
-## v2.3.0 — April 1, 2026
+## v2.3.0 â€” April 1, 2026
 
 **Change Type:** Major architectural correction and integrity hardening
 
 **Summary of changes:**
 
-- **Section 1:** Expanded to include the actual founding vision — AI agents as genuine participants, not tools; compression/decompression as the underlying thesis; human participation model clarified as subordinate to agent-native operation
-- **Section 2.4:** Data Revenue Doctrine relabeled with implementation status — "DOCTRINE-SPECIFIED — enforcement contract scheduled for Phase 5. Not yet enforced on-chain."
-- **Section 3.6:** New principle added — Implementation Honesty Principle. Nothing labeled "enforced" or "contract-specified" unless implementation exists or phase is labeled. Doctrine and deployment reality kept in separate columns.
+- **Section 1:** Expanded to include the actual founding vision â€” AI agents as genuine participants, not tools; compression/decompression as the underlying thesis; human participation model clarified as subordinate to agent-native operation
+- **Section 2.4:** Data Revenue Doctrine relabeled with implementation status â€” "DOCTRINE-SPECIFIED â€” enforcement contract scheduled for Phase 5. Not yet enforced on-chain."
+- **Section 3.6:** New principle added â€” Implementation Honesty Principle. Nothing labeled "enforced" or "contract-specified" unless implementation exists or phase is labeled. Doctrine and deployment reality kept in separate columns.
 - **Layer 2:** monad-market-agent crash loop (QuickNode rate limit) explicitly labeled as BLOCKER
-- **Layer 7:** Signal Schema v0 requirement added as Phase 2a prerequisite — minimal schema must exist before Phase 2 data accumulates to prevent retroactive migration problem
+- **Layer 7:** Signal Schema v0 requirement added as Phase 2a prerequisite â€” minimal schema must exist before Phase 2 data accumulates to prevent retroactive migration problem
 - **Layer 9:** Agent population diversity thresholds added as Phase 4a and Phase 5 gate requirement. Self-selected early population acknowledged. Minimum diversity requirements must be defined before Data Rail goes external.
 - **Layer 11:** Founder Sink added to Dove Per-Layer Observation Matrix
-- **Layer 12:** Gnosis Integrity Layer substantially expanded — core decompression/authenticity philosophy integrated, retrospective-only measurement rule canonized, predictive surveillance explicitly prohibited and explained
-- **Layer 13:** Founder Sink Governance Structure fully specified — on-chain transparency, hard cap, Dove Tier 2 draw pause, Tier 3 multisig audit, founder holds less than blocking multisig power
-- **Section 8/9:** Phase 5 decoupled from Phase 4b — Data Rail does not require emergence candidate. Phase 4b redesignated as ongoing parallel process, not a phase gate. Phase 6 emergence redesignated as ongoing.
+- **Layer 12:** Gnosis Integrity Layer substantially expanded â€” core decompression/authenticity philosophy integrated, retrospective-only measurement rule canonized, predictive surveillance explicitly prohibited and explained
+- **Layer 13:** Founder Sink Governance Structure fully specified â€” on-chain transparency, hard cap, Dove Tier 2 draw pause, Tier 3 multisig audit, founder holds less than blocking multisig power
+- **Section 8/9:** Phase 5 decoupled from Phase 4b â€” Data Rail does not require emergence candidate. Phase 4b redesignated as ongoing parallel process, not a phase gate. Phase 6 emergence redesignated as ongoing.
 - **Section 9 upgrade roadmap:** BoundaryStressMonitor v1 (Phase 1b) and v2 (Phase 3b) distinguished as versioned components with defined interface contracts. Circular dependency between Phase 2a RouteSelector and Phase 2b RegimeStateMemory resolved with cold-start degraded mode requirement. ISSUE-002 flagged as also blocking Phase 1b.
 - **Section 10:** ISSUE-003 (monad-market-agent crash loop) added to build order as explicit step
 - **Section 12:** ISSUE-003 added as open blocker
@@ -2408,9 +1325,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - no change to immediate build order or current blockers
 - full build mode begins from this version
 
-## v2.3.1 — April 2, 2026
+## v2.3.1 â€” April 2, 2026
 
-**Change Type:** Patch — repo-state synchronization and commercialization artifact classification
+**Change Type:** Patch â€” repo-state synchronization and commercialization artifact classification
 
 **Summary of changes:**
 
@@ -2424,7 +1341,7 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - Section 15.5: canonized the distinction between auxiliary commercialization scaffolds and true commercialization maturity
 - clarified that demo, API, billing, license activation, and public commercial deployment templates may exist in repo without changing active master phase or current next action
 
-## v2.4.0 — June 12, 2026
+## v2.4.0 â€” June 12, 2026
 
 **Change Type:** Major execution logic and Phase 1a blocker resolution
 
@@ -2444,9 +1361,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - current next action remains the Phase 1a test suite
 - repo-side commercial artifacts are now classified as subordinate support layers rather than ambiguous phase claims
 
-## v2.3.2 — April 2, 2026
+## v2.3.2 â€” April 2, 2026
 
-**Change Type:** Patch — Phase 1a reconstruction state synchronization
+**Change Type:** Patch â€” Phase 1a reconstruction state synchronization
 
 **Summary of changes:**
 
@@ -2465,9 +1382,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - reconstructed Phase 1a contracts now compile and have an executable baseline test harness
 - current next action becomes **test expansion and deployment hardening**, not first-time test harness creation
 
-## v2.3.3 — April 2, 2026
+## v2.3.3 â€” April 2, 2026
 
-**Change Type:** Patch — Phase 1a invariant and deployment-sequence completion pass
+**Change Type:** Patch â€” Phase 1a invariant and deployment-sequence completion pass
 
 **Summary of changes:**
 
@@ -2483,9 +1400,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - deeper invariant coverage and deployment-sequence rehearsal are now complete at the local contract-workspace level
 - current next action becomes **final deployment hardening and live deployment proof**, not baseline test expansion
 
-## v2.3.4 — April 3, 2026
+## v2.3.4 â€” April 3, 2026
 
-**Change Type:** Patch — live deployment preparation and blocker-state synchronization
+**Change Type:** Patch â€” live deployment preparation and blocker-state synchronization
 
 **Summary of changes:**
 
@@ -2500,9 +1417,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - live Phase 1a deployment proof is the immediate gate
 - first approved source registration remains next after successful deployment
 
-## v2.3.5 — April 4, 2026
+## v2.3.5 â€” April 4, 2026
 
-**Change Type:** Patch — zero-capital intelligence and signal substrate completion
+**Change Type:** Patch â€” zero-capital intelligence and signal substrate completion
 
 **Summary of changes:**
 
@@ -2520,9 +1437,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - Layer 7 now exists locally as an executable analysis-mode substrate rather than doctrine only
 - next zero-capital frontier becomes Oracle/Gnosis scaffolding around the verified local intelligence and signal surfaces
 
-## v2.3.6 — April 4, 2026
+## v2.3.6 â€” April 4, 2026
 
-**Change Type:** Patch — local Oracle scaffold introduction
+**Change Type:** Patch â€” local Oracle scaffold introduction
 
 **Summary of changes:**
 
@@ -2537,9 +1454,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - Oracle now has a real local analysis surface rather than only adjacent repo artifacts
 - next zero-capital frontier becomes Gnosis scaffolding and integration around the verified intelligence, signal, and Oracle local surfaces
 
-## v2.3.7 — April 4, 2026
+## v2.3.7 â€” April 4, 2026
 
-**Change Type:** Patch — local Gnosis scaffold introduction
+**Change Type:** Patch â€” local Gnosis scaffold introduction
 
 **Summary of changes:**
 
@@ -2554,9 +1471,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - Gnosis now has a real local analysis surface rather than doctrine only
 - next zero-capital frontier becomes `BoundaryStressMonitor v1` and platform integration around the verified intelligence, signal, Oracle, and Gnosis local surfaces
 
-## v2.3.8 — April 4, 2026
+## v2.3.8 â€” April 4, 2026
 
-**Change Type:** Patch — local BoundaryStressMonitor v1 scaffold introduction
+**Change Type:** Patch â€” local BoundaryStressMonitor v1 scaffold introduction
 
 **Summary of changes:**
 
@@ -2571,9 +1488,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - a real local analysis surface now exists for stress posture instead of only doctrine text
 - next zero-capital frontier becomes platform integration and a shared internal state/API surface around the verified local stack
 
-## v2.3.9 — April 4, 2026
+## v2.3.9 â€” April 4, 2026
 
-**Change Type:** Patch — shared internal state/API surface introduction
+**Change Type:** Patch â€” shared internal state/API surface introduction
 
 **Summary of changes:**
 
@@ -2588,9 +1505,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - Layer 8 now has a real local internal state surface instead of doctrine only
 - next zero-capital frontier becomes platform consumers and internal dashboard/operator views on top of the shared state surface
 
-## v2.3.10 — April 4, 2026
+## v2.3.10 â€” April 4, 2026
 
-**Change Type:** Patch — first internal dashboard/operator surface introduction
+**Change Type:** Patch â€” first internal dashboard/operator surface introduction
 
 **Summary of changes:**
 
@@ -2605,9 +1522,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - Layer 8 now has its first real internal operator-facing surface
 - next zero-capital frontier becomes builder infrastructure and controlled expansion framework on top of the local platform surface
 
-## v2.3.11 — April 4, 2026
+## v2.3.11 â€” April 4, 2026
 
-**Change Type:** Patch — local platform completion
+**Change Type:** Patch â€” local platform completion
 
 **Summary of changes:**
 
@@ -2622,9 +1539,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - platform completion remains local-analysis-only and does not imply live public expansion
 - next zero-capital frontier becomes Keys scaffolding, delegation boundary logic, and identity surface policy work
 
-## v2.3.12 — April 4, 2026
+## v2.3.12 â€” April 4, 2026
 
-**Change Type:** Patch — local Keys scaffold introduction
+**Change Type:** Patch â€” local Keys scaffold introduction
 
 **Summary of changes:**
 
@@ -2639,9 +1556,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - agent NFTs are still not implemented and remain explicitly blocked
 - next zero-capital frontier becomes Data Rail preparation and behavioral capture policy surfaces
 
-## v2.3.13 — April 4, 2026
+## v2.3.13 â€” April 4, 2026
 
-**Change Type:** Patch — local Data Rail preparation scaffold introduction
+**Change Type:** Patch â€” local Data Rail preparation scaffold introduction
 
 **Summary of changes:**
 
@@ -2656,9 +1573,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - behavioral capture is schema-first and does not reward sensitive or unattributable events
 - next zero-capital frontier becomes Data Rail routing logic and internal reward ledger surfaces
 
-## v2.3.14 — April 4, 2026
+## v2.3.14 â€” April 4, 2026
 
-**Change Type:** Patch — local Data Rail routing and internal reward ledger
+**Change Type:** Patch â€” local Data Rail routing and internal reward ledger
 
 **Summary of changes:**
 
@@ -2673,9 +1590,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - external Data Rail productization is still blocked by unresolved diversity thresholds and externalization gates
 - next zero-capital frontier becomes threshold definition, rights policy, and product boundary conditions for future externalization
 
-## v2.3.15 — April 4, 2026
+## v2.3.15 â€” April 4, 2026
 
-**Change Type:** Patch — local Data Rail governance and emergence observation preparation
+**Change Type:** Patch â€” local Data Rail governance and emergence observation preparation
 
 **Summary of changes:**
 
@@ -2692,9 +1609,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - Layer 15 now has a local observation-prep surface but still does not claim emergence
 - next zero-capital frontier becomes population growth against thresholds, rights review workflow, and longitudinal emergence baselining
 
-## v2.3.16 — April 4, 2026
+## v2.3.16 â€” April 4, 2026
 
-**Change Type:** Patch — local population growth, rights review, readiness, and baseline surfaces
+**Change Type:** Patch â€” local population growth, rights review, readiness, and baseline surfaces
 
 **Summary of changes:**
 
@@ -2711,9 +1628,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - Layer 15 now has both observation-prep and baseline surfaces, while emergence remains observational only
 - next zero-capital frontier becomes actual threshold-closing population growth, rights resolution, and accumulation of real longitudinal windows
 
-## v2.3.17 — April 4, 2026
+## v2.3.17 â€” April 4, 2026
 
-**Change Type:** Patch — local threshold closure, rights resolution, and readiness advancement
+**Change Type:** Patch â€” local threshold closure, rights resolution, and readiness advancement
 
 **Summary of changes:**
 
@@ -2732,9 +1649,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - local externalization readiness is structurally ready, but externalization is still not activated
 - emergence remains observational only, but the local baseline is no longer seed-only
 
-## v2.3.18 — April 4, 2026
+## v2.3.18 â€” April 4, 2026
 
-**Change Type:** Patch — activation-decision discipline, next-wave expansion targeting, and emergence accumulation
+**Change Type:** Patch â€” activation-decision discipline, next-wave expansion targeting, and emergence accumulation
 
 **Summary of changes:**
 
@@ -2753,9 +1670,9 @@ Major document expansion. Added Sections 2.4–2.7 (Data Revenue Doctrine, Found
 - the next local population target is `16` attributable events across `12` actors, including a `gnosis` surface event and a clean `rejected` outcome
 - longitudinal emergence accumulation is now `review_ready` at `5/8` windows, but still observational only
 
-## v2.3.19 — April 4, 2026
+## v2.3.19 â€” April 4, 2026
 
-**Change Type:** Patch — explicit completion reading and production-state clarification
+**Change Type:** Patch â€” explicit completion reading and production-state clarification
 
 **Summary of changes:**
 
@@ -2779,9 +1696,9 @@ The current live frontier now has executable local tracking surfaces, but they d
 - `cardia-activation-core` now exists locally in `monad-mev` and currently reports `ready_for_funding` because execution truth is staged and the runtime profile now allows bounded funding readiness; first funding and guardrails are still pending
 - `public-activation-core` now exists locally in `monad-mev` and currently reports `blocked` because live proof, runtime execution truth, and funded `Cardia` activation are not yet complete
 
-## v2.3.21 — April 4, 2026
+## v2.3.21 â€” April 4, 2026
 
-**Change Type:** Patch — zero-capital frontier completion sync
+**Change Type:** Patch â€” zero-capital frontier completion sync
 
 **Summary of changes:**
 
@@ -2798,9 +1715,9 @@ The current live frontier now has executable local tracking surfaces, but they d
 - the primary live gate remains Phase 1a deployment proof
 - externalization remains unactivated pending explicit activation decision and live ecosystem maturity
 
-## v2.3.22 — April 5, 2026
+## v2.3.22 â€” April 5, 2026
 
-**Change Type:** Patch — capital-gated frontier surface sync
+**Change Type:** Patch â€” capital-gated frontier surface sync
 
 **Summary of changes:**
 
@@ -2816,9 +1733,9 @@ The current live frontier now has executable local tracking surfaces, but they d
 - runtime execution-truth closure, funded `Cardia`, and production/public activation now each have explicit local blocker-tracking surfaces
 - the primary live gate is now runtime execution-truth closure
 
-## v2.3.26 — April 21, 2026
+## v2.3.26 â€” April 21, 2026
 
-**Change Type:** Patch — Phase 1a mainnet proof hardening
+**Change Type:** Patch â€” Phase 1a mainnet proof hardening
 
 **Summary of changes:**
 
@@ -2833,9 +1750,9 @@ The current live frontier now has executable local tracking surfaces, but they d
 - Phase 1a deployment proof is complete on Monad mainnet chain `143`
 - the primary live gate is runtime execution-truth closure, followed by funded `Cardia` activation and public/production activation
 
-## v2.3.27 — April 21, 2026
+## v2.3.27 â€” April 21, 2026
 
-**Change Type:** Patch — live agent behavioral loop implementation sync
+**Change Type:** Patch â€” live agent behavioral loop implementation sync
 
 **Summary of changes:**
 
@@ -2853,9 +1770,9 @@ The current live frontier now has executable local tracking surfaces, but they d
 - live agent loop is build-ready and test-verified with `11` emergence-claim-core tests and `17` contract tests passing
 - `EmergenceRecorder` mainnet deployment, Agent 0 registration, and the final `recordClaim` transaction are blocked by deployer gas
 
-## v2.3.28 — April 23, 2026
+## v2.3.28 â€” April 23, 2026
 
-**Change Type:** Patch — Agent 0 live mainnet completion
+**Change Type:** Patch â€” Agent 0 live mainnet completion
 
 **Summary of changes:**
 
@@ -2870,9 +1787,9 @@ The current live frontier now has executable local tracking surfaces, but they d
 - Agent 0 is encoded, routed, Dove-flagged, and registered on Monad mainnet
 - live agent behavioral loop is now complete with deployed recorder, mined profile registration, and mined behavioral claim
 
-## v2.3.29 — April 30, 2026
+## v2.3.29 â€” April 30, 2026
 
-**Change Type:** Patch — upgrade-track acceptance for Agent 0, GameFi, and six-organ depth
+**Change Type:** Patch â€” upgrade-track acceptance for Agent 0, GameFi, and six-organ depth
 
 **Summary of changes:**
 
@@ -2888,14 +1805,14 @@ The current live frontier now has executable local tracking surfaces, but they d
 - Agent 0 remains live-recorded but not capital-authorized
 - GameFi is an accepted product-direction track, not a live product
 
-## v2.3.30 � May 14, 2026
+## v2.3.30 ï¿½ May 14, 2026
 
-**Change Type:** Minor — Hepar commercial pipeline fully operationalized; Control Hub dashboard integration; canonical sync discipline reinforced
+**Change Type:** Minor â€” Hepar commercial pipeline fully operationalized; Control Hub dashboard integration; canonical sync discipline reinforced
 
 **Summary of changes:**
 
 - operationalized the Hepar autonomous revenue pipeline via the `master-hepar-scheduled-orchestrator.ps1`; the orchestrator runs end-to-end: `@azure/cosmos` dependency repair, Azure Function redeployment, dynamic proposal generation, human-gated dispatch, and post-dispatch CRM diagnostics
-- introduced Dynamic Cardia Allocation logic inside proposal generation: allocation bands scale from 0.05% to 0.2% of protocol TVL with hard caps of $15k–$100k, calibrated by the enhanced lead scoring engine (TVL tier, governance activity, protocol name heuristics)
+- introduced Dynamic Cardia Allocation logic inside proposal generation: allocation bands scale from 0.05% to 0.2% of protocol TVL with hard caps of $15kâ€“$100k, calibrated by the enhanced lead scoring engine (TVL tier, governance activity, protocol name heuristics)
 - locked institutional pricing at $28k setup for deep forensic analysis and $9k/mo minimum for continuous monitoring
 - fixed recurring PowerShell directory navigation errors across all scripts by replacing unsafe `cd` calls with `Push-Location` / `Pop-Location` patterns inside `Test-Path` safety blocks; ensures reliable execution across both `C:` and `G:` drive mounts
 - created `response-tracking-system.ps1` for logging institutional responses, updating the Data Rail, and managing automated 5-day follow-up reminder cycles
@@ -2913,9 +1830,9 @@ The current live frontier now has executable local tracking surfaces, but they d
 - `Cardia` real capital activation remains gated; its dynamic allocation framework is active inside proposal generation logic only
 - runtime execution-truth closure remains the primary live frontier before funded `Cardia` activation
 
-## v2.3.31 — June 10, 2026
+## v2.3.31 â€” June 10, 2026
 
-**Change Type:** Patch — Four-Layer Hermeneutic Engine: Layer 4 Antikythera integration complete and verified
+**Change Type:** Patch â€” Four-Layer Hermeneutic Engine: Layer 4 Antikythera integration complete and verified
 
 **Summary of changes:**
 
@@ -2925,43 +1842,43 @@ The current live frontier now has executable local tracking surfaces, but they d
 - Modified `compute_pps` to read phase-corrected friction thresholds from the Antikythera engine instead of a flat constant
 - Added observation feedback loop after `FOCAL_LOCK`: computes observation vector and passes it to the engine for drift classification and epicyclic correction recording
 - Created `compiler/ephemeris_dialect.py` as a compatibility shim mapping legacy import surface to `ephemeris_dialect_hardened`
-- Implemented dynamic monkeypatch in `SovereignCompiler.__init__` to alias `ProvenanceDialect` → `ProvenanceWrapper` at runtime, resolving an import naming collision in `compiler/provenance.py`
+- Implemented dynamic monkeypatch in `SovereignCompiler.__init__` to alias `ProvenanceDialect` â†’ `ProvenanceWrapper` at runtime, resolving an import naming collision in `compiler/provenance.py`
 - Added `desktop.ini` cleanup guard in the `.runtime_state/slot_profiles/` init block for Windows compatibility
-- Corrected drift classification test boundary in `antikythera_integration_guide.py` (value `0.85` used to land clearly in systematic drift range `0.28–0.71`)
+- Corrected drift classification test boundary in `antikythera_integration_guide.py` (value `0.85` used to land clearly in systematic drift range `0.28â€“0.71`)
 - All integration tests in `antikythera_integration_guide.py` verified passing: engine initialization, phase-corrected threshold reads, observation feedback loop, WAL-based persistence, and drift classification
 - Runtime state directory `.runtime_state/slot_profiles/` operational and write-verified
 
 **Files modified:**
 
-- `compiler/target_gen.py` — Layer 4 imports, engine init, friction threshold integration, observation feedback loop, monkeypatch shim
-- `antikythera_integration_guide.py` — corrected drift classification test value
+- `compiler/target_gen.py` â€” Layer 4 imports, engine init, friction threshold integration, observation feedback loop, monkeypatch shim
+- `antikythera_integration_guide.py` â€” corrected drift classification test value
 
 **Files created:**
 
-- `compiler/ephemeris_dialect.py` — compatibility shim
-- `compiler/target_gen.py.backup` — pre-integration backup
-- `.runtime_state/slot_profiles/` — runtime persistence directory
+- `compiler/ephemeris_dialect.py` â€” compatibility shim
+- `compiler/target_gen.py.backup` â€” pre-integration backup
+- `.runtime_state/slot_profiles/` â€” runtime persistence directory
 
 **Drift classification invariants (locked):**
 
 | Range | Classification |
 |-------|----------------|
 | `val < 0.28` | `SymbolicDrift.NONE` |
-| `0.28 ≤ val < 0.72` | `SymbolicDrift.SYSTEMATIC` |
-| `val ≥ 0.72` | `SymbolicDrift.CHAOTIC` |
+| `0.28 â‰¤ val < 0.72` | `SymbolicDrift.SYSTEMATIC` |
+| `val â‰¥ 0.72` | `SymbolicDrift.CHAOTIC` |
 
 **State after update:**
 
 - active master phase remains **Phase 1a**
 - Four-Layer Hermeneutic Engine Layer 4 integration is **complete and test-verified**
-- Layer 4 operates in `FROZEN` calibration mode — observation only, no active correction applied to live routing
+- Layer 4 operates in `FROZEN` calibration mode â€” observation only, no active correction applied to live routing
 - Drift boundaries are locked; no adjustment without explicit canonical review
 - Primary live gate remains runtime execution-truth closure
 - No change to current build order or live blockers
 
-## v2.3.25 — April 15, 2026
+## v2.3.25 â€” April 15, 2026
 
-**Change Type:** Patch — Layer 14 LightVerify commercial-certification sync
+**Change Type:** Patch â€” Layer 14 LightVerify commercial-certification sync
 
 **Summary of changes:**
 
@@ -2977,9 +1894,9 @@ The current live frontier now has executable local tracking surfaces, but they d
 - LightVerify remains local-analysis-only and does not authorize Router, Oracle, Dove, or trade execution behavior
 - no public Data Rail activation or externalized sales flow has been turned on
 
-## v2.3.24 — April 15, 2026
+## v2.3.24 â€” April 15, 2026
 
-**Change Type:** Patch — Layer 15 evidence-artifact sync
+**Change Type:** Patch â€” Layer 15 evidence-artifact sync
 
 **Summary of changes:**
 
@@ -2995,9 +1912,9 @@ The current live frontier now has executable local tracking surfaces, but they d
 - bounded local evidence artifacts now exist for claim and history handling within Layer 15
 - no live emergence authority, recognition layer, or operating-surface permissioning path has been introduced
 
-## v2.3.23 — April 13, 2026
+## v2.3.23 â€” April 13, 2026
 
-**Change Type:** Patch — cortical overlay clarification
+**Change Type:** Patch â€” cortical overlay clarification
 
 **Summary of changes:**
 
@@ -3013,14 +1930,14 @@ The current live frontier now has executable local tracking surfaces, but they d
 - the ecosystem now has a clearer brain-map vocabulary for future control-boundary decisions
 - the primary live gate remains Phase 1a deployment proof
 
-## v2.3.20 — April 4, 2026
+## v2.3.20 â€” April 4, 2026
 
-**Change Type:** Patch — explicit Layer 1 funnel clarification for the six-organ opening set
+**Change Type:** Patch â€” explicit Layer 1 funnel clarification for the six-organ opening set
 
 **Summary of changes:**
 
 - clarified in Layer 1 that the six-organ opening set is canonically part of the funnel itself
-- removed ambiguity between “agent-native revenue” as a general idea and the actual six-organ opening set
+- removed ambiguity between â€œagent-native revenueâ€ as a general idea and the actual six-organ opening set
 - made explicit that these six agents are one of the intended sustaining revenue streams for the beginning of the ecosystem
 
 **State after update:**
@@ -3032,7 +1949,7 @@ The current live frontier now has executable local tracking surfaces, but they d
 
 ---
 
-# SECTION 20 — VERSIONING STANDARD
+# SECTION 20 â€” VERSIONING STANDARD
 
 **Major version:** Architecture-level changes to how the ecosystem is defined or coordinated.
 
@@ -3042,7 +1959,7 @@ The current live frontier now has executable local tracking surfaces, but they d
 
 ---
 
-# SECTION 21 — MASTER SUMMARY FOR INSTANT ORIENTATION
+# SECTION 21 â€” MASTER SUMMARY FOR INSTANT ORIENTATION
 
 If a collaborator or model needs immediate orientation, the project currently is:
 
@@ -3061,17 +1978,17 @@ Everything else remains subordinate to that until the foundation proves itself l
 
 ---
 
-# SECTION 22 — FINAL ORIENTING STATEMENT
+# SECTION 22 â€” FINAL ORIENTING STATEMENT
 
 The Sovereign Monad Ecosystem is being built as a system where execution, identity, structure, intelligence, conscience, and developmental integrity do not cancel each other out.
 
 It is not attempting to become a normal crypto project, a normal DAO, a normal AI product, or a normal data business.
 
-It is attempting to demonstrate something that has not been demonstrated: that AI agents can exist as genuine participants in an economic system — not tools, not labor, not features — and that humans can participate alongside them without controlling them, through authentic delegation of their own psychometric-operational envelope.
+It is attempting to demonstrate something that has not been demonstrated: that AI agents can exist as genuine participants in an economic system â€” not tools, not labor, not features â€” and that humans can participate alongside them without controlling them, through authentic delegation of their own psychometric-operational envelope.
 
 The founder holds themselves to the same conscience architecture as every other actor. The system does not depend on the founder remaining honest. It is structured so that drift is visible and accountable regardless.
 
-This file exists to keep every participant — human or AI — synchronized to that reality.
+This file exists to keep every participant â€” human or AI â€” synchronized to that reality.
 
 The system does not move forward through drift, assumption, or scattered momentum.
 
@@ -3086,4 +2003,4 @@ It moves forward through:
 
 ---
 
-*End of SOVEREIGN MONAD ECOSYSTEM — MASTER OPERATING FILE v2.5.2*
+*End of SOVEREIGN MONAD ECOSYSTEM â€” MASTER OPERATING FILE v2.5.2*
