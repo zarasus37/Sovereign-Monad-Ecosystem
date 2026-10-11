@@ -1,0 +1,151 @@
+{
+  "version": "0.1.0-gardens",
+  "domain": "theological",
+  "principle": "Council garden insights — theological domain (PoC)",
+  "operational_question": "Does this preserve the theological integrity that the named historical figure articulated?",
+  "failure_mode": "Drift, soft paraphrase, reduction of the figure to a slogan; using the rule without attribution.",
+  "immutable": false,
+  "source": {
+    "garden": "theo-techno-cosmo/THE COUNCILE/Aristotle (384-322 BCE) GNOSIS EVENT EXTRACTION.txt",
+    "gardenKey": "aristotle",
+    "generated_by": "scripts/garden-to-constraint-pack.mjs",
+    "generated_at": "2026-10-11T23:24:53.079Z"
+  },
+  "rules": [
+    {
+      "id": "ARISTOTLE-EVENT-01",
+      "name": "All men by nature desire to know",
+      "severity": "soft",
+      "description": "All men by nature desire to know — sight most of all; art arises when many experiences yield one universal judgement.",
+      "params": {
+        "source": "*Metaphysics* I.1 Ross continuous.",
+        "confidence": 0.99,
+        "three_domain_reading": {
+          "theology": "Wonder leading toward first causes (later same book).",
+          "technology": "Art as universal judgment from many cases.",
+          "cosmology": "Human kind distinct by connected experience and reason."
+        }
+      }
+    },
+    {
+      "id": "ARISTOTLE-EVENT-02",
+      "name": "Being said in many senses",
+      "severity": "soft",
+      "description": "Being is said in many senses, related to one central point — substance — not by mere ambiguity.",
+      "params": {
+        "source": "*Metaphysics* IV.1–2 Ross continuous.",
+        "confidence": 0.99,
+        "three_domain_reading": {
+          "theology": "First philosophy of highest causes; God among causes (I.2 arc).",
+          "technology": "Focal meaning as non-taxonomic unity of science.",
+          "cosmology": "All that is depends on and is named from the primary (substance)."
+        }
+      }
+    },
+    {
+      "id": "ARISTOTLE-EVENT-03",
+      "name": "Four causes",
+      "severity": "soft",
+      "description": "Cause is said as matter, form, source of change, and end — several causes of the same thing, not in the same way.",
+      "params": {
+        "source": "*Physics* II.3 continuous.",
+        "confidence": 0.99,
+        "three_domain_reading": {
+          "theology": "End and good as cause (that for the sake of which).",
+          "technology": "Production knowledge: matter, form, agent, function.",
+          "cosmology": "Natural and artificial change under the same fourfold."
+        }
+      }
+    },
+    {
+      "id": "ARISTOTLE-EVENT-04",
+      "name": "Soul is first actuality",
+      "severity": "soft",
+      "description": "Soul is the first actuality of a natural organized body — as meaningless to ask if soul and body are one as wax and stamp.",
+      "params": {
+        "source": "*De Anima* II.1 continuous.",
+        "confidence": 0.99,
+        "three_domain_reading": {
+          "theology": "Living form without dualist ghost-story as default.",
+          "technology": "Organ / function analysis (leaf, root, eye).",
+          "cosmology": "Life as self-nutrition and growth in natural bodies."
+        }
+      }
+    },
+    {
+      "id": "ARISTOTLE-EVENT-05",
+      "name": "Every art aims at some good",
+      "severity": "soft",
+      "description": "Every art and inquiry aims at some good — the chief good is desired for its own sake; politics is the master art.",
+      "params": {
+        "source": "*NE* I.1–2 Ross continuous.",
+        "confidence": 0.99,
+        "three_domain_reading": {
+          "theology": "Good as that at which all aim.",
+          "technology": "Hierarchy of arts under master arts.",
+          "cosmology": "Human life as ordered to a chief end."
+        }
+      }
+    },
+    {
+      "id": "ARISTOTLE-EVENT-06",
+      "name": "Activity of soul in accordance with virtue",
+      "severity": "soft",
+      "description": "Human good is activity of soul in accordance with virtue — in a complete life; one swallow does not make a summer.",
+      "params": {
+        "source": "*NE* I.7 Ross continuous.",
+        "confidence": 0.99,
+        "three_domain_reading": {
+          "theology": "Blessed life under excellence of the rational soul.",
+          "technology": "Function argument as method (lyre-player).",
+          "cosmology": "Human species defined by rational activity in time."
+        }
+      }
+    },
+    {
+      "id": "ARISTOTLE-EVENT-07",
+      "name": "Virtue is a mean",
+      "severity": "soft",
+      "description": "Virtue is a state of choice lying in a mean relative to us — determined as the man of practical wisdom would determine it.",
+      "params": {
+        "source": "*NE* II.6 Ross continuous.",
+        "confidence": 0.99,
+        "three_domain_reading": {
+          "theology": "Best and right as extreme of excellence though mean in substance.",
+          "technology": "Habituation and choice as formation of character-state.",
+          "cosmology": "Passions and actions ordered between excess and defect."
+        }
+      }
+    },
+    {
+      "id": "ARISTOTLE-EVENT-08",
+      "name": "Man is by nature a political animal",
+      "severity": "soft",
+      "description": "Man is by nature a political animal — speech sets forth the just and unjust; the state is prior to the isolated individual.",
+      "params": {
+        "source": "*Politics* I continuous.",
+        "confidence": 0.99,
+        "three_domain_reading": {
+          "theology": "Nature makes nothing in vain — speech for justice.",
+          "technology": "Polis as association of beings with sense of good and evil.",
+          "cosmology": "Whole prior to part; state creation of nature."
+        }
+      }
+    },
+    {
+      "id": "ARISTOTLE-EVENT-09",
+      "name": "Something which moves without being moved",
+      "severity": "soft",
+      "description": "Something moves without being moved — eternal, substance, actuality; the final cause moves as being loved; on such a principle depend the heavens.",
+      "params": {
+        "source": "*Metaphysics* XII continuous.",
+        "confidence": 0.99,
+        "three_domain_reading": {
+          "theology": "First principle good of necessity; thought of the best.",
+          "technology": "Final cause among unchangeables as that at which action aims.",
+          "cosmology": "Heavens and nature depend on the unmoved mover."
+        }
+      }
+    }
+  ]
+}

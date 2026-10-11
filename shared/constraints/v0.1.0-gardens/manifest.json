@@ -1,0 +1,27 @@
+{
+  "version": "0.1.0-gardens",
+  "name": "council-gardens/aristotle",
+  "title": "Council Garden Constraint Pack — aristotle (PoC)",
+  "immutable": false,
+  "effective_date": "2026-10-11",
+  "source_of_truth": "theo-techno-cosmo/THE COUNCILE/Aristotle (384-322 BCE) GNOSIS EVENT EXTRACTION.txt",
+  "derivation": "Generated from a single Council garden via scripts/garden-to-constraint-pack.mjs",
+  "domains": [
+    "theological",
+    "technological",
+    "cosmological"
+  ],
+  "files": {
+    "theological": "theological.json",
+    "technological": "technological.json",
+    "cosmological": "cosmological.json"
+  },
+  "validity_rule": "These are soft (severity=soft) rules derived from a historical figure. They are not charter axioms. They co-exist with the charter pack (v1.1.0) but do NOT carry hard-fail authority.",
+  "related": {
+    "charter": "docs/CHARTER.md",
+    "charter_pack": "shared/constraints/v1.1.0/",
+    "loader": "gnostic_engine.constraints.load_constraint_pack",
+    "generator": "scripts/garden-to-constraint-pack.mjs",
+    "po_doc": "docs/P0_GARDEN_TO_CONSTRAINT_PACK_POC_2026-10-11.md"
+  }
+}

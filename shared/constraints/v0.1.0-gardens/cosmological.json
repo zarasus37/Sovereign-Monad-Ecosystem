@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0-gardens",
+  "domain": "cosmological",
+  "principle": "Council garden insights — cosmological domain (empty; no events in this garden touched cosmological)",
+  "operational_question": "n/a — this garden produced no cosmological events. Pick a different garden if you need cosmological coverage.",
+  "failure_mode": "n/a",
+  "immutable": false,
+  "source": {
+    "garden": "theo-techno-cosmo/THE COUNCILE/Aristotle (384-322 BCE) GNOSIS EVENT EXTRACTION.txt",
+    "gardenKey": "aristotle",
+    "generated_by": "scripts/garden-to-constraint-pack.mjs",
+    "generated_at": "2026-10-11T23:24:53.081Z"
+  },
+  "rules": []
+}
