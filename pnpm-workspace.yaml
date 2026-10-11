@@ -27,3 +27,12 @@ packages:
 
 # Note: theo-techno-cosmo is documentation/philosophy only — not a package.
 # gnostic-engine uses uv/pyproject.toml for Python deps, but has package.json for npm awareness.
+
+# pnpm 10+ blocks build scripts by default. pnpm 11 renamed the
+# `onlyBuiltDependencies` array to this `allowBuilds` map (per
+# https://pnpm.io/settings/build#allowbuilds). Allow the well-known native
+# postinstall scripts we actually need (esbuild for vitest + Vite, biome for
+# the optional lint path). Everything else stays blocked.
+allowBuilds:
+  '@biomejs/biome': true
+  esbuild: true
