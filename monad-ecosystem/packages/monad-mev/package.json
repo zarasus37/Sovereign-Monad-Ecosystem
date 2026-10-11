@@ -1,34 +1,28 @@
 {
   "name": "@sovereign/monad-mev",
-  "version": "0.1.0",
-  "description": "Monad MEV engine — shadow gate, capacity ceiling, capital mandate, Router B yield (Vectors 5.1–5.3)",
+  "version": "0.2.0-shim.0",
+  "description": "DEPRECATED back-compat shim. Re-exports @sovereign/loop. Will be removed after one release. See docs/P0_MONADMEV_DECISION_2026-10-11.md.",
   "private": true,
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
     }
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "build": "tsc",
-    "test": "vitest run"
+    "build": "echo 'shim has no compile step; source is the output' && exit 0",
+    "test": "echo 'shim has no tests; see @sovereign/loop' && exit 0"
   },
   "dependencies": {
-    "@sovereign/bus": "workspace:*",
-    "@sovereign/types": "workspace:*",
-    "ethers": "^6.13.5"
-  },
-  "optionalDependencies": {
-    "kafkajs": "^2.2.4"
+    "@sovereign/loop": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "typescript": "^5.6.0",
-    "vitest": "^2.0.0"
+    "typescript": "^5.6.0"
   },
   "engines": {
     "node": ">=20.0.0"

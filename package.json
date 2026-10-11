@@ -43,6 +43,9 @@
   "author": "Cris Colon",
   "license": "SEE LICENSE IN docs/LICENSE.md",
   "devDependencies": {
+    "@types/node": "^20.12.7",
+    "ajv": "^8.17.0",
+    "ajv-formats": "^3.0.1",
     "husky": "^9.0.0",
     "typescript": "^5.6.0",
     "vitest": "^2.0.0"

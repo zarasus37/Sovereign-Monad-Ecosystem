@@ -26,7 +26,8 @@ Statuses are **honest engineering maturity**, not marketing.
 | `hcd-monitor` | `@sovereign/hcd-monitor` | **prod** | Human capability drift instrumentation |
 | `shaliah-onboarding` | `@sovereign/shaliah-onboarding` | **prod** | Vector 1 door / FG path |
 | `x402-bridge` | `x402-bridge` | **alpha** | Payment rail agent; live flags gated |
-| `monad-mev` | `@sovereign/monad-mev` | **alpha** | Shadow markout / loop support — prefer gate-acl for product paths |
+| `loop` | `@sovereign/loop` | **alpha → graduate by 2027-01-06** | Sovereign Execution Loop: Capital Mandate, Capacity Ceiling, Shadow Markout, Router B yield (50/40/10). Was `@sovereign/monad-mev`; renamed 2026-10-11 because the package implements bounded-agency execution, not a MEV engine. The MEV engine lives at `C:\Users\crisc\Dev\agents\monad-mev\` (separate repo) and consumes this library. See [`MONOREPO-VS-EXTERNAL-MEV-ENGINE.md`](MONOREPO-VS-EXTERNAL-MEV-ENGINE.md) and [`P0_MONADMEV_DECISION_2026-10-11.md`](P0_MONADMEV_DECISION_2026-10-11.md). **Risk:** `loop/python/shadow_markout_api.py` is a TODO stub — TS gate is real, oracle is mock. |
+| `monad-mev` | `@sovereign/monad-mev` | **deprecated shim** | Re-exports `@sovereign/loop`. To be removed after one release. |
 | `gnosis-core` | `@sovereign/gnosis-core` | **alpha** | Multi-target deploy surface; config sprawl risk |
 | `scheduler` | `@sovereign/scheduler` | **alpha** | Layer 6 schedule — schema drift tracked historically |
 | `compiler` | `@sovereign/compiler` | **alpha** | Tooling |
@@ -106,4 +107,6 @@ formally archived 2026-10-11.
 - [GOLDEN_TOPOLOGY.md](GOLDEN_TOPOLOGY.md)  
 - [P0_MONOREPO_HYGIENE.md](P0_MONOREPO_HYGIENE.md)  
 - [P0_STUB_WALK_2026-10-11.md](P0_STUB_WALK_2026-10-11.md)  
+- [P0_MONADMEV_DECISION_2026-10-11.md](P0_MONADMEV_DECISION_2026-10-11.md)  
+- [MONOREPO-VS-EXTERNAL-MEV-ENGINE.md](MONOREPO-VS-EXTERNAL-MEV-ENGINE.md)  
 - [CANON.md](CANON.md)  

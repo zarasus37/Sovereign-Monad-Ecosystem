@@ -84,9 +84,11 @@ export type AuthContext = {
   principalId: string;
 };
 
-declare module 'express-serve-static-core' {
-  interface Request {
-    auth?: AuthContext;
+declare global {
+  namespace Express {
+    interface Request {
+      auth?: AuthContext;
+    }
   }
 }
 

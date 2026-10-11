@@ -19,6 +19,8 @@ export default defineConfig({
       '@sovereign/control-center-frontend': resolve(__dirname, './monad-ecosystem/control-center'),
       '@sovereign/risk-engine': resolve(__dirname, './monad-ecosystem/packages/risk-engine/src'),
       '@sovereign/hepar-defi-auditor': resolve(__dirname, './monad-ecosystem/packages/hepar-defi-auditor/src'),
+      '@sovereign/loop': resolve(__dirname, './monad-ecosystem/packages/loop/src'),
+      '@sovereign/monad-mev': resolve(__dirname, './monad-ecosystem/packages/monad-mev/src'),
     }
   }
 });
