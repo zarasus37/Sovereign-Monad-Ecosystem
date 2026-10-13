@@ -21,6 +21,10 @@ export default defineConfig({
       '@sovereign/hepar-defi-auditor': resolve(__dirname, './monad-ecosystem/packages/hepar-defi-auditor/src'),
       '@sovereign/loop': resolve(__dirname, './monad-ecosystem/packages/loop/src'),
       '@sovereign/monad-mev': resolve(__dirname, './monad-ecosystem/packages/monad-mev/src'),
+      // Control-Center frontend's @/ alias — used by integration tests
+      // that exercise the React-side libraries (shadow-market, fgMint, etc.)
+      // without spinning up a Vite dev server.
+      '@': resolve(__dirname, './monad-ecosystem/control-center/src/frontend/src'),
     }
   }
 });
