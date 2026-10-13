@@ -27,6 +27,8 @@
     "check:council": "node scripts/check-council-registry.mjs",
     "check:schedule-schema": "vitest run monad-ecosystem/tests/integration/schedule-schema-drift.test.ts",
     "validate": "pnpm check:layout && pnpm check:numerics && pnpm check:sign-types && pnpm check:ttcl-artifacts && pnpm check:temple-grid && pnpm check:council && pnpm check:schedule-schema && pnpm build && pnpm typecheck && pnpm test:integration",
+    "walk:meshaleach": "node scripts/run-meshaleach-walk.mjs",
+    "walk:meshaleach:external": "SKIP_VITE=1 node scripts/run-meshaleach-walk.mjs",
     "lint": "pnpm --recursive lint",
     "clean": "pnpm --recursive clean && Remove-Item -Recurse -Force node_modules, .pnpm-store -ErrorAction SilentlyContinue",
     "prepare": "husky install || true"

@@ -1,0 +1,89 @@
+name: Meshaleach UI Walk
+
+# Scheduled + on-demand end-to-end test of the consumer surface.
+#
+# Runs `pnpm walk:meshaleach`, which:
+#   1. starts the Vite dev server in the background
+#   2. waits for it to come up (up to 60s)
+#   3. runs scripts/meshaleach-ui-walk.mjs (Playwright headless)
+#   4. stops Vite
+#
+# Phases 1, 3, and 4 are mostly client-side against the Vite dev server.
+# The PL=50 wallet-bind gate at Phase 4 is reachable from local-state
+# accumulation; no real backend is required.
+#
+# Captures the screenshot run as an artifact regardless of pass/fail.
+
+on:
+  # Weekly Monday at 06:00 UTC (off-hours; gives you a fresh consumer
+  # surface status at the start of the work week).
+  schedule:
+    - cron: "0 6 * * 1"
+  # Manual dispatch from the Actions tab — for ad-hoc verification
+  # before a release, after a UI-touching PR, or to debug a regression.
+  workflow_dispatch:
+  # Run on every push to main that touches the consumer surface.
+  # Bounded path filter so unrelated CI work doesn't trigger it.
+  push:
+    branches: [main]
+    paths:
+      - "monad-ecosystem/control-center/src/**"
+      - "scripts/meshaleach-ui-walk.mjs"
+      - "scripts/run-meshaleach-walk.mjs"
+      - "monad-ecosystem/control-center/src/frontend/src/lib/shadow-market.ts"
+      - "monad-ecosystem/tests/integration/shadow-market.test.ts"
+      - "vitest.config.ts"
+      - "package.json"
+      - "pnpm-lock.yaml"
+
+jobs:
+  walk:
+    name: Consumer surface end-to-end
+    runs-on: windows-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12.11.2
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      # The walk script imports `playwright` from root devDeps. Use the
+      # frozen lockfile so scheduled runs are deterministic.
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      # The walk launches a headless chromium. Without this step the
+      # run will fail with "Executable doesn't exist at .../chromium-...".
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install chromium
+
+      # The orchestrator starts Vite itself, waits for it, runs the walk,
+      # then tears the server down. Exit code is the walk's exit code.
+      - name: Run Meshaleach UI walk
+        run: pnpm walk:meshaleach
+        env:
+          # Force the orchestrator to manage the Vite lifecycle itself.
+          # (It already does, but being explicit here makes the contract
+          # obvious to anyone reading the workflow.)
+          SKIP_VITE: ""
+
+      # Screenshots live at scripts/meshaleach-shots/. Upload even on
+      # failure so the operator can see the last frame + the deck state.
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: meshaleach-shots
+          path: scripts/meshaleach-shots/
+          if-no-files-found: warn
+          retention-days: 14
