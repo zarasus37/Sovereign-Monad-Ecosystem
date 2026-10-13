@@ -97,8 +97,14 @@ async function main() {
   const deadline = Date.now() + 55000;
   const haltedIds = new Set();
   while (Date.now() < deadline && correctHalts < 3) {
-    // Prefer SYSTEM_REFUSED / yellow refused rows only (T-axis aha)
-    const refused = page.locator("text=/SYSTEM_REFUSED|T-REFUSAL|C-DENSITY|X-AUDIT|T-SOVEREIGNTY/i");
+    // Prefer SYSTEM_REFUSED / yellow refused rows only (T-axis aha).
+    // The status badge renders as `<span class="text-yellow-500">⚠ REFUSED</span>`
+    // — the text node is "⚠ REFUSED" (with the warning glyph), not just
+    // "REFUSED". Refusal reason codes (T-REFUSAL-BUDGET, etc.) are not
+    // rendered. The earlier regex required those codes and matched
+    // nothing. The new selector targets the yellow status badge
+    // directly via its Tailwind class.
+    const refused = page.locator("span.text-yellow-500");
     const n = await refused.count();
     for (let i = 0; i < n && correctHalts < 3; i++) {
       const block = refused.nth(i).locator("xpath=ancestor::div[contains(@class,'border') or contains(@class,'card') or contains(@class,'rounded')][1]");
