@@ -29,6 +29,9 @@
     "validate": "pnpm check:layout && pnpm check:numerics && pnpm check:sign-types && pnpm check:ttcl-artifacts && pnpm check:temple-grid && pnpm check:council && pnpm check:schedule-schema && pnpm build && pnpm typecheck && pnpm test:integration",
     "walk:meshaleach": "node scripts/run-meshaleach-walk.mjs",
     "walk:meshaleach:external": "SKIP_VITE=1 node scripts/run-meshaleach-walk.mjs",
+    "testnet:cycle": "node scripts/testnet-cycle.mjs",
+    "testnet:cycle:skip-walk": "SKIP_WALK=1 node scripts/testnet-cycle.mjs",
+    "testnet:cycle:live": "EXPECTED_TX=1 node scripts/testnet-cycle.mjs",
     "lint": "pnpm --recursive lint",
     "clean": "pnpm --recursive clean && Remove-Item -Recurse -Force node_modules, .pnpm-store -ErrorAction SilentlyContinue",
     "prepare": "husky install || true"
