@@ -2,165 +2,138 @@
 
 ## Sovereign Monad Ecosystem — Implementation Status
 
-> Last Updated: 2026-07-21
-> Status: **VECTOR 6.4 COMPLETE** · Stage 2 corpus **250** pairs (guide floor hit)
+> **Last Updated: 2026-10-11** (was 2026-07-21 — a 3-month gap)
+> **Status: re-entry.** Vectors 1–6 still "complete" per the 2026-07-21 closeout; no new vectors shipped in the gap. What changed in the gap is **hygiene, not features.**
 
 ---
 
-## Vector Completion Matrix
+## What happened in the gap (2026-07-21 → 2026-10-11)
 
-| Vector | Description | Status | Date |
-|--------|-------------|--------|------|
-| 1.x | Shaliah Onboarding Arc | ✓ COMPLETE | 2026-07-20 |
-| 2.x | Gate-ACL + Wallet Bind | ✓ COMPLETE | 2026-07-20 |
-| 3.x | Cardia Funding Engine | ✓ COMPLETE | 2026-07-20 |
-| 4.x | Control Center UI + SSE | ✓ COMPLETE | 2026-07-20 |
-| 5.x | MEV Engine + Shadow Gate | ✓ COMPLETE | 2026-07-20 |
-| **6.x** | **Infrastructure + First Breath** | **✓ COMPLETE** | **2026-07-20** |
+The repo sat idle for 3 months while I (xKryptic) worked on other projects (Compounding Cockpit, etc.). The 2026-10-11 session was a **hygiene / re-entry pass**, not a feature push. Specifically:
 
----
-
-## Vector Breakdown
-
-### Vector 1: Shaliah Onboarding Arc ✓
-- [x] Broken Genesis (Phase 1)
-- [x] Shadow Market (Phase 2)
-- [x] Archon Gate (Phase 3)
-
-### Vector 2: Gate-ACL + Wallet Bind ✓
-- [x] EIP-191 wallet binding
-- [x] Promote PL HTTP endpoint
-- [x] ACL enforcement
-
-### Vector 3: Cardia Funding Engine ✓
-- [x] Hepar audit integration
-- [x] ERC-20 transfer logic
-- [x] Kafka event broadcast
-
-### Vector 4: Control Center UI + SSE ✓
-- [x] React frontend (Vite)
-- [x] FundingStatusPanel component
-- [x] SSE streaming endpoint
-
-### Vector 5: MEV Engine + Shadow Gate ✓
-- [x] Shadow Markout API (FastAPI)
-- [x] TS execution engine
-- [x] Fail-closed gate integration
-
-### Vector 6: Infrastructure + First Breath ✓
-- [x] Docker containers (host + python + hepar)
-- [x] docker-compose topology (`with-kafka`, `observability` profiles)
-- [x] Azure Key Vault integration (`keyCustody.ts` → secret `BootstrapPrivateKey`)
-- [x] Observability (Prometheus `/metrics` + Grafana dashboard)
-- [x] Stage 2 RewardTrainer first-breath lock (`gnosis-v2.0-reward`, CPU verified dry-run; re-locked 2026-07-21 on **250** human-judged pairs)
-- [x] **UMS Vector 2 CAT9 closeout:** +30 pairs (`PP-042`…`PP-071`) → 71 total; CAT9 **30/30** (T7/X16/C7)
-- [x] **CCM doctrine pairs (2026-07-21):** +5 CAT9 (`PP-072`…`PP-076`) → 76 total; CAT9 **35** (T9/X17/C9); `promote_ccm_pairs.py`
-- [x] **CAT6–8 first batch (2026-07-21):** +15 pairs (`PP-077`…`PP-091`) → 91 total
-- [x] **CAT1–5 grow + CAT8 complete (2026-07-21):** +37 pairs (`PP-092`…`PP-128`) → 128; CAT8 **10/10**
-- [x] **CAT5 + CAT6 grow (2026-07-21):** +24 pairs (`PP-129`…`PP-152`) → 152
-- [x] **Corpus floor 250 (2026-07-21):** +98 pairs (`PP-153`…`PP-250`) via `promote_to_250.py` → **250** total; CAT5/6 **30/30**; CAT8 **10/10**
-- [x] **Go-live package (The Breath):** runbook + env template + pulse script
-- [x] **Vector 6.4:** Real Hepar Integration (Standalone TS microservice running A→B→C→D forensic pipeline)
-
-### Final Sequence — The Breath (Go-Live package) ✓
-- [x] `docs/GO_LIVE_EXECUTION.md` — provision → Key Vault → env → compose → pulse → first Meshaleach
-- [x] `monad-ecosystem/.env.production.example` — live flags, vault, Router B, Kafka/Redis
-- [x] Compose `env_file` + Key Vault env wiring; monorepo-aware host Dockerfile
-- [x] `/health` pulse: `kafka`, `redis`, `live_funding`, `key_custody`, `metrics`
-- [x] `monad-ecosystem/scripts/go-live-pulse.sh`
-
-**Honest gate:** `CARDIA_FUNDING_LIVE=true` moves real capital. Default false until vault + testnet cycles pass.
+| What | Why |
+|---|---|
+| Workspace moved `C:\Users\crisc\OneDrive - …\The_Sovereign\` → **`C:\dev\sovereign`** | OneDrive's cloud file provider became unreliable + Node's `\\?\` reads + pnpm-store hydration fail under OneDrive (same failure that drove Compass to `C:\dev\compass` on 2026-10-02). Canonical local clone of `https://github.com/zarasus37/Sovereign-Monad-Ecosystem.git` is at HEAD `0651669`. |
+| **Toolchain upgrade: pnpm 9.6.0 → 12.11.2** | The pinned 9.6.0 was 3 majors behind. New install/build now uses 12.11.2 across the workspace + CI. |
+| **13 fake-sovereignty stubs archived** to `monad-ecosystem/legacy/stub-2026-10-11/` | The 2026-10-11 stub walk (`docs/P0_STUB_WALK_2026-10-11.md`) audited all 30 packages in `monad-ecosystem/packages/`. 5 were 200-300 byte template scaffolds (`organ-runtime`, `gnosis-security-engine`, `lightverify-core`, `population-expansion-core`, `population-growth-core`). 8 were empty placeholders (no `src/`; the README was aspirational, the code never existed). 13 moved to `legacy/`. The empty `monad-mev-archive/` directory was confirmed empty (not "56+ archived MEV bots" as prior reviews said). |
+| **`@sovereign/monad-mev` → `@sovereign/loop`** | The package implements the **Sovereign Execution Loop** (Capital Mandate, Capacity Ceiling, Shadow Markout, Router B 50/40/10), not a MEV engine. "MEV" was a historical label. Decision doc: `docs/P0_MONADMEV_DECISION_2026-10-11.md`. The 12-byte shim at `packages/monad-mev/` re-exports `loop/` for one release; drop the shim after that. The actual cross-chain MEV engine lives at `C:\Users\crisc\Dev\agents\monad-mev\` (separate repo, separate machine) and consumes this library. |
+| **MOF slimmed: 3,089 → 2,006 lines** | Three high-traffic sections extracted: `docs/mof-axioms.md` (Foundational Axioms), `docs/mof-system-model.md` (High-Level System Model), `docs/mof-layers.md` (Layer Detail, 12 layers). The MOF remains the canonical authoritative file; the extracted docs are navigable copies. |
+| **Garden → constraint pack PoC** | `scripts/garden-to-constraint-pack.mjs` reads a `*GNOSIS EVENT EXTRACTION.txt` and emits a constraint pack under `shared/constraints/v0.1.0-gardens/`. PoC = Aristotle (9 events, all in `theological.json`, severity=soft). 7/7 tests pass. Charter pack (v1.1.0) still loads alongside. The implicit doctrine "a garden is the source of a constraint pack" moves from aspirational to compilable. |
+| **Phase 2 Shadow Market library coverage** | 16 vitest tests in `monad-ecosystem/tests/integration/shadow-market.test.ts`. Tests the deck, halt assessment, and aggregate directly — no Vite, no Playwright, no DOM. The "halt literacy flaky" Playwright symptom is now clearly a UI/timing problem, not a logic problem. |
+| **3 pre-existing build bugs fixed** | `sovereign-types` was missing `@types/node` (build was failing on `merkle-commit.ts:7` — `Cannot find module 'node:crypto'`). Three integration test files (`schedule-schema-drift`, `zkp-phase0-schemas`, `scheduler`) couldn't resolve `ajv` because it was only in `sovereign-types` devDeps, not hoisted to root. `sovereign-host`'s `declare module 'express-serve-static-core'` augmentation broke under TS 5.6 with the new `@types/express` resolution. |
+| **`pnpm validate` now green end-to-end** | **256/256 integration tests pass in 17 files (6.95s).** Was failing at multiple pre-existing points before this pass. Layout + numerics + sign-types + ttcl-artifacts + temple-grid + council + schedule-schema + build + typecheck + test:integration all pass. |
 
 ---
 
-## Packages
+## What did NOT change in the gap (honest)
 
-| Package | Version | Purpose |
-|---------|---------|---------|
-| `@sovereign/types` | 1.0.0 | Canonical type contracts |
-| `@sovereign/gate-acl` | 0.1.0 | Access control layer |
-| `@sovereign/shaliah-onboarding` | 0.1.0 | Onboarding flow |
-| `@sovereign/cardia-funding-stream` | 0.1.0 | SSE funding stream |
-| `@sovereign/monad-mev` | 0.1.0 | MEV execution engine |
-| `@sovereign/host` | 0.1.0 | Express backend + metrics + key custody |
-| `@sovereign/hepar-service` | 1.0.0 | Forensic 4-stage chain scanner microservice |
+- **Corpus still 250 pairs** (Stage 2 floor). No new pairs added. The 250-pair guide floor remains the ceiling, not a stepping stone.
+- **`CARDIA_FUNDING_LIVE=false`** — safe default unchanged. No testnet cycles run. No custody review.
+- **Python oracle** at `loop/python/shadow_markout_api.py` is **still a TODO stub**. The TS gate (`assessHalt`, `aggregatePhase2`) is real; the oracle behind it is the heuristic in the stub. Real `shadow_markout_hardened.py` lives in the external MEV engine at `C:\Users\crisc\Dev\agents\monad-mev\` and has not been ported.
+- **No new vectors shipped.** Vectors 1–6 are still the 2026-07-21 closeout. The P0 hygiene pass didn't advance the roadmap; it closed the fake-sovereignty surface and made the workspace actually buildable.
+- **Meshaleach Phase 2 automation** — the library is now covered by tests, but the end-to-end Playwright walk is unchanged. The UI walk still depends on a Vite dev server + Playwright + the 2.5s deck tick alignment. Flaky in the original sense; less risky now that the underlying logic is verified.
+- **Stage 2 8B GPU training** — still capital-gated. The 250-pair corpus is locked; the GPU run to scale to a real Shaliah hasn't happened.
 
 ---
 
-## Infrastructure
+## Current state (resumable from here, 2026-10-11)
+
+### Vectors (unchanged from 2026-07-21)
+
+| Vector | Description | Status |
+|---|---|---|
+| 1.x | Shaliah Onboarding Arc | ✓ COMPLETE |
+| 2.x | Gate-ACL + Wallet Bind | ✓ COMPLETE |
+| 3.x | Cardia Funding Engine | ✓ COMPLETE |
+| 4.x | Control Center UI + SSE | ✓ COMPLETE |
+| 5.x | MEV Engine + Shadow Gate | ✓ COMPLETE (the **library**; the engine is in a separate repo) |
+| 6.x | Infrastructure + First Breath | ✓ COMPLETE |
+
+### Live packages (post-stub-walk)
+
+| Package | Status | Notes |
+|---|---|---|
+| `@sovereign/ttcl` `@sovereign/gate-acl` `@sovereign/types` `@sovereign/bus` `@sovereign/host` `@sovereign/hepar-service` `@sovereign/logoc` `@sovereign/hcd-monitor` `@sovereign/shaliah-onboarding` | **prod** | spine |
+| `@sovereign/loop` (was `monad-mev`) | **alpha → graduate by 2027-01-06** | real sovereign execution primitives; Python oracle is the open risk |
+| `monad-mev` shim | **deprecated** | re-exports `@sovereign/loop`; drop after one release |
+| `@sovereign/x402-bridge` | **alpha** | remediated 2026-07-13 |
+| `@sovereign/gnosis-core` `@sovereign/scheduler` `@sovereign/compiler` `@sovereign/gnosis-training-data` | **alpha** | real code, separate review needed |
+| `hepar-defi-auditor` `gnosis-evaluator-core` `emergent-protocol-core` `execution-truth-core` | **alpha → graduate by 2027-01-06** | real code, tests pending |
+| `cardia-funding-stream` `shaliah-telemetry-bus` `hepar-core` `risk-engine` | **alpha → graduate by 2027-04-06** | |
+| `prometheus` `grafana-provisioning` | **ops** | golden topology |
+| 13 archived stubs | **legacy** | `monad-ecosystem/legacy/stub-2026-10-11/` |
+
+### Infrastructure (unchanged)
 
 - **Frontend**: Vite + React (Control Center)
 - **Backend**: Express + Node.js (Docker)
-- **Forensics**: TS Microservice (Docker — `hepar-engine`)
-- **Analytics**: FastAPI + Python (Docker)
+- **Forensics**: TS Microservice (Docker — `hepar-service`)
+- **Analytics**: FastAPI + Python (Docker) — **note: the python `shadow_markout_api.py` is a stub**
 - **Cache**: Redis (Docker)
 - **Event Bus**: Kafka (optional profile)
-- **Key Custody**: Azure Key Vault (Managed Identity preferred)
+- **Key Custody**: Azure Key Vault (managed identity)
 - **Observability**: Prometheus + Grafana (optional profile)
 
----
-
-## Documentation
-
-- `docs/GO_LIVE_EXECUTION.md` — **operator runbook for cloud deploy**
-- `docs/GNOSIS_V2_PRETRAIN_AUDIT.md` / `GNOSIS_V2_TRAINING_LOG.md` — Stage 2 audit
-- `docs/CULTURAL_CRITICAL_MASS.md` — critical mass / stealth education / locked trajectory doctrine
-- `docs/COGNITIVE_INSTITUTION_GAMIFIED.md` — **how minds grow + gamified institutional laws (anti-hollow)**
-- `docs/GROWTH_ECONOMY_SOCIETAL_EVENTS.md` — **Growth Capital** (default **20%**; bank-style individual claim + collective deploy; user changes \(r\) only after Financial Graduation; wealth-while-learning)
-- `docs/SOVEREIGN_COGNITION_ARCHITECTURE.md` — **E2E architecture canon** (Shaliah vs Multitude, Learning Constitution / Anti-Grind, control plane, Growth Capital, L1–L4)
-- `docs/JOURNEY_MAP.md` — **Door→Middle→End journey** + ops params (\(r=0.20\), Financial Graduation, \(\alpha/\beta/\gamma\), eligible \(C\), Monad+L3, control-plane hosting)
-- `docs/Shaliah Agents/` — product pack: PLAYBOOK, PRODUCT_SPEC, ONBOARDING_FLOW, Lesson Architecture, Flow Mapping, ARCHITECTURE_INDEX
-- `docs/OPEN_DECISIONS_RESEARCH.md` — **FOUNDER-ACCEPTED** research defaults (2026-07-26): \(r\) bounds, FG-1–3, bank pool, PoC credential, L4 posture — promoted into journey/economy/architecture
-- `docs/SHALIAH_IDENTITY_V2.md` — **canonical Shaliah identity** (one spine; coach/mirror/extension/vehicle; not co-captain; Growth Capital steward; PL→ACL)
-- `docs/SHALIAH_VS_AUTONOMOUS.md` — **at-a-glance:** Shaliah partnership vs Autonomous Multitude vs control plane + Vector 1 now
-- `docs/FG_CURRICULUM.md` — **Financial Graduation lesson map** FG-1→FG-3 (L1.1–L3.G, spacing, gate batteries, Integrity)
-- `docs/gnosis-training/SCALE_250_TO_25K.md` — **pair scale plan**: gold tiers G0–G3, Council generation, seeded expand, LOGOC as filter not sole gold
-- `docs/gnosis-training/PREFERENCE_PROVENANCE.md` — **GP-2 provenance schema** (RULE P); gold tagged G0
-- Gnosis pairs scale: **ALL ≈ 2700** (250 G0 + 50 G1 Council CAT7/8 + 2400 G2 expand); scripts promote_council + expand_seeded_g2
-- `docs/VECTOR1_ONBOARDING_REDESIGN.md` — **founder intent for Vector 1**: mutual growth; NEO+SD3 foundation; dual observation under load; command channel; optional natal depth; legacy puzzles superseded
-- `docs/IMAGINATION_ECOSYSTEM_PRINCIPLE.md` — **not one bubble**: many lenses, utility-first, imagination as the real user contribution
-- `@sovereign/shaliah-onboarding` — **primary Vector 1 arc rebuilt**: foundation → channel → read-mind → covenant; FG lesson engine; legacy circuit/shadow/Archon deprecated
-- `docs/VOX_NARRATIVE.md` — External semiotic interface
-- `docs/implementation_*.md` — Technical implementation plans
-
----
-
-## Go-Live status (Azure Container Apps — 2026-07-21)
+### Go-Live (Azure Container Apps — last confirmed 2026-07-21, not re-checked 2026-10-11)
 
 | Resource | Status |
-|----------|--------|
-| `sovereign-host` | **Running** — `https://sovereign-host.wittycoast-d4ae00a3.eastus2.azurecontainerapps.io` · `/health` → `ALIVE` |
+|---|---|
+| `sovereign-host` | **Running** (last confirmed 2026-07-21) — `https://sovereign-host.wittycoast-d4ae00a3.eastus2.azurecontainerapps.io` · `/health` ALIVE |
 | `hepar-service` | **Running** |
-| `sovereign-redis` | **Running** (internal) · host reports `redis: true` |
+| `sovereign-redis` | **Running** |
 | `sovereign-grafana` | **Running** |
-| `monad-mev` | **Running** (no public FQDN) |
-| Key Vault | `sovereign-kv-20260721` · host `key_custody.configured=true` · **managed-identity** |
-| Kafka | **Off** in current host env (`kafka: false`) — optional profile / managed bus still open |
-| Live capital | **`CARDIA_FUNDING_LIVE=false`** (safe default) · funding SSE runs mock path |
+| `monad-mev` (Azure deployment) | **Running** (now superseded by `@sovereign/loop`; the running service should be re-deployed from the new package) |
+| Key Vault | `sovereign-kv-20260721` · managed identity |
+| Kafka | **Off** in current host env |
+| Live capital | **`CARDIA_FUNDING_LIVE=false`** |
 
-**Operator pulse:** `node scripts/pulse-test.mjs` (env: `SOVEREIGN_HOST_URL`, optional `PULSE_PRIVATE_KEY`) — verified 2026-07-21: health → hepar → PL≥50 → wallet bind → Cardia SSE.
-
-**Meshaleach UI walk (Control Center, 2026-07-22):** Playwright driver `scripts/meshaleach-ui-walk.mjs` against Vite `127.0.0.1:5173` proxied to Azure host.
-
-| Phase | Result |
-|-------|--------|
-| 1 Broken Genesis | **COMPLETE** — COMPILE CONSTRAINT ENVELOPE · Twin online · PL +10 |
-| 2 Shadow Market | Partial in automation (halt literacy flaky) — **manual: Halt 3× SYSTEM_REFUSED → RESTORE** · PL +15 |
-| 3 Archon Gate | **MESHALEACH VERIFIED** — Gates Defended 2/2 · PL +25 |
-| 4 Live Activation | Archon **passed**; bind needs **local PL ≥ 50** (phase1+2+3 = 50) + MetaMask |
-
-## Next Steps (operator, capital-gated)
-
-- [x] Deploy cloud compute + Key Vault; Bootstrap via MI (never commit keys)
-- [x] Host pulse `status: ALIVE` + end-to-end API pulse (paper path)
-- [x] UI Meshaleach phases 1 + 3 verified (phase 2 manual for full PL 50)
-- [ ] Complete Phase 2 Shadow Market → PL 50 → BIND WALLET (MetaMask)
-- [ ] Optional: enable Kafka / observability wiring end-to-end
-- [ ] Point `FRONTEND_URL` / CORS at real Control Center origin (still `localhost:5173` on host)
-- [ ] Fund Bootstrap **testnet** only; dry cycles before any mainnet
-- [ ] Flip `CARDIA_FUNDING_LIVE=true` **only** after testnet cycles + deliberate custody review
-- [ ] Optional: gnosis corpus guide-mix / GPU Stage 2 8B when capital ready
+> **Honest note:** the Azure status above is from the 2026-07-21 closeout. After 3 months the live state of these services is **unknown**. The `monad-mev` service is now superseded by `@sovereign/loop` and should be re-deployed; before that, the Azure running image is a tombstone of a thesis that was renamed.
 
 ---
 
-*The organism has a body and a breath procedure. Capital still waits on deliberate custody.*
+## Resume guide (when picking up cold)
+
+1. **Read first**: `docs/CANON.md` → `docs/CHARTER.md` → this file.
+2. **Run**: `pnpm install` → `pnpm check:layout` → `pnpm validate` (full chain). Should be green in <2 minutes.
+3. **Per-package work**: `pnpm --filter @sovereign/<name> test`. The vitest alias is wired, so per-package tests work without a global build.
+4. **The MOF** (`docs/SOVEREIGN_MONAD_ECOSYSTEM_MASTER_OPERATING_FILE_v2.5.2.md`) is the canonical operating file. The 3 high-traffic sections were extracted to `docs/mof-{axioms,system-model,layers}.md` for navigability. The MOF body is now 2,006 lines.
+5. **Council gardens** live in `theo-techno-cosmo/THE COUNCILE/`. To compile one into a soft-severity constraint pack: `node scripts/garden-to-constraint-pack.mjs --garden <path> --out shared/constraints/v0.1.0-gardens-<name> --key <name>`.
+
+---
+
+## Open threads (next moves, in priority order)
+
+| When | What | Why |
+|---|---|---|
+| **This week** | Re-deploy the `monad-mev` Azure service from the new `@sovereign/loop` package, or delete the deployment. | Half-keeping the renamed package while the old one runs is the worst option. |
+| **This week** | Run the Playwright walk end-to-end (with the library tests now covering the logic) and decide if the flakiness is still present. | The library tests give us confidence; the walk is now an integration test, not a logic test. |
+| **This week** | Port `shadow_markout_hardened.py` from `C:\Users\crisc\Dev\agents\monad-mev\` into `loop/python/shadow_markout_api.py`, OR pin the stub as a deliberate mock. | The TS gate is real; the oracle behind it is the open production risk. |
+| **This month** | Walk the 8 alpha packages (`hepar-defi-auditor`, `gnosis-evaluator-core`, `emergent-protocol-core`, `execution-truth-core`, `cardia-funding-stream`, `shaliah-telemetry-bus`, `hepar-core`, `risk-engine`) and graduate the ones that have tests. | The 2027-01-06 and 2027-04-06 deadlines are on the books; we're 9 months out from 2027-07-06 (Charter §3.1). |
+| **Q1 2027** | Stage 2 8B GPU training run. | The pipeline is built and waiting. 250 pairs → ~2700 corpus plan is documented. Capital-gated. |
+| **2027-07-06** | Charter §3.1 deadline. Walk the legacy inventory, make the per-component decision. | |
+
+---
+
+## Honest gate (unchanged)
+
+**`CARDIA_FUNDING_LIVE=true` moves real capital. Default false until:**
+1. The Azure deployment state is re-verified (3 months unconfirmed).
+2. The python `shadow_markout_api.py` oracle is ported from the external engine.
+3. The 8 alpha packages with pending graduation dates have either graduated or are explicitly re-deferred.
+4. **Testnet cycles** with deliberate custody review.
+
+Do not flip the flag under any other conditions.
+
+---
+
+## What NOT to do (the anti-list)
+
+- Do not add new stub packages. The 13 that were archived are the floor; new placeholders are fake sovereignty by definition.
+- Do not rename `@sovereign/loop` back to `monad-mev`. The "MEV" label was the wrong call.
+- Do not remove the shim before the next release ships. Backward compatibility is cheap; surprise breakage is not.
+- Do not promise that the trained Shaliah is here. The 250 pairs are a floor. A trained model on those pairs has not been run.
+- Do not write "highlights" or "what's next" in a way that papers over the 3-month gap. The gap is real. The session that closed it is real too.
+
+---
+
+*"The organism has a body and a breath procedure. Capital still waits on deliberate custody. Three months of silence are now followed by a hygiene pass, not a feature push. The next feature push is owed before the next checkpoint."*
