@@ -1,0 +1,59 @@
+name: Azure Testnet Re-deployment
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Build Image and Deploy to Azure Container Apps
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Log in to Azure CLI
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Build and Push Container Image to Registry
+        uses: azure/container-apps-deploy-action@v1
+        with:
+          resourceGroup: testnet-infrastructure-rg
+          containerAppName: cardia-testnet-host
+          imageToBuild: testnet-registry.azurecr.io/cardia/sovereign-host:${{ github.sha }}
+          dockerfilePath: ./Dockerfile
+          appSourcePath: ./
+          environmentVariables: |
+            NODE_ENV=production
+            CARDIA_FUNDING_LIVE=true
+            SOVEREIGN_API_TOKEN=${{ secrets.SOVEREIGN_API_TOKEN }}
+            SOVEREIGN_PRINCIPAL_ID=${{ secrets.SOVEREIGN_PRINCIPAL_ID }}
+            BOOTSTRAP_PRIVATE_KEY=${{ secrets.BOOTSTRAP_PRIVATE_KEY }}
+            STABLECOIN_CONTRACT=${{ secrets.STABLECOIN_CONTRACT }}
+            MONAD_RPC_URL=${{ secrets.MONAD_RPC_URL }}
+
+      - name: Setup Node.js Runtime for Validation Cycle
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Enable Corepack for Test Suite Execution
+        run: corepack enable && corepack prepare pnpm@12.11.2 --activate
+
+      - name: Install Project Root Verification Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify Live Deployment via Testnet Cycle
+        run: pnpm testnet:cycle
+        env:
+          # Target port 3001 is mapped to the inbound route on Azure Container Apps
+          API_BASE: https://cardia-testnet-host.<region>.azurecontainerapps.io
+          SOVEREIGN_API_TOKEN: ${{ secrets.SOVEREIGN_API_TOKEN }}
+          PRINCIPAL_WALLET: ${{ secrets.TESTNET_WALLET }}
+          SKIP_WALK: 1
+          EXPLORER_BASE: https://monad.xyz

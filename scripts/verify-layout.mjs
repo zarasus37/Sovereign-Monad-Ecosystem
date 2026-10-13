@@ -79,6 +79,11 @@ const ALLOWED_TOP_LEVEL = new Set([
   // P0/P1 monorepo hygiene + golden topology
   'docker-compose.yml',
   'ZKP',
+  // Monorepo-root Dockerfile for the testnet deploy image — see
+  // .github/workflows/testnet-deploy.yml. The package-scoped
+  // Dockerfile at monad-ecosystem/packages/sovereign-host/Dockerfile
+  // was removed 2026-10-13 in favor of this one.
+  'Dockerfile',
 ]);
 
 // These top-level dirs are *expected* even though they're not in the canonical
