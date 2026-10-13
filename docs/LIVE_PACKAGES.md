@@ -47,6 +47,7 @@ Statuses are **honest engineering maturity**, not marketing.
 | `hepar-defi-auditor` | **alpha → graduate by 2027-01-06** | Real Stage A–D wrap with TTC hard gate; tests pending |
 | `hepar-core` | **stub → fold into `hepar-defi-auditor` by 2027-04-06** | Thin façade; nothing imports it (per 2026-10-11 audit) |
 | `cardia-funding-stream` | **alpha → graduate by 2027-04-06** | SSE funding panel; live capital gated |
+| `cardia-activation-core` | **alpha → graduate by 2027-01-06** | Cardia funding engine (Vector 3.3): Hepar-gated, Redis-locked, PL-tracked. 11 src files, 4 test files, full README, Hepar audit client, redis nonce manager, PL ledger consumer, bootstrap. **Complementary to `cardia-funding-stream`** (which is the SSE bridge); the engine executes, the stream reports. Was buried in `monad-ecosystem/packages/organs/cardia/cardia-activation-core/` until the 2026-10-11 organs audit surfaced it. |
 | `data-rail-core` | alpha | Data rail |
 | `risk-engine` | **alpha → remediate-or-archive by 2027-07-06** (per `LEGACY_COMPONENTS.md §5`) | Monte Carlo; refactor to consume `@sovereign/types` signals |
 | `organs` | **ops/alpha → investigate** | 17 src files, no `tsconfig.json` / `README.md` / `dist/`; inconsistent state (per 2026-10-11 audit) |

@@ -803,18 +803,6 @@ importers:
         specifier: ^2.2.4
         version: 2.2.4
 
-  monad-ecosystem/packages/organs/execution-truth-core:
-    devDependencies:
-      typescript:
-        specifier: ^5.0.0
-        version: 5.9.3
-
-  monad-ecosystem/packages/organs/organ-runtime:
-    devDependencies:
-      typescript:
-        specifier: ^5.0.0
-        version: 5.9.3
-
   monad-ecosystem/packages/organs/pneuma/public-activation-core:
     devDependencies:
       '@types/node':
