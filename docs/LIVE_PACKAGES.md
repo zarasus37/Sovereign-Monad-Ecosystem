@@ -103,11 +103,35 @@ formally archived 2026-10-11.
 - Need a stub? Promote status in this file when it grows real `src/` + tests.  
 - CI should not treat stubs as failures for "empty package" — but **do not** list stubs as production features in external narrative.
 
+## Deployments (2026-10-13)
+
+The deployable surface — what runs in production, how it's built,
+and how it's verified.
+
+| Asset | Purpose | Path |
+|---|---|---|
+| **Monorepo-root `Dockerfile`** | Multi-stage Alpine build of `@sovereign/host`. pnpm 12.11.2, non-root `nodeapp` user, `PORT=3001`, `EXPOSE 3001`, `CMD ["node", "dist/server.js"]` from `/repo/packages/sovereign-host`. | `Dockerfile` (repo root) |
+| **Testnet deploy workflow** | `azure/container-apps-deploy-action@v1` builds the image, pushes to `testnet-registry.azurecr.io/cardia/sovereign-host`, updates the `cardia-testnet-host` Container App, and runs `pnpm testnet:cycle` as the verification step. | `.github/workflows/testnet-deploy.yml` |
+| **Testnet cycle script** | The one-command verification: walks the consumer surface, hits `POST /api/v1/cardia/funding/trigger`, parses the response, prints a pass/fail verdict + testnet-explorer link. | `scripts/testnet-cycle.mjs` |
+| **Meshaleach walk** | Playwright UI walk; runs Phase 1-4 of the consumer surface. Used by `testnet-cycle` to bring `plScore ≥ 50`. | `scripts/meshaleach-ui-walk.mjs` |
+| **Meshaleach walk orchestrator** | Starts Vite, waits for it, runs the walk, tears it down. Wraps the walk for CI. | `scripts/run-meshaleach-walk.mjs` |
+| **Scheduled CI walk** | Weekly Monday 06:00 UTC + push-triggered on consumer-surface changes. Captures screenshots as artifacts. | `.github/workflows/meshaleach-walk.yml` |
+
+**Operator-side blockers** (see `docs/ISSUES/` for full specs):
+
+1. `testnet-port-mapping.md` — Azure Container App `targetPort` must be 3001 (not 8080).
+2. `python-oracle-port.md` — `loop/python/shadow_markout_api.py` is a TODO stub; the real oracle logic lives in the external MEV engine repo.
+3. `testnet-custody-review.md` — `BOOTSTRAP_PRIVATE_KEY` is a real key on the testnet; needs a documented custody procedure before any production flip.
+
 ## Related
 
 - [GOLDEN_TOPOLOGY.md](GOLDEN_TOPOLOGY.md)  
 - [P0_MONOREPO_HYGIENE.md](P0_MONOREPO_HYGIENE.md)  
 - [P0_STUB_WALK_2026-10-11.md](P0_STUB_WALK_2026-10-11.md)  
 - [P0_MONADMEV_DECISION_2026-10-11.md](P0_MONADMEV_DECISION_2026-10-11.md)  
+- [P0_ORGANS_RESOLUTION_2026-10-13.md](P0_ORGANS_RESOLUTION_2026-10-13.md)  
 - [MONOREPO-VS-EXTERNAL-MEV-ENGINE.md](MONOREPO-VS-EXTERNAL-MEV-ENGINE.md)  
+- [ISSUES/testnet-port-mapping.md](ISSUES/testnet-port-mapping.md)  
+- [ISSUES/python-oracle-port.md](ISSUES/python-oracle-port.md)  
+- [ISSUES/testnet-custody-review.md](ISSUES/testnet-custody-review.md)  
 - [CANON.md](CANON.md)  

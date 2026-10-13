@@ -2,8 +2,8 @@
 
 ## Sovereign Monad Ecosystem — Implementation Status
 
-> **Last Updated: 2026-10-11** (was 2026-07-21 — a 3-month gap)
-> **Status: re-entry.** Vectors 1–6 still "complete" per the 2026-07-21 closeout; no new vectors shipped in the gap. What changed in the gap is **hygiene, not features.**
+> **Last Updated: 2026-10-13** (was 2026-10-11 — 2-day re-entry, now testnet-wired)
+> **Status: re-entry complete; engine mounted on host; awaiting testnet deploy.** Vectors 1–6 still "complete" per the 2026-07-21 closeout. What changed in the re-entry is **hygiene + testnet wiring**, not features.
 
 ---
 
@@ -36,7 +36,28 @@ The repo sat idle for 3 months while I (xKryptic) worked on other projects (Comp
 
 ---
 
-## Current state (resumable from here, 2026-10-11)
+## 2026-10-13 session delta (added on top of the 2026-10-11 re-entry)
+
+Two days after the re-entry, a follow-up session continued the same path. The Cardinal finding of the day: the **Cardia funding engine is real and substantial** — it was buried in `monad-ecosystem/packages/organs/cardia/cardia-activation-core/` and never wired into the host. The follow-up wired it.
+
+| What | Why |
+|---|---|
+| **`organs/` investigation resolved** | Initial audit said "investigate" but the shallow scan missed the deeper structure. Full investigation: `cardia-activation-core` is a substantial 50+ KB implementation of the Cardia funding engine (Vector 3.3) — Hepar-gated, Redis-locked, PL-tracked. Promoted to LIVE_PACKAGES as `alpha → graduate by 2027-01-06`. Two duplicate stubs (`organs/execution-truth-core`, `organs/organ-runtime`) archived. Decision: `docs/P0_ORGANS_RESOLUTION_2026-10-13.md`. |
+| **`cardia-activation-core` engine wired into `@sovereign/host`** | New route: `POST /api/v1/cardia/funding/trigger`. Auth: bearer required, principalId from auth context (clients cannot pick a different principal). Gated by `CARDIA_FUNDING_LIVE=true`; returns 503 SERVICE_DISABLED when off (default — engine mounted but inactive). Maps engine statuses (`TX_SYNTHESIZED`/`TX_BROADCAST`/`TX_CONFIRMED`/`AUDIT_PASSED`) to HTTP. Pre-existing tsconfig bug fixed: `cardia-activation-core` was missing `declaration: true` so downstream consumers were getting `any`. |
+| **Meshaleach UI walk wired + CI job** | `scripts/run-meshaleach-walk.mjs` orchestrator starts Vite + runs the Playwright walk + tears it down. `pnpm walk:meshaleach` script. `.github/workflows/meshaleach-walk.yml` runs weekly + on push to consumer-surface paths. **Fixed a script bug along the way:** the walk's regex was `text=/SYSTEM_REFUSED|.../i` but the rendered DOM is `<span class='text-yellow-500'>⚠ REFUSED</span>` — the regex matched nothing, so Phase 2 always got 0 halts. Replaced with `page.locator("span.text-yellow-500")`. Walk now completes end-to-end: halts 3, RESTORE COMMUNICATION MODULE, PL 50, bind enabled. |
+| **Testnet cycle script** | `scripts/testnet-cycle.mjs` + `pnpm testnet:cycle`. Runs the walk, hits the funding trigger, prints pass/fail verdict with audit trace + testnet-explorer link. Exits 0 on pass, 1 on fail, 2 on setup error. SKIP_WALK=1, EXPECTED_TX=1, etc. for variants. The 4-step testnet runbook collapses to one command. |
+| **Monorepo-root `Dockerfile` + testnet deploy workflow** | Replaces the broken package-scoped Dockerfile (`pnpm@9.6.0`, hardcoded, won't build the workspace). New Dockerfile uses `pnpm@12.11.2` (matches `packageManager` field), multi-stage Alpine, non-root `nodeapp` user, `PORT=3001`/`EXPOSE 3001`. `.github/workflows/testnet-deploy.yml` builds the image, pushes to `testnet-registry.azurecr.io/cardia/sovereign-host`, updates the `cardia-testnet-host` Container App, and runs `pnpm testnet:cycle` as the verification step. The old `monad-ecosystem/packages/sovereign-host/Dockerfile` is removed. |
+| **3 issue tracking tickets** | `docs/ISSUES/testnet-port-mapping.md` (ACA `targetPort` must be 3001, not 8080), `docs/ISSUES/python-oracle-port.md` (port the real oracle from the external engine repo), `docs/ISSUES/testnet-custody-review.md` (document the testnet → production custody procedure before any `CARDIA_FUNDING_LIVE=true` flip). |
+| **Layout allowlist update** | `scripts/verify-layout.mjs` ALLOWED_TOP_LEVEL now includes `Dockerfile` so the new monorepo-root Dockerfile doesn't fail the layout guard. |
+
+### What changed in "What did NOT change" since 2026-10-11
+
+- **Meshaleach Phase 2 automation** — the walk was flaky in 2026-10-11 because of a script-bug regex match, not a library/logic problem. The 16 vitest tests prove the library; the script is now fixed; the CI walk is wired. Phases 1, 2, 3, 4 all complete in the run, PL 50, bind enabled.
+- **`@sovereign/cardia-activation-core` is now mounted on the host** (was buried in `organs/`). The trigger route exists. The default `CARDIA_FUNDING_LIVE` is still `false` — the engine is reachable but inactive until the operator flips the flag.
+
+---
+
+## Current state (resumable from here, 2026-10-13)
 
 ### Vectors (unchanged from 2026-07-21)
 
@@ -106,21 +127,28 @@ The repo sat idle for 3 months while I (xKryptic) worked on other projects (Comp
 | When | What | Why |
 |---|---|---|
 | **This week** | Re-deploy the `monad-mev` Azure service from the new `@sovereign/loop` package, or delete the deployment. | Half-keeping the renamed package while the old one runs is the worst option. |
-| **This week** | Run the Playwright walk end-to-end (with the library tests now covering the logic) and decide if the flakiness is still present. | The library tests give us confidence; the walk is now an integration test, not a logic test. |
-| **This week** | Port `shadow_markout_hardened.py` from `C:\Users\crisc\Dev\agents\monad-mev\` into `loop/python/shadow_markout_api.py`, OR pin the stub as a deliberate mock. | The TS gate is real; the oracle behind it is the open production risk. |
+| **This week** | ~~Run the Playwright walk end-to-end~~ — closed 2026-10-13 (commit `a43e017`); CI weekly + push-triggered, library tests prove the logic. | Walk infra: `.github/workflows/meshaleach-walk.yml`. Script: `pnpm walk:meshaleach`. |
+| **This week** | Verify Azure Container App `cardia-testnet-host` has `targetPort=3001` (not 8080). Spec: `docs/ISSUES/testnet-port-mapping.md`. | Dockerfile exposes 3001; ACA must match. |
+| **This week** | Port `shadow_markout_hardened.py` from `C:\Users\crisc\Dev\agents\monad-mev\` into `loop/python/shadow_markout_api.py`. Spec: `docs/ISSUES/python-oracle-port.md`. | The TS gate is real; the oracle behind it is the open production risk. |
+| **This week** | Document testnet custody procedure (testnet key + production crossover). Spec: `docs/ISSUES/testnet-custody-review.md`. | Required before any `CARDIA_FUNDING_LIVE=true` flip on production. |
+| **This month** | Run the first real testnet cycle via `pnpm testnet:cycle` against the deployed testnet host. | The script exists; the wiring is complete. The 3 open issues above are operator-side preconditions. |
 | **This month** | Walk the 8 alpha packages (`hepar-defi-auditor`, `gnosis-evaluator-core`, `emergent-protocol-core`, `execution-truth-core`, `cardia-funding-stream`, `shaliah-telemetry-bus`, `hepar-core`, `risk-engine`) and graduate the ones that have tests. | The 2027-01-06 and 2027-04-06 deadlines are on the books; we're 9 months out from 2027-07-06 (Charter §3.1). |
 | **Q1 2027** | Stage 2 8B GPU training run. | The pipeline is built and waiting. 250 pairs → ~2700 corpus plan is documented. Capital-gated. |
 | **2027-07-06** | Charter §3.1 deadline. Walk the legacy inventory, make the per-component decision. | |
 
 ---
 
-## Honest gate (unchanged)
+## Honest gate (revised 2026-10-13)
 
 **`CARDIA_FUNDING_LIVE=true` moves real capital. Default false until:**
-1. The Azure deployment state is re-verified (3 months unconfirmed).
-2. The python `shadow_markout_api.py` oracle is ported from the external engine.
-3. The 8 alpha packages with pending graduation dates have either graduated or are explicitly re-deferred.
-4. **Testnet cycles** with deliberate custody review.
+1. **Verify the Azure deployment** — the new `testnet-deploy.yml` workflow builds + pushes the image; the live state of `cardia-testnet-host` after deploy is unverified. The first `pnpm testnet:cycle` after the workflow's first run is the proof. See `docs/ISSUES/testnet-port-mapping.md` for the inbound-port check.
+2. **Port the python oracle** at `loop/python/shadow_markout_api.py` from the external engine repo. The TS gate is real; the oracle is the open production risk. See `docs/ISSUES/python-oracle-port.md`.
+3. **Run 3 testnet cycles** in this order:
+   - **Cycle 1 (dry-run):** `CARDIA_FUNDING_LIVE=true` with no real chain. Verify the audit pass rate is honest, not 100%.
+   - **Cycle 2 (small live):** real transfer of 1 USDC to the test wallet. Verify the ERC-20 lands on chain.
+   - **Cycle 3 (full TIER_1):** real transfer of 15000 USDC. Verify the amount, audit trace, and txHash all match the engine's response.
+4. **Custody review** — see `docs/ISSUES/testnet-custody-review.md`. The procedure must be written and the Steward Council must sign off in `docs/COUNCIL_DECISIONS.md` (or similar).
+5. **Production crossover** — the production key is a fresh key, never the testnet key, stored in Azure Key Vault (managed identity), not env var.
 
 Do not flip the flag under any other conditions.
 
