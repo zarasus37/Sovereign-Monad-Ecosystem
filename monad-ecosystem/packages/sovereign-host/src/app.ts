@@ -40,6 +40,11 @@ import {
   PrincipalWalletRegistry,
 } from '@sovereign/gate-acl';
 import { createCardiaFundingStreamRouter } from '@sovereign/cardia-funding-stream';
+import {
+  executeFunding,
+  mandateFromWalletBind,
+  loadLocalCardiaActivationSnapshot,
+} from '@sovereign/cardia-activation-core';
 import { renderPrometheusText } from './metrics.js';
 import { ingestKafkaPayload, OBSERVABILITY_TOPICS } from './metricsKafka.js';
 
@@ -261,6 +266,12 @@ export function createSovereignApp(
         kafka: kafkaEnabled,
         redis: Boolean(process.env.REDIS_URL),
         live_funding: process.env.CARDIA_FUNDING_LIVE === 'true',
+        cardia_engine: {
+          // Cardia activation core (Vector 3.3) — exposed for the operator
+          // pulse. Mounted but not active unless CARDIA_FUNDING_LIVE=true.
+          mounted: true,
+          live: process.env.CARDIA_FUNDING_LIVE === 'true',
+        },
         yield_router_live: process.env.YIELD_ROUTER_LIVE === 'true',
         metrics: opts.metricsEnabled !== false,
         key_custody,
@@ -331,6 +342,89 @@ export function createSovereignApp(
     sseRateLimit,
     bearerAuth,
     createCardiaFundingStreamRouter(),
+  );
+
+  // ── Cardia Funding Engine (Vector 3.3) — executeFunding ─────────────────
+  // Wires @sovereign/cardia-activation-core into the host. The engine is the
+  // one that DRAWS the funds; cardia-funding-stream is the one that REPORTS.
+  // Both are now reachable from this host.
+  //
+  // Gated by CARDIA_FUNDING_LIVE=true. When false (safe default), the route
+  // returns 503 SERVICE_DISABLED — the engine exists but is not on. This
+  // matches the existing pattern: the host has the code path; flipping the
+  // flag is a separate, deliberate operation (testnet cycles + custody
+  // review per PROJECT_STATE.md §"Honest gate").
+  //
+  // Body: { principalWallet: "0x..." } — the wallet just bound by the
+  // principal. Auth required: principalId is derived from the auth context
+  // and the mandate is built server-side (clients cannot pick a different
+  // principal). The mandate construction uses
+  // `mandateFromWalletBind({ principalWallet })` from the engine.
+  const CARDIA_FUNDING_LIVE = process.env.CARDIA_FUNDING_LIVE === 'true';
+
+  app.post(
+    '/api/v1/cardia/funding/trigger',
+    mutatingRateLimit,
+    bearerAuth,
+    async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        if (!CARDIA_FUNDING_LIVE) {
+          res.status(503).json({
+            error: 'SERVICE_DISABLED',
+            message:
+              'CARDIA_FUNDING_LIVE is not true. The funding engine is mounted but not active. Set CARDIA_FUNDING_LIVE=true after testnet cycles + custody review.',
+          });
+          return;
+        }
+
+        const authPrincipal = requireAuthPrincipal(req);
+        const body = (req.body && typeof req.body === 'object' ? req.body : {}) as Record<
+          string,
+          unknown
+        >;
+        const principalWallet =
+          typeof body.principalWallet === 'string' ? body.principalWallet : '';
+
+        if (!principalWallet || !/^0x[a-fA-F0-9]{40}$/.test(principalWallet)) {
+          res.status(400).json({
+            error: 'INVALID_BODY',
+            message: 'principalWallet (0x-prefixed 20-byte address) is required',
+          });
+          return;
+        }
+
+        const mandate = mandateFromWalletBind({ principalWallet });
+
+        // executeFunding returns the updated FundingMandate. The status
+        // field on the mandate is the funding state. Map it to HTTP.
+        const result = await executeFunding(mandate);
+        const httpStatus = (() => {
+          switch (result.status) {
+            case 'TX_SYNTHESIZED':
+            case 'TX_BROADCAST':
+            case 'TX_CONFIRMED':
+            case 'AUDIT_PASSED':
+              return 200;
+            case 'PENDING_HEPAR_AUDIT':
+              return 202;
+            case 'AUDIT_FAILED':
+            case 'TX_FAILED':
+              return 422;
+            default:
+              return 500;
+          }
+        })();
+        // Surface the auth principal in the response for traceability —
+        // downstream events (sovereign.cardia.funding.events) carry the
+        // same value via the mandate's localPrincipalId.
+        res.status(httpStatus).json({
+          ...result,
+          _auth: { principalId: authPrincipal },
+        });
+      } catch (err) {
+        next(err);
+      }
+    },
   );
 
   // ── Hepar Audit Proxy (Vector 5.1) — stateless pass-through ────────────

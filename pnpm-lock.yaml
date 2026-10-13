@@ -931,6 +931,9 @@ importers:
       '@azure/keyvault-secrets':
         specifier: ^4.11.2
         version: 4.11.2
+      '@sovereign/cardia-activation-core':
+        specifier: workspace:*
+        version: link:../organs/cardia/cardia-activation-core
       '@sovereign/cardia-funding-stream':
         specifier: workspace:*
         version: link:../cardia-funding-stream

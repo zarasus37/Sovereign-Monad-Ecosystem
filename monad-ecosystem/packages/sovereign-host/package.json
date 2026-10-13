@@ -28,6 +28,7 @@
   "dependencies": {
     "@azure/identity": "^4.0.0",
     "@azure/keyvault-secrets": "^4.11.2",
+    "@sovereign/cardia-activation-core": "workspace:*",
     "@sovereign/cardia-funding-stream": "workspace:*",
     "@sovereign/gate-acl": "workspace:*",
     "@sovereign/types": "workspace:*",

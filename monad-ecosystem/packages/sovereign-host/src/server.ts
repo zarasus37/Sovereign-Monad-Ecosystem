@@ -8,6 +8,7 @@
 import { createSovereignApp } from './app.js';
 import { startMetricsKafkaConsumer } from './metricsKafka.js';
 import { getBootstrapWallet, isKeyCustodyConfigured } from './lib/keyCustody.js';
+import { bootstrapCardiaOrgan, loadLocalCardiaActivationSnapshot } from '@sovereign/cardia-activation-core';
 
 export { createSovereignApp } from './app.js';
 export type { SovereignAppOptions, SovereignAppContext } from './app.js';
@@ -72,6 +73,15 @@ if (isMain) {
     }
   });
 
+  // Cardia activation core (Vector 3.3) — bootstrap on host startup.
+  // Gated by CARDIA_FUNDING_LIVE: the organ is mounted either way, but the
+  // chain-nonce sync and live-funding path are only enabled when LIVE=true.
+  // On dry-run, this is harmless: it just connects to the nonce store and
+  // starts the PL consumer (still useful for emitting funding events).
+  void bootstrapCardiaOrgan().catch((err) => {
+    console.error('[Cardia Organ] bootstrap failed:', (err as Error).message);
+  });
+
   app.listen(PORT, () => {
     console.log(`[Sovereign Host] Listening on port ${PORT}`);
     console.log(`[Sovereign Host] CORS Origin: ${frontendOrigin}`);
@@ -80,10 +90,19 @@ if (isMain) {
     console.log(
       `[Sovereign Host] Live funding: ${process.env.CARDIA_FUNDING_LIVE === 'true'}`,
     );
+    // Cardia activation core — log the activation snapshot for the operator.
+    void loadLocalCardiaActivationSnapshot(process.cwd()).then((snap) => {
+      console.log(
+        `[Cardia Engine] status=${snap.status} reserveHealthy=${snap.reserveHealthy}`,
+      );
+    }).catch(() => {
+      /* snapshot read is best-effort */
+    });
     console.log(`[Sovereign Host] Auth: required (principal=${principalId})`);
     console.log(`  POST /api/v1/gate-acl/promote-pl       (auth)`);
     console.log(`  POST /api/v1/gate-acl/bind-wallet      (auth)`);
     console.log(`  GET  /api/v1/cardia/funding/stream/:walletAddress  (auth)`);
+    console.log(`  POST /api/v1/cardia/funding/trigger    (auth, gated by CARDIA_FUNDING_LIVE)`);
     console.log(`  POST /api/v1/metrics/ingest            (auth)`);
     console.log(`  POST /api/v1/hepar/audit               (proxy)`);
     console.log(`  GET  /metrics                          (public)`);
