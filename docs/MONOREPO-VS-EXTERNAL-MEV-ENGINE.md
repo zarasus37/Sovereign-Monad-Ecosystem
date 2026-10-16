@@ -24,10 +24,21 @@
   `execution-truth-core`, the Azure `python-engine` deployment.
 
 The package's **Python "truth oracle"** (`loop/python/shadow_markout_api.py`)
-is a **placeholder** — it has `# TODO: Wire your existing
-shadow_markout_hardened.py logic here` and uses simple heuristics. The
-TS gate is real; the oracle is a mock. Production risk is concentrated
-in this single file until it's ported or explicitly pinned.
+was a **placeholder** through 2026-10-13 — it carried a
+`# TODO: Wire your existing shadow_markout_hardened.py logic here` comment
+and used simple heuristics. **That is resolved.** As of 2026-10-16 the file
+runs real logic: the post-fill analyzer was ported from
+`shadow_markout_hardened.py` (sha-pinned to the 2026-06 snapshot in
+`archive/legacy-workspaces/`), and a new synchronous pre-trade gate carries
+its retention / adverse-selection / capacity doctrine to the only moment a
+verdict can still stop a trade. Production risk is no longer concentrated in
+this one file as a mock; it has moved to *calibration* — see
+`docs/ISSUES/python-oracle-port.md`.
+
+One file still lives only in the external engine repo and remains the last
+piece of that dependency: `monad_price_fetcher.py`. Until it is ported, the
+post-fill harness runs on its stub fetcher and reports `gate_pure: false`
+rather than silently scaling PnL by synthetic multipliers.
 
 ### 2. The cross-chain MEV arbitrage engine (separate repo)
 

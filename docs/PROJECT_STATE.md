@@ -2,8 +2,8 @@
 
 ## Sovereign Monad Ecosystem — Implementation Status
 
-> **Last Updated: 2026-10-13** (was 2026-10-11 — 2-day re-entry, now testnet-wired)
-> **Status: re-entry complete; engine mounted on host; awaiting testnet deploy.** Vectors 1–6 still "complete" per the 2026-07-21 closeout. What changed in the re-entry is **hygiene + testnet wiring**, not features.
+> **Last Updated: 2026-10-16** (was 2026-10-13 — python oracle ported out of stub state)
+> **Status: re-entry complete; engine mounted on host; awaiting testnet deploy.** Vectors 1–6 still "complete" per the 2026-07-21 closeout. What changed in the re-entry is **hygiene + testnet wiring**, not features. The 2026-10-16 pass removed the last heuristic in the capital path (the python oracle).
 
 ---
 
@@ -29,7 +29,7 @@ The repo sat idle for 3 months while I (xKryptic) worked on other projects (Comp
 
 - **Corpus still 250 pairs** (Stage 2 floor). No new pairs added. The 250-pair guide floor remains the ceiling, not a stepping stone.
 - **`CARDIA_FUNDING_LIVE=false`** — safe default unchanged. No testnet cycles run. No custody review.
-- **Python oracle** at `loop/python/shadow_markout_api.py` is **still a TODO stub**. The TS gate (`assessHalt`, `aggregatePhase2`) is real; the oracle behind it is the heuristic in the stub. Real `shadow_markout_hardened.py` lives in the external MEV engine at `C:\Users\crisc\Dev\agents\monad-mev\` and has not been ported.
+- **Python oracle** at `loop/python/shadow_markout_api.py` — **was** a TODO stub returning heuristic answers. Ported 2026-10-16 to real logic (see § Session delta). What remains is *calibration*, not absence of logic: no fitted thresholds, no TS-side edge model, no realized-price feed.
 - **No new vectors shipped.** Vectors 1–6 are still the 2026-07-21 closeout. The P0 hygiene pass didn't advance the roadmap; it closed the fake-sovereignty surface and made the workspace actually buildable.
 - **Meshaleach Phase 2 automation** — the library is now covered by tests, but the end-to-end Playwright walk is unchanged. The UI walk still depends on a Vite dev server + Playwright + the 2.5s deck tick alignment. Flaky in the original sense; less risky now that the underlying logic is verified.
 - **Stage 2 8B GPU training** — still capital-gated. The 250-pair corpus is locked; the GPU run to scale to a real Shaliah hasn't happened.
@@ -75,7 +75,7 @@ Two days after the re-entry, a follow-up session continued the same path. The Ca
 | Package | Status | Notes |
 |---|---|---|
 | `@sovereign/ttcl` `@sovereign/gate-acl` `@sovereign/types` `@sovereign/bus` `@sovereign/host` `@sovereign/hepar-service` `@sovereign/logoc` `@sovereign/hcd-monitor` `@sovereign/shaliah-onboarding` | **prod** | spine |
-| `@sovereign/loop` (was `monad-mev`) | **alpha → graduate by 2027-01-06** | real sovereign execution primitives; Python oracle is the open risk |
+| `@sovereign/loop` (was `monad-mev`) | **alpha → graduate by 2027-01-06** | real sovereign execution primitives; python oracle ported 2026-10-16 — residual risk is calibration, not logic |
 | `monad-mev` shim | **deprecated** | re-exports `@sovereign/loop`; drop after one release |
 | `@sovereign/x402-bridge` | **alpha** | remediated 2026-07-13 |
 | `@sovereign/gnosis-core` `@sovereign/scheduler` `@sovereign/compiler` `@sovereign/gnosis-training-data` | **alpha** | real code, separate review needed |
@@ -89,7 +89,7 @@ Two days after the re-entry, a follow-up session continued the same path. The Ca
 - **Frontend**: Vite + React (Control Center)
 - **Backend**: Express + Node.js (Docker)
 - **Forensics**: TS Microservice (Docker — `hepar-service`)
-- **Analytics**: FastAPI + Python (Docker) — **note: the python `shadow_markout_api.py` is a stub**
+- **Analytics**: FastAPI + Python (Docker) — the python `shadow_markout_api.py` oracle is real logic as of 2026-10-16
 - **Cache**: Redis (Docker)
 - **Event Bus**: Kafka (optional profile)
 - **Key Custody**: Azure Key Vault (managed identity)
@@ -129,7 +129,7 @@ Two days after the re-entry, a follow-up session continued the same path. The Ca
 | **This week** | Re-deploy the `monad-mev` Azure service from the new `@sovereign/loop` package, or delete the deployment. | Half-keeping the renamed package while the old one runs is the worst option. |
 | **This week** | ~~Run the Playwright walk end-to-end~~ — closed 2026-10-13 (commit `a43e017`); CI weekly + push-triggered, library tests prove the logic. | Walk infra: `.github/workflows/meshaleach-walk.yml`. Script: `pnpm walk:meshaleach`. |
 | **This week** | Verify Azure Container App `cardia-testnet-host` has `targetPort=3001` (not 8080). Spec: `docs/ISSUES/testnet-port-mapping.md`. | Dockerfile exposes 3001; ACA must match. |
-| **This week** | Port `shadow_markout_hardened.py` from `C:\Users\crisc\Dev\agents\monad-mev\` into `loop/python/shadow_markout_api.py`. Spec: `docs/ISSUES/python-oracle-port.md`. | The TS gate is real; the oracle behind it is the open production risk. |
+| **This week** | ~~Port `shadow_markout_hardened.py` from `C:\Users\crisc\Dev\agents\monad-mev\` into `loop/python/`~~ — **closed 2026-10-16.** Ported from the 2026-06 in-repo snapshot (operator-confirmed; sha-pinned). Residual: calibrate thresholds from real fills during testnet cycle 1, and wire a TS edge model so Router B yield routing can resume. Spec: `docs/ISSUES/python-oracle-port.md`. |
 | **This week** | Document testnet custody procedure (testnet key + production crossover). Spec: `docs/ISSUES/testnet-custody-review.md`. | Required before any `CARDIA_FUNDING_LIVE=true` flip on production. |
 | **This month** | Run the first real testnet cycle via `pnpm testnet:cycle` against the deployed testnet host. | The script exists; the wiring is complete. The 3 open issues above are operator-side preconditions. |
 | **This month** | Walk the 8 alpha packages (`hepar-defi-auditor`, `gnosis-evaluator-core`, `emergent-protocol-core`, `execution-truth-core`, `cardia-funding-stream`, `shaliah-telemetry-bus`, `hepar-core`, `risk-engine`) and graduate the ones that have tests. | The 2027-01-06 and 2027-04-06 deadlines are on the books; we're 9 months out from 2027-07-06 (Charter §3.1). |
@@ -138,11 +138,11 @@ Two days after the re-entry, a follow-up session continued the same path. The Ca
 
 ---
 
-## Honest gate (revised 2026-10-13)
+## Honest gate (revised 2026-10-16)
 
 **`CARDIA_FUNDING_LIVE=true` moves real capital. Default false until:**
 1. **Verify the Azure deployment** — the new `testnet-deploy.yml` workflow builds + pushes the image; the live state of `cardia-testnet-host` after deploy is unverified. The first `pnpm testnet:cycle` after the workflow's first run is the proof. See `docs/ISSUES/testnet-port-mapping.md` for the inbound-port check.
-2. **Port the python oracle** at `loop/python/shadow_markout_api.py` from the external engine repo. The TS gate is real; the oracle is the open production risk. See `docs/ISSUES/python-oracle-port.md`.
+2. ~~**Port the python oracle**~~ — **DONE 2026-10-16.** The oracle at `loop/python/shadow_markout_api.py` now runs real logic instead of heuristics: the post-fill harness is ported from the hardened analyzer (sha-pinned), and a new synchronous pre-trade gate carries its retention/adverse-selection/capacity doctrine. 33 integration tests cover the gate, the harness, the live HTTP round-trip against real uvicorn, and the engine decision. See `docs/ISSUES/python-oracle-port.md`. **Residual risk is now calibration, not absence of logic** — see "What is still open" below.
 3. **Run 3 testnet cycles** in this order:
    - **Cycle 1 (dry-run):** `CARDIA_FUNDING_LIVE=true` with no real chain. Verify the audit pass rate is honest, not 100%.
    - **Cycle 2 (small live):** real transfer of 1 USDC to the test wallet. Verify the ERC-20 lands on chain.
@@ -151,6 +151,48 @@ Two days after the re-entry, a follow-up session continued the same path. The Ca
 5. **Production crossover** — the production key is a fresh key, never the testnet key, stored in Azure Key Vault (managed identity), not env var.
 
 Do not flip the flag under any other conditions.
+
+### What is still open after the oracle port (2026-10-16)
+
+The oracle is no longer a heuristic, so the honest gate can move past
+item 2. Three things it does **not** cover, and they bear on whether
+precondition 2 is really satisfied:
+
+- **No edge model.** `shadow_markout_gate.py` will not invent a profit
+  number. The stub's hardcoded +0.2% is gone, so `shadowProfitUsd` is 0
+  unless the caller declares an edge — which means **Router B yield
+  routing currently does not fire**. Restoring it requires a TS-side edge
+  model. Tracked as a follow-up in `docs/ISSUES/python-oracle-port.md`.
+- **No live calibration.** Every threshold (60s price age, $50k ceiling,
+  100bps conf band, 0.001bps/USD impact) is a *default*, inherited from
+  the stub or chosen from the retention doctrine. None has been fitted to
+  observed Monad fills. Cycle 1's "is the pass rate honest?" question is
+  exactly the test that would produce real numbers to calibrate against.
+- **No realized-price feed.** `monad_price_fetcher.py` still lives in the
+  external engine repo, so the ported post-fill harness runs on its stub
+  fetcher. The port added `gate_pure` / `price_source` so such a run is
+  reported as *impure* rather than silently passing on synthetic 0.95/0.90
+  multipliers — but no post-fill evidence exists yet.
+
+None of these are reasons to keep the flag at false on its own, but item
+1 (Azure deploy) and item 3 (three cycles) remain unstarted and are the
+real blockers.
+
+---
+
+## Session delta 2026-10-16 (python oracle port)
+
+| What | Why |
+|---|---|
+| `shadow_markout_hardened.py` ported into `packages/loop/python/` | Source: 2026-06 frozen snapshot in `archive/legacy-workspaces/`, operator-confirmed. sha-pinned in the module, in the config fingerprint folded into every audit id, and in a test assertion. |
+| `shadow_markout_gate.py` added | The hardened analyzer is a *post-fill* harness (awaits T+15s/T+60s); the TS gate has a 2000ms sync timeout. The doctrine had to be re-derived for pre-trade observables or every trade would fail by timeout. |
+| `shadow_markout_api.py` rewritten | Same endpoints, real logic, TODOs removed. |
+| **Wire-format bug fixed** | Stub returned snake_case; TS gate reads camelCase. `verdict` matched by luck so gating worked, but slippage/profit arrived `undefined` → `Math.max(0, undefined)` → **NaN gross yield** on every live trade. |
+| **Future `publishTime` fix** | Stub only bounded staleness from above, so a future-dated feed read as *fresh*. Now rejected. |
+| **Fabricated profit removed** | Stub returned a hardcoded +0.2% on every pass. Not replaced with a guess. See the Router B behavior note in `docs/ISSUES/python-oracle-port.md`. |
+| **Container build un-broken** | `loop/python/Dockerfile` + `docker-compose.yml` still referenced `packages/monad-mev/python/`, removed by the `@sovereign/loop` rename. |
+| 33 integration tests added | Four layers: gate logic, hardened harness, real-uvicorn HTTP round-trip, engine decision. |
+| This ticket's own text corrected | The ticket said the stub lived under `cardia-activation-core/`, that `heparAuditClient.ts` consumed it, and that the endpoint was `/audit`. All three were wrong — Hepar and shadow markout are separate organs. |
 
 ---
 

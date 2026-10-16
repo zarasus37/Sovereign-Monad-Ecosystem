@@ -113,7 +113,7 @@ services:
   python-engine:
     build:
       context: ../..
-      dockerfile: monad-ecosystem/packages/monad-mev/python/Dockerfile
+      dockerfile: monad-ecosystem/packages/loop/python/Dockerfile
     container_name: python-engine
     ports:
       - "8000:8000"

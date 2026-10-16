@@ -26,7 +26,7 @@ Statuses are **honest engineering maturity**, not marketing.
 | `hcd-monitor` | `@sovereign/hcd-monitor` | **prod** | Human capability drift instrumentation |
 | `shaliah-onboarding` | `@sovereign/shaliah-onboarding` | **prod** | Vector 1 door / FG path |
 | `x402-bridge` | `x402-bridge` | **alpha** | Payment rail agent; live flags gated |
-| `loop` | `@sovereign/loop` | **alpha → graduate by 2027-01-06** | Sovereign Execution Loop: Capital Mandate, Capacity Ceiling, Shadow Markout, Router B yield (50/40/10). Was `@sovereign/monad-mev`; renamed 2026-10-11 because the package implements bounded-agency execution, not a MEV engine. The MEV engine lives at `C:\Users\crisc\Dev\agents\monad-mev\` (separate repo) and consumes this library. See [`MONOREPO-VS-EXTERNAL-MEV-ENGINE.md`](MONOREPO-VS-EXTERNAL-MEV-ENGINE.md) and [`P0_MONADMEV_DECISION_2026-10-11.md`](P0_MONADMEV_DECISION_2026-10-11.md). **Risk:** `loop/python/shadow_markout_api.py` is a TODO stub — TS gate is real, oracle is mock. |
+| `loop` | `@sovereign/loop` | **alpha → graduate by 2027-01-06** | Sovereign Execution Loop: Capital Mandate, Capacity Ceiling, Shadow Markout, Router B yield (50/40/10). Was `@sovereign/monad-mev`; renamed 2026-10-11 because the package implements bounded-agency execution, not a MEV engine. The MEV engine lives at `C:\Users\crisc\Dev\agents\monad-mev\` (separate repo) and consumes this library. See [`MONOREPO-VS-EXTERNAL-MEV-ENGINE.md`](MONOREPO-VS-EXTERNAL-MEV-ENGINE.md) and [`P0_MONADMEV_DECISION_2026-10-11.md`](P0_MONADMEV_DECISION_2026-10-11.md). **Risk (updated 2026-10-16):** the python oracle is no longer a stub. `loop/python/shadow_markout_api.py` runs real logic — the post-fill harness is ported (sha-pinned) and a synchronous pre-trade gate carries its retention/adverse-selection/capacity doctrine, covered end-to-end by 33 integration tests. **Residual risk is calibration:** thresholds are unfitted defaults, there is no TS-side edge model (so Router B yield routing does not currently fire), and `monad_price_fetcher.py` is still external so the harness has no realized-price feed. See [`ISSUES/python-oracle-port.md`](ISSUES/python-oracle-port.md). |
 | `monad-mev` | `@sovereign/monad-mev` | **deprecated shim** | Re-exports `@sovereign/loop`. To be removed after one release. |
 | `gnosis-core` | `@sovereign/gnosis-core` | **alpha** | Multi-target deploy surface; config sprawl risk |
 | `scheduler` | `@sovereign/scheduler` | **alpha** | Layer 6 schedule — schema drift tracked historically |
@@ -120,7 +120,7 @@ and how it's verified.
 **Operator-side blockers** (see `docs/ISSUES/` for full specs):
 
 1. `testnet-port-mapping.md` — Azure Container App `targetPort` must be 3001 (not 8080).
-2. `python-oracle-port.md` — `loop/python/shadow_markout_api.py` is a TODO stub; the real oracle logic lives in the external MEV engine repo.
+2. `python-oracle-port.md` — **RESOLVED 2026-10-16.** The oracle is real logic now; residual risk is calibration (unfitted thresholds, no TS edge model, no realized-price feed).
 3. `testnet-custody-review.md` — `BOOTSTRAP_PRIVATE_KEY` is a real key on the testnet; needs a documented custody procedure before any production flip.
 
 ## Related

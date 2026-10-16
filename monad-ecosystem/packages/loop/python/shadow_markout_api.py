@@ -1,124 +1,95 @@
 """
 Shadow Markout Gate API
 
-FastAPI wrapper around the Shadow Markout analytical engine.
-Exposes the trade evaluation logic as a synchronous HTTP endpoint.
+FastAPI wrapper around the Shadow Markout analytical engine. This is the
+"truth oracle" the TS execution engine queries before executing any live
+trade. The TS engine FAILS CLOSED if this service is unavailable.
 
-This is the "truth oracle" that the TS execution engine queries before
-executing any live trade. The TS engine FAILS CLOSED if this service
-is unavailable.
+CONSUMER
+--------
+monad-ecosystem/packages/loop/src/shadowMarkoutGate.ts
+    evaluateShadowMarkout() → POST ${SHADOW_API_URL}
+                              (default http://localhost:8000/api/v1/shadow/evaluate)
+                              2000ms timeout, abort on overrun
+    reads: verdict, expectedSlippage, shadowProfitUsd, auditId
 
-To integrate your existing shadow_markout_hardened.py:
-  1. Copy your analyzer class/function into this package
-  2. Wire it in the evaluate_trade() function below
-  3. Run: uvicorn shadow_markout_api:app --port 8000
+PORT HISTORY
+------------
+Before 2026-10-16 this file's ShadowMarkoutAnalyzer was a heuristic stub:
+"sells > $10k = adverse selection", "trades > $50k = capacity exceeded", and
+a hardcoded +0.2% expected profit on every passing trade. The logic now lives
+in shadow_markout_gate.evaluate_per_trade(), and the ported post-fill harness
+is shadow_markout_hardened.py.
+
+WIRE FORMAT
+-----------
+Request fields stay snake_case — that is what the TS gate sends.
+Response fields are camelCase — that is what the TS gate reads.
+
+The pre-port stub returned snake_case (`expected_slippage`,
+`shadow_profit_usd`, `audit_id`) against a consumer that reads camelCase.
+`verdict` matched by coincidence, so PASS/FAIL still gated correctly, but
+`expectedSlippage` and `shadowProfitUsd` arrived as undefined on every live
+trade: the gate logged NaN% slippage, and executionEngine's
+`Math.max(0, shadow.shadowProfitUsd)` produced NaN gross yield. Fixed here
+via the camelCase aliases below.
+
+Run: uvicorn shadow_markout_api:app --host 0.0.0.0 --port 8000
 """
 
 import time
+
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import Optional
+from pydantic import BaseModel, ConfigDict, Field
+from pydantic.alias_generators import to_camel
+
+from shadow_markout_gate import (
+    GateConfig,
+    evaluate_per_trade,
+    HARDENED_SOURCE_SHA256,
+)
 
 app = FastAPI(
     title="Shadow Markout Gate",
     description="MEV trade validation — the final sanity check before execution",
-    version="0.1.0",
+    version="1.0.0",
 )
+
+_config = GateConfig.from_env()
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Request/Response Models
 # ─────────────────────────────────────────────────────────────────────────────
 
 class MarkoutRequest(BaseModel):
+    # The TS gate posts snake_case; accept snake_case and camelCase alike so a
+    # future consumer using either spelling is not rejected.
+    model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
+
     pool_address: str
     amount_in_usd: float
     is_buy: bool
     pyth_price_update: dict
+    # Optional. The oracle has no alpha model and will not invent one. Supply
+    # the caller's declared edge to get a profit assertion; omit it and the
+    # response carries profit_asserted=False with shadowProfitUsd=0.
+    expected_edge_bps: float | None = None
 
 
 class MarkoutResponse(BaseModel):
-    verdict: str  # "PASS", "FAIL_ADVERSE_SELECTION", "FAIL_STALE_PRICE", "FAIL_CAPACITY_EXCEEDED"
+    # Serialized by alias → camelCase, which is what shadowMarkoutGate.ts reads.
+    model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
+
+    verdict: str  # PASS | FAIL_ADVERSE_SELECTION | FAIL_STALE_PRICE | FAIL_CAPACITY_EXCEEDED
     expected_slippage: float
     shadow_profit_usd: float
     audit_id: str
+    # Additive. The custody procedure needs a per-transfer reason, and the
+    # numbers behind a verdict need to be auditable after the fact.
+    reason: str = ""
+    metrics: dict = Field(default_factory=dict)
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Shadow Markout Analyzer (Placeholder — wire your existing logic here)
-# ─────────────────────────────────────────────────────────────────────────────
-
-class ShadowMarkoutAnalyzer:
-    """
-    Wrapper around your shadow_markout_hardened.py logic.
-    
-    In production, this would import and call your existing analyzer:
-        from shadow_markout_hardened import ShadowMarkoutAnalyzer as YourAnalyzer
-    """
-    
-    def evaluate(
-        self,
-        pool: str,
-        amount: float,
-        is_buy: bool,
-        pyth_data: dict,
-    ) -> MarkoutResponse:
-        """
-        Evaluate a proposed trade against the shadow markout model.
-        
-        Returns PASS only if:
-          - Price is not stale (within 60 seconds)
-          - No adverse selection detected (sandwich risk < threshold)
-          - Pool has sufficient capacity for the trade size
-        """
-        # ═══════════════════════════════════════════════════════════════════
-        # TODO: Wire your existing shadow_markout_hardened.py logic here
-        # ═══════════════════════════════════════════════════════════════════
-        
-        # Placeholder: simulate analysis
-        price = pyth_data.get('price', 0)
-        conf = pyth_data.get('conf', 0)
-        
-        # Simple heuristics for demonstration:
-        # 1. Check price staleness
-        publish_time = pyth_data.get('publishTime', 0)
-        age_seconds = time.time() - publish_time
-        is_stale = age_seconds > 60
-        
-        # 2. Check for adverse selection (simplified)
-        # In production, you'd analyze MEV opportunity size
-        adverse_selection = amount > 10000 and not is_buy  # Large sells are risky
-        
-        # 3. Check capacity (simplified)
-        capacity_exceeded = amount > 50000  # Hard cap at $50k
-        
-        # Determine verdict
-        if is_stale:
-            verdict = "FAIL_STALE_PRICE"
-            expected_slippage = 0.05
-            shadow_profit_usd = -amount * expected_slippage
-        elif adverse_selection:
-            verdict = "FAIL_ADVERSE_SELECTION"
-            expected_slippage = 0.03
-            shadow_profit_usd = -amount * expected_slippage
-        elif capacity_exceeded:
-            verdict = "FAIL_CAPACITY_EXCEEDED"
-            expected_slippage = 0.10
-            shadow_profit_usd = -amount * expected_slippage
-        else:
-            verdict = "PASS"
-            # Expected profit: small positive spread
-            expected_slippage = 0.001  # 0.1%
-            shadow_profit_usd = amount * 0.002  # 0.2% expected profit
-        
-        return MarkoutResponse(
-            verdict=verdict,
-            expected_slippage=expected_slippage,
-            shadow_profit_usd=shadow_profit_usd,
-            audit_id=f"shadow-{pool[-6:]}-{int(time.time())}",
-        )
-
-
-# Initialize analyzer
-analyzer = ShadowMarkoutAnalyzer()
 
 # ─────────────────────────────────────────────────────────────────────────────
 # API Endpoints
@@ -138,29 +109,28 @@ def health_check():
 async def evaluate_trade(req: MarkoutRequest):
     """
     Evaluate a proposed trade against the shadow markout model.
-    
-    This is the synchronous gate that the TS execution engine calls
-    before every live trade. If this returns non-PASS, the TS engine
-    aborts without signing.
-    
+
+    This is the synchronous gate the TS execution engine calls before every
+    live trade. If this returns non-PASS, the TS engine aborts without signing.
+
     Flow:
-      1. Validate Pyth price freshness
-      2. Simulate sandwich attack impact
-      3. Check pool capacity
-      4. Return PASS/FAIL with profit estimate
+      1. Validate Pyth price freshness and confidence band
+      2. Check the notional against the capacity ceiling (learned, else static)
+      3. Bound expected slippage and compare it against the declared edge
+      4. Return PASS/FAIL with the slippage and profit basis
     """
     try:
-        result = analyzer.evaluate(
-            pool=req.pool_address,
-            amount=req.amount_in_usd,
+        result = evaluate_per_trade(
+            pool_address=req.pool_address,
+            amount_in_usd=req.amount_in_usd,
             is_buy=req.is_buy,
             pyth_data=req.pyth_price_update,
+            expected_edge_bps=req.expected_edge_bps,
+            config=_config,
         )
-        
-        return result
-        
     except Exception as e:
-        # FAIL CLOSED: Any analytical error aborts the trade
+        # FAIL CLOSED: Any analytical error aborts the trade. The TS gate also
+        # fails closed on a non-2xx, so this is belt and braces.
         raise HTTPException(
             status_code=500,
             detail={
@@ -170,16 +140,50 @@ async def evaluate_trade(req: MarkoutRequest):
             },
         )
 
+    return MarkoutResponse(
+        verdict=result.verdict,
+        expected_slippage=result.expected_slippage,
+        shadow_profit_usd=result.shadow_profit_usd,
+        audit_id=result.audit_id,
+        reason=result.reason,
+        metrics=result.metrics,
+    )
+
+
+@app.get("/api/v1/shadow/config")
+def gate_config():
+    """
+    Active gate thresholds and the pinned provenance of the ported analyzer.
+
+    Exposed so an operator can see what the gate will actually enforce without
+    reading the source, and so a verdict's config_fingerprint is traceable.
+    """
+    return {
+        "hardened_source_sha256": HARDENED_SOURCE_SHA256,
+        "config_fingerprint": _config.fingerprint(),
+        "thresholds": {
+            "max_price_age_s": _config.max_price_age_s,
+            "max_clock_skew_s": _config.max_clock_skew_s,
+            "max_conf_bps": _config.max_conf_bps,
+            "max_notional_usd": _config.max_notional_usd,
+            "base_slippage_bps": _config.base_slippage_bps,
+            "size_impact_bps_per_usd": _config.size_impact_bps_per_usd,
+            "gate_threshold": _config.gate_threshold,
+            "ledger_path": _config.ledger_path,
+        },
+    }
+
 
 @app.get("/")
 def root():
     """API root with documentation link."""
     return {
         "service": "Shadow Markout Gate",
-        "version": "0.1.0",
+        "version": "1.0.0",
         "docs": "/docs",
         "endpoints": {
             "evaluate": "POST /api/v1/shadow/evaluate",
+            "config": "GET /api/v1/shadow/config",
             "health": "GET /health",
         },
     }
